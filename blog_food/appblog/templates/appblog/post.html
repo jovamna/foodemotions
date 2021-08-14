@@ -1,0 +1,536 @@
+{% extends 'appblog/articulo_base.html' %}
+{% load static %}
+
+{% block title %} {{ object.some_varyable_from_query }}{% endblock %}
+
+              <!----------DE LA PAGINA SEARCH----------------->
+             {% block buscador-search %}       {% endblock buscador-search %} 
+
+             {% block container-search %}  {% endblock container-search %}
+              <!--FIN --------DE LA PAGINA SEARCH----------------->
+
+
+
+
+              
+            {% block menusimple %}
+            <!-- PRIMER  SEGMENTO MENU SIMPLE-->
+            <div id="menu-simple">
+            <ul >
+            <li > <a href="{% url 'appfood:index' %}"  >
+            <p>INICIO <i class="right"></i></p>
+            </a>
+            </li>
+            <li > 
+            <a href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}"> 
+            <p>Dietas y Alimentacion Saludable <i class="right"></i></p>
+            </a>
+            </li>
+            <li>
+            {% for post in posts %}
+            <p>{{post.kategoria}}<i class="right"></i></p>
+            {% endfor %}
+            </li>
+            </ul>
+            </div>
+            {% endblock menusimple %}
+
+
+     {% block content %}
+        <div class="primera-columna">
+        {% for post in posts %}
+        <!-- caja 1-------------------------->
+        <div class="primer-articulo">
+        
+        <!-- TITULO 1-----------------> 
+        <h1>   {{post.title}} </h1>
+           <p> {{post.description}}</p>  
+        <!-- DESCRIPCION--------------->              
+         
+        </div>
+
+        <p>{{post.publish}}</p>
+        <!--------------------------------------->
+        <div class="imagen-central">
+                <div class="redes">
+                    <ul class="iconos-social">
+                    <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                    <i class="fas fa-envelope"></i> </a> <br>
+                    </li>
+                    {% if LINK_FACEBOOK %}
+                    <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank">
+                    <i class="fab fa-facebook-f"></i> </a> <br>
+                    </li>
+                    {% endif %}
+                    <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                    <i class="fab fa-twitter"></i> </a> <br>
+                    </li>
+                    <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                    <i class="fab fa-instagram"></i> </a> <br>
+                    </li>
+                    </ul>
+                </div>
+
+               <!-- TENIA PROBLEMAS CON LA IMAGEN SALIA ERROR CON IF SE SOLUCIONO--> 
+                    <div class="imagen-principal">               
+                        {% if post.imagefront %}
+                        <img src="{{post.imagefront.url}}" alt="">
+                        {% endif %}
+                  </div>
+         </div>
+   <!-------------------FIN DE IMAGEN CENTRAL--------------------------------------------------------------------->
+
+            <!---- <div class="segundo-articulo" data-anime="top">--->
+            <!-- caja 2-------------------------------------------------------->
+            <div class="segundo-articulo">
+            <!-- SUBTITULO 2------------------->
+            <h1>{{post.subtitle|safe}}</h1> 
+            <p>{{post.content|safe}}</p>  
+           </div>
+
+   <!---------------------------------------------------------------------->
+                     
+         <div class="cursiva">
+            <p><em>{{post.cursiva|safe}}</em> </p>
+         </div>
+   <!------------------------------------------------------------------------>
+                        
+                 
+         <!-- BLOCQUOTE--------------------------------------------------------->
+         {% if post.blocquote %}
+            <blockquote class="blockquote blockquote-bordered blockquote-quoted">
+               <p class="blockquote-text"><em> {{post.blocquote}}</em> </p>
+               <p class="blockquote-text blockquote-text-credit"> </p>
+         </blockquote>
+         {% endif %}
+
+     <!------------------------------------------------------------------------------------>
+          <!--TITULO------NARRATIVA--------------->
+         <div class="contentwo">
+            <div class="title-two">
+           <h1> {{post.subtitleuno|safe}}</h1>
+           </div>
+           <!---CONTENIDO---NARRATIVA---------->
+           <div class="content-two">
+           <p> {{post.narrativa|safe}}</p>
+          </div> 
+      </div> 
+     <!-------------------------------------------------------------------------------->                   
+         <!-- UNO----------------UNO-------------->
+         <div class="contentwo">
+            <div class="title-two">
+            <h1>{{post.titleone|safe}}</h1>  
+            </div> 
+          <!----------IMAGEN-------->
+            {% if post.imageone %}
+           <div class="image-two">
+            <img src="{{post.imageone.url}}" alt="">
+          </div>
+           {% endif %}  
+         <!-- SUBTITULO-----------> 
+          {% if post.subtitleone %}
+         <div class="subtitle-two">
+         <h2> {{post.subtitleone|safe}} </h2>
+         </div>
+           {% endif %}
+         <!--CONTENIDO  UNO---------->  
+         <div class="content-two">
+         <p> {{post.contenone|safe}}</p>
+         </div>
+      </div>
+
+        <!------------------------------------------------------------------------------------------------>
+
+          <!----CONTAIINER DOS--------->
+            <div class="contentwo">
+                        <!---SUBTITULO--->
+                      <div class="title-two">
+                      <h1>{{post.titletwo|safe}}</h1>  
+                      </div> 
+                      <!--IMAGEN SEGUNDO---->
+                        {% if post.imagetwo %}
+                      <div class="image-two">
+                     <img src="{{post.imagetwo.url}}" alt="">
+                      </div>
+                     {% endif %}  
+                      <!---SEGUNDO SUBTITULO-->
+                        {% if post.subtitletwo %}
+                      <div class="subtitle-two">
+                      <a href ="{% url 'appblog:post' post.slug %}" style="text-decoration: none">
+                      <h2> vease ..   {{ post.subtitletwo|safe}} </h2>
+                      </a> 
+                     </div>
+                     {% endif %}
+                    <!--CONTENIDO SEGUNDO------------->  
+                    <div class="content-two">
+                    <p>{{post.contentwo|safe}}</p>
+                   </div>
+          </div>
+
+
+       <!-----------------------TRES------------------------------------------------------->
+          <div class="contentwo">
+            <!--------SUBTITULO------------------>
+               <div class="title-two">
+               <h1>{{post.titlethree|safe}}</h1>  
+               </div> 
+               <!--IMAGEN SEGUNDO---->
+               {% if post.imagethree %}
+               <div class="image-two">
+               <img src="{{post.imagethree.url}}" alt="">  
+               </div>
+               {% endif %}
+               <!-- SUBTITULO SEGUUNDO-------------> 
+               {% if post.subtitlethree %}
+               <div class="subtitle-two">
+               <h2> {{post.subtitlethree|safe}} </h2>
+               </div>
+               {% endif %}
+               <!--CONTENIDO SEGUNDO------------->  
+               <div class="content-two">
+               <p>{{post.contenthree|safe}}</p>
+               </div>
+      </div>
+
+
+         <!-------------------------CUATRO----------------------------------------------------->
+               <div class="contentwo">
+                  <!---TITULO----------------->
+                  <div class="title-two">
+                     <h1>{{post.titlefour|safe}}</h1>  
+                  </div> 
+                  <!--IMAGEN SEGUNDO---->
+                  {% if post.imagefour %}
+                  <div class="image-two">     
+                  <img src="{{post.imagefour.url}}" alt="">
+                  </div>
+                  {% endif %}
+                  <!-- SUBTITULO---------->
+                  {% if post.subtitlefour %}
+                  <div class="subtitle-two">
+                  <h2> {{post.subtitlefour|safe}} </h2>
+                  </div>
+                  {% endif %} 
+                  <!--CONTENIDO SEGUNDO------------->  
+                  <div class="content-two">
+                  <p> {{post.contenfour|safe}} </p>
+                  </div>
+             </div>
+   
+
+  <!------------------------------------------------------------------------------------------->
+
+      
+
+         <!--------------------QUINTO---------------------------------------------------------->
+            <div class="contentwo">
+               <!--subtitulo-------------->
+               <div class="title-two">
+               <h1>{{post.titlefive|safe}}</h1>  
+               </div> 
+               <!--IMAGEN --->
+                {% if post.imagefive %}
+               <div class="image-two">
+                <img src="{{post.imagefive.url}}" alt=""> 
+              </div>
+              {% endif %} 
+               <!-- TITULO ENTRADA SEGUNDO--------------> 
+                 {% if post.subtitlefive %}
+              <div class="subtitle-two">
+               <p> {{post.subtitlefive|safe}} </p>
+               </div>
+                {% endif %} 
+               <!--CONTENIDO SEGUNDO------------->  
+               <div class="content-two">
+               <p> {{post.contenfive|safe}} </p>
+               </div>
+            </div>
+  <!------------------------------------------------------------------------------------------->
+   
+
+       
+
+         <!------------------------------------------------------------------------------>
+         <div class="contentwo">
+            <div class="title-two">
+            <h1>{{post.titleultimo|safe}}</h1>  
+            </div> 
+              <!--IMAGEN---->
+            {% if post.image %}
+            <div class="image-two">
+            <img src="{{post.image.url}}" alt=""> 
+            </div>
+             {% endif %} 
+           <!--CONTENIDO SEGUNDO------------->  
+            <div class="content-two">
+            <p> {{post.contentultimo|safe}} </p>
+            </div>
+         </div>
+   
+
+  <!------------------------------------------------------------------------------------------->
+
+
+              <!---SEXTA CAJA CON DOS TITULOS (TERCER TITULO DE DOS)------->
+              <section class="articulo-ultimo">
+                    <!--AUTOR IMAGEN Y NOMBRE-->
+                    <div class="autor-nombre">
+                           <!--FOTO AUTOR--->
+                           <div class="autor-foto">
+                           {% if post.imageauthor %}
+                           <img src="{{post.imageauthor.url}}" alt="" >
+                           {% endif %}
+                           </div>
+                           <!--NOMBRE DE AUTOR-->
+                           <div class="autor-letra">  
+                           <em><h3>Por: {{post.author}}</h3></em>
+                           </div>
+                    </div>
+                    <!-------CIERRE AUTOR-NOMBRE---------------------------->
+                      <!------CATEGORIA SIN LINK-------------- --->  
+                        <div class="categoria-en-post">
+                            <em><h2>Categoria:</h2><p>{{ post.kategoria}}</p></em>
+                        </div>
+            <!-----------CIERRE DIV DE CATEGORIA SIN LINKS---------------------------- --->  
+            </section> 
+          <!---------------CIERRE SECTION DE ARTICULO ULTIMO------------------------ --->  
+                         
+              
+                            <!-- CATEGORIAS DENTRO DEL DIV ARTICULO-UNO------------------>
+                                      <div class="categorias-posts-links">
+                                        <!--CATEGORIA ACTUAL--->
+                                        <em><h4>   Categorias: </h4></em>
+                                          <!--CATEGORIAS CON LIKS --->  
+                                        {% load mptt_tags %}
+                                         {% for categoria in categories %} 
+                                         <a href="/dietas-especiales-y-alimentacion-sana/categoria/{{ categoria.slug }}" style="text-decoration: none">   
+                                        <em>  <h3>{{ categoria }}</h3></em></a>       
+                                        {% endfor %}
+                                      <!--ENDFOR FINAL DE LA CATEGORIA --->              
+                                        <!--if not forloop.last endif es para ES PARA REPETIR EL ARTICULO QUE CORRESPONDA --->
+                                     </div>
+                                     <!--DIV CIERRE DE CATEGORIAS-POSTS-LINKS--->
+
+                 {% endfor %}
+        <!---------------ENDFOR FINAL DE PRIMERA COLUMNA------------------------- --->  
+             </div>                           
+     <!-- CIERRE DIV DE PRIMERA COLUMNA----------------------------------------------------------------------------------------------->
+   
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!----------COMENTARIOS COMENTARIOS COMENTARIOS COMENTARIOS---------------------->
+        <div id="comentarios">
+        {% for comment in post.latest_comments %}
+   <p>{{ comment.user.username }}: {{ comment.description }}</p>
+{% endfor %}
+           <!---------------------------------------------------------------------------->
+           <div class="col-md-10">
+               {% with allcomments.count as total_comments %}
+               <h2>{{ total_comments }} comentario{{ total_comments|pluralize }}</h2>
+               {% endwith %}
+
+                {% load mptt_tags %}
+                <!----DIV DE TODOS LOS NODES------------------------------------------>
+                <div>
+                     {% recursetree allcomments %}
+                     <!--DIV ID AQUI VA EL NODE ID QUE EN EL BUTTON TIENE SU FUNCTION--->
+                     <div id="{{ node.id }}" class="my-2 p-2" style="border: 1px solid grey">
+                             <!--DIV CLASS D-FLEX VA EL NODE.NAME Y NODE PUBLISH------->
+                             <div class="d-flex justify-content-between">
+                                 <p>Comentado por :</p> &nbsp;{{ node.name }}
+                                      <div>
+                                      <!---DIV VACIO---->
+                                      </div>
+                                {{ node.publish }}
+                             </div>
+                             <!----FIN DIV D-FLEX NODE.NAME Y NODE.PUBLISH------->
+                             <!----DIV SIN NOMBRE CLASS VA EL NODE.CONTENT------->
+                             <div>
+                                {{ node.content }}
+                             </div>
+                             <!----FIN DIV SIN NOMBRE CLASS VA EL NODE.CONTENT------->
+                             <hr />
+
+                         <!--BOTONES----REPLY---REPLY--DEBERIA IR DELETE PARA QUE ESTO FUNCIONE USE JAVASCIPTt---->
+                          <!--ESTE DIV NO ESTABA LO HE AÑADIDO Y ES PARA CAMBIAR EL BOTON AL OTRO LADO---->
+                            <div class="d-flex flex-row-reverse">
+                            {% if node.level < 4 %}
+                           <button class="btn btn-primary btn-sm" onclick="myFunction({{ node.id }})"  style="background-color: grey">
+                           Responder
+                           </button>
+                          {% endif %}
+
+                           <!--BOTON ELIMINAR NO FUNCIONA--->
+                          {% if node.name|stringformat:"s" == user.get_name  %}
+                          <button class="btn btn-secondary btn-sm mr-2" onclick="deleteComment({{ node.id }})">
+                          Delete
+                          </button>
+                          {% endif %}
+                            </div>
+                          <!--CIERRE DEL DIV D-FLEX-ROW-REVERSE--->
+                     
+                     
+                           
+                      
+                     </div>
+                      <!--CIERRE DEL DIV ID DONDE ESTA EL NODE ID EL NODE NAME Y PUBLISH Y EL NODE CONTENT----->
+                      {% if not node.is_leaf_node %}
+                      <div class="children pl-2 pl-md-5">
+                      {{ children }}
+                     </div>
+                     {% endif %}
+                    {% endrecursetree %}
+               </div>
+            <!----CIERRE DEL DIV DE TODOS LOS NODES NO TIENE  NOMBRE------------->
+           <!--CREO ES LA PAGINACION DE TODOS LOS COMENTS-DE ESTE FORMULARIO--------->
+               <div class="py-4">
+                       <nav aria-label="Page navigation example">
+                       {% if comments.has_other_pages %}
+                       <ul class="pagination">
+                        {% if comments.has_previous %}
+                       <li class="page-item"><a class="page-link" href="?page={{ comments.previous_page_number }}">
+                       Previous</a>
+                       </li>
+                       {% else %}
+                       <li class="page-item disabled"><a class="page-link" href="#">
+                       Previous</a>
+                       {% endif %}
+                       {% for num in comments.paginator.page_range %}
+                       {% if comments.number == l %}
+                      <li class="page-item active">
+                      <span class="page-link">{{ num }} <span class="sr-only">(current)</span></span>
+                      </li>
+                     {% else %}
+                     <li>
+                     <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                     </li>
+                     {% endif %}
+                     {% endfor %}
+                     {% if comments.has_next %}
+                     <li class="page-item">
+                     <a class="page-link" href="?page={{ comments.next_page_number }}">Next</a>
+                     </li>
+                     {% else %}
+                     <li class="page-item disabled">
+                     <a class="page-link" href="#">Next</a>
+                     </li>
+                     {% endif %}
+                     </ul>
+                     {% endif %}
+                     </nav>
+                  </div>
+                 <!---CIERRE DE LA PAGINACION DE TODOS LOS COMENTS---->
+                      <!---FORMULARIO PARA AÑADIR COMENTARIOS---->
+                         <div id="myDIV" style="display:block;">
+                             <form id="myForm" method="post">
+                                   <h2>Añadir nuevo comentario</h2>
+                                   {{ comment_form.as_p }}
+                                   {% csrf_token %}
+                                   <button type="submit" class="btn btn-primary btn-lg btn-block" >
+                                   Enviar
+                                   </button>
+                                    <p>email requerido pero nunca mostrado</p>
+                            </form>
+                     </div>
+                          <!---FIN FORMULARIO PARA AÑADIR COMENTARIOS---->
+
+           </div>
+           <!--DIV FIN COL-DM-7---------------------------------------------------------->
+
+         </div>
+       <!----CIERRE DIV COMENTARIOS---------FIN ALL COMMENTS---------------------------->
+
+
+
+   <!----------------FIN FORMULARIO--------------------------------------->
+
+
+  
+
+
+   <!---CIERRE DEL BLOCK QUE CONTIENE COFIDICACION---->
+          {% endblock content %}
+      <!-- CIERRE DIV DE  COLUMNA PRIMERA------------------->
+       </div> 
+
+                       
+ 
+
+                             
+<!------------------------- TERCERA COLUMNA----------------------------------------------------------->
+        <div class="tercera-columna-fija">
+ {% block tercera-columna %}
+        <!-------------------------BUSCADOR------------------>
+                  <div class="controls">
+                     <form  method = "GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}"> {% csrf_token %}
+                            <div id="custom-search-input">
+	                            <input type="text"  name="q" value="{{ request.GET.q }}" class="sin-borde" placeholder="  Buscar...." >
+                                <button type="submit" name="submit" class="boton btn-succes" value="Search">
+                                <span class="icon"><i class="fa fa-search"></i></span>   
+                                </button>
+                                        
+                             </div>
+                    </form>
+	     	    </div>
+        <!------------------FINAL BUSCADOR--------------------------->
+         <div class="tercera-columna">
+                 <em><h2> mas temas..</h2></em>
+                 <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                   <p>How to take the shame out of self-promotion </p>
+         </div>
+        <!----------------------------- -------------->
+      
+        <!------------CATEGORIAS------------------------------->
+     
+           <div class="categorias-aside">
+          <em><h4>   Categorias: </h4></em>
+                                           {% load mptt_tags %}
+                                         {% for categoria in categories %} 
+                                         <a href="/dietas-especiales-y-alimentacion-sana/categoria/{{ categoria.slug }}" style="text-decoration: none">   
+                                        <em>  <h3>{{ categoria.name}}</h3></em></a>       
+                                        {% endfor %}                
+
+           </div>          
+    <!-------------FIN CATEGORIAS------------------------------>
+    {% endblock tercera-columna %}
+    </div>
+       <!-- FINAL DIV TERCERA COLUMNA-->
+     
+  
+    </div>    
+
+<!------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------------------------------------------------------------------------------------->

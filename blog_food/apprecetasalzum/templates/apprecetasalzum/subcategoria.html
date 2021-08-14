@@ -1,0 +1,173 @@
+{% extends 'appblog/base_categoria.html' %}
+{% load static %}          
+{% block title %}Subcategoria Batidos y Enaladas{% endblock %}  
+ 
+ 
+
+
+              <!-- CONTENEDOR DEL CUERPO DEL BODY-------->
+    {% block content %}           
+           <div id ="container-categorias-subcategorias">                                  
+              <!--  CAJA DE NAVEGACION DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
+               
+                <!--------------------------------------------------------------->
+                <div class="intro">
+
+                   <div class="menu-introescrito">
+                              <!--MENU-->
+                               <div class="menu">
+                               <ul>
+                               <li>
+                               <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
+                              </li>
+                              <li>    
+                              <a  href="{% url 'appfood:recetas-dieteticas' %}">Batidos y Ensaladas<i class="right"></i> </a>
+                              </li>
+
+               
+                            <li>
+                              {% for recipe in category %}
+                            <a href="/recetas-dieteticas/subcategoria/{{ recipe.slug }}">
+                            <p>{{categori}}<i class="right"></i></p>
+                            </a>
+                          {% endfor %}
+                            </li>
+
+                          </ul>
+                          </div>
+                          <!--MENU---------------------------------------------->
+
+                             <!--TITULO DE LA SUBCATEGORIA ------------------------>
+                                <div class="introescrito">
+                                <!---TITULO DE CATEGORIA--->
+                             
+                                      <!--  TITULO--CATEGORIA---> 
+                                     <div class="menu-intro-titulo">  
+                                        <h2> {{categori}}</h2>     
+                                     </div>
+                         
+                              <!---FIN TITULO DE CATEGORIA--->        
+                               </div>
+                  </div>
+          <!-- FIN DIV MENU-INTRO ESCRITO--->
+                                       <div class="intro-dos-vacios">
+                                       <!------ LAS CATEGORIAS---------------->
+                                          <h3>Categorias:</h3>
+                                          {% load mptt_tags %} 
+                                          {% for category in categories %} 
+                                          <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
+                                          <p>{{ category }}</p>      
+                                          </a>
+                                         {% endfor %}
+                                           <!--FIN CATEGORIAS--->
+                                          </div>
+
+
+                         </div>
+                     <!---FINAL INTRO--->
+
+                  </div>
+                 <!-- FIN DIV container-categorias-subcategorias-->
+
+<!-------------------------------------------------------------------------------------------------------------------->
+
+
+                  <!---IMAGENES DE LAS SUBCATEGORIAS-->
+              <div class="imagenes-pequeñas">
+                        <!--SUBCATEGORIAS CON IMAGENES-->
+                      {% for category in category_deals %}
+                       {% if not node.is_leaf_node %}
+                       <!-- SUBCATEGORIAS ---->
+                         {% for child in category.get_children %}
+                       <div class= "subcategoria">
+                        {% if children.image %}
+                        <img src="{{children.image.url}}">
+                        {% endif %}      
+                        <a href="/recetas-dieteticas/subcategoria/{{ children.slug }}"><h3>{{ children.name }}hola</h3>
+                        </a>
+                       </div>
+                       <!--FIN SUBCATEGORY-->  
+                      {% endfor %}
+                      {% endif %}
+                       {% endfor %}
+
+
+    
+                </div>
+               <!--FIN DIV IMAGENES PEQUEÑAS--->
+            
+      <!------------------------------------------------------------------------------------------------->
+
+
+        <!---100%----------DIV CONTAINER DE 4 POSTS DE SUBCATEGORIAS------------------------>
+      <div class="container-posts-categorias">
+
+
+            <!--80%------------------------------>
+            <div id = "posts-categoria">
+            
+                <!--25% -----DIV DE 4 POST DE POSTS--->
+                 {% for recipe in recipes %}  
+                <div class="elemento-categoria">          
+                    
+                          <!--  IMAGEN DEL POSTPERDER---->
+                          {% if recipe.image %}
+                          <img src ="{{recipe.image.url}}">
+                          {% endif %}
+
+
+                                   <!--  DESCRIPCION---->
+                                  <div class="elemento-descripcion">
+                                     <h2>{{recipe.title}}</h2>
+                                     <!--  DESCRIPTION DEL POST PERDER---->
+                                     <p>{{recipe.description|safe}} </p> 
+                                     <!--  LINK QUE REDIRIGE AL POST --->
+                                     <a href ="/recetas-dieteticas/receta/{{ recipe.slug }}/">
+                                      <em><p>Leer mas...</p></em></a>
+                                     <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
+                                        <p class="a">Por <span class="o"> {{ receta.author }}</span> </p> 
+                                     <!--<h3>Categoria: {{ categori }}</h3>--->
+                                     <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE ENDFOR--->
+                                  </div>
+                            <!--DESCRPCION FINAL-->
+                             </div>     
+                     <!--FIN 25% DEL FIN ELEMENTO-CATEGORIA------->          
+                       {% empty %}
+                      <p>No hay posts</p>
+                   {% endfor %} 
+                <!--25% FIN ENDFOR ELEMENTO CATEGORIA--->            
+            </div>
+            <!---80% FIN DIV post-categoria 80%- VAN 3 POSTS-->
+                    <!-- 20% ASIDE --->
+                    <div id="aside">    </div>
+                    <!--FIN ASIDE 20%--->
+           </div>
+           <!--100% FIN DEL POSTs CATEGORIAs--->
+            
+
+      {% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+    
+               
+
+                                      
+
+
+                               
+
+
+
+
+
+
+

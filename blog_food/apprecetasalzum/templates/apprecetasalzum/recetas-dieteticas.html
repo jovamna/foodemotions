@@ -1,0 +1,131 @@
+{% extends 'appfood/base.html' %}
+{% load static %}
+
+{% block titulo %}Batidos y Ensaladas Categorias{% endblock titulo %}
+
+
+            {% block portada %}
+                           <div class="portada">
+                              <!-- IMAGEN-->
+                              <section class="portada-img">
+                             <img src="{% block imagen %}{% static 'appfood/img/seg3-zumos/1300-600zumo.jpg' %}{% endblock %}"
+                              class="slider__img">
+                             <!-- FIN IMAGEN-->
+                             <!-- LETRAS-->
+                            
+                           <div class="portada-perder-img2"><a href="index.html">  </a>
+                            <img src="{% block imagen2 %}{% static 'appfood/img/foodemotions1.png' %}{% endblock  %}" class="slider__img">
+                          
+                            </div>               
+                           <!-- FIN LETRAS-->
+                           </section>
+                          </div>    
+                         {% endblock portada %}
+
+
+                           {% block buscador-search %}   {% endblock buscador-search %} 
+                          
+               
+
+              
+
+
+  {% block content %}
+
+               <div class="titulo">
+                         <section class="vacio"></section>
+                          <section class="escrito">
+                             
+                                <h2>recetas dietetitcas</h2>
+                                <h3> </h3>
+                          </section>
+                          <section class="vacio"></section>
+                 </div>
+
+
+
+   
+    
+                           <!---DIV DE 4 POST DE PERDERPESO--->  
+                    {% block imagenes-categorias %} 
+         <div class="categorias-subcategorias">
+                    {% load mptt_tags %} 
+                    {% for category in categories %} 
+                    <div class= "subcategorias">
+                       
+                            <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
+                            {% if category.image %}
+                            <img src ="{{category.image.url}}" style="width:100%">
+                            {% endif %}
+                             </a>
+                      
+                            <div class="nombredesubcategoria">
+                            <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
+                            <p>{{ category.name }}</p>
+                            </a>
+                            </div>
+                        
+                    </div>
+                    {% endfor %}
+                    <!-----FIN SUBCATEGORY----------------------------> 
+        </div>
+           {% endblock imagenes-categorias %} 
+
+
+    <!---DIV DE 4 POST DE RECiPES ZUMOS Y ENSALADAS--->                     
+      <div id ="container-plan">
+          <div class="container-columna-posts">
+       <!---DIV CONTAINER DE 4 POST Y DE RECETAS--->
+              {% for recipe in post_recipes %}
+               <div class = "elemento-post">
+                  <!---DIV DE 4 POST DE PERDERPESO--->   
+                  <div class="elemento-imagen">
+                         {% if recipe.imagenfront %}
+                         <img src ="{{recipe.imagenfront.url}}" style="width:100%">
+                         {% endif %}
+                  </div>
+
+                  <div class="elemento-descripcion">
+                         <h2>{{recipe.title}}</h2>
+                         <p>{{recipe.description|truncatechars:60|safe}} </p> 
+                    
+                         <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" class="arrow1">LEE MAS
+                        <span class="arrow-right"></span>
+                        </a>
+                </div>
+                                    <!---FIN DIV ELEMENTO DESCRIPCION---> 
+                </div>
+              <!-- DIV FINAL ELEMENTO POST --CONTIENE IMAGEN Y DESCRIPCION DEL POST------------------------>  
+                  
+   <!---------FIN DIV ELEMTNO POST---------------------------------------------->
+            {% endfor %}
+   <!----FIN ENDFOR DE ELEMNTO POST---------------------->
+             </div>
+   <!---FIN CONTAINER COLUMNA POSTS---->
+                    
+                    <!--- FIN CONTAINER SEARCH------------------------------------------------------------------------> 
+      <div class="aside-batido">2</div>
+      </div>
+ 
+<!------------------------------------------------------------------------------------------------------------------------>
+                
+              <!--- FIN CONTAINER SEARCH------------------------------------------------------------------------> 
+           
+
+     
+
+
+
+
+ 
+ 
+
+  {% endblock content %}
+
+
+   <!--{% for child in category.get_children %}
+                        --TITULOS DE SUBCATEGORIAS ----EN COLUMNA-------
+                        <h3> {{ child.name }} ({{ child.get_recursive_perderpeso_count }})</h3>--
+                        <a href="/batidosyensaladas/subcategoria/{{ child.slug }}">
+                        <h2> {{ child.name }} </h2></a>
+                        {% endfor %}---->

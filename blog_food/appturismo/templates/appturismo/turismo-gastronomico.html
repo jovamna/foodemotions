@@ -1,0 +1,111 @@
+{% extends 'appfood/base.html' %}
+{% load static %}
+{% block titulo %}Turismo Gastronòmico{% endblock titulo %}
+
+         
+                    {% block portada %} 
+                             <div class="portada">
+                                    <!-- IMAGEN-->
+                                    <section class="portada-img">
+                                        <img src="{% block imagen %}{% static 'appfood/img/slider/1300-345turism.jpg' %}{% endblock  %}"
+                                              class="slider__img">
+                                               <!-- FIN IMAGEN-->
+                                               <!-- LETRAS-->
+                                           <div class="portada-img2">
+                                              <h1>Noticias y Turismo Gastronomico</h1>
+                                           <p>comer sano y delicioso es posible!</p>
+                                         <!-- <img src="{% block imagen2 %}{% static 'appfood/img/foodemotions1.png' %}
+                                         {% endblock  %}" class="slider__img">---->
+                                          </div>
+                                  </section>
+                          </div> 
+                        {% endblock portada %} 
+                  
+
+      {% block buscador-search %}   {% endblock buscador-search %} 
+{% block batido-dietas %}  {% endblock batido-dietas %} 
+
+
+
+
+
+          {% block content %}
+
+
+
+<!-- CUARTO SEGMENTO TITULO ------------------------------------------------------------------------------------------------------------- -4----------------------->
+                      <!-- TITULO -------------------------------------3  --->
+            <div class="titulo">
+                <section class="vacio"></section>
+                <section class="escrito"><a href="index.html">
+                        <h2>tendencias y gastronomia en el mundo</h2>
+                        <h3>
+                        </h3>
+                    </a></section>
+                <section class="vacio"></section>
+            </div>
+
+
+ {% block paginas %}
+    <div id ="container-plan">
+            <div class="container-columna-posts">
+                 <!-- CUARTO SEGMENTO-------FOTOS --------------------------->
+
+                                   {% for posturismo in posts %}
+                                   {% if posturismo.imagefront %}
+                  <div class = "elemento-post">
+                      <!---DIV DE 4 POST DE PERDERPESO--->   
+
+                      <div class="elemento-imagen">
+
+                                 <img src="{{posturismo.imagefront.url}}">
+                                 {% endif %}
+                                  </div>
+
+                      <div class="elemento-descripcion">
+                                   <h2>  {{posturismo.title}}</h2>  
+                                 <p>{{posturismo.description|linebreaksbr|truncatechars:110}} </p>
+                                <a href ="{% url 'appturismo:post' posturismo.slug %}" class="arrow1">
+                                LEE MAS
+                                    <span class="arrow-right"></span></a>
+                    </div>
+                    <!---DIV DE 4  RECETAS--->                  
+   <!--------------------- FINAL SEARCH RECIPES ZUMOS Y ENSALADAS  ------------------------------>  
+              </div>
+<!---------FIN DIV ELEMTNO POST---------------------------------------------------------------------->
+            {% endfor %}
+
+<!----FIN DIV DE CONTAINER COLUMNA POSTS----------------------->
+             </div>
+   
+
+      <!--- cCONTAINER ASIDE-------------------------------------------------------------------> 
+      <div class="aside-plan">2</div>
+      </div>
+                            
+
+ {% endblock paginas %}
+
+
+   {% block primero_recetasaludable %}
+       {% endblock primero_recetasaludable %}
+
+       {% block noticias %}  
+       {% endblock noticias %}
+
+              {% block plandealimentacion %}
+              {% endblock plandealimentacion %}
+
+               {% block dietas-alimento %}
+                {% endblock dietas-alimento %}
+
+                {% block quinto_perder %}
+                {% endblock quinto_perder %}
+                 {% block quinto_plandealimentacion %}
+                  {% endblock quinto_plandealimentacion %}
+         {% block tercero_zumos %} {% endblock tercero_zumos %}
+{% endblock content%}
+
+ {% block sexto %}{% endblock sexto %}
+  {% block septimo %}{% endblock septimo %} 
+{% block texto-animado %}{% endblock texto-animado %}

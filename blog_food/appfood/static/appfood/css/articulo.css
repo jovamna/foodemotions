@@ -1,0 +1,1927 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*line-height: 20pt;        /* para la separacion entre lineas */ 
+/*text-indent: 30pt;  */ 
+
+#wrapper-articulo {
+  margin:0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 250px;
+  flex-wrap: wrap;
+}
+      
+#wrapper-articulo > * {
+  padding:20px;
+  
+  }
+
+  #container-articulo{
+    width:100%;
+    max-width: 1230px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 100px;
+    margin-bottom: 140px;
+    }
+
+    div {
+      flex: 1;
+    }
+ 
+     
+a {
+  color: #524c56;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.children form {
+  margin-left: -48px;
+
+  /* will touch very left side */
+}
+
+.children .children form {
+  margin-left: -96px;
+  /* will touch very left side */
+
+}
+
+#comentarios{
+  background-color: violet;
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+}
+
+
+/*border-bottom: 2px solid #DDD;*/
+  header{
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  margin: auto;
+  height:  78px;
+  box-shadow: 0 8px 6px -6px #c9c9c9;
+  }
+
+  header.black{
+   background-color:#fff ;
+   height:  78px;
+  }
+  
+  
+  .cabecera{
+    width: 100%;
+    max-width: 1190px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: auto;
+    height: 40px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+  }
+
+   /*caja */
+   .logo{
+    display: inline-flex;
+    width: 19%;
+    max-width: 235px;
+    height: 40px; 
+  
+   }
+    
+   /*IMAGEN DEL LOGO*/
+   .logo img{
+    width: 100%;
+    height: 40px;  
+    }
+     
+   
+
+
+/*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
+   .menu-btn {
+  display: flex;
+  flex-direction: row;
+   justify-content: space-between;
+  align-items: flex-end;
+ width: 30%;
+ max-width: 160px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+  height: 40px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+
+}
+
+ 
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+    .boletin{
+      width: 95%;
+      max-width: 140px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
+     align-items: flex-start; 
+      display: inline-flex;
+      justify-content: flex-start;
+    }
+
+    .boletin  a h4{
+     width: 100%;
+     max-width: 90px;
+      font-size: 1rem;
+      word-spacing: -3px;
+      letter-spacing: -0.7%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 700;
+      color:#2d2d2d;
+       margin: auto; /*IMPMORTANTE PARA LA LETRA*/
+      }
+  
+  
+
+   /*LETRA INSCRIBETE*/
+   .boletin a h4:hover{
+    color: #639a3a;
+    text-decoration: none;
+   }
+   /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+
+
+
+      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+   .menu-btn__burger {
+  display: block;
+  position: relative;
+  float: left;
+   margin: auto;
+   margin-top: 25px;
+    width: 5%;
+    max-width: 38px;
+    height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+  z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
+   
+ }
+ /*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+ .menu-btn__burger::before,
+ .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 38px;
+  height: 4px;
+  background:#2d2d2d;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+  transition: all .5s ease-in-out;
+ z-index: 800;
+  
+  
+ }
+ .menu-btn__burger::before {
+   transform: translateY(-10px);
+ }
+ .menu-btn__burger::after {
+   transform: translateY(10px);
+  
+ }
+
+
+
+
+  /* ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    background: #fff;
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    background: #fff;
+  }
+  
+  .menu-btn__burger:hover{
+    background-color: #639a3a;
+  }
+
+   .menu-btn__burger:hover::before,
+   .menu-btn__burger:hover::after{
+    background-color: #639a3a;
+  }
+
+
+  /* ESTE ES EL MENU NAV*/
+
+  /*margin-left: 5.4%;/*IMPORTANTE */
+  nav{
+  width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
+  height: 100%;/*IMPORTANTE */
+  position: fixed;
+   top:0px;  /*IMPORTANTE para que arriba no tenga espacios */
+  min-height: 100vh;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+  background-color:#000000; /*FONDO DEL MENU*/
+  background-position:72% 50%;
+  background-repeat:no-repeat;
+  opacity: 1;
+  z-index:40;
+  }
+
+   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL*/
+   nav ul{
+    margin-left: 10%;/*IMPORTANTE */
+    margin-top: 3%;/*IMPORTANTE */
+    width: 48%;/*IMPORTANTE */
+    height: 90%;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    z-index:30;
+
+
+    }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav ul li{
+    display: flex;
+    margin-top: 1.5%;/*IMPORTANTE */
+    filter: alpha(opacity=80);
+    height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
+    list-style: none;
+    cursor:pointer;
+    margin-left: 14% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+    }
+    
+    nav ul li a {
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 100%;
+    max-width: 800px;
+    height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
+    z-index: 100;
+    }
+  
+     /*IMPORTANTE*/
+   nav li a p{
+  background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+  display: block;
+  border-radius: 8px solid #639a3a;
+   margin-top:9px;
+  position: absolute;
+  padding: 2px 2px ;
+  z-index: 200;
+  margin-left: 30px;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 2rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-family:  sans-serif;
+   }
+
+ 
+      /* NAV ESCONDIDO  NAV ESCONDIDO*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+     nav ul li:hover > ul {
+       display: block;
+      margin-left: -200px;
+       margin-top:-40px;
+      height: 200px;
+      visibility: visible; 
+    z-index: 598;
+     }
+        /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
+    nav ul ul {
+      display:none;
+      position:absolute;
+      top:100%;
+      left: 0;
+      background:#eee;
+      padding:0;
+      width: 100%;
+     }
+
+
+   nav ul li ul li a {
+    font-size: 1rem;
+    display: block;
+    position: absolute;
+    max-width: 200px;
+    width: 100%;
+    margin-left: -2px;
+   padding-bottom: -2px;
+   margin-left: -76px;
+
+  }
+  
+
+
+
+      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+  
+  /*ANIMACION SUBRAYADO */
+  nav a {
+  display: inline-block;
+  position: relative;
+ color: white;
+ text-decoration: none;
+ z-index: 40;
+ }
+
+  nav  a:after {
+ content: "";
+ display: block;
+ margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+ height: 2px;
+ width: 0px;
+ transition: all .8s;
+ z-index: 10;
+ 
+ }
+  nav  a:hover:after {
+ width: 100%;
+ max-width: 500px;
+ padding-left: 40px;
+ padding-right: -150px;
+ height: 2px;
+ background: white;
+    }
+
+   /*FIN ANIMACION SUBRAYADO */
+
+
+
+
+/*................CONTAINER DEL BODY..ESTA ARRIBA DE TODO CON EL WRAPPER................................................................... */
+
+
+  /*PRIMER SEGMENTO EL MENU SIMPLE CON ARROW.......................... */
+  #menu-simple{
+  width:100%;
+  height: 100%;
+  max-height: 28px;
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+/* PRIMERA SECCION MENU ARROW*/
+ #menu-simple li{
+  list-style: none;
+
+ }
+
+   /*ANCHO IMPORTANTE PARA EL MENU   ES LI*/
+   #menu-simple  ul{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+   white-space: nowrap;
+ 
+   }
+
+   #menu-simple ul::-webkit-scrollbar { /* WebKit */
+    width: 0px;
+    height: 25px;
+    }
+
+   /*ESTO ES LO MISMO QUE EL ANTERIOR?*/
+
+
+   #menu-simple  p{
+    letter-spacing: -0.4px;
+    font-size:  0.95rem;
+    line-height: 1.45;
+    color: #2d2d2d;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    height: 2px; /*ESTO ARREGLO EL SUBRAYADO QUE SALIO MUY ABAJO */
+ 
+  }
+
+  #menu-simple li p i {
+  border-width: 0 0.8px 0.8px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-right: 9px;  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
+ }
+
+   #menu-simple .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    border: 2px solid #568632;
+    border-width: 0 2px 2px 0;
+  }
+
+  /* ANIMA CON RAYA AL HACE HOVER */
+   #menu-simple a {
+ 
+    text-decoration: none;
+    }
+
+   #menu-simple a:after {
+    content: "";
+    display: block;
+    height: 1px;  /*GROSOR DE LA RAYA*/
+    width: 0px;
+    transition: all .4s;
+    }
+
+    #menu-simple a:hover:after {
+    width: 100%;
+    width: 85%;   /*IMPORTANTE PARA EL ANCHO DE LA RAYA*/
+    margin-left: -2px;   /*IMPORTANTE PARA SITUAR LA RAYA*/
+    background: #639a3a;
+    }
+    
+    #menu-simple a:hover{
+      z-index: 40;
+      display: block;
+      }
+           /* FINAL MENU ARROW */
+
+
+
+
+
+
+/*TERCER SEGMENTO COLUMNAS COLUMNAS ....................................................*/
+  #tres-columnas-articulo{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    max-width: 1220px;
+    margin-top: 2.2%;   /*IMPORTANTE */
+
+  }
+
+/* COLUMNA  ........................................................................PRIMERA  COLUMNA.....1------------------. */
+  .columna-primera{
+  width:70%;
+  max-width: 840px;
+  display: flex;
+  flex-direction: column;
+
+  }
+
+   .primera-columna{
+    width: 100%;
+    margin-bottom:10%;
+
+   }
+
+  /*FECHA*/
+   .primer-articulo h4{
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+   }
+  /*.........PRIMER TITULO ................................................... */
+.primer-articulo h1{ 
+  width: 100%;
+  font-size: 3.1rem;
+  word-spacing: -3px;
+  letter-spacing: -1.5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  text-align:start;
+  text-decoration-line: underline;
+  color: #000000; 
+  margin-bottom: 20px;
+}
+
+.primer-articulo p{
+  font-family: 'Times New Roman', Times, serif ;
+  font-size: 1.3rem;
+  font-weight:400;
+  line-height: 1.3;
+  color: #2d2d2d;
+}
+
+ /*primera caja ..................................... */
+ .imagen-central{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   margin-top: 30px;
+  margin-bottom: 10%;
+ }
+ .imagen-principal {
+    width: 90%;
+  
+  }
+  .imagen-principal img{
+    width: 100%;
+  }
+  .redes{
+    display: inline-flex;
+    width: 8%;
+    max-width: 65px;
+   margin-right: 2%;
+  
+  }
+
+  .iconos-social{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 28%;
+  }
+  
+  .iconos-social li{
+    list-style: none;
+  }
+
+  .iconos-social  li .fa-envelope{
+    padding: 10px 10px 10px 10px;
+    color: #639a3a;
+    font-size:  10px;
+    width: 42px;
+    height: 48px;
+    border: 1px solid #639a3a; 
+    border-radius: 9px;
+  }
+  
+  .iconos-social li .fa-facebook-f{
+    padding: 10px 10px 10px 10px;
+    color: #639a3a;
+    font-size:  10px;
+    width: 42px;
+    height: 48px;
+    border: 1px solid #639a3a;
+    border-radius: 9px;
+  }
+  
+  .iconos-social  li .fa-twitter{
+    padding: 10px 10px 10px 10px;
+    color: #639a3a;
+    width: 42px;
+    height: 48px;
+    border: 1px solid #639a3a;
+    border-radius: 9px;
+  }
+  
+   .iconos-social  li .fa-instagram{
+    border-radius: 15px;
+    color:  #639a3a;
+    padding: 8px 8px 8px 8px;
+    font-size:  9px;
+    width: 42px;
+    height: 48px;
+    border: 1px solid #639a3a;
+    border-radius: 9px;
+   
+  }
+  
+  
+  /*segunda caja .................segundo articulo......... */
+  .segundo-articulo{
+  display: block;
+  width: 100%;
+  }
+ 
+  /*..........SEGUNDO TITULO........................................ - segundo articulo........ */
+    .segundo-articulo h1{   
+    font-size: 1.6rem;
+    word-spacing: -1px;
+    letter-spacing: -2;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    color: #000000;
+    }
+
+  .segundo-articulo p{
+  font-family:  'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  color:  #2d2d2d;
+  font-weight:400;
+  line-height: 1.3;
+  }
+
+  .cursiva{
+    display: block;
+  width:  100%;
+  border-left:2px solid #DDD;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  }
+
+  .cursiva p{
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top:  -33px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.45;
+  color: #2d2d2d;
+  }
+
+
+  .cursiva-quote::before { 
+    content: "\201C"; /* inicio comilla */
+    width: 30%;
+    font-family: Georgia;
+    font-size:40px; /* tamaño */
+    font-weight: bold; 
+    line-height: 70px;
+    color:#DDD; /* Color  */
+    margin-left: 8px;
+    display: block;
+    }
+   
+    
+    .cursiva-quote::after{ /* final */
+      content: "\201D";
+      font-family: Georgia;
+      font-size:40px; /* tamaño */
+      font-weight: bold;
+      line-height:0px;
+      color:#DDD; /* Color  */
+     margin-bottom: 0.2px;
+      margin-left:  750px;
+      display: block;
+      }
+
+     /*...................................................................*/
+/*QUOTE ............................................ */
+  .blockquote{
+    width:100%;
+    margin: 40px 0px;  /*espaciado top left. */
+    padding: 50px;
+    border:  1px solid #DDD;
+    color:#666;
+    box-sizing: border-box;
+    font-family:  'sans-serif' ;
+    font-size: 1.15rem;
+    font-weight:400;
+    line-height: 1.3;
+    }
+   
+    /*LINEA PARALELA DEL COSTADO*/
+    .blockquote-bordered{
+      border-left-width: 10px;
+      }
+      
+   /*BLOQUE DEL PARAFO PARA DISTANCIAR DE LAS COMILLAS*/
+   .blockquote-text {
+    margin-left: 1px;
+    margin-top: 14px;
+   }
+  
+   .blockquote-text p{
+   font-size: 1.15em;
+   line-height: 1.5;
+   margin:auto;
+   color:#666;
+   width: 90%;
+   font-family:  'sans-serif' ;
+   font-weight:400;
+   }
+   
+   
+   .blockquote-text:not(:last-child){
+     margin-bottom: 1em;
+   }
+     
+       .blockquote-quoted::before { 
+       content: "\201C"; /* inicio comilla */
+       width: 30%;
+       font-family: Georgia;
+       font-size:65px; /* tamaño */
+       font-weight: bold; 
+       line-height: 0px;
+       color:#DDD; /* Color  */
+       margin-bottom: -20px;
+       margin-left: -42px;
+       display: block;
+       }
+   
+     
+     
+       .blockquote-quoted::after{ /* final */
+        content: "\201D";
+        font-family: Georgia;
+        font-size:65px; /* tamaño */
+        font-weight: bold;
+        line-height:0px;
+        color:#DDD; /* Color  */
+        margin-top: 20px;
+       margin-bottom: 0.2px;
+        margin-left:  600px;
+        display: block;
+        }
+  
+       .blockquote-text-credit{
+       text-align: right;
+       width: 90%;  
+       }
+     
+      /*rayita delante del nombre de autor ....... */
+      .blockquote-text-credit::before{
+       content: "\2014\0020";
+       }
+     /*FINAL QUOTE ...................................... */
+    
+
+
+  /*........................................*/
+
+    .articulo-titulo{
+    width: 100%;
+  }
+   
+    .articulo-titulo h1{
+    font-size: 1.9rem;
+    color:#000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+   
+    }
+
+
+   .articulo  p{
+    font-family:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.3rem;
+    font-weight:400;
+    line-height: 1.3;
+    color: #2d2d2d;
+  }
+ 
+
+
+  /*container de dos imagenes*/
+     .articulo-imagen{
+  width: 100%;
+  display: block;
+  background-color: green;
+   }
+ 
+
+    .articulo-imagen img{
+  width: 100%;
+  max-width: 840px;
+   }
+
+
+   .articulo{
+  width: 100%;
+  }
+ 
+
+
+  .imagen-sola{
+    width: 100%;
+  }
+
+  .imagen-sola img{
+    width: 100%;
+  }
+
+
+
+
+/*FIN ...........................*/
+
+
+
+
+
+    /*................................................................................................*/
+   /*DE POST DE DIETAS APPBLOG*/
+   /*CONTAINER TOTAL ----*/
+    .contentwo{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 60px;
+    }
+
+     .title-two{
+       display: block;
+       width: 100%;
+     }
+
+     .contentwo h1{
+       font-size: 1.9rem;
+       font-family: 'Times New Roman', Times, serif;
+       color: #000000;
+      
+   
+     }
+     .title-two h1{
+       font-size: 1.9rem;
+       color: #000000;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: 900;
+     }
+
+     .title-two h2{
+      font-size: 1.3rem;
+      color: #000000;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 900;
+    }
+
+    
+    .image-two{
+     width: 100%;
+    }
+
+    .image-two img{
+     width: 100%;
+   }
+
+      .content-two{
+        display: block;
+       width: 100%;
+      }
+
+      .content-two p{
+        font-size: 1.3rem;
+        font-family: 'Times New Roman', Times, serif;
+        color: #2d2d2d;
+        line-height: 24px;
+        margin: auto;  /*para ajustar al conteedor*/
+      }
+
+  /*.....................................................*/
+
+
+
+   /*--PLAN COMIDAS------------------------*/
+   .semana{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+   }
+ 
+    /*CAJA DE LA FOTO DIETA DIARIA*/
+     .imagen-semana{
+      width: 100%;
+     }
+     
+     .imagediaone img{
+       width: 100%;
+     }
+
+
+    .imagen-semana-dos {
+      width: 100%;
+    }
+     
+     .titulo-semana{
+       width: 100%;
+
+     }
+
+     .titulo-semana  h2{
+     font-size: 2.8rem;
+     color: #000000;
+    }
+
+    .descripcion-semana{
+      width: 100%;
+     }
+
+    .descripcion-semana p{
+      font-size: 1.2rem;
+      font-family: 'Times New Roman', Times, serif;
+      color: #2d2d2d;
+    }
+
+    
+   /*DIA....*/
+    .container-dia{
+      width: 100%;
+      margin-top: 40px;
+    }
+
+
+   .plan-titulo-dia{
+    width: 100%;
+    }
+
+
+    .plan-titulo-dia h2{
+    font-size: 2.2rem;
+    font-family: "Argos Bold",serif;
+    color: #000000;
+    font-weight: 700;
+     }
+
+    .imagen-dia{
+      width: 100%;
+    }
+
+    .dia{
+      width: 100%;
+    }
+
+    .dia p{
+      font-size: 1.2rem;
+      font-family: "Argos Bold",serif;
+      color: #2d2d2d;
+    }
+
+     .content-fin{
+       width: 100%;
+     display: block;
+     }
+  
+  /*FIN DIETAS ESPECIALES*/
+
+     /*..CAJA ARTICULO ULTIMO ................. */
+     /*--CONTIENE ULTIMA REDACCION AUTOR Y FOTO Y CATEGORIA SIN LINK.................................................*/
+      .articulo-ultimo{
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      width: 100%;
+      }
+ /*........TITULO ULTIMO DE PERDERPESO   (TERCERO Y ULTIMO)  ................ */
+       .autor-nombre p{
+       font-family: "sans serif";
+       font-size: 1.1rem;
+       font-weight: 400;
+       line-height: 1.3;
+       color: #666;
+       }
+
+     /*CONTTIENE FOTO Y NOMBRE*/
+     .autor-nombre{
+       width: 100%;
+       height: 60px;
+       display: flex;
+       flex-direction: row;
+       align-items: flex-end;
+       margin-bottom: 40px;
+     }
+
+   /*IMPORTANTE PARA APPBLOG*/
+     .autor-foto{
+      width:25%;
+      max-width: 80px;
+      height: 70px;
+     display: inline-flex;
+     }
+
+    .autor-foto img{
+    width: 100% ;
+    max-width: 70px;
+    height: 70px;
+    display: inline-flex;
+   }
+
+    .autor-letra{
+    width: 40%;
+    display: inline-flex;
+    position: absolute;
+    margin-left: 80px;
+    }
+
+    /*NOMBRE DE AUTOR*/
+    .autor-letra h3{
+    font-size: 1.1rem;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    }
+
+      /*ESTO SOLO PARA LA PAGINA DIETAS ESPECIALES*/
+      .autor-solo-nombre{
+      width: 100%;
+      }
+
+      .autor-solo-nombre p{
+        color: #000000;
+        font-size: 1.2rem;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+      }
+
+      
+  /*--CATEGORIA QUE ESTA SIN LINK SOLO VA LA CATEGORIA ACTUAL..*/
+  .categoria-en-post {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  }
+
+  /*--CATEGORIA QUE ESTA SIN LINK SOLO VA LA CATEGORIA ACTUAL..*/
+  .categoria-en-post h2{
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', sans serif;
+  color:#000000;
+  float: left;
+  margin-right: 6px;
+  }
+
+   .categoria-en-post p{
+     float: right;
+     font-size: 1.1rem;
+     color: #2d2d2d;
+     font-family: 'Times New Roman', Times, serif;
+   }
+   /*FIN HASTA AQUI ARTICULO ULTIMO.................................................................*/
+
+
+   /*CONTENEDOR DE CATEGORIAS CON LINKS*/
+  .categorias-posts-links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    border-bottom: 1.5px solid	#DCDCDC;
+
+    }
+
+   /*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA SIN TIENEN LINK..*/
+       .categorias-posts-links p{
+        font-size: 1.1rem;
+        font-family: 'Times New Roman', sans serif;
+        color:#666;
+       }
+
+  /*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA CON  LINK..*/
+   .categorias-posts-links h4{
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', sans serif;
+    color:#000000;
+   }
+
+   .categorias-posts-links h3{
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', sans serif;
+    color:#666;
+    }
+
+
+
+    /*SEGUNDA COLUMNA .....................................2............. */
+    .segunda-columna{
+    width:12%;
+    max-width: 160px;
+    display: flex;
+
+    }
+
+    /*....ASIDE TERCERA COLUMNA DE LOS POSTS APPERDERPESO Y APPBLOG......................*/   
+    /*TERCERA COLUMNA  ......................3.......COLUMNA...... */
+    .tercera-columna-fija{
+    width: 18%;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+         }
+
+
+
+    /* BUSCADOR INTERNO */
+  /*CONTAINER DEL BUSCADOR.................................................................... */
+   .controls{
+    width: 100%;
+    max-height: 70px;
+    height: 100%;
+    margin-top: 40px;
+    }
+  
+    /*CAJA DEL BUSCADOR */
+    .controls #custom-search-input{
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 99%;
+    height: 49.5px;
+    background-color: #666;  
+    box-shadow: 4px 8px 6px -6px #8c8c8c;
+    }
+  
+    /*CAMPO SEARCH BUSCADOR */
+   .controls  #custom-search-input .sin-borde{
+     border-left: 2px;
+    -moz-border-left: 2px;
+    -webkit-border-left: 2px;
+    font-size: 1em;
+    font-weight: 6rem;
+    padding: 4px;
+    width: 80%;
+    height: 49px;
+    }
+  
+     /*BOTOM BUSCADOR    #666*/
+    .controls .boton{
+    border-right: 4px;
+    -moz-border-right: 2px;
+    -webkit-border-right: 2px;
+    font-size: 1em;
+    font-weight: 300;
+    padding: -2px;
+    width: 15%;
+    height: 49px;
+    background-color: #666;       /*...#639a3a ;*/
+    color: #fff;
+
+    }
+  
+/*FIN BUSCADOR*/  
+
+.tercera-columna{
+  width:100%;
+display: block;
+max-height: 300px;
+height: 100%;
+
+  }
+
+.tercera-columna h2{
+  font-size:1.3rem;
+  color:#000;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+  }
+
+.tercera-columna p{
+  color: #666;
+  font-size: 1.1rem;
+  font-family: sans serif;
+  font-weight: bold;
+  letter-spacing: -0.2px ;
+  }
+
+  .tercera-columna img{
+    width: 100%;
+    margin-bottom: 6px;
+    }
+
+
+
+  .categorias-aside{
+    display: block;
+    width: 100%;
+    max-height: 260px;
+    height: 100%;
+  
+  }
+
+   .categorias-aside h4{
+    color: #000000;
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+   }
+
+   .categorias-aside h3{
+   color:#2d2d2d;
+   font-size: 1.2rem;
+ font-family: 'Times New Roman', Times, serif;
+  }
+ 
+  
+  /*CONTAINER GENERAL DEL CARRUSEL............................................. */
+   .container-total-carrusell{
+  display: block;
+  position: relative;
+
+  }
+
+  /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
+  #carrusel {
+    float:left;
+    width:90%;
+    overflow:hidden;
+   height: 305px;
+    position:relative;
+    margin: auto;
+    margin-bottom: 20px;
+    }
+    
+    
+     /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
+    #carrusel h2{
+        font-size:  24px;
+        word-spacing: -3px;
+        letter-spacing: -2px;
+        font-family: 'Archivo Black', sans-serif;
+        
+    }
+  
+    /*CONTAINER DE TODAS LAS IMAGENES*/
+     /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+       .carrusel {
+        width:4000px;
+        left: 1px;
+        position:absolute;
+        z-index:0;
+       }
+
+     /*MODIFICAR ANCHO Y ALTO  */
+    .carrusel>div {
+        float: left;
+  
+        margin-right: 14px;   /*ESPACIO */
+        width: 100%;
+        max-width: 260px;
+    }
+     /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+    .carrusel img {
+    cursor:pointer;
+    width: 100%;
+    max-width: 260px;
+    height: 210px;
+    border: #666 1px solid;
+    border-radius:6px;
+    }
+     
+    #carrusel i{
+    border: 3px solid  #c70808;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    margin-top: 10%;
+    margin-left: 97%;
+    position: absolute;
+    z-index: 1;
+    background-color: #666;
+    }
+
+
+    .carrusel p{
+        letter-spacing: -0.2px;
+        font-family: 'Cabin', sans-serif;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.45;
+        color: #666;
+        text-overflow: ellipsis;
+    }
+
+    /*CNTAINER DE CADA IMAGEN*/
+    .product {
+        border:#CCCCCC 1px solid;
+      }
+    
+    
+  /*..CONTAINER DE LAS FLECHAS Y CIRCULO ...*/ 
+  /*ALTURA DEL CIRCULO CON LA FLECHA INCLUIDA......... */
+    .carusel{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    margin-top: 9%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+    margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+    }
+  
+
+    /*DISTANCIA ENTRE LOS DOS CIRCULO*/
+     .carusel ul{
+    position: relative ;
+    display: flex;
+    transform: translate(-50%, -50%);
+    width: 98.5%;   /* ANCHO QUE ENCAJA DENTRO DEL DIV 100%........ */
+    z-index: 10;
+    }
+  
+    /*MEDIDAS PARA HACER EL CIRCULO*/
+   .carusel li{
+   list-style: none;
+   width: 40px;
+   height: 40px;
+   display: flex;
+   border-radius: 50%;
+   transition: .5s;
+  }
+  
+  .container-total-carrusell ul li:hover{
+  background-color: #639a63;
+  }
+
+  .container-total-carrusell .carusel ul li span{
+    position: absolute;
+    width: 15px;   /* TAMAÑO DEL CUADRADO QUE SE CONVERTIRA EN FLECHA ......... */
+    height: 15px;                /* IMPORTANTE PARA REDUCIR TAMAÑO DE FLECHA......... */
+    border:3px solid #fff; /* da color solo a la flecha y no al palo*/
+    transition: .5s;
+   
+   }
+
+     
+     /*CIRCULO   IZQUIERDO*/
+    .container-total-carrusell li.left-arrow{
+      margin-left: 1.8%;
+      background-color: #DCDCDC;
+     }
+    /*CIRCULO  DERECHO SE MUEVE A LO HORIZONTAL*/
+    .container-total-carrusell li.right-arrow{
+    margin-left:89%;
+    background-color: #d9d9d9;
+    }
+  
+  /*.........................................*/
+    /* FLECHA LEFT ....FLECHA LEFT............... */
+    .container-total-carrusell ul li.left-arrow span{
+      top:50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+      left:2.8%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+      transform: translateY(-50%) rotate(-45deg);
+      border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+      border-bottom: none;  
+    }
+  /* FLECHA RIGHT.............................FLECHA RIGHT............................ */
+  .container-total-carrusell ul li.right-arrow span{
+  top:50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  right: 2.8%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-top: none;
+  }
+  /*............................*/
+
+
+    /*.................................*/
+  /* PALO ..............PALO.....PALO DERECHO................ */
+    .container-total-carrusell ul li.right-arrow span:before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transform-origin: left;
+  transform: rotate(45deg) translate(-4px, 0px) scaleX(0) ;    /* ENCAJA EL ARROW AL PALO.......... */
+  transition: .5s;                                                 /* Y EL SCALE DESPARECE EL PALO.......... */
+  }
+  
+    
+  /* PALO ........PALO IZQUIERDO LEFT */
+  .container-total-carrusell ul li.left-arrow span:before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    transform-origin: right;
+    transform: rotate(45deg) translate(6px, 14px) scaleX(0) ;    /* ENCAJA EL ARROW AL PALO.......... */
+    transition: .5s; 
+    }
+  
+     /*..........................*/
+
+   /*..........................................*/
+  .container-total-carrusell ul li.right-arrow:hover span:before{
+  transform: rotate(45deg) translate(-4px, 0px) scaleX(1);
+  }
+
+  .container-total-carrusell ul li.left-arrow:hover span:before{
+    transform: rotate(45deg) translate(6px, 14px) scaleX(1);
+    }
+    /*............................................*/
+
+
+
+    /*.........................*/
+ 
+  
+  /*FINAL CARRUSEL...................... */
+  
+  
+  
+/*FINAL CARRUSEL.........FINAL CARRUSEL................. */
+
+
+   /* ...PAGINACION ...................................*/
+  .paginacion{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 8%;
+  margin-bottom: 8%;
+  }
+
+    /*LETRA*/
+   .paginacion a{
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Arial Black';
+    font-weight: 400; 
+    }
+
+
+     .paginacion a:hover{
+     background-color: #000;
+     color:#fff;
+     }
+
+   
+   /*DA COLOR AL BOTON DE ACTIVO */
+  .page-food.active .page-link{
+    z-index: 5;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial Black';
+  }
+
+   
+
+
+
+
+
+/*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+    #footer-articulo{
+   clear: both;
+    position: relative;
+    height:  130px;
+    margin-top: -130px;
+    border-top: solid 1.5px #DCDCDC;
+    display: block;
+    width: 100%;
+    z-index: 10;
+    }
+  
+  
+    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+   .footer-primero-articulo{
+    width: 70%;
+    height: 150px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;  
+    margin: auto;
+     z-index: 10;
+   }
+ 
+
+  /*SUB-caja ICONOS SOCIALES*/
+   .icon-social1{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 90px;
+   }
+  
+    .icon-social1 p{
+    font-size: 1.2rem;
+    word-spacing: -3px;
+    letter-spacing: -2px;
+    font-family: 'Archivo Black', sans-serif;
+    color: #2d2d2d;
+     margin-top: -3px;
+    }
+  
+
+  .icon-social1 li{
+  list-style: none;
+  display: inline-flex;
+  }
+
+
+
+  /* UL*/
+ .social2{
+ display: flex;
+ flex-direction: row;
+ list-style: none;
+ margin-top: -8px;
+ }
+
+
+.social2  li  .fa-envelope{
+background-color: oldlace;
+color: #2d2d2d;
+width:40px;
+height: 40px;
+padding: 5px 5px 5px 5px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+.social2  li  .fa-facebook-f{
+background-color: oldlace;
+color:  #2d2d2d;
+width:40px;
+height: 40px;
+padding: 5px 5px 5px 5px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+.social2  li  .fa-twitter{
+background-color: oldlace;
+color:   #2d2d2d;
+width:40px;
+height: 40px;
+padding: 5px 5px 5px 5px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+.social2 li   .fa-instagram{
+background-color: oldlace;
+color: #2d2d2d;
+width:40px;
+height: 40px;
+padding: 5px 5px 5px 5px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+ /*SUB-caja contenedor de la caja correo*/
+
+ /*SUBCONTENEDOR DONDE ESTA EL BOX*/
+ .box{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 90px;
+  }
+ /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
+ .box form{
+  display: flex;
+ flex-direction: row;
+  width: 70%;
+  }
+
+
+/*LETRA DE LA CAJA DE SUSCRIBIR*/
+.box h3{
+letter-spacing: -0.1px;
+font-family: 'Archivo Black', sans-serif;
+font-size: 1rem;
+font-weight: 400;
+margin-top: 3px;
+
+color: #2d2d2d;
+}
+
+
+.box input[type="text"]
+{
+background-color: #fff;
+display: flex;
+width:60%;
+height: 50px;
+border: 1.5px solid 	#DCDCDC;
+padding: 0 18px;
+border-radius: 5px 0 0 5px;
+font-size: 1rem;
+font-family: 'Times New Roman', Times, serif;
+
+}
+
+.box button[type="submit"]{
+left: 10px;  /*EL TRUCO IMPORTANTE*/
+border-radius: 0 5px 5px 0;
+width: 30%;
+height: 50px;
+border: none ;
+outline: none;
+cursor: pointer;
+background-color: #2d2d2d;
+color: #fff;
+font-size: 12px;
+font-family: 'Archivo Black', sans-serif;
+}
+
+
+/*FIN de la cajita del correo */
+
+
+
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+  .footer-second-articulo{
+  width: 100%;
+  height: 30px;  /*IMPORTANTE*/
+   }
+
+  
+.final-food-articulo{
+width: 100%;
+height: 20px;
+padding-bottom: 10px;
+ 
+ }
+
+.final-food-articulo p{
+  text-align: center;
+ font-family: 'Times New Roman', Times, serif;
+  color: #2d2d2d;
+  font-size: 0.8rem;
+ 
+ }
+
+
+/* FINAL.....FOOTER...............................................................................................................................................................................*/
+/*FINAL .............................................................................................................................................*/
+
+
+
+
+/* Animação     PARA QUE AL HACER SCROLL LAS LETRA O IMAGENES APAREZCAN*/
+
+[data-anime] {
+    opacity: 0;
+    transition: .3s;
+  }
+  
+  [data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+  }
+  
+  [data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+  }
+  
+  [data-anime="top"] {
+    transform: translate3d(0, -50px, 0);
+  }
+  
+  [data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  
+
+
+
+
+
+      /*CONTAINER DEL SEARCH PERO SOLO PARA LA PAGINA SEARCHC ES DIFERENTE A CONTROLS QUE ES PARA LAS DEMAS PAGINAS*/
+    #controls-uno{
+    display: block;
+    width: 75%;
+    height: 80px;
+    margin: auto;
+
+    }
+
+  
+   #custom-search-input-search{
+     display: flex;
+     flex-direction: row;
+     align-items: flex-end;
+     border-radius: 5px;
+     -moz-border-radius: 5px;
+     -webkit-border-radius: 5px;
+     box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     font-size: 1em;
+     font-weight: 1rem;
+     padding: 2px;
+     width: 100%;
+     height: 48px;
+     background-color:#2d2d2d;
+     width: 100%;
+    
+   }
+
+    /*CAMPO SEARCH BUSCADOR */
+    #controls-uno .sin-borde{
+    border-left: 1px;
+    -moz-border-left: 1px;
+    -webkit-border-left: 1px;
+    font-size: 1em;
+    font-weight: 2rem;
+    padding: 4px;
+    width: 90%;
+    height: 45px;
+    
+  }
+
+   /*--IMPORTANTE PARA POSICIOINAR EL CURSOR*/
+
+  
+     /*BOTOM BUSCADOR */
+     #controls-uno .boton{
+    border-right: 4px;
+    -moz-border-right: 2px;
+    -webkit-border-right: 2px;
+    font-size: 1em;
+    font-weight: 300;
+    padding: -2px;
+    width: 10%;
+    height: 45px;
+    background-color:#000000;
+    color: #fff;
+    }
+  
+
+    input[type=text]:focus {
+      outline: none;
+  }
+
+  #controls-uno #custom-search-input input[type=text]:focus {
+    outline: none;
+    border: 0;
+    background-color: #fff;
+    padding-left: 20px; 
+   }
+
+
+
+
+
+  /*CONTENEDOR DE RESULTADOS SEARCH PINTEREST........................................ */
+  #container-search{
+    display: block;
+    width: 75%;
+    margin: auto;
+     margin-top: 80px;
+     }
+  
+     /*TITULO RESUKTADOS*/
+     #container-search h1{
+       display: block;
+      font-size: 2.3rem;
+      font-family: 'Times New Roman', Times, serif;
+      color: #000000;
+      font-weight: 900;
+      margin-bottom: 65px;
+     text-decoration: underline;
+     }
+  
+
+     /*    margin:55px auto;
+      -moz-column-count: 5;
+      -moz-column-gap: 10px;
+      -moz-column-fill: auto;
+      -webkit-column-count: 3;
+      -webkit-column-gap: 10px;
+      -webkit-column-fill: auto;
+      column-count: 5;
+      column-gap: 15px;
+      column-fill: auto;*/
+    /*CONTENEDOR DE RESULTADOS SEARCH PINTEREST........................................ */
+    .container-pinterest{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+       }
+  
+  
+       /*box-shadow: 0 1px 2px  rgba(34, 25, 25, 0.4);*/
+       /* margin:  0 2px 4px;*/
+       /*box-shadow: 0 1px 0px  rgba(34, 25, 25, 0.4);
+    background: #FEFEFE;
+    background-image: linear-gradient(45deg, #FFF, #F9F9F9);*/
+     .elemento{
+    width:100%;
+    height: 210px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+    break-inside: avoid-column;
+    overflow: hidden;
+    -moz-column-break-inside:avoid;
+    -webkit-column-break-inside:avoid;
+    -column-break-inside:avoid;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d9d9d9;
+    
+    margin-bottom: 42px;
+  
+  }
+  
+    .elemento-imagen{
+      display: block;
+      position: relative;
+      float: left;
+      width: 45%;
+      max-width: 280px;
+      height: 100%;
+      max-height: 200px;
+      margin-right: 22.5px;
+    }
+  
+    .elemento-imagen img{
+    margin: auto;
+    width: 100%;
+  
+  
+    }
+  
+    #container-search .elemento-descripcion{
+       display: block;
+       position: relative;
+       float: right;
+        width: 50%;
+      }
+  
+    /*TITULO*/
+    .container-pinterest .elemento-descripcion a h2{
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight:800;
+    line-height: 1.1em;
+    letter-spacing: -.002em;
+    }
+  
+    #container-search .elemento-descripcion p{
+    font-family: 'Times New Roman', Times, serif;
+    color: #2d2d2d;
+    font-size:  1.2rem;
+    line-height: 1.4em;
+    }
+  
+    /*CAJA DE LEER MAS ...VER RECETA*/
+    .elemento-descripcion .btn-outline-success{
+      margin-top: 5px;
+      padding: 4px 9px 4px 9px;
+      font-size: 1.2rem;
+      border-radius: 4px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 900;
+      background-color:#000000;
+      color:#fff;
+      border: 1px solid #2d2d2d;
+    }
+  
+  
+    .elemento-descripcion .btn:hover{
+      border: 2px solid #eeeeee;
+      color: #000000;
+      background-color: #eeeeee;
+     
+    }
+  
+    /*FIN DE CAJA LEER MAS VER RECETA*/
+
+
+      /*HOVER DEL TITULO DEL POST DE LA BUSQIEDA SALE RAYA.............HOVER */
+      a.left{
+      position: relative;
+      }
+  
+      /*HOVER DEL TITULO DE LA BUSQUEDA*/
+     a.left::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #FEFEFE;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    }
+
+   /*HOVER DEL TITULO DE LA BUSQUEDA*/
+  a.left:hover:before {
+    visibility: visible;
+  }
+        /* FINAL MENU ARROW */
+    
+  
+  
+  
+  
+  /* ..FIN CONTENEDOR DE PINTEREST........................................ */
+  @media all and (min-width: 960px) {
+    .container-pinterest {
+       column-count: 4;
+       }
+  }
+  @media all and (min-width: 1170px) {
+    .container-pinterest {
+       column-count: 5;
+       }
+  }
+  
+  

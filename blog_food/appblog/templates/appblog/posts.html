@@ -1,0 +1,256 @@
+{% extends 'appblog/articulo_base.html' %}
+{% load static %}
+{% block title %}Alimentacion sana posts{% endblock %}  
+  
+
+
+                <!----------DE LA PAGINA SEARCH----------------->
+              {% block buscador-search %}       {% endblock buscador-search %} 
+
+             {% block container-search %}  {% endblock container-search %}
+              <!--FIN --------DE LA PAGINA SEARCH----------------->
+
+    <!-- COLUMNA PRIMERA LE PUSE DOS DIVS QUE SON COLUMNA PRUMERA Y PRIMERA COLUMNA------------->
+<div class= "columna-primera">
+            {% block content %}
+            <div class="primera-columna">
+              {% for post in posts %}
+            <!-- caja 1-------------------------->
+                     <div class="primer-articulo">
+                           <em><h4>{{post.publish}}</h4></em>
+                           <!-- TITULO 1-----------------> 
+                            <h1>  {{post.title}}</h1> 
+                             <!-- DESCRIPCION--------------->              
+                            <p> {{post.description}}</p> 
+                             <!----------LINK PARA ACORTAR EL ARTICULO--------------------------->
+                            <p><a href ="{% url 'appblog:post' post.slug %}" style="text-decoration: none">Leer mas...</a></p>
+                      </div>
+                      <!------------------------------------------------------->
+                      <div class="imagen-central">
+                                      <div class="redes">
+                                            <ul class="iconos-social">
+                                                <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                                                      <i class="fas fa-envelope"></i> </a> <br>
+                                                </li>
+                                                {% if LINK_FACEBOOK %}
+                                                <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank">
+                                                <i class="fab fa-facebook-f"></i> </a> <br>
+                                                </li>
+                                                {% endif %}
+                                                <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                                                <i class="fab fa-twitter"></i> </a> <br>
+                                                </li>
+                                                <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                                                <i class="fab fa-instagram"></i> </a> <br>
+                                                </li>
+                                               </ul>
+                                        </div>
+
+                      <!-- TENIA PROBLEMAS CON LA IMAGEN SALIA ERROR CON IF SE SOLUCIONO-->             
+                        {% if post.image %}
+                        <img src="{{post.image.url}}" alt="">
+                        {% endif %}
+                        </div>
+
+
+                          <!-- caja 2-------------------------------------------------------->
+                        <div class="segundo-articulo" data-anime="top">
+                          <!-- SUBTITULO 2------------------->
+                           <h1>{{post.subtitle|safe}}</h1> 
+                          <p>{{post.content|safe}}</p>  
+                         </div>
+                        <!--------------------------------------->
+                          <div class="cursiva">
+                          <p><em>{{post.cursiva|safe}}</em> </p>
+                          </div>
+                          <!--<mark>mark</mark> text
+                            <del>Deleted text</del>
+                            <small>Small text</small>-->
+                        <!---------------------NARRATIVA------------------>
+                      <div class="articulo-narrativa">
+                           <p> {{post.narrativa|safe}}</p>
+                      </div>
+                     <!-- TECERA CAJA UNA IMAGEN---------------------------->
+                      <section class="dos-imagenes">
+                          <div class="imageone">
+                              {% if post.imageone %}
+                              <img src="{{post.imageone.url}}" alt=""> 
+                              {% endif %}
+                          </div>
+                    </section>
+                   <!-- BLOCQUOTE--------------------------------------------------------->
+                    <blockquote class="blockquote blockquote-bordered blockquote-quoted">
+                              <p class="blockquote-text"><em> {{post.blocquote}}</em> </p>
+                              <p class="blockquote-text blockquote-text-credit"> </p>
+                    </blockquote>
+
+
+
+                    <!-- quinta caja---CONTENIDO   SEGUNDO ------------------------------------------------->
+                     <div class="contentwo">
+                      <!--IMAGEN SEGUNDO---->
+                           <div class="image-two">
+                                {% if post.imagepic %}
+                                <img src="{{post.imagepic.url}}" alt="">
+                               {% endif %}  
+                           </div>
+                          <!-- TITULO ENTRADA SEGUNDO--------------> 
+                          <div class="title-two">
+                             <h1>{{post.titleentradaone|safe}}</h1>  
+                          </div> 
+                          <!--CONTENIDO SEGUNDO------------->  
+                          <div class="content-two">
+                            <p> {{post.entradaone|safe}} </p>
+                         </div>
+                    </div>
+
+
+
+              <!---SEXTA CAJA CON DOS TITULOS (TERCER TITULO DE DOS)------->
+              <section class="articulo-ultimo">
+                    <!--AUTOR IMAGEN Y NOMBRE-->
+                    <div class="autor-nombre">
+                           <!--FOTO AUTOR--->
+                           <div class="autor-foto">
+                           {% if post.imageauthor %}
+                           <img src="{{post.imageauthor.url}}" alt="" >
+                           {% endif %}
+                           </div>
+                           <!--NOMBRE DE AUTOR-->
+                           <div class="autor-letra">  
+                           <em><h3>Por: {{post.author}}</h3></em>
+                           </div>
+                    </div>
+                    <!-------CIERRE AUTOR-NOMBRE---------------------------->
+                      <!------CATEGORIA SIN LINK-------------- --->  
+                        <div class="categoria-en-post">
+                            <em><h2>Categoria:</h2></em> <em><p>{{ post.kategoria}}</p></em>
+                        </div>
+            <!-----------CIERRE DIV DE CATEGORIA SIN LINKS---------------------------- --->  
+            </section> 
+          <!---------------CIERRE SECTION DE ARTICULO ULTIMO------------------------ --->  
+
+ <!-- CATEGORIAS DENTRO DEL DIV ARTICULO-UNO------------------>
+                                      <div class="categorias-posts-links">
+                                        <!--CATEGORIA ACTUAL--->
+                                        <br>
+                                        <em><h4>   Categorias: </h4></em>
+                                        {% load mptt_tags %}
+                                         {% for categoria in categories %} 
+                                         <a href="/dietas_especiales_y_alimentacion_saludable/categoria/{{ categoria.slug }}" style="text-decoration: none">   
+                                          <em>  <h3>{{ categoria}}</h3></em></a>
+                                          
+                                         <!--ENDFOR FINAL DE LA CATEGORIA --->              
+                                         {% endfor %}
+                                     
+                                                        <!--ENDFOR FINAL DE LA CATEGORIA --->              
+                                        <!--if not forloop.last endif es para ES PARA REPETIR EL ARTICULO QUE CORRESPONDA --->
+                                      
+                                     </div>
+                      {% endfor %}
+        <!---------------ENDFOR FINAL DE PRIMERA COLUMNA------------------------- --->  
+ <!--HASTA AQUI EL POST DE DJANGO------------------------------------------------------>
+              </div> 
+              {% endblock content %}
+            <!-- CIERRE DIV DE  COLUMNA PRIMERA------------------->
+        </div> 
+
+
+
+  <!--------------INCLUYENDO LA PAGINATION ------------------------------------------------------------------------>
+ 
+       <!------------------------- TERCERA COLUMNA----------------->
+       <div class="tercera-columna-fija">
+      {% block tercera-columna %}
+        <!-------------------------BUSCADOR------------------>
+                   <div class="controls">
+                     <!--FORMULARIO---->
+                     <form  method = "GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}"> {% csrf_token %}
+                            <!--CONTAINER INPUT TYPE BUTTON TYPE----->
+                             <div id="custom-search-input">
+	                            <input type="text"  name="q" value="{{ request.GET.q }}" class="form-control" placeholder="Buscar...." >
+                              <button type="submit" name="submit" class="boton btn-succes" value="Search">Buscar</button>            
+                             </div>
+                             <!--FIN CONTAINER INPUT TYPE BUTTON TYPE------->
+                    </form>
+                    <!--FIN FORMULARIO------>
+	     	          </div>
+               <!------------------FINAL BUSCADOR--------------------------->
+               <!--CONTAINER MAGEN- DENTRO DE LA TERCERA COLUMNA--->
+                <div class="tercera-columna">
+                        <em><h2> mas temas..</h2></em>
+                        <!---CASILLA IMAGEN--->
+                        <div class="tercera-columna-imagen">
+                        <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                        <p>How to take the shame out of self-promotion </p>
+                        </div>
+                        <!---FIN CASILLA IMAGEN--->
+                 </div>
+             <!-----FIN MAGEN ------------>
+      
+              <!------------CATEGORIAS------------------------------->
+                <div class="categorias-aside">
+                     <em><h4>   Categorias: </h4></em>
+                     {% for category in categories %}
+                      <a href="/dietas_especiales_y_alimentacion_saludable/categoria/{{category.slug }}"  style="text-decoration: none">
+                      <em><h3>{{ category.name }}</em></h3></a>
+                      {% endfor %}
+                </div>          
+                <!-------------FIN CATEGORIAS------------------------------>
+     {% endblock tercera-columna %}
+        </div>
+       <!-- FINAL DIV TERCERA COLUMNA-->
+     
+     <!-- CIERRE DE LAS TRES COLUMNAS-->
+
+
+
+
+    </div>    
+
+
+
+
+
+
+
+
+
+
+
+                   {% block paginacion %}
+                   <div class = "paginacion">
+                               <ul class="pagination">
+                                {% if posts.has_previous %}
+                                          <li class="page-item">
+                                          <a class="page-link" href="?page=1">Primero</a>
+                                          </li>
+                                          <li class="page-item">
+                                          <a class="page-link" href="?page={{ posts.previous_page_number }}">&laquo;</a>
+                                          </li>
+                                          {% endif %}
+
+                                   <! ------------------------------------------------------ >
+                                         {% for pagina in paginas %}
+                                         <li class="page-food{% if current_page == pagina %} active {% endif %}">
+                                         <a class="page-link" href="?page={{ pagina }}">{{ pagina }}</a>
+                                         </li>
+                                         {% endfor %}
+                                  <! ---------------------------------------------------------------->
+
+                               <! ----- ----------------------------------------------------------------- >
+                                       {% if posts.has_next %}
+                                        <li class="page-item">
+                                        <a class="page-link" href="?page={{ posts.next_page_number }}">&raquo;</a>
+                                        </li>
+                                        <li class="page-item">
+                                        <a class="page-link" href="?page={{ posts.paginator.num_pages}}">Ùltima</a>
+                                        </li>
+                                       {% endif %}
+                                  </ul>
+                           </div>
+                                {% endblock paginacion %}
+
+
+
+ 

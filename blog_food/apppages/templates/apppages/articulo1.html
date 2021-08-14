@@ -1,0 +1,745 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Articulo{% endblock %}</title>
+    <!-- STILOS -->
+
+    <link rel="stylesheet" href="{% static 'css/articulo.css' %}">
+
+    <STYLE>
+        a {
+            text-decoration: none;
+        }
+    </STYLE>
+    <!-- ICONOS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+        integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+        crossorigin="anonymous"></script>
+
+
+
+    <!-- SCRIPT PARA EL MENU RESPONSIVE A VER SI FUNCIONA SI NO BORRARLO SIRVE PARA EL CARROUSEL-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <!-- SCRIPT PARA ANIMAR AL HACER SCROLL parece no sirve-->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <!-- GOOGLE FONTS-->
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Archivo+Black|Artifika|Bai+Jamjuree|Cabin|Merienda|Roboto+Condensed|Satisfy&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <header>
+
+            <!-- CABECERA ----------------------------------------------------------->
+
+            <div class="cabecera">
+
+                <!-- BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
+                <div class="menu-btn">
+                    <p>MENU</p>
+                    <div class="menu-btn__burger"></div>
+                </div>
+                <!-- final caja menu icono-->
+
+
+
+
+                <!-- caja logo ---->
+                <div class="logo">
+                    <a href="#" id="logo1">
+                        <img src="{% static 'img/logo/320-95.png' %}" alt="Food Emotions">
+                    </a>
+                </div>
+
+                <!-- final caja logo-->
+                <!--  caja boletin-->
+                <div class="boletin">
+                    <span id="Revista"> <a href="index.html">
+
+                            <h4>Suscribete!</h4>
+                        </a></span>
+                </div>
+                <!-- final caja boletin-->
+
+
+
+
+                <!-- NAV MENU QUE VA CON EL BOTON MENU-->
+
+
+                <nav>
+                    <ul>
+                        <li> <a href="http://www.facebook.com" class="current">pierde peso
+                            </a>
+
+                            <ul>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li> <a href="#nutiricion">
+                                dietas especiales
+                            </a>
+                            <ul>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li> <a href="#intolerancias">
+                                planes de salud
+
+                            </a> </li>
+
+
+                        <li><a href="#in">
+                                comiendo sano
+                            </a>
+                            <ul>
+
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li> <a href="#contact">Weight Loss
+
+                            </a>
+                            <ul>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#contact">
+                                Meal Plans
+                            </a>
+                            <ul>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                                <li><a href="#menu">Naranjas</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#contact">
+                                Videos
+                            </a>
+
+                        </li>
+                        <li> <a href="#contact">
+                                Videos
+                            </a> </li>
+                    </ul>
+
+                </nav>
+
+            </div> <!-- FINAL CABECERA ----------------------------------------------------------->
+
+
+        </header>
+
+
+
+        <!-- CONTENEDOR DEL CUERPO DEL BODY-->
+        <div class="container">
+
+            <!-- PRIMER  SEGMENTO MENU SIMPLE-->
+
+            <div class="menu-simple">
+                <ul class="arrow">
+                    <li class="arrow1">
+                        <a href="malito:contacto@emotionsfood.com" target="_blank">
+                            <p>NOTICIAS
+                                <i class="right"></i></p>
+                        </a>
+                    </li>
+                    <li class="arrow1">
+                        <a href="malito:contacto@emotionsfood.com" target="_blank">
+                            <p>SALUD
+                                <i class="right"></i></p>
+                        </a>
+                    </li>
+                    <li class="arrow1">
+                        <a href="malito:contacto@emotionsfood.com" target="_blank">
+                            <p>DIETAS
+                                <i class="right"></i></p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+            <!-- SEGUNDO SEGMENTO ARTICULO INICIAL
+            <section class="primer-articulo-inicio">
+
+                <div class="primer-articulo-vacio"></div>
+                <div class="primer-articulo">
+                    <h1>un titulo especial</h1>
+                    <p> Ahora empza a escribir y mucho sobre este temajndvndfvjnfdv
+                        bjdafodnfkerfnlkdmfklsdngejsgnklsnfdlknsvroghsodjcnfjd
+                        bfjfnojrsgnrlkgnñskgmkgnmlkrgmlkgnlsngjfgbsf
+                        bjnflsdkngsfdlkgmslkgmñtksgmrfkfmlkdmlkgnlksgnl
+                        bljndfslkfnsñglkmgñkmfñlmñdflmgñmxfñkgmxflk
+                        blknfvñkfmgvñfmbñlmfbñxgfmxñgmñlxdfmvñflgmñfkmñdfmgñ
+                        nklnfdvñlmxfdñlvmgfmlñgmlbfxml¨DdlzLM¨fdlKgÑxlgmf
+                        nklnfdñlsknñlgmfñlmgñdlmfñlfdmvñlfmñlxfmgxfñ
+                        nlnvlnñdfnvñflmñflmgñlfmgñlgmgñlfmgñlmgfñlgnmfñg
+                        <div>
+
+                            <div class="primer-articulo-vacio"></div>
+
+            </section>
+              -->
+
+
+
+
+
+
+
+            <!-- TERCER SEGMENTO CON TRES COLUMNAS-->
+
+            <div class="tres-columnas">
+
+
+                <!-- COLUMNA DEL MEDIO SE ENCUENTRA TODO EL ARTICULO ---COLUMNA DEL MEDIO-------------->
+                <div class="primera-columna">
+                    <!-- caja 1-->
+                    <div class="primer-articulo">
+                        <h1>un titulo especial</h1>
+                        <p> Ahora empza a escribir y mucho sobre este temajndvndfvjnfdv
+                            bjdafodnfkerfnlkdmfklsdngejsgnklsnfdlknsvroghsodjcnfjd
+                            bfjfnojrsgnrlkgnñskgmkgnmlkrgmlkgnlsngjfgbsf
+                            bjnflsdkngsfdlkgmslkgmñtksgmrfkfmlkdmlkgnlksgnl
+                            bljndfslkfnsñglkmgñkmfñlmñdflmgñmxfñkgmxflk
+                            blknfvñkfmgvñfmbñlmfbñxgfmxñgmñlxdfmvñflgmñfkmñdfmgñ
+                            nklnfdvñlmxfdñlvmgfmlñgmlbfxml¨DdlzLM¨fdlKgÑxlgmf
+                            nklnfdñlsknñlgmfñlmgñdlmfñlfdmvñlfmñlxfmgxfñ
+                            nlnvlnñdfnvñflmñflmgñlfmgñlgmgñlfmgñlmgfñlgnmfñg</p>
+                    </div>
+
+                    <div class="imagen-central">
+                        <img src="{% static 'img/550-700.jpg' %}" /></div>
+
+
+                    <!-- caja 2-->
+                    <div class="pricolumna-articulo" data-anime="top">
+                        <h1>un titulo especial</h1>
+                        <p> Ahora empza a escribir y mucho sobre este temajndvndfvjnfdv
+                            bjdafodnfkerfnlkdmfklsdngejsgnklsnfdlknsvroghsodjcnfjd
+                            bfjfnojrsgnrlkgnñskgmkgnmlkrgmlkgnlsngjfgbsf
+                            bjnflsdkngsfdlkgmslkgmñtksgmrfkfmlkdmlkgnlksgnl
+                            bljndfslkfnsñglkmgñkmfñlmñdflmgñmxfñkgmxflk
+                            blknfvñkfmgvñfmbñlmfbñxgfmxñgmñlxdfmvñflgmñfkmñdfmgñ
+                            nklnfdvñlmxfdñlvmgfmlñgmlbfxml¨DdlzLM¨fdlKgÑxlgmf
+                            nklnfdñlsknñlgmfñlmgñdlmfñlfdmvñlfmñlxfmgxfñ
+                            nlnvlnñdfnvñflmñflmgñlfmgñlgmgñlfmgñlmgfñlgnmfñg
+
+                            bjlnlkfndñlfmñlfmlfñmgflñmgñlfmñlfmlñfmlñfxmfkñ
+                            nlknfdñfñlgmfl´vgmglfkglkmgf´f,´ñd,zf´ñz,d´ñz,dff´ñ
+                            nklnñkfmñlfdmñglmñlfmgsslñfd,g´lñfg,´ñfld,´,ñg´ñ,gf´gm
+                            nklnvñfsmvñlsfmgñlsfdmgñlfmgñmfñflmfñlmgñlmggñlmgbfñ
+                            nlknvfkfnñlmgfbñlbgmñlbg
+                            nknfvkñmgfbñlgm´lgmgbñ
+                    </div>
+
+                    <div class="cursiva">
+                        <p><em>When shopping around for other companies that would allow Richard to
+                                keep his pride, he comes across the forward-thinking Flutterbug,
+                                who wants Richard to lead engineering on a fantastical new technology
+                                that seems poised to change the world. That technology, of course,
+                                allows you to look in a camera that puts a fake mustache on your face.</em>
+                        </p>
+
+
+                    </div>
+
+                    <div class="pricolumna-articulo">
+                        <p>Ahora empza a escribir y mucho sobre este temajndvndfvjnfdv
+                            bjdafodnfkerfnlkdmfklsdngejsgnklsnfdlknsvroghsodjcnfjd
+                            bfjfnojrsgnrlkgnñskgmkgnmlkrgmlkgnlsngjfgbsf
+                            bjnflsdkngsfdlkgmslkgmñtksgmrfkfmlkdmlkgnlksgnl
+                            bljndfslkfnsñglkmgñkmfñlmñdflmgñmxfñkgmxflk
+                            blknfvñkfmgvñfmbñlmfbñxgfmxñgmñlxdfmvñflgmñfkmñdfmgñ
+                            nklnfdvñlmxfdñlvmgfmlñgmlbfxml¨DdlzLM¨fdlKgÑxlgmf
+                            nklnfdñlsknñlgmfñlmgñdlmfñlfdmvñlfmñlxfmgxfñ
+                            nlnvlnñdfnvñflmñflmgñlfmgñlgmgñlfmgñlmgfñlgnmfñg
+
+                            <mark>mark</mark> text
+                            <del>Deleted text</del>
+
+                            <small>Small text</small>
+
+                            bjlnlkfndñlfmñlfmlfñmgflñmgñlfmñlfmlñfmlñfxmfkñ
+                            nlknfdñfñlgmfl´vgmglfkglkmgf´f,´ñd,zf´ñz,d´ñz,dff´ñ
+                            nklnñkfmñlfdmñglmñlfmgsslñfd,g´lñfg,´ñfld,´,ñg´ñ,gf´gm
+                            nklnvñfsmvñlsfmgñlsfdmgñlfmgñmfñflmfñlmgñlmggñlmgbfñ
+                            nlknvfkfnñlmgfbñlbgmñlbg
+                            nknfvkñmgfbñlgm´lgmgbñ</p>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <!-- tercera caja-->
+
+                    <section class="dos-imagenes">
+                        <div class="foto"><img src="{% static 'img/corto/1.jpg' %}" width="520" height="300" /> </div>
+                        <div class="foto1"><img src="{% static 'img/corto/1.jpg' %}" width="520" height="300" /> </div>
+                    </section>
+
+
+                    <!-- cuarta caja-->
+                    <div class="blockquote">
+                        <blockquote>
+                            <h3><em> I've been using sparrow for a long time. It outperforms all other
+                                    templates.
+                                    It is flexible , support is great & this is the only template you will
+                                    need
+                                    to
+                                    create
+                                    awesome & fast websites.
+
+                                    Rich Piana, Themewagon Inc.</em> </h3>
+                        </blockquote>
+                    </div>
+
+
+                    <!-- quinta caja-->
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="dibujo">
+                        <img src="{% static 'img/400-550.jpg' %}" />
+                    </div>
+
+
+                    {% block contenido %}
+                    {% if posts %}
+                    {% for post in posts %}
+                    <!-- sexta caja con dos columnas----------->
+                    <section class="articulo-dos">
+
+                        <div class="articulodos-uno">
+                            <a href="{% url 'blog:detalle_post' post.slug %}">
+
+                                <h1>ARTICULO DOS</h1>
+                            </a>
+                            <p> jldknsk dnñfknd nmsfñksm fñdlsmfñds
+                                blfjdsnfl kdkfnñ dmdñvfdlñv fd ñvfdmzñ
+                                bjblcdnsl fdknñfknsd ñkfmklndsk cmsd ñkcm,d cmkdmvd
+                                d cldmc dmlc dmlfdm
+                                jbljdsn lksnlks mdksfmdksfnd lskfnldsnfl
+                                kdsnlvmn fkldng kñhkgcñ lklñgfmñlm
+                                knhkghk gmhñlg mhñfmgñ mhmgfhñg mhñkgmñk
+                                gmglkmjhñgcgjñh
+                                jldknsk dnñfkndnm sfñksmf ñdlsmfñds
+                                blfjdsn flkdkfnñdm dñvf dlñv fdñvfdmzñ
+                                bjbl cdnslf dknñfkn sdñkfmk lndskcmsd
+                                ñkcm,d cmkdmvd
+
+
+
+                                ñkgmglkmjhñgcgjñh
+                                jldknskdnñfkn dnmsfñksmf ñdlsmfñds
+                                blfjdsnflkdk fnñdmd ñvfdlñv fdñvfdmzñ
+                                bjblcdn slfdknñf knsdñkfm klndskcmsd ñkcm,d cmkdmvd
+                                d cldmc dmlc dmlfdm
+                                jbljdsnl ksnlksmd ksfmdks fndlskfnldsnf
+                                lkdsnlvmn fkldngk ñhkgcñlk lñgfmñlm
+                                knhkghk gmhñ lgm hñfmg ñmhmgfhñ gmhñkgmñk
+                                gmglkmjhñgcgjñh </p>
+
+
+
+
+                        </div>
+
+                        <div class="articulodos-dos">
+                            <h1>ARTICULO DOS</h1>
+                            <p>
+                                blfjdsnflkdkfnñdmdñvfdlñv fdñvfdmzñ
+                                bjblcdnslfdknñfknsdñkfmklndskcmsd
+                                ñkcm,d cmkdmvd
+                                d cldmc dmlc dmlfdm
+
+                                jbljdsnlksnlksmdksfmdksfndls
+                                kfnldsnflkdsnlvmnfkldngkñhkgcñlklñgfmñlm
+
+
+                                d cldmc dmlc dmlfdm
+                                jbljdsnlksnlksmdksfmdksfndlskf
+                                nldsnflkdsnlvmnfkldngkñhkgcñlklñgfmñlm
+                                knhkghkgmhñlgmhñfmgñmhmgfhñgm
+                                hñkgmñkgmglkmjhñgcgjñh
+                                jldknskdnñfkndnmsfñksmfñdlsmfñds
+                                blfjdsnflkdkfnñdmdñvfdlñv fdñvfdmzñ
+                                bjblcdnslfdknñfknsdñkfmklndsk
+                                cmsd ñkcm,d cmkdmvd
+                                d cldmc dmlc dmlfdm
+                                jbljdsnlksnlksmdksfmdksfndl
+                                skfnldsnflkdsnlvmnfkldngkñhkgcñlkl
+                            </p>
+
+                        </div>
+                    <hr>
+                        {% endfor %}
+                        {% else %}
+                        <h1>No existen post registrados!</h1>
+                        {% endif %}
+                        {% endblock contenido %}
+
+                    </section> <!-- cierre de la sexta caja con dos columnas-->
+
+
+
+
+                </div> <!-- cierre de la primera columna-->
+
+                <!-- FINAL PRIMERA COLUMNA SECTION ARTICULO Y FOTOS----------------------------------------------------------------------------------------->
+
+
+
+                <!-- SEGUNDA COLUMNA-->
+
+                <div class="segunda-columna">
+
+                </div>
+
+                <!-- TERCERA COLUMNA-->
+
+                <div class="tercera-columna-fija">
+                    <section class="tercera-columna">
+                        <p> Titulo.</p>
+                        <img src="{% static 'img/340-200.jpg' %}">
+                    </section>
+                    <section class="descripcion">
+                        <p> Platos que daremos a probar</p>
+                    </section>
+                </div>
+            </div> <!-- CIERRE DE LAS TRES COLUMNAS-->
+
+
+
+
+            <!-- CARROUSEL DE MAGENES-->
+
+            <div class="carrusel1">
+
+                <h2>Lo que buscas...</h2>
+                <div id="carrusel">
+
+                    <div class="carusel">
+                        <ul>
+                            <li class="left-arrow"><span></span></li>
+                            <li class="right-arrow"><span></span></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="carrusel">
+
+                        <div class="product" id="product_0">
+                            <img src="{% static 'img/250-285.jpg' %}" width="230" height="250" />
+
+                            <a href="http://www.facebook.com" class="current">
+                                <p>Cau Cau, gastronomia peruana, con patatas, zanahoria, guisantes,
+                                    ternerao</p>
+                            </a>
+                        </div>
+
+                        <div class="product" id="product_1">
+                            <img src="{% static 'img/250-285a.jpg' %}" width="230" height="250" />
+
+                            <a href="http://www.facebook.com" class="current">
+                                <p>pierde peso</p>
+                            </a>
+                        </div>
+
+                        <div class="product" id="product_2">
+                            <img src="{% static 'img/250-285.jpg' %}" width="230" height="250" />
+                            <a href="http://www.facebook.com" class="current">
+                                <p>Cau Cau, gastronomia peruana, con patatas, zanahoria, guisantes,
+                                    ternera</p>
+                            </a>
+                        </div>
+
+                        <div class="product" id="product_3">
+                            <img src="{% static 'img/230-250a.jpg' %}" width="230" height="250" />
+
+                            <a href="http://www.facebook.com" class="current">
+                                <p>Cau Cau, gastronomia peruana, con patatas, zanahoria, guisantes,
+                                    ternera</p>
+                            </a>
+                        </div>
+
+                        <div class="product" id="product_4">
+                            <img src="{% static 'img/250-285.jpg' %}" width="230" height="250" />
+
+                            <a href="http://www.facebook.com" class="current">
+                                <p>pierde peso</p>
+                            </a>
+                        </div>
+
+                        <div class="product" id="product_5">
+                            <img src="{% static 'img/250-285a.jpg' %}" width="230" height="250" />
+
+                            <a href="http://www.facebook.com" class="current">
+                                <p>Cau Cau, gastronomia peruana, con patatas, zanahoria, guisantes,
+                                    ternera</p>
+                            </a>
+                        </div>
+
+
+                        <div class="product" id="product_5">
+                            <img src="{% static 'img/250-285.jpg' %}" width="230" height="250" />
+
+                            <a href="http://www.facebook.com" class="current">
+                                <p>pierde peso</p>
+                            </a>
+                        </div>
+
+                        <div class="product" id="product_5">
+                            <img src="{% static 'img/250-285a.jpg' %}" width="230" height="250" />
+                            <a href="http://www.facebook.com" class="current">
+                                <p>pierde peso</p>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- FINAL DE CARROUSEL DE IMAGENES-->
+
+
+
+
+            <!-- FOOTER PRIMERO ESTA DENTRO DEL CONTAINER DE CONTENIDO-->
+            <div class="footer">
+
+                <div class="footer-primero">
+
+
+
+                    <!-- PRIMER FOOTER--------------->
+
+
+
+
+                    <div class="icon-social1">
+                        <p>food emotions</p>
+                        <ul class="social2">
+                            <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                                    <i class="far fa-envelope"></i> </a></li>
+                            <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank"><i
+                                        class="icon fab fa-facebook-f"></i> </a></li>
+                            <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                                    <i class="fab fa-twitter"></i> </a></li>
+                            <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                                    <i class="fab fa-instagram"></i> </a></li>
+                        </ul>
+                    </div>
+
+
+
+
+                    <div class="box">
+                        <h3>Suscribete a nuestro Newsletter.</h3>
+                        <form action="." method="POST">
+
+                            <input type="text" name="email" id="email" placeholder="Type your email address">
+                            <button type="submit" class="submit">Suscribete</button>
+                        </form>
+                    </div>
+
+
+                    <div class="input">
+                        <h1>Search</h1>
+                        <form name="formulario" method="post" action="http://pagina.com/send.php">
+                            <!-- Nombre de usuario.Campo obligatorio, entre 5-40 carácteres Sólo se permiten letras y números -->
+                            <input type="text" name="nombre" placeholder="Su nombre de usuario" required
+                                pattern="[A-Za-z0-9]{5,40}"
+                                title="Letras y números. Tamaño mínimo: 5. Tamaño máximo: 40">
+                        </form>
+                    </div>
+
+
+                </div> <!-- FIN FOOTER PRIMERO--------------->
+
+
+
+
+
+
+
+                <!--  FOOTER segundo--------------->
+
+
+                <footer class="footer-second">
+                    <div class="hr">
+                        <hr />
+                    </div>
+                    <p> © <a href="http://foodemtions.com" target="_blank">Foodemotions.com</a>
+                    </p>
+                    <p>© 2019 Food Emotions, Todos los derechos reservados. El
+                        uso de este sitio implica la aceptación de nuestros Términos de uso,
+                        Política de privacidad y Política de datos derechos reservados</p>
+                </footer>
+
+
+
+
+
+            </div> <!-- DIV FINAL DE TODO EL FOOTER-->
+
+
+
+
+            <!-- PARA CONVERTIR EL MENU A ASPA-->
+            <script src="{% static 'js/otromenu.js' %}"></script>
+
+            <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->
+            <script src="{% static 'js/menuarticulo.js' %}"></script>
+
+
+
+
+            <!-- SCRIPT DE CARROUSEL DE IMAGENES -->
+            <script>
+                var current = 0;
+                var imagenes = new Array();
+
+                $(document).ready(function () {
+                    var numImages = 8;
+                    if (numImages <= 4) {
+                        $('.right-arrow').css('display', 'none');
+                        $('.left-arrow').css('display', 'none');
+                    }
+
+                    $('.left-arrow').on('click', function () {
+                        if (current > 0) {
+                            current = current - 1;
+                        } else {
+                            current = numImages - 4;
+                        }
+
+                        $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 900);
+
+                        return false;
+                    });
+
+                    $('.left-arrow').on('hover', function () {
+                        $(this).css('opacity', '0.5');
+                    }, function () {
+                        $(this).css('opacity', '1');
+                    });
+
+                    $('.right-arrow').on('hover', function () {
+                        $(this).css('opacity', '0.5');
+                    }, function () {
+                        $(this).css('opacity', '1');
+                    });
+
+                    $('.right-arrow').on('click', function () {
+                        if (numImages > current + 4) {
+                            current = current + 1;
+                        } else {
+                            current = 0;
+                        }
+
+                        $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 900);
+
+                        return false;
+                    });
+                });
+            </script>
+
+            <!-- FINAL SCRIPT DE CARROUSEL DE IMAGENES ------------------------------->
+
+
+
+            <!-- SCRIPT PARA LA CABECERA FIJA-->
+            <script type="text/javascript">
+
+                $(window).on("scroll", function () {
+                    if ($(window).scrollTop()) {
+                        $('header').addClass('black');
+                    }
+
+                    else {
+                        $('header').removeClass('black');
+
+                    }
+                })
+
+            </script>
+
+            <!--  PARA ANIMAR AL HACER SCROLL-->
+            <script src="{% static 'js/animar.js' %}"></script>
+
+
+
+
+
+
+
+
+        </div> <!-- DIV FINAL DEL CONTAINER DE TODO EL CONTENIDO-->
+
+    </div> <!-- DIV FINAL CIERRE DEL WRAPPER PRINCIPALDE TODA LA WEB-->
+</body>
+
+
+
+
+
+
+
+
+</html>

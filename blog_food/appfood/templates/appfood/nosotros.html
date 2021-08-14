@@ -1,0 +1,404 @@
+{% load static %}
+{% load menu %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>{% block titulo %}Acerca de Nosotros{% endblock titulo %}</title>
+    <!-- STILOS -->
+    <link rel="stylesheet" href="{% static 'appfood/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'appfood/css/nosotros.css' %}">
+    <link rel="stylesheet" href="{% static 'appfood/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'appfood/css/responsivenosotros.css' %}">
+
+    <style type="text/css" media="screen">
+        A:link {
+            color: black;
+            font-size: ;
+            font-family: ;
+            text-decoration: none
+        }
+
+        A:hover {
+            color: black;
+            font-size: ;
+            font-family: ;
+            text-decoration: none
+        }
+
+        A:visited {
+            color: black;
+            font-size: ;
+            font-family: ;
+            text-decoration: none
+        }
+    </style>
+
+    <!-- ICONOS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+        integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+        crossorigin="anonymous"></script>
+
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+
+    <!-- GOOGLE FONTS-->
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Archivo+Black|Artifika|Bai+Jamjuree|Cabin|Merienda|Roboto+Condensed|Satisfy&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <!-- CONTAINER GENERAL  -->
+    <div id="wrapper">
+            <header>
+                <div class="cabecera">
+                   <div class="icon-social">
+                      <ul class="social2">
+                        <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                                <i class="far fa-envelope"></i> </a></li>
+                        <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank"><i
+                                    class="icon fab fa-facebook-f"></i> </a></li>
+                        <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                                <i class="fab fa-twitter"></i> </a></li>
+                        <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                                <i class="fab fa-instagram"></i> </a></li>
+                      </ul>
+                  </div>
+                <div class="logo">
+                      <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
+                        <img src="{% static 'appfood/img/logo/logd.svg' %}" alt="Food Emotions">
+                    </a>
+                </div>
+
+      <div class="menu-btn"> 
+                                <div class="suscribe">
+                                <a href="{% url 'appcontact:contacto' %}">   
+                                <h4>suscribete</h4>  
+                                </a>
+                                </div>
+                                <!---------------MENU RESPONSIVE -------------------------------------------------------------------------->
+                              
+                                
+                                     <div class="menu-btn__burger">
+                                     </div>
+                               
+                       </div>
+                                                <!----FIN  MENU RESPONSIVE ------->
+                                     <!-----FIN  BOLETIN -------------->
+
+                 </div>  <!-----FIN  CABECERA------------------------------------------------------------------------------------->
+
+
+    <nav >
+           <ul class="nav">
+                <li> 
+                <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}" >Inicio </a>      
+                </li>
+
+                
+                <li > 
+         
+                <a class="{% active 'appfood:recetas-saludables' %}"  href="{% url 'appfood:recetas-saludables' %}" >
+                   Recetas 
+             
+                  <i class ="fa fa-caret-down"></i>
+                 </a>
+                        <ul>  
+                        {% load mptt_tags %} 
+                        <!-- LAS CATEGORIAS------->
+                        {% for kategory in kategories %}
+                        <li>
+                        <a href="/recetas-saludables/categoria/{{kategory.slug }} "style="text-decoration: none">
+                        {{ kategory.name }}</a>
+                       </li>
+                       {% endfor %}
+                      </ul>
+                </li>
+
+                
+                <li >
+                <a class="{% active 'appfood:recetas-dieteticas' %}" href="{% url 'appfood:recetas-dieteticas' %}">Recetas dieteticas
+                 <i class ="fa fa-caret-down"></i></a>
+                    <ul>  
+                        {% load mptt_tags %} 
+                        <!-- LAS CATEGORIAS------->
+                        {% for category in categories %}
+                        <li>
+                        <a href="/recetas-dieteticas/categoria/{{category.slug }} "style="text-decoration: none">
+                        {{ category.name }}</a>
+                       </li>
+                       {% endfor %}
+                      </ul>
+                </li>
+
+                  <li> 
+                <a class="{% active 'appfood:plan-comidas-saludables' %}" href="{% url 'appfood:plan-comidas-saludables' %}">Plan Comidas Saludables</a>
+                </li>
+
+               <li > 
+                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-sana' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}"> Dietas y Alimentacion  </a> 
+                </li>
+
+                
+
+                <li> 
+                <a class="{% active 'appfood:noticias-turismo-gastronomico' %}" href="{% url 'appfood:noticias-turismo-gastronomico' %}">Turismo </a>
+                       
+                </li>
+              
+                  <li> 
+                <a class="{% active 'appfood:nosotros' %}" href="{% url 'appfood:nosotros' %}"> Nosotros  <i class ="fa fa-caret-down"></i></a>
+                   <ul>  
+                     
+                        <!-- LAS CATEGORIAS------->
+                   
+                        <li>
+                         <a class="{% active 'appcontact:contacto' %}" href="{% url 'appcontact:contacto' %}">Contacto
+                     </a>
+                       </li>
+                  
+                      </ul> 
+
+                </li>
+             </ul>
+
+         </nav>
+
+      </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- CONTAINER GENERAL SEGUNDO  -->
+        <div id="container-nosotros">
+
+            <div class="tres-columnas-nosotros">
+                <!-- PRIMERA COLUMNA DE LOS CONTENIDOS-->
+                <section class="nosotros">
+                    <!-- primera caja-->
+                    <div class="articulo">
+                        <h1><strong><u>nuestra historia</u></strong></h1>
+                        <p> Food Emotions, es un projecto concebido cuando me iniciè en el mundo de la cocina.
+                         Nuestra pasión por la cocina como aficionados, 
+                        nos lleva a crear esta revista gastronómica como parte de una 
+                        memoria imborrable de la cocina Fusionando lo mejor de la tierra 
+                        con lo mejor del mar en platos sencillos pero muy sabrosos.
+
+
+                           En Cocinando entre olivos podéis encontrar todo de tipo de cocina, 
+                           aunque lo que más me gusta es la cocina tradicional, sobre todo la 
+                           cocina andaluza y en especial la oriental. En mis platos no falta aceite
+                            de oliva virgen extra, un producto que llevo por bandera y sobre el
+                             que cada día descubro nuevas posibilidades y aprendo más.
+
+
+
+
+Quiero compartir con vosotros este viaje culinario, con paradas-platos 
+tan exóticos como una terrina de patas de pollo, una paella con salsa 
+de soja, unas lentejas francesas fermentadas con bacterias que se usan 
+en Japón para hacer natto y platos más “normales”, como un pollo asado
+ a la perfección, con una carne jugosísima y una piel que cruje en boca,
+  casi tanto como una patata frita. En definitiva, sorprenderos y haceros
+   salivar con esta cocina aliñada con mi propio toque, medio asiático.
+
+Y el blog es sólo una parte de Umami Madrid: también imparto cursos de cocina
+ y organizo cenas clandestinas con un menú gastronómico de unos 8 platos.
+
+En Umami Madrid encontrarás a veces platos fáciles para hacer a diario
+ y a veces platos más especiales, con preparaciones algo más elaboradas. 
+ Eso sí, siempre con explicaciones muy detalladas para que cualquier
+  persona pueda hacerlos en su casa.
+
+Me gusta utilizar y combinar una gran variedad de ingredientes, 
+pero lo que más me atrae son ingredientes chinos, japoneses, coreanos, 
+del sudeste asiático, y por supuesto, españoles y del resto de europa.
+                        </p>
+                    </div>
+
+                    <!-- segunda caja-->
+
+                    <section class="dos-imagenes">
+                        <div class="foto"><img src="{% static 'appfood/img/nosotros/300-280.jpg' %}" width="100%" /> </div>
+                        <div class="foto"><img src="{% static 'appfood/img/nosotros/300-280.jpg' %}" width="100%" /> </div>
+                    </section>
+
+
+                    <!-- tercera caja-->
+                    <div class="blockquote">
+                        <blockquote>
+                            <h3><em> Mi pasiòn por la cocina..
+
+Mi realizaciòn profesional, una forma de pasarlo bien, 
+riendo, aprendiendo, experimentando y también,
+ claro, equivocándome.
+Sabiendo que siempre hay cosas que quedan
+ por descubrir: sabores, productos, técnicas…
+Apoyándome en mi bagaje teórico y práctico e improvisando 
+con ingredientes que encuentro entre la nevera y la despensa.
+Buscando un equilibrio entre sabores. Por ejemplo, 
+compensando con sabores ácidos o frescos los más grasos,
+ para lograr más niveles de sabor en el plato, 
+ consiguiendo mayor equilibrio.</em> </h3>
+
+                           
+                           <p class="color:#000"> --Armando Autieri,<span class="otroestilo">Food Emotions, Fundador.</span></p>
+
+                        </blockquote>
+                    </div>
+
+
+                    <!-- cuarta caja-->
+                    <div class="dibujo">
+                        <img src="{% static 'appfood/img/nosotros/495-320.jpg' %}" width="495" height="320" />
+                    </div>
+
+                    <!-- quinta caja con dos columnas----------->
+                    <section class="articulo-dos">
+
+                        <div class="articulo-dos-uno">
+                            <h1>En el aprendizaje</h1>
+                            <p> 
+                             En resumen, para mi cocinar es un proceso de aprendizaje continuo
+                              que me permite seguir investigando permanentemente. Es como tirarse a 
+                              un abismo que nunca se acaba. Da algo de vértigo, pero también es 
+                              divertido y adrenalínico. Gran parte de mi tiempo
+                               no laboral (soy psicólogo y trabajo en consultoría de marca) de los últimos
+                                años los he dedicado a investigar, leer, aprender y poner en práctica
+                                 técnicas de cocina – tanto clásicas como nuevas: ahumar, fermentar, 
+                                 cocinar al vacío… – revisando, cuestionando y repensando lo que hago
+                                  y por qué lo hago así. Además me interesa muchísimo la cocina asiática
+                                   y los ingredientes que usan. Aunque muchas veces los uso de distinta
+                                    forma: intento darles aplicación a una cocina que ni es sólo de 
+                                    aquí ni de allí. Y llevo desde 2011 dando clases en distintas
+                                     escuelas de cocina de Madrid.
+
+
+                             </p>
+                        </div>
+                        <div class="articulo-dos-uno">
+                            <h1>Nunca se acaba de aprender</h1>
+                            <p>
+                               El juego es una parte importante en el proceso educativo. 
+                            Jugar también es pasárselo bien, disfrutar. Y jugar con los sabores
+                             es educar el paladar, el sentido del gusto, con recetas de siempre y
+                              con algunas que intentamos renovar.
+
+Este blog nació sin grandes pretensiones pero con mucha ilusión. 
+Ir actualizándolo cada día con recetas fáciles e imágenes atractivas
+ es para nosotras un reto que empezó, precisamente, como un juego.
+  Aunque con el tiempo se ha ido haciendo más complicado, siempre
+   hemos querido que todos podáis participar de él, jugando con nosotras.
+
+Por eso, estaremos encantadas de que os pongáis
+ en contacto con nosotras si creéis que podemos ayudaros en algo
+  o si queréis intercambiar algún tipo de idea o hacernos alguna
+   sugerencia, pero no responderemos a los mensajes anónimos
+    en los comentarios.
+
+
+
+Por lo tanto, dentro de la web de rvte podemos encontrar 
+una sección dedicada a Babel
+ y donde podemos encontrar un montón de recetas de cocina de 
+ diferentes lugares del mundo. Ahí vamos a poder encontrar platos
+  típicos de casi un centenar de países repartidos por todo el mundo
+   para que podamos viajar a ellos desde nuestro plato y sin movernos de casa.
+
+En Babel podemos encontrar recetas de América, África, Asia, 
+Europa e incluso ciertos platos de cocina de fusión de las antípodas.</p>
+                        </div>
+                    </section> <!-- cierre de la quinta caja con dos columnas-->
+                </section> <!-- cierre de NOSOTROS primera columna de contenidos-->
+
+                <!-- FINAL PRIMERA COLUMNA SECTION ARTICULO Y FOTOS----------------------------------------------------------------------------------------->
+
+ <!-- SEGUNDA COLUMNA --------------------------------------------------------------------->
+
+                <div class="fijo1">
+
+                </div>
+                <!-- FINAL  segunda columna......................-->
+
+
+
+  <!-- TERCERA COLUMNA FIJA  > -->
+                    
+
+                <div class="fija">
+                    <section class="imagen-estatica"><img src="{% static 'appfood/img/nosotros/230-250.jpg' %}" width="100%"  />
+                    </section>
+                </div>
+
+
+
+
+               
+
+            </div> <!-- FINAL TRES CLUMNAS-->
+
+
+<!--DIV CIERR DEL CONTAINER---->
+    </div>
+
+
+            <!-- horizontal debe de ser-->
+            <div id="footer1">
+
+                <div class="footer-second1">
+                    
+                  
+                    <p> © <a href="http://foodemtions.com" target="_blank">Foodemotions.com  
+                 &nbsp;  &nbsp; 2021 &nbsp; Food Emotions, Todos los derechos reservados.
+                    </a>
+                    </p>
+                 
+                </div>
+
+
+            </div>
+
+    
+
+        <!-- FINAL CONTAINER-->
+
+
+
+<!-- PARA CONVERTIR EL MENU A ASPA-->
+            <script src="{% static 'appfood/js/menuAspaArticulo.js' %}"></script>
+
+            <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->
+            <script src="{% static 'appfood/js/menuDeslizaArticulo.js' %}"></script>
+
+
+        <!-- FINAL WRAPPER-->
+    </div>
+
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,36 @@
+<div class="container">
+<nav>
+<ul class="pagination">
+{% if recipes.has_previous %}
+<li class="page-item">
+<a class="page-link" href="?page=1">Primero</a>
+</li>
+<li class="page-item">
+<a class="page-link" href=?page={{ recipes.previous_page_number }}">&laquo;</a>
+</li>
+{% endif %}
+
+<! ------------------------------------------------------ >
+{% for pagina in paginas %}
+         <li class="page-item{% if current_page == pagina %} active {% endif %}">
+         <a class="page-link" href="?page={{ pagina }}">{{ pagina }}</a>
+         </li>
+{% endfor %}
+<! ---------------------------------------------------------------->
+
+<! ----- ----------------------------- ------------------------------------! >
+{% if recipes.has_next %}
+<li class="page-item">
+<a class="page-link" href="?page={{ recipes.next_page_number }}">&raquo;</a>
+</li>
+<li class="page-item">
+<a class="page-link" href=?page={{ recipes.paginator.num_pages}}">Ùltima</a>
+</li>
+{% endif %}
+
+
+</ul>
+</nav>
+
+
+</div>

@@ -1,0 +1,477 @@
+{% extends 'appblog/articulo_base.html' %}
+{% load static %}
+{% block title %}Perder Peso{% endblock %}  
+  
+               <!----------DE LA PAGINA SEARCH----------------->
+         {% block buscador-search %}       {% endblock buscador-search %} 
+
+             {% block container-search %}  {% endblock container-search %}
+              <!--FIN --------DE LA PAGINA SEARCH----------------->
+
+
+    <!-- COLUMNA PRIMERA LE PUSE DOS DIVS QUE SON COLUMNA PRUMERA Y PRIMERA COLUMNA------------->
+  <div class= "columna-primera">
+                   {% block content %}
+                            <div class="primera-columna">
+                            {% load mptt_tags %}
+                            {% for perderpeso in post_perder %}
+                            <!-- caja 1-------------------------->
+                                   <div class="primer-articulo">
+                                   <p>{{perderpeso.published}}</p>
+                                   <!-- TITULO 1-----------------> 
+                                   <h1>  {{perderpeso.title}}</h1> 
+                                   <!-- DESCRIPCION--------------->              
+                                   <p> {{perderpeso.description}}</p> 
+                                         <!-- (% if not forloop.last %),(% endif %) estaba aqui y lo elimine! ES PARA REPETIR EL MISMO ARTICULO --->
+                                   <!----------LINK PARA ACORTAR EL ARTICULO--------------------------->
+                                   <p><a href ="/plan_de_comidas_saludables/post/{{ perderpeso.slug }}/" style="text-decoration: none">Leer mas...</a></p>
+                                   </div>
+                            <!----------CIERRE PRIMER ARTICULO----------->
+                            <!-----IMAGEN CENTRA CON ICONOS SOCIALES--------------->
+                                <div class="imagen-central">
+                                    <div class="redes">
+                                      <ul class="iconos-social">
+                                      <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                                      <i class="fas fa-envelope"></i> </a> <br>
+                                     </li>
+                                      {% if LINK_FACEBOOK %}
+                                     <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank">
+                                     <i class="fab fa-facebook-f"></i> </a> <br>
+                                    </li>
+                                    {% endif %}
+                                   <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                                    <i class="fab fa-twitter"></i> </a> <br>
+                                   </li>
+                                   <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                                   <i class="fab fa-instagram"></i> </a> <br>
+                                  </li>
+                                  </ul>
+                                </div>         
+                                <!-- IMAGEN CENTRAL-->            
+                              {% if perderpeso.image %}
+                                  <img src="{{perderpeso.image.url}}" alt="" >
+                            {% endif %}
+                      </div>
+                      <!--FIN DE IMAGENE CENTRAL Y REDES------------------------------->
+                                   <!-- caja 2-------------------------------------------------------->
+                                  <div class="segundo-articulo" data-anime="top">
+                                   <!-- SUBTITULO 2------------------->
+                                          <h1>{{perderpeso.subtitle|safe}}</h1> 
+                                          <p>{{perderpeso.content|safe}}</p>  
+                                 </div>
+                                   <!-----------CONTENDOR CURSIVA---------------------------->
+                                 <div class="cursiva">
+                                          <p><em>{{perderpeso.cursiva|safe}}</em> </p>
+                                </div>
+
+                                <!--<mark>mark</mark> text
+                                     <del>Deleted text</del>
+                                     <small>Small text</small>-->
+                               <!---------CONTENEDOR NARRATIVA------------------------------>
+                                   <div class="articulo-narrativa">
+                                     <p>
+                                   {{post.narrativa|safe}}</p>
+                            </div>
+                     <!-- tercera SOLO  UNA FOTO---------------------------->
+                     <section class="dos-imagenes">
+                            <div class="imageone">
+                             {% if perderpeso.imageone %}
+                            <img src="{{perderpeso.imageone.url}}" alt="" > 
+                             {% endif %}
+                            </div>       
+                     </section>
+                      
+                      
+                <!-- BLOCQUOTE--------------------------------------------------------->
+                      {% if perderpeso.blockquote != Null %} 
+                     <blockquote class="blockquote blockquote-bordered blockquote-quoted">
+                         <p class="blockquote-text"><em> {{perderpeso.blocquote|safe}}</em> </p>
+                         <p class="blockquote-text blockquote-text-credit">   </p>
+                     </blockquote>
+                      {% endif %} 
+                <!-- CIERR BLOCQUOTE---------------------------------------------->
+                <!--CONTENIDO SEGUNDO-------------------------------------------->
+                      <div class="contentwo">
+                      <!--IMAGE------------>
+                      <div class="image-two">
+                      {% if perderpeso.imagetwo %}
+                     <img src="{{perderpeso.imagetwo.url}}" alt="">
+                     {% endif %} 
+                      </div>
+                      <!--TITULO------->
+                       {% if perderpeso.titletwo != Null %}    
+                      <div class="title-two">
+                      {{perderpeso.titletwo|safe}}
+                      </div>
+                       {% endif %}
+                       <!--CONTENIDO------------>    
+                      <div class="content-two">
+                      {{perderpeso.contenttwo|safe}}
+                      </div>
+                       </div>
+
+
+                <!-----------------------PLANES DE ALIMENTACION----------------------->
+                <!---PRIMERA SEMANA------------------------------>
+              <div class="primera-semana">
+                     <!--IMAGEN PRIMERO-->
+                   <div class="imgplainone">
+                    {% if perderpeso.imgplainone %}
+                    <img src="{{perderpeso.imgplainone.url}}" alt="">
+                    {% endif %} 
+                   </div>
+                    <!--IMAGEN SEGUNDO-->
+                   <div class="imageplainone">
+                    {% if perderpeso.imageplainone %}
+                    <img src="{{perderpeso.imageplainone.url}}" alt="">
+                    {% endif %} 
+                   </div>
+                    <!--TITULO-->
+                    {% if perderpeso.titleplainone != Null %}    
+                   <div class="titleplainone">
+                   <h2>{{perderpeso.titleplainone|safe}}</h2>
+                   </div>
+                    {% endif %} 
+                     <!--IMAGEN DIARIO-->
+                    <div class="imagediaone">
+                     {% if perderpeso.imagediaone%}
+                    <img src="{{perderpeso.imagediaone.url}}" alt="">
+                    {% endif %} 
+                    </div>
+                     <!--DESCRIPCION DEL TITULO-->   
+                   <div class="plaincontone">
+                   <p>{{perderpeso.plaincontone|safe}}</p>
+                   </div>
+                    <!--DIETA EN TOTAL-->
+                    <div class="plainone">
+                    {{perderpeso.plainone|safe}}
+                   </div>
+              </div>
+
+
+                   <!-- SEGUNDA SEMANA------------------------------>
+              <div class="primera-semana">
+                    <!--IMAGEN PRIMERA-->
+                    <div class="imgplainone">
+                    {% if perderpeso.imgplaintwo %}
+                    <img src="{{perderpeso.imgplaintwo.url}}" alt="">
+                    {% endif %} 
+                    </div>
+                     <!--IMAGEN SEGUNDA-->
+                    <div class="imageplainone">
+                    {% if perderpeso.imageplaintwo %}
+                    <img src="{{perderpeso.imageplaintwo.url}}" alt="">
+                    {% endif %} 
+                   </div>
+                     <!--TITULO-->
+                    {% if perderpeso.titleplaintwo != Null %}    
+                   <div class="titleplainone">
+                   <h2>{{perderpeso.titleplaintwo|safe}}</h2>
+                   </div>
+                    {% endif %} 
+                      <!--IMAGEN DIARIO-->
+                    <div class="imagediaone">
+                     {% if perderpeso.imagediatwo %}
+                    <img src="{{perderpeso.imagediatwo.url}}" alt="">
+                    {% endif %} 
+                    </div>    
+                    <!--DESCRIPCION DEL TITULO-->
+                   <div class="plaincontone">
+                   <p>{{perderpeso.plaincontwo|safe}}</p>
+                   </div>
+                    <!--DIETA EN TOTAL-->
+                    <div class="plainone">
+                    {{perderpeso.plaintwo|safe}}
+                   </div>
+              </div>
+
+                     <!--- TERCERA SEMANA------------------------------>
+              <div class="primera-semana">
+                       <!--IMAGEN PRIMERO-->
+                     <div class="imgplainone">
+                    {% if perderpeso.imgplainthree %}
+                    <img src="{{perderpeso.imgplainthree.url}}" alt="">
+                    {% endif %} 
+                    </div>
+                     <!--IMAGEN SEGUNDO-->
+                    <div class="imageplainone">
+                    {% if perderpeso.imageplainthree %}
+                    <img src="{{perderpeso.imageplainthree.url}}" alt="">
+                    {% endif %} 
+                   </div>
+                     <!--TITULO-->
+                    {% if perderpeso.titleplainthree != Null %}    
+                   <div class="titleplainone">
+                   <h2>{{perderpeso.titleplainthree|safe}}<h2>
+                   </div>
+                    {% endif %} 
+                      <!--IMAGEN DIARIO-->
+                    <div class="imagediaone">
+                     {% if perderpeso.imagediathree %}
+                    <img src="{{perderpeso.imagediathree.url}}" alt="">
+                    {% endif %} 
+                    </div>  
+                    <!--DESCRIPCION DEL TTULO-->
+                   <div class="plaincontone">
+                   <p>{{perderpeso.plainconthree|safe}}</p>
+                   </div>
+                    <!--DIETA EN TOTAL-->
+                    <div class="plainone">
+                    {{perderpeso.plainthree|safe}}
+                   </div>
+              </div>
+
+                      <!-- CUARTO SEMANA------------------------------>
+              <div class="primera-semana">
+                     <!--IMAGEN PRIMERA-->
+                    <div class="imgplainone">
+                    {% if perderpeso.imgplainfour %}
+                    <img src="{{perderpeso.imgplainfour.url}}" alt="">
+                    {% endif %} 
+                    </div>
+                     <!--IMAGEN SEGUNDA-->
+                    <div class="imageplainone">
+                    {% if perderpeso.imageplainfour %}
+                    <img src="{{perderpeso.imageplainfour.url}}" alt="">
+                    {% endif %} 
+                   </div>
+                     <!--TITULOL-->
+                    {% if perderpeso.titleplainfour != Null %}    
+                   <div class="titleplainone">
+                   <h2>{{perderpeso.titleplainfour|safe}}</h2>
+                   </div>
+                    {% endif %}   
+                      <!--IMAGEN DIARIO-->
+                    <div class="imagediaone">
+                     {% if perderpeso.imagediafour %}
+                    <img src="{{perderpeso.imagediafour.url}}" alt="">
+                    {% endif %} 
+                    </div> 
+                     <!--DESCRIPCION DEL TITULO-->
+                   <div class="plaincontone">
+                   <p>{{perderpeso.plainconfour|safe}}</p>
+                   </div>
+                    <!--DIETA EN TOTAL-->
+                    <div class="plainone">
+                    {{perderpeso.plainfour|safe}}
+                   </div>
+              </div>
+
+
+                   <!---QUINTO SEMANA------------------------------>
+              <div class="primera-semana">
+                       <!--IMAGEN PRIMERA--->
+                     <div class="imgplainone">
+                    {% if perderpeso.imgplainfive %}
+                    <img src="{{perderpeso.imgplainfive.url}}" alt="">
+                    {% endif %} 
+                    </div>
+                    <!--IMAGEN SEGUNDA------>
+                    <div class="imageplainone">
+                    {% if perderpeso.imageplainfive %}
+                    <img src="{{perderpeso.imageplainfive.url}}" alt="">
+                    {% endif %} 
+                   </div>
+                     <!--TITULO--->
+                    {% if perderpeso.titleplainfive != Null %}    
+                   <div class="titleplainone">
+                   <h2>{{perderpeso.titleplainfive|safe}}</h2>
+                   </div>
+                    {% endif %}
+                      <!--IMAGEN DIARIO-->
+                    <div class="imagediafive">
+                     {% if perderpeso.imagediafive %}
+                    <img src="{{perderpeso.imagediafive.url}}" alt="">
+                    {% endif %} 
+                    </div>    
+                    <!--DESCRIPCION DEL TITULO---->  
+                   <div class="plaincontone">
+                   <p>{{perderpeso.plaincontfive|safe}}</p>
+                   </div>
+                    <!--DIETA EN TOTAL-->
+                    <div class="plainone">
+                    {{perderpeso.plainfive|safe}}
+                   </div>
+              </div>
+
+                     <!---SEXTO SEMANA------------------------------>
+                 <div class="primera-semana">
+                    <!--IMAGEN PRIMERA--->
+                   <div class="imgplainone">
+                     {% if perderpeso.imgplainsix %}
+                     <img src="{{perderpeso.imgplainsix.url}}" alt="">
+                     {% endif %}  
+                   </div>
+                   <!--IMAGEN SEGUNDA------>
+                   <div class="imageplainone">
+                       {% if perderpeso.imageplainsix %}
+                     <img src="{{perderpeso.imageplainsix.url}}" alt="">
+                     {% endif %}
+                   </div>
+                   <!--TITULO--->
+                    {% if perderpeso.titleplainsix != Null %}   
+                   <div class="titleplainone">
+                   <h2>{{perderpeso.titleplainsix|safe}}</h2>
+                   </div>
+                    {% endif %}
+                      <!--IMAGEN DIARIO-->
+                    <div class="imagediaone">
+                     {% if perderpeso.imagediasix %}
+                    <img src="{{perderpeso.imagediasix.url}}" alt="">
+                    {% endif %} 
+                    </div> 
+                    <!--DESCRIPCION DEL TITULO---->  
+                   <div class="plaincontone">
+                   <p>{{perderpeso.plaincontsix|safe}}</p>
+                   </div>
+                   <!--DIETA EN TOTAL-->
+                    <div class="plainone">
+                    {{perderpeso.plainsix|safe}}
+                   </div>
+
+
+                   </div>
+
+                      <!---PRIMERA SEPTIMA SEMANA------------------------------>
+              <div class="primera-semana">
+                       <!--IMAGEN PRIMERO-->
+                    <div class="imgplainone">
+                     {% if perderpeso.imgplainseven %}
+                     <img src="{{perderpeso.imgplainseven.url}}" alt="">
+                     {% endif %}  
+                   </div>
+                     <!--IMAGEN SEGUNDO-->
+                   <div class="imageplainone">
+                    {% if perderpeso.imageplainseven %}
+                     <img src="{{perderpeso.imageplainseven.url}}" alt="">
+                     {% endif %} 
+                   </div>
+                     <!--TITULO-->
+                    {% if perderpeso.titleplainseven != Null %}   
+                   <div class="titleplainone">
+                   <h2>{{perderpeso.titleplainseven|safe}}</h2>
+                   </div>
+                    {% endif %} 
+                      <!--IMAGEN DIARIO-->
+                    <div class="imagediaone">
+                     {% if perderpeso.imagediaseven %}
+                    <img src="{{perderpeso.imagediaseven.url}}" alt="">
+                    {% endif %} 
+                    </div>  
+                      <!--DESCRIPCION DEL TITULO-->
+                   <div class="plaincontone">
+                   <p>{{perderpeso.plaincontseven|safe}}</p>
+                   </div>
+                     <!--DIETA TOTAL-->
+                    <div class="plainone">
+                    {{perderpeso.plainseven|safe}}
+                   </div>
+              </div>
+
+
+
+              <!-- quinta caja---------------------------------------------------->
+              
+                
+       <!---SEXTA CAJA CON DOS TITULOS (TERCER TITULO DE DOS)------->
+              <section class="articulo-ultimo">
+                 
+                            <div class="autor-solo-nombre">
+                            <em><p>Por: {{perderpeso.author}}</p></em>
+                            </div>
+                     <!--CATEGORIA TITULO SIN LINK---> 
+                           <div class="categoria-en-post">
+                           <em> <h2>Categoria:{{ perderpeso.categoria }}</h2></em>        
+                          </div>
+                       <!--FINAL CATEGORIA TITULO SIN LINK---> 
+                
+             </section> 
+       <!-- cierre de la sexta caja con dos columnas---------------------->
+                                   
+                            <!-- cierre de la sexta caja con dos columnas---------------------->
+                             <!-- CATEGORIA TITULO SIN LINK---> 
+                           
+                                        {% load mptt_tags %}
+                                       <div class="categorias-posts-links">
+                                        <em><h4>   Categorias: </h4></em>
+                                        {% load mptt_tags %}
+                                        {% for category in cat.filter %}
+                                        <a href="/perderpeso/categoria/{{ category.slug}}"  style="text-decoration: none">  
+                                        <em><h3>{{ category.name }}</h3>  </em> 
+                                        </a> 
+                                         {% endfor %}
+                                        </div>
+                                       
+            
+                <!---------------ENDFOR FINAL DE TODO EL ARTICULO --FOR POST IN POSTS----------- --->  
+                 {% endfor %}
+ <!--HASTA AQUI EL POST DE DJANGO----------------------------------------------------------------------------------------------------------------------------------------->
+                          </div>
+ <!-- CIERRE DIV DE PRIMERA COLUMNA----------------------------------------------------------------------------------------------->
+                                            
+                                     {% endblock content %}
+                           <!-- CIERRE DIV DE  COLUMNA PRIMERA------------------->
+                                              </div>  
+
+
+                                              <!--------------INCLUYENDO LA PAGINATION ------------------------------------------------------------------------>
+
+
+ <!--------ASIDE ASIDE ASIDE ----CATEGORIAS------------------------------->
+        <!------------------------- TERCERA COLUMNA----------------------------------------------------------->
+        <div class="tercera-columna-fija">
+ {% block tercera-columna %}
+        <!-------------------------BUSCADOR------------------>
+                  <div class="controls">
+                     <form  method = "GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}"> {% csrf_token %}
+                            <div id="custom-search-input">
+	                            <input type="text"  name="q" value="{{ request.GET.q }}" class="form-control" placeholder="Buscar...." >
+                                <button type="submit" name="submit" class="boton btn-succes" value="Search">Buscar</button>
+                                        
+                             </div>
+                    </form>
+	     	    </div>
+        <!------------------FINAL BUSCADOR--------------------------->
+         <div class="tercera-columna">
+                 <em><h2> mas temas..</h2></em>
+                 <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                   <p>How to take the shame out of self-promotion </p>
+         </div>
+        <!----------------------------- -------------->
+      
+        <!------------CATEGORIAS------------------------------->
+     
+           <div class="categorias-aside">
+            <em><h4>  Categorias:</h4></em>
+                        {% load mptt_tags %}
+                         {% for category in cat.filter %}
+                         <!--ESTO ES DEL ASIDE SALE AZUL PORQUE?--->
+                        <a href="/perderpeso/categoria/{{ category.slug }}"  style="text-decoration: none"> 
+                        <em> <h3>{{ category.name}}</h3></em></a>
+                              <!--ENDFOR FINAL DE LA CATEGORIA --->              
+                                 {% endfor %}
+           </div>          
+    <!-------------FIN CATEGORIAS------------------------------>
+{% endblock tercera-columna %}
+        </div>
+       <!-- FINAL DIV TERCERA COLUMNA-->
+     
+     <!-- CIERRE DE LAS TRES COLUMNAS-->
+
+
+
+
+    </div>    
+
+
+
+
+
+
+
+
+
+
+
+ {% block carrusell %}
+  {% endblock carrusell %}

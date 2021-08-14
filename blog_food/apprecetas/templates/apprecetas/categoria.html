@@ -1,0 +1,278 @@
+{% extends 'appblog/base_categoria.html' %}
+{% load static %}          
+{% block title %}Categoria Recetas Saludables{% endblock %}  
+ 
+ 
+
+
+    <!-- CONTENEDOR DEL CUERPO DEL BODY-------->
+    {% block content %}           
+           <div id ="container-categorias-subcategorias">                                  
+           <!--  CAJA DE NAVEGACION DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
+              <!------------CONTIENE DOS COLUMNAS DONDE ESTA ESCRITO Y EL COSTADO VACIO------------------>
+              <div class="intro">
+                   <div class="menu-introescrito">
+                          <!--MENU-->
+                          <div class="menu">
+                          <ul>
+                          <li>
+                          <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
+                          </li>
+                          <li>    
+                          <a  href="{% url 'apprecetas:recetas-saludables' %}">Recetas Saludables<i class="right"></i> </a>
+                          </li>
+
+ 
+                          <!--MENU ESCONDIDO -CATEGORIAS------------------>
+                          <li>
+                          <p>Categorias<i class="right"></i></p>
+                          <ul>
+                          {% load mptt_tags %}
+                          {% for kategory in categories %} 
+                          <!--  TITULO--CATEGORIA---> 
+                          <li>
+                          <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
+                          <p> {{kategory.name}}</p> 
+                          </a>    
+                          </li>
+                          {% endfor %}
+                              
+                          </ul>
+                          </li>
+                          <!---FIN MENUS ESCONDIDO CATEGORIAS---->
+                            
+               
+
+                          <!--NOMBRE DE LA CATEGORIA------->
+                          <li>
+                          {% load mptt_tags %}
+                          {% for receta in category_deals %}
+                          <a href="/recetas-saludables/categoria/{{ receta.slug }}">
+                          <p>{{category_deals.get}}<i class="right"></i></p>
+                          </a>
+                          {% endfor %}
+                          </li>
+                          <!----FIN NOMBRE DE LA CATEGORIA--->
+
+                          </ul>
+                          </div>
+                          <!--MENU------------------>
+
+
+                          <div class="introescrito">
+                          <!---TITULO DE CATEGORIA--->
+                          {% load mptt_tags %}
+                          {% for receta in category_deals %}
+                          <!--  TITULO--CATEGORIA---> 
+                          <div class="menu-intro-titulo">  
+                          <h2> {{category_deals.get}}</h2>     
+                          </div>
+                          {% endfor %}
+                          <!---FIN TITULO DE CATEGORIA--->        
+                          </div>
+
+                         </div>
+                          <!-- FIN DIV MENU INTRO ESCRITO--->
+
+        <!------------------------------------------------------------------------------------------------------------->
+                          <div class="intro-dos-vacios">
+                                       <!------ LAS CATEGORIAS---------------->
+                                       <!--LAS DEJE VACIAS--->
+                                           <!--FIN CATEGORIAS--->
+                                          </div>
+
+
+                         </div>
+                     <!---FINAL INTRO--->
+
+                  </div>
+                 <!-- FIN DIV container-categorias-subcategorias-->
+
+<!-------------------------------------------------------------------------------------------------------------------->
+                  <!---FIN DIV SUBCATEGORIA PERDER-->
+              <div class="imagenes-pequeñas">
+                        <!--SUBCATEGORIAS CON IMAGENES-->
+                       {% for kategory in category_deals %}
+                       {% if not node.is_leaf_node %}
+                       <!-- SUBCATEGORIAS ---->
+                       {% for child in kategory.get_children %}
+                       <div class= "subcategoria">
+                        {% if child.image %}
+                        <img src="{{child.image.url}}">
+                        {% endif %}      
+                        <a href="/recetas-saludables/subcategoria/{{ child.slug }}"><h3>{{ child.name }}</h3>
+                        </a>
+                       </div>
+                       <!--FIN SUBCATEGORY-->  
+                      {% endfor %}
+                      {% endif %}
+                       {% endfor %}
+                </div>
+               <!--FIN DIV IMAGENES PEQUEÑAS--->
+            
+      <!------------------------------------------------------------------------------------------------->
+         
+      
+                        
+          
+         <!--------------- FIN CAJA DE NAVEGACION DE LAS SUBCATEGORIA-PERDER------------------->
+
+
+
+            
+    <!---100%--->
+    <div class="container-posts-categorias">                        
+                <!------------columna de 70%----------------------->
+      <div id = "posts-categoria">
+         <!---DIV DE 4 POST DE POSTS dentro de posts-cetagoria poner 100%--->          
+       <div class="elemento-categoria">   
+            {% for receta in receta %}
+            <!--  IMAGEN DEL POSTPERDER---->
+            <div id="imagen-elemento-categoria"> 
+                    {% if receta.image %}
+                    <img src ="{{receta.image.url}}">
+                    {% endif %}
+                                 
+                    <!--  DESCRIPCION RECETAS---->
+                    <div class ="imagen-descripcion">
+                    <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                    <h2>{{receta.title}}</h2>
+                    <!--  DESCRIPTION DEL POST PERDER---->
+                    <p>{{receta.description|truncatechars:60|safe}} </p> 
+                    <!--  LINK QUE REDIRIGE AL POST --->
+                    </a>                             
+                    <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
+                    <p class="a">Por <span class="o"> {{ receta.author }}</span> </p> 
+                    <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE EBDFOR--->
+                    </div>
+                    <!--fin IMAGEB descripcion--->
+            </div>
+            <!--25%  FIN imagen-elemento-categoria--->         
+            {% empty %}
+            <p>No hay posts</p>
+            {% endfor %}    
+            <!----------CIERRA EL POST ---------->  
+             </div>
+       </div> 
+               <!---75% FIN POSTS CATEGORIAS --->   
+                  <div id="aside">    </div>
+                <!---FINAL ENDFOR DE 4 POST IN POSTS--->
+
+                  </div>
+           <!---100%-FIN CONTAINER POSTS CATEGORIAS---------------------------->
+             
+        
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock content %}   
+ <!---------------------------FIN ENDBLOCK CONTAINER PERDER CATEGORIA------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!---------------- PAGINACION--------------------------------------------------------------->
+      {% block paginacion %}
+            <div class="paginacion">
+                    <nav>
+                      <ul class="pagination">
+                      {% if posts.has_previous %}
+                      <li class="page-item">
+                      <a class="page-link" href="?page=1">Primero</a>
+                      </li>
+                      <li class="page-item">
+                      <a class="page-link" href="?page={{ posts.previous_page_number }}">&laquo;</a>
+                      </li>
+                      {% endif %}
+                      <!------------------------------------------------------>
+                      {% for pagina in paginas %}
+                      <li class="page-food{% if current_page == pagina %} active {% endif %}">
+                      <a class="page-link" href="?page={{ pagina }}">{{ pagina }}</a>
+                      </li>
+                      {% endfor %}
+                      <!--------------------------------------------------------------->
+                      <!---------------------------- ------------------------------------>
+                      {% if posts.has_next %}
+                      <li class="page-item">
+                      <a class="page-link" href="?page={{ posts.next_page_number }}">&raquo;</a>
+                      </li>
+                      <li class="page-item">
+                      <a class="page-link" href="?page={{ posts.paginator.num_pages}}">Ùltima</a>
+                      </li>
+                      {% endif %}
+                      </ul>
+                      </nav>
+                      </div>
+                      {% endblock paginacion %}
+                    <!--------------------------------------------------------------------------------->
+
+
+                           
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 
+
+
+
+
+
+
+
+
+
+
+                        
+
+    
+
+
+
+       

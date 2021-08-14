@@ -1,0 +1,6972 @@
+
+
+@media only screen and (min-width: 250px) and (max-width: 359px)   {
+  
+      #wrapper-recetas {
+      margin:0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+     }
+          
+    #wrapper-recetas > * {
+    padding: 15px;
+    }
+       
+    
+      #container-recetas{
+      width:  100%;
+      margin-top:  60px;
+      margin-bottom: 90px;
+     }
+  
+
+    .controls{
+     display: none;
+    }
+
+
+    header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      margin: auto;
+      height:  60px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+      }
+      
+      header.black{
+      background-color:#fff;
+      width: 100%;
+      height:  60px;
+      }
+
+
+      
+    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
+    
+  #controls-responsive{
+    display: block;
+    visibility: visible;
+    width: 100%;
+    height: 35px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+   
+  }
+
+
+   #custom-search-input-responsive{
+   width: 280px;
+   height: 35px;
+   border: 1px solid#c9c9c9;
+   border-radius: 4px;
+     display: flex;
+     flex-direction: row;
+     margin: auto;
+   }
+
+
+   #controls-responsive .sin-borde-responsive{
+     width: 80%;
+     height: 32px;
+     display: inline-flex;
+   }
+
+
+   #controls-responsive .boton-responsive{
+     width: 20%;
+     height: 32px;
+   }
+
+    
+   .cabecera-recetas{
+    width:  99.8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    height: 45px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    }
+
+    /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
+         
+      /*caja */
+      .logo{
+      height: 40px;
+      width: 60%;
+      }
+                
+      .logo img {
+      width: 100%;
+      height: 40px;
+      margin: auto; 
+      }
+           
+      /*CONTENEDOR  REVISTA Y SOCIALES*/
+      .boletin{
+      display: none;
+      }
+
+
+   /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+    .menu-btn {
+   display: inline-flex;
+   width: 13%;
+   max-width: 50px;
+   height: 40px;
+   }
+
+   /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+   .menu-btn  .menu-btn__burger {
+   display: block;
+   position: relative;
+   z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
+   width: 32px;
+   height: 5px;
+   background: #2d2d2d;
+   border-radius: 2px;
+   transition: all .5s ease-in-out;
+    }
+
+   /*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+ .menu-btn__burger::before,
+  .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 5px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+   }
+
+  .menu-btn__burger:hover{
+  background-color: #639a3a;
+   }
+
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #639a3a;
+   }
+
+
+  /*ESTO AVORTA ESPACIO ENTRE LAS LINEAS*/
+ .menu-btn__burger::before {
+  transform: translateY(-9px);
+  }
+
+ .menu-btn__burger::after {
+  transform: translateY(9px);
+ 
+}
+/* ANIMATION */
+ .menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+ .menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+ .menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+   /*NAV**/
+   nav{
+    background-position:  90%  92%;
+    background-repeat:no-repeat;
+   }
+   nav ul li a p{
+     z-index: 300;
+     font-size: 0.84rem;
+ 
+   }
+     
+   nav ul{
+    width: 85%;
+  
+   }
+
+   
+
+     /*IMPORTANTE  DISTANCIA IGUAL EN li frae del menu*/
+     nav ul li  {
+      height:  20px; 
+      margin-left: -30px; 
+      margin-top: 30px;
+     }  
+     /*FIN NAV*/
+
+
+  
+      /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
+   #tres-columnas-recetas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+     
+      
+  /*CONTENEDOR DE LA PRIMERA COLUMNA........................... 2*/
+   .primera-columna-recetas{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    }
+     
+      .articulo{
+      width: 100%;
+     margin-bottom: 5%;
+   
+    }
+
+    .primera-columna-recetas .recetas{
+      width: 100%;
+      margin: auto;
+    }
+
+
+    /*TITULO DE LA RECETA*/
+    .recetas h1{
+    width: 100%;
+    padding-bottom: ;
+    font-size: 1.5rem;
+    word-spacing: -3px;
+    letter-spacing: -1px;
+    font-family: 'Archivo Black', sans-serif;
+    text-align:start;
+    text-decoration-line: underline;
+    color: #2d2d2d;
+    }
+
+    /*DESCRIPCION DE LA RECETA*/
+    .recetas p{
+      width: 100%;
+      padding-bottom: ;
+      font-size: 1rem;
+      word-spacing: -0.5px;
+      letter-spacing: -0.4px;
+      font-family: 'Open sans';
+      text-align:start;
+      color: #666;
+      }
+
+       /*CNTAINER DE IMAGEN Y AUTOR*/
+       .recetas .foto-autor{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5%;
+      }
+
+      /*FOTO AUTOR*/
+      #foto-autor img{
+        width: 30%;
+        height: 30%;
+        }
+
+        #foto-autor figure{
+          display: flex;
+          flex-direction: row;
+        }
+
+        /*CONTIENE NOMBRE DE AUTOR*/
+        #foto-autor figcaption {
+         width: 70%;
+           display: inline-flex;
+           margin: auto;
+           margin-left: 18%;
+           margin-top: 16%;
+        }
+
+         /*DE REDES IMAGENES TIEMPO Y NUTRICIONAL */
+     .vista{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+     margin: auto;
+       }
+
+  /*CONTAINER IMAGEN*/
+  .vista-imagen-receta {
+       width:  100%;
+      
+       }
+
+
+       .vista-imagen-receta img{
+        width:  100%;
+     
+        border-radius: 6px;
+        margin: auto;
+        }
+ 
+ 
+    .redes{
+      display: flex;
+      flex-direction: row;
+      width: 70%;
+    }
+ 
+        /*CAJA DE REDES*/
+        .iconos-social{
+        width: 80%;
+        flex-direction: row;
+        }
+
+        .iconos-social  li .fa-envelope{
+          padding: 5px 5px 5px 5px;
+          font-size:  5px;
+          width: 30px;
+          height: 30px;
+        }
+        
+        .iconos-social li .fa-facebook-f{
+          padding: 5px 5px 5px 5px;
+          font-size:  5px;
+          width: 30px;
+          height: 30px;
+        }
+        
+        .iconos-social  li .fa-twitter{
+          padding: 5px 5px 5px 5px;
+          font-size:  5px;
+          width: 30px;
+          height: 30px;
+        }
+        
+         .iconos-social  li .fa-pinterest{
+          padding: 5px 5px 5px 5px;
+          font-size:  5px;
+          width: 30px;
+          height: 30px;
+         
+        }
+        
+        /*FINAL SEGUNDA SECTION*/
+        .contiene{
+          width:100%;
+          display: flex;
+          flex-direction: column;
+          margin: auto;
+        }
+
+     /*TIEMPO*/
+       .temps p{
+         font-size: 1rem;
+       }
+       /*PORCIONES*/
+       .prociones p{
+         font-size: 1rem;
+       }
+                 /*PERFIL NUTRICIONAL */
+       .nutricional-imagen h2{
+        font-size: 1rem;
+       }
+
+       .nutricional-imagen p{
+        font-size: 0.8rem;
+      }
+
+      /*..CONTAINER TOTAL PRINCIPAL DE INGREDIENTES..*/
+      .ingredientes-tres{
+       width: 100%;
+      }
+     
+  .ingrediente-titulo-pic{
+    display: flex;
+    flex-direction: row;
+    width: 99%;
+  }
+
+  .ingrediente-titulo{
+    width: 80%;
+  }
+
+
+
+  .ingrediente-pic{
+    width:  10%;
+  }
+
+ .preparacion-total{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+ }
+  .preparacion-titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 99%;
+  }
+
+  .prepa-titulo{
+    display: block;
+    width: 80%;
+  }
+  .prepa-pic{
+    width: 10%;
+  }
+
+
+  .tips-titulo{
+  width: 80%;
+  }
+
+  .tips-pic{
+    width: 10%;
+  }
+
+    /*TITULO INGREDIENTES*/
+    .ingredientes-primero h2{
+    width: 100%;
+    font-size: 1.1rem;
+    word-spacing: -0.03px;
+    letter-spacing: -0.01px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: #000000;
+    text-align: start;
+    }
+
+         /*LOS INGREDIENTES*/
+       .primera-columna-recetas .lista-ingredientes  p{
+        width: 80%;
+        letter-spacing: -0.01px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        color: #666;
+        text-align: start;
+       }
+
+        /*TITULO DE LA PREPARACION*/
+       .primera-columna-recetas .preparacion-dos h2{
+        font-size: 1rem;
+       word-spacing: -0.03px;
+       letter-spacing: -0.001px;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: bolder;
+       color: #000000;
+       text-align: start;
+       }
+     
+     
+     /*CUARTA SECTION..CONTEEDORR .............PREPARACION*/
+   .preparacion-dos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1.5px solid #e3e3e3;
+    }
+
+    .preparacion-titulo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    }
+
+
+   /*TITULO DE LA PREPARACION*/
+  .preparacion-dos .prepa h2{
+   font-size: 1.4rem;
+   letter-spacing:-0.01rem ;
+   word-spacing: -0.01rem;
+   font-weight: bolder;
+   text-align: start;
+   color: #000;
+   font-family: 'Times New Roman', Times, serif;
+   }
+
+   .preparacion{
+    width: 100%;
+    padding-top:0;
+    }
+ 
+    .preparacion-pasos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;   
+     }
+
+    /*PREPARANDO.......*/
+     .preparacion-pasos p{
+     letter-spacing:-0.001rem ;
+     word-spacing: -0.01rem;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 1.2rem;
+     font-weight: 400;;
+    color: #666;
+    
+      }
+   
+  /*FINAL CUARTA SECTION*/
+  /* NUTRICION INFORME    .......... */
+   .nutricion-informe{
+   width: 100%;
+   margin-top:5%;
+   margin-bottom: 15%;
+   }
+    /*cajita*/
+   .nutricional{
+    width: 100%;
+    margin-bottom: 5%;
+   }
+  
+   .nutricional h2{
+    font-weight: bolder;
+    font-size: 1.14rem;
+    word-spacing: -3px;
+    letter-spacing: -2.8x;
+    font-family: 'Archivo Black', sans-serif;
+    color: #2d2d2d;
+    text-decoration: underline; 
+    text-align: start;
+   }
+  
+  .nutricional p{
+    letter-spacing: -0.1px;
+    font-family: 'Cabin', sans-serif;
+    text-align: ;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: -0.4px;
+    color: #666;
+    
+  }
+  /*..CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
+  /*--CATEGORIA QUE ESTA SIN LINK SOLO VA LA CATEGORIA ACTUAL..*/
+  .categoria h2{
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', sans serif;
+    color:#000000;
+  }
+  .categoria p{
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', sans serif;
+    color:#524c56;
+  }
+
+   /*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA SIN TIENEN LINK..*/
+   .categorias-recetas-links h2{
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', sans serif;
+    color:#000000;
+
+   }
+  
+   /*..CATEGORIAS EN EL ASIDE QUE TAMBIEEN USA H2....*/
+  .categorias-recetas-links p{
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', sans serif;
+    color:#524c56;
+  }
+
+
+
+
+      
+       /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
+    #aside-recetas{
+      width:100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-top: 4%;
+      }
+  
+ 
+   
+           /*FOOTER*/
+           #footer-recetas{
+            clear: both;
+              position: relative;
+              height: 30px;
+              margin-top: -30px;
+             border-top: solid 1.5px #DCDCDC;
+             display: flex;
+             flex-direction: column;
+            width: 100%;
+            z-index: 10;
+            bottom: 0;
+            }
+           
+            .footer-primero-recetas{
+              width: 100%;
+              height: 40px;
+              display: flex;
+              flex-direction: row;
+            }
+            #icon-social1{
+              width: 49.5%;
+              height: 40px;
+            }
+           /*LETRAS FOOD EMOTIONS*/
+          #icon-social1 p{
+              font-size: 0.7rem;
+              word-spacing: -0.3px;
+              letter-spacing: -0.2px;
+              font-family: 'Archivo Black', sans-serif;
+              padding-bottom: 0.7px;
+              color: #2d2d2d;
+              }
+
+            #icon-social1 li .fa-envelope{
+                background-color: oldlace;
+                color: #2d2d2d;
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                border: solid #E9E9E9;
+                margin-top: -15px;
+                }
+                
+             #icon-social1   li .fa-facebook-f{
+                background-color: oldlace;
+                color:  #2d2d2d;
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;
+                border: solid #E9E9E9;
+                }
+                
+                
+               #icon-social1   li .fa-twitter{
+                background-color: oldlace;
+                color:   #2d2d2d;
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;
+                border: solid #E9E9E9;
+                }
+                
+                
+                
+                
+             #icon-social1  li .fa-instagram{
+                background-color: oldlace;
+                color: #2d2d2d;
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;  /*SUBE ICONO*/
+                border: solid #E9E9E9;
+                }
+                
+                 /*SUB-caja contenedor de la caja correo*/
+         .box{
+                  width: 49.5%;
+                  height: 40px;
+                  margin-top: 4px; /*SUBE CAJA A MENOS TOP*/
+                   }
+                
+            .box h3{
+                letter-spacing: -0.1px;
+                font-family: ''Archivo Black', sans-serif';
+                font-size: .3rem;
+                font-weight: 300;
+                line-height: -0.4px;
+                margin-left: 16%;
+                color: #2d2d2d;
+                }
+                 /*cajita del correo */
+                .box form{
+                  display: flex;
+                  flex-direction: row;
+                  width: 100%;
+                }
+                
+                /*BOX DONDE SE ESCRIBE*/
+              .box input[type="text"]
+                {
+                background-color: #fff;
+                display: flex;
+                width:70%;
+                height: 20px;
+                border: 1.5px solid 	#DCDCDC;
+                padding: 0 12px;
+                border-radius: 5px 0 0 5px;
+                font-size: 0.6rem;
+                }
+                
+                /*BOTON ENVIAR*/
+          .box button[type="submit"]{
+                left: 14px;  /*EL TRUCO IMPORTANTE*/
+                border-radius: 0 5px 5px 0;
+                padding: 0 4px; /*IMPORTANTE PARA QUE LA LETRA ENCAJE EN EL BOTON*/
+                width: 40%;
+                height: 20px;
+                border: none ;
+                outline: none;
+                cursor: pointer;
+                background-color: #2d2d2d;
+                color: #fff;
+                font-size: 0.5rem;
+                font-family: 'Archivo Black', sans-serif;
+                }
+                
+          .box button[type="submit"]:hover{
+                background: ;
+                }
+                /*FIN de la cajita del correo */
+                
+                .final-food-recetas p{
+                  text-align: center;
+                  padding-top: 8px;  /*BAJAN LAS LETRAS*/
+                  color: #2d2d2d;
+                  font-size: 0.6rem;
+                 }
+                
+                 #wrapper-recetas .tipeo{
+                  margin: auto;
+                  margin-bottom: 20%;
+                  display: table;
+                  width: 90%;
+                  height: 5%;
+                  background-color:;
+                  }
+
+                  #wrapper-recetas  .tipeo h4{
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 { 
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    white-space: nowrap;
+                    width:28%;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 span {
+                     position:absolute;
+                     right:0;
+                     width: 2em;
+                     background: white;
+                     border-left: 0.1px solid #DDD;
+                     animation: escribir 5s steps(30) infinite alternate;
+                     }
+
+
+   }
+  
+
+
+
+  
+   @media only screen and (min-width: 360px) and (max-width: 640px){
+     #wrapper-recetas {
+      margin:0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+          
+    #wrapper-recetas > * {
+    padding: 16px;
+    }
+       
+    
+    #container-recetas{
+      width:100%;
+     margin: auto;
+      margin-top: 53px;
+    
+   }
+  
+     /*border-bottom: 2px solid #DDD;*/
+     header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      margin: auto;
+      height:  65px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+      }
+    
+      header.black{
+       background-color:#fff ;
+       height:  65px;
+      }
+      
+
+   .cabecera-recetas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 35px;
+    }
+
+
+        /*caja */
+      .logo{
+     display:inline-flex ;/*IMPORTANTE*/
+     width: 200px;
+     height: 35px;
+    justify-content: start;
+  
+     }
+    
+    /*IMAGEN DEL LOGO*/
+    .logo img{
+     width: 150px;
+    height: 35px;
+    margin: auto;
+    }
+     
+
+    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
+    
+  #controls-responsive{
+    display: block;
+    visibility: visible;
+    width: 100%;
+    height: 35px;
+    margin-top: 8px;
+   
+  }
+
+
+   #custom-search-input-responsive{
+   width: 342px;
+   height: 35px;
+   border: 1px solid#c9c9c9;
+   border-radius: 4px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin: auto;
+   }
+
+
+   #controls-responsive .sin-borde-responsive{
+     width: 80%;
+     height: 32px;
+     max-width: 290px;
+     display: inline-flex;
+   }
+
+
+   #controls-responsive .boton-responsive{
+     width: 20%;
+     max-width: 60px;
+     height: 32px;
+   }
+
+
+    /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
+
+
+
+    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+  .menu-btn {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: flex-end;
+   width: 250px;
+   height: 30px;
+   }
+
+ .menu-btn p{
+  display: none;
+}
+
+  
+  /*CONTENEDOR  REVISTA Y SOCIALES*/
+  .boletin{
+    display: inline-flex;
+    width: 120px;
+  }
+
+   .boletin a h4{
+  font-size: 0.8rem;
+  letter-spacing: 0.1px;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 800;
+  color:#2d2d2d;
+ 
+  }
+
+
+
+  .boletin a h4:hover{
+    color: #639a3a;
+    text-decoration: none;
+      }
+
+
+ /* /*ICONO DE LA REVISTA SUSCRIBIR SUSCRIPCION*/
+/*--MUEVE EL MENU............ESTE ES EL BURGER*/
+ .menu-btn__burger {
+ margin-top:  9%;
+ display: block;
+ position: relative;
+ float: left;
+ width: 37px;
+ height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+  }
+
+/*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+ .menu-btn__burger::before,
+ .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 37px;
+          height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+  }
+
+
+  /*ESTO AVORTA ESPACIO ENTRE LAS LINEAS*/
+ .menu-btn__burger::before {
+  transform: translateY(-9px);
+  }
+ .menu-btn__burger::after {
+  transform: translateY(9px);
+ 
+   }
+   /* ANIMATION */
+ .menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  }
+
+ .menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+   }
+
+   .menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+
+   /*NAV*/
+
+   /*MUEVE LA IMAGNE DEL NAV*/
+     nav {
+      background-position:  90% 90%;
+      background-repeat:no-repeat;
+     }
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+     nav ul li{
+      display: flex;
+ 
+    margin-top: 1.5%;/*IMPORTANTE */
+    height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
+    margin-left: -8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+      }
+      
+   nav ul li a {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
+    z-index: 100;
+  }  
+  
+
+      /*IMPORTANTE*/
+   nav li a p{
+   margin-top:9px;
+   width: 100%;
+   padding: 2px 2px ;
+   z-index: 1000;
+   margin-left: 30px;
+   font-size: 1rem;
+   }
+  
+   /* NAV ESCONDIDO  NAV ESCONDIDO*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav ul li:hover > ul {
+    display: block;
+    margin-left: 200px;
+    margin-top:-40px; 
+     z-index: 598;
+     }
+   /*CIERRE NAV*/
+
+
+    /* PRIMERA SECCION MENU ARROW*/
+
+    #menu-simple{
+      width: 100%;
+      display: block;
+      height: 35px;
+      margin-top: 15px;
+      }
+  
+      /*MENU CON SCROLL*/
+      #menu-simple ul{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        }
+    
+     
+   /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
+   #tres-columnas-recetas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+     
+      
+  /*CONTENEDOR DE LA PRIMERA COLUMNA........................... 2*/
+   .primera-columna-recetas{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    }
+     
+    .articulo{
+    width: 100%;
+    margin-bottom: 5%;
+    }
+
+     /*SUBCAJA DE ARTICULO CONTIEN EL TITULO
+     DESCRIPCION Y AUTOR*/
+    .recetas{
+    width: 100%;
+  
+    }
+
+    /*TITULO DE LA RECETA*/
+    .recetas h1{
+    font-size: 2.3rem;
+    word-spacing: -2px;
+    letter-spacing: -1px;
+    font-family: 'Archivo Black', sans-serif;
+    text-align: start;
+    text-decoration-line: underline;
+    color: #000000;
+    }
+
+
+    /*DESCRIPCION DE LA RECETA*/
+    .recetas p{
+      font-size: 1.2rem;
+      word-spacing: -0.01px;
+      letter-spacing: -0.001px;
+      font-family: 'Times New Roman', Times, serif;
+      color: #666;
+       margin-bottom: 5px;
+      }
+
+        #foto-autor{
+        width: 60%;
+      display: flex;
+      flex-direction: row;
+      }
+      
+      #foto-autor  figure{
+        width: 20%;
+      display: inline-flex;
+     
+      }
+
+      /*FOTO AUTOR*/
+      #foto-autor figure img{
+     
+        width: 100%;
+        }
+
+  #foto-autor figcaption {
+  width: 90%;
+  height:  25px;
+  margin-top:  20px;
+  margin-left: 4px;
+  }
+
+   #foto-autor figcaption h4 {
+    margin-left: 5px;
+    margin: auto;
+   }
+
+   
+      /*CONTIENE FOTO REDES Y CONTIENE PERFIL NUTRI PORCION Y TIEMPO  */
+     .vista{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     margin: auto;
+  
+      }
+ 
+
+      .vista-imagen-receta{
+        width: 100%;
+      }
+
+
+       .vista-imagen-receta{
+        width: 100%;
+
+      border-radius: 6px;
+      }
+
+     
+    .redes{
+    display: block;
+     }
+
+
+      /*UL*/
+      .iconos-social{
+        display: flex;
+        flex-direction: row;
+       }
+
+      
+      .iconos-social  li .fa-envelope{
+        font-size: 0.8rem;
+      width: 30px;
+      height: 30px;
+      padding: 5px 5px 5px 5px;
+      }
+
+       .iconos-social  li .fa-facebook-f{
+        font-size: 0.8rem;
+      width: 30px;
+      height: 30px;
+      padding: 5px 5px 5px 5px;
+      margin-right: 10px;
+        }
+
+
+        .iconos-social  li .fa-twitter{
+          font-size: 0.8rem;
+          width: 30px;
+          height: 30px;
+          padding: 5px 5px 5px 5px;
+          margin-right: 10px;
+          }
+
+
+          .iconos-social  li .fa-pinterest{
+            font-size: 0.8rem;
+            width: 30px;
+            height: 30px;
+            padding: 5px 5px 5px 5px;
+            margin-right: 10px;
+            }
+            
+      .contiene{
+        width:  100%;
+        display: flex;
+      flex-direction: column;
+      margin: auto;
+
+      }
+
+
+       .temps{
+         width: 100%;
+         margin: auto;
+      
+       }
+
+       .porciones{
+         width: 100%;
+         margin: auto;
+       }
+
+       .nutricional-imagen{
+         width: 100%;
+         margin: auto;
+       }
+
+      /*TIEMPO*/
+      .temps p{
+        font-size: 1.2rem;
+        letter-spacing:-0.001rem ;
+        word-spacing: 0.01rem;
+        color: #000000;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      /*PORCIONES*/
+      .porciones p{
+        font-size: 1.4rem;
+        color: #000000;
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing:-0.001rem ;
+        word-spacing: -0.01rem;
+      }
+                /*PERFIL NUTRICIONAL */
+      .nutricional-imagen h2{
+       font-size: 1.4rem;
+       color: #000000;
+       font-family: 'Times New Roman', Times, serif;
+       letter-spacing:-0.001rem ;
+       word-spacing: -0.01rem;
+      }
+
+      .nutricional-imagen p{
+       font-size: 1.2rem;
+       letter-spacing: -0.001rem ;
+       word-spacing: -0.01rem;
+       color: #666;
+     }
+
+     /*FIN CONTAINE DE IMAGNE PRINCIPAL CON PERFIL NUTRICIONAL*/
+     .ingredientes-tres{
+     width: 100%;
+     }
+
+     .ingrediente-titulo-pic{
+       display: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+     }
+     
+     .ingrediente-titulo{
+      width: 91%;
+     }
+       
+     .ingrediente-titulo h2{
+      
+      height: 8%;
+    }
+          
+     .ingrediente-pic {
+      width: 9%;
+      height: 8%;
+    }
+
+
+     .ingredientes-pic img{
+       width:  30px;
+       height: 30px;
+       margin: auto;
+     }
+
+     /*SEGMENTO DE INGREDIENTES*/
+     .ingredientes{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+     }
+
+     .lista-ingredientes{
+      width: 100%;
+      margin: auto;
+     }
+       /*TITULO INGREDIENTES*/
+    .ingredientes-primero h2{
+        width: 100%;
+        font-size: 1.4rem;
+        word-spacing: -0.01px;
+        letter-spacing: -0.001px;
+        font-family: 'Archivo Black', sans-serif;
+        font-weight: bolder;
+        color: #000000;
+        text-align: start;
+       }
+
+         /*LOS INGREDIENTES*/
+     .lista-ingredientes  p{
+        letter-spacing: -0.1px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.2rem;
+        letter-spacing:  -0.001rem ;
+        word-spacing: -0.01rem;
+        font-weight: 400;
+        color: #666;
+        text-align: start;
+       }
+
+       .salsa p{
+         color: #000;
+         font-weight: 900;
+       }
+
+       .preparacion-total{
+        width: 100%;
+         display: flex;
+         flex-direction: column;
+ 
+       }
+
+
+       .preparacion-titulo{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+
+     
+   
+       .preparacion-titulo .prepa-titulo{
+        width: 91%;
+        margin-top: 10px;
+        }
+    
+       
+        .prepa-pic  {
+          width: 9%;
+          height: 8%;
+          margin-top: 10px;
+        }
+
+
+        .prepa-pic  img{
+           width:  30px;
+           height: 30px;
+           margin: auto;
+         }
+
+
+       .preparacion{
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+       }
+        /*TITULO DE LA PREPARACION*/
+      .preparacion-dos .prepa h2{
+        font-size: 1.4rem;
+        letter-spacing:-0.01rem ;
+        word-spacing: -0.01rem;
+       font-weight: bolder;
+       text-align: start;
+       color: #000;
+       font-family: 'Times New Roman', Times, serif;
+       }
+     
+       /*cajita2*/
+         .preparacion{
+         width: 100%;
+         margin-top: 3%;
+       
+         }
+         /*PREPARANDO.......*/
+      .preparacion-pasos p{
+          letter-spacing:-0.001rem ;
+          word-spacing: -0.01rem;
+         font-family: 'Times New Roman', Times, serif;
+        font-size: 1.2rem;
+        font-weight: 400;;
+         line-height: -0.2px;
+         color: #666;
+        margin-top: ;
+         }
+        
+
+         .tips-titulo-pic{
+           width: 100%;
+           display: flex;
+           flex-direction: row;
+         }
+
+         .tips-titulo{
+           width: 91%;
+        
+         }
+
+         .tips-pic{
+           width: 9%;
+     
+         }
+
+         .tips-pic img{
+          width: 30px;
+         }
+
+
+         .nutricion-informe{
+           width: 100%;
+           display: flex;
+           flex-direction: column;
+         }
+
+         .nutricional{
+           display: flex;
+           flex-direction: column;
+           margin: auto;
+         }
+           /*TITULO DE NUTRICION*/
+         .nutricion-informe .nutricional h2{
+          font-weight: 800;
+          font-size: 1.4rem;
+          letter-spacing: -0.001rem ;
+          word-spacing: -0.01rem;
+         color: #000000;
+         font-family: 'Times New Roman', Times, serif;
+          text-align: start;
+         }
+        
+         .nutricion-informe .nutricional p{
+          letter-spacing: 0.01rem ;
+          word-spacing: -0.01rem;
+         font-family: 'Times New Roman', Times, serif;
+          font-size:  1.2rem;
+          font-weight: 400;
+          line-height: -0.4px;
+          color: #666;
+          margin: auto;
+        }
+
+        .categoria{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin-top: 2%;
+        }
+        /*..TITULO CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
+         .categoria h2{
+          font-size:  1.4rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#000000;
+          letter-spacing:-0.001rem ;
+          word-spacing: -0.01rem;
+        }
+
+          .categoria P{
+          font-size:  1.2rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#524c56;
+          letter-spacing:-0.001rem ;
+          word-spacing: -0.0rem;
+        }
+
+         /*ESTO ES SOLO LA PALABRA CATEGORIAS TITULO CATEGORIAS EN PRIMERA COLUMNA*/
+         #wrapper-recetas .categorias-recetas-links h2{
+          font-size:  1.4rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#000000;
+          letter-spacing:-0.001rem ;
+          word-spacing: -0.01rem;
+         }
+        
+        /*..CATEGORIAS con TIENEN LINK..*/
+        #wrapper-recetas .categorias-recetas-links P{
+          font-size:   1.2rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#524c56;
+          letter-spacing:-0.001rem ;
+          word-spacing: -0.01rem;
+         }
+  
+
+      
+
+       /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
+      #aside-recetas{
+      width:100%;
+      max-width: 600px;
+      margin-top: 4%;
+      }
+
+
+    /*ASIDE*/
+    .controls{
+      width: 100%;
+      margin: auto;
+      margin-top: 0.8%;
+      margin-bottom: 20%;
+    }
+
+      .fijo-recetas{
+      width:100%;
+      max-width: 600px;
+      }
+
+
+    /*FOTOS DE PLATOS*/
+      .galeria{
+      width: 100%;
+      display: flex;
+      flex-direction: row; 
+      }
+    
+       .galeria-columna1 .img1{
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+      justify-content: space-between;
+        }
+
+        .galeria-columna1 .img1 img{
+          width: 99.9%;
+          margin-right: 2%;
+       
+           }
+
+           .img1 p{
+           text-align: start;
+           font-size: 1.2rem;
+           }
+
+             /*--CATEGORIAS EN ASIDE PERO NO FUNOIICNA EL CSS.*/
+         /*..CATEGORIAS EN EL ASIDE QUE TAMBIEEN USA H2....*/
+        .categorias-recetas-links-aside h2{
+          display: none;
+         }
+         
+        .categorias-recetas-links-aside p{
+           display: none;
+         }
+      
+   
+           /*FOOTER*/
+           #footer-recetas{
+            clear: both;
+              position: relative;
+              height: 60px;
+              margin-top: -60px;
+             border-top: solid 1.5px #DCDCDC;
+             display: flex;
+             flex-direction: column;
+            width: 100%;
+            z-index: 10;
+            background-color: #fff;
+            bottom: 0;
+            }
+
+            .footer-primero-recetas{
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              height: 60px;
+              margin-bottom: 9px;
+            }
+            #icon-social{
+              height: 50px;
+              width: 49.5%;
+            }
+           /*LETRAS FOOD EMOTIONS*/
+              #icon-social1 p{
+              font-size: 0.9rem;
+              word-spacing: -0.3px;
+              letter-spacing: -0.2px;
+              font-family: 'Archivo Black', sans-serif;
+              padding-bottom: 0.7px;
+              color: #2d2d2d;
+              }
+
+              #footer-recetas  #icon-social1 li .fa-envelope{
+                background-color: oldlace;
+                color: #2d2d2d;
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                border: solid #E9E9E9;
+                margin-top: -15px;
+                }
+                
+                #footer-recetas #icon-social1   li .fa-facebook-f{
+                background-color: oldlace;
+                color:  #2d2d2d;
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;
+                border: solid #E9E9E9;
+                }
+                
+                
+                #footer-recetas  #icon-social1   li .fa-twitter{
+                background-color: oldlace;
+                color:   #2d2d2d;
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;
+                border: solid #E9E9E9;
+                }
+                
+                
+                
+                
+                #footer-recetas #icon-social1  li .fa-instagram{
+                background-color: oldlace;
+                color: #2d2d2d;
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;  /*SUBE ICONO*/
+                border: solid #E9E9E9;
+                }
+                
+                 /*SUB-caja contenedor de la caja correo*/
+                  .box{
+                    height: 50px;
+                    width: 50%;
+                    margin-top:  1.5%;
+                  transform: translate(-5%, -5%);
+                   }
+                
+                  .box h3{
+                letter-spacing: -0.1px;
+                font-family: 'Archivo Black', sans-serif;
+                font-size: .5rem;
+                font-weight: 400;
+                line-height: -0.4px;
+                margin-left: 2%;
+                color: #2d2d2d;
+                }
+                 /*cajita del correo */
+                   .box form{
+                  display: flex;
+                  width: 100%;
+                  flex-direction: row;
+                  margin: auto;
+                }
+                
+                /*BOX DONDE SE ESCRIBE*/
+               .box input[type="text"]
+                {
+                background-color: #fff;
+                display: flex;
+                width:70%;
+                height: 30px;
+                border: 1.5px solid 	#DCDCDC;
+               font-size: 0.7rem;
+                padding: 0 4px;
+                border-radius: 5px 0 0 5px;
+                }
+                
+                /*BOTON ENVIAR*/
+               .box button[type="submit"]{
+                left: 14px;  /*EL TRUCO IMPORTANTE*/
+                border-radius: 0 5px 5px 0;
+                padding: 2px 2px 2px 2px; /*IMPORTANTE PARA QUE LA LETRA ENCAJE EN EL BOTON*/
+                width: 40%;
+                height: 30px;
+                border: none ;
+                outline: none;
+                cursor: pointer;
+                background-color: #2d2d2d;
+                color: #fff;
+                font-size: 0.6rem;
+                font-family: 'Archivo Black', sans-serif;
+                }
+
+              .box button[type="submit"]:hover{
+                background: ;
+                }
+                /*FIN de la cajita del correo */
+                
+                .final-food-recetas p{
+                  text-align: center;
+                  padding-top: 8px;  /*BAJAN LAS LETRAS*/
+                  color: #2d2d2d;
+                  font-size: 0.6rem;
+                 }
+                
+                 #wrapper-recetas .tipeo{
+                  margin: auto;
+                  margin-bottom: 20%;
+                  display: table;
+                  width: 90%;
+                  height: 5%;
+                  background-color:;
+                  }
+
+                  #wrapper-recetas  .tipeo h4{
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 { 
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    white-space: nowrap;
+                    width:28%;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 span {
+                     position:absolute;
+                     right:0;
+                     width: 2em;
+                     background: white;
+                     border-left: 0.1px solid #DDD;
+                     animation: escribir 5s steps(30) infinite alternate;
+                     }
+
+    }
+
+
+
+
+
+
+  
+  /* 769 A 900 ............ENRE EL MOVIL Y EL IPAD.................................... */
+  
+  @media only screen and (min-width: 641px) and (max-width: 700px){
+    
+     #wrapper-recetas {
+      margin:0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+          
+    #wrapper-recetas > * {
+    padding: 30px;
+    }
+       
+    
+      #container-recetas{
+      width:100%;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top: 75px;
+   
+      }
+  
+
+      header{
+        width: 100%;
+        z-index: 999;
+        position: fixed;
+        margin: auto;
+        height:  80px;
+        box-shadow: 0 8px 6px -6px #c9c9c9;
+        }
+      
+        header.black{
+         background-color:#fff ;
+         width: 100%;
+         height:  80px;
+        }
+
+
+        
+    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
+    
+  #controls-responsive{
+    display: block;
+    visibility: visible;
+    width: 100%;
+    height: 35px;
+  margin-bottom: 19px;
+  }
+
+
+   #custom-search-input-responsive{
+   width: 100%;
+   height: 35px;
+   border: 1px solid#c9c9c9;
+   border-radius: 4px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin: auto;
+   }
+
+
+   #controls-responsive .sin-borde-responsive{
+     width: 85%;
+     height: 32px;
+     max-width: 550px;
+     display: inline-flex;
+   }
+
+
+   #controls-responsive .boton-responsive{
+     width: 15%;
+     max-width: 90px;
+     height: 32px;
+   }
+
+
+    /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
+
+
+   .cabecera-recetas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    height: 45px; 
+    margin-top: -9px;  
+    }
+
+
+        /*caja */
+    .logo{
+    display:  inline-flex ;/*IMPORTANTE*/
+    width: 380px;
+    height: 45px;
+    justify-content: start;
+    }
+    
+   /*IMAGEN DEL LOGO*/
+    .logo img{
+    width: 100%;
+    height: 45px;
+    }
+
+
+     /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+    .menu-btn {
+    display:inline-flex;
+    width: 300px;
+    height: 45px;
+     }
+
+     
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+    .boletin{
+    width: 120px;
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: 31px;
+    }
+
+
+    .boletin h4{
+    font-size: 0.8rem;
+    letter-spacing: 0.1px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 800;
+    color:#2d2d2d;
+    }
+
+  
+
+      .boletin a h4:hover{
+      color: #639a3a;
+      text-decoration: none;
+      }
+
+
+
+/*--MUEVE EL MENU............ESTE ES EL BURGER*/
+   .menu-btn  .menu-btn__burger {
+   margin-top:  31px;
+   display: block;
+   float: right;
+   position: relative;
+   width: 32px;
+   height: 4px;
+   background: #2d2d2d;
+   border-radius: 2px;
+   z-index: 1000; 
+   transition: all .5s ease-in-out;
+   }
+
+/*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+ .menu-btn__burger::before,
+ .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+  }
+
+  .menu-btn__burger:hover{
+  background-color: #639a3a;
+  }
+
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #639a3a;
+   }
+
+
+  /*ESTO AVORTA ESPACIO ENTRE LAS LINEAS*/
+   .menu-btn__burger::before {
+   transform: translateY(-10px);
+   }
+
+   .menu-btn__burger::after {
+   transform: translateY(10px);  
+   }
+
+   /* ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+   }
+
+  .menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+   }
+
+  .menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+
+  /* PRIMERA SECCION MENU ARROW*/
+   .menu-arrow{
+    margin-bottom: 1%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    
+    }
+
+
+
+
+
+
+      /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
+    #tres-columnas-recetas{
+    width: 100%;
+    display: flex;
+     flex-direction: column;
+    }
+     
+      
+  /*CONTENEDOR DE LA PRIMERA COLUMNA........................... 2*/
+   .primera-columna-recetas{
+    width:100%;
+   display: flex;
+   flex-direction: column;
+    }
+     
+     .articulo{
+      width: 100%;
+      margin-bottom: 5%;
+      }
+     
+      /*SUCAJA DE ARTICULO CONTIENE
+      TITULO DESCRIPCION Y FOTO AUTOR*/
+      .recetas{
+      width: 100%;
+      margin: auto;
+      }
+
+    /*TITULO DE LA RECETA*/
+    .recetas h1{
+    width: 100%;
+    font-size: 2.3rem;
+    word-spacing: -3px;
+    letter-spacing: -1px;
+    font-family: 'Archivo Black', sans-serif;
+    text-align:start;
+    text-decoration-line: underline;
+    color: #2d2d2d;
+    }
+
+
+    /*DESCRIPCION DE LA RECETA*/
+    .recetas p{
+      width: 100%;
+      font-size: 1rem;
+      word-spacing: -0.5px;
+      letter-spacing: -0.4px;
+      font-family: 'Open sans';
+      text-align:start;
+      color: #666;
+      }
+
+    #foto-autor{
+    display: flex;
+    flex-direction: row;
+    width: 290px;
+    margin-bottom: 6px;
+    }
+
+      #foto-autor figure{
+       display: inline-flex;
+       height: 60px;
+      }
+
+      /*FOTO AUTOR*/
+      #foto-autor img{
+        width: 100%;
+        }
+
+        #foto-autor figcaption {
+           display: inline-flex;
+        
+        }
+    
+    /*CAJA DE FOTO RED Y NUTRICION */
+    .vista{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    }
+
+    .vista-imagen-receta{
+      width: 100%;
+    }
+  
+    .vista-imagen-receta img{
+    width: 100%;
+    border-radius: 6px;
+    }
+ 
+
+       .iconos-social{
+         display: flex;
+      flex-direction: row;
+       }
+
+    
+      
+      .iconos-social li .fa-facebook-f{
+        padding: 9px 9px 9px 9px;
+        width: 35px;
+        height: 35px;
+        margin-right: 12px;
+      }
+      
+        .iconos-social  li .fa-twitter{
+          padding: 9px 9px 9px 9px;
+          width: 35px;
+          height: 35px;
+          margin-right: 12px;
+        }
+      
+       .iconos-social  li .fa-pinterest{
+        padding: 9px 9px 9px 9px;
+        width: 35px;
+        height: 35px;
+        margin-right: 12px;
+      }
+      
+      .iconos-social  li .fa-envelope{
+        padding: 9px 9px 9px 9px;
+        width: 35px;
+        height: 35px;
+      
+      }
+       .contiene{
+         width:  100%;
+         display: flex;
+         flex-direction: column;
+        margin: auto;
+       }
+    /*TIEMPO*/
+    .temps p{
+      font-size: 1rem;
+    }
+    /*PORCIONES*/
+    .prociones p{
+      font-size: 1rem;
+    }
+
+     /*CONTAINER DE TITULO Y DIBUJO DEL INGREDIENTE*/
+    .ingrediente-titulo-pic{
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+
+    }
+
+    /*CAJA DEL TITULO*/
+    .ingrediente-titulo{
+     width: 94%;
+    }
+
+
+      /*CAJA DE LA IMAGEN*/
+    .ingrediente-pic{
+     width: 5%;
+    }
+
+    /*..................................................*/
+              /*PERFIL NUTRICIONAL */
+    .nutricional-imagen h2{
+     font-size: 1rem;
+    }
+
+    .nutricional-imagen p{
+     font-size: 0.8rem;
+   }
+     
+       /*TITUULO INGREDIENTES*/
+     .ingredientes-primero h2{
+        width: 100%;
+        font-size: 1rem;
+        word-spacing: -0.3px;
+        letter-spacing: -0.1px;
+        font-family: 'Archivo Black', sans-serif;
+        font-weight: bolder;
+        color: #2d2d2d;
+        text-align: start;
+       }
+         /*LOS INGREDIENTES*/
+       .primera-columna-recetas .lista-ingredientes  p{
+        width: 80%;
+        letter-spacing: -0.1px;
+        font-family: 'Open sans';
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        color: #666;
+        text-align: start;
+       }
+
+        /*TITULO DE LA PREPARACION*/
+       .primera-columna-recetas .preparacion-dos h2{
+        width: 100%;
+        font-size: 1rem;
+       word-spacing: -3px;
+       letter-spacing: -2.8x;
+       font-family: 'Archivo Black', sans-serif;
+       font-weight: bolder;
+       color: #2d2d2d;
+       text-align: start;
+       }
+     
+       
+       /*sub-cajita*/
+       .tiempo{
+       width:50%;
+       
+       }
+     
+       .primera-columna-recetas .tiempo p{
+       letter-spacing: -0.1px;
+       font-family: 'Cabin', sans-serif;
+       font-size: 1rem;
+       line-height: -0.4px;
+       color: #666;
+       text-align: start;
+       }
+     
+       /*CONTAINER DEL TITULO E IMAGEN DE PREPARACION*/
+       .preparacion-titulo{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+       }
+
+       .prepa-titulo{
+        width: 94%;
+
+       }
+
+       .prepa-pic{
+        width: 5%;
+
+       }
+
+       /*...................*/
+
+       /*.....CONTAINER DE TITULO Y PIC DE CONSEJOS*/
+       .tips-titulo-pic{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+       }
+
+       .tips-titulo{
+        width: 94%;
+
+       }
+
+
+      .tips-pic{
+        width: 5%;
+
+      }
+
+      /*...........................................*/
+     
+       
+           /*TITULO DE NUTRICION*/
+       .nutricional h2{
+          font-weight: 900;
+          font-size: 1.3rem;
+          font-family: 'Times New Roman', Times, serif;
+         
+         }
+        /*DESCRIPCION*/
+      .nutricional p{
+          letter-spacing: -0.1px;
+          font-family: 'Open sans';
+          font-size:  1.1rem;
+          font-weight: 400;
+          line-height: -0.4px;
+          color: #666;
+         
+        }
+        /*..TOTULO CATEGORIA..............*/
+        .categoria h2{
+          font-size:  1.2rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#524c56;
+         
+        }
+
+         /*ESTO ES SOLO LA PALABRA CATEGORIAS TITULO CATEGORIAS EN PRIMERA COLUMNA*/
+      .categorias-recetas-links h2{
+          font-size:  1.2rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#2d2d2d;
+        
+         }
+        
+        /*..CATEGORIAS con TIENEN LINK..*/
+      .categorias-recetas-links p{
+          font-size:   1.1rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#524c56;
+      
+         }
+  
+
+
+       /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
+
+        #aside-recetas{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+       
+    
+
+    
+
+          
+          /*FOOTER*/
+           #footer-recetas{
+            clear: both;
+              position: relative;
+              height: 60px;
+              margin-top: -60px;
+             border-top: solid 1.5px #DCDCDC;
+             display: flex;
+             flex-direction: column;
+            width: 100%;
+            z-index: 1000;
+            background-color: #fff;
+            bottom: 0;
+            }
+           /*LETRAS FOOD EMOTIONS*/
+           #footer-recetas  #icon-social1 p{
+              font-size: 0.7rem;
+              word-spacing: -0.3px;
+              letter-spacing: -0.2px;
+              font-family: 'Archivo Black', sans-serif;
+              padding-bottom: 0.7px;
+              color: #2d2d2d;
+              }
+
+              #footer-recetas  #icon-social1 li .fa-envelope{
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;
+                }
+                
+                #footer-recetas #icon-social1   li .fa-facebook-f{
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;
+                }
+                
+                
+                #footer-recetas  #icon-social1   li .fa-twitter{
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;
+              
+                }
+                
+                
+                #footer-recetas #icon-social1  li .fa-instagram{
+            
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;  /*SUBE ICONO*/
+            
+                }
+                
+                 /*SUB-caja contenedor de la caja correo*/
+                 #footer-recetas  .box{
+                  width: 55%;  
+                  height: 55px;
+                  margin-top: 4px; /*SUBE CAJA A MENOS TOP*/
+                  transform: translate(-5%, -5%);
+                   }
+                
+                   #footer-recetas  .box h3{
+                letter-spacing: -0.1px;
+                font-family: 'Archivo Black', sans-serif;
+                font-size: .3rem;
+                font-weight: 400;
+                line-height: -0.4px;
+                margin-left: 16%;
+                color: #2d2d2d;
+                }
+                 /*cajita del correo */
+                 #footer-recetas  .box form{
+                  display: flex;
+                  width: 100%;
+                  flex-direction: row;
+                }
+                
+                /*BOX DONDE SE ESCRIBE*/
+                #footer-recetas  .box input[type="text"]
+                {
+                background-color: #fff;
+                display: flex;
+                width:70%;
+                   font-size: 0.7rem;
+                height: 30px;
+                border: 1.5px solid 	#DCDCDC;
+               
+                padding: 0 12px;
+                border-radius: 5px 0 0 5px;
+                }
+                
+                /*BOTON ENVIAR*/
+                #footer-recetas .box button[type="submit"]{
+                left: 14px;  /*EL TRUCO IMPORTANTE*/
+                border-radius: 0 5px 5px 0;
+                padding: 0 4px; /*IMPORTANTE PARA QUE LA LETRA ENCAJE EN EL BOTON*/
+                width: 30%;
+              
+                height: 30px;
+                border: none ;
+                outline: none;
+                cursor: pointer;
+                background-color: #2d2d2d;
+                color: #fff;
+                font-size: 0.6rem;
+                font-family: 'Archivo Black', sans-serif;
+                }
+                
+                #footer-recetas  .box button[type="submit"]:hover{
+                background: ;
+                }
+                /*FIN de la cajita del correo */
+                
+                .final-food-recetas p{
+                  text-align: center;
+                  padding-top: 8px;  /*BAJAN LAS LETRAS*/
+                  color: #2d2d2d;
+                  font-size: 0.6rem;
+                 }
+                
+                 #wrapper-recetas .tipeo{
+                  margin: auto;
+                  margin-bottom: 20%;
+                  display: table;
+                  width: 90%;
+                  height: 5%;
+                  background-color:;
+                  }
+
+                  #wrapper-recetas  .tipeo h4{
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 { 
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    white-space: nowrap;
+                    width:28%;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 span {
+                     position:absolute;
+                     right:0;
+                     width: 2em;
+                     background: white;
+                     border-left: 0.1px solid #DDD;
+                     animation: escribir 5s steps(30) infinite alternate;
+                     }
+
+
+
+     }
+  
+ /*HASTA AQUI ESTAN LOS MENUS OCULTOS........................................................................................................................................*/
+
+
+
+
+
+ /* 901 A 1000 .............IPAD 768---1024..................................... */
+ @media only screen and (min-width: 700px) and (max-width: 768px){
+
+     #wrapper-recetas {
+      margin:0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+          
+    #wrapper-recetas > * {
+    padding: 40px;
+    }
+       
+    
+    #container-recetas{
+      width:100%;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top: 80px;
+   }
+
+
+   header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+     height:  90px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+    }
+  
+    header.black{
+      background-color:#fff;
+      width: 100%;
+      height:  90px;
+      }
+    
+     .cabecera-recetas{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     margin-top: -15px;
+      height: 45px;
+     }
+     
+       /*caja */
+         .logo{
+        display:flex ;
+       width: 30%;
+       height: 45px;
+       }
+          
+    .logo img {
+       width: 100%;
+       height: 45px;
+      margin: auto;
+     }
+
+
+     .cabecera-recetas .controls{
+      width: 245px;
+      height: 45px;
+      margin-top: 60px;
+      display: block;
+      margin: auto;
+     
+    }
+  
+    .cabecera-recetas  #custom-search-input{
+      width: 100%;
+      height: 45px;
+  
+    }
+  
+    .controls .sin-borde{
+       display: inline-flex;
+       width: 80%;
+       margin-top:4px;
+      
+     }
+
+     .controls .boton{
+       display: inline-flex;
+       margin-top: 4px;
+       width: 20%;
+       height: 41px;
+     }
+
+     .fa-search{
+       margin-top: 14px;
+       margin-left: 6px;
+     }
+
+
+     .menu-btn {
+      width: 200px;
+      height: 45px;
+      display: flex;
+      flex-direction: row;
+    }
+  
+   
+       /*CONTENEDOR  REVISTA Y SOCIALES*/
+     .boletin{
+      width: 100%;
+      max-width: 100px;
+      display: block;
+      position: relative;
+      float: left;
+      margin-right: 20px;
+      background-color: blue;
+      }
+
+
+     .boletin h4{
+    font-size: 0.9rem;
+    letter-spacing: 0.1px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 800;
+    color:#2d2d2d;
+    margin-top: 50px;
+    }
+
+  
+       .boletin a h4:hover{
+     color: #639a3a;
+     text-decoration: none;
+     }
+
+
+  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+          
+
+
+/*--MUEVE EL MENU............ESTE ES EL BURGER*/
+  .menu-btn   .menu-btn__burger {
+  display: block;
+  position: relative;
+  float: right;
+  margin-top: 29px;
+  width: 40px;
+   height: 5px;
+   background: #2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2);
+   transition: all .5s ease-in-out;
+   z-index: 1000;
+   }
+  
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+content: '';
+position: absolute;
+width: 40px;
+height: 5px;
+background:#2d2d2d;
+border-radius: 2px;
+box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+transition: all .5s ease-in-out;
+z-index: 800;        
+}
+
+
+.menu-btn__burger::before {
+transform: translateY(-11px);
+z-index:3000;
+}
+
+
+.menu-btn__burger::after {
+transform: translateY(11px);
+z-index:3000;
+}
+
+
+
+ .menu-btn__burger:hover{
+  background-color: #639a3a;
+}
+
+ .menu-btn__burger:hover::before,
+ .menu-btn__burger:hover::after{
+  background-color: #639a3a;
+}
+
+
+
+/* ANIMATION */
+    .menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+   .menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+   .menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+   }
+
+
+    nav{
+      background-position:72% 80%;
+    }
+
+
+    nav ul{
+      margin-left: -25px;
+     margin-top: 70px;
+     width: 89%;
+    }
+
+    nav ul li{
+      height: 80px;
+    }
+
+
+
+      /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
+   #tres-columnas-recetas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+ 
+    }
+    
+      
+  /*CONTENEDOR DE LA PRIMERA COLUMNA........................... 2*/
+   .primera-columna-recetas{
+    width:100%;
+  
+    }
+     
+     .articulo{
+       display: block;
+      width: 100%;
+      margin-bottom: 5%;
+      }
+
+      .recetas{
+      width: 100%;
+ 
+      }
+
+    /*TITULO DE LA RECETA*/
+    .recetas h1{
+    font-size:  3.5rem;
+    word-spacing: -4px;
+    letter-spacing: -1.4px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    text-align:start;
+    text-decoration-line: underline;
+    color: #000000;
+    }
+    /*DESCRIPCION DE LA RECETA*/
+    .recetas p{
+      font-size: 1.2rem;
+      word-spacing: -0.2px;
+      letter-spacing: -0.2px;
+      font-family: 'Times New Roman', Times, serif;
+      text-align:start;
+      color: #666;
+    
+      }
+
+      /*LEER MAS...*/
+      .recetas h3{
+        font-size: 1.2rem;
+        color: #2d2d2d;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+       #foto-autor{
+        width: 220px;
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+        margin-bottom: 5%;
+   
+      }
+  
+      #foto-autor  figure{
+        width: 40px;
+        display: block;
+        position: relative;
+        float: right;
+   
+      }
+
+      /*FOTO AUTOR*/
+      #foto-autor figure  img{
+        width: 100%;
+        }
+
+   /*NOMBRE AUTOR*/
+   #foto-autor figcaption {
+    width: 140px;
+    display: block;
+    position: relative;
+    float: left;
+    margin-left: 10px;
+     
+        }
+
+
+        /*CONTAINER DE LA FOTO PRINCIPAL Y LOS COSTADOS
+    /*caja costado foto  */
+    .vista{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+       }
+  
+    
+       .vista-imagen-receta{
+         width: 100%;
+         display: block;
+       }
+
+      .vista-imagen-receta img{
+       width:  100%;
+       margin: auto;
+       border-radius: 6px;
+    
+       }
+ 
+
+       .redes{
+         display: flex;
+         flex-direction: row;
+      
+       }
+
+
+       .iconos-social{
+        display: flex;
+         flex-direction: row;
+       }
+ 
+     
+      .iconos-social li .fa-facebook-f{
+        padding: 8px 8px 8px 8px;
+        width: 42px;
+        height: 42px;
+        margin-right: 12px;
+      }
+      
+        .iconos-social  li .fa-twitter{
+          padding: 8px 8px 8px 8px;
+          width: 42px;
+          height: 42px;
+          margin-right: 12px;
+        }
+      
+       .iconos-social  li .fa-pinterest{
+        padding: 8px 8px 8px 8px;
+        width: 42px;
+        height: 42px;
+        margin-right: 12px;
+      }
+      
+      .iconos-social  li .fa-envelope{
+        padding: 8px 8px 8px 8px;
+        width: 42px;
+        height: 42px;
+      }
+      
+
+   /*cCODIGO COMLICADO*/
+       .contiene{
+         width:100%;
+         display: flex;
+          margin: auto;
+         margin-top: 10px;
+       }
+ 
+       .temps-porciones{
+        width: 100%;
+        height: 35px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+       }
+      
+       .temps-porciones .temps{
+        display: inline-flex;
+       width: 200px;
+       height: 30px;
+       margin: auto;
+       }
+
+          /*TIEMPO*/
+          .temps-porciones .temps p{
+        display: block;
+        height: 30px;
+        font-size: 1.3rem;
+        margin: auto;
+      }
+
+      .temps-porciones  .porciones{
+        display: inline-flex;
+       width: 200px;
+       height: 30px;
+       margin: auto;
+      }
+      /*PORCIONES*/
+      .temps-porciones .porciones p{
+        display: block;
+        height: 30px;
+        font-size: 1.3rem;
+        margin: auto;
+      }
+
+                  /*PERFIL NUTRICIONAL */
+      .nutricional-imagen {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+       }
+
+      
+
+
+
+                /*PERFIL NUTRICIONAL */
+      .nutricional-imagen h2{
+       font-size: 1.4rem;
+      }
+
+      .nutricional-imagen p{
+       font-size: 1.2rem;
+       font-family: 'Times New Roman', Times, serif;
+       line-height: -0.4px;
+       color: #2d2d2d;
+     }
+    
+     /*FIN CODIGO COMPICADO*/
+
+
+
+      .ingredientes-tres{
+      width: 100%;  
+      }
+
+
+      .ingrediente-titulo-pic{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      }
+
+      .ingredientes{
+        width: 100%;
+
+      }
+
+      .lista-ingredientes{
+        width: 100%;
+        margin: auto;
+      }
+
+      .ingrediente-titulo{
+      width:  93%;
+     }
+
+     .ingrediente-titulo h2{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.7rem;
+     }
+
+    .ingrediente-pic{
+    width: 7%;
+    }
+
+    .preparacion-total{
+     width: 100%;
+    }
+
+    .preparacion-titulo{
+    width: 100%;
+    }
+
+    .prepa-titulo{
+    width:93%;
+    }
+
+     /*TITULO DE LA PREPARACION*/
+    .preparacion-total .prepa-titulo h2{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.7rem;
+      }
+  
+    .prepa-pic{
+     width: 7%;
+    }
+
+    .paso .checkbox span{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.4rem;
+    }
+              /*PREPARACION DESCRIPCION*/
+              .preparacion  p{
+                letter-spacing: 0.001px;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 1.2rem;
+                color: #2d2d2d;
+               
+                }
+               
+              .preparacion{
+                width: 100%;
+                padding-top:0;
+              }
+             
+              .preparacion-pasos{
+                width: 100%;
+                display: flex;
+                flex-direction: column; 
+              }
+          
+              
+    .tips-titulo-pic{
+     width: 100%;
+    }
+
+           .tips-titulo{
+            width:93%;
+           }
+
+           .tips-pic{
+            width: 7%;
+           }
+
+           .tips-titulo h2{
+            font-size: 1.4rem;
+            word-spacing: -0.3px;
+            letter-spacing: -0.1px;
+            font-family: 'Archivo Black', sans-serif;
+            font-weight: bolder;
+            color: #000000;
+            text-align: start;
+
+
+           }
+ 
+ 
+     
+
+    
+
+      .nutricion-informe{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nutricional{
+        display: flex;
+        flex-direction: column;
+      
+      }
+           /*TITULO DE NUTRICION*/
+          .nutricional h2{
+          font-weight: bolder;
+          font-size: 1.4rem;
+          word-spacing: -0.001px;
+          letter-spacing: -0.001px;
+          font-family: 'Times New Roman', Times, serif;
+          color: #000000;
+          text-decoration: underline; 
+         
+         }
+        
+          .nutricional p{
+          letter-spacing: -0.001px;
+          font-family: 'Times New Roman', Times, serif;
+          font-size:  1.2rem;
+          font-weight: 400;
+          line-height: -0.4px;
+          color: #666; 
+        }
+
+        /*..CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
+        .categoria h2{
+          font-size:  1.4rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#000000;
+      
+        }
+
+        .categoria p{
+          font-size:  1.2rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#524c56;
+        
+        }
+
+
+         /*ESTO ES SOLO LA PALABRA CATEGORIAS TITULO CATEGORIAS EN PRIMERA COLUMNA*/
+        .categorias-recetas-links h2{
+          font-size:  1.4rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#000000;
+         
+         }
+        
+        /*..CATEGORIAS con TIENEN LINK..*/
+       .categorias-recetas-links p{
+          font-size:   1.2rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#524c56;
+         }
+  
+
+
+
+     /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
+
+     #aside-recetas{
+       width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+
+ 
+
+
+
+
+/*FOOTER*/
+           #footer-recetas{
+            clear: both;
+              position: relative;
+              height: 5px;
+              margin-top: -5px;
+             border-top: solid 1.5px #DCDCDC;
+             display: flex;
+             flex-direction: column;
+            width: 100%;
+            z-index: 1000;
+            background-color: #666;
+            bottom: 0;
+            }
+
+            .footer-primero-recetas{
+              width: 100%;
+              height: 55px;
+              display: flex;
+              flex-direction: row;
+              margin-bottom: 2px;
+            }
+            #icon-social{
+              width: 49.5%;
+              height: 55px;
+            }
+           /*LETRAS FOOD EMOTIONS*/
+          #icon-social1 p{
+              font-size: 1rem;
+              word-spacing: -0.3px;
+              letter-spacing: -0.7px;
+              margin-top: -3px;
+            
+              }
+
+              #footer-recetas  #icon-social1 li .fa-envelope{
+                background-color: oldlace;
+                color: #2d2d2d;
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                border: solid #E9E9E9;
+                margin-top: -15px;
+                }
+                
+                #footer-recetas #icon-social1   li .fa-facebook-f{
+                background-color: oldlace;
+                color:  #2d2d2d;
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;
+                border: solid #E9E9E9;
+                }
+                
+                
+                #footer-recetas  #icon-social1   li .fa-twitter{
+                background-color: oldlace;
+                color:   #2d2d2d;
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;
+                border: solid #E9E9E9;
+                }
+                
+                
+                
+                
+                #footer-recetas #icon-social1  li .fa-instagram{
+                background-color: oldlace;
+                color: #2d2d2d;
+                width:25px;
+                height: 25px;
+                padding: 2px 2px 2px 2px;
+                border-radius: 25px;
+                margin-top: -15px;  /*SUBE ICONO*/
+                border: solid #E9E9E9;
+                }
+                
+                 /*SUB-caja contenedor de la caja correo*/
+                .box{
+                  width: 49.5%;
+                  height: 55px;
+                  display: flex;
+                  flex-direction: column;
+                  transform: translate(-5%, -5%);
+                 margin-top: 1px;
+                   }
+                
+                   .box h3{
+                letter-spacing: -0.1px;
+                font-family: 'Archivo Black', sans-serif;
+                font-size: 0.6rem;
+                font-weight: 400;
+                line-height: -0.4px;
+             
+                color: #2d2d2d;
+                }
+                 /*cajita del correo */
+                .box form{
+                  display: flex;
+                  width: 100%;
+                 flex-direction: row;
+                 margin: auto;
+                }
+                
+                /*BOX DONDE SE ESCRIBE*/
+              .box input[type="text"]
+                {
+                background-color: #fff;
+                display: flex;
+                width:60%;
+            
+                height: 35px;
+                border: 1.5px solid 	#DCDCDC;
+               
+                padding: 0 12px;
+                border-radius: 5px 0 0 5px;
+                }
+                
+                /*BOTON ENVIAR*/
+             .box button[type="submit"]{
+                left: 14px;  /*EL TRUCO IMPORTANTE*/
+                border-radius: 0 5px 5px 0;
+                padding: 0 4px; /*IMPORTANTE PARA QUE LA LETRA ENCAJE EN EL BOTON*/
+                width: 30%;
+            
+                height: 35px;
+                border: none ;
+                outline: none;
+                cursor: pointer;
+                background-color: #2d2d2d;
+                color: #fff;
+                font-size: 0.6rem;
+                font-family: 'Archivo Black', sans-serif;
+                }
+                
+                #footer-recetas  .box button[type="submit"]:hover{
+                background: ;
+                }
+                /*FIN de la cajita del correo */
+                
+                .final-food-recetas p{
+                  text-align: center;
+                  padding-top: 8px;  /*BAJAN LAS LETRAS*/
+                  color: #2d2d2d;
+                  font-size: 0.6rem;
+                 }
+                
+                 #wrapper-recetas .tipeo{
+                  margin: auto;
+                  margin-bottom: 20%;
+                  display: table;
+                  width: 90%;
+                  height: 5%;
+                  background-color:;
+                  }
+
+                  #wrapper-recetas  .tipeo h4{
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 { 
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    white-space: nowrap;
+                    width:28%;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 span {
+                     position:absolute;
+                     right:0;
+                     width: 2em;
+                     background: white;
+                     border-left: 0.1px solid #DDD;
+                     animation: escribir 5s steps(30) infinite alternate;
+                     }
+
+     }
+  
+
+
+
+
+
+   /*..ESTO ESTA ENTRE EL IPAD Y EL IPAD-PRO........*/
+   @media only screen and (min-width: 769px) and (max-width: 950px){
+      #wrapper-recetas {
+        margin:0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+            
+      #wrapper-recetas > * {
+      padding: 35px;
+      }
+         
+      header{
+        width: 100%;
+        z-index: 999;
+        position: fixed;
+        margin: auto;
+        height:  80px;
+        box-shadow: 0 8px 6px -6px #c9c9c9;
+        }
+      
+        header.black{
+         background-color:#fff ;
+         width: 100%;
+         height:   80px;
+        }
+
+
+       
+        #container-recetas{
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:  67px;
+       }
+    
+      .cabecera-recetas{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      height: 45px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+      margin-top: -16px;
+      }
+  
+  
+          /*caja */
+        .logo{
+      display:  bock ;/*IMPORTANTE*/
+      width: 32%;
+      height: 50px;
+     }
+      
+     /*IMAGEN DEL LOGO*/
+     .logo img{
+      width: 100%;
+      height: 45px;
+      margin: auto;
+      }
+
+
+      /*CONTAINER DEL BUSCADOR................. */
+      .cabecera-recetas .controls{
+     display: inline-flex;
+     width: 310px;
+     height: 45px; 
+     margin: auto;
+     }
+
+    /*CAJA DEL BUSCADOR */
+    .controls #custom-search-input{
+    width: 310px;
+    height: 44px;
+    margin-top: 1px;
+ 
+     }
+
+       /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+   .menu-btn {
+    display: block;
+    position: relative;
+    width:  25%;
+    max-width: 170px;
+    height: 50px;
+
+     }
+  
+
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+    .boletin{
+    width: 100%;
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: 30px;
+    }
+  
+
+      .boletin h4{
+      font-size: 0.9rem;
+      letter-spacing: 0.1px;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 800;
+     
+      }
+  
+   
+    .boletin a h4:hover{
+    color: #639a3a;
+    text-decoration: none;
+    }
+  
+ 
+ 
+    /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+     .menu-btn  .menu-btn__burger {
+    margin-top:34px;
+    display: block;
+    position: relative;
+    float: right;
+    width: 32px;
+    height: 4px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
+    transition: all .5s ease-in-out;
+    }
+  
+  
+    /*NAV*/ 
+    nav ul{
+      margin-left: -20px;
+    }
+    nav li a p{
+    position: absolute;
+    z-index: 1000;
+    margin-left: 30px;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    }
+
+     /*NAV ESCONDIDO*/
+     nav ul li:hover > ul {
+     display: block;
+     }
+
+     nav ul li ul li a{
+     width: 100%;
+      margin-left: 76px;
+    }
+    
+  /*FIN NAV*/
+  /*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+   .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 4px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+     }
+  
+     .menu-btn__burger:hover{
+     background-color: #fff;
+     }
+  
+    .menu-btn__burger:hover::before,
+    .menu-btn__burger:hover::after{
+    background-color: #fff;
+     }
+  
+    /*ESTO ACORTA ESPACIO ENTRE LAS LINEAS*/
+     .menu-btn__burger::before {
+     transform: translateY(-10px);
+      }
+  
+     .menu-btn__burger::after {
+     transform: translateY(10px);
+     }
+  
+  /* ANIMATION */
+    .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    }
+  
+    .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    }
+  
+     .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+      }
+  
+  
+
+  
+        /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
+      #tres-columnas-recetas{
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      }
+       
+        
+    /*CONTENEDOR DE LA PRIMERA COLUMNA........................... 2*/
+      .primera-columna-recetas{
+      width:78%;
+      display: flex;
+       flex-direction: column;
+      }
+       
+     
+     .articulo{
+      width: 100%;
+      margin-bottom: 5%;
+   
+      }
+
+      .recetas{
+      width: 100%;
+      margin: auto;
+     
+      }
+
+    /*TITULO DE LA RECETA*/
+    .recetas h1{
+    font-size:  2.8rem;
+    word-spacing: -3px;
+    letter-spacing: -1px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align:start;
+    font-weight: 900;
+    text-decoration-line: underline;
+    color: #000000;
+  
+    }
+    /*DESCRIPCION DE LA RECETA*/
+    .recetas p{
+      width: 100%;
+      margin-top: -0.2%;
+      font-size: 1rem;
+      word-spacing: -0.5px;
+      letter-spacing: -0.4px;
+      font-family: 'Open sans';
+      text-align:start;
+      color: #666;
+  
+      }
+
+
+    #foto-autor{
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5%;
+      }
+
+      /*FOTO AUTOR*/
+      #foto-autor figure{
+        display: inline-flex;
+        width: 60px;
+      }
+      #foto-autor img{
+        width: 100%;
+      }
+      
+        #foto-autor figcaption {
+          width: 220px;
+           display: inline-flex;
+     
+        }
+
+    /*caja costado foto  */
+    .vista{
+      width: 100%;
+     display:block;
+     position: relative;
+      margin-top: 10px;
+     
+       }
+  
+
+       .vista .iconos-social{
+        display: block;
+        width: 60px;
+        position: relative;
+        float: left;
+       }
+ 
+       .vista .vista-imagen-receta {
+       width:  560px;
+       display: block;
+       position: relative;
+       float: right;
+       margin-bottom: 15px;
+       }
+ 
+       .vista-imagen-receta img{
+        width:   100%;
+       
+       }
+
+
+
+       /*SEGMENTO DE NUTRICION Y PORCIONES*/
+       .contiene{
+        width:100%;
+       display: flex;
+       margin: auto;
+      }
+
+   .temps-porciones{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+   }
+
+
+     .temps-porciones .temps{
+      display: inline-flex;
+       width: 200px;
+       height: 20px;
+       margin: auto;
+      }
+
+      .temps-porciones .porciones{
+     display: inline-flex;
+     margin: auto;
+     width: 200px;
+     height: 20px;
+      }
+
+     .nutricional-imagen{
+     width: 100%;
+     }
+
+
+     .temps-porciones .temps p{
+     font-family: 'Times New Roman', Times, serif;
+     color: #000000;
+     font-size: 1.3rem;
+     margin: auto;
+      }
+
+      .temps-porciones .porciones p{
+     font-family: 'Times New Roman', Times, serif;
+     color: #000000;
+     font-size: 1.3rem;
+     margin: auto;
+      }
+
+  
+      .nutricional-imagen h2{
+     font-family: 'Times New Roman', Times, serif;
+     color: #000000;
+      font-size: 1.3rem;
+      }
+
+   .nutricional-imagen  p{
+   font-family: 'Times New Roman', Times, serif;
+   color: #666;
+   font-size: 1.1rem;
+   letter-spacing: 0.01rem;
+      }
+
+
+
+         /*CONTAINER DE INGREDIENTE-TITULO-PIC*/
+         .ingredientes-tres{
+          width: 100%;
+        }
+
+        /*CONTAINER DE INGREDIENTE-TITULO Y
+        INGREDIENTE-PI*/
+    .ingrediente-titulo-pic{
+      width: 100%;
+    }
+
+    .ingrediente-titulo{
+      width: 93%;
+ 
+    }
+
+    .ingrediente-pic{
+      width: 7%;
+ 
+    }
+        
+    /*TITULO INGREDIENTES*/
+  .ingrediente-titulo h2{
+    font-size: 1.8rem;
+    letter-spacing:-0.01rem ;
+    word-spacing: -0.01rem;
+   font-weight: bolder;
+   text-align: start;
+   color: #000;
+   font-family: 'Times New Roman', Times, serif;
+    }
+
+ 
+
+    .ingredientes{
+      width: 100%;
+
+    }
+
+    .lista-ingredientes{
+      width: 100%;
+      margin: auto;
+    }
+
+           /*LOS INGREDIENTES*/
+   .lista-ingredientes  .checkbox span{
+   letter-spacing: -0.001px;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 1.2rem;
+   font-weight: 400;
+   line-height: 1;
+   color: #2d2d2d;
+
+   }
+  
+   
+ 
+  .preparacion-total{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   border-top: 1.5px solid #e3e3e3;
+ }
+
+ .preparacion-titulo{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+ }
+
+ 
+ .prepa-titulo{
+   width:  93%;
+   padding-top:0;
+ }
+
+ .prepa-pic{
+   width: 7%;
+   padding-top:0;
+ }
+
+
+  /*TITULO DE LA PREPARACION*/
+  .preparacion-total .prepa-titulo h2{
+  font-size: 1.8rem;
+  letter-spacing:-0.01rem ;
+  word-spacing: -0.01rem;
+ font-weight: bolder;
+ text-align: start;
+ color: #000;
+ font-family: 'Times New Roman', Times, serif;
+ }
+
+
+ .preparacion-pasos{
+   width: 100%;
+   display: flex;
+   flex-direction: column; 
+ }
+
+ /*TITULO PASO*/
+ .paso .checkbox span{
+   font-size: 1.5rem;
+ }
+
+     /*DESCRIPCION DE LA PREPARACION*/
+    .preparacion p{
+      letter-spacing: 0.001px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.2rem;
+      color: #2d2d2d;
+      }
+    
+
+
+   .tips-titulo-pic{
+   width: 100%;
+   }
+
+   .tips-titulo{
+   width: 93%;
+   }
+
+   .tips-pic{
+  width: 7%;
+   }
+
+
+       
+         
+  
+           /*PREPARANDO.......*/
+         
+             /*TITULO DE NUTRICION*/
+           .primera-columna-recetas .nutricional h2{
+            font-weight: bolder;
+            font-size: 1.3rem;
+            word-spacing: -3px;
+            letter-spacing: -2.8x;
+            font-family: 'Archivo Black', sans-serif;
+            color: #000000;
+            text-decoration: underline; 
+            text-align: start;
+           }
+          
+           .primera-columna-recetas .nutricional p{
+            letter-spacing: -0.1px;
+            font-family: 'Open sans';
+            font-size:  1.1rem;
+            font-weight: 400;
+            line-height: -0.4px;
+            color: #666;
+            margin-left:12px;
+          }
+          /*..CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
+          #wrapper-recetas  .categoria h2{
+            font-size:  1.3rem;
+            font-family: 'Times New Roman', sans serif;
+            color:#000000;
+          }
+  
+           /*ESTO ES SOLO LA PALABRA CATEGORIAS TITULO CATEGORIAS EN PRIMERA COLUMNA*/
+           #wrapper-recetas .categorias-recetas-links h2{
+            font-size:  1.3rem;
+            font-family: 'Times New Roman', sans serif;
+            color:#000000;
+           }
+          
+          /*..CATEGORIAS con TIENEN LINK..*/
+          #wrapper-recetas .categorias-recetas-links p{
+            font-size:   1.1rem;
+            font-family: 'Times New Roman', sans serif;
+            color:#524c56;
+        
+           }
+    
+  
+  
+         /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
+         #aside-recetas{
+          width:100%;
+          max-width: 800px;
+          display: flex;
+          flex-direction: column;
+          }
+      
+          .fijo-recetas{
+            width:100%;
+            max-width: 800px;
+          }
+  
+          /*ASIDE*/
+          .controls{
+            width: 80%;
+         
+            margin-top: 10%;
+            margin-bottom: 5%;
+          }
+  
+ 
+  
+          /*--CATEGORIAS EN ASIDE */
+          
+           .categorias-recetas-links-aside h2{
+            display: none;
+           }
+         
+         .categorias-recetas-links-aside p{
+           display: none;
+          }
+        
+       
+  
+  
+             #footer-recetas{
+              clear: both;
+                position: relative;
+                height: 5px;
+                margin-top: -5px;
+               border-top: solid 1.5px #DCDCDC;
+               display: flex;
+               flex-direction: column;
+              width: 100%;
+              z-index: 10;
+              background-color: #fff;
+              bottom: 0;
+              }
+  
+              .footer-primero-recetas{
+               width: 100%;
+               margin-bottom: 2%;
+               height: 55px;
+              }
+  
+              #icon-social1{
+               width: 49.5%;
+               height: 55px;
+              
+              }
+             /*LETRAS FOOD EMOTIONS*/
+                #icon-social1 p{
+                font-size: 0.9rem;
+                word-spacing: -0.3px;
+                letter-spacing: -0.2px;
+                width: 100%;
+                }
+  
+                 #icon-social1 li .fa-envelope{
+                  background-color: oldlace;
+                  color: #2d2d2d;
+                  width:25px;
+                  height: 25px;
+                  padding: 2px 2px 2px 2px;
+                  border-radius: 25px;
+                  border: solid #E9E9E9;
+                  margin-top: -15px;
+                  }
+                  
+                  #footer-recetas #icon-social1   li .fa-facebook-f{
+                  background-color: oldlace;
+                  color:  #2d2d2d;
+                  width:25px;
+                  height: 25px;
+                  padding: 2px 2px 2px 2px;
+                  border-radius: 25px;
+                  margin-top: -15px;
+                  border: solid #E9E9E9;
+                  }
+                  
+                  
+                  #footer-recetas  #icon-social1   li .fa-twitter{
+                  background-color: oldlace;
+                  color:   #2d2d2d;
+                  width:25px;
+                  height: 25px;
+                  padding: 2px 2px 2px 2px;
+                  border-radius: 25px;
+                  margin-top: -15px;
+                  border: solid #E9E9E9;
+                  }
+                  
+                  
+                  
+                  
+                  #footer-recetas #icon-social1  li .fa-instagram{
+                  background-color: oldlace;
+                  color: #2d2d2d;
+                  width:25px;
+                  height: 25px;
+                  padding: 2px 2px 2px 2px;
+                  border-radius: 25px;
+                  margin-top: -15px;  /*SUBE ICONO*/
+                  border: solid #E9E9E9;
+                  }
+                  
+                   /*SUB-caja contenedor de la caja correo*/
+                    .box{
+                    width: 55%;
+                    height: 55px;
+                    margin-left: 5% ;
+                    margin-top: 1px; /*SUBE CAJA A MENOS TOP*/
+                    transform: translate(-5%, -5%);
+               
+                     }
+                  
+                     .box h3{
+                  letter-spacing: -0.1px;
+                  font-family: 'Archivo Black', sans-serif;
+                  font-size: .7rem;
+                  font-weight: 400;
+                  line-height: -0.4px;
+                  margin-left: 16%;
+                  color: #2d2d2d;
+                  }
+  
+                  /*cajita del correo */
+                  .box form{
+                  display: flex;
+                  flex-direction: row;
+                  width: 100%; 
+                  }
+                  
+                  /*BOX DONDE SE ESCRIBE*/
+               .box input[type="text"]
+                  {
+                  background-color: #fff;
+                  display: flex;
+                  width:50%;
+                  height: 35px;
+                  border: 1.5px solid 	#DCDCDC;
+                  font-size: 0.9rem;
+                  padding: 0 12px;
+                  border-radius: 5px 0 0 5px;
+                  }
+                  
+                  /*BOTON ENVIAR*/
+                .box button[type="submit"]{
+                  left: 24px;  /*EL TRUCO IMPORTANTE*/
+                  border-radius: 0 5px 5px 0;
+                  padding: 0 4px; /*IMPORTANTE PARA QUE LA LETRA ENCAJE EN EL BOTON*/
+                  width: 25%;
+                  height: 35px;
+                  border: none ;
+                  outline: none;
+                  cursor: pointer;
+                  background-color: #2d2d2d;
+                  color: #fff;
+                  font-size: 0.7rem;
+                  font-family: 'Archivo Black', sans-serif;
+                  }
+                  
+                 .box button[type="submit"]:hover{
+                  background: ;
+                  }
+                  /*FIN de la cajita del correo */
+                  
+                  .final-food-recetas p{
+                    text-align: center;
+                    padding-top: 8px;  /*BAJAN LAS LETRAS*/
+                    color: #2d2d2d;
+                    font-size: 0.6rem;
+                   }
+                  
+                   #wrapper-recetas .tipeo{
+                    margin: auto;
+                    margin-bottom: 20%;
+                    display: table;
+                    width: 90%;
+                    height: 5%;
+                    background-color:;
+                    }
+  
+                    #wrapper-recetas  .tipeo h4{
+                      position: relative; 
+                      float: left;
+                      color: #2d2d2d;
+                      font-size: 0.8em;
+                      }
+                    
+                      #wrapper-recetas   .tipeo h1 { 
+                      position: relative; 
+                      float: left;
+                      color: #2d2d2d;
+                      font-size: 0.8em;
+                      white-space: nowrap;
+                      width:28%;
+                      }
+                    
+                      #wrapper-recetas   .tipeo h1 span {
+                       position:absolute;
+                       right:0;
+                       width: 2em;
+                       background: white;
+                       border-left: 0.1px solid #DDD;
+                       animation: escribir 5s steps(30) infinite alternate;
+                       }
+
+    }
+
+
+
+
+
+
+
+  /* 1001 A 1080 ..............IPAD PRO 1024........1366............................................................................................................................................................................... */
+    @media only screen and (min-width: 951px) and (max-width: 1080px){
+
+      #wrapper-recetas {
+        margin:0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+            
+      #wrapper-recetas > * {
+      padding: 20px;
+      }
+         
+      header{
+        width: 100%;
+        z-index: 999;
+        position: fixed;
+        margin: auto;
+        height:  80px;
+        box-shadow: 0 8px 6px -6px #c9c9c9;
+        }
+      
+        header.black{
+         background-color:#fff ;
+         width: 100%;
+         height:   80px;
+        }
+
+
+      #container-recetas{
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:  78px;
+        margin-bottom: 70px;
+   
+     }
+    
+    .cabecera-recetas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0.5px;
+    height: 50px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+      }
+  
+  
+    /*caja */
+      .logo{
+      display:inline-block ;/*IMPORTANTE*/
+      width: 30%;
+      height: 50px;
+     }
+      
+     /*IMAGEN DEL LOGO*/
+     .logo img{
+      width: 100%;
+      height: 50px;
+   
+     
+      }
+
+      .controls{
+        display: inline-flex;
+        width: 35%;
+      }
+       
+      #custom-search-input{
+        width: 390px;
+      }
+
+
+      .menu-btn {
+        display: inline-flex;
+        z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
+        width: 35%;
+        height: 50px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+      }
+      
+        /*CONTENEDOR  REVISTA Y SOCIALES*/
+       .boletin{
+        width:   100%;
+        display: block;
+        position: relative;
+        float: left;
+        margin-top: 30px;
+     background-color: cadetblue;
+        }
+  
+      .boletin h4{
+      font-size:  1.2rem;
+      letter-spacing: 0.2px;
+      font-family: 'Open sans';
+      font-weight: 900;
+      color:#2d2d2d;
+      }
+  
+    
+       .boletin a h4:hover{
+        color: #639a3a;
+       text-decoration: none;
+       }
+  
+  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+
+ 
+  /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+   .menu-btn .menu-btn__burger {
+    display: block;
+    position: relative;
+    float: right;
+    margin-top:  31px;
+    width: 39px;
+    height: 5px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+     }
+  
+  
+
+  /*FIN NAV*/
+  /*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+   .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 39px;
+    height: 5px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+     }
+  
+     .menu-btn__burger:hover{
+     background-color: #fff;
+     }
+  
+    .menu-btn__burger:hover::before,
+    .menu-btn__burger:hover::after{
+    background-color: #fff;
+     }
+  
+    /*ESTO ACORTA ESPACIO ENTRE LAS LINEAS*/
+     .menu-btn__burger::before {
+     transform: translateY(-12px);
+      }
+  
+     .menu-btn__burger::after {
+     transform: translateY(12px);
+     }
+  
+  /* ANIMATION */
+    .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    }
+  
+    .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    }
+  
+     .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+      }
+  
+  
+  
+       /*NAV*/
+     nav li a p{
+    position: absolute;
+    z-index: 200;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    }
+  
+      nav ul li  {
+        margin-top: 50px;
+        margin-left: -29px;
+      
+      }
+
+     /*IMPMORTANTE PARA QUE LAS LETRAS SE SEPAREN Y ENTR EL ARROW*/
+     #menu-simple{
+       width: 100%;
+       display: block;
+     }
+
+
+        /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
+      #tres-columnas-recetas{
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      }
+
+    /*CONTENEDOR DE LA PRIMERA COLUMNA........................... 2*/
+    .primera-columna-recetas{
+    width:   68%;
+    display: flex;
+    flex-direction: column;
+    }
+     
+     .articulo{
+      width: 100%;
+      margin-bottom: 5%;
+      }
+
+       /*SUBCAJA DE ARTICULO DONDE ESTA TITULO 
+       DESCRIPCION Y AUTOR*/
+      .recetas{
+      width: 100%;
+      }
+
+       /*TITULO DE LA RECETA*/
+    .recetas h1{
+      font-size: 3.2em;
+      word-spacing: -3px;
+      letter-spacing: -1.8px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 900;
+      text-align:start;
+      text-decoration-line: underline;
+      color: #000000;
+    
+      }
+  
+      /*DESCRIPCION DE LA RECETA*/
+      .recetas p{
+        width: 100%;
+        font-size: 1.4rem;
+        word-spacing: -0.3px;
+        letter-spacing: -0.2px;
+        font-family: 'Times New Roman', Times, serif;
+        text-align:start;
+        color: #2d2d2d;   
+        }
+     
+
+      /*LEER MAS...*/
+      .recetas h3{
+        font-size: 1.2rem;
+        color: #2d2d2d;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+        #foto-autor{
+          width: 300px;
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 5%;
+        }
+  
+        /*FOTO AUTOR*/
+        #foto-autor figure{
+          display: inline-flex;
+          width: 55px;
+        }
+        #foto-autor img{
+          width: 100%;
+        }
+        
+          #foto-autor figcaption {
+            width: 225px;
+             display: inline-flex;
+          }
+
+   
+
+      /*COBTIENE FOTO REDES TIEMPO Y NUTRICIONAL-- */
+      .vista{
+      width: 100%;
+      display: block;
+       }
+  
+       .vista-imagen-receta{
+         width: 100%;
+       }
+
+       .vista-imagen-receta img{
+       width:90%;
+       max-width: 600px;
+       display: block;
+       position: relative;
+       float: right;
+       margin-bottom: 40px;
+       }
+ 
+       .iconos-social{
+        display: block;
+        position: relative;
+        float: left;
+       width: 8%;
+       }
+ 
+       .contiene{
+         width:100%;
+        display: flex;
+       }
+
+    .temps-porciones{
+     width: 100%;
+     height: 35px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: flex-start;
+    }
+
+
+      .temps-porciones .temps{
+       display: inline-flex;
+        width: 200px;
+        height: 20px;
+        margin: auto;
+       }
+ 
+       .temps-porciones .porciones{
+      display: inline-flex;
+      margin: auto;
+      width: 200px;
+      height: 20px;
+       }
+
+      .nutricional-imagen{
+      width: 100%;
+      }
+
+
+      .temps p{
+      font-family: 'Times New Roman', Times, serif;
+      color: #000000;
+      font-size: 1.3rem;
+      margin: auto;
+       }
+
+       .porciones p{
+      font-family: 'Times New Roman', Times, serif;
+      color: #000000;
+      font-size: 1.3rem;
+      margin: auto;
+       }
+ 
+   
+       .nutricional-imagen h2{
+      font-family: 'Times New Roman', Times, serif;
+      color: #000000;
+       font-size: 1.3rem;
+       }
+ 
+    .nutricional-imagen  p{
+    font-family: 'Times New Roman', Times, serif;
+    color: #666;
+    font-size: 1.1rem;
+    letter-spacing: 0.01rem;
+       }
+
+
+         /*CONTAINER DE INGREDIENTE-TITULO-PIC*/
+         .ingredientes-tres{
+             width: 100%;
+           }
+
+           /*CONTAINER DE INGREDIENTE-TITULO Y
+           INGREDIENTE-PI*/
+       .ingrediente-titulo-pic{
+         width: 100%;
+
+       }
+
+       .ingrediente-titulo{
+         width: 90%;
+
+       }
+
+       .ingrediente-pic{
+         width: 5%;
+       }
+           
+       /*TITUULO INGREDIENTES*/
+     .ingrediente-titulo h2{
+        font-size: 1.4rem;
+        word-spacing: -0.3px;
+        letter-spacing: -0.1px;
+        font-family: 'Archivo Black', sans-serif;
+        font-weight: bolder;
+        color: #000000;
+        text-align: start;
+    
+       }
+  
+    
+
+       .ingredientes{
+         width: 100%;
+
+       }
+
+       .lista-ingredientes{
+         width: 100%;
+         margin: auto;
+       }
+
+              /*LOS INGREDIENTES*/
+      .lista-ingredientes  p{
+      letter-spacing: -0.001px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1;
+      color: #666;
+      }
+     
+      
+    
+     .preparacion-total{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-top: 1.5px solid #e3e3e3;
+    }
+  
+    .preparacion-titulo{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+  
+    
+    .prepa-titulo{
+      width:  90%;
+      padding-top:0;
+    }
+
+    .prepa-pic{
+      width: 5%;
+      padding-top:0;
+    }
+
+
+     /*TITULO DE LA PREPARACION*/
+    .prepa h2{
+     font-size: 1.4rem;
+     letter-spacing:-0.01rem ;
+     word-spacing: -0.01rem;
+    font-weight: bolder;
+    text-align: start;
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+    }
+  
+   
+    .preparacion-pasos{
+      width: 100%;
+      display: flex;
+      flex-direction: column; 
+    }
+
+        /*TITULO DE LA PREPARACION*/
+       .preparacion p{
+          width: 100%;
+          font-size: 1.4rem;
+         word-spacing: -3px;
+         letter-spacing: 0.8px;
+         font-family: 'Times New Roman', Times, serif;
+  
+         color: #2d2d2d;
+         text-align: start;
+         }
+       
+
+  
+      .tips-titulo-pic{
+      width: 100%;
+      }
+
+      .tips-titulo{
+   width: 90%;
+      }
+
+      .tips-pic{
+     width: 5%;
+      }
+
+
+      .nutricion-informe{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nutricional{
+        display: flex;
+        flex-direction: column;
+      
+      }
+           /*TITULO DE NUTRICION*/
+          .nutricional h2{
+          font-weight: bolder;
+          font-size: 1.4rem;
+          word-spacing: -0.001px;
+          letter-spacing: -0.001px;
+          font-family: 'Times New Roman', Times, serif;
+          color: #000000;
+          text-decoration: underline; 
+         
+         }
+        
+          .nutricional p{
+          letter-spacing: -0.001px;
+          font-family: 'Times New Roman', Times, serif;
+          font-size:  1.2rem;
+          font-weight: 400;
+          line-height: -0.4px;
+          color: #666; 
+        }
+
+        /*..CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
+        .categoria h2{
+          font-size:  1.4rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#000000;
+      
+        }
+
+        .categoria p{
+          font-size:  1.2rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#524c56;
+        
+        }
+
+
+         /*ESTO ES SOLO LA PALABRA CATEGORIAS TITULO CATEGORIAS EN PRIMERA COLUMNA*/
+        .categorias-recetas-links h2{
+          font-size:  1.4rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#000000;
+         
+         }
+        
+        /*..CATEGORIAS con TIENEN LINK..*/
+       .categorias-recetas-links p{
+          font-size:   1.2rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#524c56;
+         }
+  
+
+
+
+  /* SEGUNDA COLUMNA................................................................. */
+  .segunda-columna-recetas{
+    width: 10%;
+  
+   
+   }
+  
+  
+  
+         /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
+         #aside-recetas{
+          width: 20%;
+          display: flex;
+          flex-direction: column;
+          }
+      
+        
+       
+  
+
+        
+  
+     
+             #footer-recetas{
+              clear: both;
+                position: relative;
+                height: 10px;
+                margin-top: -10px;
+               border-top: solid 1.5px #DCDCDC;
+               display: flex;
+               flex-direction: column;
+              width: 100%;
+              z-index: 1000;
+              background-color: #fff;
+              bottom: 0;
+              }
+  
+              .footer-primero-recetas{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+               width: 100%;
+               height: 75px;
+               margin-bottom: 1%;
+              }
+  
+              #icon-social1{
+               width: 49.5%;
+               height: 70px;
+              
+              }
+             /*LETRAS FOOD EMOTIONS*/
+                #icon-social1 p{
+                font-size: 1.1rem;
+                word-spacing: -0.3px;
+                letter-spacing: -0.2px;
+                width: 100%;
+                }
+  
+                 #icon-social1 li .fa-envelope{
+                  background-color: oldlace;
+                  color: #2d2d2d;
+                  width:30px;
+                  height: 30px;
+                  padding: 4px 4px 4px 4px;
+                  border-radius: 25px;
+                  border: solid #E9E9E9;
+                  margin-top: -15px;
+                  }
+                  
+                  #footer-recetas #icon-social1   li .fa-facebook-f{
+                  background-color: oldlace;
+                  color:  #2d2d2d;
+                  width:30px;
+                  height: 30px;
+                  padding: 4px 4px 4px 4px;
+                  border-radius: 25px;
+                  margin-top: -15px;
+                  border: solid #E9E9E9;
+                  }
+                  
+                  
+                  #footer-recetas  #icon-social1   li .fa-twitter{
+                  background-color: oldlace;
+                  color:   #2d2d2d;
+                  width:30px;
+                  height: 30px;
+                  padding: 4px 4px 4px 4px;
+                  border-radius: 25px;
+                  margin-top: -15px;
+                  border: solid #E9E9E9;
+                  }
+                  
+                  
+                  
+                  
+                  #footer-recetas #icon-social1  li .fa-instagram{
+                  background-color: oldlace;
+                  color: #2d2d2d;
+                  width:30px;
+                  height: 30px;
+                  padding: 4px 4px 4px 4px;
+                  border-radius: 25px;
+                  margin-top: -15px;  /*SUBE ICONO*/
+                  border: solid #E9E9E9;
+                  }
+                  
+                   /*SUB-caja contenedor de la caja correo*/
+                    .box{
+                    width: 49.5%;
+                    height: 70px;
+                    margin-left: 5% ;
+                    margin-top: 1px; /*SUBE CAJA A MENOS TOP*/
+                    transform: translate(-5%, -5%);
+                   
+                     }
+                  
+                     .box h3{
+                  letter-spacing: -0.1px;
+                  font-family: 'Archivo Black', sans-serif;
+                  font-size: .7rem;
+                  font-weight: 400;
+                  line-height: -0.4px;
+                  margin-left: 16%;
+                  color: #2d2d2d;
+                  }
+  
+                  /*cajita del correo */
+                  .box form{
+                  display: flex;
+                  flex-direction: row;
+                  width: 100%; 
+                  }
+                  
+                  /*BOX DONDE SE ESCRIBE*/
+               .box input[type="text"]
+                  {
+                  background-color: #fff;
+                  display: flex;
+                  width:40%;
+                  height: 40px;
+                  border: 1.5px solid 	#DCDCDC;
+                  font-size: 0.9rem;
+                  padding: 0 12px;
+                  border-radius: 5px 0 0 5px;
+                  }
+                  
+                  /*BOTON ENVIAR*/
+                .box button[type="submit"]{
+                  left: 24px;  /*EL TRUCO IMPORTANTE*/
+                  border-radius: 0 5px 5px 0;
+                  padding: 0 4px; /*IMPORTANTE PARA QUE LA LETRA ENCAJE EN EL BOTON*/
+                  width: 25%;
+                  height: 40px;
+                  border: none ;
+                  outline: none;
+                  cursor: pointer;
+                  background-color: #2d2d2d;
+                  color: #fff;
+                  font-size: 0.9rem;
+                  font-family: 'Archivo Black', sans-serif;
+                  }
+                  
+                 .box button[type="submit"]:hover{
+                  background: ;
+                  }
+                  /*FIN de la cajita del correo */
+                  .footer-second-recetas{
+                    height: 15px;
+                    width: 100%;
+                  }
+                  .final-food-recetas{
+                    height: 15px;
+                    width: 100%;
+                  }
+                  
+                  .final-food-recetas p{
+                    text-align: center;
+                    
+                    color: #2d2d2d;
+                    font-size: 0.6rem;
+                   }
+                  
+                   #wrapper-recetas .tipeo{
+                    margin: auto;
+                    margin-bottom: 20%;
+                    display: table;
+                    width: 90%;
+                    height: 5%;
+                    background-color:;
+                    }
+  
+                    #wrapper-recetas  .tipeo h4{
+                      position: relative; 
+                      float: left;
+                      color: #2d2d2d;
+                      font-size: 0.8em;
+                      }
+                    
+                      #wrapper-recetas   .tipeo h1 { 
+                      position: relative; 
+                      float: left;
+                      color: #2d2d2d;
+                      font-size: 0.8em;
+                      white-space: nowrap;
+                      width:28%;
+                      }
+                    
+                      #wrapper-recetas   .tipeo h1 span {
+                       position:absolute;
+                       right:0;
+                       width: 2em;
+                       background: white;
+                       border-left: 0.1px solid #DDD;
+                       animation: escribir 5s steps(30) infinite alternate;
+                       }
+
+       }
+
+
+
+
+
+
+    
+  /* 1081 A 1149 ..................................................................................................................................................................................................... */
+  @media only screen and (min-width: 1081px) and (max-width: 1149px){
+    #wrapper-recetas {
+      margin:0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+          
+    #wrapper-recetas > * {
+    padding: 35px;
+    }
+       
+    header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      margin: auto;
+      height:  80px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+      }
+    
+      header.black{
+       background-color:#fff ;
+       width: 100%;
+       height:   80px;
+      }
+    #container-recetas{
+      width:100%;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:  78px;
+      margin-bottom: 75px;
+   }
+  
+    .cabecera-recetas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    height: 42px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    margin-top: -10px;
+    }
+
+
+        /*caja */
+      .logo{
+    display:block ;/*IMPORTANTE*/
+    width: 20%;
+    height: 42px;
+
+   }
+    
+   /*IMAGEN DEL LOGO*/
+   .logo img{
+    width: 100%;
+    height: 42px;
+    margin: auto;
+   
+    }
+
+
+
+   /*CONTAINER DEL BUSCADOR................. */
+ .cabecera-recetas .controls{
+  display: inline-flex;
+  visibility: visible;
+ width: 390px;
+  height: 40px;  
+ }
+
+  /*CAJA DEL BUSCADOR */
+ .controls #custom-search-input{
+  width: 100%;
+  max-width: 390px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  visibility: visible;
+  }
+
+  #custom-search-input .sin-borde{
+  width: 360px;
+  }
+
+       /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+    .menu-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 25%;
+  max-width: 172px;
+  height: 42px;
+    }
+
+     
+      /*CONTENEDOR  REVISTA Y SOCIALES*/
+     .boletin{
+      width: 150px;
+      display: block;
+      position: relative;
+      float: left;
+      margin-right: 15px;
+      background-color:  blue;
+      }
+
+    .boletin h4{
+    font-size: 0.9rem;
+    letter-spacing: 0.1px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 800;
+    color:#2d2d2d;
+   
+    }
+
+
+     .boletin a h4:hover{
+      color: #639a3a;
+     text-decoration: none;
+     }
+
+
+/*--MUEVE EL MENU............ESTE ES EL BURGER*/
+.menu-btn  .menu-btn__burger {
+   margin-top:  27px;
+   display: block;
+   position: relative;
+   float: right;
+  width: 32px;
+  height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
+  transition: all .5s ease-in-out;
+}
+
+
+/*NAV*/
+nav li a p{
+  position: absolute;
+  z-index: 200;
+  margin-left: 30px;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+
+}
+/*FIN NAV*/
+/*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+ .menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+   }
+
+   .menu-btn__burger:hover{
+   background-color: #fff;
+   }
+
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #fff;
+   }
+
+  /*ESTO ACORTA ESPACIO ENTRE LAS LINEAS*/
+   .menu-btn__burger::before {
+   transform: translateY(-9px);
+    }
+
+   .menu-btn__burger::after {
+   transform: translateY(9px);
+   }
+
+/* ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  }
+
+  .menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  }
+
+   .menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+
+
+ 
+  #menu-simple{
+    margin-bottom: 30px;
+ 
+  }
+      /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
+    #tres-columnas-recetas{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+    }
+     
+   /*CONTENEDOR DE LA PRIMERA COLUMNA........................... 2*/
+   .primera-columna-recetas{
+    width:62%;
+   display: flex;
+    flex-direction: column;
+
+    }
+     
+     .articulo{
+      width: 100%;
+      
+      margin-bottom: 5%;
+      }
+
+      .recetas{
+      width: 100%;
+
+      margin: auto; 
+      }
+
+    /*TITULO DE LA RECETA*/
+    .recetas h1{
+    font-size: 3.4rem;
+    word-spacing: -3px;
+    letter-spacing: -1px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    text-align:start;
+    text-decoration-line: underline;
+    color: #000000;
+   
+    }
+    /*DESCRIPCION DE LA RECETA*/
+    .recetas p{
+      width: 100%;
+      font-size: 1.1rem;
+      word-spacing: -0.5px;
+      letter-spacing: -0.4px;
+      font-family: 'Times New Roman', Times, serif;
+      text-align:start;
+      color: #2d2d2d;
+    
+      }
+
+      #foto-autor{
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5%;
+      }
+
+      /*FOTO AUTOR*/
+      #foto-autor figure{
+        display: inline-flex;
+        width: 55px;
+      }
+      #foto-autor img{
+        width: 100%;
+      }
+      
+        #foto-autor figcaption {
+          width: 225px;
+           display: inline-flex;
+    
+        }
+
+    /*caja costado foto  */
+    .vista{
+      width: 100%;
+      display: block;
+      margin-top: 10px;
+       }
+  
+
+       .iconos-social{
+        display: block;
+        position: relative;
+        float: left;
+         width: 8%;
+         }
+
+       .vista-imagen-receta{
+       width:   90%;
+       display: block;
+       position: relative;
+       float: right;
+       margin-bottom: 10px;
+       }
+
+       .vista-imagen-receta img{
+        width:   100%;
+        display: block;
+        position: relative;
+        float: right;
+      
+        }
+
+
+
+        .contiene{
+          width:100%;
+         display: flex;
+         margin: auto;
+        }
+ 
+     .temps-porciones{
+      width: 100%;
+      height: 35px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+     }
+ 
+ 
+       .temps-porciones .temps{
+        display: inline-flex;
+         width: 200px;
+         height: 20px;
+         margin: auto;
+        }
+  
+        .temps-porciones .porciones{
+       display: inline-flex;
+       margin: auto;
+       width: 200px;
+       height: 20px;
+        }
+ 
+       .nutricional-imagen{
+       width: 100%;
+       }
+ 
+ 
+       .temps-porciones .temps p{
+       font-family: 'Times New Roman', Times, serif;
+       color: #000000;
+       font-size: 1.3rem;
+       margin: auto;
+        }
+ 
+        .temps-porciones .porciones p{
+       font-family: 'Times New Roman', Times, serif;
+       color: #000000;
+       font-size: 1.3rem;
+       margin: auto;
+        }
+  
+    
+        .nutricional-imagen h2{
+       font-family: 'Times New Roman', Times, serif;
+       color: #000000;
+        font-size: 1.3rem;
+        }
+  
+     .nutricional-imagen  p{
+     font-family: 'Times New Roman', Times, serif;
+     color: #666;
+     font-size: 1.1rem;
+     letter-spacing: 0.01rem;
+        }
+
+        
+            /*CAJA INGREDIENTE dibujo*/
+   .ingrediente-pic {
+    display: inline-flex;
+   width: 4%;
+   margin-right: 7px;
+  
+  }
+/*CAJA DE PREPARACION DIBUJO*/
+  .prepa-pic{
+    display: inline-flex;
+    width: 4%;
+    margin-right: 7px;
+  }
+
+  /*..CAJA TIPC DIBUJO..*/
+  .tips-pic {
+    display: inline-flex;
+    width: 4%;
+    margin-right: 7px;;
+ }
+  
+       /*TITUULO INGREDIENTES*/
+       .ingrediente-titulo-pic .ingrediente-titulo h2{
+        width: 100%;
+        font-size: 1rem;
+        word-spacing: -0.3px;
+        letter-spacing: -0.1px;
+        font-family: 'Archivo Black', sans-serif;
+        font-weight: bolder;
+        color: #2d2d2d;
+        text-align: start;
+       }
+
+
+         /*LOS INGREDIENTES*/
+       .ingredientes .lista-ingredientes  span{
+        width: 80%;
+        letter-spacing: -0.1px;
+        font-family: 'Open sans';
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        color: #666;
+        text-align: start;
+       }
+
+        /*TITULO DE LA PREPARACION*/
+       .preparacion-titulo  .prepa-titulo  h2{
+        font-size: 1.2rem;
+       word-spacing: -3px;
+       letter-spacing: -2.8x;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: 900;
+       color: #000000;
+       text-align: start;
+       }
+     
+       
+       /*sub-cajita*/
+       .tiempo{
+       width:50%;
+       
+       }
+     
+       .primera-columna-recetas .tiempo p{
+       letter-spacing: -0.1px;
+       font-family: 'Cabin', sans-serif;
+       font-size: 1rem;
+       line-height: -0.4px;
+       color: #666;
+       text-align: start;
+       }
+     
+               /*TITULO DE NUTRICION*/
+         .primera-columna-recetas .nutricional h2{
+          font-weight: bolder;
+          font-size: 1.3rem;
+          word-spacing: -3px;
+          letter-spacing: -2.8x;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 900;
+          color: #000000;
+          text-decoration: underline; 
+          text-align: start;
+         }
+        
+         .primera-columna-recetas .nutricional p{
+          letter-spacing: -0.1px;
+          font-family: 'Open sans';
+          font-size:  1.1rem;
+          font-weight: 400;
+          line-height: -0.4px;
+          color: #666;
+          margin-left:12px;
+        }
+        /*..CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
+        .categoria h2{
+          font-size:  1.3rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#000000;
+       
+        }
+
+         /*ESTO ES SOLO LA PALABRA CATEGORIAS TITULO CATEGORIAS EN PRIMERA COLUMNA*/
+       .categorias-recetas-links h2{
+          font-size:  1.3rem;
+          font-family: 'Times New Roman', sans serif;
+          font-weight: 900;
+          color:#000000;
+       
+         }
+        
+        /*..CATEGORIAS con TIENEN LINK..*/
+       .categorias-recetas-links a p{
+          font-size:   1.2rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#524c56;
+       
+      
+         }
+  /* SEGUNDA COLUMNA................................................................. */
+  .segunda-columna-recetas{
+    width: 10%;
+  
+   
+   }
+
+
+       /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
+       #aside-recetas{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+     
+        }
+    
+      
+    
+
+   
+     
+
+           #footer-recetas{
+            clear: both;
+              position: relative;
+              height: 40px;
+              margin-top: -40px;
+             border-top: solid 1.5px #DCDCDC;
+             display: flex;
+             flex-direction: column;
+            width: 100%;
+            z-index: 1000;
+            background-color: #fff;
+            bottom: 0;
+            }
+
+            .footer-primero-recetas{
+             width: 100%;
+             display: flex;
+             flex-direction: row;
+             justify-content: space-between;
+             margin-bottom: 2%;
+             height: 80px;
+            }
+
+            #icon-social1{
+             width: 49.5%;
+             height: 65px;
+            
+            }
+           /*LETRAS FOOD EMOTIONS*/
+              #icon-social1 p{
+              font-size: 1.4rem;
+              word-spacing: -0.3px;
+              letter-spacing: -0.2px;
+              width: 100%;
+              }
+
+               #icon-social1 li .fa-envelope{
+                background-color: oldlace;
+                color: #2d2d2d;
+                width:40px;
+                height: 40px;
+                padding: 4px 4px 4px 4px;
+                border-radius: 25px;
+                border: solid #E9E9E9;
+                margin-top: -15px;
+                }
+                
+                #footer-recetas #icon-social1   li .fa-facebook-f{
+                background-color: oldlace;
+                color:  #2d2d2d;
+                width:40px;
+                height: 40px;
+                padding: 4px 4px 4px 4px;
+                border-radius: 25px;
+                margin-top: -15px;
+                border: solid #E9E9E9;
+                }
+                
+                
+                #footer-recetas  #icon-social1   li .fa-twitter{
+                background-color: oldlace;
+                color:   #2d2d2d;
+                width:40px;
+                height: 40px;
+                padding: 4px 4px 4px 4px;
+                border-radius: 25px;
+                margin-top: -15px;
+                border: solid #E9E9E9;
+                }
+                
+                
+                
+                
+                #footer-recetas #icon-social1  li .fa-instagram{
+                background-color: oldlace;
+                color: #2d2d2d;
+                width:40px;
+                height: 40px;
+                padding: 4px 4px 4px 4px;
+                border-radius: 25px;
+                margin-top: -15px;  /*SUBE ICONO*/
+                border: solid #E9E9E9;
+                }
+                
+                 /*SUB-caja contenedor de la caja correo*/
+                  .box{
+                    display: flex;
+                    flex-direction: column;
+                  width: 49.5%;
+                  height: 65px;
+                  margin-left: 5% ;
+                  margin-top: 10px; /*SUBE CAJA A MENOS TOP*/
+                  transform: translate(-5%, -5%);
+                   }
+                
+                   .box h3{
+                letter-spacing: -0.1px;
+                font-family: 'Archivo Black', sans-serif;
+                font-size: 0.9rem;
+                font-weight: 400;
+                line-height: -0.4px;
+                margin-left: 16%;
+                color: #2d2d2d;
+                }
+
+                /*cajita del correo */
+                .box form{
+                display: flex;
+                flex-direction: row;
+                width: 100%; 
+                }
+                
+                /*BOX DONDE SE ESCRIBE*/
+             .box input[type="text"]
+                {
+                background-color: #fff;
+                display: flex;
+                width:50%;
+                height: 40px;
+                border: 1.5px solid 	#DCDCDC;
+                font-size: 0.9rem;
+                padding: 0 12px;
+                border-radius: 5px 0 0 5px;
+                }
+                
+                /*BOTON ENVIAR*/
+              .box button[type="submit"]{
+                left: 24px;  /*EL TRUCO IMPORTANTE*/
+                border-radius: 0 5px 5px 0;
+                padding: 0 4px; /*IMPORTANTE PARA QUE LA LETRA ENCAJE EN EL BOTON*/
+                width: 25%;
+                height: 40px;
+                border: none ;
+                outline: none;
+                cursor: pointer;
+                background-color: #2d2d2d;
+                color: #fff;
+                font-size: 0.9rem;
+                font-family: 'Archivo Black', sans-serif;
+                }
+                
+               .box button[type="submit"]:hover{
+                background: ;
+                }
+                /*FIN de la cajita del correo */
+                
+                .final-food-recetas{
+                  height: 15px;
+                  width: 100%;
+                }
+                .final-food-recetas p{
+                  text-align: center;
+                  padding-top: 8px;  /*BAJAN LAS LETRAS*/
+                  color: #2d2d2d;
+                  font-size: 0.6rem;
+                 }
+                
+                 #wrapper-recetas .tipeo{
+                  margin: auto;
+                  margin-bottom: 20%;
+                  display: table;
+                  width: 90%;
+                  height: 5%;
+                  background-color:;
+                  }
+
+                  #wrapper-recetas  .tipeo h4{
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 { 
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    white-space: nowrap;
+                    width:28%;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 span {
+                     position:absolute;
+                     right:0;
+                     width: 2em;
+                     background: white;
+                     border-left: 0.1px solid #DDD;
+                     animation: escribir 5s steps(30) infinite alternate;
+                     }
+
+  }
+
+
+
+
+
+  /* 1150 A 1199 ..................................................................................................................................................................................................... */
+  
+
+  @media only screen and (min-width: 1150px) and (max-width: 1199px){
+
+    #wrapper-recetas {
+      margin:0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+          
+    #wrapper-recetas > * {
+    padding: 35px;
+    }
+       
+    header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      margin: auto;
+      height:  80px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+      }
+    
+      header.black{
+       background-color:#fff ;
+       width: 100%;
+       height:   80px;
+      }
+       #container-recetas{
+      width:100%; 
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:  78px;
+      }
+  
+     .cabecera-recetas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    height: 42px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    margin-top: -5px;
+
+     }
+
+
+        /*caja */
+      .logo{
+    display:block ;/*IMPORTANTE*/
+    width: 18%;
+    height: 42px;
+
+   }
+    
+   /*IMAGEN DEL LOGO*/
+   .logo img{
+    width: 100%;
+    height: 42px;
+    margin: auto;
+   
+    }
+
+
+   
+      /*CONTAINER DEL BUSCADOR................. */
+      .cabecera-recetas .controls{
+        display: inline-flex;
+        visibility: visible;
+       width: 390px;
+        height: 40px;  
+
+       
+       }
+    
+       /*CONTAINER DEL BUSCADOR................. */
+  .cabecera-recetas .controls{
+  display: inline-flex;
+  visibility: visible;
+  width: 390px;
+  height: 40px;  
+  }
+
+   /*CAJA DEL BUSCADOR */
+  .controls #custom-search-input{
+  width: 100%;
+  max-width: 390px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  visibility: visible;
+  }
+
+  #custom-search-input .sin-borde{
+  width: 360px;
+  }
+  
+  
+
+       /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+    .menu-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25%;
+     max-width: 170px;
+     height: 42px;
+    }
+
+     
+      /*CONTENEDOR  REVISTA Y SOCIALES*/
+     .boletin{
+      width: 100%;
+      display: block;
+      position: relative;
+      float: left;
+     margin-right: 14px;
+     background-color: cornflowerblue;
+      }
+
+    .boletin h4{
+    font-size: 0.9rem;
+    letter-spacing: 0.1px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 800;
+    color:#2d2d2d;
+
+    }
+
+
+     .boletin a h4:hover{
+      color: #639a3a;
+     text-decoration: none;
+     }
+
+
+/*--MUEVE EL MENU............ESTE ES EL BURGER*/
+.menu-btn  .menu-btn__burger {
+   margin-top: 25px;
+   display: block;
+   position: relative;
+   float: right;
+  width: 32px;
+  height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
+  transition: all .5s ease-in-out;
+}
+
+
+/*NAV*/
+nav li a p{
+  position: absolute;
+  z-index: 200;
+  margin-left: 30px;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+
+}
+/*FIN NAV*/
+/*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+ .menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+   }
+
+   .menu-btn__burger:hover{
+   background-color: #fff;
+   }
+
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #fff;
+   }
+
+  /*ESTO ACORTA ESPACIO ENTRE LAS LINEAS*/
+   .menu-btn__burger::before {
+   transform: translateY(-10px);
+    }
+
+   .menu-btn__burger::after {
+   transform: translateY(10px);
+   }
+
+/* ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  }
+
+  .menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  }
+
+   .menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+
+   #menu-simple{
+   margin-bottom: 32px;
+   }
+
+ 
+
+      /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
+    #tres-columnas-recetas{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    }
+     
+      
+ /*CONTENEDOR DE LA PRIMERA COLUMNA........................... 2*/
+   .primera-columna-recetas{
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  }
+   
+   .articulo{
+    width: 100%;
+    margin-bottom: 5%;
+    }
+
+    .recetas{
+    width: 100%;
+  
+    margin: auto;
+    }
+
+  /*TITULO DE LA RECETA*/
+  .recetas h1{
+    font-size: 3.4rem;
+    word-spacing: -3px;
+    letter-spacing: -1px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    text-align:start;
+    text-decoration-line: underline;
+    color: #000000;
+   
+    }
+    /*DESCRIPCION DE LA RECETA*/
+    .recetas p{
+      width: 100%;
+      font-size: 1.2rem;
+      word-spacing: -0.2px;
+      letter-spacing: 0.4px;
+      font-family: 'Times New Roman', Times, serif;
+      text-align:start;
+      color: #2d2d2d;
+    
+      }
+
+    #foto-autor{
+        width: 290px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+
+         /*FOTO AUTOR*/
+         #foto-autor figure{
+         display: inline-flex;
+          }
+      /*FOTO AUTOR*/
+      #foto-autor figure img{
+        width: 100%;
+     
+        }
+    /*NOMBRE DEL AUTOR*/
+      .recetas figcaption {
+           display: inline-flex;
+           margin: auto;
+         
+        }
+
+    /*caja costado foto  */
+    .vista{
+      width: 100%;
+      display: block;
+      margin-top: 10px;
+       }
+  
+       .iconos-social{
+        display: block;
+        position: relative;
+        float: left;
+         width: 8%;
+         }
+
+
+
+         .vista-imagen-receta{
+          width:   88%;
+          display: block;
+          position: relative;
+          float: right;
+          margin-bottom: 10px;
+          }
+
+
+       .vista-imagen-receta img{
+       width:   100%;
+       display: block;
+       position: relative;
+       float: right;
+       }
+ 
+      
+       .contiene{
+         width:100%;
+         display: inline-flex;
+         margin-left: 88px;
+        margin: auto;
+       }
+ 
+       .temps-porciones{
+        width: 100%;
+        height: 35px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+       }
+   
+   
+         .temps-porciones .temps{
+          display: inline-flex;
+           width: 200px;
+           height: 20px;
+           margin: auto;
+          }
+    
+          .temps-porciones .porciones{
+         display: inline-flex;
+         margin: auto;
+         width: 200px;
+         height: 20px;
+          }
+   
+         .nutricional-imagen{
+         width: 100%;
+         }
+   
+   
+         .temps-porciones .temps p{
+         font-family: 'Times New Roman', Times, serif;
+         color: #000000;
+         font-size: 1.3rem;
+         margin: auto;
+          }
+   
+          .temps-porciones .porciones p{
+         font-family: 'Times New Roman', Times, serif;
+         color: #000000;
+         font-size: 1.3rem;
+         margin: auto;
+          }
+    
+      
+          .nutricional-imagen h2{
+         font-family: 'Times New Roman', Times, serif;
+         color: #000000;
+          font-size: 1.3rem;
+          }
+    
+       .nutricional-imagen  p{
+       font-family: 'Times New Roman', Times, serif;
+       color: #666;
+       font-size: 1.1rem;
+       letter-spacing: 0.01rem;
+          }
+  
+       /*TITUULO INGREDIENTES*/
+       .ingrediente-titulo-pic .ingrediente-titulo h2{
+        width: 100%;
+        font-size: 1rem;
+        word-spacing: -0.3px;
+        letter-spacing: -0.1px;
+        font-family: 'Archivo Black', sans-serif;
+        font-weight: bolder;
+        color: #2d2d2d;
+        text-align: start;
+       }
+
+
+         /*LOS INGREDIENTES*/
+       .ingredientes .lista-ingredientes  span{
+        width: 80%;
+        letter-spacing: -0.1px;
+        font-family: 'Open sans';
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        color: #666;
+        text-align: start;
+       }
+
+        /*TITULO DE LA PREPARACION*/
+       .preparacion-titulo  .prepa-titulo  h2{
+        font-size: 1.2rem;
+       word-spacing: -3px;
+       letter-spacing: -2.8x;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: 900;
+       color: #000000;
+       text-align: start;
+       }
+     
+       
+       /*sub-cajita*/
+       .tiempo{
+       width:50%;
+       
+       }
+     
+       .primera-columna-recetas .tiempo p{
+       letter-spacing: -0.1px;
+       font-family: 'Cabin', sans-serif;
+       font-size: 1rem;
+       line-height: -0.4px;
+       color: #666;
+       text-align: start;
+       }
+     
+               /*TITULO DE NUTRICION*/
+         .primera-columna-recetas .nutricional h2{
+          font-weight: bolder;
+          font-size: 1.3rem;
+          word-spacing: -3px;
+          letter-spacing: -2.8x;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 900;
+          color: #000000;
+          text-decoration: underline; 
+          text-align: start;
+         }
+        
+         .primera-columna-recetas .nutricional p{
+          letter-spacing: -0.1px;
+          font-family: 'Open sans';
+          font-size:  1.1rem;
+          font-weight: 400;
+          line-height: -0.4px;
+          color: #666;
+          margin-left:12px;
+        }
+        /*..CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
+        .categoria h2{
+          font-size:  1.3rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#000000;
+       
+        }
+
+         /*ESTO ES SOLO LA PALABRA CATEGORIAS TITULO CATEGORIAS EN PRIMERA COLUMNA*/
+       .categorias-recetas-links h2{
+          font-size:  1.3rem;
+          font-family: 'Times New Roman', sans serif;
+          font-weight: 900;
+          color:#000000;
+       
+         }
+        
+        /*..CATEGORIAS con TIENEN LINK..*/
+       .categorias-recetas-links a p{
+          font-size:   1.2rem;
+          font-family: 'Times New Roman', sans serif;
+          color:#524c56;
+       
+      
+         }
+  /* SEGUNDA COLUMNA................................................................. */
+  .segunda-columna-recetas{
+    width: 10%;
+  
+   
+   }
+
+       /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
+       #aside-recetas{
+        width:20%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        }
+    
+    
+
+     
+
+           #footer-recetas{
+            clear: both;
+              position: relative;
+              height: 30px;
+              margin-top: -30px;
+             border-top: solid 1.5px #DCDCDC;
+             display: flex;
+             flex-direction: column;
+            width: 100%;
+            z-index: 1000;
+            background-color: #fff;
+            bottom: 0;
+            }
+
+            .footer-primero-recetas{
+             width: 100%;
+             display: flex;
+             flex-direction: row;
+             margin-bottom: 2%;
+             height: 80px;
+            }
+
+            #icon-social1{
+             width: 49.5%;
+             height: 70px;
+            
+            }
+           /*LETRAS FOOD EMOTIONS*/
+              #icon-social1 p{
+              font-size: 1.1rem;
+              word-spacing: -0.3px;
+              letter-spacing: -0.2px;
+              width: 100%;
+              }
+
+               #icon-social1 li .fa-envelope{
+                background-color: oldlace;
+                color: #2d2d2d;
+                width:40px;
+                height: 40px;
+                padding: 5px 5px 5px 5px;
+                border-radius: 25px;
+                border: solid #E9E9E9;
+                margin-top: -15px;
+                }
+                
+                #footer-recetas #icon-social1   li .fa-facebook-f{
+                background-color: oldlace;
+                color:  #2d2d2d;
+                width:40px;
+                height: 40px;
+                padding: 5px 5px 5px 5px;
+                border-radius: 25px;
+                margin-top: -15px;
+                border: solid #E9E9E9;
+                }
+                
+                
+                #footer-recetas  #icon-social1   li .fa-twitter{
+                background-color: oldlace;
+                color:   #2d2d2d;
+                width:40px;
+                height: 40px;
+                padding: 5px 5px 5px 5px;
+                border-radius: 25px;
+                margin-top: -15px;
+                border: solid #E9E9E9;
+                }
+                
+                
+                
+                
+                #footer-recetas #icon-social1  li .fa-instagram{
+                background-color: oldlace;
+                color: #2d2d2d;
+                width:40px;
+                height: 40px;
+                padding: 5px 5px 5px 5px;
+                border-radius: 25px;
+                margin-top: -15px;  /*SUBE ICONO*/
+                border: solid #E9E9E9;
+                }
+                
+                 /*SUB-caja contenedor de la caja correo*/
+                  .box{
+                  width: 49.5%;
+                  height: 70px;
+                  margin-left: 5% ;
+                  margin-top: 1px; /*SUBE CAJA A MENOS TOP*/
+                  transform: translate(-5%, -5%);
+                   }
+                
+                   .box h3{
+                letter-spacing: -0.1px;
+                font-family: 'Archivo Black', sans-serif;
+                font-size: .9rem;
+                font-weight: 400;
+                line-height: -0.4px;
+                margin-left: 16%;
+                color: #2d2d2d;
+                }
+
+                /*cajita del correo */
+                .box form{
+                display: flex;
+                flex-direction: row;
+                width: 100%; 
+                }
+                
+                /*BOX DONDE SE ESCRIBE*/
+             .box input[type="text"]
+                {
+                background-color: #fff;
+                display: flex;
+                width:50%;
+                height: 40px;
+                border: 1.5px solid 	#DCDCDC;
+                font-size: 0.9rem;
+                padding: 0 12px;
+                border-radius: 5px 0 0 5px;
+                }
+                
+                /*BOTON ENVIAR*/
+              .box button[type="submit"]{
+                left: 24px;  /*EL TRUCO IMPORTANTE*/
+                border-radius: 0 5px 5px 0;
+                padding: 0 4px; /*IMPORTANTE PARA QUE LA LETRA ENCAJE EN EL BOTON*/
+                width: 25%;
+                height: 40px;
+                border: none ;
+                outline: none;
+                cursor: pointer;
+                background-color: #2d2d2d;
+                color: #fff;
+                font-size: 0.9rem;
+                font-family: 'Archivo Black', sans-serif;
+                }
+                
+               .box button[type="submit"]:hover{
+                background: ;
+                }
+                /*FIN de la cajita del correo */
+                
+                .final-food-recetas{
+                  height: 15px;
+                  width: 100%;
+                }
+                .final-food-recetas p{
+                  text-align: center;
+                  padding-top: 8px;  /*BAJAN LAS LETRAS*/
+                  color: #2d2d2d;
+                  font-size: 0.6rem;
+                 }
+                
+                 #wrapper-recetas .tipeo{
+                  margin: auto;
+                  margin-bottom: 20%;
+                  display: table;
+                  width: 90%;
+                  height: 5%;
+                  background-color:;
+                  }
+
+                  #wrapper-recetas  .tipeo h4{
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 { 
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    white-space: nowrap;
+                    width:28%;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 span {
+                     position:absolute;
+                     right:0;
+                     width: 2em;
+                     background: white;
+                     border-left: 0.1px solid #DDD;
+                     animation: escribir 5s steps(30) infinite alternate;
+                     }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1200 A 1290 ..................................................................................................................................................................................................... */
+  
+
+@media only screen and (min-width: 1200px) and (max-width: 1246px){
+
+   #wrapper-recetas {
+      margin:0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+          
+    #wrapper-recetas > * {
+    padding: 35px;
+    }
+       
+    header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      margin: auto;
+      height:  80px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+      }
+    
+      header.black{
+       background-color:#fff ;
+       width: 100%;
+       height:   80px;
+      }
+    #container-recetas{
+      width:100%;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:  78px;
+   }
+  
+   .cabecera-recetas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    height: 45px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    margin-top: -10px;
+     }
+
+
+        /*caja */
+      .logo{
+    display:block ;/*IMPORTANTE*/
+    width: 19%;
+    height: 45px;
+   }
+    
+   /*IMAGEN DEL LOGO*/
+   .logo img{
+    width: 100%;
+    height: 45px;
+    margin: auto;
+   
+    }
+
+ /*CONTAINER DEL BUSCADOR................. */
+ .cabecera-recetas .controls{
+  display: inline-flex;
+  visibility: visible;
+ width: 390px;
+  height: 40px;  
+ }
+
+  /*CAJA DEL BUSCADOR */
+ .controls #custom-search-input{
+  width: 100%;
+  max-width: 390px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  visibility: visible;
+  }
+
+  #custom-search-input .sin-borde{
+  width: 360px;
+  }
+
+
+       /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+    .menu-btn {
+     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     width: 30%;
+     max-width: 170px;
+      height: 45px;
+    background-color: red;
+    }
+
+     
+      /*CONTENEDOR  REVISTA Y SOCIALES*/
+     .boletin{
+      width: 100%;
+      display: block;
+      position: relative;
+      float: left;
+      margin-right: 15px;
+ 
+      }
+
+    .boletin h4{
+    font-size: 0.9rem;
+    letter-spacing: 0.1px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 800;
+    color:#2d2d2d;
+    display: block;
+    position: relative;
+    }
+
+
+     .boletin a h4:hover{
+      color: #639a3a;
+     text-decoration: none;
+     }
+
+
+  /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+  .menu-btn  .menu-btn__burger {
+   margin-top:31px;
+   display: block;
+   position: relative;
+   float: right;
+  width: 32px;
+  height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
+  transition: all .5s ease-in-out;
+    }
+
+
+
+  /*NAV*/
+   nav li a p{
+  position: absolute;
+  z-index: 200;
+  margin-left: 30px;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+
+   }
+    /*FIN NAV*/
+     /*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+  .menu-btn__burger::before,
+   .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+   }
+
+   .menu-btn__burger:hover{
+   background-color: #fff;
+   }
+
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+    background-color: #fff;
+   }
+
+  /*ESTO ACORTA ESPACIO ENTRE LAS LINEAS*/
+   .menu-btn__burger::before {
+   transform: translateY(-9px);
+    }
+
+   .menu-btn__burger::after {
+   transform: translateY(9px);
+   }
+
+/* ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  }
+
+  .menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  }
+
+   .menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+
+    #menu-simple{
+      margin-bottom: 25px;
+      }
+   
+    
+   
+         /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
+       #tres-columnas-recetas{
+       width: 100%;
+       margin: auto;
+       display: flex;
+       flex-direction: row;
+       }
+        
+         
+    /*CONTENEDOR DE LA PRIMERA COLUMNA........................... 2*/
+      .primera-columna-recetas{
+     width: 68%;
+     display: flex;
+     flex-direction: column;
+     }
+      
+      .articulo{
+       width: 100%;
+       margin-bottom: 5%;
+       }
+   
+       .recetas{
+       width: 100%;
+       margin: auto;
+       }
+   
+     /*TITULO DE LA RECETA*/
+     .recetas h1{
+       font-size: 3.4rem;
+       word-spacing: -3px;
+       letter-spacing: -1px;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: 900;
+       text-align:start;
+       text-decoration-line: underline;
+       color: #000000;
+      
+       }
+       /*DESCRIPCION DE LA RECETA*/
+       .recetas p{
+         width: 100%;
+         font-size: 1.1rem;
+         word-spacing: -0.5px;
+         letter-spacing: -0.4px;
+         font-family: 'Times New Roman', Times, serif;
+         text-align:start;
+         color: #2d2d2d;
+       
+         }
+   
+         #foto-autor{
+          width: 290px;
+          display: flex;
+          flex-direction: row;
+          margin-top: 30px;
+          margin-bottom: 40px;
+        }
+  
+           /*FOTO AUTOR*/
+           #foto-autor figure{
+           display: inline-flex;
+           width: 60px;
+            }
+        /*FOTO AUTOR*/
+        #foto-autor figure img{
+          width: 100%;
+       
+          }
+      /*NOMBRE DEL AUTOR*/
+        .recetas figcaption {
+             display: inline-flex;
+             margin: auto;
+           
+          }
+  
+      /*caja costado foto  */
+      .vista{
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+         }
+    
+         .iconos-social{
+          display: block;
+          position: relative;
+          float: left;
+           width: 8%;
+           }
+  
+  
+  
+           .vista-imagen-receta{
+            width:   88%;
+            display: block;
+            position: relative;
+            float: right;
+            margin-bottom: 10px;
+            }
+  
+  
+         .vista-imagen-receta img{
+         width:   100%;
+         display: block;
+         position: relative;
+         float: right;
+         }
+   
+        
+         .contiene{
+           width:100%;
+           display: inline-flex;
+           margin-left: 88px;
+          margin: auto;
+         }
+   
+         .temps-porciones{
+          width: 100%;
+          height: 35px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: flex-start;
+         }
+     
+     
+           .temps-porciones .temps{
+            display: inline-flex;
+             width: 200px;
+             height: 20px;
+             margin: auto;
+            }
+      
+            .temps-porciones .porciones{
+           display: inline-flex;
+           margin: auto;
+           width: 200px;
+           height: 20px;
+            }
+     
+           .nutricional-imagen{
+           width: 100%;
+           }
+     
+     
+           .temps-porciones .temps p{
+           font-family: 'Times New Roman', Times, serif;
+           color: #000000;
+           font-size: 1.3rem;
+           margin: auto;
+            }
+     
+            .temps-porciones .porciones p{
+           font-family: 'Times New Roman', Times, serif;
+           color: #000000;
+           font-size: 1.3rem;
+           margin: auto;
+            }
+      
+        
+            .nutricional-imagen h2{
+           font-family: 'Times New Roman', Times, serif;
+           color: #000000;
+            font-size: 1.3rem;
+            }
+      
+         .nutricional-imagen  p{
+         font-family: 'Times New Roman', Times, serif;
+         color: #666;
+         font-size: 1.1rem;
+         letter-spacing: 0.01rem;
+            }
+    
+        
+    
+    
+          /*TITUULO INGREDIENTES*/
+          .ingrediente-titulo-pic .ingrediente-titulo h2{
+           width: 100%;
+           font-size: 1rem;
+           word-spacing: -0.3px;
+           letter-spacing: -0.1px;
+           font-family: 'Archivo Black', sans-serif;
+           font-weight: bolder;
+           color: #2d2d2d;
+           text-align: start;
+          }
+   
+   
+            /*LOS INGREDIENTES*/
+          .ingredientes .lista-ingredientes  span{
+           width: 80%;
+           letter-spacing: -0.1px;
+           font-family: 'Open sans';
+           font-size: 1rem;
+           font-weight: 400;
+           line-height: 1;
+           color: #666;
+           text-align: start;
+          }
+   
+           /*TITULO DE LA PREPARACION*/
+          .preparacion-titulo  .prepa-titulo  h2{
+           font-size: 1.2rem;
+          word-spacing: -3px;
+          letter-spacing: -2.8x;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 900;
+          color: #000000;
+          text-align: start;
+          }
+        
+          
+          /*sub-cajita*/
+          .tiempo{
+          width:50%;
+          
+          }
+        
+          .primera-columna-recetas .tiempo p{
+          letter-spacing: -0.1px;
+          font-family: 'Cabin', sans-serif;
+          font-size: 1rem;
+          line-height: -0.4px;
+          color: #666;
+          text-align: start;
+          }
+        
+                  /*TITULO DE NUTRICION*/
+            .primera-columna-recetas .nutricional h2{
+             font-weight: bolder;
+             font-size: 1.3rem;
+             word-spacing: -3px;
+             letter-spacing: -2.8x;
+             font-family: 'Times New Roman', Times, serif;
+             font-weight: 900;
+             color: #000000;
+             text-decoration: underline; 
+             text-align: start;
+            }
+           
+            .primera-columna-recetas .nutricional p{
+             letter-spacing: -0.1px;
+             font-family: 'Open sans';
+             font-size:  1.1rem;
+             font-weight: 400;
+             line-height: -0.4px;
+             color: #666;
+             margin-left:12px;
+           }
+           /*..CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
+           .categoria h2{
+             font-size:  1.3rem;
+             font-family: 'Times New Roman', sans serif;
+             color:#000000;
+          
+           }
+   
+            /*ESTO ES SOLO LA PALABRA CATEGORIAS TITULO CATEGORIAS EN PRIMERA COLUMNA*/
+          .categorias-recetas-links h2{
+             font-size:  1.3rem;
+             font-family: 'Times New Roman', sans serif;
+             font-weight: 900;
+             color:#000000;
+          
+            }
+           
+           /*..CATEGORIAS con TIENEN LINK..*/
+          .categorias-recetas-links a p{
+             font-size:   1.2rem;
+             font-family: 'Times New Roman', sans serif;
+             color:#524c56;
+          
+         
+            }
+         /* SEGUNDA COLUMNA................................................................. */
+    .segunda-columna-recetas{
+      width: 12%;
+    
+     
+     }
+
+
+       /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
+       #aside-recetas{
+        width:20%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        }
+  
+
+
+   
+           /*FOOTER*/
+           #footer-recetas{
+            clear: both;
+              position: relative;
+              height: 30px;
+              margin-top: -30px;
+             border-top: solid 1.5px #DCDCDC;
+             display: flex;
+             flex-direction: column;
+            width: 100%;
+            z-index: 1000;
+            background-color: #fff;
+            bottom: 0;
+            }
+
+            .footer-primero-recetas{
+             width: 100%;
+             height: 90px;
+             display: flex;
+             flex-direction: row;
+             justify-content: space-between;
+             margin-bottom: 2%;
+            }
+
+            #icon-social1{
+             width: 49.5%;
+             height: 70;
+            
+            }
+           /*LETRAS FOOD EMOTIONS*/
+              #icon-social1 p{
+              font-size: 1.2rem;
+              word-spacing: -0.3px;
+              letter-spacing: -0.2px;
+              width: 100%;
+              }
+
+               #icon-social1 li .fa-envelope{
+                background-color: oldlace;
+                color: #2d2d2d;
+                width:40px;
+                height: 40px;
+                padding: 5px 5px 5px 5px;
+                border-radius: 25px;
+                border: solid #E9E9E9;
+                margin-top: -15px;
+                }
+                
+                #footer-recetas #icon-social1   li .fa-facebook-f{
+                background-color: oldlace;
+                color:  #2d2d2d;
+                width:40px;
+                height: 40px;
+                padding: 5px 5px 5px 5px;
+                border-radius: 25px;
+                margin-top: -15px;
+                border: solid #E9E9E9;
+                }
+                
+                
+                #footer-recetas  #icon-social1   li .fa-twitter{
+                background-color: oldlace;
+                color:   #2d2d2d;
+                width:40px;
+                height: 40px;
+                padding: 5px 5px 5px 5px;
+                border-radius: 25px;
+                margin-top: -15px;
+                border: solid #E9E9E9;
+                }
+                
+                
+                
+                
+                #footer-recetas #icon-social1  li .fa-instagram{
+                background-color: oldlace;
+                color: #2d2d2d;
+                width:40px;
+                height: 40px;
+                padding: 5px 5px 5px 5px;
+                border-radius: 25px;
+                margin-top: -15px;  /*SUBE ICONO*/
+                border: solid #E9E9E9;
+                }
+                
+                 /*SUB-caja contenedor de la caja correo*/
+                  .box{
+                  width: 55%;
+                  height: 70px;
+                  margin-left: 5% ;
+                  margin-top: 1px; /*SUBE CAJA A MENOS TOP*/
+                  transform: translate(-5%, -5%);
+                   }
+                
+                   .box h3{
+                letter-spacing: -0.1px;
+                font-family: 'Archivo Black', sans-serif;
+                font-size: .9rem;
+                font-weight: 400;
+                line-height: -0.4px;
+                margin-left: 16%;
+                color: #2d2d2d;
+                }
+
+                /*cajita del correo */
+                .box form{
+                display: flex;
+                flex-direction: row;
+                width: 100%; 
+                }
+                
+                /*BOX DONDE SE ESCRIBE*/
+             .box input[type="text"]
+                {
+                background-color: #fff;
+                display: flex;
+                width:50%;
+                height: 45px;
+                border: 1.5px solid 	#DCDCDC;
+                font-size: 0.9rem;
+                padding: 0 12px;
+                border-radius: 5px 0 0 5px;
+                }
+                
+                /*BOTON ENVIAR*/
+              .box button[type="submit"]{
+                left: 24px;  /*EL TRUCO IMPORTANTE*/
+                border-radius: 0 5px 5px 0;
+                padding: 0 4px; /*IMPORTANTE PARA QUE LA LETRA ENCAJE EN EL BOTON*/
+                width: 25%;
+                height: 45px;
+                border: none ;
+                outline: none;
+                cursor: pointer;
+                background-color: #2d2d2d;
+                color: #fff;
+                font-size: 0.9rem;
+                font-family: 'Archivo Black', sans-serif;
+                }
+                
+               .box button[type="submit"]:hover{
+                background: ;
+                }
+                /*FIN de la cajita del correo */
+                
+                .final-food-recetas{
+                  width: 100%;
+                  height: 20px;
+                }
+                .final-food-recetas p{
+                  text-align: center;
+                  color: #2d2d2d;
+                  font-size: 0.6rem;
+                 }
+                
+                 #wrapper-recetas .tipeo{
+                  margin: auto;
+                  margin-bottom: 20%;
+                  display: table;
+                  width: 90%;
+                  height: 5%;
+                  background-color:;
+                  }
+
+                  #wrapper-recetas  .tipeo h4{
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 { 
+                    position: relative; 
+                    float: left;
+                    color: #2d2d2d;
+                    font-size: 0.8em;
+                    white-space: nowrap;
+                    width:28%;
+                    }
+                  
+                    #wrapper-recetas   .tipeo h1 span {
+                     position:absolute;
+                     right:0;
+                     width: 2em;
+                     background: white;
+                     border-left: 0.1px solid #DDD;
+                     animation: escribir 5s steps(30) infinite alternate;
+                     }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1200 A 1290 ........AQUI NO MODIFIQUE NADA................................................................................................................ */
+  
+
+@media only screen and (min-width: 1247px) and (max-width: 1290px){
+
+
+
+
+}

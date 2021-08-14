@@ -1,0 +1,124 @@
+ {% extends 'appperderpeso/base_categoria.html' %}
+{% load static %}
+{% block title %}Categoria{% endblock title %}
+
+
+
+ 
+
+
+
+  {% block content %}
+           
+              <div id ="container-perder-categoria">                                      
+                         <!--  CAJA DE NAVEGACION DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
+                      <div class="subcategorias-perder">
+                                <!--  INICIO CATEGORIA---------> 
+                                 {% load mptt_tags %}
+                                  {% for receta in category_deals %}
+                                  <!--  TITULO--CATEGORIA---> 
+                                  <div class="categoria">  <h2> {{category_deals.get}}</h2>
+                                                        <!-- <ul>
+                                                        {% for category in category %}
+                                                        <li><h3> <a href="/perderpeso/subcategoria/{{ category.slug }}">{{ category.name }} {{ child.get }} </a></h3>
+                                                        </li>
+                                                         {% endfor %}
+                                                        </ul> ---> <!--FIN -SUBMENU ESCONDIDO---->
+                                  </div>
+                                 {% endfor %}
+
+                               <div id= "links-categorias">   <!--- <div class="menu-simple">---->
+                                              
+                               </div>
+                                                  <!--  CIERRE LINKS-CATEGORIA--------->
+
+                        <!--------------------- INICIO SUBCATEGORY------------------------------>
+                                           <div class= "subcategory">
+                                           {% for category in category %}
+                                           {% if not node.is_leaf_node %}
+                                           <!-- TITULOS MENU DE SUBCATEGORIAS ---->
+                                           <ul>        
+                                           <li>  
+                                           <a href="/recetas_sanas/categorias/{{ kategory.slug }}">
+                                           <h3> {{ category.name }} {{ child.get }}</h3> 
+                                           </a>
+                                           </li>
+                                           </ul>
+                                          {% endif %}
+                                          {% endfor %}
+                                          </div>
+                        <!--------------- FIN SUBCATEGORY-------->
+                            </div>
+         <!--------------- FIN CAJA DE NAVEGACION DE LAS SUBCATEGORIA-PERDER------------------->
+
+
+
+                            <!---DIV CONTAINER DE 4 POST Y DE RECETAS--->
+
+                    <div class = "container-perderpeso-categoria">
+           <!--------------- INICIO POST CATEGORIA------------------------------------------------------------------------------------------------->
+                           {% load mptt_tags %}
+                         {% for receta in post_recetas %}
+                        <!---DIV DE 4 POST DE POSTS--->
+                   <div class="elemento-categoria">
+                                  <!---FECHA E IMAGEN-->  
+                               <div class="fecha">
+                               <em> <p>{{ receta.created }}</p> </em> 
+                               </div>
+                               <!-- IMAGEN--->
+                               <div id="imagen-elemento-categoria">                      
+                               {% if receta.image %}
+                               <img src ="{{receta.image.url}}">
+                               {% endif %} 
+                               </div>       
+                         <!-------FIN -IMAGEN CON FECHA---------->
+
+                  
+                         <!-------INICIO POST RECETA ENSALADAS Y ZUMOS-------->
+                        <!-------AQUI NO SE PUSO EL CODIGO QUE SE PUSO EN APPRECTAS SANAS PORQUE AQUI HAY CHILDREN Y EL OTRO SOLO CATEGORIAS-------->
+                        <a href="/recetas_sanas/receta/{{ receta.slug}}">
+                         <!--TITULO DEL POST ENSALADAS Y ZUMOS-->
+                        <h3>{{ receta.title }}</h3>
+                        </a>
+                        <!--DESCRIPCION DEL POST-->
+                        <h4>{{receta.description|safe}}</h4>
+                        <a href ="/recetas_sanas/receta/{{ receta.slug }}/">
+                        <em><p>Leer mas...</p></em>
+                         </a>
+                       <em><p>Categoria: {{current_category}} </p></em> 
+               </div>   
+            <!--------------------FINAL DIV ELEMENTO DE 4 POST DE POSTS ------------------------------->
+                  {% empty %}
+                  <p>No items</p>
+                 {% endfor %}     
+            <!---FINAL ENDFOR 4 POSTS------------------------------------------------------>
+            <!---FINAL DIV DE CONTAINER-PERDERPESO- CATEGORIA--->   
+         </div>
+                      
+          <!--- FIN CONTAINER GENRAL ID PERDER CATEGORIA-----------------------------------------> 
+     </div>
+               
+                          
+               <!------------------------------------------->
+
+  {% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

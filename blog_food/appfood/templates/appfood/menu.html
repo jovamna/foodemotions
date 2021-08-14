@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<style type="text/css">
+		.submenu {
+			display: none;
+		}
+		.opacity {
+			opacity: 0.5;
+		}
+	</style>
+</head>
+<body>
+
+
+	<ul>
+		<li class="subtitle">
+			<a href="#" class="action">Inicio</a>
+			<ul class="submenu">
+				<li>
+					<a href="#">Inicio 1</a>
+				</li>
+				<li>
+					<a href="#">Inicio 2</a>
+				</li>
+				<li>
+					<a href="#">Inicio 3</a>
+				</li>
+			</ul>
+		</li>
+		<li class="subtitle">
+			<a href="#" class="action">Nosotros</a>
+			<ul class="submenu">
+				<li>
+					<a href="#">Nosotros 1</a>
+				</li>
+				<li>
+					<a href="#">Nosotros 2</a>
+				</li>
+				<li>
+					<a href="#">Nosotros 3</a>
+				</li>
+			</ul>
+
+		</li>
+		<li class="subtitle">
+			<a href="#" class="action">Contacto</a>
+			<ul class="submenu">
+				<li>
+					<a href="#">Contacto 1</a>
+				</li>
+				<li>
+					<a href="#">Contacto 2</a>
+				</li>
+				<li>
+					<a href="#">Contacto 3</a>
+				</li>
+			</ul>
+		</li>
+
+
+		<li class="subtitle">
+			<a href="#" class="action">Empresa</a>
+
+
+			<ul class="submenu">
+				<li>
+					<a href="#">Empresa 1</a>
+				</li>
+				<li>
+					<a href="#">Empresa 2</a>
+				</li>
+				<li>
+					<a href="#">Empresa 3</a>
+				</li>
+			</ul>
+
+
+
+
+		</li>
+	</ul>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+       <script type="text/javascript">
+
+    $(".subtitle .action").click(function(event){
+ var subtitle = $(this).parents(".subtitle");
+ var submenu = $(subtitle).find(".submenu");
+ 
+ $(".submenu").not($(submenu)).slideUp("slow").removeClass("opacity");
+ $(".open").not($(subtitle)).removeClass("open");
+
+ $(subtitle).toggleClass("open");
+ $(submenu).slideToggle("slow").toggleClass("opacity");
+
+ return false;
+});
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class='dropdown'  "ul">
+    
+               <div class='title pointerCursor'  "li">
+              Select an option 
+            <i class="fa fa-angle-right">
+           </i>
+           </div>
+		
+		<div class='menu pointerCursor hide'  "ul">
+			<div class='option' id='option1'>Option 1</div>
+			<div class='option' id='option2'>Option 2</div>
+			<div class='option' id='option3'>Option 3</div>
+			<div class='option' id='option4'>Option 4</div>
+		</div>
+
+	</div>
+
+	<span id='result'>The result is: </span>
+
+</body>
+</html>
+
+
+ {% block buscador %}  
+        <div id="controls">
+            <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                <div id="custom-search-input">
+	            <input type="text"  name="q" 
+                    value= "{{ request.GET.q }}" class="form-control" 
+                    placeholder=  "    Buscar en Food Emotions ... " autocomplete="off" >
+                                 
+                    <button type="submit" name="submit" class="boton btn-succes" value="Search" >
+                  <span class="icon"><i class="fa fa-search"></i></span> 
+                  </button>
+                </div>
+            </form>                 
+        </div>
+   {% endblock buscador %} 
+         <!---ESTO ESTABA ABAJO DEÑ BUTTON
+               <i data-behavior="search-clear" class="material-icons search-icon"
+                    {% if not request.GET.q.value %} style="display: none"{% endif %}>close</i>--->
+
+
+
+
+
+
+					  /***DE LA PAGINA DE ALIMENTACION SANA..NO ELIMNAR............*/
+
+   .segundo-alimentacionsana{
+   display: block;
+   position: relative;
+   float: left;
+   width: 100%;
+   margin-bottom: 40px;
+   }
+
+   .alimentacion-sana{
+    display: block;
+    position: relative;
+    float: left;
+    width: 30%;
+    max-width: 380px;
+    margin-right: 4.4%;
+    }
+
+    .alimentacion-sana img{
+    width: 100%;  
+    }
+
+<!------------------------------------------------------------------------------------>
+
+/*Articulo-------------------------------------------------------------------------------------------------*/
+
+main{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+article{
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+  padding-right: 20px;
+}
+
+article h1{
+  font-size: 40px;
+  font-weight: 100;
+  margin-left: 10px;
+  word-spacing: -3px;
+  letter-spacing: -1.5px;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+article hr{
+  max-width: 500px;
+  height: 4px;
+  border-style: none;
+  background: -webkit-linear-gradient(left, black, #0672d0);
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+article p{
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 100;
+  margin-left: 10px;
+  color: #2d2d2d;
+  letter-spacing: -1px;
+  font-family: 'Cabin', sans-serif;
+}
+
+
+
+
+<!------------------------------------------------------------------------>
+/*CONTENEDOR DE RESULTADOS SEARCH PINTEREST........................................ */
+  #container-search{
+  display: block;
+  max-width: 70%;
+  max-width: 880px;
+  margin: auto;
+   margin-top: 90px;
+   }
+
+   /*TITULO RESUKTADOS*/
+   #container-search h1{
+     display: block;
+    font-size: 2.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+    font-weight: 900;
+    margin-bottom: 65px;
+  
+   }
+
+  /*CONTENEDOR DE RESULTADOS SEARCH PINTEREST........................................ */
+  .container-pinterest{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin:55px auto;
+    -moz-column-count: 5;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    column-count: 5;
+    column-gap: 15px;
+    column-fill: auto;
+ 
+     }
+
+
+     /* margin:  0 2px 4px;*/
+   .elemento{
+  width:100%;
+  height: 100%;
+  max-height: 210px;
+  display: flex;
+  flex-direction: row;
+	border-radius: 4px;
+	break-inside: avoid-column;
+  overflow: hidden;
+  -moz-column-break-inside:avoid;
+  -webkit-column-break-inside:avoid;
+  -column-break-inside:avoid;
+  padding-bottom: 10px;
+  border: 2px solid #FAFAFA;
+	box-shadow: 0 1px 2px  rgba(34, 25, 25, 0.4);
+	background: #FEFEFE;
+  background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+	margin-bottom: 42px;
+
+}
+
+  .elemento-imagen{
+    display: inline-flex;
+    width: 35%;
+    max-width: 280px;
+
+  }
+
+  .elemento-imagen img{
+  width: 100%;
+  max-width: 255px;
+  height: 100%;
+  max-height: 165px;
+
+
+  }
+
+    .elemento-descripcion{
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+      max-width: 600px;
+  
+    }
+
+  /*TITULO*/
+  .elemento-descripcion h2{
+    width: 100%;
+  padding-bottom: 10px;
+	font-family: 'Times New Roman', Times, serif;
+	color: #000000;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.1em;
+  letter-spacing: -.002em;
+  }
+
+ .elemento-descripcion p{
+	font-family: 'Times New Roman', Times, serif;
+	color: #6B7C93;
+	font-size:  1.2rem;
+	line-height: 1.4em;
+  }
+
+  /*CAJA DE LEER MAS ...VER RECETA*/
+  .btn-outline-success{
+    margin-top: 5px;
+    padding: 4px 9px 4px 9px;
+    border: 2px solid #568632;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    color: #2d2d2d;
+  }
+
+
+  .btn-outline-success:hover{
+   background-color:#568632;
+   color:#fff;
+  }
+
+  /*FIN DE CAJA LEER MAS VER RECETA*/
+    /*HOVER SALE RAYA.............HOVER */
+    a.left{
+    position: relative;
+
+
+    }
+
+    a.left::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #FEFEFE;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  }
+  a.left:hover:before {
+  visibility: visible;
+  width: 100%;
+  }
+      /* FINAL MENU ARROW */
+  
+   /*LEER MAS...*/
+   .elemento h3{
+	font-family: 'Times New Roman', Times, serif;
+	color: #6B7C93;
+	font-size:  1.2rem;
+	line-height: 1.4em;
+   }
+
+/*CATEGORIAS*/
+.elemento h4{
+  padding-top: 4px;
+  padding-bottom:8px ;
+	font-family: 'Times New Roman', Times, serif;
+	color: #2d2d2d;
+	font-size: 1.2rem;
+	line-height: 1.4em;
+}
+
+
+
+
+/* ..FIN CONTENEDOR DE PINTEREST........................................ */
+@media all and (min-width: 960px) {
+  .container-pinterest {
+     column-count: 4;
+     }
+}
+@media all and (min-width: 1170px) {
+  .container-pinterest {
+     column-count: 5;
+     }
+}
+
+
+
+ /*CONTENEDOR DE RESULTADOS SEARCH PINTEREST........................................ */
+   /* margin:55px auto;*/
+    .container-elemento{
+    width: 80%;
+    max-width: 900px;
+    height: 100%;
+      max-height: 480px;
+      }
+ 
+      /*	background: #FEFEFE;*/
+     .elemento-batido{
+     display: block;
+      position: relative;
+      float: left;
+      margin-right:20px;
+      width: 100%;
+      max-width: 280px;
+      height: 440px;  /*IMPORTANTE*/
+      margin-bottom: 30px;   /*SEPARA UN POST DEL OTRO EN EL BORDE BAJO*/
+      break-inside: avoid-column;
+      overflow: hidden;
+      -moz-column-break-inside:avoid;
+      -webkit-column-break-inside:avoid;
+      -column-break-inside:avoid;
+      border: 2px solid #FAFAFA;
+    	box-shadow: 0 1px 4px  rgba(34, 25, 25, 0.4);
+      background: #FEFEFE;
+      background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+      padding-bottom: 15px;
+    
+       }
+
+
+    /* width="450" height="440"*/
+   .container-elemento .elemento-batido img{
+    display: block;
+    position: relative;
+    float: left;
+   width: 100%;
+   max-width: 280px;
+   height: 100%;
+   max-height: 270px;
+   margin-bottom: 20px;
+   }
+ 
+   .elemento-batido h2{
+    width: 90%;
+    margin: auto;
+   font-family: 'Times New Roman', Times, serif;
+   color: #000000;
+   font-size: 1.2rem;
+   font-weight: 600;
+   line-height: 1.1em;
+   letter-spacing: -.002em;
+ 
+   margin-bottom: 8px;
+ 
+   }
+ 
+   .elemento-batido p{
+    width: 90%;
+    margin: auto;
+   font-family: 'Times New Roman', Times, serif;
+   color: #2d2d2d;
+   font-size:  1.1rem;
+   letter-spacing: -0.2px;
+   font-weight: lighter;
+   line-height: 1.4em;
+
+   
+  }
+
+ 
+ .elemento-batido p:hover{
+   color: #568632;
+ }
+
+
+
+
+  
+ 
+ /* ..FIN CONTENEDOR DE PINTEREST........................................ */
+ @media all and (min-width: 960px) {
+   .container-batido {
+      column-count: 4;
+      }
+ }
+ @media all and (min-width: 1170px) {
+   .container-batido {
+      column-count: 5;
+      }
+ }
+
+
+
+ /*----BUSCADOR-------------------*/
+
+     
+/*CONTAINER DEL BUSCADOR ................BUSCADOR DEL INDEX*/
+#controls{
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 140px;
+max-width: 1100px;
+margin: auto;
+z-index: 200;
+padding-top: 60px;
+
+
+}
+
+
+/*CAJA DEL BUSCADOR #568632*/
+
+/*box-shadow: 4px 8px 6px -6px #8c8c8c;*/
+#controls  #custom-search-input{
+border-radius: 35px;
+-moz-border-radius: 35px;
+-webkit-border-radius: 35px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+border: 1.5px solid #000000;
+font-size: 1em;
+font-weight: 3rem;
+width: 100%;
+height: 54px;
+
+box-shadow: 0px 0px 5px 1px #2d2d2d;
+background: #FEFEFE;
+background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+border: 2px solid #FAFAFA;
+z-index: 300;
+}
+
+
+/*CAMPO SEARCH BUSCADOR */
+#controls .form-control{
+border-left: 25px;
+-moz-border-left: 25px;
+-webkit-border-left: 25px;
+border-radius: 25px;
+-moz-border-radius: 10px;
+-webkit-border-left-radius: 10px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-moz-border-right-radius: 25px;
+-webkit-border-right-radius: 25px;
+font-size: 1.1em;
+font-weight: 6rem;
+padding: 4px;
+width: 87%;
+height: 50px;
+padding-left: 30px; /*MUEVE LA LETRA*/
+}
+
+
+/*BOTOM BUSCADOR  568632 */
+#controls .btn-succes{
+border-right: 5px;
+-moz-border-right: 5px;
+-webkit-border-right: 5px;
+margin-left: -25px;
+font-size: 1em;
+font-weight: 300;
+padding: 2px;
+width: 12%;
+height: 50px;
+background-color: #fff ;
+color: #fff;
+}
+
+#controls .icon .fa-search{
+color: #000000;
+}
+
+
+<!----
+    <div class="icon-social">
+                                         <ul class="social2"> <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                                                <i class="far fa-envelope"></i> </a></li>
+                                            <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank">
+                                               <i class="icon fab fa-facebook-f"></i> </a></li>
+                                            <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                                                <i class="fab fa-twitter"></i> </a></li>
+                                            <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                                                <i class="fab fa-instagram"></i> </a></li>
+                                        </ul>
+                                    </div>
+
+                                    --->
+
+
+
+
+
+
+
+
+
+
+
+                                      {% load mptt_tags %}
+
+
+
+
+
+
+
+
+
+
+
+              {% for recipe in recetadietaultimo  %}
+         <div class="posts-ultimos">
+               <div class="post-ultimo">
+                     <!--------------------------------->
+                      <div class="posts-ultimos-imagen">
+                      {% if recipe.imagenfront %}
+                      <img src ="{{recipe.imagenfront.url}}" >
+                      {% endif %}
+                      </div>
+                      <!--------------------------------->
+                        <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                      <div class="posts-ultimos-titulo">
+                        <!-----------caja titulo descripcion--->
+                         <div class="post-ultimo-titulo">
+                           <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                           <h1>{{recipe.title}}</h1>
+                          </a>
+                          <p>{{recipe.description|safe|truncatechars:90}}.</p>
+                          <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                          <p>Leer mas...</p>
+                         </a>
+                        </div>
+                    <!--fin caja titulo descripcion----------------->
+                     </div>
+                    <!---------FIN POSTS ULTIMOS TITULO------------------------------------------------------------>
+              </div>
+            </div>
+          {% endfor %}
+
+
+
+
+          
+       {% block batido-dietas %} 
+               <div id ="container-batido">
+                <div class = "container-elemento">
+                <div class="elemento-batido">
+                 </div>
+                  </div>
+                  <div class="aside-batido">2</div>
+              </div>
+               {% endblock batido-dietas %} 
+
+
+               <!--------------------buscador---INDEX---RESPONSIVE MOVIL------------>
+
+               /*..BUSCADOR...............*/
+   #controls{
+    display: flex;
+    flex-direction: column;
+    width: 99.6%;
+    height: 80px;
+    padding-top: 20px;
+    margin: auto;
+  
+
+     }
+
+  /*modificar tamaño de la letra del buscador*/
+  #controls #custom-search-input{
+    width: 100%;
+  display:flex;
+ flex-direction: row;
+  font-size: 0.9rem;
+   height: 40px;
+  
+  }
+
+  #controls #custom-search-input .form-control{
+    display: block;
+    width: 88%;
+    height: 36px;
+    padding-left: 8px; /*MUEVE LA LETRA*/
+    }
+
+
+  #custom-search-input .btn-succes{
+   height: 100%;
+   max-height: 42px;
+   width: 12%;
+   display: block;
+  position: relative;
+  float: right;
+   }
+
+  .boton{
+  width: 14%;
+  }
+
+
+  
+  /*BOTOM BUSCADOR */
+  .btn-succes{
+	border-right: 4px;
+	-moz-border-right: 2px;
+	-webkit-border-right: 2px;
+	font-size: 1em;
+	font-weight: 300;
+  padding: -2px;
+  width: 19%;
+  height: 45px;
+  background-color:#639a3a ;
+  color: #fff;
+  }
+
+      /*FIN BUSCADOR*/
+
+
+
+
+    <!-- POSTS ULTIMOS----------------POSTS UTLIMOS-----POSTS ULTIMOS------------->
+    <div class ="dos-columnas">        
+
+
+        <!--  CONTENEDOR COLUMNA DE POSTS ULTIMOS--------->
+        <div class="columna-left">
+             <div class="bloque-ultimo">
+
+
+                {% for receta in recetaultimo %}
+                <div class="posts-ultimos">
+                <div class="post-ultimo">
+                     
+                <div class="posts-ultimos-imagen">
+                {% if receta.imagefront %}
+                <img src="{{receta.imagefront.url}}"  class="" alt="" >
+                {% endif %}
+                </div>
+
+                <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                <div class="posts-ultimos-titulo">
+                 <!------------------------------------->
+                <div class="post-ultimo-titulo">
+                <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                <h1>{{receta.title}}</h1>
+                </a>        
+                <p>{{receta.description|safe|linebreaksbr|truncatechars:70}}.</p>
+                <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                <p>Leer mas...</p>
+                </a>
+                </div>
+               <!------------------------------------->
+               </div>
+               <!-------FIN CONTAINER POSTS ULTIMOS-TITULO----------------------------->
+
+              </div>
+              </div>
+        {% endfor %}
+     
+           
+              {% for perderpeso in perderultimo %}
+              <div class="posts-ultimos">
+               <div class="post-ultimo">
+              
+
+                      <div class="posts-ultimos-imagen">
+                      {% if perderpeso.imagefront %}
+                      <img src ="{{perderpeso.imagefront.url}}" >
+                      {% endif %}
+                      </div>
+
+                        <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                      <div class="posts-ultimos-titulo">
+                      <!--------------------------------->
+                      <div class="post-ultimo-titulo">
+                      <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                      <h1>{{perderpeso.title}}</h1>
+                      </a>
+                      <p>{{perderpeso.description|safe|truncatechars:90}}.</p>
+                      <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                      <p>Leer mas...</p>
+                      </a>
+                     </div>
+                    <!----------------------------------------->
+                     </div>
+                    <!--------------------------------------------------------------------->
+                
+              </div>           
+            </div>
+             {% endfor %}
+        <!------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------->
+           {% for recipe in recetadietaultimo  %}
+         <div class="posts-ultimos">
+               <div class="post-ultimo">
+                     <!--------------------------------->
+                      <div class="posts-ultimos-imagen">
+                      {% if recipe.imagenfront %}
+                      <img src ="{{recipe.imagenfront.url}}" >
+                      {% endif %}
+                      </div>
+                      <!--------------------------------->
+
+                        <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                      <div class="posts-ultimos-titulo">
+                        <!------------------------------------->
+                         <div class="post-ultimo-titulo">
+                           <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                           <h1>{{recipe.title}}</h1>
+                          </a>
+                          <p>{{recipe.description|safe|truncatechars:90}}.</p>
+                          <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                          <p>Leer mas...</p>
+                         </a>
+                        </div>
+                    <!-------------------------------------------->
+                     </div>
+                    <!---------FIN POSTS ULTIMOS TITULO------------------------------------>
+              </div>
+            </div>
+         {% endfor %}
+        <!------------------------------------------------------------------------------------->
+
+        <!------------------------------------------------------------------------->
+      {% for post in postultimo %}
+        <div class="posts-ultimos">
+            <div class="post-ultimo">
+
+                  <div class="posts-ultimos-imagen">
+                  {% if post.imagefront %}
+                  <img src ="{{post.imagefront.url}}" >
+                  {% endif %}
+                  </div>
+
+                   <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                  <div class="posts-ultimos-titulo">
+                  <!----------------------------------------->
+                  <div class="post-ultimo-titulo">
+                  <a href ="{% url 'appblog:post' post.slug %}">
+                  <h1>{{post.title}}</h1>
+                   </a>
+                  <p>{{post.description|safe|linebreaksbr|truncatechars:65}}.</p>
+                  <a href ="{% url 'appblog:post' post.slug %}">
+                  <p>Leer mas...</p>
+                  </a>
+                  </div>
+                  <!------------------------------------------->
+                 </div>
+                <!------------------------------------->
+
+              </div>         
+          </div>            
+          {% endfor %}
+        <!----------------------------------------------------------------------------->
+    <!------------------------------------------------------------------>
+    
+     </div>   <!----bloque-ultimo--->
+    <!------------------------------------------------->
+    </div>
+    <!--FIN COLUMNA SEGUNDA--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+               <!--------------------------ASIDE------------------------------------------------------>
+
+               
+              <div class="columna-right">
+                       <div class ="explora">
+                      <h3> Explorar</h3>
+                      </div>
+                       <!-- CODIGO DE APPRECETASALZUM ---------->
+                       
+                  <div class="columna-vertical">
+                   {% for category in categories %}
+                     <div class="subcontainer-right">
+                     <!-------------------------------------->
+                         <div class="imagen-right">
+                          {% if category.image %}
+                         <img src="{{category.image.url}}">
+                         {% endif %}
+                        </div>
+
+                        <div class="titulo-right">
+                        <a href="/recetas-dieteticas/categoria/{{ category.slug }}"> 
+                        <h1>{{ category.name }}</h1>
+                        </a>
+                        </div>
+                    <!------------------------------------------------>
+                  </div>   
+                <!-- CIERRE ASIDE SEGUNDA SUBCONTAINER--------->    
+             {% endfor %}
+           </div>
+                     <!--FIN DIV EXPLORA-------->
+        </div>
+      <!----------------------------------------------------------------->
+      <!---------CIERRE DIV DOS COLUMNAS----------------------->
+      </div>
+
+
+
+<!------------------------------------------------>
+#def zumos_ensaladas(request):
+#posts = Post.objects.all()
+#recipes = Recipe.objects.all()
+#print(posts)
+#print(recipes)
+#return render(request, "appfood/zumos_ensaladas.html", { 'recipes':recipes,})
+
+#def perder_peso(request):
+#return render(request, "appfood/perder_peso.html")
+
+#def articulo(request):
+#return render("articulo")
+
+#def recetas(request):
+#return render("recetas")
+
+#def contacto(request):
+#return render("contacto")
+
+#EJEMPLO DE LA BLOGWEBEMPRESA 1
+#def about(request):
+#return render("Historia")
+
+#def services(request):
+#return render("Servicios")
+
+#EJEMPLO DE LA BLOGWEBEMPRESA 2
+#def store(request):
+#return render("Visitanos")
+
+#def blog(request):
+#return render("Blog")
+
+#EJEMPLO DE LA BLOGWEBEMPRESA 3
+#def contact(request):
+#return render("Contacto")
+
+#def sample(request):
+#return render("Sample")
+
+#def search(request):
+
+#query=None
+#results=[]
+#if request.method=="GET":
+#query=request.GET.get('q')
+#results=Post.objects.filter(Q(title__icontains=query) | Q(descripcion__icontains=query) | Q(published__icontains=query) )
+#return  render(request,'appfood/search.html',{'query': query,
+#'results': results})
+
+
+
+
+
+
+
+
+
+
+    #receta = Receta.objects.filter(kategory__name='Pastas').order_by('-publish')[:1]
+
+
+
+
+     #PARA EL MENU DE RECETSA SALUDABLES
+    #kategory =Kategory.objects.all() #RECETAS SALUDABLES
+    #kategories = Kategory.objects.filter(parent=None) #SALEN SOLO LAS CATEGORIAS RECETAS SALUDABLES

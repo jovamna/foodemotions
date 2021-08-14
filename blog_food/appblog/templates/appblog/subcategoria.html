@@ -1,0 +1,229 @@
+{% extends 'appblog/base_categoria.html' %}
+{% load static %}
+{% block title %}Subcategorias{% endblock title %}
+
+
+
+     {% block content %}               
+       <div id ="container-categorias-subcategorias">                                         
+            <!--  CAJA DE NAVEGACION DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
+            <!--------------------------------------------------------------->
+            <div class="intro">
+
+                  <div class="menu-introescrito">
+                    <!-------------MENU------------------>
+                             <div class="menu">
+                             <ul>
+                             <li>
+                             <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
+                             </li>
+                             <li>    
+                             <a  href="{% url 'appblog:dietas_especiales_y_alimentacion_saludable' %}">
+                             Alimentacion Sana<i class="right"></i> 
+                             </a>
+                             </li>
+
+                             <!---BLOQUE DE CATEGORIAS----->
+                              <li>
+                              <p>Categorias<i class="right"></i></p>
+                                <ul>
+                              {% load mptt_tags %} 
+                              <!-----SUBMENU DE - LAS CATEGORIAS------>
+                              {% for category in categorias %} 
+                                <li>
+                              <!-- LAS DOS CATEGORIAS CON SUS SUBCATEGORIAS---->
+                              <a href="/dietas_especiales_y_alimentacion_saludable/categoria/{{ category.slug }}">
+                              <p>{{ category }}<i class="right"></i>
+                              </p>
+                              </a>
+                              {% endfor %}
+                              <li>
+                              </ul>
+                              <!--  SUBMENU ESCONDIDO----->
+                              </li> 
+                            <!--FIN FIN BLOQUE DE CATEGORIAS-------------------------->
+
+                        <!--MENU MENU TITULO SUBCATEGORIA----------------->
+                        {% for category in category %}
+                        <li>    
+                        <a href="/dietas_especiales_y_alimentacion_saludable/subcategoria/{{ category.slug }}">
+                        <p> {{ category.name }}{{ child.get }}</p>  
+                        </a>
+                        </li>
+                        {% endfor %}
+                        <!--  FIN -TITULO SUBCATEGORIA---->
+                         </ul>
+                         </div>
+                      <!-----FIN DEL MENU------------------------------------>
+
+
+                                  <!---------------------------------------------------------->
+                                        <div class="introescrito">
+                                        <!---TITULO DE SUBCATEGORIA--->
+                                        {% load mptt_tags %}
+                                         {% for category in category %}
+                                         {% if not node.is_leaf_node %}
+                                        <!--  TITULO--CATEGORIA---> 
+                                        <div class="menu-intro-titulo">  
+                                          <a href="/dietas_especiales_y_alimentacion_saludable/subcategoria/{{ category.slug }}"> 
+                                           <h2> {{ category.name }} {{ child.get }}</h2>
+                                          </a>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}  
+                                      
+                                  <!---FIN TITULO DE CATEGORIA--->   
+                                        </div>
+                            </div>
+                            <!-- FIN DIV MENU INTRO ESCRITO--->
+
+  <!-------------------------MENU CON TTULO Y COSTADO DE LAS CATEGORIAS---------------------->
+
+
+
+                <!---------------------------------------------------------------------------------------->
+                 
+                      <!--------------------------------------------------------------->
+                
+                       <div class="intro-dos-vacios">
+                         
+                       </div>
+                       <!--FIN INTRO DOS VACIOS--->
+                  </div>
+                  <!---FIN DIV INTRO--->
+
+  </div>
+
+
+
+  <!---en la pagina de subcategoria no he podido obtener todas las subcategorias eso hay que estudiarlo--->
+ 
+
+             <!--------------------------------------------------------------------------------------->
+ <!-----SUBCATEGORIAS MENU------------------------------------->
+      <div id="texto-slider">
+           <div class="caja-texto-slider">
+            <!--TITULO DE LAS CATEGORIAS-->
+             <div class= "endfor">
+                 <ul>    
+                 {% for category in category_deals %}
+                    {% if not node.is_leaf_node %}
+                       {% for child in category.get_children %}
+                    <li> 
+                    <!-- SUBCATEGORIAS ---->
+                     <!-- CATEGORIAS ---->
+                 <a href="/dietas_especiales_y_alimentacion_saludable/subcategoria/{{ category.slug }}">
+                  <h3>{{ category.name }}{{ child.get }}</h3>
+                    </a>
+                    </li>
+                    {% endfor %}
+                    {% endif %}
+                    {% endfor %}
+                 </ul>
+            </div>
+            <!--FIN SUBCATEGORY-->    
+        </div>
+    </div>
+    <!------------------------------------------------------------------->
+         <!--------------- FIN CAJA DE NAVEGACION DE LAS SUBCATEGORIA-PERDER------------------->
+
+                            
+
+
+              
+             <!--------------- FIN CAJA DE NAVEGACION DE LAS SUBCATEGORIA-PERDER------------------->
+
+
+
+                   
+                    
+
+
+
+                                    
+              <!-------------DIV CONTAINER DE 4 POSTS DE SUBCATEGORIAS------------------------>
+       <div class = "container-posts-categorias">
+            <div class="columna-categorias">
+                      {% load mptt_tags %}
+                      {% for post in posts %}
+                      <div class="por-categoria">
+                                 <div class="por-foto">
+                                      <!--FECHA-->
+                                    <div class="fecha">
+                                    <em><p>{{ post.created }}</p> </em>
+                                    </div>
+
+                                    <!--IMAGEN-->
+                                    {% if post.image %}
+                                    <img src ="{{post.image.url}}">
+                                    {% endif %} 
+                                </div>
+
+                                 <div class="por-descripcion">
+                                    <a href="/dietas_especiales_y_alimentacion_saludable/post/{{ perd.slug}}">
+                                     <!-------TITULO POST PERDERPESO---------->
+                                     <h2>{{ post.title }}</h2>
+                                     </a>
+                                     <!-------DESCRIPCION POST PERDERPESO---------->
+                                     <p>{{post.description|truncatechars:190|safe}} </p>
+                                     <a href ="/dietas_especiales_y_alimentacion_saludable/post/{{ post.slug }}/">
+                                     <em><p>Leer mas...</p></em>
+                                     </a>
+                                      <em><p>Categoria: {{post.kategoria}} </p></em> 
+                               </div>
+                  
+                           </div>
+                         {% empty %}
+                        <p>No items</p>
+                       {% endfor %}
+                    <!---FIN POR CATEGORIA CONGTIENE LA FOTO Y LA DESCRIPCION EN ROW--->
+
+                 <!---FIN COLUMNA CATEGORIAS------->
+                  </div>
+
+
+                     <!-- 20% ASIDE --->
+                    <div id="aside">  </div>
+                    <!--FIN ASIDE 20%--->
+           </div>
+           <!--100% FIN DEL POSTs CATEGORIAs--->
+            
+     <!--FIN container categorias y subcategorias 100%--->
+  
+
+
+
+      {% endblock content %}
+
+
+
+
+
+<!----------------------------------------------->
+{% block container-perder-categoria %}
+<!--DEBE PONERSE PARA QE NO SALGA EL CODIGO DE ARTICUKO BASE--->
+ {%endblock container-perder-categoria %} 
+<!----------------------------------------------->
+
+
+
+
+
+
+    
+               
+
+                           <!-- CIERRE DIV DE  COLUMNA PRIMERA------------------->
+                                      
+
+
+                                              <!--------------INCLUYENDO LA PAGINATION ------------------------------------------------------------------------>
+
+
+
+
+
+
+
+
+

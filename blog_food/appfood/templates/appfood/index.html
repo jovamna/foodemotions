@@ -1,0 +1,632 @@
+{% extends 'appfood/base.html' %}
+{% load static %}
+{% block titulo %}Food Emotions: Recetas Saludables, Alimentacion Saludable{% endblock titulo %}
+ 
+  <!-- SLIDER ---------------------------------------------------------------------->
+ 
+   {% block portada %} 
+          <div class="portada">
+                         <div class="portada-img">
+                        <img src="{% block imagen %}{% static 'appfood/img/slider/1300-600-index.jpg' %}{% endblock imagen %}"
+                        width="100%" >
+                       
+                        <div class="portada-titulo">
+                        <h2>exquisitas <i>Food Emotions</i> con la elaboraciòn
+                        </h2>
+                        </div>
+
+                         <div class="portada-titulo1">
+                         <h6>de productos y  <i>recetas</i>  a disfrutar ! </h6>
+                        </div>
+                        </div>
+
+
+    <!------------------------------------------------------------------------------------------------->
+    <div class="portada-img-responsive">
+               <div class="imagen-responsive-movil">
+              <img src="{% block img %}{% static 'appfood/img/slider/640-450index.jpg' %}{% endblock  %}"
+              class="slider__img">
+              </div>
+              <!------------------------------------->
+              <div class="imagen-responsive-ipod">
+              <img src="{% block imag %}{% static 'appfood/img/slider/760-380indexipod.jpg' %}{% endblock  %}"
+              class="slider__img">
+              </div>
+              <!-- FIN IMAGEN-->
+              <!-- LETRAS-->
+              <!-- FIN IMAGEN-->
+              <!-- LETRAS-->
+           <div class="portada-titulo">
+              <h2>exquisites es  <i>Food Emotions</i> elaboraciòn</h2>
+          </div>
+          <div class="portada-titulo1">
+          <h6>de recetas  <i>sanas</i>   </h6>
+        </div>
+  
+      </div>
+
+     </div>
+              
+    {% endblock portada %} 
+     
+     
+
+    {% block buscador-search %}   {% endblock buscador-search %} 
+    
+
+     {% block content %}
+   
+
+     {% block noticias-turismo %}
+          <!-- TITULO --------------- data-anime="top"----ESTO IBA EN EL AJON ESCRITO---------------------1-->
+          <div class="titulo-principal">
+                <div class="vacio"></div>
+                <div class="escrito">
+                <a href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}"> 
+                 <h1>Actualidad, turismo gastronomico</h1>
+                 </a>
+               
+              
+                </div>
+                <div class="vacio"></div>
+          </div>
+
+        <!-- CUARTO SEGMENTO-----TURISMO GASTRONMICO-------------------------------->
+        <div class="primer-segmento">
+              {% for posturismo in posturismos %}
+              <div class="tres"> 
+                        {% if posturismo.imagefront %}
+                        <img src="{{posturismo.imagefront.url}}" width="100%"  alt="" >
+                        {% endif %}
+
+                        <a href ="{% url 'appturismo:post' posturismo.slug %}">
+                        <h1>{{posturismo.title}}</h1>
+                         </a> 
+
+                        <p>{{posturismo.description|linebreaksbr|truncatechars:70}}</p>
+
+                        <a href ="{% url 'appturismo:post' posturismo.slug %}">
+                       <p>Leer mas...<p>
+                        </a>                
+              </div>
+              {% endfor %}
+      </div>
+      <!-- QUINTO SEGMENTO  INICIO TITULO ------------>
+      {% endblock noticias-turismo %}
+   <!---------------------------------------------------------------------------------------------------------------------------->
+
+
+
+    <!-------------------------------LO ULTIMO------- data-anime="top"---------------------------------------->
+      {% block ultimos_posts %}
+          <div class="titulo">
+                <div class="vacio"></div>
+                <div class="escrito"><h1>ùltimas entradas</h1></div>
+                <div class="vacio"></div>
+          </div> 
+
+
+    
+    <!------------------------------------------------->
+
+     <!-- POSTS ULTIMOS----------------POSTS UTLIMOS-----POSTS ULTIMOS------------->
+    <div class ="dos-columnas">        
+
+
+        <!--  CONTENEDOR COLUMNA DE POSTS ULTIMOS--------->
+        <div class="columna-left">
+             <div class="bloque-ultimo">
+
+
+                {% for receta in recetaultimo %}
+                <div class="posts-ultimos">
+                <div class="post-ultimo">
+                     
+                <div class="posts-ultimos-imagen">
+                {% if receta.imagefront %}
+                <img src="{{receta.imagefront.url}}">
+                {% endif %}
+                </div>
+
+                <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                <div class="posts-ultimos-titulo">
+                 <!------------------------------------->
+                <div class="post-ultimo-titulo">
+                <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                <h1>{{receta.title}}</h1>
+                </a>        
+                <p>{{receta.description|safe|linebreaksbr|truncatechars:130}}.</p>
+                <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                <p>Leer mas...</p>
+                </a>
+                </div>
+               <!------------------------------------->
+               </div>
+               <!-------FIN CONTAINER POSTS ULTIMOS-TITULO----------------------------->
+
+              </div>
+              </div>
+        {% endfor %}
+     
+           
+              {% for perderpeso in perderultimo %}
+              <div class="posts-ultimos">
+               <div class="post-ultimo">
+              
+
+                      <div class="posts-ultimos-imagen">
+                      {% if perderpeso.imagefront %}
+                      <img src ="{{perderpeso.imagefront.url}}" >
+                      {% endif %}
+                      </div>
+
+                        <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                      <div class="posts-ultimos-titulo">
+                      <!--------------------------------->
+                      <div class="post-ultimo-titulo">
+                      <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                      <h1>{{perderpeso.title}}</h1>
+                      </a>
+                      <p>{{perderpeso.description|safe|truncatechars:90}}.</p>
+                      <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                      <p>Leer mas...</p>
+                      </a>
+                     </div>
+                    <!----------------------------------------->
+                     </div>
+                    <!--------------------------------------------------------------------->
+                
+              </div>           
+            </div>
+             {% endfor %}
+        <!------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------->
+           {% for recipe in recipedietaultimo %}
+         <div class="posts-ultimos">
+               <div class="post-ultimo">
+                     <!--------------------------------->
+                      <div class="posts-ultimos-imagen">
+                      {% if recipe.imagenfront %}
+                      <img src ="{{recipe.imagenfront.url}}" >
+                      {% endif %}
+                      </div>
+                      <!--------------------------------->
+
+                        <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                      <div class="posts-ultimos-titulo">
+                        <!------------------------------------->
+                         <div class="post-ultimo-titulo">
+                           <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                           <h1>{{recipe.title}}</h1>
+                          </a>
+                          <p>{{recipe.description|safe|linebreaksbr|truncatechars:120}}.</p>
+                          <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                          <p>Leer mas...</p>
+                         </a>
+                        </div>
+                    <!-------------------------------------------->
+                     </div>
+                    <!---------FIN POSTS ULTIMOS TITULO------------------------------------>
+              </div>
+            </div>
+         {% endfor %}
+        <!------------------------------------------------------------------------------------->
+
+        <!------------------------------------------------------------------------->
+      {% for post in postultimo %}
+        <div class="posts-ultimos">
+            <div class="post-ultimo">
+
+                  <div class="posts-ultimos-imagen">
+                  {% if post.imagefront %}
+                  <img src ="{{post.imagefront.url}}" >
+                  {% endif %}
+                  </div>
+
+                   <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                  <div class="posts-ultimos-titulo">
+                  <!----------------------------------------->
+                  <div class="post-ultimo-titulo">
+                  <a href ="{% url 'appblog:post' post.slug %}">
+                  <h1>{{post.title}}</h1>
+                   </a>
+                  <p>{{post.description|safe|linebreaksbr|truncatechars:65}}.</p>
+                  <a href ="{% url 'appblog:post' post.slug %}">
+                  <p>Leer mas...</p>
+                  </a>
+                  </div>
+                  <!------------------------------------------->
+                 </div>
+                <!------------------------------------->
+
+              </div>         
+          </div>            
+          {% endfor %}
+        <!----------------------------------------------------------------------------->
+    <!------------------------------------------------------------------>
+    
+     </div>   <!----bloque-ultimo--->
+    <!------------------------------------------------->
+    </div>
+    <!--FIN COLUMNA SEGUNDA--->
+
+
+
+
+        <!--------------------------ASIDE------------------------------------------------------>
+        <div class="columna-right">
+            <div class ="columna-right-column">
+
+
+              <div class ="explora">
+              <h3> Explorar</h3>
+              </div>
+                      
+            
+
+            <!---------------------------->
+               {% for category in categories %}
+            <div class="columna-vertical">
+              
+                <div class="subcontainer-right">
+                     <!-------------------------------------->
+                         <div class="imagen-right">
+                          {% if category.image %}
+                         <img src="{{category.image.url}}">
+                         {% endif %}
+                        </div>
+
+                        <div class="titulo-right">
+                        <a href="/recetas-dieteticas/categoria/{{ category.slug }}"> 
+                        <h1>{{ category.name }}</h1>
+                        </a>
+                        </div>
+                    <!------------------------------------------------>
+              </div>    
+            
+           </div>
+           <!----------------------------------------------->
+           {% endfor %}
+
+        </div>
+        </div>
+      <!----------------------------------------------------------------->
+      <!---------CIERRE DIV DOS COLUMNAS----------------------->
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!--FIN DIS DOS COLUMNAS-CONTIENE LOS POSTS Y EL ASIDE-->
+    {% endblock ultimos_posts %}
+    <!------------------------------------------------------------------------------------------------------------->
+    <hr>
+
+
+    <!-----------------------RECETAS SALUDABLES------------------------------------------------------------------------>
+    {% block primero_recetasaludable %}
+        <div class="titulo">
+            <div class="vacio"></div>
+            <div class="escrito">
+              <a href="{% url 'appfood:recetas-saludables' %}"> 
+              <h1>Recetas Saludables</h1>  </a> 
+              <p>deliciosas recetas, gastronomia internacional .</p>                         
+            </div>
+            <div class="vacio"></div>
+       </div>
+
+          <!--EMPEZANOD EL POST DE RECTAS SALUDABLES------------------------->
+        <div class="plan-total-alimentacion">
+            <!--RESPONSIVE---->
+            {% for receta in receta %}
+            <div class="plan-imagen-responsive">
+            {% if receta.imagefront %}
+            <img src ="{{receta.imagefront.url}}" >
+            {% endif %}
+              <a href ="{% url 'apprecetas:receta' receta.slug %}">
+              <h1>{{receta.title}}</h1>
+              </a>
+            </div>
+            {% endfor %}
+            <!---FIN RESPONSIVE------------------------------------------->
+            
+        <!---IMAGEN Y POST PEQUEÑOS------------------------------->
+        <div class="plan-alimentacion">
+
+                {% load mptt_tags %}
+                {% for receta in recetas %}
+                <div class="plan-post-alimentacion"> 
+                      <!---IMAGEN------------------->
+                       <div class="plan-post-imagen">
+                        {% if receta.imagefront %}
+                        <img src="{{receta.imagefront.url}}" width="100%"  class="" alt="" >
+                        {% endif %}
+                       </div>
+                       <!--------TITULO DE LA FOTO----->
+                       <div class="plan-post-letra">
+                        <a href="{% url 'apprecetas:receta' receta.slug %}">
+                        <h1>{{receta.title|safe}}</h1>
+                        </a>
+                       </div> 
+                 </div>      
+                {% endfor %}
+                <!--FIN PLAN POST ALIMENTACION----->
+
+        </div>
+        <!--FIN PLAN ALIMENTACION-------------->
+
+        <!------------IMAGEN SOLA DE LAS RECETAS---------------->
+          {% for receta in receta %}
+          <div class="plan-imagen">
+             {% if receta.imagefront %}
+                       <img src ="{{receta.imagefront.url}}" >
+                       {% endif %}
+                       <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                       <h1>{{receta.title}}</h1>
+                       </a>
+           </div>
+          {% endfor %}
+      <!--FIN  IMAGEN SOLA GRANDE DE RECETAS----------------->
+      </div>
+       <!--FIN CONTAINER DE PLAN TOTAL DE ALIMENTACION----->
+   {% endblock primero_recetasaludable %}
+   <!--------------------------------------------------------------------------------------------------------->
+
+
+  
+
+
+  <!----SEGMENTO RECETAS DIETETICAS------------------------------------------------------- -->
+      <!-- TITULO ----------------------------------------------------------3  --->
+      {% block recetas_dieteticas %}
+            <div class="titulo">
+                <div class="vacio"></div>
+                <div class="escrito">
+                 <a  href="{% url 'appfood:recetas-dieteticas' %}">
+                  <h1>Recetas dietèticas</h1></a>
+                  <p>batidos, ensaladas, veganos, vegetarianos...</p>
+                </div>
+                <div class="vacio">  </div>
+            </div>
+
+      <!-- TERCER SEGMMENTO EL SEGMENTO COMPLICADO -A----ZUMOS Y ENSALADAS--------------------------------------->
+      <div class="dos-columnas">    
+            <!-- CODIGO DE APPRECETASALZUM ---------->
+            <div class="columna-left">
+                  <div class="bloque-ultimo">
+      
+                    {% for recipe in recipes %}
+                <div class="posts-ultimos">
+
+                 
+                      <div class="post-ultimo">
+                      <div class="posts-ultimos-imagen">
+                      {% if recipe.imagenfront %}
+                      <img src ="{{recipe.imagenfront.url}}" >
+                      {% endif %}
+                      </div>
+
+                      <!--TITULO Y DECSRIPCION---->
+                      <div class="posts-ultimos-titulo">
+                      <div class="post-ultimo-titulo">
+                      <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" >
+                      <h1>{{recipe.title}}</h1>
+                      </a>
+                      <p>{{recipe.description|safe|linebreaksbr|truncatechars:65}}</p>
+                      <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                      <p>Leer mas...</p>
+                      </a>
+                      </div>
+                      </div>
+                      <!------------------------------------->
+                      </div>
+                   
+              </div>
+                {% endfor %}
+              <!------------------------------------------------->
+             </div>
+     
+         </div>
+            <!-- FINAL SECTION PRIMERA COLUMNA CINCO ----------------------->
+      
+    <!--  --ASIDE------------------->
+                    <div class="columna-right-segunda">
+                    <div class ="explora">
+                 
+                    </div>
+                   <!-- CODIGO DE APPRECETASALZUM ---------->   
+                  </div>
+                 <!---CIERRE ASIDE SEUNDA----------------->     
+
+
+          
+     </div>            
+            <!--CIERRE DIV DE LAS DOS COLUMNAS  BATIDOS ENSALADAS----->
+     {% endblock recetas_dieteticas %}
+    <!-- FINAL TERCER SEGMMENTO DOS COLUMNAS EL SEGMENTO COMPLICADO --A--------------------------------------------------------------------------->
+
+
+
+<!-------------------------------------------------------------------------------------------------------------->
+   <hr>
+
+
+                 
+        <!------------    <p align="center"></p><dd>...</dd> --------------------- PLAN DE AIMENTACION ------------ -->
+        {% block plandealimentacion %}
+        <div class="titulo">
+                <div class="vacio"></div>
+                <div class="escrito">
+                <a  href="{% url 'appfood:plan-comidas-saludables' %}" >
+                <h1>Plan de alimentaciòn Saludable</h1></a>   
+                <p>dietas, plan de comidas </p>
+                </div>
+                <div class="vacio"></div>
+        </div>
+     <!---EMPIEZA EL POST DE 4 POST Y UNA IMAGEN GRANDE--->
+   <div class="plan-total-alimentacion">
+                <!--RESPONSIVE--rIMAGEN RESPONSIVE------->
+        {% for perderpeso in perder %}
+        <div class="plan-imagen-responsive">
+         {% if perderpeso.imagefront %}
+                       <img src ="{{perderpeso.imagefront.url}}" >
+                       {% endif %}
+                       <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                       <h1>{{perderpeso.title}}</h1>
+                       </a>
+       </div>
+      {% endfor %}
+         <!---FIN RESPONSIVE---IMAGEN RESPONSIVE------------->
+
+     <!----------------4POST----------------------------------->
+     <div class="plan-alimentacion">
+              {% load mptt_tags %}
+              {% for perderpeso in post_perder %}
+              <div class="plan-post-alimentacion"> 
+                    <div class="plan-post-imagen">
+                    {% if perderpeso.imagefront %}
+                    <img src ="{{perderpeso.imagefront.url}}" >
+                    {% endif %}
+                    </div>
+
+                    <div class="plan-post-letra">
+                    <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                  <h1>{{perderpeso.title}}</h1>
+                    </a>
+                    </div>    
+              </div>
+              {% endfor %}
+    </div>
+    <!---FIN DE LOS 4 POSTS---------------------------------->
+    {% for perderpeso in perder %}
+    <div class="plan-imagen">
+         {% if perderpeso.imagefront %}
+                       <img src ="{{perderpeso.imagefront.url}}">
+                       {% endif %}
+                       <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                       <h1>{{perderpeso.title}}</h1>
+                       </a>
+    </div>
+      {% endfor %}
+    </div>
+
+              {% endblock plandealimentacion %}
+
+  <!----------------------FIN PLAN DE ALIMENTACION----------------------------------------------->
+
+
+
+
+
+   <!------------------------------------------------------------------------------------>
+
+    <hr>
+
+
+     
+
+      <!------- DIETAS Y ALIMENTACION--------------------------------------------------->
+      {% block dietas-alimento %}
+            <div class="titulo">
+                  <div class="vacio"></div>
+                  <div class="escrito">
+                  <a href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}">
+                      <h1>Dietas Especiales y Alimentos saludables</h1>   </a>    
+                        <p>
+                      </p>
+                                    
+                 </div>
+                 <div class="vacio"></div>
+          </div>
+
+     <!----CONTAINER DIETAS TOTAL DEL POST GRANDE CON 4 IMAGENES---------------------->
+       <div class="plan-total-alimentacion">
+              <!--RESPONSIVE--->
+             {% for post in post%}
+              <div class="plan-imagen-responsive">
+              {% if post.imagefront %}
+                       <img src ="{{post.imagefront.url}}" >
+                       {% endif %}
+                       <a href ="{% url 'appblog:post' post.slug %}">
+                       <h1>{{post.title}}</h1>
+                       </a>
+             </div>
+            {% endfor %}
+            <!--FIN RESPONSIVE----->
+
+       <!----CAJA PLAN ALIMENTACION CONTIENE LAS 4 IMAGENES CON SUS TITULOS----------------->
+         <div class="plan-alimentacion">
+                    <!--CAJA DE PLAN POST ALIMENTACION----->
+                    {% load mptt_tags %}
+                    {% for post in posts %}
+                    <div class="plan-post-alimentacion"> 
+              
+                        <div class="plan-post-imagen">
+                        {% if post.imagefront %}
+                        <img src ="{{post.imagefront.url}}" >
+                        {% endif %}
+                        </div>
+
+                        <div class="plan-post-letra">
+                        <a href ="{% url 'appblog:post' post.slug %}">
+                        <h1>{{post.title}}</h1>
+                        </a>
+                       </div>
+                   </div>          
+                  {% endfor %}
+                 <!--FIN PLAN POST ALIMENTACION------->
+
+         </div>
+         <!-------FIN PLAN ALIMENTACION---------------------------------------------->
+
+         <!---CONTAINER IMAGEN SOLA-------------------------->
+              {% for post in post%}
+              <div class="plan-imagen">
+              {% if post.imagefront %}
+                       <img src ="{{post.imagefront.url}}" >
+                       {% endif %}
+                       <a href ="{% url 'appblog:post' post.slug %}">
+                       <h1>{{post.title}}</h1>
+                       </a>
+             </div>
+           {% endfor %}
+        <!---FIN IMAGEN SOLA----------------------------------------------------------->
+    </div>
+
+ {% endblock dietas-alimento  %}
+         
+    
+         
+
+{% endblock content %}
+
+
+
+<!--OCTAVO SEGMENTO  PORTADA EN MOVIMIENTO------------------------------------------------------------>
+<!--CIERRE  OCTAVO SEGMENTO  PORTADA EN MOVIMIENTO------------------------------------------------------------>
+
+
+
+
+
+<!--NOVENO SEGMENTO  TEXTO ANIMADO------------------------------------------------------------>
+<!--FINAL NOVENO SEGMENTO  TEXTO ANIMADO------------------------------------------------------------->
+
+
+ <!-- FOOTER TOTAL PRIMERO ESTA DENTRO DEL CONTAINER DE CONTENIDO------------------------------------------>
+         
+ <!-- FINAL FOOTER  FOOTER PRIMERO ESTA DENTRO DEL CONTAINER DE CONTENIDO------------------------------------------>
+
+  

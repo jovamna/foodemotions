@@ -1,0 +1,375 @@
+{% load static %}
+{% load menu %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    
+        
+    {% block metadescription %}
+        <meta name="description" content="This site provide something...">
+    {% endblock %}
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+       <!-- STILOS -->
+    <link rel="stylesheet" href="{% static 'appfood/css/recetas.css' %}">
+     <link rel="stylesheet" href="{% static 'appfood/css/responsivereceta.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+     <!-- ICONOS -->
+     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+        integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+        crossorigin="anonymous"></script>
+
+     <!-- SCRIPT IMPORTANTE PARA QUE EN MENU ESCONDIDO SE DESPLAZE JUNTO AL CODIGO ESCRITO 
+        DONDE ABAJODEL TODO DESPUES DEL FOOTER  HE PUESTO UN LINK DEL ARCHIVO ESCRITO LLAMADO 
+         MENURECTDESPLAZA Y PONIENDO EL NAV EN FIXED TAMBIEN PARA EL CARROUSEL-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <!-- GOOGLE FONTS-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Archivo+Black|Artifika|Bai+Jamjuree|Cabin|Merienda|Roboto+Condensed|Satisfy&display=swap"
+        rel="stylesheet">
+  </head>
+
+
+  <body>
+    <!-- MAIN WRAPPER -->
+     <div id="wrapper-recetas">
+        <header>
+        <!-- CABECERA ----------------------------------------------------------->
+        <div class="cabecera-recetas">
+            <!-- caja logo ---->
+            <div class="logo">
+            <a  href="{% url 'appfood:index' %}">
+            <img src="{% static 'appfood/img/logo/250-60-ult.png' %}" alt="Food Emotions">
+            </a>
+            </div>
+             <!-- final caja logo-->
+
+            <div class="controls">
+              <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
+                  <div id="custom-search-input">
+	                <input type="text"  class="sin-borde" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
+                    <button type="submit" name="submit" class="boton btn-succes" value="Search"> 
+                    <span class="icon"><i class="fa fa-search"></i></span>   
+                    </button>
+                          <!--</span>-->
+                 </div>
+             </form>
+	       </div>
+                                     
+                            
+                           
+            <!-- BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
+            <div class="menu-btn">
+                  <!------  caja boletin--------------------------->
+                  <div class="boletin">
+                    <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
+                    <h4>SUSCRIBETE</h4>  
+                    </a>
+                 </div>
+                <!---------- final caja boletin------------------->
+
+                 <div class="menu-btn__burger"></div>
+           </div>
+
+            
+        <!-- final BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
+
+
+
+  <!-- NAV MENU QUE VA CON EL BOTON MENU-->
+          <nav style="background-image: url({% static 'appfood/img/logo/250-60.png' %})">
+                <ul>
+                     <li> <a href="{% url 'appfood:index' %}"  class="current"><p>Inicio</p></a>
+                        
+                        </li>
+                                    <li> 
+                <a class="{% active 'appfood:recetas-saludables' %}" href="{% url 'appfood:recetas-saludables' %}"> <p> Recetas Sanas </p></a>
+                        <ul>  
+                        {% load mptt_tags %} 
+                        <!-- LAS CATEGORIAS------->
+                        {% for kategory in kategories %}
+                        <li>
+                        <a href="/recetas_saludables/categoria/{{kategory.slug }} "style="text-decoration: none">
+                        {{ kategory.name }}</a>
+                       </li>
+                       {% endfor %}
+                      </ul>
+                </li>
+                <li > 
+                 <a class="{% active 'appfood:recetas-dieteticas' %}" href="{% url 'appfood:recetas-dieteticas' %}"> <p>Recetas dieteticas</p> </a> 
+                </li>
+
+                       <li> 
+                <a class="{% active 'appfood:plan-comidas-saludables' %}" href="{% url 'appfood:plan-comidas-saludables' %}"><p>Plan de Alimentacion Saludable</p></a>
+                </li>
+                      
+                <li > 
+                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-sana' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}"><p>Dietas y Alimentacion Sana</p></a> 
+                </li>
+
+                 <li> 
+                <a class="{% active 'appfood:noticias-turismo-gastronomico' %}" href="{% url 'appfood:noticias-turismo-gastronomico' %}"><p>Turismo</p></a>
+                       
+                </li>
+                      <li> <a href="{% url 'appcontact:contacto' %}"><p>Contacto</p></a>    </li>
+                      <li> <a href="{% url 'appfood:nosotros' %}"><p>nosotros</p> </a> </li>
+                </ul>
+            </nav>
+     </div>
+  <!-- FINAL CABECERA --------------------------------------------------------------------------------------------------------------------->
+
+   </header>
+
+ <!-- CONTAINER CONTAINER CONTANER---------------------------------------------------------------------------------------->
+
+        <div id="container-recetas">
+        
+            {% block menu-responsive %}
+  
+            
+            {% endblock menu-responsive %}
+         <!-- PRIMERA SECCCION MENU ARROW -----------MENU MENU MENU ARROW------------------------>
+         {% block menusimple %}
+        <!-- PRIMER  SEGMENTO MENU SIMPLE-->
+        {% endblock menusimple %}
+                
+                 <!-- SEGUNDA SECTION TRES COLUMNAS ------------------------------------------------------->
+                <div id="tres-columnas-recetas">
+                        {% block content %}
+                        <!-- CONTENEDOR DE PRIMERA COLUMNA---------------------->
+                        <div class="primera-columna-recetas">
+                                          <!--INICIO ARTICULO------PRIMERA CAJA----------->
+                                         <div class="articulo">
+                                                 <!------INICIO RECETAS------------------------------------->
+                                                    <div class="recetas">
+                                                             <h1></h1>
+                                                             <h2></h2>
+                                                              <p>  </p>
+                                                        <div id="foto-autor">
+                                                             <figure>
+                                                                 <img src>
+                                                               <figcaption>
+                                                               <a href>  <h4>Por: </h4></a>
+                                                               </figcaption>
+                                                             </figure>
+                                                             <!--DIV FINAL DE FOTO AUTOR-->
+                                                         </div>
+                                                       <!-- final RECETAS------------------------------->
+                                                     </div>
+
+                                     <!------------------------------------------------>
+                                        <div class="vista">
+                                              <!--ICONOS SOCIALES-->
+                                               <div clas="redes">
+                                                                       <div class="iconos-general">
+                                                                       <ul class="iconos-social">
+                                                                       <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                                                                       <i class="fas fa-envelope"></i> </a> <br>
+                                                                      </li>
+                                                                       {% if LINK_FACEBOOK %}
+                                                                      <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank">
+                                                                      <i class="fab fa-facebook-f"></i> </a> <br>
+                                                                      </li>
+                                                                         {% endif %}
+                                                                       <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                                                                      <i class="fab fa-twitter"></i> </a> <br>
+                                                                      </li>
+                                                                      <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                                                                      <i class="fab fa-instagram"></i> </a> <br>
+                                                                      </li>
+                                                                      </ul>
+                                              </div>
+                                            
+                                              <!--IMAGEN-------------------->
+                                               <img src width="600" height="600" />
+                                               <!--TIEMPO INFORMACION NUTRICIONAL------>
+                                               <div class="contiene">
+                                                      <div class="temps">
+                                                                  <p></p>
+                                                      </div>
+                                                      <div class="porciones">
+                                                                   <p></p>
+                                                      </div>
+                                                      <div class="nutricional-imagen">
+                                                                  <h2></h2>
+                                                                   <p></p>
+                                                     </div>
+
+                                               </div>
+                                       </div>
+                                       <!-- final ARTICULO---------------------PRMERA CAJA----------->
+                                        </div>
+
+
+
+
+
+    <!-- CUARTA SECTION  ICONOS SOCIALES-------ESTO NO DEBE CAMBIAR ---NO SE DEBE PONER EL BLOCK CONTENT-------------------->
+                             <div class="iconos-general">
+                              
+                          </div>
+
+<!-- FIN CUARTA SECTION  ICONOS SOCIALES------------------------------------------->
+
+
+                                       <div class="ingredientes-tres"></div>
+                                       <div class="preparacion-dos">   </div>
+                                       <!--CONTIENE INFORME NUTRICIONA , CATEGORIA SIN LINK Y CATEGORIAS CON LINKS--->
+                                       <section class="nutricion-informe">
+                                         <article class="nutricional"><h2></h2> <p></p<>   </div> 
+                                              <div class="categoria">  <h2></h2> <p></p<>   </div> 
+                                              <div class="categorias-recetas-links"> <h2></h2> <p></p<> </div> 
+                                        </section>
+
+
+<!---------------------------- FIN CONTENEDOR DE PRIMERA COLUMNA----------------------------------------------------------->
+                  </div>
+            {% endblock content %}
+
+
+<!--------------------------------- SEGUNDA COLUMNA  VACIA-------------------------------------------------------------------->
+                <div class="segunda-columna-recetas"> </div>
+
+
+<!------------------------------TERCERA COLUMNA----------------------------------------------------------------------------->
+        <!-- ASIDE ----------------------------------------------------------------------------------------------------->
+        <div id="aside-recetas">
+            <div class="fijo-recetas">
+                <!------------BUSCADOR SERAH BUSCADOR SEARCH BUSCADOR SEARCH -------------BUSCADOR------------------>
+                       
+               <!------------------FINAL BUSCADOR-----------FINAL SEARCH FINAL BUSCADOR FINAL SEARCH--------------------->
+                           
+                         <div class="galeria">
+                           
+                          </div> <!-- FIN TODA LA  GALERIA -------->
+
+                    
+
+                            </div>
+
+                        </div> 
+                       <!-- FIN ASIDE -------------------------------------------------->
+
+            </div> <!-- TRES COLUMNAS -->
+
+
+
+                                <!---------------- PAGINACION---------------------------------->
+                                {% block paginacion %}
+                                        <div class="paginacion">
+                                        </div>
+                                {% endblock paginacion %}
+                                <!-------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+            <div class="tipeo">
+                <h4 class="font-weight-light">
+                    A smarter way to tell your users about .....
+                </h4>
+                <h1><i>"new features." <span>&#160;</span></i></h1>
+            </div>
+
+
+
+   <!-- FOOTER PRIMERO ESTA DENTRO DEL CONTAINER DE CONTENIDO-->
+        <div id="footer-recetas">
+
+                <div class="footer-primero-recetas">
+
+                    <!-- PRIMER FOOTER--------------->
+                        <div id="icon-social1">
+                        <p>food emotions</p>
+                        <ul class="social2">
+                            <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                                    <i class="far fa-envelope"></i> </a></li>
+                            <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank"><i
+                                        class="icon fab fa-facebook-f"></i> </a></li>
+                            <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                                    <i class="fab fa-twitter"></i> </a></li>
+                            <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                                    <i class="fab fa-instagram"></i> </a></li>
+                          </ul>
+                          </div>
+
+
+
+
+                         <div class="box">
+                        <h3>Suscribete a nuestro Newsletter.</h3>
+                        <form action="." method="POST">
+
+                            <input type="text" name="email" id="email" placeholder="Type your email address">
+                            <button type="submit" class="submit">Suscribete</button>
+                        </form>
+                          </div>
+
+
+                   
+
+                </div> <!-- FIN FOOTER PRIMERO--------------->
+
+
+                <!--  FOOTER segundo--------------->
+                <footer class="footer-second-recetas">
+                   
+                 
+                     <div class= "final-food-recetas">
+                    <p>© 2021 Food Emotions,  El
+                        uso de este sitio implica la aceptación de nuestros Términos de uso,
+                        Política de privacidad y Política de datos derechos reservados</p>
+                        </div>
+                </footer>
+
+
+            </div> <!-- DIV FINAL DE TODO EL FOOTER-->
+
+       
+
+           
+            <!-- CARROUSEL-->
+            <script src="js/slider-carrusel.js"></script>
+
+            <!-- PARA CONVERTIR EL MENU A ASPA-->
+            <script src="{% static 'appfood/js/menuAspaArticulo.js' %}"></script>
+            <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU -->
+           
+              <script src="{% static 'appfood/js/menuDeslizaArticulo.js' %}"></script>
+
+
+            <!-- SCRIPT PARA LA CABECERA FIJA-->
+            <script type="text/javascript">
+
+                $(window).on("scroll", function () {
+                    if ($(window).scrollTop()) {
+                        $('header').addClass('black');
+                    }
+
+                    else {
+                        $('header').removeClass('black');
+
+                    }
+                })
+
+            </script>
+        </div> <!-- FIN CONTENIDO GENERAL -->
+    </div>
+</body>
+
+</html>

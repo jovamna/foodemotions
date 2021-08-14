@@ -1,0 +1,113 @@
+{% extends 'appfood/base.html' %}
+{% load static %}
+
+{% block titulo %}Plan Comidas Saludables{% endblock titulo %}
+
+
+    
+ {% block portada %} 
+     
+                <div class="portada">
+                      <!-- IMAGEN-->
+                      <section class="portada-img">
+                      <img src="{% block imagen %}{% static 'appfood/img/seg4-dietas/1300-600-dieta.jpg' %}{% endblock %}"
+                      class="slider__img">
+                      <!-- FIN IMAGEN-->
+                       <!-- LETRAS-->
+                            
+                      <div class="portada-receta-img2">
+                      <img src="{% block imagen2 %}{% static 'appfood/img/foodemotions1.png' %}{% endblock  %}" class="slider__img">
+                    
+                      </div>
+                      <!-- FIN LETRAS-->
+                      </section>
+              </div>    
+             {% endblock portada %} 
+
+            <!---BUSCADOR ------------------------------------------------------------ -->
+           {% block buscador-search %}   {% endblock buscador-search %} 
+
+       {% block batido-dietas %}  {% endblock batido-dietas %} 
+         
+
+      
+  
+       {% block content %}
+
+          <div class="titulo">
+                <div class="vacio"></div>
+                <div class="escrito">
+                        <h2>plan de dietas saludables</h2>
+                       
+                    </div>
+                <div class="vacio"></div>
+              </div>
+                               
+ 
+     {% block paginas %}
+     <div id ="container-plan">
+
+
+            <div class="container-columna-posts">
+
+                {% load mptt_tags %}
+                {% for perderpeso in post_perder %}
+                <!---DIV CONTAINER DE 4 POST Y DE RECETAS--->
+                <div class = "elemento-post">
+                      <!---DIV DE 4 POST DE PERDERPESO--->   
+
+
+                      <div class="elemento-imagen">
+                      {% if perderpeso.imagefront %}
+                      <img src ="{{perderpeso.imagefront.url}}" style="width:100%">
+                      {% endif %}
+                      </div>
+
+
+                      <div class="elemento-descripcion">
+                      <h2>{{perderpeso.title}}</h2>
+                      <p>{{perderpeso.description|truncatechars:110|safe}}</p>
+                      <a href ="/plan_de_comidas_saludables/post/{{ perderpeso.slug }}/" class="arrow1">
+                          LEE MAS
+                                    <span class="arrow-right"></span></a>
+                      </div>
+                    <!---DIV DE 4  RECETAS--->                  
+   <!--------------------- FINAL SEARCH RECIPES ZUMOS Y ENSALADAS  ------------------------------>  
+              </div>
+<!---------FIN DIV ELEMTNO POST---------------------------------------------------------------------->
+            {% endfor %}
+
+<!----FIN DIV DE CONTAINER COLUMNA POSTS----------------------->
+             </div>
+   
+
+      <!--- cCONTAINER ASIDE-------------------------------------------------------------------> 
+      <div class="aside-plan">2</div>
+      </div>
+      {% endblock paginas %}
+
+    
+         {% block primero_recetasaludable %}
+       {% endblock primero_recetasaludable %}
+
+       {% block noticias %}  
+       {% endblock noticias %}
+
+              {% block plandealimentacion %}
+              {% endblock plandealimentacion %}
+
+               {% block dietas-alimento %}
+                {% endblock dietas-alimento %}
+
+                {% block quinto_perder %}
+                {% endblock quinto_perder %}
+         {% block tercero_zumos %} {% endblock tercero_zumos %}
+
+
+
+
+ {% endblock content %}
+
+ {% block sexto %}{% endblock sexto %}
+{% block septimo %}{% endblock septimo %}
+{% block texto-animado %}{% endblock texto-animado %}

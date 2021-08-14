@@ -1,0 +1,149 @@
+{% extends 'appfood/base.html' %}
+{% load static %}
+
+{% block titulo %}Recetas Saludables{% endblock %}
+
+                    {% block portada %} 
+                             <div class="portada">
+                                    <!-- IMAGEN-->
+                                    <section class="portada-img">
+                                        <img src="{% block imagen %}{% static 'appfood/img/seg1-recet/1300-600pasta.jpg' %}{% endblock  %}"
+                                              class="slider__img">
+                                               <!-- FIN IMAGEN-->
+                                               <!-- LETRAS-->
+                                           <div class="portada-receta-img2">
+                                          <img src="{% block imagen2 %}{% static 'appfood/img/foodemotions1.png' %}{% endblock  %}" class="slider__img">
+                                          </div>
+                                  </section>
+                          </div> 
+                        {% endblock portada %} 
+
+      {% block buscador-search %}   {% endblock buscador-search %} 
+      {% block batido-dietas %}  {% endblock batido-dietas %} 
+
+  {% block content %}
+    
+          <!-- TITULO ----------------------------------------1 -->
+        
+
+     <!-- TITULO ----------------------------------------1 -->
+
+           <div class="categorias-subcategorias">
+                {% for kategory in kategories %}
+                {% if not node.is_leaf_node %}             
+                         <!-- SUBCATEGORIAS ---->
+                      
+                      <div class= "subcategorias">
+                        {% if kategory.image %}
+                       <a href="/recetas_saludables/subcategoria/{{ child.slug }}">
+                        <img src="{{kategory.image.url}}"></a>
+                        {% endif %}
+                         <div class="nombredesubcategoria">
+                        <a href="/recetas_saludables/subcategoria/{{ child.slug }}">
+                         <h3>{{ kategory.name }}</h3>
+                        </a>
+                    </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            <!--FIN SUBCATEGORY--> 
+            </div>
+            <!--fin subcategoria---------------------1 -->
+
+
+
+
+        <!--  PRIMER SEGMENTO ----------------------------------------------------->
+      <div class="titulo">
+                                                <section class="vacio"></section>
+                                                <!-- PARRAFO ANIMADO-------------------------------------------------->
+                                                <section class="escrito" data-anime="top"><a href="{% url 'apprecetas:categorias' %}">
+                                                <h2>comer sano y delicioso es posible!</h2>
+                                                 
+                                                </a>
+                                                </section>
+                                                <section class="vacio"></section>
+                                  </div>
+
+
+
+
+ {% block paginas %}
+       <!---------CONTAINER DE CONTAINER-COLUMNA-POST Y ASIDE------------------------------------------------------------------------------------>
+    <div id ="container-plan">
+          <div class="container-columna-posts">
+                      <!---DIV CAJA ELEMENTO-POST DE DIV DE ELEMENTO IMAGEN Y DIV ELEMENTO DESCRIPCION--->
+                      {% for receta in post_recetas %}  
+                      <div class = "elemento-post">
+                               <!---DIV DE 4 POST DE PERDERPESO--->   
+                               <div class="elemento-imagen">
+                               {% if receta.image %}
+                               <img src="{{receta.image.url}}" alt="" >
+                               {% endif %}
+                               </div>
+
+                                   <div class="elemento-descripcion">
+                                    <h2>{{ receta.title }}</h2>
+                                    </a>
+                                   <!--DESCRIPCION DE LA RECETA--->
+                                    <p>{{ receta.description|truncatechars:110|safe }}</p>
+                                    <!---LEER MAS  DE LA RECETA--->
+                                    <a href="{% url 'apprecetas:receta' receta.slug %}" class="arrow1">LEE MAS
+                                    <span class="arrow-right"></span>
+                                    </a>
+                                 
+                                 
+                                    </div>
+                                    <!---FIN DIV ELEMENTO DESCRIPCION---> 
+                        </div>
+                     <!-- DIV FINAL ELEMENTO POST --CONTIENE IMAGEN Y DESCRIPCION DEL POST------------------------>  
+                  
+   <!---------FIN DIV ELEMTNO POST---------------------------------------------->
+            {% endfor %}
+   <!----FIN ENDFOR DE ELEMNTO POST---------------------->
+             </div>
+   <!---FIN CONTAINER COLUMNA POSTS---->
+
+      <!--- cCONTAINER ASIDE-------------------------------------------------------------------> 
+      <div class="aside-plan">2</div>
+      </div>
+ 
+<!------------------------------------------------------------------------------------------------------------------------>
+                 {% endblock paginas %}
+              <!--- FIN CONTAINER SEARCH------------------------------------------------------------------------> 
+           
+
+      
+
+
+      
+         {% block primero_recetasaludable %}
+       {% endblock primero_recetasaludable %}
+
+       {% block noticias %}  
+       {% endblock noticias %}
+
+              {% block plandealimentacion %}
+              {% endblock plandealimentacion %}
+
+               {% block dietas-alimento %}
+                {% endblock dietas-alimento %}
+
+                {% block quinto_perder %}
+                {% endblock quinto_perder %}
+                 {% block quinto_plandealimentacion %}
+                  {% endblock quinto_plandealimentacion %}
+         {% block tercero_zumos %} {% endblock tercero_zumos %}
+
+
+
+
+   {% endblock content %}
+
+
+
+
+
+ {% block sexto %}{% endblock sexto %}
+  {% block septimo %}{% endblock septimo %} 
+{% block texto-animado %}{% endblock texto-animado %}

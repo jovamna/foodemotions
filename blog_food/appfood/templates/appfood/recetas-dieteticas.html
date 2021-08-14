@@ -1,0 +1,231 @@
+{% extends 'appfood/base.html' %}
+{% load static %}
+
+{% block titulo %}Recetas dieteticas{% endblock titulo %}
+
+
+        {% block portada %}
+        <div class="portada">
+          <!-- IMAGEN-->
+        <section class="portada-img">
+                  <img src="{% block imagen %}{% static 'appfood/img/slider/1300-345zumo.jpg' %}{% endblock %}"
+                              class="slider__img">
+                             <!-- FIN IMAGEN-->         
+                <div class="portada-img2">  
+
+                <!-------------------------------------------------------->
+                     <div id="menu-simple">
+                     <ul>
+                     <li>
+                     <a href="{% url 'appfood:index' %}"  >
+                     <p>Inicio<i class="right"></i></p>
+                     </a>
+                     </li>
+                     <li>
+                     <a href="{% url 'appfood:recetas-dieteticas' %}"> 
+                     <p>Recetas Dieteticas <i class="right"></i></p>
+                     </a>
+                     </li>
+                     <li >
+                     {% for receta in post_receta %}
+                     <p>{{ receta.kategory }}<i class="right"></i></p></em>
+                     {% endfor %}
+                    </li>
+                     </ul>
+                    </div>   
+                  <!-------------------------------------------------------------------->
+
+
+                            <h1>RECETAS DIETETICAS</h1>
+                            <p>comer sano y delicioso es posible!</p>
+            </div>               
+                           <!-- FIN LETRAS-->
+    </section>
+
+   <!--------------------------------------------------------------------------------------------->
+   <section class="portada-img-responsive">
+            <!----------IMAGEN-----DEL MOVIL---------------->
+            <div class="imagen-responsive-movil">
+              <img src="{% block img %}{% static 'appfood/img/slider/640-450recetadietaresponsivemovil.jpg' %}{% endblock  %}" >
+              </div>
+             <!----IMAGEN DEL IPOD------>
+              <div class="imagen-responsive-ipod">
+              <img src="{% block imag %}{% static 'appfood/img/slider/760-360batidoipod.jpg' %}{% endblock  %}" >
+              </div>
+              <!-- FIN IMAGEN-------------------->
+
+        <!-- LETRAS----------------------->
+        <div class="portada-img3-responsive">
+               <div id="menu-simple-responsive">
+                  <ul>
+                  <li>
+                   <a href="{% url 'appfood:index' %}"  >
+                  <p>Inicio<i class="right"></i></p>
+                  </a>
+                  </li>
+                  <li>
+                 <a href="{% url 'appfood:recetas-dieteticas' %}"> 
+                 <p>Recetas Dieteticas <i class="right"></i></p>
+                </a>
+                </li>
+                <li >
+                {% for receta in post_receta %}
+                <p>{{ receta.kategory }}<i class="right"></i></p></em>
+                {% endfor %}
+                </li>
+             </ul>
+          </div>
+
+
+              <h1>RECETAS DIETETICAS</h1>
+              <p>comer sano y delicioso es posible!</p>
+              <!-- <img src="{% block imagen7 %}{% static 'appfood/img/foodemotions.png' %}{% endblock  %}" class="slider__img">--->
+              </div>
+      </section>
+
+
+
+            </div>    
+          {% endblock portada %}
+
+
+                           {% block buscador-search %}   {% endblock buscador-search %} 
+                          
+               
+
+              
+
+
+   {% block content %}
+
+         
+
+
+   
+    
+        <!---DIV DE 4 POST DE PERDERPESO--->  
+        {% block imagenes-categorias %} 
+         <div class="categorias-subcategorias">
+
+                  <!----------------------------------------------------------->
+                    {% load mptt_tags %} 
+                    {% for category in categories %} 
+                    <div class= "subcategorias">
+                            <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
+                            {% if category.image %}
+                            <img src ="{{category.image.url}}" style="width:100%">
+                            {% endif %}
+                             </a>
+                      
+                            <div class="nombredesubcategoria">
+                            <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
+                            <h1>{{ category.name|linebreaksbr|truncatechars:31}}</h1>
+                            </a>
+                            <!------CATEGORIA RESPONSIVE--------------------->
+                            <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
+                            <h2>{{ category.name|linebreaksbr|truncatechars:12 }}</h2>
+                            </a>
+                            </div>          
+                    </div>
+                    {% endfor %}
+                    <!-----FIN SUBCATEGORY-------------------------------------------------> 
+        </div>
+           {% endblock imagenes-categorias %} 
+
+
+
+      <!---------------------------------------------------------->
+                   
+                <!--  TITULO------------------------------------------------>
+      <div class="titulo-otras-paginas">
+          
+             <!-- PARRAFO ANIMADO--------------data-anime="top"------------------------------------>
+
+         <h1>Recetas Dietèticas</h1>
+      
+     
+     
+      </div>
+    <!------------------------------------------------------------------------------------------>
+
+
+  
+    <!---DIV DE 4 POST DE RECiPES ZUMOS Y ENSALADAS--->                     
+          {% block paginas %}
+     <div id ="container-plan">
+
+          <div class="container-columna-posts">    
+             <div class="recetas-bloque">
+
+
+                  <!--------------------------------------------->
+                  {% for recipe in recipes %}
+                    <div class = "elemento-post">
+                         <!---------------------------->   
+                         <div class="elemento-imagen">
+                         {% if recipe.imagenfront %}
+                         <img src ="{{recipe.imagenfront.url}}" style="width:100%">
+                         {% endif %}
+                        </div>
+                        <!---------------------------------->
+                        <!----------------------------------->
+                        <div class="elemento-descripcion">
+                           <div class ="elemento-descripcion-columna">
+                           <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}"><h2>{{recipe.title}}</h2>  </a>
+                           <p>{{recipe.description|truncatechars:60|safe}}</p> 
+                           </div>
+                           <div class="elemento-leer">
+                           <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" class="arrow1">LEER MAS<span class="arrow-right"></span>
+                           </a>     
+                          </div>
+                       </div>
+                  <!--------------------------------------------------->    
+                </div>
+               {% endfor %}
+               <!----------------------------------------------------------------->
+
+          </div>
+         </div> 
+
+
+
+      <div class="aside-plan">  </div>
+      
+        </div>
+   {% endblock paginas %}
+<!------------------------------------------------------------------------------------------------------------------------>
+                
+              <!--- FIN CONTAINER SEARCH------------------------------------------------------------------------> 
+           
+
+        {% block noticias-turismo %}  
+       {% endblock noticias-turismo %}
+         {% block primero_recetasaludable %}
+       {% endblock primero_recetasaludable %}
+
+ 
+
+       {% block recetas_dieteticas %}  
+         {% endblock recetas_dieteticas %}  
+
+
+   {% block plandealimentacion %}
+      {% endblock plandealimentacion %}
+
+               {% block dietas-alimento %}
+                {% endblock dietas-alimento %}
+
+                {% block quinto_perder %}
+                {% endblock quinto_perder %}
+
+
+
+
+ 
+ 
+
+  {% endblock content %}
+
+   {% block sexto %}{% endblock sexto %}
+  {% block septimo %}{% endblock septimo %} 
+{% block texto-animado %}{% endblock texto-animado %}

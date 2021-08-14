@@ -1,0 +1,4499 @@
+
+
+	/* Mayor de 960px (dispositivos y navegadores) */
+	
+	@media only screen and (min-width: 959px) {
+		.menuPeq {visibility: hidden; display:none;}
+		.menuMed {visibility: hidden; display:none;}
+		.secundario {visibility: hidden; display:none;}
+		}
+
+
+
+
+    @media only screen and (min-width: 250px) and (max-width: 359px)   {
+  #wrapper-categorias {
+  margin:0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  }
+      
+  #wrapper-categorias > * {
+  padding: 20px;
+  }
+  
+    div {
+    flex: 1;
+    }
+  
+    /*...CATEGORIA Y SUCATEGRIAS............................................*/
+/*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
+  #container-categorias{
+  width: 100%;
+  margin: auto;
+  margin-top: 72px;
+  }
+
+ /*border-bottom: 2px solid #DDD;*/
+  /*HEADER LLAMADO CATEGORIA*/
+    header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  60px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+   }
+    /*HEADER LLAMADO CATEGORIA*/
+      header.black{
+      width: 100%;
+      height:  60px;
+      background-color:#fff ;
+      }
+
+
+   
+      #cabecera-categorias{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: 35px; 
+        margin: auto;
+        margin-left: -0.1px;
+        }
+           
+          
+        /*caja */
+        .logo{
+          display: block;
+          height: 30px;
+        width: 50%;
+        }
+              
+        
+      .logo img {
+      width: 80%;
+      height: 30px;
+      margin: auto; 
+      }
+       
+         /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+         .menu-btn {
+          display: block;
+          width: 20%;
+          max-width: 140px;
+          height: 30px;
+          cursor: pointer;
+          transition: all .5s ease-in-out;  
+        }
+  
+          
+       /*CONTENEDOR  REVISTA Y SOCIALES*/
+      .boletin{
+      width: 100%;
+      max-width: 65px;
+      display: block;
+      position: relative;
+      float: left;
+      margin-top: 15px;
+  
+       }
+  
+  
+          /*LETRA FOOD EMOTIONS*/
+          
+          
+          /*LETRA INSCRIBETE*/
+             .boletin a h4{
+            font-size: 0.8rem;
+            word-spacing: -3px;
+            letter-spacing: -1px;
+            font-family: 'Cabin', sans-serif;
+            font-weight: 600;
+            color:#2d2d2d;
+            margin: auto;
+            }
+          
+       .boletin a h4:hover{
+              color: #639a3a;
+              text-decoration: none;
+             }
+            
+        
+  
+          /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+          .menu-btn .menu-btn__burger {
+            display: block;
+           position: relative;
+           float: right;
+            margin-top:  16px;
+            width: 35px;
+            height: 4px;
+            background: #2d2d2d;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2);
+            transition: all .5s ease-in-out;
+            z-index: 1000;
+             }
+          
+             .menu-btn__burger::before,
+            .menu-btn__burger::after {
+              content: '';
+              position: absolute;
+              width: 35px;
+              height: 4px;
+           
+              background:#2d2d2d;
+              border-radius: 2px;
+              box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+              transition: all .5s ease-in-out;
+             z-index: 800;
+             
+            }
+            .menu-btn__burger::before {
+              transform: translateY(-8px);
+              z-index:3000; 
+            }
+            .menu-btn__burger::after {
+              transform: translateY(8px);
+              z-index:3000;
+            }
+
+   
+   /*NAV*/
+    nav{
+    background-position:   70% 88%;
+    }
+  
+
+     nav ul li p{
+     font-size: 0.8rem;
+     }
+   
+     nav ul {
+     margin-left: -55px;
+     width: 90%;
+  
+    }
+
+     nav ul li{
+       height: 40px;
+     }
+   /*CIERRE NAV*/
+
+
+      /*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
+  
+    #container-categorias-subcategorias{
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    }
+  
+        /*CAJA DE NAVEGACION DE LAS CATEGORIAS Y SUBCATEGORIAS*/
+     .intro{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: auto;
+      height: 90px; 
+    }
+
+     .menu-introescrito{
+      width: 100%;
+      }
+     
+
+    .introescrito h2{
+      font-size: 1.5rem;
+    }
+     /*...TITULO DE LA CATEGORIA..DE LA PAGINA DE LA CATEGORIA...................letras*/
+     .categoria h2{
+      font-size: 1.6rem;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-decoration-line: underline;
+      font-weight: bolder;
+      color:#2d2d2d;
+      }
+
+     
+     
+        
+    /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
+      #subcategoria{
+      margin: auto;
+      margin-bottom: 2%;
+
+     }
+      /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
+     #subcategoria h3{
+      font-size: 1.5rem;
+     }
+
+
+   /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/
+  .container-posts-categorias{
+    width: 100%;
+    max-width: 350px;
+    margin-top: 12%; /*PARA QUE ENTRE LA FECHA EN LA FOTO*/
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  
+  }
+   /*CAJA DE RECETAS*/
+    #posts-categoria{
+    width: 100%;
+     display: block; display: flex;
+     flex-direction: row;
+  }
+   
+
+
+   /*..CAJA DE RECETAS*/
+    /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
+    .elemento-categoria{
+      width: 100%;
+       display: block;
+       position: relative;
+        border-radius: 2px ;
+     
+         }
+  
+         /*..CAJA DE RECETAS..*/
+         /*CONTIENE SOLO LA IMAGEN*/
+        #imagen-elemento-categoria{
+          width: 100%;
+         height: 200px;
+          display: flex;
+          flex-direction: row;
+         margin-bottom: 1px;
+         border-top: 2px solid #DCDCDC;
+      
+        }
+  
+          /*..CAJA DE RECETAS..*/
+        #imagen-elemento-categoria img{
+          width: 40%;
+          max-width: 150px;
+          height: 100%;
+          max-height: 150px;
+          margin-right: 15px;
+    
+         
+        }
+     
+            /*..CAJA DE RECETAS..*/
+       #imagen-elemento-categoria .imagen-descripcion{
+        display: block;
+        position: relative;
+        float: right;
+  
+       }
+  
+         /* TITULO DEL POST*/
+            /*..CAJA DE RECETAS..*/
+        #imagen-elemento-categoria .imagen-descripcion h2{
+        font-size: 1.3rem;
+        margin-top: 0.6%;
+        margin-bottom: 1.2%;
+        font-family: 'Times New Roman', 'sans serif';
+        font-weight: bolder;
+        color: #000000;
+        }
+      
+
+        /*.................................................*/
+        /*...PAGINAS DE DIETA PLAN DE COMIDA Y TURISMO*/
+       /* USANDO EL MISMO CONRTAINER DE RECETAS container-posts-categorias*/
+     .columna-categorias{
+       display: flex;
+       flex-direction: column;
+
+     }
+
+     .por-categoria{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+
+     }
+
+     .por-foto{
+       display: block;
+       width: 100%;
+       margin-bottom: 15px;
+     }
+
+    .por-descripcion{
+     display: block;
+     width: 100%;
+    }
+
+    #aside{
+     display: block;
+     width: 100%;
+    }
+
+   /*..FINDE DIETA PLAN Y TURISMO*/
+        .carusel{
+          width: 100%;
+          display: flex;
+          position: absolute;
+          margin-top: 50%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+          margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+          }
+
+       
+       /*CIRCULO  DERECHO*/
+       #carrusel li.right-arrow{
+        margin-left:70%;
+      
+        }
+    
+    
+       
+/*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+  #footer-categorias{
+  clear: both;
+  position: relative;
+  height: 80px;
+  margin-top: -80px;
+  border-top: solid 1.5px #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 10;
+  }
+  
+  
+    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-categorias{
+    width: 100%;
+    margin: auto;
+    height: 70px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    clear: both;
+    z-index: 100;
+    }
+ 
+   /*SUB-caja ICONOS SOCIALES*/
+   .icon-social1{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 70px;
+    }
+
+  .social2{
+   display: flex;
+   flex-direction: row; 
+   }
+
+  .icon-social1 li{
+  list-style: none;
+  display: inline-flex;
+  }
+
+.icon-social1 p{
+font-size: 1rem;
+word-spacing: -3px;
+letter-spacing: -2px;
+font-family: 'Archivo Black', sans-serif;
+padding-bottom: 10px;
+color: #2d2d2d;
+}
+
+.icon-social1 .icon-social1 ul{
+display: inline-flex;
+list-style: none;
+}
+
+
+.icon-social1  ul li .fa-envelope{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+}
+
+.icon-social1  ul li .fa-facebook-f{
+background-color: oldlace;
+color:  #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+}
+
+
+.icon-social1  ul li .fa-twitter{
+background-color: oldlace;
+color:   #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+}
+
+.icon-social1 ul li .fa-instagram{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+}
+
+
+ /*SUBCONTENEDOR DONDE ESTA EL BOX*/
+  .box{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70px;
+  }
+
+ /*LETRA DE LA CAJA DE SUSCRIBIR*/
+  .box h3{
+  display: block;
+  letter-spacing: -0.1px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: .4rem;
+  font-weight: 400;
+  margin-top: 5px;
+  color: #2d2d2d;
+   }
+
+ /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
+  .box form{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  width: 100%;
+  }
+
+
+/*CAJA DEL IMPUT EL LADO DE DONDE SE ESCRIBE*/
+.box input[type="text"]
+{
+background-color: #fff;
+display: flex;
+width:65%;
+height: 25px;
+border: 1.5px solid 	#DCDCDC;
+padding: 0 9px;
+border-radius: 5px 0 0 5px;
+font-size: 0.5rem;
+}
+/*.EL COMPLEMENTO DEL ANTERIOR*/
+.box button[type="submit"]{
+left: 7px;  /*EL TRUCO IMPORTANTE*/
+border-radius: 0 5px 5px 0;
+width: 35%;
+height: 25px;
+border: none ;
+outline: none;
+cursor: pointer;
+background-color: #2d2d2d;
+color: #fff;
+font-size: 0.4rem;
+font-family: 'Archivo Black', sans-serif;
+}
+
+.box button[type="submit"]:hover{
+background: ;
+}
+/*FIN de la cajita del correo */
+
+
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+   #footer-second-categorias{
+   width: 100%;
+   height: 10px;  /*IMPORTANTE*/
+   margin:auto;
+   }
+
+   /*..SUBCAJA DE DIV FOOTERSENIDN...*/
+  .final-food-categorias p{
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 0.5rem;
+  }
+
+   }
+  
+
+
+
+
+  
+   @media only screen and (min-width: 360px) and (max-width: 640px){
+
+  #wrapper-categorias {
+  margin:0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  }
+      
+  #wrapper-categorias > * {
+  padding:10px;
+  }
+  
+    div {
+    flex: 1;
+    }
+  
+    /*...CATEGORIA Y SUCATEGRIAS............................................*/
+   /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
+  #container-categorias{
+  width:100%;
+  margin: auto;
+  margin-top: 70px;
+  }
+
+
+  /*HEADER LLAMADO CATEGORIA*/
+   header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  65px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+     }
+    /*HEADER LLAMADO CATEGORIA*/
+    header.black{
+      width: 100%;
+      height:  65px;
+      background-color:#fff ;
+      }
+  
+           /*FIN ANIMACION SUBRAYADO */
+  #cabecera-categorias{
+    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+}
+
+    
+  
+     /*caja */
+     #cabecera-categorias .logo{
+      height: 40px; 
+      width: 40%;
+    }
+       
+    .logo img {
+    width: 72%;
+    height: 40px;
+    }
+ 
+ /*CONTENEDOR  REVISTA Y SOCIALES*/
+    /*CONTAINER DE LA HAMBURGUESA*/
+    .menu-btn {
+      display: inline-flex;
+         width: 39px;
+         cursor: pointer;
+         transition: all .5s ease-in-out;
+
+          }
+     
+    
+ 
+ /*BOTON ICONO REVISTA Y SOCIALES*/
+  .boletin{
+  width: 5%;
+  display: inline-flex;
+  max-width: 110px;
+
+   }
+ 
+ 
+   /*LETRA INSCRIBETE*/
+   .boletin h4 {
+   font-size: 0.9rem;
+   letter-spacing: -0.2px;
+   font-family: 'Cabin', sans-serif;
+   font-weight: 600;
+   color:#2d2d2d;
+    }
+
+   .boletin a h4:hover{
+    color: #639a3a;
+    text-decoration: none;
+    }
+ 
+ 
+  
+ 
+   /*HAMBURGUESA*/
+   .menu-btn__burger {
+   display: block;
+   margin: auto;
+   margin-top: 17%;
+   width: 38px;
+   height: 4px;
+   background: #2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2);
+   transition: all .5s ease-in-out;
+   z-index: 1000;
+  }
+   
+   .menu-btn__burger::before,
+   .menu-btn__burger::after {
+   content: '';
+   position: absolute;
+   width: 38px;
+   height: 4px;
+   
+   background:#2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+   transition: all .5s ease-in-out;
+   z-index: 800;
+   }
+ 
+ 
+   .menu-btn__burger::before {
+   transform: translateY(-10px);
+   z-index:3000; 
+   }
+
+   .menu-btn__burger::after {
+   transform: translateY(10px);
+   z-index:3000;
+   }
+
+   /*NAV*/
+
+   nav{
+    background-position:78% 90%;
+   }
+     nav ul{
+       margin-top: 18%;
+       width: 90%;
+     }
+     nav ul li{
+      margin-left: -4%;
+     }
+
+    nav ul li p{
+      font-size: 0.9rem;
+      z-index: 1000;
+    }
+
+ 
+
+ /*NAV ESCONDIDO*/
+ nav ul li:hover > ul {
+  display: none;
+ margin-left: 4%;
+ 
+  }
+
+ 
+   /*CIERRE NAV*/
+ 
+      /*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
+      #container-categorias-subcategorias{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    }
+  
+ /*CONTIANER TOTAL DE INTRO Y INTRO-DOS-VACIOS*/
+    .intro{
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+   
+    }
+
+   .menu-introescrito{
+     width: 95%;
+     height: 220px;
+     display: flex;
+     flex-direction: column;
+
+
+   }
+
+    /*..CAJA DE MENU-INTRO-TITULO..*/
+    .introescrito{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      max-height: 190px;
+    
+    }
+
+
+   /*..CATEGORIAS COSTADO**/
+   .intro-dos-vacios{
+     width: 5%;
+      max-width: 20px;
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     max-height: 120px;
+   
+
+   }
+
+  
+
+
+    .menu{
+      width: 100%;
+      height: 100%;
+      max-height: 40px;
+      margin: 4px, 4px;
+      padding: 8px 2px;
+ 
+    }
+
+    .menu ul{
+      display: flex;
+      flex-direction: row;
+    }
+     
+    
+  
+  
+       /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
+       .menu  ul ul {
+        display:none;
+        position:absolute;
+        top:  22.7%;  /*ESTA MEDIDA HACE QUE EL MENU ESCOCIDO SE SITUE ABAJO DEL TITULO*/
+        left: 10px;
+        background-color: #000000;
+        padding:0;
+        width: 60%;
+       }
+  
+        /* items del menu desplegable al pasar el ratón */
+      .menu  ul li:hover > ul {
+        display:block;
+        width: 80%;  /*IMPORTANTE*/
+       }
+   
+   .menu-intro-titulo{
+     display: flex;
+     width: 100%;
+   }
+
+   .menu-intro-titulo  h2{
+   font-size: 1.6rem;
+   }
+
+   .menu-intro-titulo  a h2{
+    font-size: 1.6rem;
+    }
+  /*..........................*/
+  /*PAGINA DE RECETAS SUBCATEGORIAS IMAGENES*/
+
+  .imagenes-pequeñas .subcategoria h3{
+    font-size: 0.8rem;
+  }
+
+  /*...................*/
+   .container-posts-categorias{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+  
+  }
+
+    .columna-categorias{
+    width: 100%;
+    }
+
+    .por-categoria{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+   
+    }
+
+    .por-foto{
+      width: 100%;
+      max-width: 640px;
+  
+    
+    }
+
+    .por-foto img{
+      width: 95%;
+      margin: auto;
+    }
+
+
+    .por-descripcion h2{
+     font-size: 1.4rem;
+    }
+
+    .por-descripcion p{
+     font-size: 1.2rem;
+    }
+
+
+
+    #aside{
+     width: 100%;
+    }
+  /*...................*/
+
+
+  /*....CONTAINER DONDE ESTAN LAS SUBCATEGORIAS PERO DE PALABRAS SIN IMAGENES...........*/
+  #texto-slider{
+    display: block;
+    width: 96%;
+  }
+
+
+#texto-slider::-webkit-scrollbar { /* WebKit */
+  width: 0px;
+  height: 5px;
+  background-color: #568632;
+  }
+
+  /*.............................*/
+  
+     
+
+
+   /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/
+ 
+    .fecha{
+      display: none;
+    }
+
+    .container-posts-categoria{
+      width:100%;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    #posts-categoria{
+      display: flex;
+      width: 100%;
+     
+   
+    }
+
+    #aside{
+    width: 100%;
+   
+    }
+
+  /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
+     .elemento-categoria{
+    width: 100%;
+     display: block;
+     position: relative;
+      border-radius: 2px ;
+   
+       }
+
+       /*CONTIENE SOLO LA IMAGEN*/
+      #imagen-elemento-categoria{
+        width: 100%;
+       height: 200px;
+        display: flex;
+        flex-direction: row;
+       margin-bottom: 1px;
+       border-top: 2px solid #DCDCDC;
+    
+      }
+
+
+      #imagen-elemento-categoria img{
+        width: 40%;
+        max-width: 150px;
+        height: 100%;
+        max-height: 150px;
+        margin-right: 15px;
+  
+       
+      }
+   
+     #imagen-elemento-categoria .imagen-descripcion{
+      display: block;
+      position: relative;
+      float: right;
+
+     }
+
+       /* TITULO DEL POST*/
+      #imagen-elemento-categoria .imagen-descripcion h2{
+      font-size: 1.3rem;
+      margin-top: 0.6%;
+      margin-bottom: 1.2%;
+      font-family: 'Times New Roman', 'sans serif';
+      font-weight: bolder;
+      color: #000000;
+      }
+  
+     /*...................*/
+
+     .container-total-carrusell{
+
+     }
+
+     #carrusel {
+      float:left;
+      width:95%;
+      overflow:hidden;
+      height: 280px;
+      position:relative;
+      margin-bottom: 50px;
+   
+      }
+
+      .carrusel {
+        width:4000px;
+        height: 200px;
+        left: 1px;
+        position:absolute;
+        z-index:0;
+      
+      
+       
+       }
+
+       .carrusel>div {
+        float: left;
+        height: 100%;
+        max-height: 200px;
+        margin-right: 14px;   /*ESPACIO */
+        width: 100%;
+        max-width: 210px;
+    }
+
+    .carrusel img {
+      width: 100%;
+      max-width: 210px;
+      height: 100%;
+      max-height: 190px;
+      padding: 2px 2px;
+    
+      }
+       
+  .product p{
+    margin-top: 8px;
+  }
+
+
+    /*..CONTAINER DE LAS FLECHAS Y CIRCULO ...*/ 
+    /*ALTURA DEL CIRCULO CON LA FLECHA INCLUIDA......... */
+    .carusel{
+      width: 100%;
+      display: flex;
+      position: absolute;
+      margin-top: 20%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+      margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+      }
+
+     /*MARGIN-LEFT HACE QUE EL CIRCULO NO SE DEFORME*/
+     .container-total-carrusell li.right-arrow{
+      margin-left:80%;
+      background-color: #d9d9d9;
+      }
+    
+       /* FLECHA RIGHT.............................FLECHA RIGHT............................ */
+       .container-total-carrusell ul li.right-arrow span{
+        top:50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+        right: 1.5%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+        transform: translateY(-50%) rotate(-45deg);
+        border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+        border-top: none;
+        }
+        /*............................*/
+     /*........................*/
+       
+
+
+/*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+  #footer-categorias{
+  clear: both;
+  position: relative;
+  height: 90px;
+  margin-top: -90px;
+  border-top: solid 1.5px #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 10;
+  }
+  
+  
+    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-categorias{
+    width: 100%;
+    margin: auto;
+    height: 75px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    clear: both;
+     z-index: 1000;
+     margin-bottom: 10px;
+    }
+ 
+  /*SUB-caja ICONOS SOCIALES*/
+  .icon-social1{
+   width: 49.5%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 75px;
+    }
+
+ .social2{
+   display: flex;
+   flex-direction: row;
+  
+ }
+
+  .icon-social1 li{
+   list-style: none;
+   display: inline-flex;
+   }
+
+.icon-social1 p{
+font-size: 1rem;
+word-spacing: -3px;
+letter-spacing: -2px;
+font-family: 'Archivo Black', sans-serif;
+padding-bottom: 10px;
+color: #2d2d2d;
+}
+
+.icon-social1 .icon-social1 ul{
+display: inline-flex;
+list-style: none;
+}
+
+
+.icon-social1  ul li .fa-envelope{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+.icon-social1  ul li .fa-facebook-f{
+background-color: oldlace;
+color:  #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+.icon-social1  ul li .fa-twitter{
+background-color: oldlace;
+color:   #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+
+
+.icon-social1 ul li .fa-instagram{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+ /*SUBCONTENEDOR DONDE ESTA EL BOX*/
+ .box{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 75px;
+   margin: auto;
+  }
+
+ /*LETRA DE LA CAJA DE SUSCRIBIR*/
+.box h3{
+  display: block;
+letter-spacing: -0.1px;
+font-family: 'Archivo Black', sans-serif;
+font-size: .7rem;
+font-weight: 400;
+margin-top: 3.8%;
+color: #2d2d2d;
+margin-top: 0.7%;
+}
+
+ /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
+ .box form{
+  display: flex;
+  margin-top: -1%;
+  width: 100%;
+  margin: auto;
+}
+
+
+
+/*CAJA DEL IMPUT EL LADO DE DONDE SE ESCRIBE*/
+.box input[type="text"]
+{
+background-color: #fff;
+display: flex;
+width:65%;
+height: 35px;
+border: 1.5px solid 	#DCDCDC;
+padding: 0 9px;
+border-radius: 5px 0 0 5px;
+
+
+}
+/*.EL COMPLEMENTO DEL ANTERIOR*/
+.box button[type="submit"]{
+left: 7px;  /*EL TRUCO IMPORTANTE*/
+border-radius: 0 5px 5px 0;
+width: 35%;
+height: 35px;
+border: none ;
+outline: none;
+cursor: pointer;
+background-color: #2d2d2d;
+color: #fff;
+font-size: 0.7rem;
+font-family: 'Archivo Black', sans-serif;
+}
+
+.box button[type="submit"]:hover{
+background: ;
+}
+/*FIN de la cajita del correo */
+
+
+/*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+
+ /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+
+   #footer-second-categorias{
+   width: 100%;
+   height: 10px;  /*IMPORTANTE*/
+   margin:auto;
+  }
+/*..SUBCAJA DE DIV FOOTERSENIDN...*/
+  .final-food-categorias p{
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 0.7rem;
+  }
+
+
+    }
+
+
+
+
+
+  
+  /* 769 A 900 ..................................................................................................................................................................................................... */
+  
+  @media only screen and (min-width: 641px) and (max-width: 700px){
+    
+  #wrapper-categorias {
+  margin:0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  }
+      
+   #wrapper-categorias > * {
+  padding:20px;
+  }
+  
+  div {
+    flex: 1;
+  }
+  
+    /*...CATEGORIA Y SUCATEGRIAS............................................*/
+  /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
+   #container-categorias{
+  width:100%;
+  margin: auto;
+  margin-top: 90px;
+   }
+
+  /*border-bottom: 2px solid #DDD;*/
+  /*HEADER LLAMADO CATEGORIA*/
+     header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  85px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+     }
+
+
+       /*HEADER LLAMADO CATEGORIA*/
+       header.black{
+      width: 100%;
+      height:  85px;
+      background-color:#fff ;
+      }
+  
+    /*FIN ANIMACION SUBRAYADO */
+    #cabecera-categorias{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    height:   45px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+     }
+
+     /*caja */
+   .logo{
+    display:  inline-flex ;
+    width: 50%;
+    height: 45px;
+    }
+       
+   .logo img {
+    width: 90%;
+    height: 45px;
+    }
+ 
+
+       /*CONTAINER DE LA HAMBURGUESA*/
+       .menu-btn {
+       display: flex;
+       flex-direction: row;
+        width: 20%;
+        height: 45px;
+         }
+
+
+
+ /*BOTON ICONO REVISTA Y SOCIALES*/
+   .boletin{
+    width: 15%;
+   display: block;
+   position: relative;
+   float: left;
+   height: 45px;
+   }
+ 
+
+ /*LETRA INSCRIBETE*/
+   .boletin a h4 {
+   font-size: 0.9rem;
+   letter-spacing: -0.2px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 900;
+   color:#2d2d2d;
+   margin-top: 30px;
+   background-color: rebeccapurple;
+    }
+
+    .boletin  a h4:hover{
+    color: #639a3a;
+   text-decoration: none;
+    }
+ 
+ 
+
+ 
+   /*HAMBURGUESA*/
+   .menu-btn__burger {
+   display: block;
+   position: relative;
+   float: right;
+   margin-top:  26px;
+   width: 38px;
+   height: 5px;
+   background: #2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2);
+   transition: all .5s ease-in-out;
+   z-index: 1000;
+  }
+   
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+   content: '';
+   position: absolute;
+   width: 38px;
+   height: 5px;
+   margin-left: 1%;
+   background:#2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+   transition: all .5s ease-in-out;
+  z-index: 800;
+   
+  }
+ 
+ 
+  .menu-btn__burger::before {
+   transform: translateY(-12px);
+   z-index:3000;
+   }
+  .menu-btn__burger::after {
+   transform: translateY(12px);
+   z-index:3000;
+   }
+
+   nav{
+     background-position: 80% 90%;
+  
+   }
+
+    nav ul{
+      width: 90%;
+      margin-top: 100px;
+    }
+   nav ul li{
+    margin-left: -10px;
+    height: 40px;
+   }
+ 
+
+   nav ul li p{
+     font-size: 1rem;
+   }
+
+  
+      /*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
+    #container-categorias-subcategorias{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .intro{
+     width: 100%;
+    }
+
+    .menu-introescrito{
+      width: 90%;
+    }
+
+
+    .imagenes-pequeñas{
+      width: 100%;
+    }
+
+      /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
+      .subcategoria{
+     width: 80%;
+       }
+
+    .imagenes-pequeñas .subcategoria h3{ 
+      font-size: 0.8rem;
+     
+    }
+
+
+  
+     
+   
+     /*...TITULO DE LA CATEGORIA..DE LA PAGINA DE LA CATEGORIA...................letras*/
+     .categoria h2{
+      font-size: 1.6rem;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-decoration-line: underline;
+      font-weight: bolder;
+      color:#2d2d2d;
+      }
+    
+
+    .columna-categorias{
+
+    }
+
+    /*DE LA PAGINA RECETAS*/
+   /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/
+    .container-posts-categorias{
+    width: 100%;
+    margin-top: 12%; /*PARA QUE ENTRE LA FECHA EN LA FOTO*/
+    display: flex;
+    flex-direction:column;
+    margin: auto;
+    }
+
+  .container-posts-categorias #posts-categoria{
+    display: block;
+    width: 100%;
+  }
+
+
+        /*... background-color: #f9e4e3;..   #EFF4EB*/
+  /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
+     .elemento-categoria{
+    width: 610px;
+    display: flex;
+    flex-direction: column;
+     border-radius: 2px ;
+    }
+
+       /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
+      #imagen-elemento-categoria{
+        width: 100%;
+        height: 100%;
+        max-height: 180px;
+      }
+
+
+      #imagen-elemento-categoria img{
+        width: 160px;
+        height: 160px;
+        display: block;
+        position: relative;
+        float: left;
+      }
+
+    .imagen-descripcion{
+    width: 380px;
+    display: block;
+    position: relative;
+    float: right;
+    margin-right:  45px;
+    }
+
+           /* TITULO DEL POST*/
+   .elemento-categoria h2{
+      margin-bottom: 10px;
+      text-align:start; 
+      font-size: 1.2rem;
+      margin-top:  5px;
+      font-family: 'Times New Roman', 'sans serif';
+      font-weight: bolder;
+      color: #000000;
+     }
+   
+     .imagen-descripcion p{
+      margin-bottom: 10px;
+      text-align:start;
+      font-size: 1.1rem;
+      margin-top:  1px;
+      font-family: 'Times New Roman', 'sans serif';
+      font-weight: 400;
+      color: #2d2d2d;
+     }
+     
+
+    /*ALTURA DE LA FLECHA*/
+     .carusel ul{
+       margin-top: 10%;
+     }
+
+     /*CIRCULO FORMADO REDONDO*/
+     .container-total-carrusell li.right-arrow{
+      margin-left:84%;
+     }
+/*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+  #footer-categorias{
+  clear: both;
+  position: relative;
+  height: 80px;
+  margin-top: -80px;
+  border-top: solid 1.5px #DCDCDC;
+  display: flex;
+  flex-direction: column;
+   width: 100%;
+  z-index: 100;
+  }
+  
+  
+    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-categorias{
+    width: 100%;
+    margin: auto;
+    height: 85px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    clear: both;
+     z-index: 100;
+     margin-bottom: 15px;
+    }
+ 
+  /*SUB-caja ICONOS SOCIALES*/
+   .icon-social1{
+    width: 49.5%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 70px;
+    }
+
+   .social2{
+   display: flex;
+   flex-direction: row;
+   }
+
+ .icon-social1 li{
+ list-style: none;
+ display: inline-flex;
+ }
+
+.icon-social1 p{
+font-size: 1rem;
+word-spacing: -3px;
+letter-spacing: -2px;
+font-family: 'Archivo Black', sans-serif;
+padding-bottom: 10px;
+color: #2d2d2d;
+}
+
+.icon-social1 .icon-social1 ul{
+display: inline-flex;
+list-style: none;
+}
+
+
+.icon-social1  ul li .fa-envelope{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+.icon-social1  ul li .fa-facebook-f{
+background-color: oldlace;
+color:  #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+.icon-social1  ul li .fa-twitter{
+background-color: oldlace;
+color:   #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+
+
+.icon-social1 ul li .fa-instagram{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+ /*SUBCONTENEDOR DONDE ESTA EL BOX*/
+  .box{
+  display: flex;
+  flex-direction: column;
+  width: 49.5%;
+  height: 70px;
+  }
+
+ /*LETRA DE LA CAJA DE SUSCRIBIR*/
+.box h3{
+  display: block;
+  margin-left: -5px;
+letter-spacing: -0.1px;
+font-family: 'Archivo Black', sans-serif;
+font-size: .8rem;
+font-weight: 400;
+margin-top: 1%;
+color: #2d2d2d;
+}
+
+ /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
+  .box form{
+  display: flex;
+  flex-direction: row;
+  margin-top: 1%;
+  width: 90%;
+}
+
+
+
+/*CAJA DEL IMPUT EL LADO DE DONDE SE ESCRIBE*/
+.box input[type="text"]
+{
+background-color: #fff;
+display: flex;
+width:65%;
+height: 35px;
+border: 1.5px solid 	#DCDCDC;
+padding: 0 9px;
+border-radius: 5px 0 0 5px;
+}
+
+
+/*.EL COMPLEMENTO DEL ANTERIOR*/
+.box button[type="submit"]{
+left: 7px;  /*EL TRUCO IMPORTANTE*/
+border-radius: 0 5px 5px 0;
+width: 30%;
+height: 35px;
+border: none ;
+outline: none;
+cursor: pointer;
+background-color: #2d2d2d;
+color: #fff;
+font-size: 0.7rem;
+font-family: 'Archivo Black', sans-serif;
+}
+
+.box button[type="submit"]:hover{
+background: ;
+}
+/*FIN de la cajita del correo */
+
+
+ /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+
+   #footer-second-categorias{
+   width: 100%;
+   height: 10px;  /*IMPORTANTE*/
+   margin:auto;
+  }
+
+   /*..SUBCAJA DE DIV FOOTERSENIDN...*/
+  .final-food-categorias p{
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 0.7rem;
+  }
+
+
+     }
+  
+ /*HASTA AQUI ESTAN LOS MENUS OCULTOS.....................*/
+
+
+
+
+
+
+ /* 901 A 1000 .............IPAD  768 1024....................................................... */
+  
+ @media only screen and (min-width: 700px) and (max-width: 768px){
+  #wrapper-categorias {
+  margin:0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  }
+      
+  #wrapper-categorias > * {
+  padding:20px;
+  }
+  
+  div {
+    flex: 1;
+  }
+  
+    /*...CATEGORIA Y SUCATEGRIAS............................................*/
+/*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
+  #container-categorias{
+  width:100%;
+  margin: auto;
+  margin-top: 90px;
+
+  }
+
+
+    /*HEADER LLAMADO CATEGORIA*/
+    header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  90px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+     }
+
+    /*HEADER LLAMADO CATEGORIA*/
+    header.black{
+    width: 100%;
+    height:  90px;
+    background-color:#fff ;
+    }
+  
+  /*FIN ANIMACION SUBRAYADO */
+   #cabecera-categorias{
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+    margin: auto;
+    height: 70px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    background-color: #fff;
+    }
+
+    
+     /*caja */
+    .logo{
+    display:flex ;
+    width: 70%;
+
+    height: 50px;
+    margin-bottom: 8px;
+    }
+       
+    .logo img {
+    width: 100%;
+    }
+ 
+     /*CONTAINER DE LA HAMBURGUESA*/
+     .menu-btn {
+      width: 20%;
+      max-width: 150px;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+      margin-bottom: 8px;
+
+       }
+  
+   /*BOTON ICONO REVISTA Y SOCIALES*/
+   .boletin{
+    width: 100%;
+    max-width: 120px;
+
+    }
+ 
+
+ 
+   /*LETRA INSCRIBETE*/
+  .boletin h4 {
+   font-size: 0.94rem;
+   letter-spacing: -0.2px;
+   font-family: 'Cabin', sans-serif;
+   font-weight: 600;
+   color:#2d2d2d;
+   background-color: yellow;
+   }
+   
+    .boletin a h4:hover{
+    color: #639a3a;
+    text-decoration: none;
+    }
+ 
+  
+
+   /*HAMBURGUESA*/
+   .menu-btn__burger {
+   display: block;
+   width: 5%;
+   max-width: 38px;
+   height: 5px;
+   background: #2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2);
+   transition: all .5s ease-in-out;
+   z-index: 1000;
+  }
+   
+   .menu-btn__burger::before,
+   .menu-btn__burger::after {
+   content: '';
+   position: absolute;
+   width: 38px;
+   height: 5px;
+   margin-left: 1%;
+   background:#2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+   transition: all .5s ease-in-out;
+    z-index: 800;
+   }
+ 
+ 
+   .menu-btn__burger::before {
+   transform: translateY(-12px);
+   z-index:3000;
+   }
+
+   .menu-btn__burger::after {
+   transform: translateY(12px);
+   z-index:3000;
+   }
+
+   /*NAV*/
+    nav ul  {
+      margin-left: -5px;
+    }
+     nav ul li p{
+       font-size: 1rem;
+       z-index: 1000;
+     }
+
+     nav ul li ul li a{
+      width: 100%;
+       margin-left: 76px;
+     }
+   /*CIERRE NAV*/
+ 
+    /*CAJA DEL MENU-INTROESCRITO Y INTRO-DOS-VACIOS (COSTADO)*/
+   .intro{
+     display: block;
+     width: 100%;
+  
+   }
+      .menu-introescrito{
+        display: flex;
+        width: 90%;
+      }
+
+      .intro-dos-vacios{
+        display: flex;
+        width: 10%;
+      }
+      .imagenes-pequeñas{
+        width: 100%;
+      }
+  
+        /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
+        .subcategoria{
+       width: 80%;
+         }
+  
+      .imagenes-pequeñas .subcategoria h3{ 
+        font-size: 0.8rem;
+       
+      }
+  
+  
+    
+       
+     
+       /*...TITULO DE LA CATEGORIA..DE LA PAGINA DE LA CATEGORIA...................letras*/
+       .categoria h2{
+        font-size: 1.6rem;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration-line: underline;
+        font-weight: bolder;
+        color:#2d2d2d;
+        }
+      
+  
+  
+  
+     /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/
+      .container-posts-categorias{
+      width: 100%;
+      margin-top: 12%; /*PARA QUE ENTRE LA FECHA EN LA FOTO*/
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      }
+  
+  
+    .container-posts-categorias #posts-categoria{
+      display: block;
+      width: 100%;
+    }
+  
+  
+          /*... background-color: #f9e4e3;..   #EFF4EB*/
+    /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
+       .elemento-categoria{
+      width: 610px;
+      display: flex;
+      flex-direction: column;
+       border-radius: 2px ;
+      }
+  
+         /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
+        #imagen-elemento-categoria{
+          width: 100%;
+          height: 100%;
+          max-height: 180px;
+        }
+  
+  
+        #imagen-elemento-categoria img{
+          width: 160px;
+          height: 160px;
+          display: block;
+          position: relative;
+          float: left;
+        }
+  
+      .imagen-descripcion{
+      width: 380px;
+      display: block;
+      position: relative;
+      float: right;
+      margin-right:  45px;
+      }
+  
+             /* TITULO DEL POST*/
+     .elemento-categoria h2{
+        margin-bottom: 10px;
+        text-align:start; 
+        font-size: 1.2rem;
+        margin-top:  5px;
+        font-family: 'Times New Roman', 'sans serif';
+        font-weight: bolder;
+        color: #000000;
+       }
+     
+       .imagen-descripcion p{
+        margin-bottom: 10px;
+        text-align:start;
+        font-size: 1.1rem;
+        margin-top:  1px;
+        font-family: 'Times New Roman', 'sans serif';
+        font-weight: 400;
+        color: #2d2d2d;
+       }
+       
+  
+     /*CARRUSELL*/
+
+     .carusel{
+      margin-top: 18%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+
+     }
+     
+     /*CIRCULO  AYUDA A QUE ESTE REDONDO*/
+     .container-total-carrusell li.right-arrow{
+      margin-left: 87%;
+     }
+       
+     .container-total-carrusell ul li.right-arrow span{
+     left:  96%; 
+     }
+/*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+  #footer-categorias{
+  clear: both;
+  position: relative;
+  height: 80px;
+  margin-top: -80px;
+  border-top: solid 1.5px #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 10;
+  }
+  
+  
+    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-categorias{
+    width: 100%;
+    margin: auto;
+    height: 90px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    clear: both;
+     z-index: 10;
+     margin-bottom: 20px;
+    }
+ 
+  /*SUB-caja ICONOS SOCIALES*/
+   .icon-social1{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 70px;
+    }
+   .social2{
+   display: flex;
+   flex-direction: row; 
+   }
+
+   .icon-social1 li{
+   list-style: none;
+   display: inline-flex;
+   }
+
+.icon-social1 p{
+font-size: 1rem;
+word-spacing: -3px;
+letter-spacing: -2px;
+font-family: 'Archivo Black', sans-serif;
+padding-bottom: 10px;
+color: #2d2d2d;
+}
+
+.icon-social1 .icon-social1 ul{
+display: inline-flex;
+list-style: none;
+}
+
+
+.icon-social1  ul li .fa-envelope{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+.icon-social1  ul li .fa-facebook-f{
+background-color: oldlace;
+color:  #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+.icon-social1  ul li .fa-twitter{
+background-color: oldlace;
+color:   #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+
+
+.icon-social1 ul li .fa-instagram{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+  /*SUBCONTENEDOR DONDE ESTA EL BOX*/
+  .box{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 70px;
+   margin: auto;
+   }
+
+  /*LETRA DE LA CAJA DE SUSCRIBIR*/
+  .box h3{
+  display: block;
+  letter-spacing: -0.1px;
+  font-size: .8rem;
+  font-weight: 400;
+  margin-top: 0.8%;
+  color: #2d2d2d;
+  margin-right: 50px;
+  }
+
+ /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
+  .box form{
+  display: flex;
+  margin-top: -1%;
+  width: 100%;
+  margin: auto;
+  }
+
+  /*CAJA DEL IMPUT EL LADO DE DONDE SE ESCRIBE*/
+  .box input[type="text"]
+  {
+  background-color: #fff;
+  display: flex;
+  width:70%;
+  height: 36px;
+  border: 1.5px solid 	#DCDCDC;
+  padding: 0 7px;
+  border-radius: 5px 0 0 5px;
+  }
+
+/*.EL COMPLEMENTO DEL ANTERIOR*/
+.box button[type="submit"]{
+left: 7px;  /*EL TRUCO IMPORTANTE*/
+border-radius: 0 5px 5px 0;
+width: 30%;
+max-width: 90px;
+height: 36px;
+border: none ;
+outline: none;
+cursor: pointer;
+background-color: #2d2d2d;
+color: #fff;
+font-size: 0.7rem;
+font-family: 'Archivo Black', sans-serif;
+}
+
+.box button[type="submit"]:hover{
+background: ;
+}
+/*FIN de la cajita del correo */
+
+
+
+   #footer-second-categorias{
+   width: 100%;
+   height: 10px;  /*IMPORTANTE*/
+   margin:auto;
+  }
+/*..SUBCAJA DE DIV FOOTERSENIDN...*/
+  .final-food-categorias p{
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 0.7rem;
+  }
+
+
+/* FINAL.....FOOTER......................*/
+
+
+    }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* 1001 A 1080 ..................................................................................................................................................................................................... */
+
+  @media only screen and (min-width: 769px) and (max-width: 950px){
+
+  #wrapper-categorias {
+  margin:0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  }
+      
+  #wrapper-categorias > * {
+  padding:20px;
+  }
+  
+   div {
+    flex: 1;
+    }
+  
+    /*...CATEGORIA Y SUCATEGRIAS............................................*/
+/*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
+#container-categorias{
+  width:100%;
+  margin: auto;
+  margin-top: 90px;
+}
+
+ /*border-bottom: 2px solid #DDD;*/
+  
+    /*HEADER LLAMADO CATEGORIA*/
+    header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      margin: auto;
+      height:  82px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+       }
+  
+      /*HEADER LLAMADO CATEGORIA*/
+      header.black{
+      width: 100%;
+      height:  82px;
+      background-color:#fff ;
+      }
+    
+    /*FIN ANIMACION SUBRAYADO */
+     #cabecera-categorias{
+      width: 100%;
+      display: flex; 
+      flex-direction: row;
+      margin: auto;
+      height: 50px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+   
+      }
+  
+      
+       /*caja */
+      .logo{
+      display:flex ;
+      width: 60%;
+      height: 50px;
+      }
+         
+      .logo img {
+      width: 80%;
+      height: 50px;
+      }
+   
+       /*CONTAINER DE LA HAMBURGUESA*/
+       .menu-btn {
+        width: 20%;
+        max-width: 150px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+         }
+    
+     /*BOTON ICONO REVISTA Y SOCIALES*/
+     .boletin{
+      width: 100%;
+      max-width: 120px;
+      }
+   
+  
+   
+     /*LETRA INSCRIBETE*/
+    .boletin h4 {
+     font-size: 0.94rem;
+     letter-spacing: -0.2px;
+     font-family: 'Cabin', sans-serif;
+     font-weight: 600;
+     color:#2d2d2d;
+     background-color: red;
+     }
+     
+      .boletin a h4:hover{
+      color: #639a3a;
+      text-decoration: none;
+      }
+   
+    
+  
+     /*HAMBURGUESA*/
+     .menu-btn__burger {
+     display: block;
+     width: 5%;
+     max-width: 38px;
+     height: 5px;
+     background: #2d2d2d;
+     border-radius: 2px;
+     box-shadow: 0 2px 5px rgba(255,101,47,.2);
+     transition: all .5s ease-in-out;
+     z-index: 1000;
+    }
+     
+   
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+   content: '';
+   position: absolute;
+   width: 38px;
+   height: 5px;
+   background:#2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+   transition: all .5s ease-in-out;
+  z-index: 800;
+  }
+ 
+ 
+  .menu-btn__burger::before {
+   transform: translateY(-12px);
+   z-index:3000;
+   }
+
+  .menu-btn__burger::after {
+   transform: translateY(12px);
+   z-index:3000;
+   }
+ 
+
+   /*NAV*/
+    nav ul li a p{
+      font-size: 1rem;
+      z-index: 1000;
+    }
+
+    nav ul{
+      margin-left: -18px;
+    }
+    
+    nav ul li ul li a{
+      margin-left: 10px;
+    }
+    /* SE PUEDE PONER LA LETRA A LO ANCHO*/
+    nav ul li ul li a p{
+      margin-left: 34px;
+      width: 100%;
+      font-size: 0.8rem;
+    }
+
+
+   /*FIN NAV*/
+   .intro{
+    display: block;
+    width: 100%;
+ 
+  }
+     .menu-introescrito{
+       display: flex;
+       width: 92%;
+     }
+
+     .intro-dos-vacios{
+       display: flex;
+       width: 10%;
+     }
+     .imagenes-pequeñas{
+       width: 100%;
+     }
+ 
+       /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
+       .subcategoria{
+      width: 80%;
+        }
+ 
+     .imagenes-pequeñas .subcategoria h3{ 
+       font-size: 0.8rem;
+      
+     }
+
+  /*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
+   .container-posts-categorias{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+  
+        /*CAJA DE NAVEGACION DE LAS CATEGORIAS Y SUBCATEGORIAS*/
+     #posts-categoria{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: auto;
+      height: 90px; 
+    
+     }
+     
+     /*...TITULO DE LA CATEGORIA..DE LA PAGINA DE LA CATEGORIA...................letras*/
+     .categoria h2{
+      font-size: 1.6rem;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-decoration-line: underline;
+      font-weight: bolder;
+      color:#2d2d2d;
+      }
+     
+       
+   
+
+    /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
+   .elemento-categoria{
+  display: block;
+  position: relative;
+  float: left;
+   width: 100%;
+   text-align: start;
+   border-radius: 2px ;
+   background-color:#EFF4EB;
+   }
+
+       /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
+      #imagen-elemento-categoria{
+      width: 45%;
+      max-width: 280px;
+      height:  480px;
+      margin-right: 30px;
+      }
+
+    
+      
+      #imagen-elemento-categoria img{
+        width: 100%;
+        max-width: 280px;
+      }
+
+ 
+     .imagen-descripcion{
+
+    }
+      
+             /* TITULO DEL POST*/
+             .imagen-descripcion h2{
+              margin-bottom: 5px;
+              text-align:start; 
+              font-size: 1.3em;
+              margin-top:  10px;
+              font-family: 'Times New Roman', 'sans serif';
+              font-weight: 900;
+              color: #000000;
+             }
+        
+    .imagen-descripcion p{
+      margin-bottom: 20px;
+      text-align:start;
+      font-size: 0.8;
+      font-family: 'Times New Roman', 'sans serif';
+      font-weight: 400;
+      color: #2d2d2d;
+     }
+     
+     .carusel ul{
+       margin-top: 7%;
+     }
+
+     .container-total-carrusell li.right-arrow{
+      margin-left: 85%;
+     }
+   
+/*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+  #footer-categorias{
+  width: 100%;
+  clear: both;
+  position: relative;
+  height: 90px;
+  margin-top: -90px;
+   border-top: solid 1.5px #DCDCDC;
+   display: flex;
+   flex-direction: column;
+   z-index: 10;
+   }
+  
+  
+    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-categorias{
+    width: 100%;
+    height:  100px;
+    display: flex;
+    flex-direction: row;  
+    margin: auto;
+    justify-content: space-between;
+    clear: both;
+     z-index: 1000;
+     margin-bottom: 20px;
+    }
+ 
+    /*SUB-caja ICONOS SOCIALES*/
+    .icon-social1{
+     width: 49.5%;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    }
+
+
+  .icon-social1 li{
+  list-style: none;
+   display: inline-flex;
+   }
+
+.icon-social1 p{
+font-size: 1rem;
+word-spacing: -3px;
+letter-spacing: -2px;
+font-family: 'Archivo Black', sans-serif;
+padding-bottom: 10px;
+color: #2d2d2d;
+}
+
+.icon-social1 .icon-social1 ul{
+display: inline-flex;
+list-style: none;
+}
+
+
+.icon-social1  ul li .fa-envelope{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+.icon-social1  ul li .fa-facebook-f{
+background-color: oldlace;
+color:  #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+.icon-social1  ul li .fa-twitter{
+background-color: oldlace;
+color:   #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+
+
+.icon-social1 ul li .fa-instagram{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+ /*SUBCONTENEDOR DONDE ESTA EL BOX*/
+ .box{
+  display: flex;
+  flex-direction: column;
+  width: 49.5%;
+  height: 80px;
+  }
+
+  /*LETRA DE LA CAJA DE SUSCRIBIR*/
+  .box h3{
+  display: block;
+  letter-spacing: -0.1px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: .8rem;
+  font-weight: 400;
+  margin-top: 0.8%;
+  color: #2d2d2d;
+  margin-right: 80px;
+   }
+
+ /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
+ .box form{
+  display: flex;
+  flex-direction: row;
+  margin-top: -1%;
+  width: 100%;
+  margin: auto;
+  margin-left: 5px;
+  background-color: darkgreen;
+ }
+
+
+
+/*CAJA DEL IMPUT EL LADO DE DONDE SE ESCRIBE*/
+.box input[type="text"]
+{
+background-color: #fff;
+display: flex;
+width:70%;
+height: 37px;
+border: 1.5px solid 	#DCDCDC;
+padding: 0 9px;
+border-radius: 5px 0 0 5px;
+
+
+}
+/*.EL COMPLEMENTO DEL ANTERIOR*/
+.box button[type="submit"]{
+left: 7px;  /*EL TRUCO IMPORTANTE*/
+border-radius: 0 5px 5px 0;
+width: 30%;
+height: 37px;
+border: none ;
+outline: none;
+cursor: pointer;
+background-color: #2d2d2d;
+color: #fff;
+font-size: 0.7rem;
+font-family: 'Archivo Black', sans-serif;
+}
+
+.box button[type="submit"]:hover{
+background: ;
+}
+/*FIN de la cajita del correo */
+
+
+/*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+
+ /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+
+   #footer-second-categorias{
+   width: 100%;
+
+   height: 10px;  /*IMPORTANTE*/
+   margin:auto;
+  }
+  /*..SUBCAJA DE DIV FOOTERSENIDN...*/
+  .final-food-categorias p{
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 0.7rem;
+  }
+
+
+    }
+
+
+
+
+
+
+
+    
+  /* 1081 A 1149 ..................................................................................................................................................................................................... */
+  
+
+  @media only screen and (min-width: 951px) and (max-width: 1080px){
+
+#wrapper-categorias {
+  margin:0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+      
+#wrapper-categorias > * {
+  padding:   30px;
+  }
+  
+  div {
+    flex: 1;
+  }
+  
+    /*...CATEGORIA Y SUCATEGRIAS............................................*/
+/*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
+  #container-categorias{
+  width:100%;
+  margin: auto;
+  margin-top: 90px;
+
+  }
+
+ /*border-bottom: 2px solid #DDD;*/
+  /*HEADER LLAMADO CATEGORIA*/
+  header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  90px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+     }
+
+    /*HEADER LLAMADO CATEGORIA*/
+    header.black{
+    width: 100%;
+    height:  90px;
+    background-color:#fff ;
+    }
+  
+  /*FIN ANIMACION SUBRAYADO */
+   #cabecera-categorias{
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+    margin: auto;
+    height: 50px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    margin-top: -5px;
+    }
+
+    
+     /*caja */
+    .logo{
+    display:flex ;
+    width: 60%;
+    height: 50px;
+    }
+       
+    .logo img {
+    width: 80%;
+    height: 50px;
+    }
+ 
+     /*CONTAINER DE LA HAMBURGUESA*/
+     .menu-btn {
+      width: 20%;
+      max-width: 150px;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+       }
+  
+   /*BOTON ICONO REVISTA Y SOCIALES*/
+   .boletin{
+    width: 100%;
+    max-width: 120px;
+    }
+ 
+
+ 
+   /*LETRA INSCRIBETE*/
+  .boletin h4 {
+   font-size: 0.94rem;
+   letter-spacing: -0.2px;
+   font-family: 'Cabin', sans-serif;
+   font-weight: 600;
+   color:#2d2d2d;
+   background-color: rosybrown;
+   }
+   
+    .boletin a h4:hover{
+    color: #639a3a;
+    text-decoration: none;
+    }
+ 
+  
+
+   /*HAMBURGUESA*/
+   .menu-btn__burger {
+   display: block;
+   width: 5%;
+   max-width: 38px;
+   height: 5px;
+   background: #2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2);
+   transition: all .5s ease-in-out;
+   z-index: 1000;
+  }
+   
+ 
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+ content: '';
+ position: absolute;
+ width: 38px;
+ height: 5px;
+ background:#2d2d2d;
+ border-radius: 2px;
+ box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+ transition: all .5s ease-in-out;
+z-index: 800;
+}
+
+
+.menu-btn__burger::before {
+ transform: translateY(-12px);
+ z-index:3000;
+ }
+
+.menu-btn__burger::after {
+ transform: translateY(12px);
+ z-index:3000;
+ }
+
+
+ /*NAV*/
+  nav ul li a p{
+    font-size: 1rem;
+    z-index: 1000;
+  }
+
+  nav ul{
+    margin-left: -18px;
+  }
+  
+  nav ul li ul li a{
+    margin-left: 10px;
+  }
+  /* SE PUEDE PONER LA LETRA A LO ANCHO*/
+  nav ul li ul li a p{
+    margin-left: 34px;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+
+ /*FIN NAV*/
+ .intro{
+  display: block;
+  width: 100%;
+
+}
+   .menu-introescrito{
+     display: flex;
+     width: 92%;
+   }
+
+   .intro-dos-vacios{
+     display: flex;
+     width: 10%;
+   }
+   .imagenes-pequeñas{
+     width: 100%;
+   }
+
+     /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
+     .subcategoria{
+    width: 80%;
+      }
+
+   .imagenes-pequeñas .subcategoria h3{ 
+     font-size: 0.8rem;
+    
+   }
+
+/*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
+ .container-posts-categorias{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  }
+
+      /*CAJA DE NAVEGACION DE LAS CATEGORIAS Y SUBCATEGORIAS*/
+   #posts-categoria{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    height: 90px; 
+  
+   }
+   
+   /*...TITULO DE LA CATEGORIA..DE LA PAGINA DE LA CATEGORIA...................letras*/
+   .categoria h2{
+    font-size: 1.6rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration-line: underline;
+    font-weight: bolder;
+    color:#2d2d2d;
+    }
+   
+     
+ 
+
+  /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
+ .elemento-categoria{
+display: block;
+position: relative;
+float: left;
+ width: 100%;
+ text-align: start;
+ border-radius: 2px ;
+ background-color:#EFF4EB;
+ }
+
+     /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
+    #imagen-elemento-categoria{
+    width: 45%;
+    max-width: 280px;
+    height:  480px;
+    margin-right: 30px;
+    }
+
+  
+    
+    #imagen-elemento-categoria img{
+      width: 100%;
+      max-width: 280px;
+    }
+
+
+   .imagen-descripcion{
+
+  }
+    
+           /* TITULO DEL POST*/
+           .imagen-descripcion h2{
+            margin-bottom: 5px;
+            text-align:start; 
+            font-size: 1.3em;
+            margin-top:  10px;
+            font-family: 'Times New Roman', 'sans serif';
+            font-weight: 900;
+            color: #000000;
+           }
+      
+  .imagen-descripcion p{
+    margin-bottom: 20px;
+    text-align:start;
+    font-size: 0.8;
+    font-family: 'Times New Roman', 'sans serif';
+    font-weight: 400;
+    color: #2d2d2d;
+   }
+   
+   .carusel ul{
+     margin-top: 4%;
+   }
+
+   .container-total-carrusell li.right-arrow{
+    margin-left: 87%;
+   }
+ 
+       
+/*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+  #footer-categorias{
+  clear: both;
+  position: relative;
+  height: 90px;
+  margin-top: -90px;
+  border-top: solid 1.5px #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 10;
+  }
+  
+  
+    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-categorias{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    clear: both;
+     z-index: 10;
+     margin-bottom: 20px;
+    }
+ 
+  /*SUB-caja ICONOS SOCIALES*/
+  .icon-social1{
+   width: 49.8%;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    }
+
+  .social2{
+ 
+   }
+
+  .icon-social1 li{
+  list-style: none;
+   display: inline-flex;
+   }
+
+.icon-social1 p{
+font-size: 1.1rem;
+word-spacing: -2px;
+letter-spacing: -1px;
+font-family: 'Archivo Black', sans-serif;
+padding-bottom: 10px;
+color: #2d2d2d;
+}
+
+.icon-social1 .icon-social1 ul{
+display: inline-flex;
+list-style: none;
+}
+
+
+.icon-social1  ul li .fa-envelope{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+margin-right: 5px;
+}
+
+.icon-social1  ul li .fa-facebook-f{
+background-color: oldlace;
+color:  #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+margin-right: 5px;
+}
+
+
+.icon-social1  ul li .fa-twitter{
+background-color: oldlace;
+color:   #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+margin-right: 5px;
+}
+
+.icon-social1 ul li .fa-instagram{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+}
+
+
+  /*SUBCONTENEDOR DONDE ESTA EL BOX*/
+  .box{
+  display: flex;
+  flex-direction: column;
+  width: 49.8%;
+  height: 80px;
+  }
+
+ /*LETRA DE LA CAJA DE SUSCRIBIR*/
+   .box h3{
+  display: block;
+  letter-spacing: -0.1px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 3px;
+  margin-right: 78px;
+   color: #2d2d2d;
+   }
+
+ /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
+  .box form{
+  display: flex;
+  flex-direction: row;
+  margin-top: -2px;
+  width: 100%;
+  margin-left: 5px;
+  }
+
+
+
+/*CAJA DEL IMPUT EL LADO DE DONDE SE ESCRIBE*/
+.box input[type="text"]
+{
+background-color: #fff;
+display: flex;
+width:70%;
+height: 38px;
+border: 1.5px solid 	#DCDCDC;
+padding: 0 9px;
+border-radius: 5px 0 0 5px;
+
+
+}
+/*.EL COMPLEMENTO DEL ANTERIOR*/
+.box button[type="submit"]{
+left: 7px;  /*EL TRUCO IMPORTANTE*/
+border-radius: 0 5px 5px 0;
+width: 30%;
+height: 38px;
+border: none ;
+outline: none;
+cursor: pointer;
+background-color: #2d2d2d;
+color: #fff;
+font-size: 0.7rem;
+font-family: 'Archivo Black', sans-serif;
+}
+
+ #footer-categorias .box button[type="submit"]:hover{
+background: ;
+}
+/*FIN de la cajita del correo */
+
+
+/*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+
+ /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+
+   #footer-second-categorias{
+   width: 100%;
+   height: 10px;  /*IMPORTANTE*/
+   margin:auto;
+  }
+
+/*..SUBCAJA DE DIV FOOTERSENIDN...*/
+  .final-food-categorias p{
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 0.7rem;
+  }
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+  /* 1150 A 1199 ..................................................................................................................................................................................................... */
+  
+  @media only screen and (min-width: 1081px) and (max-width: 1149px){
+  #wrapper-categorias {
+  margin:0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  }
+      
+  #wrapper-categorias > * {
+  padding:30px;
+  }
+  
+  div {
+    flex: 1;
+  }
+  
+    /*...CATEGORIA Y SUCATEGRIAS............................................*/
+/*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
+  #container-categorias{
+  width:100%;
+  margin: auto;
+  margin-top: 90px;
+}
+
+ /*border-bottom: 2px solid #DDD;*/
+ 
+ /*border-bottom: 2px solid #DDD;*/
+  /*HEADER LLAMADO CATEGORIA*/
+  header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  90px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+     }
+
+    /*HEADER LLAMADO CATEGORIA*/
+    header.black{
+    width: 100%;
+    height:  90px;
+    background-color:#fff ;
+    }
+  
+  /*FIN ANIMACION SUBRAYADO */
+   #cabecera-categorias{
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+    margin: auto;
+    height: 50px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    margin-top: -5px;
+    }
+
+    
+     /*caja */
+    .logo{
+    display:flex ;
+    width: 60%;
+    height: 50px;
+    }
+       
+    .logo img {
+    width: 80%;
+    height: 50px;
+    }
+ 
+     /*CONTAINER DE LA HAMBURGUESA*/
+     .menu-btn {
+      width: 20%;
+      max-width: 150px;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+       }
+  
+   /*BOTON ICONO REVISTA Y SOCIALES*/
+   .boletin{
+    width: 100%;
+    max-width: 120px;
+    }
+ 
+
+ 
+   /*LETRA INSCRIBETE*/
+  .boletin h4 {
+   font-size: 0.94rem;
+   letter-spacing: -0.2px;
+   font-family: 'Cabin', sans-serif;
+   font-weight: 600;
+   color:#2d2d2d;
+   background-color: yellow;
+   }
+   
+    .boletin a h4:hover{
+    color: #639a3a;
+    text-decoration: none;
+    }
+ 
+  
+
+   /*HAMBURGUESA*/
+   .menu-btn__burger {
+   display: block;
+   width: 5%;
+   max-width: 38px;
+   height: 5px;
+   background: #2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2);
+   transition: all .5s ease-in-out;
+   z-index: 1000;
+  }
+   
+ 
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+ content: '';
+ position: absolute;
+ width: 38px;
+ height: 5px;
+ background:#2d2d2d;
+ border-radius: 2px;
+ box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+ transition: all .5s ease-in-out;
+z-index: 800;
+}
+
+
+.menu-btn__burger::before {
+ transform: translateY(-12px);
+ z-index:3000;
+ }
+
+.menu-btn__burger::after {
+ transform: translateY(12px);
+ z-index:3000;
+ }
+
+
+ /*NAV*/
+  nav ul li a p{
+    font-size: 1rem;
+    z-index: 1000;
+  }
+
+  nav ul{
+    margin-left: -18px;
+  }
+  
+  nav ul li ul li a{
+    margin-left: 10px;
+  }
+  /* SE PUEDE PONER LA LETRA A LO ANCHO*/
+  nav ul li ul li a p{
+    margin-left: 34px;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+
+ /*FIN NAV*/
+ .intro{
+  display: block;
+  width: 100%;
+
+}
+   .menu-introescrito{
+     display: flex;
+     width: 92%;
+   }
+
+   .intro-dos-vacios{
+     display: flex;
+     width: 10%;
+   }
+   .imagenes-pequeñas{
+     width: 100%;
+   }
+
+     /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
+     .subcategoria{
+    width: 80%;
+      }
+
+   .imagenes-pequeñas .subcategoria h3{ 
+     font-size: 0.8rem;
+    
+   }
+
+/*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
+ .container-posts-categorias{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  }
+
+      /*CAJA DE NAVEGACION DE LAS CATEGORIAS Y SUBCATEGORIAS*/
+   #posts-categoria{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    height: 90px; 
+  
+   }
+   
+   /*...TITULO DE LA CATEGORIA..DE LA PAGINA DE LA CATEGORIA...................letras*/
+   .categoria h2{
+    font-size: 1.6rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration-line: underline;
+    font-weight: bolder;
+    color:#2d2d2d;
+    }
+   
+     
+ 
+
+  /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
+ .elemento-categoria{
+display: block;
+position: relative;
+float: left;
+ width: 100%;
+ text-align: start;
+ border-radius: 2px ;
+ background-color:#EFF4EB;
+ }
+
+     /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
+    #imagen-elemento-categoria{
+    width: 45%;
+    max-width: 280px;
+    height:  480px;
+    margin-right: 30px;
+    }
+
+  
+    
+    #imagen-elemento-categoria img{
+      width: 100%;
+      max-width: 280px;
+    }
+
+
+   .imagen-descripcion{
+
+  }
+    
+           /* TITULO DEL POST*/
+           .imagen-descripcion h2{
+            margin-bottom: 5px;
+            text-align:start; 
+            font-size: 1.3em;
+            margin-top:  10px;
+            font-family: 'Times New Roman', 'sans serif';
+            font-weight: 900;
+            color: #000000;
+           }
+      
+  .imagen-descripcion p{
+    margin-bottom: 20px;
+    text-align:start;
+    font-size: 0.8;
+    font-family: 'Times New Roman', 'sans serif';
+    font-weight: 400;
+    color: #2d2d2d;
+   }
+
+  .carusel ul{
+   margin-top: 2%;
+   }
+
+   .container-total-carrusell li.right-arrow{
+     margin-left: 88%;
+   }
+/*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+  #footer-categorias{
+  clear: both;
+  position: relative;
+  height: 90px;
+  margin-top: -90px;
+  border-top: solid 1.5px #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 10;
+  }
+  
+  
+    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-categorias{
+    width: 100%;
+    max-width: 1081px;
+    margin: auto;
+    height: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    clear: both;
+     z-index: 1000;
+   
+    }
+ 
+  /*SUB-caja ICONOS SOCIALES*/
+  .icon-social1{
+   width: 49.8%;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    }
+
+ .social2{
+ }
+
+.icon-social1 li{
+list-style: none;
+display: inline-flex;
+ }
+
+.icon-social1 p{
+font-size: 1rem;
+word-spacing: -3px;
+letter-spacing: -2px;
+font-family: 'Archivo Black', sans-serif;
+padding-bottom: 10px;
+color: #2d2d2d;
+}
+
+.icon-social1 .icon-social1 ul{
+display: inline-flex;
+list-style: none;
+}
+
+
+.icon-social1  ul li .fa-envelope{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+.icon-social1  ul li .fa-facebook-f{
+background-color: oldlace;
+color:  #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+.icon-social1  ul li .fa-twitter{
+background-color: oldlace;
+color:   #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+
+
+.icon-social1 ul li .fa-instagram{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+ /*SUBCONTENEDOR DONDE ESTA EL BOX*/
+ .box{
+  display: flex;
+  flex-direction: column;
+width: 49.8%;
+height: 80px;
+
+}
+
+ /*LETRA DE LA CAJA DE SUSCRIBIR*/
+.box h3{
+  display: block;
+letter-spacing: -0.1px;
+font-family: 'Archivo Black', sans-serif;
+font-size: .8rem;
+font-weight: 400;
+margin-top: 1.5%;
+margin-right: 80px;
+color: #2d2d2d;
+}
+
+ /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
+ .box form{
+  display: flex;
+  flex-direction: row;
+  margin-top: -1%;
+  width: 100%;
+  margin: auto;
+  margin-left: 5px;
+  background-color: darkgreen;
+}
+
+
+
+/*CAJA DEL IMPUT EL LADO DE DONDE SE ESCRIBE*/
+.box input[type="text"]
+{
+background-color: #fff;
+display: flex;
+width:70%;
+height: 39px;
+border: 1.5px solid 	#DCDCDC;
+padding: 0 9px;
+border-radius: 5px 0 0 5px;
+
+
+}
+/*.EL COMPLEMENTO DEL ANTERIOR*/
+.box button[type="submit"]{
+left: 7px;  /*EL TRUCO IMPORTANTE*/
+border-radius: 0 5px 5px 0;
+width: 30%;
+height: 39px;
+border: none ;
+outline: none;
+cursor: pointer;
+background-color: #2d2d2d;
+color: #fff;
+font-size: 0.7rem;
+font-family: 'Archivo Black', sans-serif;
+}
+
+.box button[type="submit"]:hover{
+background: ;
+}
+/*FIN de la cajita del correo */
+
+
+/*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+
+ /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+
+   #footer-second-categorias{
+   width: 100%;
+   height: 10px;  /*IMPORTANTE*/
+   margin:auto;
+  }
+/*..SUBCAJA DE DIV FOOTERSENIDN...*/
+  .final-food-categorias p{
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 0.7rem;
+  }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (min-width: 1150px) and (max-width: 1199px){
+
+
+
+    #wrapper-categorias {
+      margin:0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+  
+    
+    }
+          
+    #wrapper-categorias > * {
+      padding:  30px;
+      }
+      
+      /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
+  #container-categorias{
+    width:100%;
+    margin:0 auto;
+    margin-top:110px;
+  }
+
+  
+ /*border-bottom: 2px solid #DDD;*/
+  /*HEADER LLAMADO CATEGORIA*/
+  header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  90px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+     }
+
+    /*HEADER LLAMADO CATEGORIA*/
+    header.black{
+    width: 100%;
+    height:  90px;
+    background-color:#fff ;
+    }
+  
+  /*FIN ANIMACION SUBRAYADO */
+   #cabecera-categorias{
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+    margin: auto;
+    height: 50px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    margin-top: -5px;
+    }
+
+    
+     /*caja */
+    .logo{
+    display:flex ;
+    width: 60%;
+    height: 50px;
+    }
+       
+    .logo img {
+    width: 80%;
+    height: 50px;
+    }
+ 
+     /*CONTAINER DE LA HAMBURGUESA*/
+     .menu-btn {
+      width: 20%;
+      max-width: 150px;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+       }
+  
+   /*BOTON ICONO REVISTA Y SOCIALES*/
+   .boletin{
+    width: 100%;
+    max-width: 120px;
+    }
+ 
+
+ 
+   /*LETRA INSCRIBETE*/
+  .boletin h4 {
+   font-size: 0.94rem;
+   letter-spacing: -0.2px;
+   font-family: 'Cabin', sans-serif;
+   font-weight: 600;
+   color:#2d2d2d;
+   background-color: blueviolet;
+   }
+   
+    .boletin a h4:hover{
+    color: #639a3a;
+    text-decoration: none;
+    }
+ 
+  
+
+   /*HAMBURGUESA*/
+   .menu-btn__burger {
+   display: block;
+   width: 5%;
+   max-width: 38px;
+   height: 5px;
+   background: #2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2);
+   transition: all .5s ease-in-out;
+   z-index: 1000;
+  }
+   
+ 
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+ content: '';
+ position: absolute;
+ width: 38px;
+ height: 5px;
+ background:#2d2d2d;
+ border-radius: 2px;
+ box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+ transition: all .5s ease-in-out;
+z-index: 800;
+}
+
+
+.menu-btn__burger::before {
+ transform: translateY(-12px);
+ z-index:3000;
+ }
+
+.menu-btn__burger::after {
+ transform: translateY(12px);
+ z-index:3000;
+ }
+
+
+ /*NAV*/
+  nav ul li a p{
+    font-size: 1rem;
+    z-index: 1000;
+  }
+
+  nav ul{
+    margin-left: -18px;
+  }
+  
+  nav ul li ul li a{
+    margin-left: 10px;
+  }
+  /* SE PUEDE PONER LA LETRA A LO ANCHO*/
+  nav ul li ul li a p{
+    margin-left: 34px;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+
+ /*FIN NAV*/
+ .intro{
+  display: block;
+  width: 100%;
+
+}
+   .menu-introescrito{
+     display: flex;
+     width: 92%;
+   }
+
+   .intro-dos-vacios{
+     display: flex;
+     width: 10%;
+   }
+   .imagenes-pequeñas{
+     width: 100%;
+   }
+
+     /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
+     .subcategoria{
+    width: 80%;
+      }
+
+   .imagenes-pequeñas .subcategoria h3{ 
+     font-size: 0.8rem;
+    
+   }
+
+/*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
+ .container-posts-categorias{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  }
+
+      /*CAJA DE NAVEGACION DE LAS CATEGORIAS Y SUBCATEGORIAS*/
+   #posts-categoria{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    height: 90px; 
+  
+   }
+   
+   /*...TITULO DE LA CATEGORIA..DE LA PAGINA DE LA CATEGORIA...................letras*/
+   .categoria h2{
+    font-size: 1.6rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration-line: underline;
+    font-weight: bolder;
+    color:#2d2d2d;
+    }
+   
+     
+ 
+
+  /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
+ .elemento-categoria{
+display: block;
+position: relative;
+float: left;
+ width: 100%;
+ text-align: start;
+ border-radius: 2px ;
+ background-color:#EFF4EB;
+ }
+
+     /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
+    #imagen-elemento-categoria{
+    width: 45%;
+    max-width: 280px;
+    height:  480px;
+    margin-right: 30px;
+    }
+
+  
+    
+    #imagen-elemento-categoria img{
+      width: 100%;
+      max-width: 280px;
+    }
+
+
+   .imagen-descripcion{
+
+  }
+    
+           /* TITULO DEL POST*/
+           .imagen-descripcion h2{
+            margin-bottom: 5px;
+            text-align:start; 
+            font-size: 1.3em;
+            margin-top:  10px;
+            font-family: 'Times New Roman', 'sans serif';
+            font-weight: 900;
+            color: #000000;
+           }
+      
+  .imagen-descripcion p{
+    margin-bottom: 20px;
+    text-align:start;
+    font-size: 0.8;
+    font-family: 'Times New Roman', 'sans serif';
+    font-weight: 400;
+    color: #2d2d2d;
+   }
+  }
+
+
+
+
+/* 1200 A 1290 ..................................................................................................................................................................................................... */
+  
+
+@media only screen and (min-width: 1200px) and (max-width: 1246px){
+
+  
+
+   #wrapper-categorias {
+    margin:0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+        
+  #wrapper-categorias > * {
+    padding:30px;
+    }
+    
+    /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
+#container-categorias{
+  width:100%;
+  margin:0 auto;
+  margin-top:110px;
+}
+
+/*border-bottom: 2px solid #DDD;*/
+
+ /*border-bottom: 2px solid #DDD;*/
+  /*HEADER LLAMADO CATEGORIA*/
+  header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  90px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+     }
+
+    /*HEADER LLAMADO CATEGORIA*/
+    header.black{
+    width: 100%;
+    height:  90px;
+    background-color:#fff ;
+    }
+  
+  /*FIN ANIMACION SUBRAYADO */
+   #cabecera-categorias{
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+    margin: auto;
+    height: 50px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    margin-top: -5px;
+    }
+
+    
+     /*caja */
+    .logo{
+    display:flex ;
+    width: 60%;
+    height: 50px;
+    }
+       
+    .logo img {
+    width: 80%;
+    height: 50px;
+    }
+ 
+     /*CONTAINER DE LA HAMBURGUESA*/
+     .menu-btn {
+      width: 20%;
+      max-width: 150px;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+       }
+  
+   /*BOTON ICONO REVISTA Y SOCIALES*/
+   .boletin{
+    width: 100%;
+    max-width: 120px;
+  
+    }
+ 
+
+ 
+   /*LETRA INSCRIBETE*/
+  .boletin h4 {
+   font-size: 0.94rem;
+   letter-spacing: -0.2px;
+   font-family: 'Cabin', sans-serif;
+   font-weight: 600;
+   color:#2d2d2d;
+   background-color: rosybrown;
+   }
+   
+    .boletin a h4:hover{
+    color: #639a3a;
+    text-decoration: none;
+    }
+ 
+  
+
+   /*HAMBURGUESA*/
+   .menu-btn__burger {
+   display: block;
+   width: 5%;
+   max-width: 38px;
+   height: 5px;
+   background: #2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2);
+   transition: all .5s ease-in-out;
+   z-index: 1000;
+  }
+   
+ 
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+ content: '';
+ position: absolute;
+ width: 38px;
+ height: 5px;
+ background:#2d2d2d;
+ border-radius: 2px;
+ box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+ transition: all .5s ease-in-out;
+z-index: 800;
+}
+
+
+.menu-btn__burger::before {
+ transform: translateY(-12px);
+ z-index:3000;
+ }
+
+.menu-btn__burger::after {
+ transform: translateY(12px);
+ z-index:3000;
+ }
+
+
+ /*NAV*/
+  nav ul li a p{
+    font-size: 1rem;
+    z-index: 1000;
+  }
+
+  nav ul{
+    margin-left: -18px;
+  }
+  
+  nav ul li ul li a{
+    margin-left: 10px;
+  }
+  /* SE PUEDE PONER LA LETRA A LO ANCHO*/
+  nav ul li ul li a p{
+    margin-left: 34px;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+
+ /*FIN NAV*/
+ .intro{
+  display: block;
+  width: 100%;
+
+}
+   .menu-introescrito{
+     display: flex;
+     width: 92%;
+   }
+
+   .intro-dos-vacios{
+     display: flex;
+     width: 10%;
+   }
+   .imagenes-pequeñas{
+     width: 100%;
+   }
+
+     /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
+     .subcategoria{
+    width: 80%;
+      }
+
+   .imagenes-pequeñas .subcategoria h3{ 
+     font-size: 0.8rem;
+    
+   }
+
+/*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
+ .container-posts-categorias{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  }
+
+      /*CAJA DE NAVEGACION DE LAS CATEGORIAS Y SUBCATEGORIAS*/
+   #posts-categoria{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    height: 90px; 
+  
+   }
+   
+   /*...TITULO DE LA CATEGORIA..DE LA PAGINA DE LA CATEGORIA...................letras*/
+   .categoria h2{
+    font-size: 1.6rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration-line: underline;
+    font-weight: bolder;
+    color:#2d2d2d;
+    }
+   
+     
+ 
+
+  /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
+ .elemento-categoria{
+display: block;
+position: relative;
+float: left;
+ width: 100%;
+ text-align: start;
+ border-radius: 2px ;
+ background-color:#EFF4EB;
+ }
+
+     /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
+    #imagen-elemento-categoria{
+    width: 45%;
+    max-width: 280px;
+    height:  480px;
+    margin-right: 30px;
+    }
+
+  
+    
+    #imagen-elemento-categoria img{
+      width: 100%;
+      max-width: 280px;
+    }
+
+
+ 
+    
+           /* TITULO DEL POST*/
+           .imagen-descripcion h2{
+            margin-bottom: 5px;
+            text-align:start; 
+            font-size: 1.3em;
+            margin-top:  10px;
+            font-family: 'Times New Roman', 'sans serif';
+            font-weight: 900;
+            color: #000000;
+           }
+      
+  .imagen-descripcion p{
+    margin-bottom: 20px;
+    text-align:start;
+    font-size: 0.8;
+    font-family: 'Times New Roman', 'sans serif';
+    font-weight: 400;
+    color: #2d2d2d;
+   }
+/*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+#footer-categorias{
+  clear: both;
+  position: relative;
+  height: 100px;
+  margin-top: -100px;
+ border-top: solid 1.5px #DCDCDC;
+ display: flex;
+ flex-direction: column;
+width: 100%;
+z-index: 1000;
+
+  }
+  
+  
+    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-categorias{
+    width: 100%;
+    margin: auto;
+    height: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    clear: both;
+     z-index: 10;
+    }
+ 
+  /*SUB-caja ICONOS SOCIALES*/
+  .icon-social1{
+   width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 80px;
+    }
+
+    .icon-social1 p{
+      font-size: 1rem;
+      word-spacing: -2px;
+      letter-spacing: -1px;
+      font-family: 'Archivo Black', sans-serif;
+      color: #2d2d2d;
+      }
+
+ .social2{
+   display: flex;
+   flex-direction: row;
+ }
+
+
+.icon-social1 li{
+list-style: none;
+display: inline-flex;
+ }
+
+
+
+.icon-social1 .icon-social1 ul{
+display: inline-flex;
+list-style: none;
+}
+
+
+.icon-social1  ul li .fa-envelope{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+margin-right: 5px;
+}
+
+.icon-social1  ul li .fa-facebook-f{
+background-color: oldlace;
+color:  #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+margin-right: 5px;
+}
+
+
+.icon-social1  ul li .fa-twitter{
+background-color: oldlace;
+color:   #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+margin-right: 5px;
+}
+
+
+
+
+.icon-social1 ul li .fa-instagram{
+background-color: oldlace;
+color: #2d2d2d;
+width: 25px;
+height: 25px;
+padding: 2px 2px 2px 2px;
+border-radius: 25px;
+border: solid #E9E9E9;
+
+}
+
+
+ /*SUBCONTENEDOR DONDE ESTA EL BOX*/
+   #footer-categorias .box{
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 80px;
+  }
+
+ /*LETRA DE LA CAJA DE SUSCRIBIR*/
+.box h3{
+  display: block;
+letter-spacing: -0.1px;
+font-family: 'Archivo Black', sans-serif;
+font-size: .8rem;
+font-weight: 400;
+margin-top: 5px;
+color: #2d2d2d;
+}
+
+ /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
+ #footer-categorias .box form{
+  display: flex;
+  flex-direction: row;
+  margin-top: -1px;
+  width: 100%;
+  height: 40px;
+  margin-left: 5px;
+}
+
+
+
+/*CAJA DEL IMPUT EL LADO DE DONDE SE ESCRIBE*/
+.box input[type="text"]
+{
+background-color: #fff;
+width:70%;
+height: 40px;
+border: 1.5px solid 	#DCDCDC;
+padding: 0 9px;
+border-radius: 5px 0 0 5px;
+}
+
+
+/*.EL COMPLEMENTO DEL ANTERIOR*/
+.box button[type="submit"]{
+left: 7px;  /*EL TRUCO IMPORTANTE*/
+border-radius: 0 5px 5px 0;
+width: 30%;
+height: 40px;
+border: none ;
+outline: none;
+cursor: pointer;
+background-color: #2d2d2d;
+color: #fff;
+font-size: 0.7rem;
+font-family: 'Archivo Black', sans-serif;
+}
+
+.box button[type="submit"]:hover{
+background: ;
+}
+/*FIN de la cajita del correo */
+
+
+/*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+
+ /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+
+   #footer-second-categorias{
+   width: 100%;
+
+   height: 10px;  /*IMPORTANTE*/
+   margin:auto;
+  }
+/*..SUBCAJA DE DIV FOOTERSENIDN...*/
+  .final-food-categorias p{
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 0.7rem;
+  }
+
+
+
+
+/* FINAL.....FOOTER......................*/
+/*FINAL ..............................*/
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1200 A 1290 ..................................................................................................................................................................................................... */
+  
+
+@media only screen and (min-width: 1247px) and (max-width: 1290px){
+
+   /*PAGINA DE CATEGORIAS*/
+
+   #wrapper-categorias {
+    margin:0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+        
+  #wrapper-categorias > * {
+    padding:20px;
+    }
+    
+    /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
+#container-categorias{
+  width:100%;
+  margin:0 auto;
+  margin-top:110px;
+
+}
+
+  /*border-bottom: 2px solid #DDD;*/
+  /*HEADER LLAMADO CATEGORIA*/
+  header{
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  margin: auto;
+  height:  105px;
+  box-shadow: 0 8px 6px -6px #c9c9c9;
+   }
+
+
+   /*HEADER LLAMADO CATEGORIA*/
+    header.black{
+    width: 100%;
+    height:  105px;
+    background-color:#fff ;
+    }
+
+       /*CABECERA */
+  #cabecera-categorias{
+    width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  height: 70px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+}
+
+.logo img{
+  width: 90%;
+}
+
+
+}

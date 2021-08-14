@@ -1,0 +1,530 @@
+*{
+  margin:0;
+  padding:0;
+  border:0;
+  box-sizing: border-box;
+}
+/*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+/*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+body{
+width: 100%;
+margin:auto;
+}
+
+img{
+max-width: 100%;
+}
+
+/*CONTENEDOR PRINCIPAL DE TODA LA CABECERA INCLUYENDO SLIDER*/
+#wrapper {
+  margin:0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width:250px;
+  flex-wrap: wrap;
+}
+    
+#wrapper > * {
+padding: 20px;
+}
+     
+
+#container-nosotros{
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+  }
+
+header{
+width:100%;
+background-color: #fff;
+position: fixed;
+z-index: 2000;
+margin: auto;
+top: 0;
+height: 170px;
+}
+
+
+header.black{
+background-color: #fff;
+}
+
+.cabecera{
+width:100%;
+max-width: 1250px;
+height: 100px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+margin: auto;
+display: flex;
+margin-top:-4px;
+ margin-bottom:5px;
+align-items: flex-end;
+}
+ 
+/*caja */
+.logo{
+  width:60%;
+  max-width: 320px;
+  height: 80px;
+  }
+
+  .logo img{
+ width: 100%;
+ height: 80px;
+ align-items: center;
+  }
+
+ /*caja */
+ .menu-btn{
+ width: 10%;
+ max-width: 100px;
+ display: inline-flex;
+
+ }
+
+ .suscribe{
+ width: 10%;
+ display: inline-flex;
+ }
+
+.suscribe h4 {
+ font-size: 0.9rem;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ color: #2d2d2d;
+ font-weight: 700;
+ display: inline-flex;
+ justify-content: flex-end;
+ text-transform: uppercase;
+ letter-spacing: -0.7%;
+ }
+
+
+ /*...BURGER ESCONDIDO........BURGER ESCONDIDO....................*/
+.menu-btn .menu-btn__burger{
+ display: none;
+ }
+
+  
+
+  nav{
+    width:100%;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    border-top: 0.7px solid 		#DCDCDC;
+    border-bottom: 0.7px solid 		#DCDCDC;
+  }
+   
+ 
+   /* ESTE ES EL UL  IMPORTANTE PARA EL MENU EN FILA Y QUE ESTE CENTRADO*/
+   nav .nav{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width:100%;
+  max-width: 1250px;
+  }
+  
+
+    .nav li{
+    list-style: none;
+    padding: 2px 6px 2px 2px;
+    margin: auto;
+    }
+
+    .nav li a{
+      color: #4b4b4b;
+      letter-spacing: -0.2px;
+      word-spacing: -0.5px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.2rem;
+     font-weight: 900;
+     text-transform: lowercase;
+     display: block;
+     position: relative;
+     text-decoration: none;
+     padding: 10px;
+    }
+
+  
+    /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
+   .nav ul {
+    display:none;
+    position:absolute;
+    top:100%; 
+    }
+
+  /* items del menu desplegable */
+  /*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS   float:none*/
+  .nav ul li {
+  width: 200px;
+  float: none;
+  margin-left: -10px; /*IMPORTANTE MUEVE */   
+  }
+    
+  /* enlaces de los items del menu desplegable */
+  .nav ul li a {
+  line-height:120%;
+  padding:10px 15px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 1.1rem;
+  width: 100%;
+  }
+     
+  /* items del menu desplegable al pasar el ratón     display:block;
+  width: 100%;*/
+  .nav li:hover > ul {
+  display:block; 
+  position:absolute;  
+  width:60%; 
+  }
+
+    /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
+    nav ul li a.active{
+    text-decoration:line-through;
+    color: #639a3a;
+    }
+    
+       /* ANIMA CON RAYA AL HACE HOVER */
+   /*HOVER SALE RAYA.............HOVER */
+   .nav a:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    transition: all .4s;
+    }
+    /* .................... */
+  
+  
+ 
+ 
+   .nav  a:hover:after {
+     width: 100%;
+     background: #568632;
+     }
+
+
+
+
+
+.tres-columnas-nosotros{
+display: flex;
+width: 100%;
+max-width: 1250px;
+margin-top: 18%;
+margin-bottom: 10%;
+
+
+}
+
+ /*PRIMERA COLUMNA ......................................................................................................*/
+.nosotros{
+width: 47%;
+max-width: 590px;
+flex-flow: column nowrap;
+margin: o auto;
+z-index: 10;
+margin-left:-20px;
+
+}
+
+
+ /*primera caja ..................................... */
+.articulo{
+background-color:;
+width: 100%;
+
+}
+.nosotros h1{
+line-height: 22px;
+font-weight: bolder;
+font-size: 44px;
+word-spacing: 4px;
+letter-spacing: -1.5px;
+font-family: 'Archivo Black', sans-serif;
+}
+
+.nosotros .articulo p{
+font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.45;
+color: #666;
+font-family: 'Cabin', sans-serif;
+text-align: start; 
+ margin-top: 10%;
+
+
+
+}
+
+
+
+.nosotros .articulo p:first-letter{
+  font-size: 3.5em;
+  font-weight: bold;
+  line-height: .6em;
+  float: left;
+  margin: .1em;
+  font-family: 'Artifika', sans-serif;
+}
+
+#avanzado p:first-line {
+  font-weight: bold;
+}
+
+
+
+ /*segunda caja ..................................... */
+.dos-imagenes{
+display: flex;
+flex-direction: row;
+width: 100%;
+max-width: 590px;
+justify-content: space-between;
+
+margin-top: 20%;
+}
+
+.foto{
+width: 45%;
+max-width: 290px;
+margin-left: 1%;
+
+}
+.foto img{
+width: 100%;
+
+width:"300" ;
+height:"280" ;
+}
+
+
+
+
+
+
+ /*tercera caja ..................................... */
+/*QUOTE ............................................ */
+
+blockquote{
+height: 10%;
+width: 100%;
+max-width: 550px;
+margin-top: 15%;
+ }
+ 
+
+  blockquote:before { 
+  content: "\201C"; /* inicio comilla */
+  font-family: Georgia;
+  font-size:60px; /* tamaño */
+  font-weight: bold; 
+  line-height:0px;
+  color:	#d4d4d4; /* Color  */
+  vertical-align:middle;
+  padding-top: 70%;
+  padding-left: 2%;
+  }
+ 
+  /*DESCRPCION*/
+ blockquote h3{
+    margin-top: -30px;
+    margin-left: 60px;
+    margin-right: 60px;
+   font-size: 1.3rem;
+  color: #666;
+  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+  background-color: ;
+  }
+
+    /*AUTOR FUNDADOR*/
+  blockquote p {
+    margin-top: 30px;
+    margin-left: 150px;
+   font-size: 1rem;
+  color: #000;
+  font-weight: 900;
+  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+  background-color: ;
+  }
+
+
+
+  blockquote .otroestilo{
+    margin-top: 30px;
+    margin-left: 10px;
+   font-size: 1rem;
+ color:#666;
+  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+  background-color: ;
+  }
+
+
+
+ /*FINAL QUOTE ...................................... */
+
+
+
+
+ /* cuarta          caja ..................................... */
+.dibujo{
+background-color: ;
+width: 100%;
+margin-top: 10%;
+}
+
+.dibujo img{
+width: 100%; 
+}
+
+ /*quinta       caja ..................................... */
+ /*ARTICULO DOS */
+.articulo-dos{
+display: flex;
+width: 100%;
+margin-top: 20%;
+margin-bottom: 20%;
+justify-content: space-between;
+}
+
+.articulo-dos-uno{
+  width: 40%;
+  max-width: 275px;
+  }
+
+
+.articulo-dos-uno h1{
+line-height: 22px;
+font-weight: bolder;
+font-size: 16px;
+word-spacing: 4px;
+letter-spacing: -1.5px;
+font-family: 'Archivo Black', sans-serif;
+}
+
+
+
+
+
+
+
+.articulo-dos-uno p {
+font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.45;
+color: #666;
+}
+  
+
+/*  FINAL PRIMERA COLUMNA ......................................................................*/
+
+
+/*  SEGUNDA COLUMNA ......................................................................*/
+.fijo1{
+  width: 10%;
+  max-width: 90px;
+ 
+}
+/*  FINAL SEGUNDA COLUMNA ......................................................................*/
+
+
+.fija{
+  width: 45%;
+  max-width: 600px;
+  height: 90%;
+  margin-bottom: 50%;
+  }
+
+  .imagen-estatica{
+  width: 100%;
+  max-width: 600px;
+  height: 80%;
+  position: fixed ;
+  bottom:0;
+  }
+ 
+ /*  FINAL SEGUNDA COLUMNA ...........................................
+
+ 
+
+
+
+
+ /*FINAL TERCERA COLUMNA .......................................TERCERA............................*/
+
+
+
+
+
+ 
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+/* FOOTER ....................................... FOOTER...................................... */
+   #footer1{
+    clear: both;
+    position: relative;
+    height: 10px;
+    margin-top: -10px;
+   -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+  -moz-box-shadow: 0px -3px 6px #DCDCDC;
+  box-shadow: 0px -3px 6px  #DCDCDC;
+ 
+  width: 100%;
+  z-index: 1000;
+  bottom: 0; 
+  background-color: #000000;
+ 
+}
+
+.footer-second1{
+    width: 100%;
+   max-width: 900px;
+    height: 10px;
+    margin-top: -10px;
+    background-color: black;
+    clear: both;
+    position: relative;
+    z-index: 1000; /*IMPORTANTE */
+margin: 0 auto;
+  }
+ 
+  .footer-second1 p{
+    text-align: center;
+    color: #fff;
+    display: block;
+  
+
+    
+  }
+ 
+  .footer-second1 p a{
+    color: #fff;
+ }
+ 
+
+
+

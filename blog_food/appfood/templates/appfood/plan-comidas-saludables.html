@@ -1,0 +1,214 @@
+{% extends 'appfood/base.html' %}
+{% load static %}
+
+{% block titulo %}Plan Comidas Saludables{% endblock titulo %}
+
+
+    
+   {% block portada %} 
+      <div class="portada">
+          <!-------------- IMAGEN---------------------->
+          <section class="portada-img">
+                      <img src="{% block imagen %}{% static 'appfood/img/slider/1300-345verdur.jpg' %}{% endblock %}"
+                      class="slider__img">
+                      <!-- FIN IMAGEN-->
+
+                <!---CONTAINER DE MENU DESCRICPION Y TITULO DE LA PAGINA------------->  
+                <div class="portada-img2">
+
+                    <!-------------------------------------------------------->
+                     <div id="menu-simple">
+                     <ul>
+                     <li>
+                     <a href="{% url 'appfood:index' %}"  >
+                     <p>Inicio<i class="right"></i></p>
+                     </a>
+                     </li>
+                     <li>
+                     <a href="{% url 'appfood:plan-comidas-saludables' %}"> 
+                     <p>Plan de comidas Saludables <i class="right"></i></p>
+                     </a>
+                     </li>
+                     <li >
+                     {% for receta in post_receta %}
+                     <p>{{ receta.kategory }}<i class="right"></i></p></em>
+                     {% endfor %}
+                    </li>
+                     </ul>
+                    </div>   
+                  <!-------------------------------------------------------------------->
+                     <h1>PLAN COMIDAS SALUDABLES</h1>
+                      <p>comer sano y delicioso es posible!</p>
+                </div>
+                <!---FIN CONTAINER PORTADA IMG2 DE MENU DESCRICPION Y TITULO DE LA PAGINA----------->  
+          </section>
+         <!---FIN SECTION PORTADA IMG-------------------------------------------------------->
+   <!------------------------------------------------------------------------------------------------------>
+   <section class="portada-img-responsive">
+
+              <div class="imagen-responsive-movil">
+              <img src="{% block img %}{% static 'appfood/img/slider/640-450plancomidaresponsivemovil.jpg' %}{% endblock  %}"
+              class="slider__img">
+              </div>
+              <!------------------------------------->
+              <div class="imagen-responsive-ipod">
+              <img src="{% block imag %}{% static 'appfood/img/slider/760-360verduripod.jpg' %}{% endblock  %}"
+              class="slider__img">
+              </div>
+              <!-- FIN IMAGEN-RESPONSIVES DE MOVIL Y IPOD -->
+              <!--CONTAINER QUE ESTA ENCIMA DE LA FOTO LETRAS-->
+              <div class="portada-img3-responsive">
+              <div id="menu-simple-responsive">
+                  <ul>
+                  <li>
+                  <a href="{% url 'appfood:index' %}"  >
+                  <p>Inicio<i class="right"></i></p>
+                  </a>
+                  </li>
+                  <li>
+                  <a href="{% url 'appfood:plan-comidas-saludables' %}"> 
+                  <p>Plan de Comidas Saludables <i class="right"></i></p>
+                  </a>
+                  </li>
+                  <li >
+                   {% for receta in post_receta %}
+                   <p>{{ receta.kategory }}<i class="right"></i></p></em>
+                   {% endfor %}
+                  </li>
+                  </ul>
+               </div>
+               <!--FIN MENU SIMPLE RESPONSIVE---->
+              <h1>PLAN DE COMIDAS SALUDABLES</h1>
+              <p>comer sano y delicioso es posible!</p>
+              <!-- <img src="{% block imagen7 %}{% static 'appfood/img/foodemotions.png' %}{% endblock  %}" class="slider__img">--->
+              </div>
+            <!---FIN PORTADA IMG3 RESPONSIVE------->
+      </section>
+       <!--FIN PORTADA-IMG-RESPONSOVE--------------------------------->
+
+       </div>    
+      {% endblock portada %} 
+      <!------------FIN PORTADA------------------------------------------------------------------->
+
+            <!---BUSCADOR ------------------------------------------------------------ -->
+        {% block buscador-search %}   {% endblock buscador-search %} 
+   
+
+      <!--------------------------CONTENIDO---------------------------------------------->
+       {% block content %}
+
+        <!-----SUBCATEGORIAS MENU-------<td id="left">&#8592;</td>-- id="right">&#8594---------------------->
+  
+          <!-------------------------------------------------------------4----------->
+           <div class="caja-texto-slider">         
+            <!--TITULO DE LAS CATEGORIAS-------------------------------------3--->
+             <div class= "endfor">
+                <!---------------------&lt;----------FLECHA LEFT NAV----------------------2------->
+                <div class="leftNav"><span class="arrow-left">&#129120;</span></div>
+                <!------------------------------------------------------1------>
+                 <ul class="scrollmenu">    
+                    {% for categoria in categorias %}
+                    {% if not node.is_leaf_node %}
+                    {% for child in categoria.get_children %}
+                    <li> 
+                    <!-- SUBCATEGORIAS ----------------------->
+                    <a href="/plan-comidas-saludables/subcategoria/{{ child.slug }}">
+                    <h3>{{ child.name }}</h3>
+                    </a>
+                    </li>
+                    {% endfor %}
+                    {% endif %}
+                    {% endfor %}
+                 </ul>
+                <!------------------------FIN UL SCROLLMENU-----&gt;--------------------------1----->
+                <div class="rightNav"><span class="arrow-right">&#129122;</span></div>
+              <!--------------------------FLECHA--------------------------.-----2---->
+            </div>
+            <!--FIN ENDFOR---------------------------------------------3---->   
+        </div>
+        <!------------FIN CAJA TEXTO SLIDER-------------------------------------------4------>
+   
+    <!------------------------------------------------------------------->
+    <!--------------- FIN CAJA DE NAVEGACION TEXTO SLIDER------------------>
+
+      <!------------------------------------- -------------------------------------------------------------------->
+
+
+                   
+       <!--  TITULO------------------------------------------------>
+       <div class="titulo-otras-paginas">
+       <!-- PARRAFO ANIMADO--------------data-anime="top"------------------------------------>
+       <h1>Plan de Comidas saludables</h1>
+       </div>
+      <!------------------------------------------------------------------------------------------>
+
+                               
+ 
+     {% block paginas %}
+     <div id ="container-plan">
+
+         <div class="container-columna-posts">
+             <div class="recetas-bloque"> 
+
+               {% for perderpeso in perder %}
+               <div class = "elemento-post">
+                      <!---------------------------->   
+                      <div class="elemento-imagen">
+                      {% if perderpeso.imagefront %}
+                      <img src ="{{perderpeso.imagefront.url}}" style="width:100%">
+                      {% endif %}
+                      </div>
+
+                      <div class="elemento-descripcion">
+                      <div class ="elemento-descripcion-columna">
+                      <h2>{{perderpeso.title}}</h2>
+                      <p>{{perderpeso.description|truncatechars:110|safe}}</p>
+                       <a href ="/plan-comidas-saludables/post/{{ perderpeso.slug }}/" class="arrow1">
+                          LEER MAS <span class="arrow-right"></span></a>
+                      </div>
+                      </div>
+                    <!--------------------------------->         
+               </div>
+            {% endfor %}
+
+
+               </div>      
+             </div>
+    
+
+
+      <!--- cCONTAINER ASIDE-------------------------------------------------------------------> 
+      <div class="aside-plan">  JOVA JOVA JOVA</div>
+      </div>
+      {% endblock paginas %}
+
+    
+
+         {% block noticias-turismo %}  
+       {% endblock noticias-turismo %}
+         {% block primero_recetasaludable %}
+       {% endblock primero_recetasaludable %}
+
+ 
+
+       {% block recetas_dieteticas %}  
+         {% endblock recetas_dieteticas %}  
+
+
+   {% block plandealimentacion %}
+      {% endblock plandealimentacion %}
+
+               {% block dietas-alimento %}
+                {% endblock dietas-alimento %}
+
+                {% block quinto_perder %}
+                {% endblock quinto_perder %}
+    
+
+  
+
+ {% endblock content %}
+
+ {% block sexto %}{% endblock sexto %}
+{% block septimo %}{% endblock septimo %}
+{% block texto-animado %}{% endblock texto-animado %}

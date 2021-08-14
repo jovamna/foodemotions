@@ -1,0 +1,555 @@
+{% extends 'appblog/articulo_base.html' %}
+{% load static %}
+{% block title %} {{ object.some_varyable_from_query }}{% endblock %}
+
+
+        <!----------DE LA PAGINA SEARCH----------------->
+        {% block buscador-search %}  {% endblock buscador-search %} 
+
+        {% block container-search %}  {% endblock container-search %}
+        <!--FIN --------DE LA PAGINA SEARCH----------------->
+
+         {% block menusimple %}
+          <!-- PRIMER  SEGMENTO MENU SIMPLE-->
+          <div id="menu-simple">
+              <ul >
+              <li > 
+              <a href="{% url 'appfood:index' %}"  >
+              <p>INICIO <i class="right"></i></p>
+              </a>
+              </li>
+              <li > 
+              <a href="{% url 'appfood:noticias-turismo-gastronomico' %}"> 
+              <p>Turismo Gastronomico <i class="right"></i></p>
+              </a>
+              </li>
+              <li>
+              {% for posturismo in posts %}
+              <p>{{posturismo.categori}}<i class="right"></i></p>
+              {% endfor %}
+              </li>
+              </ul>
+              </div>
+              {% endblock menusimple %}
+    
+
+    {% block content %}
+              <div class="primera-columna">
+              {% for posturismo in posts %}
+              <!--FECHA PIBLICACION---------->
+              <div class="primer-articulo">
+              <!-- TITULO 1-----------------> 
+              <h1>{{posturismo.title}} </h1>
+              <!-- DESCRIPCION--------------->              
+              <p> {{posturismo.description}}</p>   
+              </div>
+
+              <p>{{posturismo.publish}}</p>
+            <!--------------------------------------->
+            <div class="imagen-central">
+                  <div class="redes">
+                         <ul class="iconos-social">
+                        <li> 
+                        <a href="malito:contacto@emotionsfood.com" target="_blank">
+                        <i class="fas fa-envelope"></i> 
+                        </a> <br>
+                        </li>
+                        {% if LINK_FACEBOOK %}
+                        <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank">
+                        <i class="fab fa-facebook-f"></i> </a> <br>
+                        </li>
+                        {% endif %}
+                        <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                        <i class="fab fa-twitter"></i> </a> <br>
+                        </li>
+                        <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                        <i class="fab fa-instagram"></i> </a> <br>
+                        </li>
+                        </ul>
+                  </div>
+                      <!-- IMAGEN PRINCIPAL-->   
+                      <div class="imagen-principal">             
+                      {% if posturismo.image %}
+                      <img src="{{posturismo.image.url}}" alt="">
+                     {% endif %} 
+                    </div>
+            </div>
+   <!---------------------FIN DE IMAGEN CENTRAL------------------------------------------------------------------------->
+
+            <!--- <div class="segundo-articulo" data-anime="top">--->
+            <!-- caja 2----DIV SEGUNDO ARTICULO SIN TITULO-------->
+            <div class="segundo-articulo">
+            <!-- TITULO 2------------------->
+            <p>{{posturismo.contentone|safe}}</p>  
+            </div>
+
+  <!------------------------------------------------------------------------------------>
+            <!-----CURSIVA------>
+            <div class="cursiva">
+            <p><em>{{posturismo.cursiva|safe}}</em> </p>
+            </div>
+   <!------------------------------------------------------------->
+
+             
+       <!----------------------------------------------------------->
+              <!-------TITULO--------------->
+              <div class="articulo-titulo">
+              <h1>{{posturismo.titleone|safe}}</h1> 
+              </div>
+              <!-----SEGUNDO IMAGEN-------------------->
+                   {% if posturismo.imageone %}
+                <div class="articulo-imagen">
+                <img src="{{posturismo.imageone.url}}" alt=""  > 
+                </div>
+              {% endif %}
+            <!-----DESCRIPCION NARRATIVA---------------->
+            <div class="articulo">
+            <p>{{posturismo.narrativa|safe}}</p>
+            </div>
+
+       <!------------------------------------------------------------------>
+
+
+
+                <!-- BLOCQUOTE--------------------------------------------------------->
+                {% if posturismo.blocquote %}
+                <blockquote class="blockquote blockquote-bordered blockquote-quoted">
+                <p class="blockquote-text"><em> {{posturismo.blocquote}}ARI</em> </p>
+                <p class="blockquote-text blockquote-text-credit">   </p>
+                </blockquote>
+               {% endif %}
+                <!-- CIERR BLOCQUOTE---------------------------------------------->
+
+
+
+
+       <!---------------------------------------------------------------------->
+                  <!-------TITULO----------------->
+                <div class="articulo-titulo">
+                {% if posturismo.titletwo %}
+                <h1>{{posturismo.titletwo|safe}}</h1>
+                {% endif %} 
+                </div>
+                <!-- TERCERA IMAGEN------>
+                  {% if posturismo.imagetwo %}
+                <div class="articulo-imagen">
+                <img src="{{posturismo.imagetwo.url}}" alt=""> 
+                </div>                            
+                 {% endif %}
+               <!--DESCRIPCION------------>
+                <div class="articulo"> 
+                <p> {{posturismo.contentwo|safe}}</p>
+                </div>
+     <!---------------------------------------------------------->    
+             
+
+                                 
+                 <!--  ULTIMA-------POST---------------------------------->
+          <!-------------TITULO-------------------->
+              <div class="articulo-titulo">
+              {% if posturismo.titlethree %}
+              <h1>{{posturismo.titlethree|safe}}</h1>  
+              {% endif %} 
+              </div>
+            <!---IMAGEN------------------>
+      
+                  {% if posturismo.imagethree %}
+                <div class="articulo-imagen">
+                <img src="{{posturismo.imagethree.url}}" alt="">
+                </div>
+                 {% endif %} 
+
+          <!--ULTIMO POST--->
+             <div class="articulo">
+             <p> {{posturismo.contenthree|safe}} </p>
+             </div> 
+      <!------------------------------------------------------------------------------------------>
+
+
+     <!---IMAGEN SOLA---------------------------------------------->
+  
+            <div class="imagen-sola">
+              {% if posturismo.imagepic %}
+              <img src="{{posturismo.imagepic.url}}" alt="">
+              {% endif %}  
+              </div>
+
+
+              <!--AUTOR IMAGEN Y NOMBRE-->
+              <div class="autor-nombre">
+                  <div class="autor-foto">
+                  {% if posturismo.imageauthor %}
+                  <img src="{{posturismo.imageauthor.url}}" alt="" >
+                  {% endif %}  
+                  </div>
+                  <div class="autor-letra">
+                  <em><h3>Por: {{posturismo.author}}</h3></em>
+                  </div>
+            </div>
+
+                         
+                                         <!-------FIN-POST-------------------------------->
+                                             <!--CATEGORIA TITULO SIN LINK---> 
+                                            <div class="categoria-en-post">
+                                              <em><p>Categoria: {{ posturismo.categori}}</p></em>
+                                            </div>
+                                            <!--CIERRE CATEGORIA-EN-POST TITULO SIN LINK--->
+                                      <!---------------CIERRE DIV ARTICULO-UNO------------------------ --->  
+                        
+                                  <!---------------CIERRE SECTION ARTICULO-ULTIMO------------------------- --->  
+                         
+
+
+              
+                            <!-- CATEGORIAS DENTRO DEL DIV ARTICULO-UNO------------------>
+                                      <div class="categorias-posts-links">
+                                        <!--CATEGORIA ACTUAL--->
+                                        <em><h4>   Categorias: </h4></em>
+                                          <!--CATEGORIAS CON LIKS --->  
+                                        {% load mptt_tags %}
+                                         {% for categori in categories %} 
+                                         <a href="/noticias-turismo-gastronomico/categoria/{{ categori.slug }}"  style="text-decoration: none">   
+                                        <em>  <h3>{{ categori}}</h3></em></a>       
+                                        {% endfor %}
+                                      <!--ENDFOR FINAL DE LA CATEGORIA --->              
+                                     </div>
+                                     <!--DIV CIERRE DE CATEGORIAS-POSTS-LINKS--->
+
+                 {% endfor %}
+        <!---------------ENDFOR FINAL DE PRIMERA COLUMNA------------------------- --->  
+             </div>                           
+     <!-- CIERRE DIV DE PRIMERA COLUMNA----------------------------------------------------------------------------------------------->
+   
+
+   <!---------------OTRO COMMENT-->
+
+ <!---OTRO COMENTS???-----------------------ESTE ES EL QUE FALLA------------------------------------------------>
+   
+<!------------------------------------------------------------------------------->
+ 
+
+<!------------OTRO FORMULARIO---------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!----------COMENTARIOS COMENTARIOS COMENTARIOS COMENTARIOS---------------------->
+        <div id="comentarios">
+           <!---------------------------------------------------------------------------->
+           <div class="col-md-10">
+               {% with allcomments.count as total_comments %}
+               <h2>{{ total_comments }} comentario{{ total_comments|pluralize }}</h2>
+               {% endwith %}
+
+                {% load mptt_tags %}
+                <!----DIV DE TODOS LOS NODES------------------------------------------>
+                <div>
+                     {% recursetree allcomments %}
+                     <!--DIV ID AQUI VA EL NODE ID QUE EN EL BUTTON TIENE SU FUNCTION--->
+                     <div id="{{ node.id }}" class="my-2 p-2" style="border: 1px solid grey">
+                             <!--DIV CLASS D-FLEX VA EL NODE.NAME Y NODE PUBLISH------->
+                             <div class="d-flex justify-content-between">
+                                 <p>Comentado por:</p>{{ node.name }}
+                                      <div>
+                                      <!---DIV VACIO---->
+                                      </div>
+                                {{ node.publish }}
+                             </div>
+                             <!----FIN DIV D-FLEX NODE.NAME Y NODE.PUBLISH------->
+                             <!----DIV SIN NOMBRE CLASS VA EL NODE.CONTENT------->
+                             <div>
+                                {{ node.content }}
+                             </div>
+                             <!----FIN DIV SIN NOMBRE CLASS VA EL NODE.CONTENT------->
+                             <hr />
+
+                         <!--BOTONES----REPLY---REPLY--DEBERIA IR DELETE PARA QUE ESTO FUNCIONE USE JAVASCIPTt---->
+                          <!--ESTE DIV NO ESTABA LO HE AÑADIDO Y ES PARA CAMBIAR EL BOTON AL OTRO LADO---->
+                            <div class="d-flex flex-row-reverse">
+                            {% if node.level < 4 %}
+                           <button class="btn btn-primary btn-sm" onclick="myFunction({{ node.id }})"  style="background-color: grey">
+                           Responder
+                           </button>
+                          {% endif %}
+
+                           <!--BOTON ELIMINAR NO FUNCIONA--->
+                          {% if node.name|stringformat:"s" == user.get_name  %}
+                          <button class="btn btn-secondary btn-sm mr-2" onclick="deleteComment({{ node.id }})">
+                          Delete
+                          </button>
+                          {% endif %}
+                            </div>
+                          <!--CIERRE DEL DIV D-FLEX-ROW-REVERSE--->
+                     
+                     
+                           
+                      
+                     </div>
+                      <!--CIERRE DEL DIV ID DONDE ESTA EL NODE ID EL NODE NAME Y PUBLISH Y EL NODE CONTENT----->
+                      {% if not node.is_leaf_node %}
+                      <div class="children pl-2 pl-md-5">
+                      {{ children }}
+                     </div>
+                     {% endif %}
+                    {% endrecursetree %}
+               </div>
+            <!----CIERRE DEL DIV DE TODOS LOS NODES NO TIENE  NOMBRE------------->
+           <!--CREO ES LA PAGINACION DE TODOS LOS COMENTS-DE ESTE FORMULARIO--------->
+               <div class="py-4">
+                       <nav aria-label="Page navigation example">
+                       {% if comments.has_other_pages %}
+                       <ul class="pagination">
+                        {% if comments.has_previous %}
+                       <li class="page-item"><a class="page-link" href="?page={{ comments.previous_page_number }}">
+                       Previous</a>
+                       </li>
+                       {% else %}
+                       <li class="page-item disabled"><a class="page-link" href="#">
+                       Previous</a>
+                       {% endif %}
+                       {% for num in comments.paginator.page_range %}
+                       {% if comments.number == l %}
+                      <li class="page-item active">
+                      <span class="page-link">{{ num }} <span class="sr-only">(current)</span></span>
+                      </li>
+                     {% else %}
+                     <li>
+                     <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                     </li>
+                     {% endif %}
+                     {% endfor %}
+                     {% if comments.has_next %}
+                     <li class="page-item">
+                     <a class="page-link" href="?page={{ comments.next_page_number }}">Next</a>
+                     </li>
+                     {% else %}
+                     <li class="page-item disabled">
+                     <a class="page-link" href="#">Next</a>
+                     </li>
+                     {% endif %}
+                     </ul>
+                     {% endif %}
+                     </nav>
+                  </div>
+                 <!---CIERRE DE LA PAGINACION DE TODOS LOS COMENTS---->
+                      <!---FORMULARIO PARA AÑADIR COMENTARIOS---->
+                         <div id="myDIV" style="display:block;">
+                             <form id="myForm" method="post">
+                                   <h2>Añadir nuevo comentario</h2>
+                                   {{ comment_form.as_p }}
+                                   {% csrf_token %}
+                                   <button type="submit" class="btn btn-primary btn-lg btn-block" >
+                                   Enviar
+                                   </button>
+                                    <p>email requerido pero nunca mostrado</p>
+                            </form>
+                     </div>
+                          <!---FIN FORMULARIO PARA AÑADIR COMENTARIOS---->
+
+           </div>
+           <!--DIV FIN COL-DM-7---------------------------------------------------------->
+
+         </div>
+       <!----CIERRE DIV COMENTARIOS---------FIN ALL COMMENTS---------------------------->
+
+
+
+
+
+
+
+
+<!----------------FIN FORMULARIO--------------------------------------->
+
+
+
+
+
+
+<!---FIN OTRO COMMENT---------------->
+  
+<!-----------------FIN ALL COMMENTS---------------------------->
+
+
+   <script>
+      $(document).on('click', '#newcomment, #newcommentinner', function (e) {
+    e.preventDefault();
+
+    var button = $(this).attr("value");
+
+    var placement = "commentform"
+    if (button == "newcommentform") {
+      var placement = "newcommentform"
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: '{% url "appturismo:addcomment" %}',
+      data: $("#" + button).serialize(),
+      cache: false,
+      success: function (json) {
+        console.log(json)
+
+
+        $('<div id="" class="my-2 p-2" style="border: 1px solid grey"> \
+          <div class="d-flex justify-content-between">By ' + json['name'] + '<div></div>Posted: Just now!</div> \
+          <div>' + json['result'] + '</div> \
+          <hr> \
+          </div>').insertBefore('#' + placement);
+
+        $('.commentform').trigger("reset");
+        formExit()
+
+      },
+      error: function (xhr, errmsg, err) {
+
+      }
+    });
+  })
+
+
+
+   function formExit(e) {
+    e.preventDefault();
+    document.getElementById("newcommentform").remove();
+    $("#newcommentform").remove();
+  }
+
+  function myFunction(id) {
+    if (document.contains(document.getElementById("newcommentform"))) {
+      document.getElementById("newcommentform").remove();
+    }
+  
+   var d1 = document.getElementById(id);
+    d1.insertAdjacentHTML('afterend',
+       '<form id="newcommentform" class="form-insert py-2" method="post"> \
+                <div class="d-flex justify-content-between"><h2>Reply:</h2><div><button type="button" class="btn btn-outline-secondary" onclick="formExit()"">Close</button></div></div> \
+                <label for="id_name">Name:</label> \
+                <input type="text" name="name" class="col-sm-12" maxlength="50" required="" id="id_name">\
+                <select name="parent" class="d-none" id="id_parentt"> \
+                <option value="' + id + '" selected="' + id + '"></option> \
+                </select> \
+                <label for="id_email">Email:</label> \
+                <input type="text" name="email" class="col-sm-12" maxlength="254" required="" id="id_email"> \
+                <label for="id_content">Content:</label> \
+                <textarea name="content" cols="40" rows="5" class="form-control" required id="id_content"></textarea> \
+                {% csrf_token %} \
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button> \
+              </form>');
+
+    document.querySelector('#id_parentt [value="' + id + '"]').selected = true;
+  }
+
+ $('#myForm').trigger("reset");
+  
+</script>
+
+
+
+
+
+   
+  
+
+
+
+   <!--CIERRE COMEMNTS----------------------------------------->
+
+
+
+
+
+   <!---CIERRE DEL BLOCK QUE CONTIENE COFIDICACION---->
+          {% endblock content %}
+      <!-- CIERRE DIV DE  COLUMNA PRIMERA------------------->
+       </div> 
+
+                       
+ 
+<!------------------------- TERCERA COLUMNA----------------------------------------------------------->
+        <div class="tercera-columna-fija">
+ {% block tercera-columna %}
+        <!-------------------------BUSCADOR------------------>
+                  <div class="controls">
+                     <form  method = "GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}"> {% csrf_token %}
+                            <div id="custom-search-input">
+	                            <input type="text"  name="q" value="{{ request.GET.q }}" class="sin-borde" placeholder="  Buscar...." >
+                                <button type="submit" name="submit" class="boton btn-succes" value="Search">
+                                <span class="icon"><i class="fa fa-search"></i></span>   
+                                </button>
+                                        
+                             </div>
+                    </form>
+	     	    </div>
+        <!------------------FINAL BUSCADOR--------------------------->
+         <div class="tercera-columna">
+                 <em><h2> mas temas..</h2></em>
+                 <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                   <p>How to take the shame out of self-promotion </p>
+         </div>
+        <!----------------------------- -------------->
+      
+        <!------------CATEGORIAS------------------------------->
+     
+           <div class="categorias-aside">
+          <em><h4>   Categorias: </h4></em>
+                    {% load mptt_tags %}
+                                          {% for categori in categories %}
+                                   <a href="/noticias-turismo-gastronomico/categoria/{{categori.slug }}"  style="text-decoration: none">
+                                   <em><h3>{{ categori.name }}</em></h3></a>
+                                   {% endfor %}            
+
+           </div>          
+    <!-------------FIN CATEGORIAS------------------------------>
+{% endblock tercera-columna %}
+        </div>
+       <!-- FINAL DIV TERCERA COLUMNA-->
+     
+     <!-- CIERRE DE LAS TRES COLUMNAS-->
+
+
+
+
+    </div>    
+
+
+
+<!------------------------------>
+
+
+
+
+
+
+
+<!------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------------------------------------------------------------------------------------->

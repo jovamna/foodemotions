@@ -1,0 +1,6926 @@
+
+	/* Mayor de 960px (dispositivos y navegadores) */
+	
+	@media only screen and (min-width: 959px) {
+		.menuPeq {visibility: hidden; display:none;}
+		.menuMed {visibility: hidden; display:none;}
+		.secundario {visibility: hidden; display:none;}
+		}
+
+
+
+
+@media only screen and (min-width: 250px) and (max-width: 359px)   {
+  
+    #wrapper-articulo {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: auto;
+ 
+    }
+          
+    #wrapper-articulo > * {
+    padding: 5px;
+    }
+
+
+    #container-articulo{
+      width:96%;
+      display: flex;
+     flex-direction: column;
+      margin-top: 20%;
+      margin-left:auto;
+      margin-right:auto;
+  
+      }
+
+       header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      margin: auto;
+      height:  60px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+      }
+      
+      header.black{
+      background-color:#fff;
+      width: 100%;
+      height:  60px;
+      }
+        
+
+      #comentarios{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        
+      }
+
+
+      .cabecera{
+      width: 45%;
+      display: flex;
+      flex-direction: row;
+      height: 35px; 
+     margin-left: -0.1px;
+      }
+         
+        
+      /*caja */
+      .logo{
+        display: block;
+        height: 30px;
+      width: 40%;
+      }
+            
+      
+    .logo img {
+    width: 90%;
+    height: 30px;
+    margin: auto; 
+    }
+     
+       /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+       .menu-btn {
+        display: block;
+        width: 20%;
+        max-width: 140px;
+        height: 30px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;  
+      
+      }
+
+        
+     /*CONTENEDOR  REVISTA Y SOCIALES*/
+    .boletin{
+    width: 100%;
+    max-width: 65px;
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: 15px;
+
+     }
+
+
+        /*LETRA FOOD EMOTIONS*/
+        
+        
+        /*LETRA INSCRIBETE*/
+           .boletin a h4{
+          font-size: 0.8rem;
+          word-spacing: -3px;
+          letter-spacing: -1px;
+          font-family: 'Cabin', sans-serif;
+          font-weight: 600;
+          color:#2d2d2d;
+          margin: auto;
+          }
+        
+     .boletin a h4:hover{
+            color: #639a3a;
+            text-decoration: none;
+           }
+          
+      
+
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+        .menu-btn .menu-btn__burger {
+          display: block;
+         position: relative;
+         float: right;
+          margin-top:  16px;
+          width: 35px;
+          height: 4px;
+          background: #2d2d2d;
+          border-radius: 2px;
+          box-shadow: 0 2px 5px rgba(255,101,47,.2);
+          transition: all .5s ease-in-out;
+          z-index: 1000;
+           }
+        
+           .menu-btn__burger::before,
+          .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 4px;
+         
+            background:#2d2d2d;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+            transition: all .5s ease-in-out;
+           z-index: 800;
+           
+          }
+          .menu-btn__burger::before {
+            transform: translateY(-8px);
+            z-index:3000; 
+          }
+          .menu-btn__burger::after {
+            transform: translateY(8px);
+            z-index:3000;
+          }
+
+
+       .menu-btn__burger:hover{
+          background-color: #639a3a;
+        }
+        
+       .menu-btn__burger:hover::before,
+       .menu-btn__burger:hover::after{
+          background-color: #639a3a;
+        }
+
+           /* ANIMATION */
+    .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    }
+           .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+            background: #fff;
+          }
+          .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+            background: #fff;
+          }
+          
+        /*FIN ANIMACION IMPORTANTE*/
+        
+
+        nav{
+          background-position:   70% 88%;
+        }
+        
+
+        nav ul{
+          width: 80%;
+          margin: 50px;
+          margin-left: 20px;
+        }
+            
+   nav li a p{
+   background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+   display: block;
+   border-radius: 8px solid #639a3a;
+   margin-top:8px;
+   position: absolute;
+   padding: 1px 1px ;
+   z-index: 200;
+   margin-left: -5px;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-family:  sans-serif;
+  }
+
+    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav ul li{
+   
+    margin-top: 1.5%;/*IMPORTANTE */
+    filter: alpha(opacity=80);
+    height: 40px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
+    list-style: none;
+    cursor:pointer;
+    margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+    }
+
+
+    nav ul li ul li a {
+      font-size: 0.7rem;
+      display: block;
+      position: absolute;
+      max-width: 200px;
+      width: 100%;
+      margin-left: -2px;
+     padding-bottom: -2px;
+     margin-left: -76px;
+  
+    }
+
+
+  /*..FINAL MENU HAMBURGUESA*/
+
+   #menu-simple{
+     width: 100%;
+     margin-top: 1%;
+   }
+   #menu-simple .arrow1 p{
+     font-size: 0.6rem;
+   }
+
+   #menu-simple ul{
+  height: 55px;
+   }
+    /*EMPIEZA L CONTENIDO*/
+      #tres-columnas-articulo{
+        width: 100%;
+        max-width: 340px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+      }
+  
+      .primera-columna{
+       width: 299px;
+        display: block;
+   
+      }
+    
+      .columna-primera{
+        margin-bottom: 6%;
+       
+      }
+       .primera-columna h1{
+         font-size: 1.5rem;
+       }
+       
+       .primera-columna p{
+        font-size: 1.1rem;
+      }
+    
+      .imagen-central{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+      }
+
+      .redes{
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+   
+    
+      }
+      .iconos-social{
+        display: flex;
+        flex-direction: row;
+      }
+    
+      .imagen-central img{
+   width: 100%;
+   height: 100%;
+      }
+
+      .primer-articulo{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+  
+    
+      }
+      /*PRIMER ARTICULO TITULO*/
+      .primer-articulo h1{
+        font-size: 1.8rem;
+        color:#000000;
+        font-weight: 800;
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing: -0.3px;
+        word-spacing: -0.1px;
+      
+      }
+        
+      
+
+    .primer-articulo p {
+      font-size: 1.4rem;
+      
+    }
+    
+    .segundo-articulo p {
+      font-size: 1.4rem;
+      
+    }
+    .pricolumna-articulo p{
+      font-size: 1.4rem;
+    }
+    .articulo-uno p {
+      font-size: 1.4rem;
+      
+    }
+
+      /*SEGUNDO TITULO*/
+      .segundo-articulo h1{
+        
+        font-size: 1.5rem;
+        color:#000000;
+        font-weight: 600;
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing: -0.1px;
+      }
+
+      .segunda-imagen{
+        width: 100%;
+        height: 180px;
+      
+      }
+      .segunda-imagen  .foto  img{
+        width: 100%;
+        height: 100%;
+      }
+    
+      .articulo-uno h1{
+        font-size: 1.5rem;
+        color:#000000;
+        font-weight: 600;
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing: -0.1px;
+      
+      }
+
+     .blockquote .blockquote-text{
+          font-size: 1rem;
+       
+          margin-left: -1px;
+        }
+
+       .blockquote{
+          width:100%;
+          margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
+          padding: 20px;
+          border:  1px solid #DDD;
+          color:#666;
+          box-sizing: border-box;
+          font-family:  'sans-serif' ;
+          font-size: 1.15rem;
+          font-weight:400;
+          line-height: 1.3;
+        
+          
+         }
+
+         .blockquote-quoted::before { 
+          content: "\201C"; /* inicio comilla */
+          width: 30%;
+         
+          font-family: Georgia;
+          font-size:65px; /* tamaño */
+          font-weight: bold; 
+          line-height: 0px;
+          color:#DDD; /* Color  */
+          margin-top: 20px;
+          margin-bottom: -10px;
+          margin-left: -20px;
+          display: block;
+      
+          }
+
+        .blockquote-text-credit{
+            text-align: right;
+            width: 90%;
+            
+          }
+
+
+           /*TERCERA COLUMNA  ......................................................................................3.......COLUMNA...... */
+         .tercera-columna-fija{
+            width: 100%;
+     
+            display: flex;
+            flex-direction: column;
+          
+            }
+   
+            .tercera-columna{
+              width:100%;
+              flex-direction: column;
+              }
+  
+            
+            .tercera-columna img{
+              width: 100%;
+              margin-bottom: 6px;
+              }
+            /* BUSCADOR INTERNO */
+            /*CONTAINER DEL BUSCADOR.................................................................... */
+            .controls{
+              width: 100%;
+              margin-top: 35%;
+              margin-bottom: 20%;
+              flex-direction: column;
+            }
+          /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+ .carrusel1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+  margin-top: 7%;
+  z-index: 100;
+  }
+   
+  /*ESCONDE IMAGGENES*/
+ /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+ .carrusel{
+  width:4000px;
+  height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+  left: 0px;
+  position:absolute;
+  z-index:0;
+  }
+
+ 
+
+
+    /*PARA QUE LAS FLECHAS DESPAREZCAN */
+#carrusel:hover  li.left-arrow{
+  background-color: #fff;
+  opacity: .4;
+   top: 54px;
+  transition:all .5s ease-in-out;
+  }
+  
+  #carrusel ul li.left-arrow:hover {
+  display: block;
+  background-color:  #fff;
+  opacity: 3;
+  }
+   
+
+ /**MUY IMPORTANTE..*/
+  /*CIRCULLO PARA MODIFICAR ANCHO Y ALTO.................................................................................................. */
+  .carusel{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    margin-top: 20%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+    margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+    }
+
+       /*CIRCULO  DERECHO*/
+  #carrusel li.right-arrow{
+    margin-left:70%;
+  
+    }
+
+       /*CIRCULO   IZQUIERDO*/
+  #carrusel li.left-arrow{
+    margin-left: 3.8%;
+    }
+ /*MUY IMPORTNATE*/  
+      /* ARROW LEFT .......................SOLO ARROW LEFT...................................ARROW LEFT SIN PALO............... */
+ .carrusel1 ul li.left-arrow span{
+    top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-bottom: none;
+  }
+
+    
+   /*MUY IMPORTNATE*/  
+     /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
+ .carrusel1 ul li.right-arrow span{
+  top: 40%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-top: none;
+  }
+ 
+
+ /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+ .carrusel>div {
+ float: left;
+ width: 100%;
+ max-width: 150px;
+ height: 130px;
+ margin-right: 6px;   /*ESPACIO */
+ text-align:center;
+ }
+ /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+.carrusel img {
+cursor:pointer;
+width:100%;
+height: 130px;
+border: 4px solid #DDD ;
+
+padding: 4px ;
+border-radius:6px;
+}
+ 
+     /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+  #footer-articulo{
+    clear: both;
+      position: relative;
+      height: 70px;
+      margin-top: -70px;
+     border-top: solid 1.5px #DCDCDC;
+     display: flex;
+     flex-direction: column;
+    width: 100%;
+    z-index: 1000;
+    }
+    
+    
+      /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-articulo{
+      width: 100%;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    clear: both;
+    position: relative;
+    z-index: 1000;
+     margin-bottom: 0.8%; 
+    
+    }
+
+    /*CAJA DE SOCIALES Y LETRA*/
+       .icon-social1{
+       display: flex;
+       flex-direction: column;
+     
+    }
+    .icon-social1 p{
+       font-size: 0.9rem;
+
+     }
+
+   .social2{
+       margin-top: -8%;
+     }
+    #footer-articulo .icon-social1  ul li .fa-envelope{
+  background-color: oldlace;
+  color: #2d2d2d;
+  width:25px;
+  height: 25px;
+  padding: 2px 2px 2px 2px;
+  border-radius: 25px;
+  border: solid #E9E9E9;
+  
+  }
+  
+    #footer-articulo .icon-social1  ul li .fa-facebook-f{
+  background-color: oldlace;
+  color:  #2d2d2d;
+  width:25px;
+  height: 25px;
+  padding: 2px 2px 2px 2px;
+  border-radius: 25px;
+  border: solid #E9E9E9;
+  
+  }
+  
+  
+    #footer-articulo .icon-social1  ul li .fa-twitter{
+    background-color: oldlace;
+    color:   #2d2d2d;
+    width:25px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+     }
+  
+      #footer-articulo .icon-social1 ul li .fa-instagram{
+       background-color: oldlace;
+       color: #2d2d2d;
+        width:25px;
+       height: 25px;
+        padding: 2px 2px 2px 2px;
+        border-radius: 25px;
+        border: solid #E9E9E9;
+       }
+  
+    .box{
+    width: 40%;
+ 
+    margin-top: 1px;
+    }
+
+   /*LETRA ENCIMA DEL BOX*/   
+    .box h3{
+     font-size: 0.5rem;
+     margin-right: 7px;
+    }
+
+     .box form{
+     width:100%;
+    
+    }
+
+     .box input[type="text"]
+    {
+    background-color: #fff;
+    display: flex;
+    width:60%;
+     height: 20px;
+    border: 1.5px solid 	#DCDCDC;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+    font-size: 0.7rem;
+    }
+     
+
+    .box button[type="submit"]{
+    left: 6px;  /*EL TRUCO IMPORTANTE*/
+    border-radius: 0 5px 5px 0;
+    width: 40%;
+    height: 20px;
+    border: none ;
+    outline: none;
+    cursor: pointer;
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 0.6rem;
+    font-family: 'Archivo Black', sans-serif;
+    }
+
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+  .footer-second-articulo{
+  width: 100%;
+  height: 10px;
+  margin-top: -10px;
+   }
+  
+   .final-food-articulo {
+   width: 100%;
+    margin: auto;
+    }
+ 
+  .final-food-articulo p{
+  text-align: center;
+  padding-top: 8px;  /*BAJAN LAS LETRAS*/
+  color: #2d2d2d;
+  font-size: 0.6rem;
+  }
+
+
+   }
+  
+
+
+
+
+
+
+
+
+   @media only screen and (min-width: 360px) and (max-width: 640px){
+    #wrapper-articulo {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+
+    }
+          
+    #wrapper-articulo > * {
+    padding: 15px;
+    }
+      
+
+    #container-articulo{
+    width:100%;
+    margin-top: 15%;
+    }
+
+
+
+      /*border-bottom: 2px solid #DDD;*/
+     header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  65px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+    }
+  
+    header.black{
+     background-color:#fff ;
+     height:  65px;
+    }
+    
+    #menu-simple{
+    width: 100%;
+    margin-top: 20px;
+    }
+
+    #menu-simple ul{
+      height: 50px;
+    }
+
+
+          #comentarios{
+            display: flex;
+            width: 100%;
+          }
+          
+        
+    .cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    max-width: 345px;
+    height: 35px; 
+    margin-left: -0.4px;
+    }
+         
+    /*caja */
+    .logo{
+    width: 60%;
+    display: block;
+    height: 35px;
+    }
+              
+    .logo img {
+    width: 80%;
+    height: 35px;
+    margin: auto;
+     }
+         
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+   
+    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+    .menu-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35px;
+    width: 20%;
+    max-width: 130px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    }
+
+    .boletin{
+     width: 15%;
+     max-width: 60px;
+     margin-right: 30px;
+     display: block;
+     position: relative;
+     float: left;
+     background-color: lime;
+    }
+  
+    .menu-btn  .boletin  h4{
+    font-size: 0.8rem;
+    }
+   
+
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+    .menu-btn  .menu-btn__burger {
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 21px;
+    width: 37px;
+    height: 4px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+    z-index: 1000;
+    }
+        
+      .menu-btn__burger::before,
+      .menu-btn__burger::after {
+      content: '';
+      position: absolute;
+      width: 37px;
+      height: 4px;
+      background:#2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+      transition: all .5s ease-in-out;
+      z-index: 800;   
+      }
+
+
+    .menu-btn__burger::before {
+    transform: translateY(-8px);
+    z-index:3000;
+    }
+
+    .menu-btn__burger::after {
+    transform: translateY(8px);
+    z-index:3000;
+    }
+
+
+     .menu-btn__burger:hover{
+      background-color: #639a3a;
+    }
+        
+     .menu-btn__burger:hover::before,
+    .menu-btn__burger:hover::after{
+    background-color: #639a3a;    
+    }
+
+     /* ANIMATION */
+   .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+     }
+          .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+            background: #fff;
+          }
+         .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+            background: #fff;
+          }
+          
+        /*FIN ANIMACION IMPORTANTE*/
+        
+
+
+    nav{
+    background-position:  65% 90%;
+      }
+
+
+   nav li a p{
+   background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+   display: block;
+   margin-top:8px;
+   position: absolute;
+   z-index: 200;
+   margin-left: -5px;
+   color: #fff;
+   font-weight: lighter;
+   font-size: 1rem;
+   text-transform: lowercase;
+   letter-spacing: 1px;
+   font-family:  sans-serif;
+    }
+
+    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+     nav ul li{
+    display: flex;
+    
+    margin-top: 1.5%;/*IMPORTANTE */
+    filter: alpha(opacity=80);
+    height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
+    list-style: none;
+    cursor:pointer;
+    margin-left: 2% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+    }
+
+    nav ul li ul li a{
+      text-transform: lowercase;
+      margin-left: 5%;
+    }
+  /*..FINAL MENU HAMBURGUESA*/
+
+
+  /*  EMPIEZA EL CONTENIDO*/
+   #tres-columnas-articulo{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+   }
+
+  .categorias-posts-links{
+  margin-bottom: 30%;
+  border-bottom: 2px solid	#DCDCDC;
+  }
+
+  .columna-primera{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6%;
+  }
+
+  .primera-columna{
+  width: 100%;
+  }
+
+  /*FECHA EN INICIO DEL POST*/
+  .primer-articulo h4{
+  font-size: 0.8rem;
+  color: #2D2D2D;
+  }
+
+  /*PRIMER ARTICULO TITULO*/
+  .primer-articulo h1{
+   font-size: 1.9rem;
+  color:#000000;
+  font-weight: 800;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: -0.3px;
+  word-spacing: -0.1px;
+  }
+          
+     
+  .primera-columna p{
+  font-size: 1.1rem;
+  }
+    
+     
+  .imagen-central{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+   }
+
+      .redes{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+
+
+      .iconos-social{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .iconos-social  li .fa-envelope{
+        font-size:  10px;
+        width: 30px;
+        height: 30px;
+        padding: 5px 5px 5px 5px;
+        margin-right: 8px;
+      }
+
+      .iconos-social li .fa-facebook-f{
+        font-size:  10px;
+        width: 30px;
+        height: 30px;
+        padding: 5px 5px 5px 5px;
+        margin-right: 8px;
+      }
+      
+      .iconos-social  li .fa-twitter{
+        font-size:  10px;
+        width: 30px;
+        height: 30px;
+        padding: 5px 5px 5px 5px;
+        margin-right: 8px;
+      }
+    
+      .iconos-social  li .fa-instagram{
+        font-size:  10px;
+        width: 30px;
+        height: 30px;
+        padding: 5px 5px 5px 5px;    
+      }
+
+
+      .imagen-central img{
+      width: 100%;
+      height: 100%;
+      }
+
+   
+    .primer-articulo h1{
+    font-size: 2.2rem;
+    color:#000000;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: -1.2px;
+    word-spacing: 1.8px;
+      }
+
+
+    .primer-articulo p {
+      font-size: 1.5rem;    
+    }
+    
+  
+     /*SEGUNDO TITULO*/
+     .segundo-articulo h1{
+      font-size: 1.9rem;
+      color:#000000;
+      font-weight: 900;
+      font-family: 'Times New Roman', Times, serif;
+      letter-spacing: -1.2px;
+      word-spacing: 0.9px;
+      }
+
+   
+     
+     .segundo-articulo p {
+      font-size: 1.5rem;    
+     }
+   
+      .imageone{
+        width: 100%;
+        height: 100%;
+      }
+
+
+      .imageone  img{
+      width: 100%;
+      height: 220;
+      }
+
+
+      .title-two{
+        width: 100%;
+      }
+
+
+    /*TECER TITULO*/
+    .title-two H1{
+    font-size: 1.9rem;
+    color:#000000;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: -1px;
+      }
+   
+
+      .blockquote .blockquote-text{
+      font-size: 1rem;
+      margin-left: -1px;
+      }
+
+    .blockquote{
+    width:100%;
+    max-width: 400px;
+    margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
+    padding: 20px;
+    border:  1px solid #DDD;
+    color:#666;
+    box-sizing: border-box;
+    font-family:  'sans-serif' ;
+    font-size: 1.15rem;
+    font-weight:400;
+    line-height: 1.3; 
+    }
+
+    .blockquote-quoted::before { 
+    content: "\201C"; /* inicio comilla */
+    width: 30%;
+    font-family: Georgia;
+    font-size:65px; /* tamaño */
+    font-weight: bold; 
+    line-height: 0px;
+    color:#DDD; /* Color  */
+     margin-top: 20px;
+    margin-bottom: -10px;
+    margin-left: -20px;
+    display: block;
+    }
+
+    .blockquote-text-credit{
+    text-align: right;
+    width: 90%;     
+    }
+
+    .autor-nombre{
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin-bottom: 20px;
+    }
+    
+    .autor-foto{
+    width: 25%;
+  
+    }
+    
+    .autor-foto img{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    }
+
+     .autor-letra{
+     width: 70%;
+     position: absolute;
+     display: inline-flex; 
+     }
+    
+     .autor-letra h3{
+      margin-right: 90px;
+     }
+
+   .tercera-columna-fija{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     max-width: 640px;
+   }
+          .controls{
+            width: 90%;
+            margin: auto;
+            margin-bottom: 30px;
+          }
+
+
+    /*BUSCADOR DA COLOR*/
+    #custom-search-input{
+    margin: auto;
+    width: 99.9%;
+    height: 52px;
+    }
+   
+
+    .tercera-columna{
+     width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    }
+        
+    .tercera-columna-imagen{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    }
+
+      
+    .tercera-columna-imagen img{
+     width: 45%;
+    margin-right: 20px;
+    }
+
+    .tercera-columna-imagen p{
+     width: 45%;
+    }
+
+    /*BLOQUE DE CATEGORIAS, LO ANULO PORQUE YA ESTA EN EL ANTERIOR BLOQUE*/
+    .categorias-aside{
+      display: none;
+    }
+
+
+    .container-total-carrusell{
+      display: block;
+      margin-bottom: 15px;
+ 
+
+    }
+     /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+  /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
+  #carrusel {
+    float:left;
+    width: 100%;
+    overflow:hidden;
+    height: 250px;
+    position:relative;
+    margin: auto;
+    margin-bottom: 10px;
+    }
+    
+    
+     /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
+    #carrusel h2{
+        font-size:24px;
+        word-spacing: -3px;
+        letter-spacing: -2px;
+        font-family: 'Archivo Black', sans-serif;
+        padding-bottom: 10px;
+        
+    }
+    /*ESCONDE IMAGGENES*/
+    /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+    .carrusel{
+    width:4000px;
+    height: 180px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+    left: 0px;
+    position:absolute;
+     z-index:0;
+      }
+
+ 
+   /*CIRCULO   IZQUIERDO*/
+   #carrusel li.left-arrow{
+    margin-right: 3.8%;
+    }
+
+     /*CIRCULO  DERECHO NO PONERLO TAN ANCHO PORQUE PIERDE LA FORMA EL CIRCULO PONERLO DEBAJO DE 90*/
+  #carrusel li.right-arrow{
+    margin-left:75%;
+    }
+
+    /**MUY IMPORTANTE..*/
+  /*CIRCULO MODIFICA ALTO Y ANCHO.................. */
+   .carusel{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    margin-top: 23%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+    margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+    }
+
+
+   /*MUY IMPORTNATE*/  
+      /* ARROW LEFT ..........SOLO ARROW LEFT........ */
+    .carrusel1 ul li.left-arrow span{
+    top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+    left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+    transform: translateY(-50%) rotate(-45deg);
+    border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+    border-bottom: none;
+    }
+
+    
+   /*MUY IMPORTNATE*/  
+   /* ARROW RIGHT.....ARROW RIGHT SIN PALO......... */
+   .carrusel1 ul li.right-arrow span{
+   top: 48%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+   right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+   transform: translateY(-50%) rotate(-45deg);
+   border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+   border-top: none;
+   }
+ 
+    /*PARA QUE LAS FLECHAS DESPAREZCAN */
+   #carrusel:hover  li.left-arrow{
+   background-color: #fff;
+   opacity: .4;
+   top: 54px;
+   transition:all .5s ease-in-out;
+   }
+      
+      #carrusel ul li.left-arrow:hover {
+      display: block;
+      background-color:  #fff;
+      opacity: 3;
+      }
+ 
+
+  /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+  .carrusel>div {
+  float: left;
+  width: 100%;
+  max-width: 222px;
+  height: 180px;
+  margin-right: 5px;   /*ESPACIO */
+  text-align:center;
+  }
+
+  /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+ .carrusel img {
+  cursor:pointer;
+  width: 100%;
+  height: 180px;
+  border: 2px solid #DDD ;
+  padding: 3px ;
+  border-radius:6px;
+  }
+ 
+     /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+    #footer-articulo{
+    clear: both;
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
+    border-top: solid 1.5px #DCDCDC;
+    display: block;
+    width: 100%;
+    z-index: 10;
+    }
+    
+    
+      /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-articulo{
+      width: 100%;
+    margin: auto;
+    height: 80px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    z-index: 10;
+    }
+
+     /*CAJA DE SOCIALES Y LETRA*/
+     .icon-social1{
+      display: flex;
+      flex-direction: column;
+      height: 60px;
+      width: 49.5%;
+      }
+
+
+      .icon-social1 p{
+      font-size: 0.95rem;
+      }
+
+    #footer-articulo .social2{
+    margin-top: -13px;
+     }
+
+
+  .icon-social1  ul li .fa-envelope{
+  background-color: oldlace;
+  color: #2d2d2d;
+  width:25px;
+  height: 25px;
+  padding: 2px 2px 2px 2px;
+  border-radius: 25px;
+  border: solid #E9E9E9;
+  }
+  
+    #footer-articulo .icon-social1  ul li .fa-facebook-f{
+  background-color: oldlace;
+  color:  #2d2d2d;
+  width:25px;
+  height: 25px;
+  padding: 2px 2px 2px 2px;
+  border-radius: 25px;
+  border: solid #E9E9E9;
+  }
+  
+  
+    #footer-articulo .icon-social1  ul li .fa-twitter{
+    background-color: oldlace;
+    color:   #2d2d2d;
+    width:25px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+     }
+  
+
+    #footer-articulo .icon-social1 ul li .fa-instagram{
+    background-color: oldlace;
+    color: #2d2d2d;
+    width:25px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+    }
+
+  
+    .box{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+   }
+
+   /*LETRA ENCIMA DEL BOX*/   
+     .box h3{
+     font-size: 0.7rem;
+      margin-top:-1px;
+     }
+
+    .box form{
+      width: 90%;
+     display: flex;
+     flex-direction: row;
+     align-items: flex-start;
+     justify-content: start;
+    }
+
+     .box input[type="text"]
+    {
+    background-color: #fff;
+    width:80%;
+     height: 34px;
+    border: 1.5px solid 	#DCDCDC;
+    padding: 0 5px;
+    border-radius: 5px 0 0 5px;
+    font-size: 0.7rem;
+    }
+     
+
+    .box button[type="submit"]{
+    left: 6px;  /*EL TRUCO IMPORTANTE*/
+    border-radius: 0 5px 5px 0;
+    width: 40%;
+    height: 34px;
+    border: none ;
+    outline: none;
+    cursor: pointer;
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 0.6rem;
+    font-family: 'Archivo Black', sans-serif;
+    padding: 0 5px 1px 1px;
+    }
+
+
+   /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+   .footer-second-articulo{
+   width: 100%;
+   height: 20px; 
+   }
+  
+    .final-food-articulo {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    }
+ 
+
+   .final-food-articulo p{
+   text-align: center;
+   color: #2d2d2d;
+   font-size: 0.6rem;
+   padding-bottom: 8px;
+   }
+
+   
+    /*CAJA BUSCADOR...*/
+    #controls-uno{
+    width: 100%;
+    }
+
+
+     /*PAGINA BUSCADOR.NO ELIMINAR ...*/
+    #container-search{
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+    }
+
+
+    #container-search  h1{
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+    }
+
+
+    .container-pinterest{
+    display: flex;
+    flex-direction: column;
+    }
+
+
+    .elemento{
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+     }
+
+
+     .elemento-imagen{
+      width:  100%;
+      margin: auto;
+      }
+
+     .elemento-imagen img{
+      width: 100%;
+      height: 100%;
+      max-height: 230px;
+ 
+      }
+
+
+      .elemento  .elemento-descripcion{
+      display:  block;
+      width: 100%;
+      margin-top: 10px;
+      }
+
+   .elemento-descripcion h2{
+   font-size: 1.7rem;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 900;
+   letter-spacing: -0.3px;
+   margin-bottom: 2px;
+   }
+
+
+   .elemento-descripcion p{
+     font-size: 1.3rem;
+     letter-spacing: 0.5px;
+    
+   }
+
+    /*FIN DEL BUSCADOR*/
+
+
+
+   }
+
+
+
+  
+   @media only screen and (min-width: 641px) and (max-width: 700px){
+    #wrapper-articulo {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: auto;
+    }
+          
+    #wrapper-articulo > * {
+    padding: 20px;
+    }
+      
+
+    #container-articulo{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12%;
+      }
+
+  #menu-simple{
+  width: 100%;
+  margin-top: 1%;
+  }
+      
+
+   header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      margin: auto;
+      height:  80px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+        }
+      
+     header.black{
+          background-color:#fff;
+          width: 100%;
+          height:  80px;
+          }
+
+
+          #comentarios{
+            background-color: violet;
+            display: flex;
+            width: 100%;
+          }
+          
+    .cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 45px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    }
+         
+          
+   /*caja */
+  .logo{
+   height: 45px;
+   width: 50%;
+   }
+              
+    .logo img {
+    width: 100%;
+    height: 45px;
+    margin: auto;
+    }
+
+
+       /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+        
+       .menu-btn {
+       width: 20%;
+       height: 45px;
+       display: flex;
+       flex-direction: row;
+      }
+
+         
+        
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+    .boletin{
+    width: 15%;
+    position: relative;
+    float: left;
+    }
+    
+        
+        /*LETRA INSCRIBETE*/
+    .boletin a h4{
+    font-size: 0.95rem;
+    letter-spacing: 0.1px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 800;
+    color:#2d2d2d;
+    margin-top:34px;
+    }
+        
+     .boletin a h4:hover{
+    color: #639a3a;
+    text-decoration: none;
+    }
+          
+      
+
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+          .menu-btn__burger {
+          display: block;
+          position: relative;
+          float: right;
+          z-index: 1000;
+          margin-top: 28px;
+          width: 38px;
+          height: 5px;
+          background: #2d2d2d;
+          border-radius: 2px;
+          box-shadow: 0 2px 5px rgba(255,101,47,.2);
+          transition: all .5s ease-in-out;
+          
+           }
+        
+           .menu-btn__burger::before,
+          .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 38px;
+            height: 5px;
+            margin-left: 1%;
+            background:#2d2d2d;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+            transition: all .5s ease-in-out;
+           z-index: 800;
+           
+          }
+          .menu-btn__burger::before {
+            transform: translateY(-10px);
+            z-index:3000;
+            
+          }
+         .menu-btn__burger::after {
+            transform: translateY(10px);
+            z-index:3000;
+          }
+
+
+     .menu-btn__burger:hover{
+            background-color: #639a3a;
+          }
+        
+          .menu-btn__burger:hover::before,
+           .menu-btn__burger:hover::after{
+            background-color: #639a3a;    
+          }
+
+           /* ANIMATION */
+         .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+          .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+            background: #fff;
+          }
+         .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+            background: #fff;
+          }
+          
+       
+              /*IMPORTANTE*/
+nav li a p{
+  background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+  display: block;
+  border-radius: 8px solid #639a3a;
+   margin-top:8px;
+  position: absolute;
+ padding: 1px 1px ;
+  z-index: 200;
+  margin-left: -5px;
+
+  color: #fff;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-family:  sans-serif;
+}
+   /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+   nav ul li{
+    display: flex;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 1.5%;/*IMPORTANTE */
+    filter: alpha(opacity=80);
+    height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
+    list-style: none;
+    cursor:pointer;
+    margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+
+    }
+  /*..FINAL MENU HAMBURGUESA*/
+
+
+
+   #menu-simple{
+    width: 100%;
+    }
+
+    #menu-simple ul{
+    height: 40px;
+    }
+
+  /*  EMPIEZA EL CONTENIDO*/
+
+      #tres-columnas-articulo{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+      
+      .columna-primera{
+        width: 100%;
+      }
+
+       .primera-columna img{
+          width: 100%;
+          height: 350px;
+       }
+
+       .primer-articulo h1{
+         font-size: 2.3rem;
+       }
+
+      .blockquote .blockquote-text{
+          font-size: 1rem;
+          margin-left: 14px;  /*MUEVE EL PARRAFO SEPARANDOLO DE LA COMILLA*/
+        }
+
+       .blockquote{
+          width:100%;
+          margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
+          padding: 20px;
+          border:  1px solid #DDD;
+          color:#666;
+          box-sizing: border-box;
+          font-family:  'sans-serif' ;
+          font-size: 1.15rem;
+          font-weight:400;
+          line-height: 1.3;
+          
+         }
+
+        .blockquote-quoted::before { 
+          content: "\201C"; /* inicio comilla */
+          width: 20%;
+          font-family: Georgia;
+          font-size:65px; /* tamaño */
+          font-weight: bold; 
+          line-height: 0px;
+          color:#DDD; /* Color  */
+          margin-top: 10px;
+          margin-bottom: -10px;
+          margin-left: -20px;
+          display: block;
+          }
+
+          .blockquote-quoted::after { 
+            margin-top: 10px;
+            margin-bottom: -10px;
+            margin-left: 550px;
+            display: block;
+
+          }
+    .blockquote-text-credit{
+    text-align: right;
+    width: 90%;
+    }
+
+      .contentwo{
+      width: 100%;
+      }
+      
+      .title-two h1{
+        color: #000000;
+        font-size: 2rem;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 800;
+      }
+
+      .content-two p{
+        color: #2d2d2d;
+      }
+
+      .articulo-ultimo{
+        width: 100%;
+      }
+
+      .autor-nombre{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .autor-foto img{
+        width: 100%;
+        max-width: 50px;
+        height: 50px;
+      }
+
+      .autor-letra{
+        position: absolute;
+        margin-left: 40px;
+      }
+
+      .tercera-columna-fija{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 700px;
+        margin-top: 50px;
+      }
+
+      .controls{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+       margin: auto;
+      }
+     
+      #custom-search-input{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+      }
+      .tercera-columna{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+ 
+       .tercera-columna h2{
+         display: none;
+       }
+      .tercera-columna img{
+        width: 50%;
+        display: block;
+        position: relative;
+        float: left;
+      }
+
+      .tercera-columna p{
+        width: 45%;
+        display: block;
+        position: relative;
+        float: right;
+      }
+
+      .categorias-aside{
+        margin-top: 20px;
+      }
+
+
+  /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT.... */
+ /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
+ #carrusel {
+  float:left;
+  width: 100%;
+  overflow:hidden;
+ height: 305px;
+  position:relative;
+  margin: auto;
+  margin-bottom: 20px;
+  }
+  
+  /*ESCONDE IMAGGENES*/
+ /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+  .carrusel{
+  width:4000px;
+  height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+  left: 0px;
+  position:absolute;
+  z-index:0;
+  }
+
+    /*PARA QUE LAS FLECHAS DESPAREZCAN */
+  #carrusel:hover  li.left-arrow{
+  background-color: #fff;
+  opacity: .4;
+   top: 54px;
+  transition:all .5s ease-in-out;
+  }
+  
+  #carrusel ul li.left-arrow:hover {
+  display: block;
+  background-color:  #fff;
+  opacity: 3;
+  }
+   
+
+ /**MUY IMPORTANTE..*/
+  /*CIRCULO PARA MOVERLO A LO ALTO Y ANCHO........................................................................................... */
+  .carusel{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    margin-top: 16%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+    margin-left:  50%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+    }
+
+    
+      /*CIRCULO  DERECHO*/
+      #carrusel li.right-arrow{
+        margin-left: 81%;
+        }
+    
+       /*CIRCULO   IZQUIERDO*/
+       #carrusel li.left-arrow{
+        margin-right: 3.8%;
+        }
+    
+ /*MUY IMPORTNATE*/  
+      /* ARROW LEFT .......................SOLO ARROW LEFT...................................ARROW LEFT SIN PALO............... */
+   .carrusel1 ul li.left-arrow span{
+    top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-bottom: none;
+  }
+
+    
+   /*MUY IMPORTNATE*/  
+     /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
+     .carrusel1 ul li.right-arrow span{
+  top: 50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  right:  8.5%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-top: none;
+  }
+ 
+
+
+
+
+ /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+ .carrusel>div {
+ float: left;
+ width: 100%;
+ max-width: 296px;  /*IMPORTANTE*/
+ height: 220px;
+ margin-right: 8px;   /*ESPACIO */
+ text-align:center;
+ }
+
+  /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+  .carrusel img {
+  cursor:pointer;
+  width: 100%;
+  max-width: 296px;  /*IMPORTANTE*/
+  height: 220px;
+  border: 3px solid #DDD ;
+  padding: 4px ;
+  border-radius:6px;
+  }
+ 
+     /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+   #footer-articulo{
+    clear: both;
+    display: block;
+    position: relative;
+    height:   80px;
+    margin-top:  -80px;
+    border-top: solid 1.5px #DCDCDC;
+    width: 100%;
+    z-index: 10;
+    }
+    
+    
+      /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-articulo{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    z-index: 10;
+    margin-bottom: 10px; 
+    }
+
+    /*CAJA DE SOCIALES Y LETRA*/
+    .icon-social1{
+      height: 70px;
+      width: 49.5%;
+    }
+      .icon-social1 p{
+       font-size:   1rem;
+
+     }
+
+      .social2{
+       margin-top: -4px;
+     }
+
+
+    .icon-social1  ul li .fa-envelope{
+    background-color: oldlace;
+    color: #2d2d2d;
+    width:25px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 25px;
+    border: solid #E9E9E9; 
+    margin-right: 5px;
+   }
+  
+   .icon-social1  ul li .fa-facebook-f{
+   background-color: oldlace;
+   color:  #2d2d2d;
+   width:25px;
+   height: 25px;
+   padding: 2px 2px 2px 2px;
+   border-radius: 25px;
+   border: solid #E9E9E9;
+   margin-right: 5px;
+   }
+  
+  
+    .icon-social1  ul li .fa-twitter{
+    background-color: oldlace;
+    color:   #2d2d2d;
+    width:25px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+    margin-right: 5px;
+     }
+  
+
+    .icon-social1 ul li .fa-instagram{
+    background-color: oldlace;
+    color: #2d2d2d;
+    width:25px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+    }
+  
+
+    .box{
+    width: 49.5%;
+    height: 70px;  
+   }
+
+   /*LETRA ENCIMA DEL BOX*/   
+     .box h3{
+     font-size: 0.8rem;
+    margin-top: 2px;
+    margin-left: 5px;
+    
+     }
+
+    .box form{
+     width:100%;
+     display: flex;
+     flex-direction: row;
+     align-items: flex-end;
+     justify-content: end;
+
+    }
+
+     .box input[type="text"]
+    {
+    background-color: #fff;
+    display: flex;
+    width:60%;
+     height: 40px;
+    border: 1.5px solid 	#DCDCDC;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+    }
+     
+
+ .box button[type="submit"]{
+    left: 6px;  /*EL TRUCO IMPORTANTE*/
+    border-radius: 0 5px 5px 0;
+    width: 30%;
+    height: 40px;
+    border: none ;
+    outline: none;
+    cursor: pointer;
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 0.6rem;
+    font-family: 'Archivo Black', sans-serif;
+    }
+
+   /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+  .footer-second-articulo{
+  width: 100%;
+  height: 30px;
+   }
+  
+   .final-food-articulo {
+   width: 100%;
+   height: 20px;
+   max-width: 400px;
+    margin: auto;
+    }
+ 
+  .final-food-articulo p{
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 0.6rem;
+  padding-bottom: 10px;
+  }
+  /* FINAL.....FOOTER..................*/
+
+
+  /*CAJA BUSCADOR*/
+  #controls-uno{
+    display: block;
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    padding-top: 40px;
+    }
+
+
+  /*PAGINA BUSCADOR.NO ELIMINAR ...*/
+   #container-search{
+    width: 100%;
+    max-width: 600px;
+    }
+
+    #container-search  h1{
+    font-size: 1.8rem;
+    }
+
+
+
+   .elemento{
+    width: 100%;
+    height: 500px;
+   display: flex;
+   flex-direction: column;
+   }
+
+
+   .elemento-imagen{
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 400px;
+    margin: auto;
+    }
+
+   .elemento-imagen img{
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 400px;
+    }
+
+
+   .elemento  .elemento-descripcion{
+    width: 100%;
+    height: 90px;
+    margin-top: 10px;
+    }
+
+
+
+
+
+
+
+
+
+   
+    /*BUSCADOR EN HORIZONTAL*/
+  /*IPAD..........................IPAD*/
+    @media only screen and (min-width: 700px) and (max-width: 768px){
+
+      #wrapper-articulo {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+            
+      #wrapper-articulo > * {
+      padding: 30px;
+      }
+        
+      #container-articulo{
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+        }
+
+        #menu-simple{
+          width: 100%;
+          margin: auto;
+        }
+  
+    header{
+        width: 100%;
+        z-index: 999;
+        position: fixed;
+        margin: auto;
+        height:  90px;
+        box-shadow: 0 8px 6px -6px #c9c9c9;
+          }
+        
+      header.black{
+            background-color:#fff;
+            width: 100%;
+            height:  90px;
+            }
+          
+    .cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    height: 55px;
+    margin-top: -10px;
+        }
+           
+          
+            
+             /*caja */
+               .logo{
+              display:block;
+             width: 60%;
+             height: 45px;
+             }
+                
+          .logo img {
+             width: 48%;
+             height: 45px;
+            margin: auto;
+           }
+           
+          
+           .menu-btn {
+            width:20%;
+            height: 45px;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+          }
+
+
+             /*CONTENEDOR  REVISTA Y SOCIALES*/
+             .menu-btn .boletin{
+            width: 15%;
+            display: block;
+            position: relative;
+            float: right;
+            height: 20px;
+            }
+
+          /*LETRA FOOD EMOTIONS*/
+          
+          /*LETRA INSCRIBETE*/
+           .menu-btn .boletin a h4{
+            font-size: 1.1rem;
+            word-spacing: -3px;
+            letter-spacing: -1px;
+            font-family: 'Cabin', sans-serif;
+            font-weight: 800;
+            color:#2d2d2d;
+            margin-top: 5px;
+            }
+          
+       
+            .boletin a h4:hover{
+              color: #639a3a;
+              text-decoration: none;
+             }
+            
+           /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+          
+       
+         
+
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+        .menu-btn  .menu-btn__burger {
+          display: block;
+          position: relative;
+          float: left;
+        margin-top: 32px;
+        width: 38px;
+        height: 5px;
+        background: #2d2d2d;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2);
+        transition: all .5s ease-in-out;
+        z-index: 1000;
+        }
+          
+        .menu-btn__burger::before,
+        .menu-btn__burger::after {
+        content: '';
+        position: absolute;
+        width: 38px;
+        height: 5px;
+        background:#2d2d2d;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+        transition: all .5s ease-in-out;
+        z-index: 800;        
+        }
+
+
+        .menu-btn__burger::before {
+        transform: translateY(-11px);
+        z-index:3000;
+        }
+
+
+        .menu-btn__burger::after {
+        transform: translateY(11px);
+        z-index:3000;
+        }
+
+       .menu-btn__burger:hover{
+      background-color: #639a3a;
+      }
+          
+      .menu-btn__burger:hover::before,
+      .menu-btn__burger:hover::after{
+      background-color: #639a3a;    
+      }
+  
+      /* ANIMATION */
+      .menu-btn.open .menu-btn__burger {
+      transform: translateX(-50px);
+      background: transparent;
+      box-shadow: none;
+       }
+
+      .menu-btn.open .menu-btn__burger::before {
+      transform: rotate(45deg) translate(35px, -35px);
+      background: #fff;
+      }
+
+      .menu-btn.open .menu-btn__burger::after {
+      transform: rotate(-45deg) translate(35px, 35px);
+      background: #fff;
+      }
+      /*FIN ANIMACION IMPORTANTE*/
+          
+            
+     /*IMPORTANTE*/
+    nav li a p{
+    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+    display: block;
+    border-radius: 8px solid #639a3a;
+     margin-top:8px;
+    position: absolute;
+    padding: 1px 1px ;
+    z-index: 200;
+    margin-left: -5px;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family:  sans-serif;
+    }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+     nav ul li{
+     display: flex;
+     width: 100%;
+     margin-top: 1.5%;/*IMPORTANTE */
+     filter: alpha(opacity=80);
+     list-style: none;
+     cursor:pointer;
+     margin-left: 1% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+      z-index: 1000;
+      }
+      
+
+      nav ul li a {
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+      width: 100%;
+      z-index: 100;
+      }
+
+          /* NAV ESCONDIDO  NAV ESCONDIDO*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav ul li:hover > ul {
+      display: block;
+      margin-left: 180px;
+      margin-top:-40px;
+      visibility: visible; 
+      z-index: 598;
+      }
+
+     
+    nav ul li ul li a {
+    font-size: 1rem;
+    display: block;
+    position: absolute;
+    width: 100%;
+    }
+    /*..FINAL MENU HAMBURGUESA*/
+  
+
+      #comentarios{
+      background-color: violet;
+      display: flex;
+      width: 100%;
+     }
+    
+    /*BUSCADOR*/
+     .controls .form-control{
+      width: 75%;
+      }
+
+     .controls .boton{
+      width: 25%;
+      font-size: 1rem;
+      }
+      /*FIN BUSCADOR*/
+
+      #menu-simple ul{
+        height: 50px;
+      }
+
+       /*EMPIEZA EL CONTENIDO*/
+        #tres-columnas-articulo{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin-top: 4%;
+        }
+  
+
+        .primera-columna{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        
+        }
+        .columna-primera{
+        width: 100%;
+       
+        }
+
+        .imagen-central{
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+       
+        }
+
+        .redes{
+          width: 20%;
+          }
+
+     .iconos-social{
+      display: flex;
+      flex-direction: row;
+     }
+
+     .iconos-social  li .fa-envelope{
+      padding: 5px 5px  5px  5px;
+      font-size:  5px;
+      width: 35px;
+      height: 38px;
+      margin-right: 12px;
+    
+    }
+    
+    .iconos-social li .fa-facebook-f{
+      padding: 5px 5px  5px  5px;
+      font-size:  5px;
+      width: 35px;
+      height: 38px;
+      margin-right: 12px;
+    }
+    
+    .iconos-social  li .fa-twitter{
+      padding: 5px 5px  5px  5px;
+      font-size:  5px;
+      width: 35px;
+      height: 38px;
+      margin-right: 12px;
+    }
+    
+     .iconos-social  li .fa-instagram{
+      padding: 5px 5px  5px  5px;
+      font-size:  5px;
+      width: 35px;
+      height: 38px;
+     
+     
+    }
+    
+        .imagen-central  img{
+        width: 100%;
+        }
+         
+    
+    .primer-articulo h1{
+      font-size: 2.4rem;
+    }
+   .segundo-articulo h1{
+     color:#000000;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: 900;
+     font-size: 1.9rem;
+     letter-spacing: -1.3px;
+     word-spacing: 0.5px;
+   }
+
+    
+   .title-two  h1{
+    color:#000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: 1.9rem;
+    letter-spacing: -1px;
+     word-spacing: 0.5px;
+  }
+
+   /*CONTAINER AUTOR Y NOMBRE..................*/
+ 
+
+    .articulo-ultimo{
+      width: 100%;
+      display: flex;
+     flex-direction: column;
+      margin-bottom: 2%;
+   
+    }
+
+    /*CONTENEDOR DE FOTO AUTOR Y SU OMBRE*/
+    .autor-nombre {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      max-height: 80px;
+     margin-bottom: 4%;
+    }
+
+
+    .autor-foto{
+    width: 20%;
+    display: inline-flex;
+    }
+
+      .autor-foto img{
+      margin: auto;
+      max-width: 60px;
+      max-height: 60px;
+      }
+    
+  
+    .autor-letra{
+     width: 80%;
+     position: absolute;
+     display: inline-flex;
+     margin-top: 40px;
+     margin-left: 60px;
+    }
+  
+
+    /*FIN CONTAINER FOTO AUTOR Y NOMBRE*/
+
+        .cursiva p{
+          font-size: 1.2rem;
+        }
+        .primer-articulo p{
+          font-size: 1.3rem;
+          font-family: 'Times New Roman', Times, serif;
+        }
+        .segundo-articulo p{
+          font-size: 1.3rem;
+          font-family: 'Times New Roman', Times, serif;
+        }
+      
+    /*ESTO SERVIRA PARA SEPARAR UN ARTICULO DEL OTRO*/
+     .categorias-posts-links{
+      margin-bottom: 20%;
+      border-bottom: 1.5px solid	#DCDCDC;
+      }
+
+      
+    .categoria-en-post{
+     width: 100%;
+     display: flex;
+    }
+
+   .blockquote .blockquote-text{
+            font-size: 1.1rem;
+            margin-left: 9px;
+            margin-top: 2px;
+          }
+  
+           .blockquote{
+            width:100%;
+            margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
+            padding: 20px;
+            border:  1px solid #DDD;
+            color:#666;
+            box-sizing: border-box;
+            font-family:  'sans-serif' ;
+            font-size: 1.15rem;
+            font-weight:400;
+            line-height: 1.3;
+            
+           }
+  
+            .blockquote-quoted::before { 
+            content: "\201C"; /* inicio comilla */
+            width: 30%;
+            font-family: Georgia;
+            font-size:  4rem; /* tamaño */
+            font-weight: bold; 
+            line-height: 0px;
+            color:#DDD; /* Color  */
+            margin-top: 20px;
+            margin-bottom: -10px;
+            margin-left: -20px;
+            display: block;
+            }
+  
+            .blockquote-quoted::after{ /* final */
+              content: "\201D";
+              font-family: Georgia;
+              font-size:  4rem; /* tamaño */
+              font-weight: bold;
+              line-height:0px;
+              color:#DDD; /* Color  */
+              margin-bottom: -20px;
+              margin-left:  335px;
+              display: block;
+              }
+
+             .blockquote-text-credit{
+              text-align: right;
+              width: 90%;  
+              }
+  
+            /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+
+
+     /*CONTAINER GENERAL DEL CARRUSEL............................................. */
+     .container-total-carrusell{
+      display: block;
+      position: relative;
+ 
+      }
+    
+      /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
+      #carrusel {
+        float:left;
+        width:100%;
+        overflow:hidden;
+       height: 245px;
+        position:relative;
+        margin: auto;
+        margin-bottom: 20px;
+        }
+        
+     
+    /*ESCONDE IMAGGENES*/
+   /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+   .carrusel{
+    width:4000px;
+    height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+    left: 0px;
+    position:absolute;
+    z-index:0;
+    }
+  
+   
+    
+  
+      /*PARA QUE LAS FLECHAS DESPAREZCAN */
+    #carrusel:hover  li.left-arrow{
+    background-color: #fff;
+    opacity: .4;
+     top: 54px;
+    transition:all .5s ease-in-out;
+    }
+    
+    #carrusel ul li.left-arrow:hover {
+    display: block;
+    background-color:  #fff;
+    opacity: 3;
+    }
+     
+  
+   /**MUY IMPORTANTE..*/
+    /*ESTO MODIFICA EL ALTO DEL CIRCULO Y EL ANCHO.............................................................................................. */
+     .carusel{
+      width: 100%;
+      display: flex;
+      position: absolute;
+      margin-top: 12%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+      margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+      }
+      
+
+       /*CIRCULO   IZQUIERDO*/
+     #carrusel li.left-arrow{
+      margin-left: 3.8%;
+      }
+
+     /*CIRCULO  DERECHO PONER DEBAJO DE 90 PARA QUE EL CIRCULO SALGA ENTER0*/
+     #carrusel li.right-arrow{
+      margin-left:85%;
+      }
+  
+
+      /*MUY IMPORTNATE*/  
+        /* ARROW LEFT .......................SOLO ARROW LEFT...................................ARROW LEFT SIN PALO............... */
+     .carrusel1 ul li.left-arrow span{
+      top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+     left:  5.2%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+     transform: translateY(-50%) rotate(-45deg);
+     border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+     border-bottom: none;
+      }
+  
+      
+     /*MUY IMPORTNATE*/  
+       /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
+   .carrusel1 ul li.right-arrow span{
+    top: 50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+    right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+    transform: translateY(-50%) rotate(-45deg);
+    border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+    border-top: none;
+    }
+   
+  
+   /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+   .carrusel>div {
+   float: left;
+   width: 100%;
+   max-width: 221px;
+   height: 160px;
+   margin-right:  0.4%;   /*ESPACIO */
+   text-align:center;
+   }
+   /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+    .carrusel img {
+    cursor:pointer;
+    width: 100%;
+    height: 160px;
+    border: 4px solid #DDD ;
+    padding: 4px ;
+    border-radius:6px;
+    }
+
+
+    /*COLUMNA SEGUNDA*/
+    .segunda-columna{
+      width: 100%;
+     }
+
+     .tercera-columna-fija{
+       width: 100%;
+       max-width: 700px;
+       display: flex;
+       flex-direction: column;
+     }
+    .controls{
+     width: 85%;
+     display: flex;
+     flex-direction: column;
+     margin: auto;
+     margin-bottom: 30px;
+    }
+   
+    .tercera-columna{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+     margin-bottom: 20px;
+    }
+
+    .tercera-columna  h2{
+   display: none;
+    }
+    
+    .tercera-columna img{
+    width: 50%;
+     display: inline-flex;
+     align-items: flex-start;
+     margin-right: 30px;
+    }
+
+    .tercera-columna  p{
+    width: 45%;
+    }
+
+       /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+  
+    #footer-articulo{
+    clear: both;
+    position: relative;
+    height: 120px;
+    margin-top: -120px;
+    border-top: solid 1.5px #DCDCDC;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 10;
+    }
+      
+      
+        /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+      .footer-primero-articulo{
+      width: 100%;
+      height: 80px;
+      display: flex;
+      flex-direction: row; 
+      justify-content: space-between;
+      z-index: 10;
+       margin-bottom: 35px; 
+      }
+  
+      /*CAJA DE SOCIALES Y LETRA*/
+      .icon-social1{
+      height: 80px;
+      width: 49.5%;
+      }
+
+    .icon-social1 p{
+    font-size:  1.1rem;
+    }
+  
+    .social2{
+    margin-top: -6%;
+    }
+
+
+    .icon-social1  ul li .fa-envelope{
+    background-color: oldlace;
+    color: #2d2d2d;
+    width:35px;
+    height: 35px;
+    padding: 3px 3px 3px 3px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+    margin-right: 5px;
+    }
+    
+     .icon-social1  ul li .fa-facebook-f{
+    background-color: oldlace;
+    color:  #2d2d2d;
+    width:35px;
+    height: 35px;
+    padding: 3px 3px 3px 3px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+    margin-right: 5px;
+    }
+    
+    
+      .icon-social1  ul li .fa-twitter{
+      background-color: oldlace;
+      color:   #2d2d2d;
+      width:35px;
+      height: 35px;
+      padding: 3px 3px 3px 3px;
+      border-radius: 25px;
+      border: solid #E9E9E9;
+      margin-right: 5px;
+       }
+    
+     .icon-social1 ul li .fa-instagram{
+         background-color: oldlace;
+         color: #2d2d2d;
+         width:35px;
+         height: 35px;
+         padding: 3px 3px 3px 3px;
+          border-radius: 25px;
+          border: solid #E9E9E9;
+         }
+    
+      .box{
+      width: 49.5%;
+      height: 80px;
+     }
+  
+     /*LETRA ENCIMA DEL BOX*/   
+       .box h3{
+       font-size: 0.8rem;
+      
+       margin-top: 0.4%;
+       }
+  
+      .box form{
+       width:100%;
+       display: flex;
+       flex-direction: row;
+       margin-top: -0.4%;
+      }
+  
+       .box input[type="text"]
+      {
+      background-color: #fff;
+      display: flex;
+      width:60%;
+       height: 45px;
+      border: 1.5px solid 	#DCDCDC;
+      padding: 0 10px;
+      border-radius: 5px 0 0 5px;
+      }
+       
+  
+   .box button[type="submit"]{
+      left: 6px;  /*EL TRUCO IMPORTANTE*/
+      border-radius: 0 5px 5px 0;
+      width: 30%;
+      height: 45px;
+      border: none ;
+      outline: none;
+      cursor: pointer;
+      background-color: #2d2d2d;
+      color: #fff;
+      font-size: 0.6rem;
+      font-family: 'Archivo Black', sans-serif;
+      }
+  
+    /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+    .footer-second-articulo{
+    width: 100%;
+    height: 25px;
+
+     }
+    
+     .final-food-articulo {
+     width: 100%;
+      margin: auto;
+      height: 15px;
+      }
+   
+    .final-food-articulo p{
+    text-align: center;
+    color: #2d2d2d;
+    font-size: 0.6rem;
+    }
+    /* FINAL.....FOOTER..................*/
+
+
+
+    /*CAJA BUSCADOR*/
+    #controls-uno{
+      display: block;
+      width: 80%;
+      height: 80px;
+      margin: auto;
+      padding-top: 40px;
+ 
+      }
+  
+      #custom-search-input-search{
+        height: 51px;
+      }
+
+      #controls-uno .form-control{
+        height: 47px;
+        padding: 4px;
+
+      }
+
+      #controls-uno .btn-succes{
+        height: 50px;
+      }
+    
+    /*PAGINA BUSCADOR.NO ELIMINAR ...*/
+    #container-search{
+      width: 100%;
+      max-width: 900px;
+    
+      }
+
+      #container-search  h1{
+        font-size: 1.8rem;
+        }
+
+    .container-pinterest{
+    display: block;
+ 
+     }
+
+    .elemento{
+      width: 100%;
+      height: 240px;
+      margin-bottom: 10px;
+     display: flex;
+     flex-direction: row;
+     }
+
+
+     .elemento-imagen{
+      display: block;
+      position: relative;
+      float: left;
+      width: 45%;
+      max-width: 250px;
+      height: 100%;
+      max-height: 150px;
+      margin-right: 22.5px;
+    }
+  
+    .elemento-imagen img{
+    margin: auto;
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    max-height: 150px;
+  
+    }
+
+     .elemento  .elemento-descripcion{
+      display:block;
+      position: relative;
+      float: right;
+      width: 50%;
+     }
+
+   .elemento-descripcion h2{
+     margin-top: 5px;
+   }
+
+
+   .elemento-descripcion p{
+   margin-top: -10px;
+   }
+
+    /*FIN DEL BUSCADOR*/
+  
+
+    }
+
+
+
+
+
+
+  
+  /* 769 A 900 ..................................................................................................................................................................................................... */
+  
+    @media only screen and (min-width: 769px) and (max-width: 900px){
+    #wrapper-articulo {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: auto;
+    }
+          
+    #wrapper-articulo > * {
+    padding: 20px;
+    }
+      
+    #container-articulo{
+      width:100%;
+      margin-top: 12%;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+
+        
+      #comentarios{
+        background-color: violet;
+        display: flex;
+        width: 100%;
+   
+      }
+      
+  header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      margin: auto;
+      height:  85px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+        }
+      
+       header.black{
+          background-color:#fff;
+          width: 100%;
+          height:  85px;
+          }
+        
+       .cabecera{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          margin: auto;
+          height: 50px;
+       
+         }
+       
+        
+      
+          
+           /*caja */
+      .logo{
+      display: inline-flex;
+      width: 60%;
+      height: 50px;
+    
+      }
+              
+      .logo img {
+      margin: auto;
+      width: 100%;
+      height: 50px;
+      }
+         
+            /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+            .menu-btn {
+             display: flex;
+             flex-direction: row;
+              width: 25%;
+              max-width: 190px;
+              height: 50px;
+          
+            }
+    
+     /*CONTENEDOR  REVISTA Y SOCIALES*/
+      .menu-btn  .boletin{
+      width: 100%;
+      height: 50px;
+      display: block;
+      position: relative;
+      float: left;
+     
+      }
+      
+        /*LETRA FOOD EMOTIONS*/
+        /*LETRA INSCRIBETE*/
+         .boletin a h4{
+          font-size: 1rem;
+          letter-spacing: -0.1px;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 900;
+          color:#2d2d2d;
+           margin-top: 32px;
+           background-color: red;
+          }
+        
+          .boletin a h4:hover{
+            color: #639a3a;
+            text-decoration: none;
+           }
+          
+     
+     
+
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+      .menu-btn .menu-btn__burger {
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 32px;
+      width: 38px;
+      height: 5px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+      z-index: 1000;
+      }
+        
+          .menu-btn__burger::before,
+          .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 38px;
+            height: 5px;
+            background:#2d2d2d;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+            transition: all .5s ease-in-out;
+           z-index: 800;
+           
+          }
+
+          .menu-btn__burger::before {
+            transform: translateY(-10px);
+            z-index:3000;   
+          }
+
+        .menu-btn__burger::after {
+        transform: translateY(10px);
+         z-index:3000;
+          }
+
+       .menu-btn__burger:hover{
+        background-color: #639a3a;
+        }
+        
+   .menu-btn__burger:hover::before,
+   .menu-btn__burger:hover::after{
+   background-color: #639a3a;
+   }
+
+           /* ANIMATION */
+           .menu-btn.open .menu-btn__burger {
+           transform: translateX(-50px);
+            background: transparent;
+           box-shadow: none;
+          }
+         .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+            background: #fff;
+          }
+           .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+            background: #fff;
+          }
+          
+        /*FIN ANIMACION IMPORTANTE*/
+        
+      
+              /*IMPORTANTE*/
+nav li a p{
+  background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+  display: block;
+  border-radius: 8px solid #639a3a;
+   margin-top:8px;
+  position: absolute;
+ padding: 1px 1px ;
+  z-index: 200;
+  margin-left: -5px;
+
+  color: #fff;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-family:  sans-serif;
+}
+   /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+   nav ul li{
+    display: flex;
+    width: 100%;
+    margin-top: 1.5%;/*IMPORTANTE */
+    filter: alpha(opacity=80);
+    list-style: none;
+    cursor:pointer;
+    margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+   z-index: 1000;
+    }
+
+    nav ul li a {
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 100%;
+    display: block;
+      position: absolute;
+    height:6px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
+    z-index: 100;
+  
+    }
+    nav ul li ul li a {
+      font-size: 1rem;
+      display: block;
+      position: absolute;
+     
+      width: 100%;
+     
+  
+    }
+          /* NAV ESCONDIDO  NAV ESCONDIDO*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav ul li:hover > ul { 
+    display: block;
+    margin-left: 200px;
+    margin-top:-40px;
+    height: 200px;
+    visibility: visible; 
+    z-index: 598;
+    }
+  /*..FINAL MENU HAMBURGUESA*/
+
+    /*BUSCADOR*/
+    .controls .form-control{
+      width: 75%;
+      }
+
+     .controls .boton{
+      width: 25%;
+      font-size: 1rem;
+      }
+      /*FIN BUSCADOR*/
+
+
+      #menu-simple{
+        width: 100%;
+        margin: 5px;
+      }
+
+      #menu-simple  ul{
+        height: 40px;
+      }
+
+
+   /*EMPIEZA EL CONTENIDO*/
+      #tres-columnas-articulo{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-top: 20px;
+      }
+
+     .columna-primera{
+  
+      width: 65%;
+     display: flex;
+     flex-direction: column;
+    
+     }
+
+   .segunda-columna{
+     width: 5%;
+     max-width: 40px;
+   }
+
+       /*TERCERA COLUMNA*/
+   .tercera-columna-fija{
+    width: 25%;
+    max-width: 190px;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+     
+   .primer-articulo h1{
+    font-size: 2.1rem;
+    word-spacing: 0.3px;
+    letter-spacing: -0.8px;
+
+  }
+
+     
+  .segundo-articulo h1{
+    color:#000000;
+    font-size: 1.6rem;
+    word-spacing: 0.3px;
+    letter-spacing: -0.8px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+
+  }
+
+  .title-two h1{
+    color:#000000;
+    font-size: 1.6rem;
+    word-spacing: 0.3px;
+    letter-spacing: -0.4px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+  }
+
+ 
+    
+
+    /*CONTIEE IMAGEN*/
+   .tercera-columna {
+    width:  100%;
+       }
+    
+       /*PRIMERA COLUMNA*/
+       .imagen-central img{
+        width: 100%;
+        height: 280px;
+       }
+
+       .segunda-imagen .foto img{
+         width: 100%;
+         height: 280px;
+       }
+   .tercera-columna img{
+    width: 100%;
+    height: 140px;
+       }
+    
+       
+  /*PARRAFO DEL BLOQUOTE*/
+         .blockquote .blockquote-text{
+          font-size: 1rem;
+          margin-left: 12px;
+          margin-top: 8px;
+          }
+
+         .blockquote{
+          width:100%;
+          margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
+          padding: 20px;
+          border:  1px solid #DDD;
+          color:#666;
+          box-sizing: border-box;
+          font-family:  'sans-serif' ;
+          font-size: 1.15rem;
+          font-weight:400;
+          line-height: 1.3;
+          
+         }
+
+         .blockquote-quoted::before { 
+          content: "\201C"; /* inicio comilla */
+          width: 30%;
+          font-family: Georgia;
+          font-size:  4remx; /* tamaño */
+          font-weight: bold; 
+          line-height: 0px;
+          color:#DDD; /* Color  */
+          margin-top: 20px;
+          margin-bottom: -10px;
+          margin-left: -20px;
+          display: block;
+          }
+
+          .blockquote-quoted::after{ /* final */
+            content: "\201D";
+            font-family: Georgia;
+            font-size:4rem; /* tamaño */
+            font-weight: bold;
+            line-height:0px;
+            color:#DDD; /* Color  */
+            margin-bottom: -20px;
+            margin-left: 408px;
+            display: block;
+            }
+
+          .blockquote-text-credit{
+            text-align: right;
+            width: 90%;  
+            }
+
+        
+          /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+  .carrusel1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+  margin-top: 7%;
+  z-index: 100;
+  }
+   
+
+    /*PARA QUE LAS FLECHAS DESPAREZCAN */
+    #carrusel:hover  li.left-arrow{
+      background-color: #fff;
+      opacity: .4;
+       top: 54px;
+      transition:all .5s ease-in-out;
+      }
+      
+      #carrusel ul li.left-arrow:hover {
+      display: block;
+      background-color:  #fff;
+      opacity: 3;
+      }
+       
+
+  /*ESCONDE IMAGGENES*/
+ /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+ .carrusel{
+  width:4000px;
+  height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+  left: 0px;
+  position:absolute;
+  z-index:0;
+  }
+
+ 
+   /*CIRCULO   IZQUIERDO*/
+  #carrusel li.left-arrow{
+  margin-left: 3.8%;
+  }
+
+   /*CIRCULO  DERECHO*/
+   #carrusel li.right-arrow{
+    margin-left: 88%;
+   }
+
+
+
+ /**MUY IMPORTANTE..*/
+  /*CIRCULO PARA MOVER EL ALTO Y ANCHO................................................................................................. */
+  .carusel{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    margin-top: 10%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+    margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+    }
+ /*MUY IMPORTNATE*/  
+      /* FLECHA PARA ENCAJAR EM EL CIRCULO.......................SOLO ARROW LEFT...................................ARROW LEFT SIN PALO............... */
+   .carrusel1 ul li.left-arrow span{
+    top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+   left: 5%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+   transform: translateY(-50%) rotate(-45deg);
+   border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+   border-bottom: none;
+   }
+
+    
+   /*MUY IMPORTNATE*/  
+     /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
+     .carrusel1 ul li.right-arrow span{
+     top: 40%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+     right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+     transform: translateY(-50%) rotate(-45deg);
+     border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+     border-top: none;
+     }
+ 
+
+ /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+  .carrusel>div {
+ float: left;
+ width: 100%;
+ max-width: 182px;
+ height: 160px;
+ margin-right: 0.3%;   /*ESPACIO */
+ text-align:center;
+ }
+ /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+ .carrusel img {
+  cursor:pointer;
+  width: 182px;
+  height: 160px;
+  border: 4px solid #DDD ;
+   padding: 4px ;
+   border-radius:6px;
+   }
+
+
+  
+     /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+  #footer-articulo{
+    clear: both;
+      position: relative;
+      height: 90px;
+      margin-top: -90px;
+     border-top: solid 1.5px #DCDCDC;
+     display: flex;
+     flex-direction: column;
+    width: 100%;
+    z-index: 10;
+    }
+    
+    
+      /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-articulo{
+      width: 100%;
+    margin:  auto;
+    height: 70px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    clear: both;
+    position: relative;
+    z-index: 1000;
+     margin-bottom: 0.8%;   
+    }
+
+    /*CAJA DE SOCIALES Y LETRA*/
+ .icon-social1{
+  height: 70px;
+  width:  49.5%;
+  }
+
+    .icon-social1 p{
+    font-size:  1.1rem;
+    }
+
+ 
+
+  .icon-social1  ul li .fa-envelope{
+  background-color: oldlace;
+  color: #2d2d2d;
+  width:25px;
+  height: 25px;
+  padding: 2px 2px 2px 2px;
+  border-radius: 25px;
+  border: solid #E9E9E9;
+  
+  }
+  
+   .icon-social1  ul li .fa-facebook-f{
+  background-color: oldlace;
+  color:  #2d2d2d;
+  width:25px;
+  height: 25px;
+  padding: 2px 2px 2px 2px;
+  border-radius: 25px;
+  border: solid #E9E9E9;
+  }
+  
+  
+  .icon-social1  ul li .fa-twitter{
+    background-color: oldlace;
+    color:   #2d2d2d;
+    width:25px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+     }
+  
+     .icon-social1 ul li .fa-instagram{
+       background-color: oldlace;
+       color: #2d2d2d;
+        width:25px;
+       height: 25px;
+        padding: 2px 2px 2px 2px;
+        border-radius: 25px;
+        border: solid #E9E9E9;
+       }
+  
+   .box{
+    width: 40%;
+    height: 70px;
+    margin-top: 1px;
+   }
+
+   /*LETRA ENCIMA DEL BOX*/   
+    .box h3{
+     font-size: 0.9rem;
+     margin-right: 5px;
+     margin-top: 1px;
+     }
+
+    .box form{
+     width:100%;
+     display: flex;
+     flex-direction: row;
+     
+    }
+
+    .box input[type="text"]
+    {
+    background-color: #fff;
+    display: flex;
+    width:60%;
+     height: 40px;
+    border: 1.5px solid 	#DCDCDC;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+    }
+     
+
+     .box button[type="submit"]{
+    left: 6px;  /*EL TRUCO IMPORTANTE*/
+    border-radius: 0 5px 5px 0;
+    width: 40%;
+    height: 40px;
+    border: none ;
+    outline: none;
+    cursor: pointer;
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 0.6rem;
+    font-family: 'Archivo Black', sans-serif;
+    }
+
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+  .footer-second-articulo{
+  width: 100%;
+  height: 10px;
+  margin-top: -10px;
+   }
+  
+   .final-food-articulo {
+   width: 100%;
+   max-width: 400px;
+    margin: auto;
+    }
+ 
+  .final-food-articulo p{
+  text-align: center;
+  padding-top: 8px;  /*BAJAN LAS LETRAS*/
+  color: #2d2d2d;
+  font-size: 0.6rem;
+  }
+
+
+
+     }
+  
+ /*.........................................*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*A PARTIR DE AQUI PONERLO EN ROW................................................................................................*/
+ /* 901 A 1000 ............. */
+    @media only screen and (min-width: 901px) and (max-width: 1000px){
+     #wrapper-articulo {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: auto;
+    }
+          
+    #wrapper-articulo > * {
+    padding: 20px;
+    }
+
+    #container-articulo{
+      width:100%;
+      margin-top: 10%;
+      margin-left:auto;
+      margin-right:auto;
+      }
+
+    #menu-simple{
+      width:100%;
+      margin-top: 0.5%;
+    }
+
+
+   header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      margin: auto;
+      height:  80px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+        }
+      
+       header.black{
+      background-color:#fff;
+      height:  80px;
+      }
+        
+        
+         #comentarios{
+          background-color: violet;
+          display: flex;
+          width: 100%;
+      
+        }
+        
+        
+        .cabecera{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          margin: auto;
+          height: 50px;
+         }
+         
+          
+           /*caja */
+           .logo{
+             display: flex;
+             height: 50px;
+           width: 70%;
+      
+           }
+              
+          .logo img {
+           width: 100%;
+           height: 50px;
+          
+         }
+         
+             /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+    .menu-btn {
+     display: flex;
+     flex-direction: row;
+     height: 50px;
+      width: 20%;
+    background-color: greenyellow;
+        }
+  
+        
+           /*CONTENEDOR  REVISTA Y SOCIALES*/
+        .boletin{
+          width: 20%;
+         display: block;
+         position: relative;
+         float: left;
+        }
+ 
+      
+        /*LETRA INSCRIBETE*/
+       .boletin a h4{
+      font-size: 1rem;
+      letter-spacing: 0.2px;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 900;
+     color:#2d2d2d;
+     margin-top: 42px;
+      }
+        
+    .boletin a h4:hover{
+    color: #639a3a;
+    text-decoration: none;
+    }
+          
+
+
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+       .menu-btn__burger {
+          display: block;
+          position: relative;
+          float: right;
+          margin-top: 33px;
+          width: 38px;
+          height: 5px;
+          background: #2d2d2d;
+          border-radius: 2px;
+          box-shadow: 0 2px 5px rgba(255,101,47,.2);
+          transition: all .5s ease-in-out;
+          z-index: 1000;
+          
+           }
+        
+          .menu-btn__burger::before,
+          .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 38px;
+            height: 5px;
+            margin-left: 1%;
+            background:#2d2d2d;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+            transition: all .5s ease-in-out;
+           z-index: 800;
+           
+          }
+          .menu-btn__burger::before {
+            transform: translateY(-10px);
+            z-index:3000;
+            
+          }
+          .menu-btn__burger::after {
+            transform: translateY(10px);
+            z-index:3000;
+          }
+              /*IMPORTANTE*/
+           .menu-btn__burger:hover{
+            background-color: #639a3a;
+          }
+        
+        .menu-btn__burger:hover::before,
+        .menu-btn__burger:hover::after{
+         background-color: #639a3a;
+          }
+
+           /* ANIMATION */
+         .menu-btn.open .menu-btn__burger {
+          transform: translateX(-50px);
+          background: transparent;
+           box-shadow: none;
+          }
+         .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+            background: #fff;
+          }
+        .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+            background: #fff;
+          }
+          
+        /*FIN ANIMACION IMPORTANTE*/
+        
+         
+     nav li a p{
+     background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+     display: block;
+     border-radius: 8px solid #639a3a;
+     margin-top:8px;
+     position: absolute;
+     padding: 1px 1px ;
+     z-index: 200;
+    margin-left: -5px;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+     font-family:  sans-serif;
+     }
+   /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+     nav ul li{
+    display: flex;
+    width: 100%;
+    margin-top: 1.5%;/*IMPORTANTE */
+    filter: alpha(opacity=80);
+    height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
+    list-style: none;
+    cursor:pointer;
+    margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+
+    }
+  /*..FINAL MENU HAMBURGUESA*/
+
+
+      /*EMPIEZA EL CONTENIDO*/
+
+      #tres-columnas-articulo{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 1%;
+      }
+     
+
+     
+        .columna-primera{
+          width: 70%;
+     
+        }
+         .segunda-columna{
+           width: 7%;
+          max-width: 60px;
+         }
+
+         .tercera-columna-fija{
+           width: 23%;
+           max-width: 190px;
+         }
+      
+         
+         .columna-primera img{
+           width: 100%;
+           height: 350px;
+         }
+
+         .segundo-articulo h1{
+           color: #000000;
+           font-family: 'Times New Roman', Times, serif;
+           font-size: 1.8rem;
+           letter-spacing: -0.6px;
+           font-weight: 900;
+         }
+
+         .title-two h1{
+           color: #000000;
+           font-size: 1.8rem;
+           font-family: 'Times New Roman', Times, serif;
+           letter-spacing: -0.5px;
+           font-weight: 900;
+         }
+         .blockquote{
+          width:100%;
+          margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
+          padding: 20px;
+          border:  1px solid #DDD;
+          color:#666;
+          box-sizing: border-box;
+          font-family:  'sans-serif' ;
+          font-size: 1.15rem;
+          font-weight:400;
+          line-height: 1.3; 
+         }
+         
+         /*PARRAFO*/
+         .blockquote .blockquote-text{
+          font-size: 1rem;
+          margin-left: 1px;
+          margin-top: 8px;
+        }
+
+        .blockquote-quoted::before { 
+          content: "\201C"; /* inicio comilla */
+          width: 30%;
+          font-family: Georgia;
+          font-size:65px; /* tamaño */
+          font-weight: bold; 
+          line-height: 0px;
+          color:#DDD; /* Color  */
+          margin-top: 20px;
+          margin-bottom: -10px;
+          margin-left: -20px;
+          display: block;
+          background-color: sienna;
+          }
+
+
+          .blockquote-quoted::after{ /* final */
+            content: "\201D";
+            font-family: Georgia;
+            font-size:65px; /* tamaño */
+            font-weight: bold;
+            line-height:0px;
+            color:#DDD; /* Color  */
+            margin-bottom: -20px;
+            margin-left: 465px;
+            display: block;
+            }
+         .blockquote-text-credit{
+            text-align: right;
+            width: 90%;
+            
+          }
+
+          .articulo-ultimo{
+            width: 100%;
+
+          }
+
+          .autor-nombre{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          }
+          
+          .autor-foto img{
+          width: 80px;
+          height: 80px;
+          }
+
+          .autor-letra{
+            position: absolute;
+            margin-left: 70px;
+          }
+
+
+          /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+  .carrusel1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+  margin-top: 7%;
+  z-index: 100;
+  }
+   
+      /*PARA QUE LAS FLECHAS DESPAREZCAN */
+#carrusel:hover  li.left-arrow{
+  background-color: #fff;
+  opacity: .4;
+   top: 54px;
+  transition:all .5s ease-in-out;
+  }
+  
+  #carrusel ul li.left-arrow:hover {
+  display: block;
+  background-color:  #fff;
+  opacity: 3;
+  }
+   
+  /*ESCONDE IMAGGENES*/
+ /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+ .carrusel{
+  width:4000px;
+  height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+  left: 0px;
+  position:absolute;
+  z-index:0;
+  }
+
+ 
+
+
+ /**MUY IMPORTANTE..*/
+  /*CIRCULO MUEVE EL ALTO Y ANCHO DEL CIRCULO........................................................................................... */
+.carusel{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    margin-top: 9%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+    margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+    }
+
+     /*CIRCULO  DERECHO*/
+     #carrusel  li.right-arrow{
+     margin-left:88%;
+     }
+  
+  
+   /*CIRCULO   IZQUIERDO*/
+   #carrusel li.left-arrow{
+    margin-left: 3.8%;
+    }
+
+ /*MUY IMPORTNATE PARA MOVER LA FLECHA*/  
+      /* ARROW LEFT .......................SOLO ARROW LEFT...................................ARROW LEFT SIN PALO............... */
+ .carrusel1 ul li.left-arrow span{
+    top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  left: 4.5%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-bottom: none;
+  }
+
+    
+   /*MUY IMPORTNATE*/  
+     /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
+   .carrusel1 ul li.right-arrow span{
+  top: 44%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-top: none;
+  }
+ 
+
+ 
+
+
+ /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+ .carrusel>div {
+ float: left;
+ height: 170px;
+ width: 100%;
+ max-width: 214px;
+ margin-right: 0.6%;   /*ESPACIO */
+ text-align:center;
+ }
+ /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+ .carrusel img {
+cursor:pointer;
+width: 100%;
+height: 170px;
+border: 4px solid #DDD ;
+padding: 4px ;
+border-radius:6px;
+}
+ 
+     /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+  #footer-articulo{
+    clear: both;
+      position: relative;
+      height: 90px;
+      margin-top: -90px;
+     border-top: solid 1.5px #DCDCDC;
+     display: flex;
+     flex-direction: column;
+    width: 100%;
+    z-index: 10;
+    }
+    
+    
+      /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-articulo{
+      width: 100%;
+    margin:  auto;
+    height: 85px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    clear: both;
+    z-index: 10;
+     margin-bottom: 0.8%; 
+    }
+
+    /*CAJA DE SOCIALES Y LETRA*/
+      .icon-social1{
+      width: 49.5%;
+      height: 85px;
+    }
+
+
+     .icon-social1 p{
+       font-size: 1.2rem;
+
+     }
+
+      .social2{
+       width: 48%;
+       margin-top: -4%;
+     }
+
+    #footer-articulo .icon-social1  ul li .fa-envelope{
+  background-color: oldlace;
+  color: #2d2d2d;
+  width:30px;
+  height: 30px;
+  padding: 3px 3px 3px 3px;
+  border-radius: 25px;
+  border: solid #E9E9E9;
+  
+  }
+  
+    #footer-articulo .icon-social1  ul li .fa-facebook-f{
+  background-color: oldlace;
+  color:  #2d2d2d;
+  width:30px;
+  height: 30px;
+  padding: 3px 3px 3px 3px;
+  border-radius: 25px;
+  border: solid #E9E9E9;
+  
+  }
+  
+  
+    #footer-articulo .icon-social1  ul li .fa-twitter{
+    background-color: oldlace;
+    color:   #2d2d2d;
+    width:30px;
+  height: 30px;
+  padding: 3px 3px 3px 3px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+     }
+  
+      #footer-articulo .icon-social1 ul li .fa-instagram{
+       background-color: oldlace;
+       color: #2d2d2d;
+       width:30px;
+  height: 30px;
+  padding: 3px 3px 3px 3px;
+        border-radius: 25px;
+        border: solid #E9E9E9;
+       }
+  
+   .box{
+    width: 49.5%;
+    height: 85px;
+   display: flex;
+     
+   }
+
+   /*LETRA ENCIMA DEL BOX*/   
+  .box h3{
+     font-size: 1rem;
+     margin-right: 7px;
+     margin-top: 1.5%;
+   }
+
+    .box form{
+     width:100%;
+    display: flex;
+    flex-direction: row;
+    
+    }
+
+    #footer-articulo .box input[type="text"]
+    {
+    background-color: #fff;
+    display: flex;
+    width:60%;
+    font-size: 0.9rem;
+     height: 40px;
+    border: 1.5px solid 	#DCDCDC;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+    }
+     
+
+    #footer-articulo .box button[type="submit"]{
+    left: 6px;  /*EL TRUCO IMPORTANTE*/
+    border-radius: 0 5px 5px 0;
+    width: 40%;
+    height: 40px;
+    border: none ;
+    outline: none;
+    cursor: pointer;
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 0.6rem;
+    font-family: 'Archivo Black', sans-serif;
+    }
+
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+  .footer-second-articulo{
+  width: 100%;
+  height: 15px;
+  margin-top: -10px;
+   }
+  
+   .final-food-articulo {
+   width: 100%;
+    margin: auto;
+    }
+ 
+  .final-food-articulo p{
+  text-align: center;
+  padding-top: 8px;  /*BAJAN LAS LETRAS*/
+  color: #2d2d2d;
+  font-size: 0.6rem;
+  }
+  
+
+
+    }
+  
+
+
+
+
+
+
+
+  /* 1001 A 1080 ..............IPOD PRO....................................................................................................................................................................................... */
+  
+  @media only screen and (min-width: 1001px) and (max-width: 1080px){
+
+     #wrapper-articulo {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: auto;
+
+    }
+          
+      #wrapper-articulo > * {
+      padding: 20px;
+      }
+      
+      #container-articulo{
+      width:100%;
+      margin-top: 10%;
+      margin-left:auto;
+      margin-right:auto;
+      }
+
+        #comentarios{
+        background-color: violet;
+        display: flex;
+        width: 100%;
+       }
+
+       header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      top: 0;
+      margin: auto;
+      height:  85px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+        }
+      
+           header.black{
+          background-color:#fff;
+          height:  85px;
+          }
+        
+           .cabecera{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          margin: auto;
+          height: 55px;   
+         }
+         
+           /*caja */
+           .logo{
+           width: 60%;
+           height: 55px;
+           }
+              
+         .logo img {
+           width: 100%;
+         height: 55px;
+         margin: auto;
+         }
+         
+
+              /*TERCER SEGMENTO DE LA CABCERA*/
+         /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+        .menu-btn {
+        display: flex;
+        flex-direction: row;
+          width: 20%;
+          max-width: 190px;
+          height: 55px;
+          }
+  
+ 
+        /*CONTENEDOR  REVISTA Y SOCIALES*/
+       .boletin{
+        width: 15%;
+        display: block;
+        position: relative;
+        float: left;
+        height: 55px;
+        margin-right: 5px;
+        background-color: rgb(255, 0, 157);
+        }
+
+        /*LETRA INSCRIBETE*/
+          .boletin a h4{
+          font-size: 1.1rem;
+          letter-spacing: -0.3px;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 900;
+          color:#2d2d2d;
+          margin-top: 35px;
+          }
+        
+         .boletin a h4:hover{
+        color: #639a3a;
+        text-decoration: none;
+        }
+          
+      
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+        .menu-btn__burger {
+          display: block;
+          position: relative;
+          float: right;
+          margin-top:  38px;
+          width: 40px;
+          height: 4px;
+          background: #2d2d2d;
+          border-radius: 2px;
+          box-shadow: 0 2px 5px rgba(255,101,47,.2);
+          transition: all .5s ease-in-out;
+          z-index: 1000;
+          }
+        
+          .menu-btn__burger::before,
+          .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 4px;
+            margin-left:    -0.5%;
+            background:#2d2d2d;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+            transition: all .5s ease-in-out;
+            z-index: 800; 
+          }
+          .menu-btn__burger::before {
+            transform: translateY(-10px);
+            z-index:3000;
+            
+          }
+       .menu-btn__burger::after {
+            transform: translateY(10px);
+            z-index:3000;
+          }
+       .menu-btn__burger:hover{
+            background-color: #639a3a;
+         
+          }
+        
+           .menu-btn__burger:hover::before,
+           .menu-btn__burger:hover::after{
+            background-color: #639a3a;
+        
+         
+          }
+
+           /* ANIMATION */
+    .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    }
+         .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+            background: #fff;
+          }
+         .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+            background: #fff;
+          }
+          
+        /*FIN ANIMACION IMPORTANTE*/
+        
+              /*IMPORTANTE*/
+nav li a p{
+  background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+  display: block;
+  border-radius: 8px solid #639a3a;
+   margin-top:8px;
+  position: absolute;
+ padding: 1px 1px ;
+  z-index: 200;
+  margin-left: -5px;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-family:  sans-serif;
+}
+  /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+  nav ul li{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1000;
+    margin: auto;
+    filter: alpha(opacity=80);
+    list-style: none;
+    cursor:pointer;
+    margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+    }
+/*..FINAL MENU HAMBURGUESA*/
+
+   
+  /*IMPORTANTE PARA SEPARA UN MENU DE OTRO*/
+  nav ul li a {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 100%;
+  max-width: 800px;
+  height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
+  z-index: 100;
+  }
+
+   
+      /* NAV ESCONDIDO  NAV ESCONDIDO*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+   nav ul li:hover > ul {
+     
+    display: block;
+   margin-left: 240px;
+    margin-top:-40px;
+   height: 200px;
+   visibility: visible; 
+ z-index: 598;
+  }
+  /*..FINAL MENU HAMBURGUESA*/
+  #menu-simple p{
+    font-size: 1rem;
+  }
+
+     /*EMPIEZA EL CONTENIDO*/
+
+      #tres-columnas-articulo{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction:row;
+        margin-top: 3%;
+      }
+
+      .columna-primera{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+      }
+      .segunda-columna{
+        width: 7%;
+        max-width: 90px;
+      }
+   .tercera-columna-fija{
+        width: 23%;
+        max-width:  230px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .controls{
+        width: 100%;
+      
+      }
+
+      .tercera-columna{
+        width: 100%;
+      
+      }
+
+
+      .columna-primera img{
+        width: 100%;
+        height: 400px;
+      }
+   
+       /*PARRAFO*/
+     .blockquote .blockquote-text{
+          font-size: 1.7rem;
+          margin-left: 18px;
+          margin-top: 10px;
+          font-family: 'Times New Roman', Times, serif;
+          letter-spacing: -0.3px;
+        }
+
+        .blockquote{
+          width:100%;
+          margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
+          padding: 20px;
+          border:  1px solid #DDD;
+          color:#666;
+          box-sizing: border-box;
+          font-family:  'sans-serif' ;
+          font-size: 1.15rem;
+          font-weight:400;
+          line-height: 1.3;   
+         }
+
+         .blockquote-quoted::before { 
+          content: "\201C"; /* inicio comilla */
+          width: 30%;
+          font-family: Georgia;
+          font-size:65px; /* tamaño */
+          font-weight: bold; 
+          line-height: 0px;
+          color:#DDD; /* Color  */
+          margin-top: 20px;
+          margin-bottom: -10px;
+          margin-left: -20px;
+          display: block;
+    
+          }
+    
+          .blockquote-quoted::after{ /* final */
+            content: "\201D";
+            font-family: Georgia;
+            font-size:65px; /* tamaño */
+            font-weight: bold;
+            line-height:0px;
+            color:#DDD; /* Color  */
+            margin-bottom: -20px;
+            margin-left: 510px;
+            display: block;
+            }
+         .blockquote-text-credit{
+            text-align: right;
+            width: 90%;
+            
+          }
+
+   
+       .segunda-columna{
+        width: 8%;
+       }
+
+       .tercera-columna-fija{
+         width: 32%;
+       }
+
+       .articulo-ultimo{
+         display: flex;
+        flex-direction: column;
+         margin-bottom: 2%;
+      
+       }
+       .autor-nombre {
+         display: flex;
+         flex-direction: row;
+         width: 40%;
+         height: 100%;
+         max-height: 80px;
+        margin-bottom: 4%;
+       }
+
+       .autor-nombre img{
+         width: 100%;
+         height: 100%;
+       
+       }
+
+     .autor-nombre h3{
+         position: absolute;
+         margin-top: 4px;
+         margin-left: -135px;
+       
+       }
+  
+       .cursiva p{
+         font-size: 1.2rem;
+       }
+       .primer-articulo p{
+         font-size: 1.3rem;
+         font-family: 'Times New Roman', Times, serif;
+         font-weight: lighter;
+         color: #666;
+       }
+
+       .segundo-articulo h1{
+        font-size: 1.8rem;
+        font-family: 'Times New Roman', Times, serif;
+        color: #000000;
+        font-weight: 600;
+      }
+
+
+       .segundo-articulo p{
+         font-size: 1.3rem;
+         font-family: 'Times New Roman', Times, serif;
+         color: #666;
+       }
+      /*ULTIMO PARRAFO*/
+       .articulo-uno h1{
+        font-size: 1.8rem;
+        font-family: 'Times New Roman', Times, serif;
+        color: #000000;
+        font-weight: 600;
+     
+      }
+
+      .articulo-uno p{
+        font-size: 1.3rem;
+        font-family: 'Times New Roman', Times, serif;
+        color: #666;
+        font-weight: 600;
+      
+      }
+
+       /*NARRATIVA*/
+       .pricolumna-articulo p{
+         font-size: 1.5rem;
+         font-family: 'Times New Roman', Times, serif;
+         color: #666;
+       }
+
+   /*ESTO SERVIRA PARA SEPARAR UN ARTICULO DEL OTRO*/
+    .categorias-posts-links{
+     margin-bottom: 20%;
+     border-bottom: 1.5px solid	#DCDCDC;
+     }
+
+     
+   .categoria-en-post{
+    width: 100%;
+    display: flex;
+   }
+
+          /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+  .carrusel1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+  margin-top: 7%;
+  z-index: 100;
+  }
+   
+  /*ESCONDE IMAGGENES*/
+ /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+  .carrusel{
+  width:4000px;
+  height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+  left: 0px;
+  position:absolute;
+  z-index:0;
+  }
+
+ 
+   /*CIRCULO   IZQUIERDO*/
+    #carrusel li.left-arrow{
+    margin-left: 3.8%;
+    
+   
+    }
+
+    /*PARA QUE LAS FLECHAS DESPAREZCAN */
+    #carrusel:hover  li.left-arrow{
+    background-color: #fff;
+    opacity: .4;
+    top: 54px;
+    transition:all .5s ease-in-out;
+    }
+  
+  #carrusel ul li.left-arrow:hover {
+  display: block;
+  background-color:  #fff;
+  opacity: 3;
+  }
+   
+
+ /**MUY IMPORTANTE..................MUY IMPORTANTE.....................*/
+  /*MUEVE EL CIRCULO..A LO ALTO Y ANCHO......... */
+    .carusel{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    margin-top:   8%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+    margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+    }
+
+     /*CIRCULO  DERECHO*/
+     #carrusel li.right-arrow{
+      margin-left:70%;
+      }
+  
+       /*CIRCULO IZQUIERDO*/
+       #carrusel li.left-arrow{
+        margin-right: 19%;
+        }
+
+ /*MUY IMPORTANTE........................................................*/  
+      /*FLECHAS  ARROW LEFT .........ARROW LEFT SIN PALO............... */
+    .carrusel1 ul li.left-arrow span{
+    top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+    left: 5%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+    transform: translateY(-50%) rotate(-45deg);
+    border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+    border-bottom: none;
+    }
+
+    
+   /*MUY IMPORTNATE*/  
+     /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
+     .carrusel1 ul li.right-arrow span{
+     top:   50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+     right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+     transform: translateY(-50%) rotate(-45deg);
+     border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+     border-top: none;
+     }
+ 
+
+ 
+
+
+ /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+   .carrusel>div {
+   float: left;
+   width: 238px;
+   height: 170px;
+   margin-right: 0.5%;   /*ESPACIO */
+   text-align:center;
+   }
+ /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+  .carrusel img {
+  cursor:pointer;
+  width:  100%;
+  height: 170px;
+  border: 4px solid #DDD ;
+  padding: 4px ;
+  border-radius:6px;
+   }
+ 
+     /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+  #footer-articulo{
+    clear: both;
+      position: relative;
+      height: 90px;
+      margin-top: -90px;
+     border-top: solid 1.5px #DCDCDC;
+     display: flex;
+     flex-direction: column;
+    width: 100%;
+    z-index: 10;
+    }
+    
+    
+      /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-articulo{
+      width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    clear: both;
+    z-index: 1000;
+     margin-bottom: 0.8%; 
+    }
+
+    /*CAJA DE SOCIALES Y LETRA*/
+       .icon-social1{
+      width: 49%;
+      height: 75px;
+      display: flex;
+      flex-direction: column;
+     }
+
+     .icon-social1 p{
+     font-size: 1.2em;
+     }
+
+      .social2{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+     }
+
+    #footer-articulo .icon-social1  ul li .fa-envelope{
+    background-color: oldlace;
+    color: #2d2d2d;
+    width:  30px;
+    height: 30px;
+    padding: 3px 3px 3px 3px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+    }
+  
+    #footer-articulo .icon-social1  ul li .fa-facebook-f{
+    background-color: oldlace;
+    color:  #2d2d2d;
+    width:  30px;
+    height: 30px;
+    padding: 3px 3px 3px 3px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+    }
+  
+  
+    #footer-articulo .icon-social1  ul li .fa-twitter{
+    background-color: oldlace;
+    color:   #2d2d2d;
+    width:  30px;
+    height: 30px;
+    padding: 3px 3px 3px 3px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+     }
+  
+      #footer-articulo .icon-social1 ul li .fa-instagram{
+       background-color: oldlace;
+       color: #2d2d2d;
+       width:  30px;
+       height: 30px;
+       padding: 3px 3px 3px 3px;
+        border-radius: 25px;
+        border: solid #E9E9E9;
+       }
+  
+      .box{
+       width: 48%;
+       height: 75px;
+      margin: auto;
+       }
+
+   /*LETRA ENCIMA DEL BOX*/   
+     .box h3{
+     font-size: 1rem;
+     margin: auto;
+     }
+
+     .box form{
+     width:100%;
+     display: flex;
+     flex-direction: row;
+    margin: auto;
+    }
+
+     .box input[type="text"]
+    {
+    background-color: #fff;
+    display: flex;
+    width:60%;
+     height: 30px;
+    border: 1.5px solid 	#DCDCDC;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+    font-size:  0.9rem;
+    }
+     
+    .box button[type="submit"]{
+    left: 6px;  /*EL TRUCO IMPORTANTE*/
+    border-radius: 0 5px 5px 0;
+    width: 40%;
+    height: 30px;
+    border: none ;
+    outline: none;
+    cursor: pointer;
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 0.6rem;
+    font-family: 'Archivo Black', sans-serif;
+    }
+
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+  .footer-second-articulo{
+  width: 100%;
+  height: 15px;
+  margin-top: -10px;
+   }
+  
+   .final-food-articulo {
+   width: 100%;
+   height: 15px;
+    margin: auto;
+    }
+ 
+    .final-food-articulo p{
+    text-align: center;
+    padding-top: 8px;  /*BAJAN LAS LETRAS*/
+    color: #2d2d2d;
+    font-size: 0.6rem;
+    }
+
+ 
+     /*CARRUSEL*/
+     #carrusel {
+      width:  94%;
+     }
+
+    /*CAJA DEL BUSCADOR*/
+    #controls-uno{
+      display: block;
+      width: 90%;
+
+    }
+
+    #custom-search-input-search{
+
+      height: 53px;
+    
+    }
+
+
+    #controls-uno .form-control{
+
+      height: 50px;
+    
+    }
+
+    #controls-uno .btn-succes{
+
+      height: 52px;
+    }
+    /*PAGINA SEARCH..*/
+    #container-search{
+      display: block;
+      width: 90%;
+    }
+
+    }
+
+
+
+
+
+
+
+    
+  /* 1081 A 1149 ..................................................................................................................................................................................................... */
+  
+
+  @media only screen and (min-width: 1081px) and (max-width: 1149px){
+
+    #wrapper-articulo {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: auto;
+    }
+          
+    #wrapper-articulo > * {
+    padding: 20px;
+    }
+      
+      #container-articulo{
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      margin-left:auto;
+      margin-right:auto;
+      }
+
+
+     header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      margin: auto;
+      height:  85px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+    }
+      
+    header.black{
+    background-color:#fff;
+    height:  85px;
+    }
+        
+          #comentarios{
+            background-color: violet;
+            display: flex;
+            width: 100%;
+            max-width: 900px;
+          }
+          
+
+    .cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    height: 55px;
+  
+    }
+         
+        
+    /*caja */
+    .logo{
+    width: 60%;
+    height: 55px;
+
+    }
+              
+    .logo img {
+    width: 100%;
+    height: 55px;
+    }
+
+        /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/  
+        .menu-btn {
+          display: flex;
+          flex-direction: row;
+          width: 20%;
+          }
+    
+         
+        
+      /*CONTENEDOR  REVISTA Y SOCIALES*/
+      .boletin{
+      width: 15%;
+      height: 55px;
+      display: block;
+      position: relative;
+      float: left;
+      background-color: olive;
+      }
+  
+      /*LETRA INSCRIBETE*/
+      .boletin a h4{
+      font-size: 1rem;
+      letter-spacing: 0.2px;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 900;
+      color:#2d2d2d;
+      margin-top: 37px;
+      }
+        
+      .boletin a h4:hover{
+      color: #639a3a;
+      text-decoration: none;
+      }
+          
+ 
+   
+
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+         .menu-btn__burger {
+          display: block;
+          position: relative;
+          float: right;
+          margin-top: 29px;
+          width: 38px;
+          height: 5px;
+          background: #2d2d2d;
+          border-radius: 2px;
+          box-shadow: 0 2px 5px rgba(255,101,47,.2);
+          transition: all .5s ease-in-out;
+          z-index: 1000;
+           }
+        
+          .menu-btn__burger::before,
+          .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 38px;
+            height: 5px;
+            margin-left: 1%;
+            background:#2d2d2d;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+            transition: all .5s ease-in-out;
+           z-index: 800;  
+          }
+
+          .menu-btn__burger::before {
+            transform: translateY(-10px);
+            z-index:3000;
+            
+          }
+          .menu-btn__burger::after {
+            transform: translateY(10px);
+            z-index:3000;
+          }
+
+
+
+      .menu-btn__burger:hover{
+      background-color: #639a3a;
+      }
+        
+           .menu-btn__burger:hover::before,
+           .menu-btn__burger:hover::after{
+            background-color: #639a3a;
+          }
+
+
+           /* ANIMATION */
+    .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+           .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+            background: #fff;
+          }
+          .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+            background: #fff;
+          }
+          
+        /*FIN ANIMACION IMPORTANTE*/
+        
+        
+      
+              /*IMPORTANTE*/
+nav li a p{
+  background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+  display: block;
+  border-radius: 8px solid #639a3a;
+   margin-top:8px;
+  position: absolute;
+ padding: 1px 1px ;
+  z-index: 200;
+  margin-left: -5px;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-family:  sans-serif;
+}
+   /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav ul li{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      z-index: 1000;
+      margin: auto;
+      filter: alpha(opacity=80);
+      list-style: none;
+      cursor:pointer;
+      background-color: turquoise;
+      margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+      }
+  /*..FINAL MENU HAMBURGUESA*/
+
+     
+    /*IMPORTANTE PARA SEPARA UN MENU DE OTRO*/
+    nav ul li a {
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 100%;
+    max-width: 800px;
+    height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
+    z-index: 100;
+    }
+
+
+        /* NAV ESCONDIDO  NAV ESCONDIDO*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+   nav ul li:hover > ul {
+    display: block;
+   margin-left: 230px;
+    margin-top:-40px;
+   height: 200px;
+   visibility: visible; 
+ z-index: 598;
+  }
+  /*..FINAL MENU HAMBURGUESA*/
+
+   
+
+      /*INICIO DEL CONTENIDO*/
+      #tres-columnas-articulo{
+        display: flex;
+        flex-direction: row;
+       width: 100%;
+      }
+
+      .columna-primera{
+       width: 70%;
+      }
+
+      .segunda-columna{
+        width: 7%;
+        max-width: 90px;
+      }
+
+
+      .tercera-columna-fija{
+      width: 23%;
+      max-width: 230px;
+     
+      }
+      .columna-primera img{
+        width: 100%;
+        height: 450px;
+      }
+
+
+
+      .segundo-articulo h1{
+        color: #000000;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 900;
+        font-size: 1.8rem;
+        letter-spacing: -0.9px;
+        word-spacing: 1px;
+      }
+
+      .title-two h1{
+      color: #000000;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 900;
+      font-size: 1.8rem;
+      letter-spacing: -0.5px;
+      }
+
+
+      .autor-nombre{
+      display: flex;
+      flex-direction: row;
+      }
+
+
+      .autor-foto img{
+        width: 60px;
+        height: 60px;
+      }
+  
+      .autor-letra{
+      position: absolute;
+      margin-left: 50px;
+      }
+  /*PARRAFO*/
+      .blockquote .blockquote-text{
+          font-size: 1rem;
+          margin-left:  12px;
+          margin-top: 10px;
+        }
+
+          .blockquote{
+          width:100%;
+          margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
+          padding: 20px;
+          border:  1px solid #DDD;
+          color:#666;
+          box-sizing: border-box;
+          font-family:  'sans-serif' ;
+          font-size: 1.15rem;
+          font-weight:400;
+          line-height: 1.3;   
+         }
+
+       .blockquote-quoted::before { 
+          content: "\201C"; /* inicio comilla */
+          width: 30%;
+          font-family: Georgia;
+          font-size:65px; /* tamaño */
+          font-weight: bold; 
+          line-height: 0px;
+          color:#DDD; /* Color  */
+          margin-top: 20px;
+          margin-bottom: -10px;
+          margin-left: -20px;   
+          display: block;
+          }
+
+ 
+      
+            .blockquote-quoted::after{ /* final */
+              content: "\201D";
+              font-family: Georgia;
+              font-size:65px; /* tamaño */
+              font-weight: bold;
+              line-height:0px;
+              color:#DDD; /* Color  */
+              margin-top: 18px;
+             margin-bottom: 0.2px;
+              margin-left:  560px;
+              display: block;
+              }
+
+
+           .blockquote-text-credit{
+            text-align: right;
+            width: 90%;
+            margin-bottom: 5px;
+          }
+
+          /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+     .carrusel1{
+     width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-top: 7%;
+    z-index: 100;
+    }
+   
+  /*ESCONDE IMAGGENES*/
+  /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+  .carrusel{
+  width:4000px;
+  height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+  left: 0px;
+  position:absolute;
+  z-index:0;
+  }
+
+
+    /*PARA QUE LAS FLECHAS DESPAREZCAN */
+   #carrusel:hover  li.left-arrow{
+   background-color: #fff;
+   opacity: .4;
+   top: 54px;
+   transition:all .5s ease-in-out;
+   }
+  
+  #carrusel ul li.left-arrow:hover {
+  display: block;
+  background-color:  #fff;
+  opacity: 3;
+  }
+   
+
+ /**MUY IMPORTANTE MUEVE EL ALTO DEL CIRCULO ..*/
+  /*MIEVE EL CIRCULO A LO ALTO Y ANCHO .................................................... */
+    .carusel{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    margin-top: 9%; /*IMPORTANTE PARA EL CIRCULO */
+    margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+    }
+
+      /*CIRCULO  DERECHO EL MARGIN LEFT MO DENE LEGAR A 90% PORQUE SE DESFIGURA*/
+  #carrusel li.right-arrow{
+    margin-left:89%;
+  
+    }
+   /*CIRCULO   IZQUIERDO*/
+    #carrusel li.left-arrow{
+    margin-left: 3.8%;
+    
+   
+    }
+
+ /*MUY IMPORTNATE ESTO MUEVE A LA FLECHA PARA ENCAJAR EN EL CIRCULO*/  
+      /* ARROW LEFT .......................SOLO ARROW LEFT...................................ARROW LEFT SIN PALO............... */
+ .carrusel1 ul li.left-arrow span{
+    top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  left: 4.5%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-bottom: none;
+  }
+
+    
+   /*MUY IMPORTNATE*/  
+     /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
+    .carrusel1 ul li.right-arrow span{
+  top: 50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-top: none;
+  }
+ 
+
+ 
+
+
+
+ /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+  .carrusel>div {
+  float: left;
+  width: 100%;
+  max-width: 250px;
+  height: 195px;
+  margin-right: 0.7%;   /*ESPACIO */
+  text-align:center;
+  }
+
+ /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+ #container-articulo .carrusel img {
+ cursor:pointer;
+ width: 100%;
+ height: 195px;
+ border: 4px solid #DDD ;
+ padding: 4px ;
+ border-radius:6px;
+ }
+ 
+     /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+   #footer-articulo{
+   clear: both;
+   position: relative;
+   height: 100px;
+   margin-top: -100px;
+   border-top: solid 1.5px #DCDCDC;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   z-index: 10;
+    }
+    
+    
+      /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-articulo{
+    width: 100%;
+    margin: auto;
+    height: 85px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 0.8%; 
+    }
+
+    /*CAJA DE SOCIALES Y LETRA*/
+    .icon-social1{
+    width: 49%;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+ 
+    }
+
+    .icon-social1 p{
+    font-size: 1.2rem;
+    }
+
+    .social2{
+    display: flex;
+    flex-direction: row;
+    }
+
+   .icon-social1  ul li .fa-envelope{
+    background-color: oldlace;
+    color: #2d2d2d;
+    width:32px;
+    height: 32px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+  
+  }
+  
+    .icon-social1  ul li .fa-facebook-f{
+    background-color: oldlace;
+    color:  #2d2d2d;
+    width:32px;
+    height: 32px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+    }
+  
+  
+    .icon-social1  ul li .fa-twitter{
+    background-color: oldlace;
+    color:   #2d2d2d;
+    width:32px;
+    height: 32px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+     }
+  
+       .icon-social1 ul li .fa-instagram{
+       background-color: oldlace;
+       color: #2d2d2d;
+       width:32px;
+       height: 32px;
+       padding: 4px 4px 4px 4px;
+       border-radius: 25px;
+       border: solid #E9E9E9;
+       }
+  
+   .box{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    height: 85px;
+   }
+
+   /*LETRA ENCIMA DEL BOX*/   
+    .box h3{
+     font-size: 1rem;
+     margin-right: 7px; 
+     }
+
+    .box form{
+     width:100%;
+    display: flex;
+    flex-direction: row;
+  
+    }
+
+   
+    .box input[type="text"]
+    {
+    background-color: #fff;
+    display: flex;
+    width:60%;
+     height: 40px;
+    border: 1.5px solid 	#DCDCDC;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+    }
+     
+
+   .box button[type="submit"]{
+    left: 6px;  /*EL TRUCO IMPORTANTE*/
+    border-radius: 0 5px 5px 0;
+    width: 30%;
+    height: 40px;
+    border: none ;
+    outline: none;
+    cursor: pointer;
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 0.7rem;
+    font-family: 'Archivo Black', sans-serif;
+    }
+
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+  .footer-second-articulo{
+  width: 100%;
+  height: 10px;
+  margin-top: -10px;
+   }
+  
+     .final-food-articulo {
+     width: 100%;
+     margin: auto;
+    }
+ 
+  .final-food-articulo p{
+  text-align: center;
+  padding-top: 8px;  /*BAJAN LAS LETRAS*/
+  color: #2d2d2d;
+  font-size: 0.6rem;
+  }
+ 
+
+  }
+
+
+
+
+
+  /* 1150 A 1199 ..................................................................................................................................................................................................... */
+  @media only screen and (min-width: 1150px) and (max-width: 1199px){
+    
+     #wrapper-articulo {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+          
+    #wrapper-articulo > * {
+    padding: 20px;
+    }
+
+    #container-articulo{
+      width:  100%;
+      margin-top: 7.2%;
+      margin-left:auto;
+      margin-right:auto;
+      }
+
+    header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    height:  90px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+    }
+      
+    header.black{
+    background-color:#fff;
+    height:  90px;
+    }
+        
+    .cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    height: 55px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    }
+        
+      /*caja */
+      .logo{
+      width: 100%;
+      height: 55px;
+      }
+              
+      .logo img {
+      width: 100%;
+      height: 55px;
+      }
+              /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+      .menu-btn {
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+       max-width: 200px;
+        }
+  
+        
+      /*CONTENEDOR  REVISTA Y SOCIALES*/
+      .boletin{
+       width: 25%;
+       max-width: 160px;
+       height: 55px;
+       display: block;
+       position: relative;
+       float: left;
+      background-color: teal;
+      }
+
+     
+        
+      /*LETRA INSCRIBETE*/
+      .boletin a h4{
+      font-size: 1rem;
+      letter-spacing: 0.4px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 900;
+      color:#2d2d2d;
+      text-transform: uppercase;
+      margin-top: 36px;
+      }
+        
+      .boletin a h4:hover{
+      color: #639a3a;
+      text-decoration: none;
+      }
+          
+  
+   
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+      .menu-btn__burger {
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 28.5px;
+      width: 38px;
+      height: 5px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+      z-index: 1000;
+      }
+        
+     .menu-btn__burger::before,
+     .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 38px;
+            height: 5px;
+            background:#2d2d2d;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+            transition: all .5s ease-in-out;
+           z-index: 800;    
+          }
+
+    .menu-btn__burger::before {
+    transform: translateY(-10px);
+    z-index:3000;     
+     }
+
+     .menu-btn__burger::after {
+      transform: translateY(10px);
+      z-index:3000;
+      }
+
+    .menu-btn__burger:hover{
+     background-color: #639a3a;
+    }
+        
+           .menu-btn__burger:hover::before,
+           .menu-btn__burger:hover::after{
+            background-color: #639a3a;
+        
+         
+          }
+
+           /* ANIMATION */
+          .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+      .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+            background: #fff;
+          }
+          .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+            background: #fff;
+          }
+          
+        /*FIN ANIMACION IMPORTANTE*/
+        
+        
+              /*IMPORTANTE*/
+
+                 /*IMPORTANTE*/
+  nav li a p{
+    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+    display: block;
+    border-radius: 8px solid #639a3a;
+     
+    position: absolute;
+    padding: 1px 1px ;
+    margin-left: -5px;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.1rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family:  sans-serif;
+    z-index: 1000;
+    }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+      nav ul li{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      z-index: 1000;
+      margin: auto;
+      filter: alpha(opacity=80);
+      list-style: none;
+      cursor:pointer;
+      background-color: turquoise;
+      margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+      }
+  /*..FINAL MENU HAMBURGUESA*/
+
+     
+    /*IMPORTANTE PARA SEPARA UN MENU DE OTRO*/
+    nav ul li a {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 100%;
+    max-width: 800px;
+    height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
+    z-index: 100;
+    }
+
+    #comentarios{
+    background-color: violet;
+    display: flex;
+    width: 100%;
+    }
+  
+   #menu-simple{
+   width: 100%;
+   margin-top: 10px;
+
+    }
+  
+      /*INICIO CONTENIDO*/
+    #tres-columnas-articulo{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    }
+
+
+    .columna-primera{
+      width: 70%;
+     }
+
+     .segunda-columna{
+       width: 7%;
+       max-width: 100px;
+     }
+
+
+     .tercera-columna-fija{
+     width: 23%;
+     max-width: 230px;
+     }
+
+    .columna-primera img{
+    width: 100%;
+    height:  25%;
+    }
+
+   .blockquote .blockquote-text{
+    font-size: 1rem;
+  
+    margin-left: -1px;
+    }
+
+       .blockquote{
+          width:100%;
+          margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
+          padding: 20px;
+          border:  1px solid #DDD;
+          color:#666;
+          box-sizing: border-box;
+          font-family:  'sans-serif' ;
+          font-size: 1.15rem;
+          font-weight:400;
+          line-height: 1.3;
+        
+          }
+
+       .blockquote-quoted::before { 
+          content: "\201C"; /* inicio comilla */
+          width: 30%;
+          font-family: Georgia;
+          font-size:65px; /* tamaño */
+          font-weight: bold; 
+          line-height: 0px;
+          color:#DDD; /* Color  */
+          margin-top: 20px;
+          margin-bottom: -10px;
+          margin-left: -20px;
+          display: block;
+          }
+    
+          .blockquote-quoted::after{ /* final */
+            content: "\201D";
+            font-family: Georgia;
+            font-size:65px; /* tamaño */
+            font-weight: bold;
+            line-height:0px;
+            color:#DDD; /* Color  */
+            margin-top: 18px;
+           margin-bottom: 0.2px;
+            margin-left:  560px;
+            display: block;
+            }
+
+      .blockquote-text-credit{
+      text-align: right;
+      width: 90%;
+      }
+
+     .autor-nombre{
+       display: flex;
+       flex-direction: row;
+     }
+    
+     .autor-foto img{
+       width:  60px;
+       height: 60px;
+     }
+
+     .autor-letra{
+     position: absolute;
+     margin-left: 50px;
+     }
+
+
+          /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+  .carrusel1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+  margin-top: 7%;
+  z-index: 100;
+  }
+   
+  /*ESCONDE IMAGGENES*/
+ /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+ .carrusel{
+  width:4000px;
+  height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+  left: 0px;
+  position:absolute;
+  z-index:0;
+  }
+
+   
+ 
+
+    /*PARA QUE LAS FLECHAS DESPAREZCAN */
+#carrusel:hover  li.left-arrow{
+  background-color: #fff;
+  opacity: .4;
+   top: 4px;
+  transition:all .5s ease-in-out;
+  }
+  
+  #carrusel ul li.left-arrow:hover {
+  display: block;
+  background-color:  #fff;
+  opacity: 3;
+  }
+   
+
+ /**MUY IMPORTANTE PARA MOVER LAS FLECHAS A LOS ALTO.*/
+  /*FLECHA INCORPORADA.................................................................................................. */
+  .carusel{
+    width: 99%;
+    display: flex;
+    position: absolute;
+    margin-left:  50%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+    margin-right: 50%;
+    }
+ 
+/*.............CON ESTO SE ACOMODA EL CIRCUO Y LA FLECHA*/
+    /*CIRCULO  DERECHO*/
+    #carrusel li.right-arrow{
+    margin-left: 87%;
+     }
+    /*CIRCULO   IZQUIERDO*/
+     #carrusel li.left-arrow{
+      margin-right:  4%;
+     }
+
+      /* ARROW LEFT .......................SOLO ARROW LEFT...................................ARROW LEFT SIN PALO............... */
+  .carrusel1 ul li.left-arrow span{
+    top: 48%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  left: 3%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-bottom: none;
+  }
+
+    
+     /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
+    .carrusel1 ul li.right-arrow span{
+  top:   50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-top: none;
+  }
+ 
+  /*.....FIN PARA ACOMODAR EL CIRCULO Y LA FLECHA..................................................*/
+
+ /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+ .carrusel>div {
+ float: left;
+ width: 100%;
+ max-width: 251px;
+ height: 200px;
+ margin-right: 1.1%;   /*ESPACIO */
+ text-align:center;
+ }
+ /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+ #container-articulo .carrusel img {
+ cursor:pointer;
+ width: 100%;
+ height: 190px;
+ border: 4px solid #DDD ;
+ padding: 4px ;
+ border-radius:6px;
+ }
+ 
+
+
+
+     /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+  #footer-articulo{
+  clear: both;
+  position: relative;
+  height: 100px;
+  margin-top: -100px;
+  border-top: solid 1.5px #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 10;
+  }
+    
+    
+      /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+    .footer-primero-articulo{
+    width: 100%;
+    margin: auto;
+    height: 85px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    clear: both;
+    position: relative;
+    z-index: 1000;
+     margin-bottom: 0.8%; 
+    }
+
+    /*CAJA DE SOCIALES Y LETRA*/
+    .icon-social1{
+      height: 85px;
+      width: 49.5%;
+    }
+
+    .icon-social1 p{
+    font-size: 1.3rem;
+     }
+
+     .social2{
+       display: flex;
+       flex-direction: row;
+     }
+
+
+    #footer-articulo .icon-social1  ul li .fa-envelope{
+  background-color: oldlace;
+  color: #2d2d2d;
+  width:34px;
+  height: 34px;
+  padding: 4px 4px 4px 4px;
+  border-radius: 25px;
+  border: solid #E9E9E9;
+  
+  }
+  
+    #footer-articulo .icon-social1  ul li .fa-facebook-f{
+  background-color: oldlace;
+  color:  #2d2d2d;
+  width:34px;
+  height: 34px;
+  padding: 4px 4px 4px 4px;
+  border-radius: 25px;
+  border: solid #E9E9E9;
+  
+  }
+  
+  
+    #footer-articulo .icon-social1  ul li .fa-twitter{
+    background-color: oldlace;
+    color:   #2d2d2d;
+    width:34px;
+  height: 34px;
+  padding: 4px 4px 4px 4px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+     }
+  
+      #footer-articulo .icon-social1 ul li .fa-instagram{
+       background-color: oldlace;
+       color: #2d2d2d;
+       width:34px;
+       height: 34px;
+       padding: 4px 4px 4px 4px;
+        border-radius: 25px;
+        border: solid #E9E9E9;
+       }
+  
+   .box{
+    width: 49.5%;
+    display: flex;
+    flex-direction: column;
+    height: 85px;
+  
+   }
+
+   /*LETRA ENCIMA DEL BOX*/   
+    .box h3{
+     font-size: 1rem;
+     margin-right: 7px;
+     margin-top: 3px;
+   }
+
+ .box form{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  margin-top:  0.7%;
+  }
+
+     .box input[type="text"]
+    {
+    background-color: #fff;
+    display: flex;
+    width:60%;
+     height: 40px;
+    border: 1.5px solid 	#DCDCDC;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+    }
+     
+
+     .box button[type="submit"]{
+    left: 6px;  /*EL TRUCO IMPORTANTE*/
+    border-radius: 0 5px 5px 0;
+    width: 30%;
+    height: 40px;
+    border: none ;
+    outline: none;
+    cursor: pointer;
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 0.8rem;
+    font-family: 'Archivo Black', sans-serif;
+    }
+
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+  .footer-second-articulo{
+  width: 100%;
+  height: 10px;
+  margin-top: -10px;
+   }
+  
+   .final-food-articulo {
+   width: 100%;
+    margin: auto;
+    }
+ 
+  .final-food-articulo p{
+  text-align: center;
+  padding-top: 8px;  /*BAJAN LAS LETRAS*/
+  color: #2d2d2d;
+  font-size: 0.6rem;
+  }
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* 1200 A 1290 ..................................................................................................................................................................................................... */
+  
+
+@media only screen and (min-width: 1200px) and (max-width: 1246px){
+
+      #wrapper-articulo {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: auto;
+     }
+          
+    #wrapper-articulo > * {
+    padding: 20px;
+    }
+      
+
+      #container-articulo{
+      width: 99.99%;
+      margin-top: 7.5%;
+      margin-left:auto;
+      margin-right:auto;
+      }
+
+      header{
+      width: 100%;
+      z-index: 999;
+      position: fixed;
+      margin: auto;
+      height:  90px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+        }
+      
+         header.black{
+          background-color:#fff;
+          width: 100%;
+          height:  90px;
+          }
+        
+         .cabecera{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          margin: auto;
+          height: 60px;
+         }
+         
+     /*caja */
+    .logo{
+    width: 60%;
+    height: 60px;
+    }
+              
+    .logo img {
+    width: 100%;
+    height: 60px;
+     }
+         
+
+       /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+       .menu-btn {
+       display: flex;
+       flex-direction: row;
+        width: 22%;
+     max-width: 200px;
+   
+        }
+  
+        
+           /*CONTENEDOR  REVISTA Y SOCIALES*/
+    .boletin{
+    width: 15%;
+    height: 60px;
+  display: block;
+  position: relative;
+  float: right;
+  margin-right: 12px;
+    }
+
+      /*LETRA INSCRIBETE*/
+      .boletin a h4{
+      font-size: 1rem;
+      letter-spacing: -0.3px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 900;
+      color:#2d2d2d;
+      margin-top:  42px;
+      }
+        
+      .boletin a h4:hover{
+      color: #639a3a;
+      text-decoration: none;
+      }
+          
+    
+
+      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+      .menu-btn__burger {
+       display: block;
+       position: relative;
+       float: left;
+       margin-top: 25px;
+      width: 38px;
+      height: 5px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+      z-index: 1000;
+      }
+          
+            .menu-btn__burger::before,
+            .menu-btn__burger::after {
+              content: '';
+              position: absolute;
+              width: 38px;
+              height: 5px;
+              background:#2d2d2d;
+              border-radius: 2px;
+              box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+              transition: all .5s ease-in-out;
+             z-index: 800;
+             
+            }
+            .menu-btn__burger::before {
+              transform: translateY(-11px);
+              z-index:3000;         
+            }
+
+            .menu-btn__burger::after {
+              transform: translateY(11px);
+              z-index:3000;
+            }
+
+  .menu-btn__burger:hover{
+  background-color: #639a3a;
+  }
+        
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #639a3a;      
+    }
+
+  /* ANIMATION */
+   .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    }
+  
+    .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    background: #fff;
+    }
+
+          .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+            background: #fff;
+          }
+          
+      
+  /*IMPORTANTE*/
+  nav li a p{
+  background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+  display: block;
+  border-radius: 8px solid #639a3a;
+  position: absolute;
+  padding: 1px 1px ;
+  margin-left: -5px;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 1.1rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-family:  sans-serif;
+    z-index: 1000;
+   }
+
+
+   /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav ul li{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1000;
+    margin: auto;
+    filter: alpha(opacity=80);
+    list-style: none;
+    cursor:pointer;
+    margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+    }
+
+    /*IMPORTANTE PARA SEPARA UN MENU DE OTRO*/
+    nav ul li a {
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 100%;
+    max-width: 800px;
+    height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
+    z-index: 100;
+  
+    }
+
+        /* NAV ESCONDIDO  NAV ESCONDIDO*/
+    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav ul li:hover > ul {
+    display: block;
+    margin-left: 240px;
+    margin-top:-40px;
+    visibility: visible; 
+    z-index: 598;
+    }
+
+
+
+    /*..FINAL MENU HAMBURGUESA*/
+    #comentarios{
+    background-color: violet;
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    }
+  
+    #container-articulo #menu-simple{
+    width: 100%;
+    }
+
+      /*EMPIEZA EL CONTENIDO*/
+      #tres-columnas-articulo{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 3%;
+      }
+
+       .columna-primera img{
+         width: 100%;
+         height:  25%;
+       }
+  
+       .columna-primera{
+        width: 68%;
+       }
+  
+       .segunda-columna{
+         width: 11%;
+         max-width: 130px;
+       }
+  
+  
+       .tercera-columna-fija{
+       width: 21%;
+       max-width: 230px;
+       }
+       
+       .segundo-articulo h1{
+       color: #000000;
+       font-family: 'Times New Roman', Times, serif;
+      font-size: 1.9rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      word-spacing: 0.9px;
+       }
+
+       .title-two h1{
+        color: #000000;
+        font-family: 'Times New Roman', Times, serif;
+       font-size: 1.9rem;
+       font-weight: 900;
+       letter-spacing: -1px;
+       word-spacing: 0.9px;
+       }
+
+       /*PARRAFO SE PUEDE BAJAR EL PARRAFO*/
+         .blockquote .blockquote-text{
+          font-size: 1rem;
+          margin-left: 1px;
+          margin-top: 14px;
+          }
+
+          .blockquote{
+          width:100%;
+          margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
+          padding: 20px;
+          border:  1px solid #DDD;
+          color:#666;
+          box-sizing: border-box;
+          font-family:  'sans-serif' ;
+          font-size: 1.15rem;
+          font-weight:400;
+          line-height: 1.3;
+          
+         }
+
+          .blockquote-quoted::before { 
+          content: "\201C"; /* inicio comilla */
+          width: 30%;
+          font-family: Georgia;
+          font-size:65px; /* tamaño */
+          font-weight: bold; 
+          line-height: 0px;
+          color:#DDD; /* Color  */
+          margin-top: 20px;
+          margin-bottom: -10px;
+          margin-left: -20px;
+          display: block;
+          }
+
+          
+          .blockquote-quoted::after{ /* final */
+            content: "\201D";
+            font-family: Georgia;
+            font-size:65px; /* tamaño */
+            font-weight: bold;
+            line-height:0px;
+            color:#DDD; /* Color  */
+            margin-top: 25px;
+           margin-bottom: 0.2px;
+            margin-left:  620px;
+            display: block;
+            }
+
+          .blockquote-text-credit{
+            text-align: right;
+            width: 90%; 
+          }
+
+          /*AUTOR*/
+          .autor-nombre{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+          }
+
+          .autor-foto img{
+          width: 80px;
+          height: 80px;
+          }
+ 
+          .autor-letra{
+            position: absolute;
+            margin-left: 70px;
+          }
+
+          /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+      .carrusel1{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 2%;
+     margin-top: 7%;
+      z-index: 100;
+      }
+   
+  /*ESCONDE IMAGGENES*/
+ /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+  .carrusel{
+  width:4000px;
+  height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+  left: 0px;
+  position:absolute;
+  z-index:0;
+  }
+
+ 
+ 
+
+    /*PARA QUE LAS FLECHAS DESPAREZCAN */
+   #carrusel:hover  li.left-arrow{
+   background-color: #fff;
+   opacity: .4;
+   top: 54px;
+   transition:all .5s ease-in-out;
+   }
+  
+  #carrusel ul li.left-arrow:hover {
+  display: block;
+  background-color:  #fff;
+  opacity: 3;
+  }
+   
+
+ /**MUY IMPORTANTE..*/
+  /*FLECHA INCORPORADA.................................................................................................. */
+   .carusel{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    margin-top: 9%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+    margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+    }
+
+          /*CIRCULO  DERECHO CON ESTO EL CIRCULO MANTIENE SU FORMA*/
+          /*MANTENERO EN 86 PARA QUE EL CIRCULO NO PIERDA LA FORMA*/
+     #carrusel li.right-arrow{
+      margin-left:86%;  
+      }
+  
+      /*CIRCULO   IZQUIERDO*/
+      #carrusel li.left-arrow{
+      margin-right: 3.8%;
+      }
+ /*MUY IMPORTNATE*/  
+      /* ARROW LEFT .......................SOLO ARROW LEFT...................................ARROW LEFT SIN PALO............... */
+     .carrusel1 ul li.left-arrow span{
+    top: 46%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+     left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+    transform: translateY(-50%) rotate(-45deg);
+    border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+    border-bottom: none;
+    }
+
+    
+     /*MUY IMPORTNATE*/  
+     /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
+      .carrusel1 ul li.right-arrow span{
+      top: 42%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+       right: 2.6%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+      transform: translateY(-50%) rotate(-45deg);
+      border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+      border-top: none;
+      }
+        /*FIN MUY IMPORTNATE*/  
+
+    /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+    .carrusel>div {
+    float: left;
+    width: 250px;
+    height: 200px;
+    margin-right:  1.4%;   /*ESPACIO */
+    text-align:center;
+    }
+
+ /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+    .carrusel img {
+   cursor:pointer;
+   width:  100%;
+   height: 200px;
+   border: 4px solid #DDD ;
+   padding: 4px ;
+   border-radius:6px;
+   }
+ 
+     /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+      #footer-articulo{
+      clear: both;
+      position: relative;
+      height: 100px;
+      margin-top: -100px;
+      border-top: solid 1.5px #DCDCDC;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      z-index: 10;
+    
+       }
+    
+    
+      /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+     .footer-primero-articulo{
+      width: 100%;
+      margin: auto;
+      height:  85px;
+      display: flex;
+      flex-direction: row; 
+      justify-content: space-between;
+      clear: both;
+      position: relative;
+      margin-bottom: 0.8%; 
+      }
+
+       /*CAJA DE SOCIALES Y LETRA*/
+      .icon-social1{
+        height: 85px;
+        display: flex;
+        flex-direction: column;
+      }
+
+       .icon-social1 p{
+       font-size: 1.4rem;
+      }
+
+        .social2{
+        display: flex;
+        flex-direction: row;
+       }
+
+      .icon-social1  ul li .fa-envelope{
+      background-color: oldlace;
+      color: #2d2d2d;
+       width:38px;
+      height: 38px;
+      padding: 4px 4px 4px 4px;
+      border-radius: 25px;
+      border: solid #E9E9E9; 
+      }
+  
+    .icon-social1  ul li .fa-facebook-f{
+    background-color: oldlace;
+    color:  #2d2d2d;
+    width:38px;
+    height: 38px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+    }
+  
+  
+    .icon-social1  ul li .fa-twitter{
+    background-color: oldlace;
+    color:   #2d2d2d;
+    width:38px;
+    height: 38px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+     }
+  
+      .icon-social1 ul li .fa-instagram{
+      background-color: oldlace;
+      color: #2d2d2d;
+      width:38px;
+      height: 38px;
+      padding: 4px 4px 4px 4px;
+      border-radius: 25px;
+      border: solid #E9E9E9;
+       }
+  
+        .box{
+        width: 49.5%;
+        height: 85px;
+       display: flex;
+       flex-direction: column;
+        }
+
+
+        .box form{
+          width:100%;
+          display: flex;
+          flex-direction: row;
+         }
+
+
+     /*LETRA ENCIMA DEL BOX*/   
+     .box h3{
+     font-size:  1rem;
+     margin-right: 7px;
+     }
+
+ 
+    #footer-articulo .box input[type="text"]
+    {
+    background-color: #fff;
+    display: flex;
+    width:60%;
+     height: 45px;
+    border: 1.5px solid 	#DCDCDC;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+    }
+     
+
+    #footer-articulo .box button[type="submit"]{
+    left: 6px;  /*EL TRUCO IMPORTANTE*/
+    border-radius: 0 5px 5px 0;
+    width: 30%;
+    height: 45px;
+    border: none ;
+    outline: none;
+    cursor: pointer;
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 0.8rem;
+    font-family: 'Archivo Black', sans-serif;
+    }
+
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+  .footer-second-articulo{
+  width: 100%;
+  height: 10px;
+  margin-top: -10px;
+   }
+  
+   .final-food-articulo {
+   width: 100%;
+    margin: auto;
+    }
+ 
+  .final-food-articulo p{
+  text-align: center;
+  padding-top: 8px;  /*BAJAN LAS LETRAS*/
+  color: #2d2d2d;
+  font-size: 0.9rem;
+  }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1200 A 1290 ..................................................................................... */
+  
+
+@media only screen and (min-width: 1247px) and (max-width: 1290px){
+/*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+
+    
+
+
+
+}
+   }
+
+/* 1200px DESKTOP 1024px LAPTOP  768px TABLET   480px IPHONE ...*

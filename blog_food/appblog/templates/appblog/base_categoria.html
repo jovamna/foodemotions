@@ -1,0 +1,583 @@
+{% load static %}
+{% load menu %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Categoria{% endblock %}</title>
+    <!-- STILOS -->
+    <link rel="stylesheet" href="{% static 'appfood/css/categoria.css' %}">
+     <link rel="stylesheet" href="{% static 'appfood/css/responsivecategoria.css' %}">
+    
+
+
+    
+    <STYLE>
+        a {
+            text-decoration: none;
+        }
+    </STYLE>
+    <!-- ICONOS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+        integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+        crossorigin="anonymous"></script>
+
+    <!-- SCRIPT PARA EL MENU RESPONSIVE A VER SI FUNCIONA SI NO BORRARLO SIRVE PARA EL CARROUSEL-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <!-- SCRIPT PARA ANIMAR AL HACER SCROLL parece no sirve-->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <!-- GOOGLE FONTS-->
+       <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Artifika|Bai+Jamjuree|Cabin|Merienda|Roboto+Condensed|Satisfy&display=swap"
+        rel="stylesheet">
+   
+        </head>
+
+  <body>
+  <!-- CONTAINER GENERAL DE LA WEB ---------------------------------------------------------------------------->
+       <div id="wrapper-categorias">
+                            <header>
+                             <div id="cabecera-categorias">
+                                 <!------ caja logo --------->
+                                 <div class="logo">
+                                   <a  href="{% url 'appfood:index' %}">
+                                 <img src="{% static 'appfood/img/logo/250-60-ult.png' %}" alt="Food Emotions">
+                                 </a>
+                                 </div>
+                                <!------- final caja logo------->
+
+                             
+                           <!-- BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
+                             <div class="menu-btn">
+
+
+                                        <!------  caja boletin--------------------------->
+                                    <div class="boletin">
+                                            <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
+                                           <h4>SUSCRIBETE</h4>  
+                                           </a>
+                                </div>
+                            <!---------- final caja boletin------------------->
+
+                                  <div class="menu-btn__burger"></div>
+
+
+                                  </div>
+                            <!-- final caja MENU ASPA--------------------------------------------------------->
+                                                            
+ 
+                        <!-- NAV MENU QUE VA CON EL BOTON MENU-->
+                        
+       <!-- NAV MENU QUE VA CON EL BOTON MENU-->
+            <nav style="background-image: url({% static 'appfood/img/logo/250-60.png' %})">
+                 <ul>
+                 <li> 
+                 <a href="{% url 'appfood:index' %}"  class="current">
+                 <p>Inicio</p> 
+                 </a>  
+                </li>
+        
+                <li> 
+                <a class="{% active 'appfood:recetas-saludables' %}" href="{% url 'appfood:recetas-saludables' %}"> <p> Recetas Sanas</p> </a>
+                        <ul>  
+                        {% load mptt_tags %} 
+                        <!-- LAS CATEGORIAS------->
+                        {% for kategory in kategories %}
+                        <li>
+                        <a href="/recetas-saludables/categoria/{{kategory.slug }} "style="text-decoration: none">
+                        {{ kategory.name }}</a>
+                       </li>
+                       {% endfor %}
+                      </ul>
+                </li>
+              
+                <li>
+                <a href="{% url 'appfood:recetas-dieteticas' %}">
+                <p>Batidos y Ensaladas</p>
+                </a>
+                                                      <ul>
+                                                       <li><a href="#menu">batidos</a></li>
+                                                       <li><a href="#menu">ensaladas</a></li>
+                                                      </ul>
+                </li>
+
+                    <li> 
+                <a class="{% active 'appfood:plan-comidas-saludables' %}" href="{% url 'appfood:plan-comidas-saludables' %}"><p>Plan de Alimentacion Saludable</p> </a>
+                </li>
+
+               <li > 
+                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-sana' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}"><p> Dietas y Alimentacion Sana </p>  </a> 
+                </li>
+
+                <li> 
+                <a class="{% active 'appfood:noticias-turismo-gastronomico' %}" href="{% url 'appfood:noticias-turismo-gastronomico' %}"><p> Turismo</p>  </a>
+                        <ul> 
+                             <li><a href="#menu">Naranjas</a>
+                             </li>
+                                                     
+                             <li><a href="#menu">Naranjas</a>
+                             </li>
+                        </ul>
+                </li>
+              
+                <li> 
+                <a href="{% url 'appcontact:contacto' %}">
+                <p>Contacto</p>
+                </a> 
+                </li>
+                <li> 
+                <a href="{% url 'appfood:nosotros' %}">
+                <p> Nosotros</p> 
+                </a> 
+                </li>
+                 </ul>
+                </nav>
+                        </div> <!-- FINAL CABECERA ----------------------------------------------------------->
+                        </header>
+
+
+              <!-- CONTENEDOR DEL CUERPO DEL BODY------------------------------------------------------------------------->
+ <div id="container-categorias">
+ 
+   <!-- CARROUSEL DE MAGENES-------------------------------------------------------------------------->
+ 
+      {% block content %}        
+      <div id ="container-categorias-subcategorias">    
+                       <!--  CAJA DE NAVEGACION DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
+                
+                 <!---------------------------------------------------------------->
+                 <div class="intro">
+                       <div class="intro-escrito"></div>
+                  
+                       <div class="intro-dos-vacios"></div>
+                 </div>
+ </div>
+
+
+                       <div class="imagenes-pequeñas">
+                       <div id= "subcategoria">
+                            <!--SUBCATEGORIAS--->
+                             <h3> </h3>
+                        </div>
+                           <!------------- FIN SUBCATEGORY-------->
+                       </div>
+
+
+
+
+                <!-------------------------------------------------------------------->
+                                                   
+                      
+                     
+                     <!----------------------------------------------------------->
+                      <div id="texto-slider">
+                      <div class="contentBlock">
+                     </div>
+                    </div>
+
+                     <!--------------------------------------------------------------->
+
+
+
+
+
+        <!---DIV  DEBE MEDIR 100%  CONTAINER DE 4 POST Y DE RECETAS--->
+        <div class="container-posts-categorias">
+
+                   <div class="columna-categorias">
+                    <div class="por-categoria">
+
+
+                    
+                        <div class="por-foto">
+                         <div class="fecha">
+                              </div>  
+                              </div>
+
+
+
+                                <div class="por-descripcion">
+                                  </div>
+
+
+
+
+                                    </div>
+                                            </div>
+
+                     <!-- 20% ASIDE --->
+                    <div id="aside">  </div>
+                    <!--FIN ASIDE 20%--->
+           </div>
+           <!--100% FIN DEL POSTS CATEGORIAs--->
+            
+
+
+
+
+
+
+                  <!--DEBE MEDIR  80%-------------80%---------->
+                  <div class = "posts-categoria">
+                         <!--------------- INICIO POST CATEGORIA--------------->
+                               <!---DEBE MEDIR 25%  DIV DE 4 POST DE POSTS--->
+                              <div class="elemento-categoria">  
+                                   <img src ="">                              
+                                   <!--IMAGEN-->
+                                   <div class="elemento-descripcion"> 
+                                   </div>            
+                             </div>   
+                       <!----FIN DE DEBE MEDIR 25%----------->
+                               <p>No items</p>
+                             </div>
+
+                     <!---------------------------------------->
+                           <!---DEBE MEDIR 25%  DIV DE 4 POST DE POSTS--->
+                              <div class="elemento-categoria">  
+                                   <img src ="">                              
+                                   <!--IMAGEN-->
+                                   <div class="elemento-descripcion"> 
+                                   </div>            
+                               </div>   
+                             <!----FIN DE DEBE MEDIR 25%----------->
+                               <p>No items</p>
+                              </div>
+                     <!---------------------------------------->
+                                  <!---DEBE MEDIR 25%  DIV DE 4 POST DE POSTS--->
+                                  <div class="elemento-categoria">  
+                                   <img src ="">                              
+                                   <!--IMAGEN-->
+                                   <div class="elemento-descripcion"> 
+                                   </div>            
+                                 </div>   
+                                  <!----FIN DE DEBE MEDIR 25%----------->
+                                 <p>No items</p>
+                                  </div>
+            <!---FIN POST-CATEGORIA DEBE MEDIR 80% ENDFOR 4 POSTS------------------->
+            </div>
+                  
+                      <!--- DIV ASIDE DEBE MEDIR 20%--->
+                           <div id="aside"><p>Hola que hay </p></div>
+                     <!--FIN ASIDE DEBE MEDIR 20%-->
+                </div>
+         
+<!--- FIN CONTAINER GENRAL  CATEGORIAS SUBCATEGORIAS-----------------------------------------> 
+   
+           {% endblock content %}                 
+               <!------------------------------------------->
+
+
+
+
+
+     <!---------------- PAGINACION--------------------------------------------------------------->
+                              {% block paginacion %}
+                             <div class="paginacion">
+                                    <nav>
+                                      <ul class="pagination">
+                                      {% if posts.has_previous %}
+                                        <li class="page-item">
+                                         <a class="page-link" href="?page=1">Primero</a>
+                                            </li>
+                                        <li class="page-item">
+                                         <a class="page-link" href="?page={{ posts.previous_page_number }}">&laquo;</a>
+                                             </li>
+                                    {% endif %}
+                              <!---------------------------------------------------->
+                                       {% for pagina in paginas %}
+                               <li class="page-food{% if current_page == pagina %} active {% endif %}">
+                          <a class="page-link" href="?page={{ pagina }}">{{ pagina }}</a>
+                                         </li>
+                                {% endfor %}
+                     <!---------------------------------------------------------------->
+
+            <!----- ----------------------------- ------------------------------------>
+                      {% if posts.has_next %}
+                          <li class="page-item">
+                          <a class="page-link" href="?page={{ posts.next_page_number }}">&raquo;</a>
+                            </li>
+                           <li class="page-item">
+                           <a class="page-link" href="?page={{ posts.paginator.num_pages}}">Ùltima</a>
+                         </li>
+                     {% endif %}
+               </ul>
+             </nav>
+             </div>
+        {% endblock paginacion %}
+     <!------------------------ ----------------------------- ---------------------------------->
+
+
+
+     
+  
+     <!-- CARROUSEL DE MAGENES-------------------------------------------------------------------------->
+     <div class="container-total-carrusell">
+         <!-- CARROUSEL DE MAGENES-->
+         <div id="carrusel">
+                       <em><h2>Novedades</h2></em>
+
+                               <!-----FLECHAS------------------------------------->
+                               <div class="carusel">
+                               <ul>
+                               <li class="left-arrow"><span></span></li>
+                               <li class="right-arrow"><span></span></li>
+                               </ul>
+                               </div>
+                               <!---------------------------------------------->
+            <!-------------------------------------------------------------> 
+            
+            <div class="carrusel">
+                               <!----------------------------------------->
+                               <div class="product" id="product_0">
+                              <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                               <a href="{% url 'appfood:recetas-saludables' %}">
+                               <p>Alimentacion Sana</p>
+                               </a>
+                             </div>
+                           
+                           <!---------------------------------------------->
+                        <!---------------------------------------------->
+                         <div class="product" id="product_1">
+                         <img src="{% static 'appfood/img/articulo/230-250carul.jpg' %}" width="230" height="250" />
+                         <a class="{% active 'appfood:dietas-especiales-y-alimentacion-sana' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}">Plan Comidas Saludables</a>
+                           <p> Dietas y Alimentacion Sana </p>  </a>
+                        
+                    </div>
+                     <!---------------------------------------------->
+                      <!---------------------------------------------->
+                    <div class="product" id="product_2">
+                        <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                         <a href="{% url 'appfood:recetas-saludables' %}"> 
+                         <p>Recetas Saludables</p>
+                         </a>
+                    </div>
+                     <!---------------------------------------------->
+                     <!---------------------------------------------->
+                    <div class="product" id="product_3">
+                        <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                        <a href="{% url 'appfood:recetas-dieteticas' %}">
+                         <p>Recetas Dieteticas</p>
+                          </a>
+                    </div>
+                     <!---------------------------------------------->
+                      <!---------------------------------------------->
+                    <div class="product" id="product_4">
+                         <img src="{% static 'appfood/img/articulo/230-250carul.png' %}" />
+                         <a href="{% url 'appfood:recetas-saludables' %}">
+                        <p>pierde peso1</p>
+                        </a>
+                    </div>
+                     <!---------------------------------------------->
+                      <!---------------------------------------------->
+                    <div class="product" id="product_5">
+                         <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                         <a class="{% active 'appfood:dietas-especiales-y-alimentacion-sana' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}"><p> Dietas y Alimentacion Sana </p>  </a>
+                    </div>
+                      <!---------------------------------------------->
+                      <!---------------------------------------------->
+                    <div class="product" id="product_6">
+                        <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                     <a class="{% active 'appfood:plan-comidas-saludables' %}" href="{% url 'appfood:plan-comidas-saludables' %}">Plan Comidas Saludables</a>
+                    </div>
+                     <!---------------------------------------------->
+                   <!---------------------------------------------->
+                    <div class="product" id="product_7">
+                         <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                         <a class="{% active 'appfood:noticias-turismo-gastronomico' %}" href="{% url 'appfood:noticias-turismo-gastronomico' %}">Turismo </a>
+                     <!---------------------------------------------->
+
+              </div>
+           
+              <!--FIN DIV CARRUSEL------------------------>
+                 </div>
+                 <!---FIN DIV ID CARUUSEL------------------------------------------->
+         </div>
+        <!-- FIN CONTAINER DIV ID--SEPARAR-CARRUSEL-------------------------->
+                  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div> <!-- DIV FINAL DEL CONTAINER DE TODO EL CONTENIDO-->
+
+
+
+
+            <!-- FOOTER PRIMERO ESTA DENTRO DEL CONTAINER DE CONTENIDO-->
+     <div id="footer-categorias">
+                  <div class="footer-primero-categorias">
+                           <!-- PRIMER FOOTER--------------->
+                           <div class="icon-social1">
+                           <p>food emotions</p>
+                           <ul class="social2">
+                            <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                                    <i class="far fa-envelope"></i> </a></li>
+                            <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank"><i
+                                        class="icon fab fa-facebook-f"></i> </a></li>
+                            <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                                    <i class="fab fa-twitter"></i> </a></li>
+                            <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                                    <i class="fab fa-instagram"></i> </a></li>
+                           </ul>
+                          </div>
+
+
+                            <div class="box">
+                             <h3>Suscribete a nuestro Newsletter.</h3>
+                             <form action="." method="POST">
+                            <input type="text" name="email" id="email" placeholder="Type your email address">
+                            <button type="submit" class="submit">Suscribete</button>
+                            </form>
+                            </div>
+                </div> <!-- FIN FOOTER PRIMERO--------------->
+
+
+                <!--  FOOTER segundo--------------->
+                         <div id="footer-second-categorias">
+                        <div class= "final-food-categorias">
+                         <p>© 2021 Food Emotions,  El
+                        uso de este sitio implica la aceptación de nuestros Términos de uso,
+                        Política de privacidad y Política de datos derechos reservados</p>
+                        </div>
+                         </div>
+
+            </div> <!-- DIV FINAL DE TODO EL FOOTER-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- PARA CONVERTIR EL MENU A ASPA-->
+            <script src="{% static 'appfood/js/menuAspaArticulo.js' %}"></script>
+
+            <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->
+            <script src="{% static 'appfood/js/menuDeslizaArticulo.js' %}"></script>
+
+
+
+
+            <!-- SCRIPT DE CARROUSEL DE IMAGENES -->
+            <script>
+                var current = 0;
+                var imagenes = new Array();
+
+                $(document).ready(function () {
+                    var numImages = 8;
+                    if (numImages <= 4) {
+                        $('.right-arrow').css('display', 'none');
+                        $('.left-arrow').css('display', 'none');
+                    }
+
+                    $('.left-arrow').on('click', function () {
+                        if (current > 0) {
+                            current = current - 1;
+                        } else {
+                            current = numImages - 4;
+                        }
+
+                        $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 900);
+
+                        return false;
+                    });
+
+                    $('.left-arrow').on('hover', function () {
+                        $(this).css('opacity', '0.5');
+                    }, function () {
+                        $(this).css('opacity', '1');
+                    });
+
+                    $('.right-arrow').on('hover', function () {
+                        $(this).css('opacity', '0.5');
+                    }, function () {
+                        $(this).css('opacity', '1');
+                    });
+
+                    $('.right-arrow').on('click', function () {
+                        if (numImages > current + 4) {
+                            current = current + 1;
+                        } else {
+                            current = 0;
+                        }
+
+                        $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 900);
+
+                        return false;
+                    });
+                });
+            </script>
+
+            <!-- FINAL SCRIPT DE CARROUSEL DE IMAGENES ------------------------------->
+
+
+
+            <!-- SCRIPT PARA LA CABECERA FIJA-->
+            <script type="text/javascript">
+
+                $(window).on("scroll", function () {
+                    if ($(window).scrollTop()) {
+                        $('header').addClass('black');
+                    }
+
+                    else {
+                        $('header').removeClass('black');
+
+                    }
+                })
+
+            </script>
+
+            <!--  PARA ANIMAR AL HACER SCROLL-->
+            <script src="{% static 'appfood/js/animar.js' %}"></script>
+
+
+
+       <!-- DIV FINAL CIERRE DEL WRAPPER PRINCIPALDE TODA LA WEB-->
+    </div>
+
+
+
+
+
+     </body>
+
+
+    </html>

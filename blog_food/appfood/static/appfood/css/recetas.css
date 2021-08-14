@@ -1,0 +1,1742 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+    
+    #wrapper-recetas {
+      margin:0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      min-width:250px;
+      flex-wrap: wrap;
+    }
+          
+    #wrapper-recetas > * {
+    padding: 20px;
+    }
+       
+    
+    #container-recetas{
+      width:100%;
+      max-width: 1230px;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top: 100px;
+      margin-bottom: 110px;
+
+     }
+
+
+   a:link, a:visited, a:active {
+    text-decoration:none;
+   }
+
+    /*ESTO ES DE LOS COMENTARIOS*/
+   .children form {
+    margin-left: -48px;
+
+    /* will touch very left side */
+    }
+  
+   .children .children form {
+    margin-left: -96px;
+    /* will touch very left side */
+   }
+
+   .comentarios{
+    background-color: violet;
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+   }
+
+  /*.........*/
+
+
+  a {
+    color: #524c56;
+    text-decoration: none;
+    font-weight: lighter;
+  }
+     a, a:hover,a:visited, a:focus {
+    text-decoration:none;
+   }
+
+   
+  header{
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  margin: auto;
+  height:  78px;
+  box-shadow: 0 8px 6px -6px #c9c9c9;
+  }
+
+  header.black{
+   background-color:#fff ;
+   width: 100%;
+   height:  78px;
+  }
+  
+  
+  .cabecera-recetas{
+     width: 100%;
+    max-width: 1190px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: auto;
+    height: 40px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+
+  }
+
+  
+   /*caja */
+   .logo{
+    display: inline-flex;
+    width: 19.8%;
+    max-width: 450px;
+    height: 40px; 
+ 
+   }
+    
+   /*IMAGEN DEL LOGO*/
+   .logo img{
+    width: 100%;
+    height: 40px;  
+    }
+     
+    
+    /* BUSCADOR INTERNO */
+
+    #controls-responsive{
+      display: none;
+    }
+
+
+  /*CONTAINER DEL BUSCADOR................. */
+  .cabecera-recetas .controls{
+  display: block;
+  position: relative;
+  float: left;
+  width: 30%;
+   max-width: 390px;
+  height: 40px;  
+ 
+ }
+
+   #custom-search-input input[type=text]:focus {
+  outline: none;
+  border: 0;
+  background-color: #fff;
+  padding-left: 8px; /*MUEVE LA LETRA*/
+ }
+
+
+
+
+  /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
+  #custom-search-input{
+  width: 100%;
+  max-width: 390px;
+  height: 38px;
+  display: flex;
+  flex-direction: row;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-size: 1em;
+	font-weight: 3rem;
+  
+  margin-top: 8px;
+  box-shadow: 4px 8px 6px -6px #8c8c8c;
+
+  background: #FEFEFE;
+  background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+  border: 2px solid #FAFAFA;
+ 
+   }
+
+  /*CAMPO SEARCH BUSCADOR */
+  #custom-search-input .sin-borde{
+  border: 0px solid #fff;
+	-moz-border: 0px  solid #fff;
+	-webkit-border: 0px solid #fff;
+	font-size: 1em;
+	font-weight: 6rem;
+  width: 92%;
+  max-width: 340px;
+  height: 36px;
+  padding-left: 8px; /*MUEVE LA LETRA*/
+  }
+
+
+  input::placeholder {
+   width: 250px;
+
+  }
+
+
+  /*BOTOM BUSCADOR */
+   .controls .boton{
+    border-right: 4px;
+    -moz-border-right: 2px;
+    -webkit-border-right: 2px;
+   color: #fff;
+   padding-left:2px; /*MUEVE LA LETRA*/
+   width: 15%;
+   max-width: 55px;
+   height: 36px;
+   background-color: #fff;
+  }
+
+  .controls .icon .fa-search{
+    color: #000000;
+  }
+
+
+   /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
+   .menu-btn {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: flex-end;
+   width: 100%;
+   max-width: 160px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+   height: 40px;
+   cursor: pointer;
+   transition: all .5s ease-in-out;
+
+   }
+
+ 
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+    .boletin{
+      width: 100%;
+      max-width: 120px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
+     align-items: flex-end; 
+      display: inline-flex;
+      justify-content: flex-start;
+     
+    }
+
+    .boletin  a h4{
+     width: 100%;
+     max-width: 90px;
+      font-size: 0.9rem;
+      letter-spacing: 0.1px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 600;
+      color:#2d2d2d;
+       margin: auto; /*IMPMORTANTE PARA LA LETRA*/
+      }
+  
+  
+
+   /*LETRA INSCRIBETE*/
+   .boletin a h4:hover{
+    color: #639a3a;
+    text-decoration: none;
+   }
+/*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+
+
+
+/*--MUEVE EL MENU............ESTE ES EL BURGER*/
+.menu-btn__burger {
+  display: block;
+  position: relative;
+  float: left;
+  margin: auto;
+  margin-top: 25px;
+  width: 38px;
+  height: 4.2px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+  z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/ 
+ }
+
+
+ /*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+ .menu-btn__burger::before,
+ .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 38px;
+  height: 4px;
+  background:#2d2d2d;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+  transition: all .5s ease-in-out;
+   z-index: 800;
+ }
+
+
+ .menu-btn__burger::before {
+   transform: translateY(-10px);
+ }
+ .menu-btn__burger::after {
+   transform: translateY(10px);
+  
+ }
+
+.menu-btn__burger:hover{
+  background-color: #fff;
+}
+
+ .menu-btn__burger:hover::before,
+ .menu-btn__burger:hover::after{
+  background-color: #fff;
+}
+
+
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+
+
+
+/*margin-left: 5.4%;/*IMPORTANTE */
+  nav{
+  width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
+  height: 100%;/*IMPORTANTE */
+  position: fixed;
+   top:0px;  /*IMPORTANTE para que arriba no tenga espacios */
+  min-height: 100vh;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+  background-color:#000000; /*FONDO DEL MENU*/
+  background-position:72% 50%;
+  background-repeat:no-repeat;
+  opacity: 1;
+  }
+
+ /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL*/
+  nav ul{
+  margin-left: 10%;/*IMPORTANTE */
+  margin-top: 3%;/*IMPORTANTE */
+  width: 48%;/*IMPORTANTE */
+  height: 90%;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+  z-index:30;
+  }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+     nav ul li{
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 1.5%;/*IMPORTANTE */
+    filter: alpha(opacity=80);
+    height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
+    list-style: none;
+    cursor:pointer;
+    margin-left: 14% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+      }
+      
+  
+    
+      nav ul li a {
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        width: 100%;
+        max-width: 800px;
+        height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
+        z-index: 100;
+      }  
+      
+
+          /*IMPORTANTE*/
+  nav li a p{
+  background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+  display: block;
+  border-radius: 8px solid #639a3a;
+   margin-top:9px;
+  position: absolute;
+  padding: 2px 2px ;
+  z-index: 200;
+  margin-left: 30px;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 2rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  font-family:  sans-serif;
+  }
+
+
+    /* NAV ESCONDIDO  NAV ESCONDIDO*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+   nav ul li:hover > ul {
+    display: block;
+    margin-left: -200px;
+    margin-top:-40px;
+    height: 200px;
+    visibility: visible; 
+    z-index: 598;
+   }
+
+   
+
+    nav ul li ul li a p{
+    font-size: 1rem;
+    display: block;
+    position: absolute;
+    max-width: 200px;
+    width: 100%;
+    margin-left: -2px;
+    padding-bottom: -2px;
+   }
+
+
+    nav ul li ul li a{
+    margin-left: -76px;
+    }
+  
+
+    nav ul ul {
+    visibility: hidden;
+
+    }
+  /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+  
+/*ANIMACION SUBRAYADO */
+nav a {
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  z-index: 40;
+  }
+   nav  a:after {
+  content: "";
+  display: block;
+  margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+  height: 2px;
+  width: 0px;
+  transition: all .8s;
+  z-index: 10;
+  
+  }
+ nav  a:hover:after {
+  width: 100%;
+  max-width: 500px;
+  padding-left: 40px;
+  padding-right: -150px;
+  height: 2px;
+  background: white;
+ 
+  }
+ 
+ 
+ 
+    /*FIN ANIMACION SUBRAYADO */
+ 
+
+  /*CONTAINER GENERAL DESPUES DEL WRAPPER.ESTA ARRIBA A LADO DEL WRAPPER...................................................................*/
+   /**AQUI EMPIEZA EL CONTAINER........................./
+
+  /*PRIMER SEGMENTO EL MENU SIMPLE CON ARROW.......................... */
+  #menu-simple{
+    width:100%;
+    height: 100%;
+    max-height: 28px;
+    display: flex;
+    flex-direction: row;
+     margin-bottom: 35px;
+
+  }
+  
+  /* PRIMERA SECCION MENU ARROW*/
+   #menu-simple li{
+    list-style: none;
+  
+   }
+  
+   /*ANCHO IMPORTANTE PARA EL MENU   ES LI*/
+   #menu-simple  ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+     white-space: nowrap;
+  
+   }
+
+    /*ESTE ES EL SCROLLO*/
+    #menu-simple ul::-webkit-scrollbar { /* WebKit */
+      width: 0px;
+      height: 30px;
+    
+      }
+  
+
+
+  /*ESTO ES LO MISMO QUE EL ANTERIOR?*/
+  
+  
+     #menu-simple  p{
+      letter-spacing: -0.4px;
+      font-size:  0.95rem;
+      line-height: 1.45;
+      color: #2d2d2d;
+      font-family: 'Times New Roman', Times, serif;
+      text-transform: uppercase;
+      font-weight: 900;
+      height: 2px; /*ESTO ARREGLO EL SUBRAYADO QUE SALIO MUY ABAJO */
+   
+    }
+  
+    #menu-simple li p i {
+    border: 3px solid #568632;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 4px;
+    margin-right: 12px;  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
+   }
+  
+     #menu-simple .right {
+     transform: rotate(-45deg);
+     -webkit-transform: rotate(-45deg);
+     border: 2px solid #568632;
+     border-width: 0 2px 2px 0;
+    }
+  
+    /* ANIMA CON RAYA AL HACE HOVER */
+     #menu-simple a {
+      text-decoration: none;
+      }
+  
+     #menu-simple a:after {
+      content: "";
+      display: block;
+      height: 1px;  /*GROSOR DE LA RAYA*/
+      width: 0px;
+      transition: all .4s;
+      }
+  
+      #menu-simple a:hover:after {
+      width: 100%;
+      width: 85%;   /*IMPORTANTE PARA EL ANCHO DE LA RAYA*/
+      margin-left: -2px;   /*IMPORTANTE PARA SITUAR LA RAYA*/
+      background: #639a3a;
+      }
+      
+      #menu-simple a:hover{
+        z-index: 40;
+        display: block;
+        }
+             /* FINAL MENU ARROW */
+    /* FINAL MENU ARROW*/
+ 
+
+
+   /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
+    #tres-columnas-recetas{
+    width: 100%;
+    max-width: 1220px;
+    display: flex;
+    flex-direction: row;
+   }
+  
+  /*CONTENEDOR DE LA PRIMERA COLUMNA........................... 2*/
+   .primera-columna-recetas{
+    width:  92%;
+    max-width: 1050px;
+    display: flex;
+    flex-direction: column;
+    }
+  
+  
+  
+   /* CAJA QUE CONTIENE ARTICULO Y VISTA................... */
+    .articulo{
+     display: block;
+    width: 100%;
+    max-width: 1050px;
+    margin-bottom: 5px;
+
+   }
+
+    /*CAJA QUE CONTIENE DESCRIPCION FOTO AUTOR  */
+   .recetas{
+     display: block;
+    width: 100%;
+    max-width: 1000px;
+  /*SEPARA DE AUTOR A LA PRIMERA FOTO PRINCIPAL    margin-bottom: ; */
+    }
+
+  /*TITULO DE LA RECETA*/
+  .recetas h1{
+  width: 100%;
+  font-size: 3.5rem;
+  word-spacing: -3px;
+  letter-spacing: -1.5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  text-align:start;
+  text-decoration-line: underline;
+  color: #000000;
+
+  }
+
+   /*DESCRIPCION DEL LA RECETA*/
+   .recetas p{
+    width: 100%;
+    letter-spacing: -0.01px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #2d2d2d;
+    text-align: start;
+    margin-top: 20px;
+   }
+  
+    /*---LEER MAS...*/
+    .articulo .recetas h3{
+     font-size: 1rem;
+     color:#2d2d2d;
+     font-weight: 400;
+     font-family:  sans-serif;
+    }
+
+    /* CONTIENE FOTO DE AUYOR Y SU NOMBRE */
+    #foto-autor{
+   display: flex;
+   flex-direction: row;
+    width: 250px;
+    height: 70px;
+     }
+  
+   /*..CONTIENE SOLO LA FOTO*/
+    #foto-autor figure {
+    display:  block;
+    float: right;
+    position: relative;
+    width:60px;
+     }
+
+
+     #foto-autor figure img{
+    width: 100%;
+    z-index: 60;
+    }
+
+    /*..CONTIENE SOLO EL NOMBRE*/
+   /*LETRA DEL AUTOR*/
+    #foto-autor figcaption {
+    display:  block;
+    float: left;
+    position: relative;
+    width: 180px;
+    height: 30px;
+   margin: auto;
+
+    }
+  
+    #foto-autor figcaption h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    color:#2d2d2d;
+   font-size: 1rem;
+
+   }
+
+
+/*CONTAINER QUE CONTIENE FOTO PRINCIPAL NUTRICIONAL Y REDES */
+  .vista{
+   width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  }
+
+
+  .vista-imagen-receta {
+    width: 65%;
+    display:block;
+  }
+   
+  /*    max-width:700px;   height:575px;  */
+  .vista-imagen-receta img{
+    display:block;
+  width: 100%;
+  border-radius: 6px;
+  }
+  .redes{
+   display: inlineflex;
+   width: 5%;
+   margin-right: 2.2%;
+  }
+   
+   /*UL*/
+   .iconos-social{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 40%;
+  }
+  
+  .iconos-social li{
+    list-style: none;
+   
+  
+  }
+  
+  .iconos-social  li .fa-envelope{
+    padding: 10px 10px 10px 10px;
+    color: #639a3a;
+    font-size:  10px;
+    width: 42px;
+    height: 48px;
+    border: 1px solid #639a3a; 
+    border-radius: 9px;
+  }
+  
+  .iconos-social li .fa-facebook-f{
+    padding: 10px 10px 10px 10px;
+    color: #639a3a;
+    font-size:  10px;
+    width: 42px;
+    height: 48px;
+    border: 1px solid #639a3a;
+    border-radius: 9px;
+    margin-bottom: 5px;
+  }
+  
+    .iconos-social  li .fa-twitter{
+    padding: 10px 10px 10px 10px;
+    color: #639a3a;
+    width: 42px;
+    height: 48px;
+    border: 1px solid #639a3a;
+    border-radius: 9px;
+    margin-bottom: 5px;
+    }
+  
+   .iconos-social  li .fa-pinterest{
+    border-radius: 15px;
+    color:  #639a3a;
+    padding: 8px 8px 8px 8px;
+    font-size:  9px;
+    width: 42px;
+    height: 48px;
+    border: 1px solid #639a3a;
+    border-radius: 9px;
+    margin-bottom: 5px;
+  }
+  
+
+  
+     /*CAJA COSTADO DE LA IMAGEN CONTINI PORSCIONES TIEMPO Y NUTRICIONAL  dd9d9*/
+     .contiene{
+      width: 25%;
+      margin-left: 2%;
+      flex-direction: column;
+      border: 0.5px solid #568632;
+      border-radius: 5px;
+      }
+
+     /*sub-cajita*/
+     .contiene .temps{
+      width: 80%;
+     margin: auto;
+     margin-top: 20px;
+    }
+    
+    .temps h2{
+      font-size: 1rem;
+      word-spacing: 0.1px;
+      letter-spacing: -0.01px;
+      font-family: Arial, Helvetica, sans-serif;
+    line-height: -0.4px;
+    color: #000000;
+    font-weight: 600;
+    }
+
+
+    .temps h2 span{
+      font-size: 1rem;
+      word-spacing: 0.1px;
+      letter-spacing: -0.01px;
+      font-family: Arial, Helvetica, sans-serif;
+    line-height: -0.4px;
+    font-weight: lighter;
+    color: #2d2d2d;
+    }
+
+
+     .contiene .porciones{
+       width: 80%;
+       margin: auto;
+        margin-top: 15px;
+      }
+
+      
+      .contiene .porciones h2{
+        font-size: 1rem;
+        word-spacing: 0.01px;
+        letter-spacing: -0.01px;
+        font-family: Arial, Helvetica, sans-serif;
+      line-height: -0.4px;
+      color: #000000;
+      display: block;
+      font-weight: 600;
+      }
+      
+      .contiene .porciones h2 span{
+        font-size: 1rem;
+        word-spacing: 0.01px;
+        letter-spacing: -0.01px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+      line-height: -0.4px;
+      color: #2d2d2d;
+      }
+
+    
+      .contiene .nutricional-imagen{
+       display: block;
+       position: relative;
+        width: 80%;
+        margin: auto;
+        margin-top: 25px;
+        text-decoration: underline;
+      }
+
+     
+
+
+    .contiene .nutricional-imagen h2{
+      font-size: 1rem;
+      word-spacing: 0.5px;
+      letter-spacing: -0.2px;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: -0.4px;
+      color: #000000;
+      font-weight: 600;
+    }
+  
+ 
+    /*ENUMERANDO LOS NUTRIENTES*/
+    .contiene .nutricional-imagen p{
+      font-size: 1.1rem;
+      word-spacing: 0.1px;
+      letter-spacing: -0.001px;
+      font-family: Arial, Helvetica, sans-serif;
+    line-height: -0.4px;
+    color: #2d2d2d;
+    font-weight: 200;
+    }
+
+
+
+ 
+  /*FINAL SEGUNDA SECTION*/
+  
+  /*TERCERA SECTION*/
+  /*CONTAINER TOTAL DE INGREDIENTES*/
+   .ingredientes-tres{
+    width: 100%;
+    margin-bottom: 6%;
+    margin-top: 6%;
+    border-top: 2px solid #e3e3e3;
+   }
+ 
+
+    /*CONTAINER TITULO Y PI DEL INGREDIENTE separa la linea del titulo*/
+    .ingrediente-titulo-pic{
+    display: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 7px;    
+    }
+
+
+    /*CAJA TITULO*/
+   .ingrediente-titulo{
+    width: 94%; 
+    }
+
+        /*TITULO LETRA*/
+   .ingrediente-titulo h2{
+    font-size: 1.4rem;
+    word-spacing: -0.01px;
+    letter-spacing: -0.001px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: #000000;
+    text-align: start;
+   }
+
+   /*CAJA INGREDIENTE PIC*/
+   .ingrediente-pic {
+    display: inline-flex;
+   width: 4%;
+  }
+
+   .ingrediente-pic img{
+    width:  35px;
+    height: 32px;
+   }
+
+
+   /*CAJA TOTAL DE LA LISTA DE INGREDIENTES  LOS PASOS CON EL CHECKINH*/
+    .ingredientes{
+      display: flex;
+      flex-direction: row;
+    }
+  
+    /*sub-cajita*/
+   .lista-ingredientes{
+    flex-direction: column;
+    width: 100%;
+   }
+  
+ 
+    .lista-ingredientes span{
+      color: #2d2d2d;
+      letter-spacing: -0.001rem;
+      word-spacing:  -0.001rem;
+     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+     color: #2d2d2d;
+    }
+  
+    
+
+   .lista-ingredientes  p{
+    width: 80%;
+    letter-spacing: -0.01px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #2d2d2d;
+    text-align: start;
+    margin-top:  -14px;  /*.PARA MANTENERLO JUNTO Y NO SEPARARDO DEL TITULO*/
+    }
+  
+ 
+
+    .salsa{
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+  
+      
+    }
+
+    .salsa h2{
+      margin-top: 30px;
+      font-size: 1.2rem;
+    word-spacing: -0.01px;
+    letter-spacing: -0.001px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: #000000;
+    }
+
+
+    .otros-ingredientes{
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+  
+    }
+
+    .otros-ingredientes h2{                    
+      font-size: 1.2rem;
+      word-spacing: -0.01px;
+      letter-spacing: -0.001px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bolder;
+      color: #000000;
+      margin-top: 30px;
+
+    }
+
+
+   /*FINAL TERCERA SECTION*/
+  
+  /*CUARTA SECTION..CONTEEDORR .............PREPARACION*/
+
+   .preparacion-total{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6%;
+    margin-top: 6%;
+    border-top: 2px solid  #DCDCDC;
+    }
+
+
+      /*CAJA DEL TITULO Y GIf DE LA PREPARARCION SEPARA BORDE DEL TITULO*/
+    .preparacion-titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    }
+
+
+   /*CAJA DEL TITULI*/
+   .preparacion-titulo .prepa-titulo{
+    width: 94%;
+    margin-top: 10px;
+    }
+
+   
+  
+        /*TITULO DE LA PREPARACION*/
+ .preparacion-titulo .prepa-titulo h2{
+  font-size: 1.4rem;
+  letter-spacing:-0.01rem ;
+  word-spacing: -0.01rem;
+  font-weight: 600;
+  text-align: start;
+  color: #000;
+  font-family: 'Times New Roman', Times, serif;
+   margin-top: 3px;
+  }
+
+
+  /*CAJA DEL GIF*/
+  .prepa-pic {
+    display: inline-flex;
+   width: 4%;
+   }
+
+
+   .prepa-pic img{
+    width:  35px;
+    height: 32px;
+    }
+/******************************/
+ 
+  .preparacion-pasos{
+    width: 100%;
+    }
+
+    .paso{
+   width: 100%;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+    }
+
+  /*---------CASILLA-----------------------*/
+  .checkbox {
+  width: 100%;
+  margin: 15px auto;
+  position: relative;
+  display: block;
+  }
+
+  .checkbox input[type="checkbox"] {
+  width: auto;
+  opacity: 0.00000001;
+  position: absolute;
+  left: 0;
+  margin-left: -20px;
+  }
+
+  .checkbox label {
+  position: relative;
+  }
+
+  .checkbox label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 4px;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.28s ease;
+  border-radius: 3px;
+  border: 2px solid #7bbe72;
+  }
+
+  .checkbox label:after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 5px;
+  border-bottom: 2px solid #7bbe72;
+  border-left: 2px solid #7bbe72;
+  -webkit-transform: rotate(-45deg) scale(0);
+  transform: rotate(-45deg) scale(0);
+  transition: transform ease 0.25s;
+  will-change: transform;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  }
+
+  .checkbox input[type="checkbox"]:checked ~ label::before {
+  color: #7bbe72;
+   }
+
+   .checkbox input[type="checkbox"]:checked ~ label::after {
+  -webkit-transform: rotate(-45deg) scale(1);
+  transform: rotate(-45deg) scale(1);
+  }   
+
+  .checkbox label {
+  min-height: 34px;
+  display: block;
+  padding-left: 40px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+  color: #000000;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  }
+
+  .checkbox label span {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  }
+
+  .checkbox input[type="checkbox"]:focus + label::before {
+  outline: 0;
+   }
+
+  
+  /*FIN CASILLA*/
+    
+
+  /*PARA SEPARAR PASOS DE PREPARAR*/
+    .preparacion{
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      margin-top: -18px;  
+    }
+    
+      /*PREPARANDO.DESCRIBIENDO COMO SE HACE LA COMIDA......*/
+     .preparacion p{
+        letter-spacing: -0.001rem;
+        word-spacing:  -0.001rem;
+       font-family: 'Times New Roman', Times, serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+       color: #2d2d2d; 
+      }
+      
+  
+    /*..CONTAINER DE TIPS TITULO Y FOTO............*/
+      .tips-titulo-pic{
+        display: 100%;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         border-top: 2px solid  #DCDCDC;
+          margin-top: 15px;
+        margin-bottom: 7px;
+      }
+    
+      /*..TITULO CONSEJOS SEPARA BORDE DEL TITULO*/
+      .tips-titulo{
+        width: 94%;
+        margin-top: 10px;
+      
+      }
+
+
+            /*TITULO*/
+       .tips-titulo h2{
+        font-size: 1.4rem;
+        word-spacing: -0.01px;
+        letter-spacing: -0.001px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        color: #000000;
+        text-align: start;
+       }
+
+
+      .tips-pic {
+        display: inline-flex;
+       width: 4%;
+     }
+     /*IMAGEN ADORNO*/
+      .tips-pic img{
+        width:  35px;
+        height: 32px;
+        margin-top: 10px;
+      }
+
+      .tip-contenido{
+        display: flex;
+        flex-direction: column;
+      }
+   
+    .tip-contenido  p{
+    font-size: 1.2rem;
+    color: #2d2d2d;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.01rem;
+    font-weight: 100;
+    }
+
+
+   /*FINAL CUARTA SECTION*/
+   /* NUTRICION INFORME    .......... */
+   .nutricion-informe{
+   width: 100%;
+   margin-top:5%;
+   margin-bottom: 15%;
+   }
+
+    /*cajita*/
+   .nutricional{
+    width: 100%;
+    margin-bottom: 5%;
+    border-top: 2px solid #DCDCDC;
+   }
+  
+   .nutricional h2{
+    margin-top: 12px;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    word-spacing: -0.001px;
+    letter-spacing: -0.01px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+    text-decoration: underline; 
+    text-align: start;
+    }
+  
+    .nutricional p{
+    letter-spacing: 0.01rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: -0.4px;
+    color: #2d2d2d;   
+  }
+
+   /*..CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
+    /*--CATEGORIA QUE ESTA SIN LINK SOLO VA LA CATEGORIA ACTUAL..*/
+   .categoria h2{
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', sans serif;
+    color:#000000;
+    }
+
+   .categoria p{
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', sans serif;
+    color:#524c56;
+    }
+
+   /*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA SIN TIENEN LINK..*/
+    .categorias-recetas-links h2{
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', sans serif;
+    color:#000000;
+    }
+  
+    /*..CATEGORIAS EN EL ASIDE QUE TAMBIEEN USA H2....*/
+   .categorias-recetas-links p{
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', sans serif;
+    color:#524c56;
+    }
+
+
+     /* FINAL PRIMERA COLUMNA.......... */
+   
+      /* SEGUNDA COLUMNA................................................................. */
+    .segunda-columna-recetas{
+    width: 10%; 
+    }
+  
+  
+  /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
+    #aside-recetas{
+    width:18%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    }
+
+    
+  /*..FINAL BUSCADOR.....FINAL SEARCH...........................*/
+   
+  .fijo-recetas{
+    width:100%;
+    max-width: 360px;
+  }
+
+
+    /*FOTOS*/
+   .galeria{
+    width: 100%;
+    display: flex;
+    }
+
+   .galeria-columna1{
+   width: 100%;
+    }
+  
+   .galeria .img1{
+    overflow: hidden;
+    display: block;
+    margin-bottom: 9%;
+     }
+
+
+
+  .galeria img:hover{
+  -ms-transform:scale(1.2);
+  transform:scale(1.2);
+  -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -o-transform:scale(1.25);
+   }
+
+
+
+     #aside-recetas p{
+     letter-spacing: -0.1px;
+     font-family: 'Cabin', sans-serif;
+     font-size: o.8rem;
+     font-weight: 400;
+     line-height: -0.4px;
+     color: #666;
+     text-align:start;
+   
+     }
+
+    #aside-recetas h2{
+    width: 100%;
+    flex-flow: column;
+    font-size: 1rem;
+    word-spacing: -3px;
+    letter-spacing: -2.8x;
+    font-family: 'Archivo Black', sans-serif;
+    color: #2d2d2d;
+   }
+
+    /*CONETENDOR DE CATEGORIAS EN ASIDE */
+   #aside-recetas .categorias-recetas-links-aside {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+    
+  }
+
+   #aside-recetas .categorias-recetas-links-aside h2{
+    font-size: 1.2rem;
+    font-weight: 100;
+    word-spacing: -0.1px;
+    letter-spacing: -0.2px;
+    font-family: 'Times', 'sans-serif';
+    color: #000000;
+     margin-bottom: -0.1px;
+  
+
+   }
+   #aside-recetas .categorias-recetas-links-aside p{
+    font-size: 1.1rem;
+    font-weight: 100;
+    word-spacing: -0.1px;
+    letter-spacing: -0.2px;
+    font-family: 'Times', 'sans-serif';
+    color: #666;
+     margin-bottom: -0.1px;
+   }
+    /*FINAL ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE */
+
+  .tipeo{
+  margin: auto;
+  margin-bottom: 20%;
+  display: table;
+  width: 90%;
+  height: 5%;
+  }
+
+  .tipeo h4{
+  position: relative; 
+  float: left;
+  color: #2d2d2d;
+  font-size: 2em;
+  }
+
+  .tipeo h1 { 
+  position: relative; 
+  float: left;
+  color: #2d2d2d;
+  font-size: 2em;
+  white-space: nowrap;
+  width:28%;
+  }
+
+   .tipeo h1 span {
+   position:absolute;
+   right:0;
+   width: 8em;
+   background: white;
+   border-left: 0.1px solid #DDD;
+   animation: escribir 5s steps(30) infinite alternate;
+   }
+
+
+
+  @keyframes escribir{
+  from { width: 100% }
+  to { width:0 }
+  }
+   
+
+
+  
+/*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+#footer-recetas{
+  clear: both;
+    position: relative;
+    height: 10px;
+    margin-top: -10px;
+   border-top: solid 1.5px #DCDCDC;
+   display: flex;
+   flex-direction: column;
+  width: 100%;
+  z-index: 10;
+ 
+  bottom: 0;
+  }
+  
+    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+  .footer-primero-recetas{
+  width: 80%;
+  max-width: 900px;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  }
+  
+  /*SUB-caja ICONOS SOCIALES*/
+  #icon-social1{
+  width: 49.5%;
+  max-width: 250px;
+  height: 90px;
+  }
+  
+  
+  #icon-social1 li{
+  list-style: none;
+  display: inline-flex;
+   }
+  
+  #icon-social1 p{
+  font-size: 1.1rem;
+  word-spacing: -3px;
+  letter-spacing: -2px;
+  font-family: 'Archivo Black', sans-serif;
+  padding-bottom: 10px;
+  color: #2d2d2d;
+  }
+  
+  #icon-social1 .social2{
+  display: inline-flex;
+  list-style: none;
+  }
+  
+  
+  #icon-social1   li .fa-envelope{
+  background-color: oldlace;
+  color: #2d2d2d;
+  width:40px;
+  height: 40px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 25px;
+  border: solid #E9E9E9;
+  margin-top: -15px;
+  }
+  
+  #icon-social1   li .fa-facebook-f{
+  background-color: oldlace;
+  color:  #2d2d2d;
+  width:40px;
+  height: 40px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 25px;
+  margin-top: -15px;
+  border: solid #E9E9E9;
+  }
+  
+  
+  #icon-social1   li .fa-twitter{
+  background-color: oldlace;
+  color:   #2d2d2d;
+  width:40px;
+  height: 40px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 25px;
+  margin-top: -15px;
+  border: solid #E9E9E9;
+  }
+  
+  
+  
+  
+  #icon-social1  li .fa-instagram{
+  background-color: oldlace;
+  color: #2d2d2d;
+  width:40px;
+  height: 40px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 25px;
+  margin-top: -15px;  /*SUBE ICONO*/
+  border: solid #E9E9E9;
+  }
+  
+   /*SUB-caja contenedor de la caja correo*/
+   .box{
+    width: 45%;
+    margin-left: 5% ;
+    margin-top: 8px; /*SUBE CAJA A MENOS TOP*/
+    transform: translate(-5%, -5%);
+    height: 90px;
+     }
+  
+  .box h3{
+  letter-spacing: -0.1px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: .8rem;
+  font-weight: 400;
+  line-height: -0.4px;
+  margin-left: 16%;
+  color: #2d2d2d;
+  }
+   /*cajita del correo */
+  .box form{
+    display: flex;
+    margin-left: 4%;
+  }
+  
+  .box input[type="text"]
+  {
+  background-color: #fff;
+  display: flex;
+  width:60%;
+  height: 50px;
+  border: 1.5px solid 	#DCDCDC;
+  padding: 0 18px;
+  border-radius: 5px 0 0 5px;
+  
+  }
+  
+  .box button[type="submit"]{
+  left: 10px;  /*EL TRUCO IMPORTANTE*/
+  border-radius: 0 5px 5px 0;
+  width: 30%;
+  height: 50px;
+  border: none ;
+  outline: none;
+  cursor: pointer;
+  background-color: #2d2d2d;
+  color: #fff;
+  font-size: 12px;
+  font-family: 'Archivo Black', sans-serif;
+  }
+  
+
+  /*FIN de la cajita del correo */
+  
+  
+  
+  
+  
+  
+  
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+        #footer-recetas  .footer-second-recetas{
+          width: 100%;
+        display: block;
+      height: 20px;
+        }
+  
+        .final-food-recetas{
+          height: 15px;
+          display: block;
+          width: 100%;
+         
+        }
+    .final-food-recetas p{
+    text-align: center;
+ 
+    color: #2d2d2d;
+    font-size: 0.8rem;
+   }
+  
+
+  
+  
+  
+  /* FINAL.....FOOTER...............................................................................................................................................................................*/
+  /*FINAL .............................................................................................................................................*/
+  
+  
+  
+  
+  
+  
+   
+  
+/* FINAL....................................................................................................................................................................................*/
+/*FINAL .............................................................................................................................................*/
+
+
+
+/* ...PAGINACION ...................................*/
+.paginacion{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 8%;
+  margin-top:10%;
+
+}
+
+  .pagination {
+    display: inline-flex;
+  text-transform: none;
+  list-style: none;
+
+}
+
+li.page-food.active::marker{
+  text-transform: none;
+  
+}
+
+
+/*LETRA*/
+  .paginacion a{
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Arial Black';
+   font-weight: 400;
+   
+  }
+
+
+   .paginacion a:hover{
+     background-color: #000;
+     color:#fff;
+   }
+
+   
+   /*DA COLOR AL BOTON DE ACTIVO */
+  .page-food.active .page-link{
+    z-index: 5;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial Black';
+  }
+
+   .page-link{
+     color: #000;
+     font-size: 1.2rem;
+     margin-left:5px;
+     margin-right:5px;
+     
+   }
+   
+
+
+
+
+
+
+
+
+
+   /*ESTO BORRAR*/
+
+.container-recetas{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  
+}
+  
+   .articulo-recetas{
+     width: 100%;
+ 
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+   }
+
+   .vista-articulo-recetas{
+     width: 45%;
+     display: flex;
+     flex-direction: column;
+   }
+   .contiene-nutricion{
+     width: 45%;
+   }
+
+   .vista-imagen{
+     display: flex;
+     flex-direction: column;
+   
+     width: 50%;
+  
+   }
+
+   .vista-articulo-recetas .iconos-social{
+     display: flex;
+     flex-direction: row;
+     width: 50%;
+   
+   }
+   .vista-imagen img{
+     width: 100%;
+   }
+   /*BOORAR*/

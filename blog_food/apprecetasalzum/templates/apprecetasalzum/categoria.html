@@ -1,0 +1,206 @@
+{% extends 'appblog/base_categoria.html' %}
+{% load static %}          
+{% block title %}Categoria Batidos y Ensaladas{% endblock %}  
+ 
+ 
+
+
+              <!-- CONTENEDOR DEL CUERPO DEL BODY-------->
+    {% block content %}           
+    <div id ="container-categorias-subcategorias">                                  
+              <!--  CAJA DE NAVEGACION DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
+               
+              <!--------------------------------------------------------------->
+              <div class="intro">
+                   <div class="menu-introescrito">
+                              <!--MENU-->
+                               <div class="menu">
+                               <ul>
+                               <li>
+                               <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
+                               </li>
+                               <li>    
+                                <a  href="{% url 'appfood:recetas-dieteticas' %}">Recetas dieteticas<i class="right"></i> </a>
+                              </li>
+
+
+                              
+                          <!--MENU ESCONDIDO -CATEGORIAS-HAY QUE CAMBIARLO CODIGO NO ES DE RECIPE----------------->
+                          <li>
+                          <p>Categorias<i class="right"></i></p>
+                          <ul>
+                          {% load mptt_tags %}
+                          {% for category in categories %} 
+                          <!--  TITULO--CATEGORIA---> 
+                          <li>
+                          <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
+                          <p> {{category.name}}</p> 
+                          </a>    
+                          </li>
+                          {% endfor %}
+                              
+                          </ul>
+                          </li>
+                          <!---FIN MENUS ESCONDIDO CATEGORIAS---->
+                            
+
+
+
+                              <li>
+                             {% load mptt_tags %}
+                             {% for recipe in category_deals %}
+                            <a href="/recetas-dieteticas/categoria/{{ recipe.slug }}">
+                            <p>{{category_deals.get}}<i class="right"></i></p>
+                            </a>
+                            {% endfor %}
+                            </li>
+
+                          </ul>
+                          </div>
+                        <!---FIN -MENU---------------------------------------------->
+
+
+
+
+                             <!--TITULO DE LA CATEGORIA ------------------------>
+                              <div class="introescrito">
+                              <!---TITULO DE CATEGORIA--->
+                              {% load mptt_tags %}
+                              {% for recipe in category_deals %}
+                               <!--  TITULO--CATEGORIA---> 
+                              <div class="menu-intro-titulo">  
+                                        <h2> {{category_deals.get}}</h2>     
+                              </div>
+                              {% endfor %}
+                              <!---FIN INTRO TITULO-->        
+                              </div>
+                            <!---FIN INTROESCRITO---------------->
+                         </div>
+                      <!-- FIN DIV MENU-INTRO ESCRITO-------------------------->
+                                       <div class="intro-dos-vacios">
+                                       <!------ LAS CATEGORIAS---------------->
+                                       
+                                          </div>
+
+
+                         </div>
+                     <!---FINAL INTRO--->
+
+                  </div>
+                 <!-- FIN DIV container-categorias-subcategorias-->
+
+<!-------------------------------------------------------------------------------------------------------------------->
+                  <!---IMAGENES DE LAS SUBCATEGORIAS-->
+              <div class="imagenes-pequeñas">
+                        <!--SUBCATEGORIAS CON IMAGENES-->
+                       {% for category in category_deals %}
+                       {% if not node.is_leaf_node %}
+                       <!-- SUBCATEGORIAS ---->
+                       {% for child in category.get_children %}
+                       <div class= "subcategoria">
+                        {% if child.image %}
+                        <img src="{{child.image.url}}">
+                        {% endif %}      
+                        <a href="/recetas-dieteticas/subcategoria/{{ child.slug }}"><h3>{{ child.name }}</h3>
+                        </a>
+                       </div>
+                       <!--FIN SUBCATEGORY-->  
+                      {% endfor %}
+                      {% endif %}
+                       {% endfor %}
+                </div>
+               <!--FIN DIV IMAGENES PEQUEÑAS--->
+            
+      <!------------------------------------------------------------------------------------------------->
+         <!--------------- FIN CAJA DE NAVEGACION DE LAS SUBCATEGORIA-PERDER------------------->
+
+
+
+                            <!---DIV CONTAINER DE 4 POST Y DE RECETAS--->
+
+        <!---DIV  DEBE MEDIR 100%  CONTAINER DE 4 POST Y DE RECETAS--->
+   <div class="container-posts-categorias">
+          <!--DEBE MEDIR  80%-------------80%---------->
+      <div id = "posts-categoria">
+          <!--------------- INICIO POST CATEGORIA------------------------->
+      
+        <!---DIV DE 4 POST DE POSTS--->
+        <div class="elemento-categoria">
+
+
+              {% load mptt_tags %}
+              {% for recipe in post_recipe %}
+              <!---FECHA E IMAGEN-->  
+              <div id="imagen-elemento-categoria"> 
+                   <!-- IMAGEN--->
+                   {% if recipe.image %}             
+                   <img src ="{{recipe.image.url}}">
+                   {% endif %}       
+                   <!-------FIN -IMAGEN CON FECHA---------->
+
+                   <!-------AQUI NO SE PUSO EL CODIGO QUE SE PUSO EN APPRECTAS SANAS PORQUE AQUI HAY CHILDREN Y EL OTRO SOLO CATEGORIAS-------->
+                   <!--TITULO DEL POST ENSALADAS Y ZUMOS-->
+                   <div class="imagen-descripcion">
+                   <a href="/recetas-dieteticas/receta/{{ recipe.slug}}">
+                   <h2>{{ recipe.title }}</h2>
+                   </a>
+                   <!--DESCRIPCION DEL POST-->
+                   <p>{{recipe.description|safe}}</p>
+                   <a href ="/recetas-dieteticas/receta/{{ recipe.slug }}/">
+                   <em><p>Leer mas...</p></em>
+                   </a>
+                   <p class="a">Por <span class="o"> {{ recipe.author }}</span> </p> 
+                   <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE EBDFOR--->
+                   </div>
+                    <!--fin IMAGEB descripcion--->
+             </div>
+            <!--25%  FIN imagen-elemento-categoria--->  
+
+
+
+            {% empty %}
+            <p>No hay posts</p>
+            {% endfor %}    
+            <!----------CIERRA EL POST ---------->  
+             </div>
+       </div> 
+          <!---FIN DIV POSTS CATEGORIA 75%--->    
+
+
+
+                     <!-- 20% ASIDE --->
+                    <div id="aside">    </div>
+                    <!--FIN ASIDE 20%--->
+      
+      <!--FIN CONTAINER CATEGORIAS Y SUBCATEGORIA 100% TODO-->     
+      </div>
+               <!------------------------------------------->
+
+  {% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {% block redes %}
+            {% endblock redes %}
+ {% block paginacion %} {% endblock paginacion %}
+
+
+ {% block carrusell %}
+  {% endblock carrusell %}
+
+
+
+
+
+
+  

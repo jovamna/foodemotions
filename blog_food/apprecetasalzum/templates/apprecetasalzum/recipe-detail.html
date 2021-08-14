@@ -1,0 +1,804 @@
+{% extends 'apprecetas/recetas_base.html' %}
+{% load static %}
+
+{% block titulo %}Receta{% endblock titulo %}  
+        
+           {% block menusimple %}
+         <div id="menu-simple">
+          <!-- CONTENEDOR DEL MENU PEQUEÑO----------------------------------->
+            <ul>
+              <li>
+              <a href="{% url 'appfood:index' %}">
+              <p>Inicio <i class="right"></i></p>
+              </a>
+              </li>
+              <li>
+              <a href="{% url 'appfood:recetas-dieteticas' %}"> 
+              <p>Recetas dieteticas <i class="right"></i></p>
+              </a>
+              </li>
+              <li>
+              {% for recipe in recipes %}
+              <p>{{ recipe.category }}<i class="right"></i></p></em>
+              {% endfor %}
+              </li>
+              </ul>
+              </div>
+               {% endblock menusimple %}
+                <!-- -CONTENEDOR GENERAL DEL CONTENIDO Y ASIDE----------------------------->
+
+
+   {% block content %}
+                <!-- CONTENEDOR DE TOTAL DEL CONTENIDO----------------------------------->
+                <div class="primera-columna-recetas">
+                           {% for recipe in recipes %}
+                           <!-- PRIMERA SECTION--------------------------------------------------------------------->
+                           <div class="articulo">
+                                          <div class="recetas">
+                                          <h1>{{recipe.title|safe}} </h1>
+                                          <p>{{recipe.description|safe}} </p>
+
+                                                <div id="foto-autor">
+                                                     <figure>
+                                                      {% if recipe.imageauthor %}
+                                                     <img src="{{recipe.imageauthor.url}}">
+                                                     {% endif %}
+                                                      <figcaption>
+                                                     <em> <h4>{{recipe.author}}</h4></em>
+                                                     </figcaption>
+                                                     </figure>
+                                                </div>
+                                                 <p>{{recipe.publish}} </p>
+                                             <!-- -----FIN RECETAS-------------------------------->
+                                           </div>
+                                                <!-- --------------------------------------------------->
+            <div class="vista">
+            <!-- FIN ARTICLE---------------------------------->
+                <!--REDES SOCIALES---->
+                <div class="redes"> 
+                  <ul class="iconos-social">           
+                             
+            <li> 
+            {% with base_url="http://emotionsfood.com" %} 
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ base_url|urlencode }}{{ request.get_full_path|urlencode }}&t={{ object.title }}" target="_foodemotions">
+            {% endwith %}
+            <i class="fab fa-facebook-f"></i></a> <br>
+            </li>
+                
+
+            <li> 
+            {% with base_url="http://emotionsfood.com" %} 
+            <a href="https://twitter.com/share?text={{ user.username }}&url={{ base_url|urlencode }}{{ request.get_full_path|urlencode}} " target="_blank" title="Share on Twitter"> 
+            {% endwith %}
+            <i class="fab fa-twitter"></i>  </a> <br>
+            </li>
+
+
+              <li>
+             {% with base_url="http://emotionsfood.com" %} 
+            <a href="http://pinterest.com/pin/create/button/?url=LINK&media=URL_IMAGEN&description=TEXTO={{ base_url|urlencode }}{{ request.get_full_path|urlencode }}&t={{ object.title }}" target="_blank">
+            {% endwith %} 
+            <i class="fab fa-pinterest" aria-hidden="true"></i> </a> <br>
+
+            </li>
+         
+             <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+            <i class="fas fa-envelope"></i> </a> <br>
+            </li>
+
+            </ul>
+                </div>
+                <!--IMAGEN PRINCIPAL DE LAS RECETAS-->
+                <div class="vista-imagen-receta">
+                {% if recipe.image %}
+                <img src="{{recipe.image.url}}"/>
+                {% endif %}
+                </div>                  
+                <!--TIEMPO E INFORMACION NUTRICIONAL--->
+                  <div class="contiene">
+
+                  <div class="temps-porciones">
+                  <!--TIEMPO --->                                    
+                  <div class="temps">
+                  <h2>Tiempo <span>{{recipe.titletime}}</span></h2>
+                  </div>
+                  <!--PORCIONES--->
+                  <div class="porciones">
+                  <h2> Porciones: <span>{{recipe.porcion|safe}}</span></h2>
+                  </div>
+                  </div>
+                  <!--fin containe de tiempo y porcioines----->
+
+                  <!--INFORMACION NUTRICIONAL--->
+                  <div class="nutricional-imagen">
+                 <h2>{{recipe.tituloperfil|safe}} :</h2>
+                <p>{{recipe.perfilnutricional|safe}}</p>
+                                                     
+                </div>
+                </div>
+                <!--FIN DIV CONTIENE-->
+                </div>
+                <!-- DIV FIN VISTA DE CONTAINER DE LA FOTO PRIINCIPAL Y ETC ------------------------------>
+                 </div>
+              <!--FIN DIV ARTICULO CONTAINER PRINCIPAL DE DESCRICPION Y FOTO MMAS INFORME --->
+                               
+
+
+
+                    <!--LISTA DE COMPRAS ------------------------------------------------->
+
+         <!------LISTA DE COMPRAS -------------------LISTA DE COMPRAS------------------------------>
+        
+       <!--INGREDIENTES------------------------------------------------->
+   <div class="ingredientes-tres">
+                       <!--------TITULO------------->
+                      <div class="ingrediente-titulo-pic">
+                           <!--TITULO INGREDIENTE--->
+                          <div class="ingrediente-titulo">
+                             {% if recipe.titleingredients != Null %}   
+                             <h2>{{recipe.titleingredients|safe}}</h2>
+                              {% endif %}  
+                         </div>
+                            
+                         <!---PIC A LADO DEL TITULO--->
+                          <div class="ingrediente-pic">
+                            <img src= "{% static 'appfood/img/gif/uno.png' %}"/>
+                          </div>       
+                     </div>
+
+              <section class="ingredientes"> 
+                    <div class="lista-ingredientes"> 
+                        {% if recipe.ingredienone != Null %}    
+                        <div class="checkbox">
+                        <input type="checkbox" id="checkbox1" name="" value="">
+                        <label for="checkbox1"><span>{{recipe.ingredienone|safe}} </span></label>
+                       </div>
+                     {% endif %}
+                    <!----------------------INGREDIENTE 2------>
+                      {% if recipe.ingredientwo != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox2" name="" value="">
+                      <label for="checkbox2"><span>{{recipe.ingredientwo|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                      <!----------------------INGREDIENTE 3------>
+                      {% if recipe.ingredienthree != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox3" name="" value="">
+                      <label for="checkbox3"><span>{{recipe.ingredienthree|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                      <!----------------------INGREDIENTE 4------>
+                      {% if recipe.ingredienfour != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox4" name="" value="">
+                      <label for="checkbox4"><span>{{recipe.ingredienfour|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                      <!----------------------INGREDIENTE 5------>
+                      {% if recipe.ingredienfive != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox5" name="" value="">
+                      <label for="checkbox5"><span>{{recipe.ingredienfive|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                     <!----------------------INGREDIENTE 6------>
+                      {% if recipe.ingrediensix != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox6" name="" value="">
+                      <label for="checkbox6"><span>{{recipe.ingrediensix|safe}}</span></label>
+                     </div>
+                    {% endif %}
+
+                     <!----------------------INGREDIENTE 7------>
+                      {% if recipe.ingredienseven != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox7" name="" value="">
+                      <label for="checkbox7"><span>{{recipe.ingredienseven|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                     <!----------------------INGREDIENTE 8------>
+                      {% if recipe.ingredieneight != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox8" name="" value="">
+                      <label for="checkbox8"><span>{{recipe.ingredieneight|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                     <!----------------------INGREDIENTE 9------>
+                      {% if recipe.ingrediennine != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox9" name="" value="">
+                      <label for="checkbox9"><span>{{recipe.ingrediennine|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                     <!----------------------INGREDIENTE 10------>
+                      {% if recipe.ingredienten != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox10" name="" value="">
+                      <label for="checkbox10"><span>{{recipe.ingredienten|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                     <!----------------------INGREDIENTE 11------>
+                      {% if recipe.ingredieneleven != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox11" name="" value="">
+                      <label for="checkbox11"><span>{{recipe.ingredieneleven|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                     <!----------------------INGREDIENTE 12------>
+                      {% if recipe.ingredientwelve != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox12" name="" value="">
+                      <label for="checkbox12"><span>{{recipe.ingredientwelve|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                     <!----------------------INGREDIENTE 13------>
+                      {% if recipe.ingredienthirteen != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox13" name="" value="">
+                      <label for="checkbox13"><span>{{recipe.ingredienthirteen|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                     <!----------------------INGREDIENTE 14------>
+                      {% if recipe.ingredienfourteen != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox14" name="" value="">
+                      <label for="checkbox14"><span>{{recipe.ingredienfourteen|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                     <!----------------------INGREDIENTE 15------>
+                      {% if recipe.ingredienfifteen != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox15" name="" value="">
+                      <label for="checkbox15"><span>{{recipe.ingredienfifteen|safe}} </span></label>
+                     </div>
+                    {% endif %}
+
+                  <!------------------------------------------------------------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     <!----------------SALSA INGREDIENTES----TITULO-------------------------------->
+                      {% if recipe.salsaingredients != Null %} 
+                      <div class ="salsa">     
+                       <h2>{{recipe.salsaingredients|safe}} </h2>
+                         </div>
+                      {% endif %}
+
+                      <!---------SALSA INGREDIENTES-2---->
+                      {% if recipe.ingrediensixteen != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox16" name="" value="">
+                      <label for="checkbox16"><span>{{recipe.ingrediensixteen|safe}} </span></label>
+                      </div>
+                      {% endif %}
+
+                         <!---------SALSA INGREDIENTES-3---->
+                      {% if recipe.ingredienseventeen != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox17" name="" value="">
+                      <label for="checkbox17"><span>{{recipe.ingredienseventeen|safe}} </span></label>
+                      </div>
+                      {% endif %}
+
+                         <!---------SALSA INGREDIENTES-4---->
+                      {% if recipe.ingredieneightteen != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox18" name="" value="">
+                      <label for="checkbox18"><span>{{recipe.ingredieneightteen|safe}}  </span></label>
+                      </div>
+                      {% endif %}
+
+                         <!---------SALSA INGREDIENTES--5--->
+                      {% if recipe.ingrediennineteen != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox19" name="" value="">
+                      <label for="checkbox19"><span>{{recipe.ingrediennineteen|safe}}  </span></label>
+                      </div>
+                      {% endif %}
+                             
+                          
+                       
+                           
+
+          <!----------------------------OTROS INGREDIENTES--TITULO----------------------------->
+                               {% if recipe.otrosingrediens != Null %} 
+                               <p>{{recipe.otrosingrediens|safe}} </p>
+                               {% endif %}
+                                    <!---------OTROS INGREDIENTES-20------>
+                      {% if recipe.ingredientwenty != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox20" name="" value="">
+                      <label for="checkbox20"><span>{{recipe.ingredientwenty|safe}}  </span></label>
+                      </div>
+                      {% endif %}
+
+                           <!---------OTROS INGREDIENTES--22---->
+                      {% if recipe.ingredientwentyone != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox21" name="" value="">
+                      <label for="checkbox21"><span>{{recipe.ingredientwentyone|safe}}  </span></label>
+                      </div>
+                      {% endif %}
+
+                           <!--------OTROS INGREDIENTES-3------>
+                      {% if recipe.ingredientwentytwo != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox22" name="" value="">
+                      <label for="checkbox22"><span>{{recipe.ingredientwentytwo|safe}}  </span></label>
+                      </div>
+                      {% endif %}
+                                     
+
+
+
+                              </div>
+
+                  </section>
+            </div> 
+            <!-- FIN DIV INGREDIENTES --------------------------------------------->
+
+<!--------------------------------------------------------------------------------------------->
+
+                    <!--PREPARACION ------------------------------------------------->
+            <!--PREPARACION ------------------------------------------------->
+
+                            <!--PREPARACION ------------------------------------------------->
+      <div class="preparacion-total">
+                       <!------TITULO-Y DIBUJO PREPARARCION------>
+                       <section class="preparacion-titulo"> 
+                          <!--TITULO PREPARARCION------>
+                           <div class="prepa-titulo">
+                           {% if recipe.titlepreparation != Null %}    
+                           <h2>{{recipe.titlepreparation|safe}}</h2>
+                           {% endif %}    
+                           </div>
+                           <!--PIC DE LA PREPARARCIOM--->
+                            <div class="prepa-pic"> 
+                            <img src= "{% static 'appfood/img/gif/dos.png' %}"/>
+                           </div>
+                      </section>
+                      <!--TIEMPO-------------------------->
+                     
+                     <!--DESCRIPCION-DE LA PREPARACION---------------------------->
+              <section class="preparacion-pasos">
+                          <!--PASO UNO------------------->
+                      <div class="paso"> 
+                      {% if recipe.stepone != Null %}    
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox23" name="" value="">
+                      <label for="checkbox23"><span>{{recipe.stepone|safe}}</span></label>
+                     </div>
+                    {% endif %}
+                    </div>
+                        <!--PREPARACION UNO------------------->
+                        <div class="preparacion"> 
+                        <p>{{recipe.oneprepare |safe}}</p>
+                        </div>
+
+
+
+                      <!--PASO DOS------------------->
+                      <div class="paso"> 
+                      {% if recipe.steptwo != Null %}
+                       <div class="checkbox">
+                      <input type="checkbox" id="checkbox24" name="" value="">
+                      <label for="checkbox24"><span>{{recipe.steptwo|safe}}</span></label>
+                     </div>
+                      {% endif %} 
+                     </div>
+                       <!--PREPARACION DOS------------------>
+                    <div class="preparacion"> 
+                    <p>{{recipe.twoprepare |safe}}</p>
+                    </div>
+                      <!--FINAL PREPARACION DOS----------------->
+
+
+                    <!--PASO TRES---------------->
+                     <div class="paso"> 
+                       {% if recipe.stepthree != Null %}
+                       <div class="checkbox">
+                      <input type="checkbox" id="checkbox25" name="" value="">
+                      <label for="checkbox25"><span>{{recipe.stepthree|safe}}</span></label>
+                     </div>
+                      {% endif %} 
+                      </div>
+                      <!--PREPARACION TRES------------------>
+                      <div class="preparacion"> 
+                      <p>{{recipe.threeprepare |safe}}</p>
+                      </div>
+                       <!--FINAL PREPARACION TRES------------------>
+
+
+
+                      <!--PASO CUATRO------------------->
+                        <div class="paso"> 
+                       {% if recipe.stepfour != Null %}
+                       <div class="checkbox">
+                      <input type="checkbox" id="checkbox26" name="" value="">
+                      <label for="checkbox26"><span>{{recipe.stepfour}}</span></label>
+                      </div>
+                        {% endif %}
+                        </div>
+                      <!--PREPARACION CUATRO------------------->
+                      <div class="preparacion"> 
+                      <p>{{recipe.fourprepare|safe }}</p>
+                      </div>
+                     
+                      <!--FIN PREPARACION CUATRO------------------->
+
+                      <!--PASO CINCO------------------->
+                      <div class="paso"> 
+                      {% if recipe.stepfive != Null %}
+                      <div class="checkbox">
+                      <input type="checkbox" id="checkbox27" name="" value="">
+                      <label for="checkbox27"><span>{{recipe.stepfive}}</span></label>
+                       </div>
+                     {% endif %}
+                   
+                      </div>
+                           <!--PREPARACION CINCO------------->
+                                  <div class="preparacion"> 
+                            <p>{{recipe.fiveprepare|safe}}</p>
+                         </div>
+                        
+                         <!--FIN PREPARARCION CINCO-------->
+
+
+                            <!--PASO SEIS------------------->
+                          <div class="paso"> 
+                             {% if recipe.stepsix != Null %}
+                          <div class="checkbox">
+                          <input type="checkbox" id="checkbox28" name="" value="">
+                      <label for="checkbox28"><span>{{recipe.stepsix}}</span></label>
+                          </div>
+                        {% endif %}
+                           </div>
+                           <!--PREPARACION SEIS------------->
+                          <div class="preparacion"> 
+                            <p>{{recipe.sixprepare}}</p>
+                         </div>
+                         <!--FIN PREPARARCION CINCO-------->
+
+                            <!--PASO SIETE------------------->
+                          <div class="paso"> 
+                             {% if recipe.stepseven != Null %}
+                           <div class="checkbox">
+                            <input type="checkbox" id="checkbox29" name="" value="">
+                            <label for="checkbox29"><span>{{recipe.stepsix}}</span></label>
+                         </div>
+                              {% endif %}
+                           </div>
+                           <!--PREPARACION SIETE------------->
+                          <div class="preparacion"> 
+                            <p>{{recipe.sevenprepare}}</p>
+                         </div>
+                         <!--FIN PREPARARCION SIETE-------->
+
+                            <!--PASO OCHO------------------->
+                          <div class="paso"> 
+                             {% if recipe.stepeight != Null %}
+                           <div class="checkbox">
+                        <input type="checkbox" id="checkbox30" name="" value="">
+                            <label for="checkbox30"><span>{{recipe.stepsix}}</span></label>
+                         </div>
+                              {% endif %}
+                           </div>
+                           <!--PREPARACION OCHO------------->
+                          <div class="preparacion"> 
+                            <p>{{recipe.eightprepare}}</p>
+                         </div>
+                         <!--FIN PREPARARCION OCHO-------->
+
+
+
+                         <!--FINAL SECTION DE TODA LA PREPARACION-->
+                     </section>
+           </div>
+                  <!--FINAL PREPARACION ---DOS ---------------------------------------------->
+
+
+                
+               <div class="tips-titulo-pic">
+                    <!------TITULO-CONSEJOS------------------>
+                     <div class="tips-titulo">
+                            {% if recipe.tituloconsejos != Null %} 
+                            <h2>{{recipe.tituloconsejos|safe}}</h2>
+                            {% endif %} 
+                     </div>
+                     <!----PIC DE CONSEJOS------->
+                     <div class="tips-pic"> 
+                            <img src= "{% static 'appfood/img/gif/tres.png' %}"/>
+                     </div> 
+                      <!--TIEMPO-------------------------->
+               </div>
+
+         <div class="tip-contenido"> 
+          <p>{{recipe.consejos|safe}}</p>
+         </div>
+
+           <!-----FIN DIV PREPARACION-DOS--------------------------------------------->
+
+
+
+
+
+
+
+                  <!--NUTRICION INFORME------------------------------------------>
+
+        <section class="nutricion-informe">
+                <article class="nutricional">
+                        <h2>{{recipe.titlenutricion|safe}} </h2>
+                        <p>{{recipe.nutricional|safe}}</p>
+                </article>
+                      <!--LAS CATEGORIAS DENTRO DE LA SECTION INFORME NUTRICIONAL--------------->
+                        <div class="categoria">
+                        <!-- CATEGORIA TITULO SIN LINK---> 
+                           <em><h2>Categoria:</h2></em>
+                           <!--NO VA NO SE  PORQUE  a href="/ensaladasyzumos/categoria/{{ category.slug }}"> --->
+                           <em><p>{{ recipe.category }}</p></em>     
+                        </div>  
+                        <!--FINAL CATEGORIA TITULO SIN LINK---> 
+
+                       <!--LAS CATEGORIAS CON LINKSDENTRO DE LA SECTION INFORME NUTRICIONAL--------------->
+                        <div class="categorias-recetas-links">
+                          <em><h2>   Categorias: </h2></em>
+                           {% load mptt_tags %}
+                           {% for category in categories %}
+                           <a href="/recetas-dieteticas/categoria/{{category.slug }}" style="text-decoration: none">
+                           <em><p>{{ category.name }}</p></em>
+                           </a>
+                           {% endfor %}
+                        </div>
+
+         </section>
+           {% endfor %} 
+     <!-----CIERRE SECTION CLASS INFORME NUTRICIONAL-------------------------------->
+
+
+
+
+
+
+  <!----------COMENTARIOS COMENTARIOS COMENTARIOS COMENTARIOS---------------------->
+        <div class="comentarios">
+           <!---------------------------------------------------------------------------->
+           <div class="col-md-10">
+               {% with allcomments.count as total_comments %}
+               <h2>{{ total_comments }} comment{{ total_comments|pluralize }}</h2>
+               {% endwith %}
+
+                {% load mptt_tags %}
+                <!----DIV DE TODOS LOS NODES------------------------------------------>
+                <div>
+                     {% recursetree allcomments %}
+                     <!--DIV ID AQUI VA EL NODE ID QUE EN EL BUTTON TIENE SU FUNCTION--->
+                     <div id="{{ node.id }}" class="my-2 p-2" style="border: 1px solid grey">
+                             <!--DIV CLASS D-FLEX VA EL NODE.NAME Y NODE PUBLISH------->
+                             <div class="d-flex justify-content-between">
+                                 Comentado por:  {{ node.name }}
+                                    <div>
+                                      <!---DIV VACIO---->
+                                    </div>
+                                    {{ node.publish }}
+                             </div>
+                             <!----FIN DIV D-FLEX NODE.NAME Y NODE.PUBLISH------->
+                             <!----DIV SIN NOMBRE CLASS VA EL NODE.CONTENT------->
+                             <div>
+                                {{ node.content }}
+                             </div>
+                             <!----FIN DIV SIN NOMBRE CLASS VA EL NODE.CONTENT------->
+                             <hr />
+
+
+                          <!--BOTONES----REPLY---REPLY--DEBERIA IR DELETE PARA QUE ESTO FUNCIONE USE JAVASCIPTt---->
+                          <!--ESTE DIV NO ESTABA LO HE AÑADIDO Y ES PARA CAMBIAR EL BOTON AL OTRO LADO---->
+                            <div class="d-flex flex-row-reverse">
+                            {% if node.level < 4 %}
+                           <button class="btn btn-primary btn-sm" onclick="myFunction({{ node.id }})"  style="background-color: grey">
+                           Responder
+                           </button>
+                          {% endif %}
+                            </div>
+                          <!--CIERRE DEL DIV D-FLEX-ROW-REVERSE--->
+                     </div>
+                      <!--CIERRE DEL DIV ID DONDE ESTA EL NODE ID EL NODE NAME Y PUBLISH Y EL NODE CONTENT----->
+                      {% if not node.is_leaf_node %}
+                      <div class="children pl-2 pl-md-5">
+                      {{ children }}
+                     </div>
+                     {% endif %}
+                    {% endrecursetree %}
+               </div>
+            <!----CIERRE DEL DIV DE TODOS LOS NODES NO TIENE  NOMBRE------------->
+           <!--CREO ES LA PAGINACION DE TODOS LOS COMENTS-DE ESTE FORMULARIO--------->
+               <div class="py-4">
+                       <nav aria-label="Page navigation example">
+                       {% if comments.has_other_pages %}
+                       <ul class="pagination">
+                        {% if comments.has_previous %}
+                       <li class="page-item"><a class="page-link" href="?page={{ comments.previous_page_number }}">
+                       Previous</a>
+                       </li>
+                       {% else %}
+                       <li class="page-item disabled"><a class="page-link" href="#">
+                       Previous</a>
+                       {% endif %}
+                       {% for num in comments.paginator.page_range %}
+                       {% if comments.number == l %}
+                      <li class="page-item active">
+                      <span class="page-link">{{ num }} <span class="sr-only">(current)</span></span>
+                      </li>
+                     {% else %}
+                     <li>
+                     <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                     </li>
+                     {% endif %}
+                     {% endfor %}
+                     {% if comments.has_next %}
+                     <li class="page-item">
+                     <a class="page-link" href="?page={{ comments.next_page_number }}">Next</a>
+                     </li>
+                     {% else %}
+                     <li class="page-item disabled">
+                     <a class="page-link" href="#">Next</a>
+                     </li>
+                     {% endif %}
+                     </ul>
+                     {% endif %}
+                     </nav>
+                  </div>
+                 <!---CIERRE DE LA PAGINACION DE TODOS LOS COMENTS---->
+                      <!---FORMULARIO PARA AÑADIR COMENTARIOS---->
+                         <div id="myDIV" style="display:block;">
+                             <form id="myForm" method="post">
+                                   <h2>Create new comment</h2>
+                                   {{ comment_form.as_p }}
+                                   {% csrf_token %}
+                                   <button type="submit" class="btn btn-primary btn-lg btn-block">
+                                   Submit
+                                   </button>
+                                   <p>email requerido pero nunca publicado</p>
+                            </form>
+                     </div>
+                          <!---FIN FORMULARIO PARA AÑADIR COMENTARIOS---->
+
+           </div>
+           <!--DIV FIN COL-DM-7---------------------------------------------------------->
+
+         </div>
+       <!----CIERRE DIV COMENTARIOS---------FIN ALL COMMENTS---------------------------->
+
+
+    <!---OTRO COMENTS???----------------------------------------------------------------------->
+    
+        <!-- endfor -->
+<!------------------------------------------------------------------------------->
+
+
+<!-----------------FIN ALL COMMENTS---------------------------->
+
+
+
+
+
+     <script>
+  function formExit() {
+    document.getElementById("newForm").remove();
+  }
+
+  function myFunction(id) {
+    if (document.contains(document.getElementById("newForm"))) {
+      document.getElementById("newForm").remove();
+    }
+
+    var d1 = document.getElementById(id);
+    d1.insertAdjacentHTML('afterend',
+      '<form id="newForm" class="form-insert py-2" method="post"> \
+                <div class="d-flex justify-content-between"><h2>Reply:</h2><div><button type="button" class="btn btn-outline-secondary" onclick="formExit()"">Close</button></div></div> \
+                <label for="id_name">Name:</label> \
+                <input type="text" name="name" class="col-sm-12" maxlength="50" required="" id="id_name">\
+                <select name="parent" class="d-none" id="id_parentt"> \
+                <option value="' + id + '" selected="' + id + '"></option> \
+                </select> \
+                <label for="id_email">Email:</label> \
+                <input type="text" name="email" class="col-sm-12" maxlength="254" required="" id="id_email"> \
+                <label for="id_content">Content:</label> \
+                <textarea name="content" cols="40" rows="5" class="form-control" required id="id_content"></textarea> \
+                {% csrf_token %} \
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button> \
+              </form>');
+
+    document.querySelector('#id_parentt [value="' + id + '"]').selected = true;
+  }
+
+  $('#myForm').trigger("reset");
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       
+        </div>
+   
+  <!----------------CIERRE DEL DIV PRIMERA COLUMNA--------------------------------------------------->
+
+
+
+
+
+{% endblock content %}
+<!--- FIN CONTENIDO-------------------------------------------------------------------------------------------------->
+
+
+                      <!--------------ESTO ES ASIDE----------------------->
+                          {% block categorias-recetas-links-aside %}
+                            <!---DIV DE LOS LINKS DE CATEGORIAS-EN EL ASIDE--->
+                              <div class="categorias-recetas-links-aside">
+                              <em><h2>Categorias:</h2></em>
+                                {% load mptt_tags %}
+                                {% for category in categories %}
+                                   <a href="/recetas-dieteticas/categoria/{{category.slug }}" style="text-decoration: none">
+                                   <em><p>{{ category.name }}</p></em></a>
+                                   {% endfor %}
+                             </div>
+                          <!-- FIN DIV DE LINKS CATEGORIAS EN ASIDE -------->
+                            {% endblock categorias-recetas-links-aside %}
+
+
+
+               

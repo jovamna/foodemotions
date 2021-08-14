@@ -1,0 +1,173 @@
+{% extends 'appfood/base.html' %}
+{% load static %}
+
+{% block titulo %}Resultados{% endblock titulo %}
+
+<!-- PARA QUE NO SALGA NADA-->
+  {% block portada %}<div class="portada">   </div>{% endblock portada %}
+   {% block search %}{% endblock search %}
+  
+                                    
+
+
+  {% block content %}  
+ 
+                   <div class="controls-uno">
+                                            <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                                                    <div id="custom-search-input">
+	                                                     	<input type="text"  name="q" 
+                                                             value= "{{ request.GET.q }}" class="form-control" 
+                                                              placeholder="Buscar...." 
+                                                              autocomplete="off" >
+                                                            <!---<span class="input-group-list>
+                                                            i class="icon icon-search"></i>-->
+                                                             <button type="submit" name="submit" class="boton btn-succes" value="Search" >Buscar</button>
+                                                             <i data-behavior="search-clear" class="material-icons search-icon"
+                                                                {% if not request.GET.q.value %} style="display: none"{% endif %}>close</i>
+                                                   <!--</span>-->
+                                                    </div>
+                                            </form>
+                        </div>
+
+                                           
+    <!-- CONTAINER LE PUSE DOS DIVS QUE SON COLUMNA PRIMERA Y PRIMERA COLUMNA------------->
+        {% block container-search %} 
+            <div id ="container-search">
+                         <!---DIV CONTAINER DE 4 POST Y DE RECETAS--->
+                         <div class = "container-pinterest">
+                          <!---DIV DE 4 POST DE POSTS--->
+                                  {% for post in posts %}
+                                   <div class="elemento">
+                                    {% if post.image %}
+                                     <img src ="{{post.image.url}}">
+                                    {% endif %}
+                                    <!--TITULO--->
+                                    <h2> {{post.title}}</h2>
+                                    <!--DESCRIPCION-->
+                                    <p>{{post.description|truncatechars:240}}</p>
+                                    <a href ="{% url 'appblog:post' post.slug %}"> 
+                                    <em><p>....Leer mas</p></em></a>
+                                    <!----CATEGORIA--------->
+                                     <em><h4>Categoria:{{ post.kategoria}}</h4></em>
+                                    <!---NO FUNCIONA a href="/articulo/categoria/{{ kategoria.slug }}"> {{ post.kategoria}}</a>-->
+                                    <!---CIERRA EL POST ---------------------------->
+                                  <!---FORLOOP.LAST HACE QUE  EMPIEZE OTRA VEZ--->
+                                  {% if not forloop.last %} | {% endif %}
+                                  <!---FINAL DIV DE 4 POST DE POSTS --->
+                                  </div>
+                                  <!---FINAL ENDFOR DE 4 POST IN POSTS--->
+                                 {% endfor %}
+                 <!----------------------------------------------------------------------------------------------------------->                        
+                                      <!-- AQUI EL QUERY PARA CUANDO NO HAY RESULTADOS -->
+                                     
+  <!-----------------------------FINAL DE TODO EL POST EN GENERAL------------------------------------------------------------------------------------------->
+                                          
+                            <!---DIV DE 4 POST DE RECETAS SANAS--->
+                            {% for receta in recetas %}
+                            <div class="elemento">
+                            <img src ="{{receta.image.url}}">
+                             <h2>{{receta.title}}</h2>
+                            <p>{{receta.description|truncatechars:250|safe}} </p>
+                            <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                            <em><p>....Leer mas</p></em></a>
+                             <!--CATEGORIA--->
+                            <em><h4>Categoria:{{ receta.kategory}}</h4></em>
+                            
+                          {% if not forloop.last %} | {% endif %}
+                          </div>
+                          <!---DIV DE 4  RECETAS--->
+                          {% endfor %}
+                          <!---ENDFOR FINAL   4  DE RECETAS--->
+                                   
+  <!-------------------------------------------------------------------------------------------------------------------------->
+                                  
+                      <!---DIV DE 4 POST DE RECiPES ZUMOS Y ENSALADAS--->
+                      {% for recipe in recipes %}
+                      <div class="elemento">
+                      {% if recipe.image %}
+                      <img src ="{{recipe.image.url}}" width="450" height="440">
+                      {% endif %}
+                      <h2>{{recipe.title}}</h2>
+                      <p>{{recipe.description|truncatechars:240|safe}} </p> 
+                      <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                      <em><p>....Leer mas</p></em></a>
+                     <!--CATEGORIA----->
+                      <em><h4>Categoria:{{ recipe.category}}</h4></em>    
+                    {% if not forloop.last %} | {% endif %}
+                   </div>
+                  <!---DIV DE 4  RECETAS--->
+                  {% endfor %}
+                                       <!---ENDFOR FINAL   4  DE RECETAS--->
+   <!--------------------- FINAL SEARCH RECIPES ZUMOS Y ENSALADAS  ------------------------------>
+                                
+
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+                          <!---DIV DE 4 POST DE PERDERPESO--->
+                            {% load mptt_tags %}
+                          {% for perderpeso in perderpes %}
+                           <div class="elemento">
+                           {% if perderpeso.image %}
+                         <img src ="{{perderpeso.image.url}}" >
+                            {% endif %}
+                          <h2>{{perderpeso.title}}</h2>
+                          <p>{{perderpeso.description|truncatechars:240|safe}} </p>
+                          <a href ="/perderpeso/post/{{ perderpeso.slug }}/">
+                          <em><p>....Leer mas</p></em></a>
+                           <!--CATEGORIA--->
+                          <em><h4>Categoria:{{ perderpeso.categoria}}</h4></em>         
+                         {% if not forloop.last %} | {% endif %}
+                      </div>
+                    <!---DIV DE 4  RECETAS--->
+                  {% endfor %}
+                                       <!---ENDFOR FINAL   4  DE RECETAS--->
+   <!--------------------- FINAL SEARCH RECIPES ZUMOS Y ENSALADAS  ------------------------------>
+                                      
+                     <!---FINAL DIV DE CONTAINER-PINTEREST--->
+                      
+                        </div>
+<!------------------------------------------------------------------------------------------------------------------------>
+
+              <!--- FIN CONTAINER SEARCH------------------------------------------------------------------------> 
+              </div>
+                               
+                       
+ {% endblock container-search %} 
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}   
+
+
+
+
+
+
+
+
+{% block primero_recetasaludable %} {% endblock primero_recetasaludable %}
+{% block segundo_nutricion %}{% endblock segundo_nutricion %}
+{% block tercero_zumos %} {% endblock tercero_zumos %}
+{% block cuarto-dietas %} {% endblock cuarto-dietas %}
+{% block quinto_perder %}{% endblock quinto_perder %}
+ {% block sexto %}{% endblock sexto %}
+ {% block septimo %}{% endblock septimo%}
+
+ 
+
+
+ 
+
+
+
+
+
+
+  

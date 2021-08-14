@@ -1,0 +1,278 @@
+{% extends 'appblog/base_categoria.html' %}
+{% load static %}          
+{% block title %}Categoria Plan de Comidas Saludables{% endblock %}  
+ 
+ 
+
+
+              <!-- CONTENEDOR DEL CUERPO DEL BODY-------->
+     {% block content %}           
+     <div id ="container-categorias-subcategorias">                                  
+          <!--  CAJA DE NAVEGACION DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
+               
+           <!--------------------------------------------------------------->
+           <div class="intro">
+                <div class="menu-introescrito">
+                      <!--MENU-->
+                      <div class="menu">
+                      <ul>
+                      <li>
+                      <a href="{% url 'appfood:index' %}">
+                      Inicio<i class="right"></i></a>
+                      </li>
+                      <li>    
+                      <a  href="{% url 'appfood:plan-comidas-saludables' %}">
+                      Plan de comidas saludables<i class="right"></i> </a>
+                      </li>
+
+
+                    <!--BLOQUE CATEGORIAS------------------------>
+                    <!--MENU ESCONDIDO -CATEGORIAS------------------>
+                    <li>
+                    <p>Categorias<i class="right"></i></p>
+                    <ul>
+                    {% load mptt_tags %}
+                    {% for categoria in categories %} 
+                    <!--  TITULO--CATEGORIA---> 
+                    <li>
+                    <a href="/plan-comidas-saludables/categoria/{{ categoria.slug }}">
+                    <p> {{categoria.name}}</p> 
+                    </a>    
+                    </li>
+                    {% endfor %}
+                    </ul>
+                    </li>
+                    <!---FIN MENUS ESCONDIDO CATEGORIAS---->
+                     <!--FIN DE BLOQUES  CATEGORIAS----------------->
+                      
+
+                      <li>
+                      {% load mptt_tags %}
+                      {% for perderpeso in category_deals %}
+                      <a href="/plan-comidas-saludables/categoria/{{ perderpeso.slug }}">
+                      <p> {{category_deals.get}}<i class="right"></i></p>
+                      </a>
+                      {% endfor %}
+                      </li>
+                      </ul>
+                      </div>
+                      <!--FIN FIN MENU MENU------------------>
+
+
+                                <div class="introescrito">
+                                <!---TITULO DE CATEGORIA--->
+                               {% load mptt_tags %}
+                               {% for perderpeso in category_deals %}
+                               <!--  TITULO--CATEGORIA---> 
+                                <div class="menu-intro-titulo">  
+                                        <h2> {{category_deals.get}}</h2>     
+                                </div>
+                               {% endfor %}
+                              <!---FIN TITULO DE CATEGORIA--->        
+                               </div>
+
+                   </div>
+
+
+
+                  <!-- FIN DIV MENU INTRO ESCRITO--->
+                  <div class="intro-dos-vacios">
+                  <!------VACIOS  LAS CATEGORIAS---------------->
+                                          
+                  <!--FIN CATEGORIAS--->
+                  </div>
+
+                     </div>
+                     <!---FINAL INTRO--->
+
+                  </div>
+                  <!---FIN DIV SUBCATEGORIA PERDER-->
+
+
+      <!-----SUBCATEGORIAS MENU------------------------------------->
+      <div id="texto-slider">
+           <div class="caja-texto-slider">
+            <!--TITULO DE LAS CATEGORIAS-->
+             <div class= "endfor">
+                 <ul>    
+                    {% for categoria in category_deals %}
+                    {% if not node.is_leaf_node %}
+                    {% for child in categoria.get_children %}
+                    <li> 
+                    <!-- SUBCATEGORIAS ---->
+                    <a href="/plan-comidas-saludables/subcategoria/{{ child.slug }}">
+                    <h3>{{ child.name }}</h3>
+                    </a>
+                    </li>
+                    {% endfor %}
+                    {% endif %}
+                    {% endfor %}
+                 </ul>
+            </div>
+            <!--FIN SUBCATEGORY-->    
+        </div>
+    </div>
+    <!------------------------------------------------------------------->
+         <!--------------- FIN CAJA DE NAVEGACION DE LAS SUBCATEGORIA-PERDER------------------->
+
+
+
+
+      <!---CONTAINER DE COLUMNA CATEGORIA Y ASIDE-->
+        <div class = "container-posts-categorias">
+               <!--COLUMNA CATEGORIAS DE 70% -------->
+               <div class="columna-categorias">
+              <!---DIV CONTAINER DE 4 POST Y DE RPLAN DE ALIMENTACION--->
+                 {% load mptt_tags %}
+                {% for perderpeso in post_plan %}
+               <div class="por-categoria">
+                         <div class="por-foto">                              
+                                    <!--IMAGEN-->
+                                    {% if perderpeso.image %}
+                                    <img src ="{{perderpeso.image.url}}">
+                                    {% endif %} 
+                            </div>
+              
+                          <div class="por-descripcion">
+                            <a href="/plan-comidas-saludables/post/{{ perderpeso.slug}}">
+                            <!-------TITULO POST PERDERPESO---------->
+                            <h2>{{ perderpeso.title }}</h2>
+                            </a>------->
+                            <p>{{perderpeso.description|truncatecha
+                            <!-------DESCRIPCION POST PERDERPESO---rs:190|safe}} </p>
+                            <a href ="/plan-comidas-saludables/post/{{ perderpeso.slug }}/" class="arrow1">
+                              LEE MAS
+                           <span class="arrow-right"></span>
+                            </a>
+                            <!--- <em><p>Categoria: {{perderpeso.kategoria}} </p></em> ---->                 
+                           </div>
+                  
+            </div>
+           {% empty %}
+            <p>No items</p>
+           {% endfor %}
+
+              
+                 <!---FIN COLUMNA CATEGORIAS------->
+                  </div>
+
+                     <!-- 20% ASIDE --->
+                    <div id="aside">  </div>
+                    <!--FIN ASIDE 20%--->
+           </div>
+           <!--100% FIN DEL POSTS CATEGORIAs--->
+            
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {% endblock content %}
+
+
+
+
+
+
+
+
+
+
+     <!---------------- PAGINACION--------------------------------------------------------------->
+      {% block paginacion %}
+            <div class="paginacion">
+                    <nav>
+                      <ul class="pagination">
+                      {% if posts.has_previous %}
+                      <li class="page-item">
+                      <a class="page-link" href="?page=1">Primero</a>
+                      </li>
+                      <li class="page-item">
+                      <a class="page-link" href="?page={{ posts.previous_page_number }}">&laquo;</a>
+                      </li>
+                      {% endif %}
+                      <!------------------------------------------------------>
+                      {% for pagina in paginas %}
+                      <li class="page-food{% if current_page == pagina %} active {% endif %}">
+                      <a class="page-link" href="?page={{ pagina }}">{{ pagina }}</a>
+                      </li>
+                      {% endfor %}
+                      <!--------------------------------------------------------------->
+                      <!---------------------------- ------------------------------------>
+                      {% if posts.has_next %}
+                      <li class="page-item">
+                      <a class="page-link" href="?page={{ posts.next_page_number }}">&raquo;</a>
+                      </li>
+                      <li class="page-item">
+                      <a class="page-link" href="?page={{ posts.paginator.num_pages}}">Ùltima</a>
+                      </li>
+                      {% endif %}
+                      </ul>
+                      </nav>
+                      </div>
+                      {% endblock paginacion %}
+                    <!--------------------------------------------------------------------------------->
+
+
+                           
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 
+
+
+
+
+
+
+
+
+
+
+                        
+
+    
+
+
+
+       

@@ -1,0 +1,126 @@
+{% extends 'appfood/base.html' %}
+{% load static %}
+
+
+{% block titulo %}Contacto{% endblock titulo %}
+
+    {% block portada %} 
+ 
+ <div class="portada">
+                              <!-- IMAGEN-->
+                              <section class="portada-img">
+                             <img src="{% block imagen %}{% static 'appfood/img/contacto/1300-600cont.png' %}{% endblock  %}"
+                              class="slider__img">
+                             <!-- FIN IMAGEN-->
+                             <!-- LETRAS-->
+                            
+                            <div class="portada-contacto-uno"><a href="{% url 'appfood:index' %}">
+                            <p class="azulplata">proudly <span class="otroestilo">crafted</span> in münich since 1987</p> 
+                               </a>
+                            </div>
+                    
+                           <div class="portada-contacto-dos">
+                            <a href="{% url 'appfood:index' %}"><h6>Proudly crafted in  münich since 1987</h6></a>
+                           </div>
+
+                           <div class="portada-contacto-tres">
+                            <a href="{% url 'appfood:index' %}"><span><h2> FOOD EMOTIONS<h2> &nbsp;&nbsp;<h4>Suscribete</h4></span></a>
+                           </div>
+                        
+                           <!-- FIN LETRAS-->
+                    </section>
+                </div>
+                {% endblock portada %} 
+ 
+
+
+        {% block buscador-search %}   {% endblock buscador-search %} 
+
+   {% block batido-dietas %}  {% endblock batido-dietas %} 
+
+
+
+     {% block content %} 
+
+     <!-- FORMULARIO-->
+ 
+      <div class="row">   <!-- tabla -->
+        <!-- tabla -->
+          <div class="bg-faded">   <!-- tabla -->
+          
+                  <div class="section-heading ">
+                   <span class="section-heading-upper">Envíanos tus dudas</span>
+                  <span class="section-heading-lower"><u>contacto</u></span>
+                  </div>
+                     <!-- Formulario de contacto -->
+            
+                {% if 'ok' in request.GET %}
+                <p><b>Su mensaje se ha enviado correctamente, en breve nos pondremos en contacto con usted.</b></p>
+                {% endif %}  
+
+                <!-- FORM ACTION INICIO
+               <form action="" method="POST">
+                {% csrf_token %}
+                <table>
+             {{form.as_table}}
+             </table>
+
+
+   <div class="text-center"><input type="submit" class="btn btn-primary btn-block py-2" value="Enviar">
+             </div>
+               </form>    -->
+ 
+          
+                         <form action="" method="POST">
+                          {% csrf_token %}
+                            <div class="form-group"><label>Nombre *</label>
+                               <div class="input-group">{{form.name}}
+                           </div>{{form.name.errors}} </div>
+
+
+                <div class="form-group"><label>Email *</label>
+                    <div class="input-group">
+                        {{form.email}}</div> {{form.email.errors}}
+                    </div>
+
+
+                <div class="form-group"><label>Mensaje *</label>
+                    <div class="input-group">
+                    {{form.content}}
+                    </div> {{form.content.errors}}
+                </div>
+
+                   <div class="text-center">
+                   <input type="submit" class="btn btn-primary btn-block py-2" value="Enviar">
+                </div>
+             </form>
+          <!-- FORM ACTION FINAL -->
+            <!-- Fin formulario de contacto -->
+            
+
+
+          </div>
+       
+      </div>
+  
+ 
+    <!-- Fin TOTAL formulario de contacto -->
+
+
+
+
+
+
+{% block primero_recetasaludable %}{% endblock primero_recetasaludable %}
+{% block dietas %}{% endblock dietas %}
+{% block tercero_zumos %} {% endblock tercero_zumos %}
+{% block cuarto_perder %}{% endblock cuarto_perder %}
+{% block quinto %}{% endblock quinto %}
+
+
+
+
+  {% endblock content %} 
+
+
+

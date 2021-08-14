@@ -1,0 +1,225 @@
+{% extends 'appblog/articulo_base.html' %}
+{% load static %}
+{% block title %}Noticias{% endblock %}  
+  
+
+           
+                <!----------DE LA PAGINA SEARCH----------------->
+               {% block buscador-search %}       {% endblock buscador-search %} 
+
+              {% block container-search %}  {% endblock container-search %}
+              <!--FIN --------DE LA PAGINA SEARCH----------------->
+
+
+
+    <!-- COLUMNA PRIMERA LE PUSE DOS DIVS QUE SON COLUMNA PRUMERA Y PRIMERA COLUMNA------------->
+<div class= "columna-primera">
+            {% block content %}
+            <div class="primera-columna">
+              {% for posturismo in posts %}
+            <!-- caja 1-------------------------->
+                       <div class="primer-articulo">
+                          <p>{{posturismo.published}}</p>
+                          <!-- TITULO 1-----------------> 
+                            <h1>  {{posturismo.title}}</h1> 
+                             <!-- DESCRIPCION--------------->              
+                          <p> {{posturismo.description}}JOVAMNA</p> 
+
+                                                                      <!-- (% if not forloop.last %),(% endif %) estaba aqui y lo elimine! ES PARA REPETIR EL MISMO ARTICULO --->
+                                                                    <!----------LINK PARA ACORTAR EL ARTICULO--------------------------->
+                        <p><a href ="{% url 'appturismo:post' posturismo.slug %}">Leer mas...</a></p>
+                                                                    
+                      </div>
+                      <!------------------------------------------------------->
+                      <div class="imagen-central">
+                                               <div class="redes">
+                                                                     <ul class="iconos-social">
+                                                                       <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                                                                       <i class="fas fa-envelope"></i> </a> <br>
+                                                                      </li>
+                                                                       {% if LINK_FACEBOOK %}
+                                                                      <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank">
+                                                                      <i class="fab fa-facebook-f"></i> </a> <br>
+                                                                      </li>
+                                                                         {% endif %}
+                                                                       <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                                                                      <i class="fab fa-twitter"></i> </a> <br>
+                                                                      </li>
+                                                                      <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                                                                      <i class="fab fa-instagram"></i> </a> <br>
+                                                                      </li>
+                                                                      </ul>
+                                                           </div>
+
+
+                      <!-- TENIA PROBLEMAS CON LA IMAGEN SALIA ERROR CON IF SE SOLUCIONO-->             
+                        {% if posturismo.image %}
+                        <img src="{{posturismo.image.url}}" alt="">
+                        {% endif %}
+                        </div>
+
+
+                          <!-- caja 2-------------------------------------------------------->
+                        <div class="segundo-articulo" data-anime="top">
+                          <!-- SUBTITULO 2------------------->
+                           <h1>{{posturismo.subtitle|safe}}</h1> 
+                          <p>{{posturismo.content|safe}}</p>  
+                         </div>
+                        <!--------------------------------------->
+                                                                   <div class="cursiva">
+                                                                        <p><em>{{posturismo.cursiva|safe}}</em> </p>
+                                                                   </div>
+                                                        <!---------------------NARRATIVA------------------>
+                                                                   <div class="pricolumna-articulo">
+                                                                        <p><mark>mark</mark> text
+                                                                        <del>Deleted text</del>
+                                                                        <small>Small text</small></p>
+                                                                        <p> {{posturismo.narrativa|safe}}</p>
+                                                                   </div>
+                                     <!-- tercera caja DOS FOTOS ---------------------------->
+                                         <section class="segunda-imagen">
+                                        <div class="foto">
+                                        {% if posturismo.imageone %}
+                                        <img src="{{posturismo.imageone.url}}" alt=""> 
+                                         {% endif %}
+                                        </div>
+                                                                    
+                                        </section>
+                                                         <!-- BLOCQUOTE--------------------------------------------------------->
+                                                                  <blockquote class="blockquote blockquote-bordered blockquote-quoted">
+                                                                            <p class="blockquote-text"><em> {{posturismo.blocquote}}</em> </p>
+                                                                            <p class="blockquote-text blockquote-text-credit">   </p>
+                                                                  </blockquote>
+                                                           <!-- quinta caja---------------------------------------------------->
+                                                                    <div class="dibujo"> 
+                                                                            {% if posturismo.imagepic %}
+                                                                            <img src="{{posturismo.imagepic.url}}" alt="">
+                                                                            {% endif %}  
+                                                                    </div>
+            <!---SEXTA CAJA CON DOS TITULOS (TERCER TITULO DE DOS)------->
+            <section class="articulo-ultimo">
+                    <div class="articulo-uno">
+                    <!-- TITULO ENTRADA UNO----------------> 
+                        <h1>{{posturismo.titleentradaone|safe}}</h1>     
+                        <p> {{posturismo.entradaone|safe}} </p>
+                     </div>
+                     <!--AUTOR IMAGEN Y NOMBRE-->
+                      <div class="autor-nombre">
+                             <div class="autor-foto">
+                              {% if posturismo.imageauthor %}
+                               <img src="{{posturismo.imageauthor.url}}" alt="" >
+                              {% endif %}  
+                              </div>
+                              <div class="autor-letra">
+                              <em><h3>Por: {{posturismo.author}}</h3></em>
+                              </div>
+                       </div>
+                    <!-------CIERRE AUTOR-NOMBRE---------------------------->
+                  
+                   <!---------------CIERRE DIV DE ARTICULO UNO------------------------- --->  
+                            <!------CATEGORIA SIN LINK-------------- --->  
+                        <div class="categoria-en-post">
+                            <em><h2>Categoria:</h2><p>{{ posturismo.categori}}</p></em>
+                        </div>
+                    <!-----------CIERRE DIV DE CATEGORIA SIN LINKS-------------- --->           
+            </section> 
+          <!---------------CIERRE SECTION DE ARTICULO ULTIMO------------------------ --->  
+
+ <!-- CATEGORIAS DENTRO DEL DIV ARTICULO-UNO------------------>
+                                      <div class="categorias-posts-links">
+                                        <!--CATEGORIA ACTUAL--->
+                                        <br>
+                                        <em><h4>   Categorias: </h4></em>
+                                        {% load mptt_tags %}
+                                         {% for categori in categories %} 
+                                         <a href="/turismo_gastronomico/categoria/{{ categori.slug }}"  style="text-decoration: none">   
+                                          <em>  <h3>{{ categori}}</h3></em></a>
+                                         <!--ENDFOR FINAL DE LA CATEGORIA --->              
+                                         {% endfor %}
+                                     
+                                                        <!--ENDFOR FINAL DE LA CATEGORIA --->              
+                                        <!--if not forloop.last endif es para ES PARA REPETIR EL ARTICULO QUE CORRESPONDA --->
+                                      
+                                     </div>
+
+
+
+                 {% endfor %}
+        <!---------------ENDFOR FINAL DE PRIMERA COLUMNA------------------------- --->  
+ <!--HASTA AQUI EL POST DE DJANGO----------------------------------------------------------------------------------------------------------------------------------------->
+ 
+          
+  
+
+ <!-- CIERRE DIV DE PRIMERA COLUMNA----------------------------------------------------------------------------------------------->
+                                            </div> 
+                                     {% endblock content %}
+                           <!-- CIERRE DIV DE  COLUMNA PRIMERA------------------->
+                                              </div> 
+
+
+<!----------------------------------------------->
+{% block container-perder-categoria %}
+<!--DEBE PONERSE PARA QE NO SALGA EL CODIGO DE ARTICUKO BASE--->
+ {%endblock container-perder-categoria %} 
+<!----------------------------------------------->
+
+                                              <!--------------INCLUYENDO LA PAGINATION ------------------------------------------------------------------------>
+            <!------------CATEGORIAS------------------------------->
+              {% block categoria %} 
+             <div class="categorias-posts-links">
+                 <br>
+                <em><h4> Categorias: </h4></em>
+                   {% for categori in categories %}
+                                   <a href="/turismo_gastronomico/categori/{{categori.slug }}"  style="text-decoration: none">
+                                   <em><h3>{{ categori.name }}</em></h3></a>
+                                   {% endfor %}
+           </div>          
+                      
+            {% endblock categoria %} 
+        <!-------------FIN CATEGORIAS------------------------------>
+
+
+
+<!--<h1><a href="{% url 'appblog:category' category.id %}" class="link">{{category.name}}AQUI ESTOY</a></h1>---> 
+
+
+
+
+
+                   {% block paginacion %}
+                   <div class = "paginacion">
+                               <ul class="pagination">
+                                {% if posts.has_previous %}
+                                          <li class="page-item">
+                                          <a class="page-link" href="?page=1">Primero</a>
+                                          </li>
+                                          <li class="page-item">
+                                          <a class="page-link" href="?page={{ posts.previous_page_number }}">&laquo;</a>
+                                          </li>
+                                          {% endif %}
+
+                                   <! ------------------------------------------------------ >
+                                         {% for pagina in paginas %}
+                                         <li class="page-food{% if current_page == pagina %} active {% endif %}">
+                                         <a class="page-link" href="?page={{ pagina }}">{{ pagina }}</a>
+                                         </li>
+                                         {% endfor %}
+                                  <! ---------------------------------------------------------------->
+
+                               <! ----- ----------------------------------------------------------------- >
+                                       {% if posts.has_next %}
+                                        <li class="page-item">
+                                        <a class="page-link" href="?page={{ posts.next_page_number }}">&raquo;</a>
+                                        </li>
+                                        <li class="page-item">
+                                        <a class="page-link" href="?page={{ posts.paginator.num_pages}}">Ùltima</a>
+                                        </li>
+                                       {% endif %}
+                                  </ul>
+                           </div>
+                                {% endblock paginacion %}
+
+
+
+ 

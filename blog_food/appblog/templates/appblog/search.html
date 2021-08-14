@@ -1,0 +1,243 @@
+{% extends 'appblog/articulo_base.html' %}
+{% load static %}
+  
+{% block title %}Resultados{% endblock title %}
+
+                      <!-- PARA QUE NO SALGA NADA-->
+                 {% block menusimple %}  {% endblock menusimple %}
+                 
+             {% block content %}  
+                  {% block primera-columna %}   {% endblock primera-columna %} 
+                  {% endblock content %}   
+                  {% block tercera-columna %}{% endblock tercera-columna %}
+                   <!-------CON ESTO NO SALE EL ASIDE----->
+
+
+  
+        {% block buscador-search %} 
+                <div id="controls-uno">
+                   <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                           <div id="custom-search-input-search">
+                                <input type="text"  name="q" 
+                                    value= "{{ request.GET.q }}" class="sin-borde" 
+                                     placeholder="   Buscar...." 
+                                     autocomplete="off" >
+                                   <!---<span class="input-group-list>
+                                   i class="icon icon-search"></i>-->
+
+                             <button type="submit" name="submit" class="boton btn-succes" value="Search" >
+                               <span class="icon"><i class="fa fa-search"></i></span>   
+                             </button>
+                                
+                          <!--</span>-->
+                           </div>
+                   </form>
+         </div>                  
+        {% endblock buscador-search %} 
+
+  
+            
+
+
+
+                                           
+    <!-- CONTAINER LE PUSE DOS DIVS QUE SON COLUMNA PRIMERA Y PRIMERA COLUMNA------------->
+        {% block container-search %} 
+        <div id ="container-search">
+                    <h1>Resultados de busqueda para <b>"{{ request.GET.q }}"</b> </h1>
+                    <!---DIV CONTAINER DE 4 POST Y DE RECETAS--->
+                    <div class = "container-pinterest">
+
+
+                                {% if posts.exists %}
+                                    <!---DIV DE 4 POST DE POSTS--->
+                                {% for post in posts %}
+                                <div class="elemento">
+                                         <div class="elemento-imagen">
+                                         {% if post.imagefront %}
+                                         <img src ="{{post.imagefront.url}}">
+                                         {% endif %}
+                                         </div>
+
+                                        <div class="elemento-descripcion">
+                                         <!--TITULO--->
+                                        <a href ="{% url 'appblog:post' post.slug %}" class="left"> 
+                                        <h2> {{post.title}}</h2>
+                                        </a>
+                                       <!--DESCRIPCION-->
+                                       <p>{{post.description|safe|linebreaksbr|truncatechars:100}}</p>
+                                       <a href ="{% url 'appblog:post' post.slug %}"> 
+                                       <button type="button" class="btn btn-outline-success">ver receta</button>  
+                                       </a>
+                                       <!----CATEGORIA--------->
+                                       <!---FINAL DIV DE 4 POST DE POSTS --->
+                                       </div>
+                                  <!--FIN ELEMENTO DESCRIPTION-->
+                                </div>
+                                  <!--FINAL DIV ELEMETNO--->
+                                  <!---FINAL ENDFOR DE 4 POST IN POSTS--->
+                                 {% endfor %}
+                                   <!---FINAL ENDFOR DE 4 POST IN POSTS--->
+                                 {% endif %}
+                 <!----------------------------------------------------------------------------------------------------------->                        
+                                      <!-- AQUI EL QUERY PARA CUANDO NO HAY RESULTADOS -->
+                                     
+  <!-----------------------------FINAL DE TODO EL POST EN GENERAL------------------------------------------------------------------------------------------->
+                                          
+                            <!---DIV DE 4 POST DE RECETAS SANAS--->
+                             {% if recetas.exists %}
+                            {% for receta in recetas %}
+                            <div class="elemento">
+                                <div class="elemento-imagen">
+                                {% if receta.imagefront %}
+                                <img src ="{{receta.imagefront.url}}">
+                                {% endif %}
+                                </div>
+
+                                 <div class="elemento-descripcion">
+                                 <a href ="{% url 'apprecetas:receta' receta.slug %}" class="left">
+                                 <h2>{{receta.title}}</h2>
+                                 </a>
+                                 <p>{{receta.description|safe|linebreaksbr|truncatechars:100}} </p>
+                                 <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                                  <button type="button" class="btn btn-outline-success">ver receta</button>                  
+                                </a>
+                                <!--CATEGORIA--->    
+                                </div>
+
+                          </div>
+                          <!---DIV DE 4  RECETAS--->
+                          {% endfor %}
+                           {% endif %}
+                          <!---ENDFOR FINAL   4  DE RECETAS--->
+                                   
+  <!-------------------------------------------------------------------------------------------------------------------------->
+                                  
+                      <!---DIV DE 4 POST DE RECiPES ZUMOS Y ENSALADAS--->
+                       {% if recipes.exists %}
+                      {% for recipe in recipes %}
+                      <div class="elemento">
+                       <div class="elemento-imagen">
+                      {% if recipe.imagenfront %}
+                      <img src ="{{recipe.imagenfront.url}}">
+                      {% endif %}
+                      </div>
+
+                      <div class="elemento-descripcion">
+                       <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" class="left">
+                      <h2>{{recipe.title}}</h2>
+                      </a>
+                      <p>{{recipe.description|safe|linebreaksbr|truncatechars:100}} </p> 
+                      <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                        <button type="button" class="btn btn-outline-success">ver receta</button>
+                   
+                    </a>
+                     <!--CATEGORIA----->
+                 
+                   </div>
+                   </div>
+                  <!---DIV DE 4  RECETAS--->
+                  {% endfor %}
+                   {% endif %}
+                                       <!---ENDFOR FINAL   4  DE RECETAS--->
+   <!--------------------- FINAL SEARCH RECIPES ZUMOS Y ENSALADAS  ------------------------------>
+                                
+
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+                  <!---DIV DE 4 POST DE PERDERPESO--->
+                    {% if perderpes.exists %}
+                    {% load mptt_tags %}
+                    {% for perderpeso in perderpes %}
+                    <div class="elemento">
+                        <div class="elemento-imagen">
+                        {% if perderpeso.imagefront %}
+                        <img src ="{{perderpeso.imagefront.url}}" >
+                        {% endif %}
+                        </div>
+
+                        <div class="elemento-descripcion">
+                        <a href ="/perderpeso/post/{{ perderpeso.slug }}/" class="left">
+                        <h2>{{perderpeso.title}}</h2>
+                        </a>
+                        <p>{{perderpeso.description|safe|linebreaksbr|truncatechars:100}} </p>
+                        <a href ="/plan_de_comidas-saludables/post/{{ perderpeso.slug }}/">
+                        <button type="button" class="btn btn-outline-success">ver receta</button>
+                        </a>
+                        <!--CATEGORIA--->
+                        </div>
+                  </div>
+                  <!---DIV DE 4  RECETAS--->
+                  {% endfor %}
+                  {% endif %}
+                  <!---ENDFOR FINAL   4  DE RECETAS--->
+   <!--------------------- FINAL SEARCH RECIPES ZUMOS Y ENSALADAS  ------------------------------>
+
+
+
+
+
+   <!-------------------------------------------------------------------------------------------------------------------------->
+                  <!---DIV DE 4 POST DE TURISMO--->
+                    {% if notituris.exists %}
+                    {% load mptt_tags %}
+                    {% for posturismo in notituris %}
+                    <div class="elemento">
+                        <div class="elemento-imagen">
+                        {% if posturismo.imagefront %}
+                        <img src ="{{posturismo.imagefront.url}}" >
+                        {% endif %}
+                        </div>
+
+                        <div class="elemento-descripcion">
+                        <a href ="/noticias-turismo-gastronomico/post/{{ posturismo.slug }}/" class="left">
+                        <h2>{{posturismo.title}}</h2>
+                        </a>
+                        <p>{{posturismo.description|safe|linebreaksbr|truncatechars:100}} </p>
+                        <a href ="/noticias-turismo-gastronomico/post/{{ posturismo.slug }}/">
+                        <button type="button" class="btn btn-outline-success">ver receta</button>
+                        </a>
+                        <!--CATEGORIA--->
+                        </div>
+                  </div>
+                  <!---DIV DE 4  RECETAS--->
+                  {% endfor %}
+                  {% endif %}
+                  <!---ENDFOR FINAL   4  DE RECETAS--->
+   <!--------------------- FINAL SEARCH RECIPES ZUMOS Y ENSALADAS  ------------------------------>
+
+
+
+
+
+
+
+
+                                      
+                     <!---FINAL DIV DE CONTAINER-PINTEREST--->
+                      
+                        </div>
+<!------------------------------------------------------------------------------------------------------------------------>
+
+              <!--- FIN CONTAINER SEARCH------------------------------------------------------------------------> 
+              </div>
+                               
+                       
+ {% endblock container-search %} 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+  

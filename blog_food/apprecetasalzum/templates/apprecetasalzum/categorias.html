@@ -1,0 +1,159 @@
+{% extends 'appfood/base.html' %}
+
+{% load static %}
+
+{% block portada %}{% endblock portada %}
+
+{% block buscador%}{% endblock buscador %}
+
+
+                      {% block content %}  
+ <!-- CONTAINER LE PUSE DOS DIVS QUE SON COLUMNA PRIMERA Y PRIMERA COLUMNA------------->
+                                  {% block container-search %} 
+                                            <div id ="container-search">
+                                             <!---DIV CONTAINER DE 4 POST Y DE RECETAS--->
+                                                 <div class = "container-pinterest">
+                                                        <!---DIV DE 4 POST DE POSTS--->
+                                                             {% for recipe in recipes %}
+                                                         <div class="elemento">
+                                                               {% if recipe.image %}
+                                                                <img src ="{{recipe.image.url}}">
+                                                               {% endif %}
+                                                                  <h2><a href ="">{{recipe.title}}</a></h2>
+                                                                 <p>{{recipe.description|safe}} </p> 
+                                                             {% for category in recipe.categories.all %}
+                                                              <p class= "card-text">
+                                                              <a href="{% url 'apprecetasalzum:categoria' categoria=category %}">{{ category.name }}</a>
+                                                              </p>
+                                                         <!---CIERRA EL POST --->
+                                                   {% endfor %}
+                                                <!---FORLOOP.LAST HACE QUE  EMPIEZE OTRA VEZ--->
+                                              {% if not forloop.last %} | {% endif %}
+                                               <!---FINAL DIV DE 4 POST DE POSTS --->
+
+                                                   </div>
+                                      <!---FINAL ENDFOR DE 4 POST IN POSTS--->
+                                                  
+                                          {% endfor %}
+                           
+  <!------------------------------------------------------------------------------------------------------------------------>
+                   
+                   
+                           <!---SUBCATEGORIAS DE BATIDOS-->  
+                            {% block imagenes-categorias %} 
+
+         <div class="categorias-subcategorias">
+                        {% for category in categories %}
+                        {% if not node.is_leaf_node %}
+                             
+                         <!-- SUBCATEGORIAS ---->
+                        {% for child in category.get_children %}
+                      <div class= "subcategoria">
+                        {% if child.image %}
+                       <a href="/batidosyensaladas/subcategoria/{{ child.slug }}">
+                        <img src="{{child.image.url}}"></a>
+                        {% endif %}
+                        <div class="nombredesubcategoria">
+                        <a href="/batidosyensaladas/subcategoria/{{ child.slug }}">
+                         <h3>{{ child.name }}</h3>
+                        </a>
+                        </div>
+                        
+
+
+                        </div>
+                        {% endfor %}
+
+                        {% endif %}
+                        {% endfor %}
+
+                        <!--FIN SUBCATEGORY--> 
+              </div>
+           {% endblock imagenes-categorias %} 
+
+
+
+
+
+                                       <!---FINAL DIV DE CONTAINER-PINTEREST--->
+                                 </div>
+<!------------------------------------------------------------------------------------------------------------------------>
+
+
+ {% endblock container-search %} 
+
+                             <!--- FIN CONTAINER SEARCH------------------------------------------------------------------------> 
+                                </div>
+                        
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------->
+
+
+
+
+{% endblock content %}   
+
+
+
+
+
+
+
+
+{% block primero_recetasaludable %} {% endblock primero_recetasaludable %}
+{% block segundo_nutricion %}{% endblock segundo_nutricion %}
+{% block tercero_zumos %} {% endblock tercero_zumos %}
+{% block cuarto-dietas %} {% endblock cuarto-dietas %}
+{% block quinto_perder %}{% endblock quinto_perder %}
+ {% block sexto %}{% endblock sexto %}
+ {% block septimo %}{% endblock septimo%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---  {% for entry in category.fed_set.all %}
+        {{ category.name}}
+    {% endfor %}--->
+
+
+     <!----------------- {% url 'apprecetasalzum:categoria' categoria=categoria %}   ---->
