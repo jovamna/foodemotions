@@ -17,9 +17,6 @@ env = environ.Env()
 #importante porque si no se pone da fallos
 environ.Env.read_env()
 
-#ESTO DA PROBLEMAS PORQUE DICE DEBEMOS ESPECIFICAR RUTA
-#env.read_env(env.str('ENV_PATH', '/path/to/.env'))
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
@@ -27,8 +24,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 env = environ.Env(
     SECRET_KEY=str,
     DEBUG=(bool, False),
-    ALLOWED_HOSTS=(list, ['127.0.0.1:8000']),
-    DATABASE_URL=str,
 )
 
 # Where BASE_DIR is a django source root, ROOT_DIR is a whole project root
@@ -46,7 +41,6 @@ SECRET_KEY = env.str('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', default=False)
 
-ALLOWED_HOSTS = []
 #SECURE_SSL_REDIRECT = env.bool('SECURE_SSL_REDIRECT', default=False)
 
 SITE_ID = 1
@@ -111,36 +105,8 @@ TEMPLATE_DEBUG = True
 
 WSGI_APPLICATION = 'blog_food.wsgi.application'
 
-#DATABASE_USER = os.environ.get("DATABASE_USER", '')
-#DATABASE_PASSWORD = os.environ.get("DATABASE_PASS", '')
-
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-#DATABASES = {
-#'default': {
-#'ENGINE': 'django.db.backends.mysql',
-#'NAME': env('DATABASE_NAME'),
-#'USER': env('DATABASE_USER'),
-#'PASSWORD': env('DATABASE_PASS'),
-#'HOST': env('DATABASE_HOST'),
-#'PORT': env('DATABASE_PORT'),
-#}
-#}
-
-if "DATABASE_URL" in os.environ:
-
-    DATABASES = {
-        'default': env.db(),
-    }
-
-else:
-
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -242,7 +208,7 @@ EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = env('EMAIL_PORT')
 
-try:
-    from .development import *
-except ImportError:
-    pass
+#try:
+#from .development import *
+#except ImportError:
+#pass

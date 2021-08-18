@@ -1161,8 +1161,6 @@ text-align: center;
         margin: auto;
         margin-top: 83px;
         bottom:  4px;
-        padding:  ;   /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
-    
       height: auto;
       }
 
@@ -1482,18 +1480,14 @@ text-align: center;
 
     /*FIN ANIMACION SUBRAYADO */
      .portada{
-     
      position: relative;  /*ESTO ARREGLO LA CABECERA*/
     margin: auto;
-     
-     
       z-index: 30;
      }
 
      .portada .portada-img{
       display: none;
       visibility: hidden;
-     
          }
 
 
@@ -2159,7 +2153,6 @@ text-align: center;
     height:40px;
     display: block;
     margin-bottom: 20px;
-   margin-top: ;
   }
 
   .titulo-otras-paginas h1{
@@ -2674,8 +2667,6 @@ text-align: center;
       margin: auto;
       margin-top: 83px;
       bottom:  4px;
-      padding:  ;   /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
-  
     height: auto;
     }
 
@@ -2705,7 +2696,6 @@ text-align: center;
   justify-content: space-between;
   height: 38px;
   margin-top: -5px;
-  background-color: red;
     }
    
      
@@ -2720,8 +2710,9 @@ text-align: center;
    .cabecera .logo{
     display: inline-flex;
    width: 100%;
-   max-width: 190px;
+   max-width: 290px;
   height: 38px;
+     
     }
      
  
@@ -2730,7 +2721,7 @@ text-align: center;
     width: 100%;
     max-width: 190px;
     height: 38px;
-    margin-left: -18px;
+ 
     }
  
  
@@ -2740,9 +2731,10 @@ text-align: center;
      position: relative;
      float: right;
      width: 40%;
-     max-width: 200px;
+     max-width: 310px;
      height: 38px;
     margin: auto;
+    
      }
  
      .suscribe {
@@ -2750,14 +2742,15 @@ text-align: center;
      position: relative;
      float: left;
     width: 100%;
-    max-width: 70px;
-    height: 34px;
+    max-width: 170px;
+    height: 38px;
+    background-color: lightblue;
      }
  
    
      .suscribe a h4{
       font-size: 1rem;
-      margin-top: 22px;
+      margin-top: 20px;
       margin-left: 8px;
       font-weight: 700;
       letter-spacing: 0.5px;
@@ -4151,7 +4144,6 @@ text-align: center;
      /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL*/
       nav .nav{
       margin-left: 10%;/*IMPORTANTE */
-      margin-top: ;/*IMPORTANTE */
       width: 48%;/*IMPORTANTE */
       height: 90%;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
       z-index: 60;
@@ -5077,7 +5069,7 @@ text-align: center;
    }
       
    #wrapper > * {
-  padding: ;
+  padding: 0.5px;
   }
      
 
@@ -5570,7 +5562,6 @@ text-align: center;
    .primer-segmento{
     width: 100%;
     margin: auto;
-    margin-top: ;  /*RELACIONADO CON EL TITULO*/
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
@@ -7549,9 +7540,6 @@ text-align: center;
     font-size: 1.7rem;
     }
 
-        .tres p{
-          
-        }
 
    /*SEGMENTO DE LOS POSTS ULTIMOS............................................................................2  */
   .dos-columnas{

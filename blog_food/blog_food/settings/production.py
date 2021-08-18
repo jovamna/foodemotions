@@ -8,23 +8,31 @@ from blog_food.settings.base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['mysite.com', ]
+env = environ.Env(
+    ALLOWED_HOSTS=(list, [
+        'mysite.com',
+    ]),
+    DATABASE_URL=str,
+)
+
+# Database
+if "DATABASE_URL" in os.environ:
+
+    DATABASES = {
+        'default': env.db(),
+    }
+
+else:
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-
-#DATABASES = {
-    #'default': {
-        #'ENGINE': 'django.db.backends.mysql',
-        #'NAME': env('DATABASE_NAME'),
-        #'USER': env('DATABASE_USER'),
-        #'PASSWORD': env('DATABASE_PASS'),
-        #'HOST': env('DATABASE_HOST'),
-        #'PORT': env('DATABASE_PORT'),
-    #}
-#}
-
-
 
 CACHES = {
     'default': {
@@ -32,9 +40,6 @@ CACHES = {
         'LOCATION': '127.0.0.1:11211',
     }
 }
-
-
-
 
 #STATIC_ROOT = 'static'
 
