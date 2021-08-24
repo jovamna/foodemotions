@@ -29,6 +29,64 @@
                         
                            <!-- FIN LETRAS-->
                     </section>
+
+
+  <!------------------PORTADA IMAGEN RESPONSIVE MOVIL Y IPDO--------------------------------------------------------------------------->
+   <section class="portada-img-responsive">
+            <!----------IMAGEN-----DEL MOVIL---------------->
+            <div class="imagen-responsive-movil">
+              <img src="{% block img %}{% static 'appfood/img/contacto/contacto-movil-640-450.png' %}{% endblock  %}">
+
+              <!-------------LETRAS EN MOVIMIENOTO DE MOVIL RESPONSIVE----------------->
+                   <div class="portada-contacto-uno"><a href="{% url 'appfood:index' %}">
+                            <p class="azulplata">proudly <span class="otroestilo">crafted</span> in münich since 1987</p> 
+                               </a>
+                            </div>
+                    
+                           <div class="portada-contacto-dos">
+                            <a href="{% url 'appfood:index' %}"><h6>Proudly crafted in  münich since 1987</h6></a>
+                           </div>
+
+                           <div class="portada-contacto-tres">
+                            <a href="{% url 'appfood:index' %}"><span><h2>FOOD&nbsp;&nbsp;&nbsp;EMOTIONS<h2>&nbsp;&nbsp;<h4>Suscribete</h4></span></a>
+                           </div>
+                        
+              <!----FIN LETRAS EN MOVIMIENTO---------------------->
+              </div>
+             <!----IMAGEN DEL IPOD------>
+              <div class="imagen-responsive-ipod">
+              <img src="{% block imag %}{% static 'appfood/img/contacto/contacto-ipod-760-360.png' %}{% endblock  %}">
+               <!--LETRAS DE IPOD--RESPONSIVE---------------------------------------------------------->
+                   <div class="portada-contacto-uno"><a href="{% url 'appfood:index' %}">
+                            <p class="azulplata">proudly <span class="otroestilo">crafted</span> in münich since 1987</p> 
+                               </a>
+                            </div>
+                    
+                           <div class="portada-contacto-dos">
+                            <a href="{% url 'appfood:index' %}"><h6>Proudly crafted in  münich since 1987</h6></a>
+                           </div>
+
+                           <div class="portada-contacto-tres">
+                            <a href="{% url 'appfood:index' %}"><span><h2>FOOD&nbsp;&nbsp;&nbsp;EMOTIONS<h2>&nbsp;&nbsp;<h4>Suscribete</h4></span></a>
+                           </div>
+
+
+
+              <!---FIN DE LETRAS IPOD RESPONSIVE----------------------------------------->
+              </div>
+              <!-- FIN IMAGEN-------------------->
+
+        <!-- LETRAS----------------------->
+      
+
+            
+      </section>
+
+   <!---FIN SECTION PORTADA RESPONSIVE MOVIL Y IPOD --------------------->
+
+
+
+
                 </div>
                 {% endblock portada %} 
  

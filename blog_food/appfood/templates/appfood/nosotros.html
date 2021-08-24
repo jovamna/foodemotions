@@ -37,25 +37,28 @@
         }
     </style>
 
-    <!-- ICONOS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+      <!-- ICONOS -->
+      <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
         integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
         crossorigin="anonymous"></script>
 
+      <!-- SCRIPT PARA CABECERA FIJA----------------------------------------->
+              <script src="http://code.jquery.com/jquery-latest.js"></script>
 
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
+     <!--------SCROLL MENU------------------------------------->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 
+      
 
-    <!-- GOOGLE FONTS-->
+      <!-- GOOGLE FONTS----------------------------------------------->
 
-    <link
+         <link
         href="https://fonts.googleapis.com/css?family=Archivo+Black|Artifika|Bai+Jamjuree|Cabin|Merienda|Roboto+Condensed|Satisfy&display=swap"
         rel="stylesheet">
 </head>
-
-
-<body>
+    <body>
     <!-- CONTAINER GENERAL  -->
     <div id="wrapper">
             <header>
@@ -86,15 +89,68 @@
                                 </div>
                                 <!---------------MENU RESPONSIVE -------------------------------------------------------------------------->
                               
-                                
-                                     <div class="menu-btn__burger">
-                                     </div>
+        
                                
                        </div>
                                                 <!----FIN  MENU RESPONSIVE ------->
                                      <!-----FIN  BOLETIN -------------->
 
                  </div>  <!-----FIN  CABECERA------------------------------------------------------------------------------------->
+
+
+  <!---CABECERA RESPONSIVE------------------CABECERA--RESPONSIVE---CABECERA--RESPONSIVE------->
+
+     <div class="cabecera-responsive">
+                     <div class="logo">
+                    <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
+                    <img src="{% static 'appfood/img/logo/logd.svg' %}" width="100%" alt="Food Emotions"> 
+                    </a>
+                    </div>
+
+      
+   <!------------------------------------------------------------------------------------------------------------>
+    
+   <!---------------------------------------------------------------------------------------------------------------->
+
+                 <div class="menu-btn"> 
+                    <div class="suscribe">
+                    <a href="{% url 'appcontact:contacto' %}">   
+                    <h4>suscribete</h4>  
+                    </a>
+                    </div>
+                        <!---------------MENU RESPONSIVE -------------->
+                      <div class="menu-btn__burger"> </div>
+                       <!----FIN  MENU RESPONSIVE ------->                
+                 </div>
+                 <!----FIN  MENU BTN------->
+                                     <!-----FIN  BOLETIN -------------->
+      </div> 
+
+ 
+     <!------------------------------------------------------------------------------------------------------------>
+     <div class="buscador-responsive">
+               <div id="controls-responsive">
+              <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                  <!------------------------------------------------------------------>
+                  <div id="custom-search-input-responsive">
+	                  <input type="text"  name="q" 
+                    value= "{{ request.GET.q }}" class="sin-borde" 
+                    placeholder=  "    Buscar en Food Emotions ... " autocomplete="off" >
+                    <!---------------------------------------------------------------->             
+                    <button type="submit" name="submit" class="boton btn-succes" value="Search" >
+                    <span class="icon"><i class="fa fa-search"></i></span> 
+                  </button>
+                </div>
+                <!--------------------------------------------------------------------->
+             </form>                 
+             </div>
+    </div>
+   <!---------------------------------------------------------------------------------------------------------------->
+
+
+
+   <!---FIN CABECERA RESPONSIVE FIN CABECERA RESPONSIVE ------------------------------>
+
 
 
     <nav >
@@ -155,9 +211,9 @@
                 </li>
               
                   <li> 
-                <a class="{% active 'appfood:nosotros' %}" href="{% url 'appfood:nosotros' %}"> Nosotros  <i class ="fa fa-caret-down"></i></a>
-                   <ul>  
-                     
+                <a class="{% active 'appfood:nosotros' %}" href="{% url 'appfood:nosotros' %}"> Nosotros </a>
+              
+                     </li>
                         <!-- LAS CATEGORIAS------->
                    
                         <li>
@@ -165,7 +221,7 @@
                      </a>
                        </li>
                   
-                      </ul> 
+               
 
                 </li>
              </ul>
@@ -268,10 +324,10 @@ compensando con sabores ácidos o frescos los más grasos,
                         </blockquote>
                     </div>
 
-
+                       <!----width="495" height="320" ---------------->
                     <!-- cuarta caja-->
                     <div class="dibujo">
-                        <img src="{% static 'appfood/img/nosotros/495-320.jpg' %}" width="495" height="320" />
+                        <img src="{% static 'appfood/img/nosotros/495-320.jpg' %}" />
                     </div>
 
                     <!-- quinta caja con dos columnas----------->
@@ -365,27 +421,18 @@ Europa e incluso ciertos platos de cocina de fusión de las antípodas.</p>
 
             <!-- horizontal debe de ser-->
             <div id="footer1">
-
-                <div class="footer-second1">
-                    
-                  
+                    <div class="footer-second1">
                     <p> © <a href="http://foodemtions.com" target="_blank">Foodemotions.com  
-                 &nbsp;  &nbsp; 2021 &nbsp; Food Emotions, Todos los derechos reservados.
+                     &nbsp;  &nbsp; 2021 &nbsp; Food Emotions, Todos los derechos reservados.
                     </a>
-                    </p>
-                 
-                </div>
-
-
+                    </p>  
+                   </div>
             </div>
 
-    
-
-        <!-- FINAL CONTAINER-->
+        <!-- FINAL CONTAINER-------------------------------->
 
 
-
-<!-- PARA CONVERTIR EL MENU A ASPA-->
+              <!-- PARA CONVERTIR EL MENU A ASPA-->
             <script src="{% static 'appfood/js/menuAspaArticulo.js' %}"></script>
 
             <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->

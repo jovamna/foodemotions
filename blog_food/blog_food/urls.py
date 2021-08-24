@@ -100,15 +100,14 @@ urlpatterns = [
 #esto es para la carpeta media cuando este en produccion
 if settings.DEBUG:
     from django.conf.urls.static import static
-    #from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns (No esty segura si dejarlo)
-    #urlpatterns += staticfiles_urlpatterns() (no estoy segura si dejarlo)
+    from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns #(No esty segura si dejarlo)
+    urlpatterns += staticfiles_urlpatterns() #(no estoy segura si dejarlo)
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 
     #ahora crear la app services
-
-#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
 #urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 #if settings.DEBUG:

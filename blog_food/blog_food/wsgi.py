@@ -11,6 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
+#ESTO LE DICE A PRODUCTION QUE ARCHIVO USAR 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'blog_food.settings')
 
 application = get_wsgi_application()

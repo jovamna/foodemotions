@@ -1113,31 +1113,18 @@ text-align: center;
 
 
 
-
-
-
-
-
-
-
    /*.....................8 ...............*/
    @media only screen and (min-width: 360px) and (max-width: 640px){
-
-
-
-    body{
+    html, body{
       padding:0;
       margin: 0;
       background-color: #fff;
       color: rgba(0,0,0,.95);
       font-family: "Argos",serif;
+      line-height: 1.15;
+      -webkit-text-size-adjust: 100%;
+      height: 100%;
        }
-  
-    html, body {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    height: 100%;
-    }
   
 
      #wrapper {
@@ -1158,6 +1145,7 @@ text-align: center;
         display: flex;
         flex-direction: column;
         width: 100%;
+        max-width: 640px;
         margin: auto;
         margin-top: 83px;
         bottom:  4px;
@@ -1165,32 +1153,26 @@ text-align: center;
       }
 
 
-    header{
-    width:100%;
-    height: 99px;
-    top:0;
-    position: fixed;
-    z-index: 2000;   /*IMPORTANTE  */
-    margin: auto;
-    box-shadow: 0 8px 6px -6px #DCDCDC; 
- 
-    }
+      /*.. #DCDCDC ..*/
+      header{width: 100%;max-width:370px;height:99px;min-width:360px;top:0;position: fixed;z-index:2000;margin: auto;box-shadow: 0 8px 6px -6px;
+       }
     
+
     
     header.black{
     background-color: #fff;
     height:  99px;
+    width: 100%;
     }
   
+    /*.. max-with:640px;...*/
     .cabecera{
     width: 100%;
-    max-width: 640px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 38px;
     margin-top: -4px;
-  
       }
      
    
@@ -1208,8 +1190,7 @@ text-align: center;
        display: block;
       width: 100%;
       max-width: 190px;
-      height: 38px;
-      margin-left: -13px;
+      height: 38px; 
       }
    
    
@@ -1222,9 +1203,9 @@ text-align: center;
        max-width: 210px;
        height: 38px;
       margin: auto;
-   
        }
    
+
        .suscribe {
     display: block;
     position: relative;
@@ -1243,28 +1224,28 @@ text-align: center;
         letter-spacing: 0.2px;
        }
     
+
         .cabecera .buscador{
           display: none;
         }
 
 
     .buscador-responsive{
-      display: block;
-      position: relative;
-      float: left;
-         width: 99.9%;
-         height: 32px;
-        margin-top: 8px;
+    display: block;
+    position: relative;
+     float: left;
+    width: 99.9%;
+    height: 32px;
+    margin-top: 8px;
+    }
      
-      
+
+     .buscador-responsive #controls-responsive{
+      width: 100%;
+      height: 30px;
+      z-index: 10;
        }
-     
-       .buscador-responsive #controls-responsive{
-         width: 100%;
-         height: 30px;
-         z-index: 10;
-   
-       }
+
 
        .buscador-responsive #controls-responsive   #custom-search-input-responsive{
          width: 99%;
@@ -1277,6 +1258,8 @@ text-align: center;
          border: 2px solid #f4f4f4;
        }
 
+
+
        .buscador-responsive #controls-responsive   #custom-search-input-responsive .sin-borde{
          height: 25px;
          width: 90%;
@@ -1286,6 +1269,8 @@ text-align: center;
          padding-left: 10px; /*MUEVE LA LETRA*/
        }
 
+
+
        .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
          height: 25px;
          width: 10%;
@@ -1293,12 +1278,15 @@ text-align: center;
          background-color: #fff;
        }
 
+
+
        .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
         outline: none;
         border: 0;
         background-color: #fff;
        }
       
+
        /*---------------------------------------------------------------------*/
      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
      .menu-btn .menu-btn__burger {
@@ -1314,9 +1302,9 @@ text-align: center;
        box-shadow: 0 2px 5px rgba(255,101,47,.2);
        transition: all .5s ease-in-out;
        z-index: 1000;
-     
         }
     
+
 
         .menu-btn__burger::before,
         .menu-btn__burger::after {
@@ -1338,43 +1326,55 @@ text-align: center;
       }
 
 
-       .menu-btn__burger::after {
-        transform: translateY(8px);
-        z-index:3000;
-      }
+    .menu-btn__burger::after {
+    transform: translateY(8px);
+    z-index:3000;
+    }
 
-      /* ANIMATION */
-       .menu-btn.open .menu-btn__burger {
-        transform: translateX(-50px);
-        background: transparent;
-        box-shadow: none;
-      }
-      .menu-btn.open .menu-btn__burger::before {
-        transform: rotate(45deg) translate(35px, -35px);
-        background: #fff;
-      }
+
+    /* ANIMATION */
+    .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    }
+
+
+
+    .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    background: #fff;
+    }
+
        .menu-btn.open .menu-btn__burger::after {
         transform: rotate(-45deg) translate(35px, 35px);
         background: #fff;
       }
 
+
+
+
      .menu-btn__burger:hover{
         background-color: #639a3a;
       }
     
+
        .menu-btn__burger:hover::before,
        .menu-btn__burger:hover::after{
         background-color: #639a3a;
       }
-    
-    /* ESTE ES EL MENU NAV*/
 
+
+
+    
+    /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+  
   /*margin-left: 5.4%;/*IMPORTANTE */
   nav{
   width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
   height: 100%;/*IMPORTANTE */
   position: fixed;
-   top:0px;  /*IMPORTANTE para que arriba no tenga espacios */
+   top:-8px;  /*IMPORTANTE para que arriba no tenga espacios */
   min-height: 100vh;
   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
   background-color:#000000; /*FONDO DEL MENU*/
@@ -1384,15 +1384,14 @@ text-align: center;
   z-index:40;
   }
 
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL*/
+   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
    nav .nav{
      display: flex;
      flex-direction: column;
-    margin-left: -38%;/*IMPORTANTE */
-    margin-top: 80px;/*IMPORTANTE */
-    width: 100%;/*IMPORTANTE */
+    width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
+    height: 93%;/*IMPORTANTE */
+    margin-left: -42%;/*IMPORTANTE **/
     z-index:30;
-
     }
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
@@ -1408,6 +1407,7 @@ text-align: center;
     background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
     display: block;
     position: absolute;
+    width: 60%;
     color: #fff;
     font-weight: lighter;
     font-size: 1rem;
@@ -1421,12 +1421,12 @@ text-align: center;
      
     
  
-      /* NAV ESCONDIDO  NAV ESCONDIDO*/
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
       nav .nav li:hover > ul {
        display: block;
       margin-left: -200px;
-       margin-top:-40px;
+     
       height: 200px;
       visibility: visible; 
       z-index: 598;
@@ -1728,6 +1728,90 @@ text-align: center;
     font-weight: lighter;
     font-size: 0.5rem;
   }
+
+
+
+ /*...LETRAS DE PORTADA CONTACTO RESPONSIVE MOVIL.........................*/
+ .portada-img-responsive .portada-contacto-uno{
+  position: relative;
+  overflow: hidden;
+  top: -230px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
+  left: 1px ;
+  width: 60%;
+ }
+
+   /*FRASE PRIMERA QUE LLEVA P*/
+.portada-img-responsive .portada-contacto-uno .azulplata{
+  width: 100%;
+  font-weight: 900;
+  font-size: 0.6rem;
+  font-family: 'Cabin', sans-serif;
+  color:black;
+}
+/*--LETRA CRAFTED----------------------*/
+.portada-img-responsive .portada-contacto-uno .otroestilo { 
+  font-weight: 300 ;
+   font-size:   0.8rem;
+   color:black ;
+   display: inline-block;
+   font-family: 'Cabin', sans-serif;
+   font-style: italic;
+  }
+
+  /*---SEGUNDO PARRAFO----*/
+/*PROUDLY CRAFTED*/
+.portada-img-responsive .portada-contacto-dos{
+position: relative;
+overflow: hidden;
+top: -260px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+left: 1px ;
+width: 48%;
+
+}
+/* SEGUNDO PARRAFO Proudly crafted in  münich since 1987*/
+.portada-img-responsive .portada-contacto-dos h6 {
+display:inline-block;
+padding-top: 43px; /*IMPORTANTE PARA DISTANCIAR EL PARRAFO DEL SIGIENTE PARRAFAO*/
+margin: 0;
+font-size: 0.7rem;
+}
+
+/*---TERCER PARRAFO----*/
+.portada-img-responsive .portada-contacto-tres{
+position: relative;
+overflow: hidden;
+top: -290px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
+width: 48%;
+left: 1px;
+}
+
+/*TERECER PARRAFO QUE SUBE*/
+.portada-img-responsive .portada-contacto-tres span h2{
+color:#639a3a;
+width: 100%;
+display: block;
+position: relative;
+float: left;
+word-spacing: -1px;
+margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
+font-family: 'Cabin', sans-serif;
+font-size: 0.5rem;
+}
+/*SUSUCRIBETE*/
+.portada-img-responsive .portada-contacto-tres span h4{
+color:#fff;
+padding: 4px 2px 2px 2px;
+margin-top: 20px; /*DISTANCIA DE SEPARARCION DEL OTRO PARRAFO*/
+border-radius: 4px;
+background-color: #639a3a;
+font-family: 'Cabin', sans-serif;
+font-weight: lighter;
+font-size: 0.5rem;
+width: 100%;
+}
+
+
+/*..FIN LETRAS DE MOVIL RESPONSIVE...*/
 
 
   /*FORMULARIO DE LA PAGINA DE CONTACTOS*/
@@ -4400,40 +4484,88 @@ text-align: center;
       /*FIN  PORTADAS RESPONSIVE IPOD DE LAS DEMAS PAGINAS*/
 
 
-    /*CONTENEDOR DE LA PRIMERA FRASE DE LA LETRA E MOVIEMINTO PROUDLY*/
-  .portada .portada-contacto-uno{
-  position: absolute;
+  /*..LETRAS DE IPOD RESPONSIVE....*/
+/*...PRIMER SEGMENTO DE LA PRIMERA FRASE................*/
+.imagen-responsive-ipod .portada-contacto-uno{
+  position: relative;
   overflow: hidden;
-  top: 17%; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
-  left: 50px ;
-  width: 45%;
+  top: -300px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
+  left: 1px ;
+  width: 60%;
+ }
+
+   /*FRASE PRIMERA QUE LLEVA P*/
+   .imagen-responsive-ipod .portada-contacto-uno .azulplata{
+  width: 100%;
+  font-weight: 900;
+  font-size: 1rem;
+  font-family: 'Cabin', sans-serif;
+  color:black;
+}
+/*--LETRA CRAFTED----------------------*/
+.imagen-responsive-ipod .portada-contacto-uno .otroestilo { 
+  font-weight: 300 ;
+   font-size:   1.1rem;
+   color:black ;
+   display: inline-block;
+   font-family: 'Cabin', sans-serif;
+   font-style: italic;
   }
 
-  /*---SEGUNDO PARRAFO----*/
-  /*PROUDLY CRAFTED*/
-  .portada .portada-contacto-dos{
-  position: absolute;
-  overflow: hidden;
-  top: 33%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
-  left: 50px ;
-  width: 40%;
-   }
-        /*PRIMER TITULO DE LA PORTADA CON LETRAS EN MOVIMIENOT*/
-   .portada .portada-contacto-uno .azulplata{
-  line-height: 1.3;
-  font-size: 1.4rem;
-   }
-    /*--FORMA PARTE DEL .AZULPLATA PORQUE CAMBIE ESTILO DENTRO DE UN PARRAFO-----------------------*/
-   .portada .portada-contacto-uno .otroestilo { 
-   font-size:  1rem ;
-  }
+  /*---SEGUNDO PARRAFO-------------------------------------*/
+/*PROUDLY CRAFTED*/
+.imagen-responsive-ipod .portada-contacto-dos{
+position: relative;
+overflow: hidden;
+top: -320px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+left: 1px ;
+width: 48%;
 
-  .portada .portada-contacto-dos h6 {
-  font-size: 1.3rem;
-  }
+}
+/* SEGUNDO PARRAFO Proudly crafted in  münich since 1987*/
+.imagen-responsive-ipod .portada-contacto-dos h6 {
+display:inline-block;
+padding-top: 43px; /*IMPORTANTE PARA DISTANCIAR EL PARRAFO DEL SIGIENTE PARRAFAO*/
+margin: 0;
+font-size: 1rem;
+}
 
-  
-   
+/*---TERCER PARRAFO----*/
+.imagen-responsive-ipod .portada-contacto-tres{
+position: relative;
+overflow: hidden;
+top: -350px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
+width: 48%;
+left: 1px;
+}
+
+/*TERECER PARRAFO QUE SUBE*/
+.imagen-responsive-ipod .portada-contacto-tres span h2{
+color:#639a3a;
+width: 100%;
+display: block;
+position: relative;
+float: left;
+word-spacing: -1px;
+margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
+font-family: 'Cabin', sans-serif;
+font-size: 1rem;
+}
+/*SUSUCRIBETE*/
+.imagen-responsive-ipod .portada-contacto-tres span h4{
+color:#fff;
+padding: 4px 2px 2px 2px;
+margin-top: 20px; /*DISTANCIA DE SEPARARCION DEL OTRO PARRAFO*/
+border-radius: 4px;
+background-color: #639a3a;
+font-family: 'Cabin', sans-serif;
+font-weight: lighter;
+font-size: 0.9rem;
+width: 100%;
+}
+
+/*..FIN LETRAS DE IPOD RESPONSIVE...*/
+
 
    
     /*CONTENEDORES DE LOS TITULOS AISLADOS .......DE MEDIA QUERY 500 MAIXMO........*/

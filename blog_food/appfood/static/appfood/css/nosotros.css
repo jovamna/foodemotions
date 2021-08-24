@@ -57,6 +57,10 @@ header.black{
 background-color: #fff;
 }
 
+ .cabecera-responsive{
+   display: none;
+ }
+
 .cabecera{
 width:100%;
 max-width: 1250px;
@@ -242,7 +246,6 @@ margin-left:-20px;
 
  /*primera caja ..................................... */
 .articulo{
-background-color:;
 width: 100%;
 
 }
@@ -346,7 +349,6 @@ margin-top: 15%;
    font-size: 1.3rem;
   color: #666;
   font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-  background-color: ;
   }
 
     /*AUTOR FUNDADOR*/
@@ -357,7 +359,6 @@ margin-top: 15%;
   color: #000;
   font-weight: 900;
   font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-  background-color: ;
   }
 
 
@@ -368,7 +369,6 @@ margin-top: 15%;
    font-size: 1rem;
  color:#666;
   font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-  background-color: ;
   }
 
 
@@ -380,7 +380,6 @@ margin-top: 15%;
 
  /* cuarta          caja ..................................... */
 .dibujo{
-background-color: ;
 width: 100%;
 margin-top: 10%;
 }

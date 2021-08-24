@@ -8,28 +8,21 @@ from blog_food.settings.base import *
 
 DEBUG = False
 
-env = environ.Env(
-    ALLOWED_HOSTS=(list, [
-        'mysite.com',
-    ]),
-    DATABASE_URL=str,
-)
+env = environ.Env(ALLOWED_HOSTS=(list, [
+    '*',
+]), )
 
 # Database
-if "DATABASE_URL" in os.environ:
-
-    DATABASES = {
-        'default': env.db(),
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASS'),
+        'HOST': env('DATABASE_HOST'),
+        'PORT': env('DATABASE_PORT'),
     }
-
-else:
-
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -41,7 +34,7 @@ CACHES = {
     }
 }
 
-#STATIC_ROOT = 'static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 #email config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

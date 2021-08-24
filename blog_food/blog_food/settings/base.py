@@ -17,10 +17,6 @@ env = environ.Env()
 #importante porque si no se pone da fallos
 environ.Env.read_env()
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-
 env = environ.Env(
     SECRET_KEY=str,
     DEBUG=(bool, False),
@@ -30,7 +26,7 @@ env = environ.Env(
 # It may differ BASE_DIR for eg. when your django project code is in `src` folder
 # This may help to separate python modules and *django apps* from other stuff
 # like documentation, fixtures, docker settings
-ROOT_DIR = BASE_DIR
+#ROOT_DIR = BASE_DIR
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -97,6 +93,9 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'appsocial.processors.ctx_dict'
             ],
+            'libraries': {
+                'staticfiles': 'django.templatetags.static',
+            }
         },
     },
 ]
@@ -175,18 +174,22 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 #N EL ORDENADOR
-#STATICFILES_DIRS = [
-#os.path.join(BASE_DIR, 'appfood/static').replace("\\", "/"),
-#]
 
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
 #N EL ORDENADOR
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
+#STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    '/home/jovamna/myprojectdir/foodemotions/blog_food/app_food/static',
+]
 
 #CON NGNIX
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #STATIC_ROOT='/var/www/ENV-nombreApp/nombreApp/statics/'
 
