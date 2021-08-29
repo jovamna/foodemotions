@@ -114,14 +114,14 @@
     {% block content %}
 
         <!-----SUBCATEGORIAS MENU-------<td id="left">&#8592;</td>-- id="right">&#8594---------------------->
-
-          <!-------------------------------------------------------------4----------->
-           <div class="caja-texto-slider">         
-            <!--TITULO DE LAS CATEGORIAS-------------------------------------3--->
-             <div class= "endfor">
-                <!-------------------------------FLECHA LEFT NAV----------------------2------->
-                <div class="leftNav"><span class="arrow-left">&#129120;</span></div>
+        <!-------------------------------------------------------------4----------->
+        <div class="caja-texto-slider">         
+          <!--TITULO DE LAS CATEGORIAS-------------------------------------3--->
+          <div class= "endfor">
+              <!-------------------------------FLECHA LEFT NAV----------------------2------->
+              <div class="leftNav"><span class="arrow-left">&#129120;</span></div>
                 <!------------------------------------------------------1------>
+              
                 <!---AQUI SOLO QUIERO SALGAN LAS CATEGORIAS---NO ES NECESRIO PONER SLUG CON EL REQUEST DEL VIEW------------>
                  <ul class="scrollmenu">    
                     {% for categori in categoris %}         
@@ -130,15 +130,14 @@
                     <a href="/noticias-turismo-gastronomico/categoria/{{ categori.slug }}">
                     <h3>{{ categori }}</h3>
                     </a>
-                 
                     </li>
                     {% endfor %}
-                
                  </ul>
                 <!------------------------FIN UL SCROLLMENU--------------------->
-                   <div class="rightNav"><span class="arrow-right">&#129122;</span></div>
+
+            <div class="rightNav"><span class="arrow-right">&#129122;</span></div>
               <!--------------------------FLECHA--------------------------.-----2---->
-            </div>
+          </div>
             <!--FIN ENDFOR---------------------------------------------3---->   
         </div>
         <!---------------------------------------------------------4------>

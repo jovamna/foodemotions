@@ -1154,15 +1154,25 @@ text-align: center;
 
 
       /*.. #DCDCDC ..*/
-      header{width: 100%;max-width:370px;height:99px;min-width:360px;top:0;position: fixed;z-index:2000;margin: auto;box-shadow: 0 8px 6px -6px;
+      header{
+        width: 100%;
+        max-width:370px;
+        height:99px;
+        min-width:360px;
+        top:0;
+        position:fixed;
+        z-index:2000;
+        margin: auto;
+        box-shadow: 0 8px 6px -6px;
+        background-color: #fff;
        }
     
 
     
     header.black{
-    background-color: #fff;
     height:  99px;
     width: 100%;
+    background-color: #fff;
     }
   
     /*.. max-with:640px;...*/
@@ -1206,34 +1216,34 @@ text-align: center;
        }
    
 
-       .suscribe {
+    .suscribe {
     display: block;
     position: relative;
     float: left;
-      width: 100%;
-      max-width: 70px;
-      height: 34px;
-       }
+    width: 100%;
+    max-width: 70px;
+    height: 34px;
+    }
    
      
-       .suscribe a h4{
-        font-size: 0.9rem;
-        margin-top: 22px;
-        margin-left: 8px;
-        font-weight: 700;
-        letter-spacing: 0.2px;
-       }
+    .suscribe a h4{
+    font-size: 0.9rem;
+    margin-top: 22px;
+    margin-left: 8px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    }
     
 
-        .cabecera .buscador{
-          display: none;
-        }
+    .cabecera .buscador{
+    display: none;
+    }
 
 
     .buscador-responsive{
     display: block;
     position: relative;
-     float: left;
+    float: left;
     width: 99.9%;
     height: 32px;
     margin-top: 8px;
@@ -1244,86 +1254,85 @@ text-align: center;
       width: 100%;
       height: 30px;
       z-index: 10;
-       }
+      }
 
 
-       .buscador-responsive #controls-responsive   #custom-search-input-responsive{
-         width: 99%;
-         height: 30px;
-         display: flex;
-         flex-direction: row;
-         font-size: 0.9em;
-          padding: 1px 1px;
-          border-radius: 8px;
-         border: 2px solid #f4f4f4;
-       }
-
-
-
-       .buscador-responsive #controls-responsive   #custom-search-input-responsive .sin-borde{
-         height: 25px;
-         width: 90%;
-         border-radius: 15px;
-         font-size: 0.7em;
-         font-weight: lighter;
-         padding-left: 10px; /*MUEVE LA LETRA*/
-       }
+    .buscador-responsive #controls-responsive   #custom-search-input-responsive{
+    width: 99%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9em;
+    padding: 1px 1px;
+    border-radius: 8px;
+    border: 2px solid #f4f4f4;
+    }
 
 
 
-       .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
-         height: 25px;
-         width: 10%;
-         border-radius: 10px;
-         background-color: #fff;
-       }
+    .buscador-responsive #controls-responsive   #custom-search-input-responsive .sin-borde{
+    height: 25px;
+    width: 90%;
+    border-radius: 15px;
+    font-size: 0.7em;
+    font-weight: lighter;
+    padding-left: 10px; /*MUEVE LA LETRA*/
+    }
 
 
 
-       .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
-        outline: none;
-        border: 0;
-        background-color: #fff;
-       }
+    .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
+    height: 25px;
+    width: 10%;
+    border-radius: 10px;
+    background-color: #fff;
+    }
+
+
+    .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
+    outline: none;
+    border: 0;
+    background-color: #fff;
+    }
       
 
        /*---------------------------------------------------------------------*/
      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-     .menu-btn .menu-btn__burger {
-      display: block;
-      position: relative;
-      float: right;
-      margin-top: 24px;
-      width: 100%;
-        max-width: 36px;
-       height: 4px;
-       background: #2d2d2d;
-       border-radius: 2px;
-       box-shadow: 0 2px 5px rgba(255,101,47,.2);
-       transition: all .5s ease-in-out;
-       z-index: 1000;
-        }
+    .menu-btn .menu-btn__burger {
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 24px;
+    width: 100%;
+    max-width: 36px;
+    height: 4px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+    z-index: 1000;
+    }
     
 
 
-        .menu-btn__burger::before,
-        .menu-btn__burger::after {
-          content: '';
-          position: absolute;
-          height: 4px;
-          width: 36px;  /*IMPORTANTE*/
-          background:#2d2d2d;
-          border-radius: 2px;
-          box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-          transition: all .5s ease-in-out;
-         z-index: 800;  
-        }
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 36px;  /*IMPORTANTE*/
+    background:#2d2d2d;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+    transition: all .5s ease-in-out;
+    z-index: 800;  
+    }
 
       
-      .menu-btn__burger::before {
-      transform: translateY(-8px);
-      z-index:3000;
-      }
+    .menu-btn__burger::before {
+    transform: translateY(-8px);
+    z-index:3000;
+    }
 
 
     .menu-btn__burger::after {
@@ -1346,23 +1355,23 @@ text-align: center;
     background: #fff;
     }
 
-       .menu-btn.open .menu-btn__burger::after {
-        transform: rotate(-45deg) translate(35px, 35px);
-        background: #fff;
-      }
+    .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    background: #fff;
+    }
 
 
 
 
-     .menu-btn__burger:hover{
-        background-color: #639a3a;
-      }
+    .menu-btn__burger:hover{
+    background-color: #639a3a;
+    }
     
 
-       .menu-btn__burger:hover::before,
-       .menu-btn__burger:hover::after{
-        background-color: #639a3a;
-      }
+    .menu-btn__burger:hover::before,
+    .menu-btn__burger:hover::after{
+    background-color: #639a3a;
+    }
 
 
 
@@ -1385,10 +1394,10 @@ text-align: center;
   }
 
    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-   nav .nav{
-     display: flex;
-     flex-direction: column;
-    width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
+    nav .nav{
+   display: flex;
+   flex-direction: column;
+   width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
     height: 93%;/*IMPORTANTE */
     margin-left: -42%;/*IMPORTANTE **/
     z-index:30;
@@ -1627,6 +1636,14 @@ text-align: center;
    -webkit-transform: rotate(-45deg);
   }
           
+
+  /*-----imagen grande de contacto----------------*/
+   .portada-img{
+     display: none;
+     visibility: hidden;
+   }
+  /*fin*/
+
    /*ESTO ES EL TITULO*/
   .portada .portada-img3-responsive h1{
   font-size: 1.1rem;
@@ -1810,11 +1827,10 @@ font-size: 0.5rem;
 width: 100%;
 }
 
-
 /*..FIN LETRAS DE MOVIL RESPONSIVE...*/
 
 
-  /*FORMULARIO DE LA PAGINA DE CONTACTOS*/
+  /*FORMULARIO DE LA PAGINA DE CONTACTOS.............PAGINA CONTACTO ........*/
   .section-heading-upper{
     font-size: 1rem;
   }
@@ -1823,10 +1839,13 @@ width: 100%;
     font-size: 1rem;
   }
 
-  /*CAJA DEL FORMLARIO*/
-  .row{
-  width: 100%;
-  }
+  /*CAJA DEL FORMLARIO------------------------------------PAGINA CONTACTO*/
+    .row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -130px;
+    }
 
   /*SUBCAJA DEL FORUMMLARIO DE CORREO*/
     .input-group{
@@ -1945,7 +1964,7 @@ width: 100%;
      margin: auto;
    }
  
-   .primer-segmento .tres img{
+    .primer-segmento .tres img{
       width: 100%;
       max-width: 640px;
       margin: auto;
@@ -1959,15 +1978,13 @@ width: 100%;
     .primer-segmento .tres a h1{
      width: 100%;
      max-width: 640px;
-   font-size: 1.7rem;
-   color: #000000;
-   word-spacing: -0.7px;
-   letter-spacing: -0.5px;
-   font-family: 'Times New Roman', Times, serif;
-   margin-bottom: 3px;
-  
- 
-   }
+    font-size: 1.7rem;
+    color: #000000;
+    word-spacing: -0.7px;
+    letter-spacing: -0.5px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 3px;
+    }
  
    /*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
    .primer-segmento .tres  p{
@@ -1978,7 +1995,6 @@ width: 100%;
    letter-spacing: 0.2px;
    font-family: 'Cabin', sans-serif;
    margin-bottom: 4px;
- 
    }
 
    .primer-segmento .tres a p{
@@ -1997,14 +2013,14 @@ width: 100%;
  
    /*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS*/
    /*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS....................................................*/
-   .dos-columnas{
+    .dos-columnas{
     width: 100%;
-   display: flex;
-   flex-direction: column;
-   margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
     }
 
-    .dos-columnas .columna-left{
+      .dos-columnas .columna-left{
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -2013,48 +2029,47 @@ width: 100%;
    
    .bloque-ultimo{
     width: 100%;
-  display: flex;
-  flex-direction: column;
+   display: flex;
+   flex-direction: column;
+   }
 
-    }
-
-    .dos-columnas .posts-ultimos{
+     .dos-columnas .posts-ultimos{
       width: 100%;
      display: flex;
      flex-direction: column;
      border-top: 0.8px solid #c9c9c9;
-    }
+     }
 
-   .dos-columnas-segunda .posts-ultimos-imagen{
+    .dos-columnas-segunda .posts-ultimos-imagen{
     display: block;
     position: relative;
     float: left;
-   width: 45%;
-   max-width: 165px;
-  }
+    width: 45%;
+    max-width: 165px;
+    }
 
-  .posts-ultimos-imagen img{
+   .posts-ultimos-imagen img{
    width: 100%;
    max-width: 155px;
    height: 100%;
    max-height: 98px;
-  }
-
-  .posts-ultimos-titulo{
-  display: block;
-  position: relative;
-  float: right;
-  width: 40%;
-  }
-
-  
-  .posts-ultimos-titulo h1{
-   font-size: 1.2rem;
-      word-spacing: -0.5px;
    }
+
+   .posts-ultimos-titulo{
+   display: block;
+   position: relative;
+   float: right;
+   width: 40%;
+   }
+
   
-   .posts-ultimos-titulo p{
-    font-size: 1rem;
+    .posts-ultimos-titulo h1{
+    font-size: 1.2rem;
+      word-spacing: -0.5px;
+     }
+  
+    .posts-ultimos-titulo p{
+     font-size: 1rem;
      }
    
      .dos-columnas .columna-right{
@@ -2185,7 +2200,7 @@ width: 100%;
      .plan-post-imagen img{
       display: block;
       width: 100%;
-     }
+      }
 
 
       /*CAJA DEL TITULO Y DESCRIPCION*/
@@ -2206,7 +2221,7 @@ width: 100%;
    /*ESTE ES DEL TAMAÑO NORMAL*/
     .plan-imagen{
      display: none;
-    }
+     }
 
      /*CAJA DE LA IMAGEN GRANDE RESPONSIVE*/
     .plan-imagen-responsive{
@@ -2214,30 +2229,30 @@ width: 100%;
       flex-direction: column;
       width:  100%;
       margin-bottom: 25px;
-    }
+     }
 
-    .plan-imagen-responsive img{
+     .plan-imagen-responsive img{
       width: 100%;
-    }
+     }
    
-  /*TITULO DE LA IMAGEN GRANDE CON LOS 4 POSTS*/
+    /*TITULO DE LA IMAGEN GRANDE CON LOS 4 POSTS*/
     .plan-total-alimentacion .plan-imagen-responsive h1{
       font-size: 1.6rem;
       margin-top: 7px;
-    }
+      }
 
   /*FIN DE LAS 4 FOTOS Y UNA GRANDE*/
 
 
-  /*----------------------------------------------------------------------*/
-/*------------------------------------------------------------*/
+   /*----------------------------------------------------------------------*/
+   /*------------------------------------------------------------*/
    /*------------TITULO DE RECETAS, PLANE,DIETA,TURMO---*/
-   .titulo-otras-paginas{
+    .titulo-otras-paginas{
     width: 100%;
     height:40px;
     display: block;
     margin-bottom: 20px;
-  }
+    }
 
   .titulo-otras-paginas h1{
    font-family: 'Times New Roman', Times, serif;
@@ -2252,15 +2267,13 @@ width: 100%;
   /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS..................................................*/
   /* NO PONER DISPLAY FLEX NI FLEX DIRECCION */
   .categorias-subcategorias{
-    width: 100%;
+     width: 100%;
     height: 100%;
     max-height: 150px;
-   display: flex;
-   flex-direction: row;
+    display: flex;
+    flex-direction: row;
     margin-top: 80px;
-  margin-bottom:  25px;
-
-
+    margin-bottom:  25px;
     overflow-x: auto;
     overflow-y: hidden;
     scrollbar-width: none; /* Firefox */
@@ -2303,11 +2316,10 @@ width: 100%;
 
 
       /*--SLIDER DE CATEGORIAS DE PLAN, DIETA Y TURISMO------------------.*/
-    .caja-texto-slider{
+     .caja-texto-slider{
       display: block;
       width: 100%;
       margin-top: 52px;
-
       }
     
       
@@ -2322,53 +2334,51 @@ width: 100%;
           -ms-overflow-style: none;  /* Internet Explorer 10+ */
           white-space: nowrap;
            padding: 8px 2px;
-   
+        
            }
         
-      /*CAJA DE LA FLECHA..*/
-   .caja-texto-slider .leftNav {
-    display: inline-block;
-    width:24px;
-    height: 24px;
-    border-radius: 12px;
-    position: relative;
-    top:  41px;
-    left: -0px;
-    background-color: #568632;
-    }
+      /*CAJA DE LA FLECHA. #568632.*/
+     .caja-texto-slider .endfor .leftNav {
+     display: inline-block;
+     width:24px;
+     height: 24px;
+     border-radius: 12px;
+     position: relative;
+     top:  41px;
+     left: -0px;
+     }
   
      /*--FLECHAS  "Arial Black";----*/
-   .leftNav .arrow-left{
-  margin-top: 13px;
-  margin-left: 3px;
-  display: inline-block;
-  position: absolute;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
-  color: #fff;
-  text-align: center;
-  font-weight: 300;
-  cursor: pointer;
-  transform: translateY(-50%);
-   }
+    .leftNav .arrow-left{
+    margin-top: 13px;
+    margin-left: 3px;
+    display: inline-block;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    cursor: pointer;
+     transform: translateY(-50%);
+    }
   
   
   
-   .caja-texto-slider .rightNav {
+      .caja-texto-slider .rightNav {
       width:24px;
       height: 24px;
-    display: inline-block;
-    font-weight: bolder;
-    cursor: pointer;
-    border-radius: 12px;
-    position: relative;
-    top:  -55px;
-    right: -26.5em;
-    background-color: #568632;
-  
-  }
+      display: inline-block;
+      font-weight: bolder;
+      cursor: pointer;
+      border-radius: 12px;
+      position: relative;
+      top:  -55px;
+      right: -19.9em;
+      background-color: #568632;
+     }
      
-  .rightNav .arrow-right{
+    .rightNav .arrow-right{
     margin-top: 13px;
     margin-right: -15px;
     display: inline-block;
@@ -2828,7 +2838,6 @@ width: 100%;
     width: 100%;
     max-width: 170px;
     height: 38px;
-    background-color: lightblue;
      }
  
    
@@ -4096,17 +4105,16 @@ text-align: center;
    .cabecera .buscador{
      margin-left: -18px;
    }
+
     .cabecera #controls{
     display: block;
     width: 99.5%;
     margin-top: 4px;
     }
 
-    .buscador #controls   #custom-search-input-header .sin-borde{
+      .buscador #controls   #custom-search-input-header .sin-borde{
       font-size: 1em;
-   
       padding: 4px;
-    
       padding-left: 12px; /*MUEVE LA LETRA*/
       }
     
@@ -6333,7 +6341,6 @@ width: 100%;
     margin-left: 8px;
     font-weight: 700;
     letter-spacing: 0.5px;
-    background-color: mediumvioletred;
     }
      
     
@@ -7333,7 +7340,6 @@ width: 100%;
     max-width: 95px;
     height: 18px;
     margin-top: 42px;
-    background-color: yellow;
     }
 
     .menu-btn .suscribe a h4 {
@@ -7349,7 +7355,6 @@ width: 100%;
    /* FIN IMPORTANTE PARA QUE EL MENU SE ADAPTE*/
    .menu{
    display: 100%;
-
    }
 
    .menu .caja{
@@ -8963,15 +8968,12 @@ width: 600px;
     letter-spacing: 0.2px;
     height: 19px;
     margin-top: 46px;
-    background-color: gray;
     }
 
     .menu-btn .menu-btn__burger{
     display: none;
     }
 
-  
-    /*------------------------*/
    
    /*-------------------------------*/
      
@@ -9644,7 +9646,6 @@ width: 600px;
    letter-spacing: 0.2px;
    height: 19px;
    margin-top: 46px;
-   background-color: gray;
    }
 
    .menu-btn .menu-btn__burger{
@@ -10081,7 +10082,6 @@ padding: 28px;
    letter-spacing: 0.2px;
    height: 19px;
    margin-top: 46px;
-   background-color: rgb(204, 14, 131);
    }
 
    .menu-btn .menu-btn__burger{

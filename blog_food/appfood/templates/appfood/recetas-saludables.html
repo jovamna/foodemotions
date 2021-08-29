@@ -139,7 +139,9 @@
          
                 <!----------------------------------------->   
                 <div class="elemento-imagen">
+                       {% if receta.imagefront %}
                 <img src="{{receta.imagefront.url}}" alt="">
+                {% endif %}
                 </div>
 
                 <div class="elemento-descripcion">

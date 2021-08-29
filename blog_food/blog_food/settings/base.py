@@ -11,16 +11,19 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import environ
+#import environ
 
-env = environ.Env()
+DEBUG=(bool, False)
+
+#SECRET_KEY = 'hr808$*z)hlsz@vkjkw!laua+8yvc9r7&8_@pk@u)oua%=yd0@'
+#env = environ.Env()
 #importante porque si no se pone da fallos
-environ.Env.read_env()
+#environ.Env.read_env()
 
-env = environ.Env(
-    SECRET_KEY=str,
-    DEBUG=(bool, False),
-)
+#env = environ.Env(
+    #SECRET_KEY=str,
+    #DEBUG=(bool, False),
+#)
 
 # Where BASE_DIR is a django source root, ROOT_DIR is a whole project root
 # It may differ BASE_DIR for eg. when your django project code is in `src` folder
@@ -32,10 +35,10 @@ env = environ.Env(
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.str('SECRET_KEY')
+#SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DEBUG', default=False)
+#DEBUG = env.bool('DEBUG', default=False)
 
 #SECURE_SSL_REDIRECT = env.bool('SECURE_SSL_REDIRECT', default=False)
 
@@ -206,10 +209,10 @@ CKEDITOR_CONFIGS = {
 }
 
 #email config
-EMAIL_HOST = env('EMAIL_HOST')
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = env('EMAIL_PORT')
+#EMAIL_HOST = env('EMAIL_HOST')
+#EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+#EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+#EMAIL_PORT = env('EMAIL_PORT')
 
 #try:
 #from .development import *

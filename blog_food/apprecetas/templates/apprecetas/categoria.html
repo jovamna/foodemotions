@@ -12,7 +12,10 @@
               <!------------CONTIENE DOS COLUMNAS DONDE ESTA ESCRITO Y EL COSTADO VACIO------------------>
               <div class="intro">
                    <div class="menu-introescrito">
-                          <!--MENU-->
+
+
+
+                          <!--MENU------------------------------------------------------------->
                           <div class="menu">
                           <ul>
                           <li>
@@ -21,8 +24,6 @@
                           <li>    
                           <a  href="{% url 'apprecetas:recetas-saludables' %}">Recetas Saludables<i class="right"></i> </a>
                           </li>
-
- 
                           <!--MENU ESCONDIDO -CATEGORIAS------------------>
                           <li>
                           <p>Categorias<i class="right"></i></p>
@@ -40,8 +41,6 @@
                           </ul>
                           </li>
                           <!---FIN MENUS ESCONDIDO CATEGORIAS---->
-                            
-               
 
                           <!--NOMBRE DE LA CATEGORIA------->
                           <li>
@@ -55,10 +54,10 @@
                           <!----FIN NOMBRE DE LA CATEGORIA--->
 
                           </ul>
-                          </div>
-                          <!--MENU------------------>
+                       </div>
+                      <!--FIN --MENU------------------------------------------------------------>
 
-
+                        <!---------------------------------------------------->
                           <div class="introescrito">
                           <!---TITULO DE CATEGORIA--->
                           {% load mptt_tags %}
@@ -70,20 +69,21 @@
                           {% endfor %}
                           <!---FIN TITULO DE CATEGORIA--->        
                           </div>
+                          <!------------------------------------------------->
 
-                         </div>
-                          <!-- FIN DIV MENU INTRO ESCRITO--->
+                  </div>
+                  <!-- FIN DIV MENU-INTRO ESCRITO------------------------------------------>
 
         <!------------------------------------------------------------------------------------------------------------->
-                          <div class="intro-dos-vacios">
-                                       <!------ LAS CATEGORIAS---------------->
-                                       <!--LAS DEJE VACIAS--->
+                                         <div class="intro-dos-vacios">
+                                        <!------ LAS CATEGORIAS---------------->
+                                        <!--LAS DEJE VACIAS--->
                                            <!--FIN CATEGORIAS--->
                                           </div>
 
 
-                         </div>
-                     <!---FINAL INTRO--->
+          </div>
+         <!---FINAL INTRO-------------------------------------------------------------------->
 
                   </div>
                  <!-- FIN DIV container-categorias-subcategorias-->
@@ -121,43 +121,66 @@
 
             
     <!---100%--->
-    <div class="container-posts-categorias">                        
-                <!------------columna de 70%----------------------->
-      <div id = "posts-categoria">
-         <!---DIV DE 4 POST DE POSTS dentro de posts-cetagoria poner 100%--->          
-       <div class="elemento-categoria">   
-            {% for receta in receta %}
-            <!--  IMAGEN DEL POSTPERDER---->
-            <div id="imagen-elemento-categoria"> 
+    <div class="container-posts-categorias">   
+                <!------------columna de 100%----------------------->
+               <div id = "posts-categorias-aside">
+
+
+           <!---DIV DE 4 POST DE POSTS dentro de posts-cetagoria poner 70%--->   
+
+
+            <div class=" post-cuatro-categorias">
+                 {% for receta in receta %}
+           <div class="elemento-categoria">   
+
+              
+
+
+
+
+                   <!--  IMAGEN DEL POSTPERDER---->
+                   <div id="imagen-elemento-categoria"> 
                     {% if receta.image %}
                     <img src ="{{receta.image.url}}">
                     {% endif %}
-                                 
-                    <!--  DESCRIPCION RECETAS---->
+                    <!--  DESCRIPCION RECETAS----------------->
                     <div class ="imagen-descripcion">
                     <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
                     <h2>{{receta.title}}</h2>
                     <!--  DESCRIPTION DEL POST PERDER---->
                     <p>{{receta.description|truncatechars:60|safe}} </p> 
                     <!--  LINK QUE REDIRIGE AL POST --->
-                    </a>                             
+                    </a>   &                          
                     <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
-                    <p class="a">Por <span class="o"> {{ receta.author }}</span> </p> 
+                    <span class="a" >Por:<span class="o"> {{ receta.author }}</span> </span> 
                     <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE EBDFOR--->
                     </div>
-                    <!--fin IMAGEB descripcion--->
-            </div>
-            <!--25%  FIN imagen-elemento-categoria--->         
-            {% empty %}
-            <p>No hay posts</p>
-            {% endfor %}    
-            <!----------CIERRA EL POST ---------->  
-             </div>
-       </div> 
-               <!---75% FIN POSTS CATEGORIAS --->   
-                  <div id="aside">    </div>
-                <!---FINAL ENDFOR DE 4 POST IN POSTS--->
+                    <!--fin IMAGEB descripcion------------------------------>
+                </div>
+                <!--25%  FIN IMAGEN ELEMENTO CATEGORIA ------------------------>  
 
+
+
+
+
+                <!----------CIERRA EL POST ---------->  
+         </div>
+                 {% empty %}
+            <p>No hay posts</p>
+        {% endfor %}  
+           
+        <!---------------FIN ELEMENTO CATEGORIA-----------------------> 
+       </div> 
+       <!--FINAL QUE COERRA POST 4 CATEGORIAS----------------->
+       
+
+ 
+      
+               <!---75% FIN POSTS CATEGORIAS --->   
+                  <div id="aside">  </div>
+                <!---FINAL ENDFOR DE 4 POST IN POSTS--->
+                 </div>
+                 <!-----FINAL POOST-CATEGORIAS-ASIDE----------------->
                   </div>
            <!---100%-FIN CONTAINER POSTS CATEGORIAS---------------------------->
              
@@ -185,6 +208,13 @@
 
 
 
+ {% block redes %}
+            {% endblock redes %}
+
+
+
+ {% block carrusell %}
+  {% endblock carrusell %}
 
 
 

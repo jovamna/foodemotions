@@ -515,9 +515,7 @@ font-size: 0.4rem;
 font-family: 'Archivo Black', sans-serif;
 }
 
-.box button[type="submit"]:hover{
-background: ;
-}
+
 /*FIN de la cajita del correo */
 
 
@@ -611,11 +609,10 @@ background: ;
     /*CONTAINER DE LA HAMBURGUESA*/
     .menu-btn {
       display: inline-flex;
-         width: 39px;
-         cursor: pointer;
-         transition: all .5s ease-in-out;
-
-          }
+      width: 39px;
+     cursor: pointer;
+      transition: all .5s ease-in-out;
+      }
      
     
  
@@ -624,7 +621,6 @@ background: ;
   width: 5%;
   display: inline-flex;
   max-width: 110px;
-
    }
  
  
@@ -736,8 +732,6 @@ background: ;
      height: 220px;
      display: flex;
      flex-direction: column;
-
-
    }
 
     /*..CAJA DE MENU-INTRO-TITULO..*/
@@ -759,9 +753,7 @@ background: ;
      flex-direction: column;
      height: 100%;
      max-height: 120px;
-   
-
-   }
+     }
 
   
 
@@ -772,13 +764,12 @@ background: ;
       max-height: 40px;
       margin: 4px, 4px;
       padding: 8px 2px;
- 
     }
 
-    .menu ul{
+     .menu ul{
       display: flex;
       flex-direction: row;
-    }
+     }
      
     
   
@@ -794,11 +785,11 @@ background: ;
         width: 60%;
        }
   
-        /* items del menu desplegable al pasar el ratón */
-      .menu  ul li:hover > ul {
-        display:block;
-        width: 80%;  /*IMPORTANTE*/
-       }
+    /* items del menu desplegable al pasar el ratón */
+    .menu  ul li:hover > ul {
+     display:block;
+    width: 80%;  /*IMPORTANTE*/
+    }
    
    .menu-intro-titulo{
      display: flex;
@@ -895,7 +886,6 @@ background: ;
       width:100%;
       display: flex;
       flex-direction: column;
-
     }
 
     #posts-categoria{
@@ -959,19 +949,13 @@ background: ;
       }
   
      /*...................*/
-
-     .container-total-carrusell{
-
-     }
-
      #carrusel {
       float:left;
       width:95%;
       overflow:hidden;
       height: 280px;
       position:relative;
-      margin-bottom: 50px;
-   
+      margin-bottom: 50px;  
       }
 
       .carrusel {
@@ -979,10 +963,7 @@ background: ;
         height: 200px;
         left: 1px;
         position:absolute;
-        z-index:0;
-      
-      
-       
+        z-index:0; 
        }
 
        .carrusel>div {
@@ -1003,9 +984,9 @@ background: ;
     
       }
        
-  .product p{
+   .product p{
     margin-top: 8px;
-  }
+   }
 
 
     /*..CONTAINER DE LAS FLECHAS Y CIRCULO ...*/ 
@@ -1208,9 +1189,6 @@ font-size: 0.7rem;
 font-family: 'Archivo Black', sans-serif;
 }
 
-.box button[type="submit"]:hover{
-background: ;
-}
 /*FIN de la cajita del correo */
 
 
@@ -1335,7 +1313,6 @@ background: ;
    font-weight: 900;
    color:#2d2d2d;
    margin-top: 30px;
-   background-color: rebeccapurple;
     }
 
     .boletin  a h4:hover{
@@ -1388,7 +1365,6 @@ background: ;
 
    nav{
      background-position: 80% 90%;
-  
    }
 
     nav ul{
@@ -1428,17 +1404,14 @@ background: ;
 
       /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
       .subcategoria{
-     width: 80%;
+      width: 80%;
        }
 
-    .imagenes-pequeñas .subcategoria h3{ 
-      font-size: 0.8rem;
-     
-    }
+     .imagenes-pequeñas .subcategoria h3{ 
+      font-size: 0.8rem;   
+     }
 
 
-  
-     
    
      /*...TITULO DE LA CATEGORIA..DE LA PAGINA DE LA CATEGORIA...................letras*/
      .categoria h2{
@@ -1449,10 +1422,6 @@ background: ;
       color:#2d2d2d;
       }
     
-
-    .columna-categorias{
-
-    }
 
     /*DE LA PAGINA RECETAS*/
    /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/
@@ -1703,9 +1672,6 @@ font-size: 0.7rem;
 font-family: 'Archivo Black', sans-serif;
 }
 
-.box button[type="submit"]:hover{
-background: ;
-}
 /*FIN de la cajita del correo */
 
 
@@ -1830,7 +1796,6 @@ background: ;
    font-family: 'Cabin', sans-serif;
    font-weight: 600;
    color:#2d2d2d;
-   background-color: yellow;
    }
    
     .boletin a h4:hover{
@@ -1878,49 +1843,50 @@ background: ;
    z-index:3000;
    }
 
-   /*NAV*/
-    nav ul  {
+       /*NAV*/
+      nav ul  {
       margin-left: -5px;
-    }
-     nav ul li p{
+       }
+ 
+       nav ul li p{
        font-size: 1rem;
        z-index: 1000;
-     }
+       }
 
-     nav ul li ul li a{
+      nav ul li ul li a{
       width: 100%;
        margin-left: 76px;
-     }
-   /*CIERRE NAV*/
+      }
+      /*CIERRE NAV*/
  
     /*CAJA DEL MENU-INTROESCRITO Y INTRO-DOS-VACIOS (COSTADO)*/
    .intro{
      display: block;
      width: 100%;
-  
    }
-      .menu-introescrito{
-        display: flex;
-        width: 90%;
-      }
+
+    .menu-introescrito{
+    display: flex;
+    width: 90%;
+    }
 
       .intro-dos-vacios{
         display: flex;
         width: 10%;
       }
-      .imagenes-pequeñas{
+
+       .imagenes-pequeñas{
         width: 100%;
-      }
+       }
   
-        /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
-        .subcategoria{
-       width: 80%;
-         }
+      /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
+    .subcategoria{
+    width: 80%;
+    }
   
-      .imagenes-pequeñas .subcategoria h3{ 
-        font-size: 0.8rem;
-       
-      }
+    .imagenes-pequeñas .subcategoria h3{ 
+    font-size: 0.8rem;
+   }
   
   
     
@@ -2013,9 +1979,9 @@ background: ;
 
      .carusel{
       margin-top: 18%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
-
      }
      
+
      /*CIRCULO  AYUDA A QUE ESTE REDONDO*/
      .container-total-carrusell li.right-arrow{
       margin-left: 87%;
@@ -2060,6 +2026,7 @@ background: ;
     margin: auto;
     height: 70px;
     }
+
    .social2{
    display: flex;
    flex-direction: row; 
@@ -2190,9 +2157,6 @@ font-size: 0.7rem;
 font-family: 'Archivo Black', sans-serif;
 }
 
-.box button[type="submit"]:hover{
-background: ;
-}
 /*FIN de la cajita del correo */
 
 
@@ -2324,7 +2288,6 @@ background: ;
      font-family: 'Cabin', sans-serif;
      font-weight: 600;
      color:#2d2d2d;
-     background-color: red;
      }
      
       .boletin a h4:hover{
@@ -2398,8 +2361,9 @@ background: ;
    .intro{
     display: block;
     width: 100%;
- 
-  }
+    }
+
+
      .menu-introescrito{
        display: flex;
        width: 92%;
@@ -2409,6 +2373,8 @@ background: ;
        display: flex;
        width: 10%;
      }
+
+
      .imagenes-pequeñas{
        width: 100%;
      }
@@ -2419,8 +2385,7 @@ background: ;
         }
  
      .imagenes-pequeñas .subcategoria h3{ 
-       font-size: 0.8rem;
-      
+       font-size: 0.8rem;     
      }
 
   /*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
@@ -2436,8 +2401,7 @@ background: ;
       flex-direction: column;
       width: 100%;
       margin: auto;
-      height: 90px; 
-    
+      height: 90px;    
      }
      
      /*...TITULO DE LA CATEGORIA..DE LA PAGINA DE LA CATEGORIA...................letras*/
@@ -2479,9 +2443,6 @@ background: ;
       }
 
  
-     .imagen-descripcion{
-
-    }
       
              /* TITULO DEL POST*/
              .imagen-descripcion h2{
@@ -2660,9 +2621,9 @@ height: 37px;
 border: 1.5px solid 	#DCDCDC;
 padding: 0 9px;
 border-radius: 5px 0 0 5px;
-
-
 }
+
+
 /*.EL COMPLEMENTO DEL ANTERIOR*/
 .box button[type="submit"]{
 left: 7px;  /*EL TRUCO IMPORTANTE*/
@@ -2678,9 +2639,7 @@ font-size: 0.7rem;
 font-family: 'Archivo Black', sans-serif;
 }
 
-.box button[type="submit"]:hover{
-background: ;
-}
+
 /*FIN de la cajita del correo */
 
 
@@ -2805,7 +2764,6 @@ background: ;
    font-family: 'Cabin', sans-serif;
    font-weight: 600;
    color:#2d2d2d;
-   background-color: rosybrown;
    }
    
     .boletin a h4:hover{
@@ -2935,9 +2893,9 @@ z-index: 800;
 
   /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
  .elemento-categoria{
-display: block;
-position: relative;
-float: left;
+  display: block;
+  position: relative;
+  float: left;
  width: 100%;
  text-align: start;
  border-radius: 2px ;
@@ -2960,10 +2918,7 @@ float: left;
     }
 
 
-   .imagen-descripcion{
 
-  }
-    
            /* TITULO DEL POST*/
            .imagen-descripcion h2{
             margin-bottom: 5px;
@@ -3030,9 +2985,7 @@ float: left;
     height: 80px;
     }
 
-  .social2{
- 
-   }
+
 
   .icon-social1 li{
   list-style: none;
@@ -3158,9 +3111,7 @@ font-size: 0.7rem;
 font-family: 'Archivo Black', sans-serif;
 }
 
- #footer-categorias .box button[type="submit"]:hover{
-background: ;
-}
+
 /*FIN de la cajita del correo */
 
 
@@ -3286,7 +3237,6 @@ background: ;
    font-family: 'Cabin', sans-serif;
    font-weight: 600;
    color:#2d2d2d;
-   background-color: yellow;
    }
    
     .boletin a h4:hover{
@@ -3441,9 +3391,6 @@ float: left;
     }
 
 
-   .imagen-descripcion{
-
-  }
     
            /* TITULO DEL POST*/
            .imagen-descripcion h2{
@@ -3498,8 +3445,7 @@ float: left;
     flex-direction: row;  
     justify-content: space-between;
     clear: both;
-     z-index: 1000;
-   
+     z-index: 1000; 
     }
  
   /*SUB-caja ICONOS SOCIALES*/
@@ -3510,27 +3456,25 @@ float: left;
     height: 80px;
     }
 
- .social2{
- }
 
-.icon-social1 li{
-list-style: none;
-display: inline-flex;
- }
+  .icon-social1 li{
+  list-style: none;
+  display: inline-flex;
+   }
 
-.icon-social1 p{
-font-size: 1rem;
-word-spacing: -3px;
-letter-spacing: -2px;
-font-family: 'Archivo Black', sans-serif;
-padding-bottom: 10px;
-color: #2d2d2d;
-}
+ .icon-social1 p{
+  font-size: 1rem;
+  word-spacing: -3px;
+  letter-spacing: -2px;
+  font-family: 'Archivo Black', sans-serif;
+  padding-bottom: 10px;
+   color: #2d2d2d;
+   }
 
-.icon-social1 .icon-social1 ul{
-display: inline-flex;
-list-style: none;
-}
+  .icon-social1 .icon-social1 ul{
+   display: inline-flex;
+   list-style: none;
+   }
 
 
 .icon-social1  ul li .fa-envelope{
@@ -3552,7 +3496,6 @@ height: 25px;
 padding: 2px 2px 2px 2px;
 border-radius: 25px;
 border: solid #E9E9E9;
-
 }
 
 
@@ -3564,7 +3507,6 @@ height: 25px;
 padding: 2px 2px 2px 2px;
 border-radius: 25px;
 border: solid #E9E9E9;
-
 }
 
 
@@ -3578,7 +3520,6 @@ height: 25px;
 padding: 2px 2px 2px 2px;
 border-radius: 25px;
 border: solid #E9E9E9;
-
 }
 
 
@@ -3586,10 +3527,9 @@ border: solid #E9E9E9;
  .box{
   display: flex;
   flex-direction: column;
-width: 49.8%;
-height: 80px;
-
-}
+  width: 49.8%;
+  height: 80px;
+  }
 
  /*LETRA DE LA CAJA DE SUSCRIBIR*/
 .box h3{
@@ -3644,9 +3584,7 @@ font-size: 0.7rem;
 font-family: 'Archivo Black', sans-serif;
 }
 
-.box button[type="submit"]:hover{
-background: ;
-}
+
 /*FIN de la cajita del correo */
 
 
@@ -3769,7 +3707,6 @@ background: ;
    font-family: 'Cabin', sans-serif;
    font-weight: 600;
    color:#2d2d2d;
-   background-color: blueviolet;
    }
    
     .boletin a h4:hover{
@@ -3899,14 +3836,14 @@ z-index: 800;
 
   /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
  .elemento-categoria{
-display: block;
-position: relative;
-float: left;
- width: 100%;
- text-align: start;
- border-radius: 2px ;
- background-color:#EFF4EB;
- }
+   display: block;
+   position: relative;
+   float: left;
+   width: 100%;
+   text-align: start;
+    border-radius: 2px ;
+   background-color:#EFF4EB;
+   }
 
      /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
     #imagen-elemento-categoria{
@@ -3924,10 +3861,7 @@ float: left;
     }
 
 
-   .imagen-descripcion{
-
-  }
-    
+ 
            /* TITULO DEL POST*/
            .imagen-descripcion h2{
             margin-bottom: 5px;
@@ -4032,8 +3966,7 @@ float: left;
    /*BOTON ICONO REVISTA Y SOCIALES*/
    .boletin{
     width: 100%;
-    max-width: 120px;
-  
+    max-width: 120px; 
     }
  
 
@@ -4045,7 +3978,6 @@ float: left;
    font-family: 'Cabin', sans-serif;
    font-weight: 600;
    color:#2d2d2d;
-   background-color: rosybrown;
    }
    
     .boletin a h4:hover{
@@ -4393,9 +4325,7 @@ font-size: 0.7rem;
 font-family: 'Archivo Black', sans-serif;
 }
 
-.box button[type="submit"]:hover{
-background: ;
-}
+
 /*FIN de la cajita del correo */
 
 

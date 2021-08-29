@@ -2550,7 +2550,6 @@
       position: relative;
       float: left;
       margin-right: 20px;
-      background-color: blue;
       }
 
 
@@ -4143,7 +4142,6 @@ z-index:3000;
         position: relative;
         float: left;
         margin-top: 30px;
-     background-color: cadetblue;
         }
   
       .boletin h4{
@@ -4941,7 +4939,7 @@ z-index:3000;
       position: relative;
       float: left;
       margin-right: 15px;
-      background-color:  blue;
+    
       }
 
     .boletin h4{
@@ -5669,7 +5667,6 @@ nav li a p{
       position: relative;
       float: left;
      margin-right: 14px;
-     background-color: cornflowerblue;
       }
 
     .boletin h4{
@@ -6357,7 +6354,6 @@ nav li a p{
      width: 30%;
      max-width: 170px;
       height: 45px;
-    background-color: red;
     }
 
      

@@ -12,9 +12,13 @@
                
               <!--------------------------------------------------------------->
               <div class="intro">
+
+              <!---A-------------------------------------------------------------------->
                    <div class="menu-introescrito">
-                              <!--MENU-->
-                               <div class="menu">
+
+
+                      <!--MENU---------------------------------------------------------->
+                      <div class="menu">
                                <ul>
                                <li>
                                <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
@@ -22,9 +26,7 @@
                                <li>    
                                 <a  href="{% url 'appfood:recetas-dieteticas' %}">Recetas dieteticas<i class="right"></i> </a>
                               </li>
-
-
-                              
+           
                           <!--MENU ESCONDIDO -CATEGORIAS-HAY QUE CAMBIARLO CODIGO NO ES DE RECIPE----------------->
                           <li>
                           <p>Categorias<i class="right"></i></p>
@@ -43,9 +45,6 @@
                           </li>
                           <!---FIN MENUS ESCONDIDO CATEGORIAS---->
                             
-
-
-
                               <li>
                              {% load mptt_tags %}
                              {% for recipe in category_deals %}
@@ -55,9 +54,9 @@
                             {% endfor %}
                             </li>
 
-                          </ul>
-                          </div>
-                        <!---FIN -MENU---------------------------------------------->
+                       </ul>
+                     </div>
+                     <!---FIN -MENU---------------------------------------------->
 
 
 
@@ -68,26 +67,25 @@
                               {% load mptt_tags %}
                               {% for recipe in category_deals %}
                                <!--  TITULO--CATEGORIA---> 
-                              <div class="menu-intro-titulo">  
-                                        <h2> {{category_deals.get}}</h2>     
+                              <div class="menu-intro-titulo"><h2> {{category_deals.get}}</h2>     
                               </div>
                               {% endfor %}
                               <!---FIN INTRO TITULO-->        
-                              </div>
-                            <!---FIN INTROESCRITO---------------->
+                            </div>
+                           <!--------------------FIN INTROESCRITO----------------------------->
+
+
+
                          </div>
                       <!-- FIN DIV MENU-INTRO ESCRITO-------------------------->
-                                       <div class="intro-dos-vacios">
+                                         <div class="intro-dos-vacios">
                                        <!------ LAS CATEGORIAS---------------->
-                                       
-                                          </div>
+                                      </div>
+                      </div>
+            <!---FINAL INTRO-------------------------------------------------------------->
 
-
-                         </div>
-                     <!---FINAL INTRO--->
-
-                  </div>
-                 <!-- FIN DIV container-categorias-subcategorias-->
+          </div>
+         <!-- FIN DIV container-categorias-subcategorias-->
 
 <!-------------------------------------------------------------------------------------------------------------------->
                   <!---IMAGENES DE LAS SUBCATEGORIAS-->
@@ -121,15 +119,17 @@
         <!---DIV  DEBE MEDIR 100%  CONTAINER DE 4 POST Y DE RECETAS--->
    <div class="container-posts-categorias">
           <!--DEBE MEDIR  80%-------------80%---------->
-      <div id = "posts-categoria">
+         <div id = "posts-categorias-aside">
           <!--------------- INICIO POST CATEGORIA------------------------->
-      
+        <div class=" post-cuatro-categorias">
         <!---DIV DE 4 POST DE POSTS--->
+
+        
+             
         <div class="elemento-categoria">
 
-
-              {% load mptt_tags %}
-              {% for recipe in post_recipe %}
+ {% for recipe in post_recipe %}
+            
               <!---FECHA E IMAGEN-->  
               <div id="imagen-elemento-categoria"> 
                    <!-- IMAGEN--->
@@ -155,14 +155,16 @@
                     <!--fin IMAGEB descripcion--->
              </div>
             <!--25%  FIN imagen-elemento-categoria--->  
-
-
-
-            {% empty %}
+       {% empty %}
             <p>No hay posts</p>
-            {% endfor %}    
+            {% endfor %}  
+            
             <!----------CIERRA EL POST ---------->  
              </div>
+           
+
+
+
        </div> 
           <!---FIN DIV POSTS CATEGORIA 75%--->    
 
@@ -171,7 +173,8 @@
                      <!-- 20% ASIDE --->
                     <div id="aside">    </div>
                     <!--FIN ASIDE 20%--->
-      
+           </div>
+                    <!---------------FIN POST CATGEORIA Y ASIDE--->
       <!--FIN CONTAINER CATEGORIAS Y SUBCATEGORIA 100% TODO-->     
       </div>
                <!------------------------------------------->
