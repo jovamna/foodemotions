@@ -1034,7 +1034,345 @@ text-align: center;
 
    }
   
+   @media only screen and (min-width: 320px) and  (max-width: 568px)  {
+    #wrapper {
+      margin:0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      }
+      #wrapper > * {
+        padding: 17px;
+        }  
 
+    body{
+    margin: 0;
+    margin-bottom: 90px;
+    }
+
+
+    .cabecera{
+      width: 100%;
+      max-width: 568px;
+      max-width: 320px;
+      height: 40px; 
+      display: flex;
+      flex-direction: row;
+      }
+
+    #container{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 568px;
+      min-width: 320px;
+      margin: auto;
+      margin-top: 16%;
+    }  
+
+      /*.. #DCDCDC ..*/
+      header{
+        width: 100%;
+        max-width:568px;
+        min-width:320px;
+        height:99px;
+        top:0;
+        position:fixed;
+        z-index:2000;
+        margin: auto;
+        box-shadow: 0 8px 6px -6px;
+        background-color: #fff;
+       }
+    
+
+    
+    header.black{
+    height:  99px;
+    width: 100%;
+    background-color: #fff;
+    }
+
+
+    /*FIN ANIMACION SUBRAYADO */
+     .portada{
+       width: 100%;
+      max-width:550px;
+      min-width:320px;
+      display: block;
+     position: relative;  /*ESTO ARREGLO LA CABECERA*/
+     float: left;
+    margin: auto;
+      z-index: 30;
+     }
+
+     .portada .portada-img{
+      display: none;
+      visibility: hidden;
+         }
+
+
+          
+    /*--PORTADA RECETAS SALUDABLE--Y DEMAS PAGINAS--------------------------*/
+   /*...............................................*/
+    .imagen-responsive-ipod{
+      display: none;
+      visibility: hidden;
+    }
+
+    /*CONTAINER PRINCIPAL DE LA IMAGEN Y DE LA CAJA DE TITULO Y MENU*/
+    .portada .portada-img-responsive{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 568px;
+      min-width: 320px;
+      z-index: 80;
+      margin: auto;
+      }
+
+    
+      .portada .portada-img-responsive .imagen-responsive-movil {
+        width: 100%;
+        max-width: 568px;
+        min-width: 320px;
+
+      }
+    /*.............MOVIL...................*/
+     .portada-img-responsive .imagen-responsive-movil img{
+   width: 100%;
+    max-width: 520px;
+     min-width: 320px;
+    padding: 0 0;
+    z-index: 40;
+    }
+     
+
+    /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
+    .portada .portada-img-responsive .portada-img3-responsive{
+      width:92%;
+      height: 55%;
+      display: block;
+      position: absolute;
+      margin-top: 170px;
+      margin-left:  27px;
+      background-color: #fff;
+      border-bottom: 3px solid #568632;
+      border-right: 3px solid #568632;
+      z-index: 120;
+      }
+  
+  /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
+  .cabecera .logo{
+    display: inline-flex;
+   width: 100%;
+   max-width: 190px;
+  height: 38px;
+    }
+     
+ 
+   .cabecera .logo img{
+     display: block;
+    width: 100%;
+    max-width: 190px;
+    height: 38px; 
+    }
+ 
+ 
+           /*caja hay 2. A */
+     .menu-btn {
+     display: block;
+     position: relative;
+     float: right;
+     width: 40%;
+     max-width: 210px;
+     height: 38px;
+    margin: auto;
+     }
+ 
+
+  .suscribe {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  max-width: 70px;
+  height: 34px;
+  }
+ 
+   
+  .suscribe a h4{
+  font-size: 0.9rem;
+  margin-top: 22px;
+  margin-left: 8px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  }
+  
+
+  .cabecera .buscador{
+  display: none;
+  }
+
+
+  .buscador-responsive{
+  display: block;
+  position: relative;
+  float: left;
+  width: 99.9%;
+  height: 32px;
+  margin-top: 8px;
+  }
+   
+
+   .buscador-responsive #controls-responsive{
+    width: 100%;
+    height: 30px;
+    z-index: 10;
+    }
+
+
+  .buscador-responsive #controls-responsive   #custom-search-input-responsive{
+  width: 99%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9em;
+  padding: 1px 1px;
+  border-radius: 8px;
+  border: 2px solid #f4f4f4;
+  }
+
+
+
+  .buscador-responsive #controls-responsive   #custom-search-input-responsive .sin-borde{
+  height: 25px;
+  width: 90%;
+  border-radius: 15px;
+  font-size: 0.7em;
+  font-weight: lighter;
+  padding-left: 10px; /*MUEVE LA LETRA*/
+  }
+
+
+
+  .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
+  height: 25px;
+  width: 10%;
+  border-radius: 10px;
+  background-color: #fff;
+  }
+
+
+  .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
+  outline: none;
+  border: 0;
+  background-color: #fff;
+  }
+    
+
+     /*---------------------------------------------------------------------*/
+   /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+  .menu-btn .menu-btn__burger {
+  display: block;
+  position: relative;
+  float: right;
+  margin-top: 24px;
+  width: 100%;
+  max-width: 36px;
+  height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+  z-index: 1000;
+  }
+  
+
+
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 36px;  /*IMPORTANTE*/
+  background:#2d2d2d;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+  transition: all .5s ease-in-out;
+  z-index: 800;  
+  }
+
+    
+    /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
+    .portada .portada-img-responsive .portada-img3-responsive{
+      width:92%;
+      height: 55%;
+      display: block;
+      position: absolute;
+      margin-top: 170px;
+      margin-left:  12px;
+      background-color: #fff;
+      border-bottom: 3px solid #568632;
+      border-right: 3px solid #568632;
+      z-index: 120;
+      }
+  
+      
+  
+  
+     /*EL MENU*/
+      .portada-img-responsive #menu-simple-responsive{
+      width: 100%;
+      height: 30px;
+      display: block;
+       }
+  
+  
+       #menu-simple-responsive ul{
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+      margin-bottom: 20px;
+       }
+  
+         
+     #menu-simple-responsive ul li{
+     list-style: none;
+     }
+      
+                
+    #menu-simple-responsive ul li  p{
+    font-size: 1rem;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    margin-left: 8px;
+     }
+  
+  
+     #menu-simple-responsive li p i {
+    border: 1px solid #000000;
+    border-width: 0 0.8px 0.8px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-right: 9px;  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
+    }
+            
+     #menu-simple-responsive .right {
+     transform: rotate(-45deg);
+     -webkit-transform: rotate(-45deg);
+    }
+            
+  
+    /*-----imagen grande de contacto----------------*/
+     .portada-img{
+       display: none;
+       visibility: hidden;
+     }
+ 
+
+   }
 
 
 
@@ -1435,7 +1773,6 @@ text-align: center;
       nav .nav li:hover > ul {
        display: block;
       margin-left: -200px;
-     
       height: 200px;
       visibility: visible; 
       z-index: 598;
