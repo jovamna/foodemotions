@@ -11,7 +11,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="Encuentre recetas saludables y deliciosas e ideas para menús de nuestros cocineros de prueba y expertos en nutrición en la revista EatingWell. Aprenda a elegir alimentos más saludables todos los días..">
         <meta name="keywords" content="Healthy Recipes, Weight Loss, Special Diets, Meal Plans, Healthy Eating">
-        <link rel="canonical" href="https://www.emotionsfoods.com/">
+        <link rel="canonical" href="https://www.foodingemotion.com/">
 
 
         {% if object.slug in request.path %}
@@ -20,7 +20,7 @@
         <meta name="description" property="og:description" content="{{object.content|striptags|truncatewords:20}}">
         <meta property="og:image" content="{{object.image_field.url}}">
         <meta property="og:image:alt" content="{{object.image_alt}}">
-        <meta property="og:url" content="https://www.emotionsfood.com/{{object.slug}}">
+        <meta property="og:url" content="https://www.foodingemotion.com/{{object.slug}}">
         <meta name="twitter:card" value="summary">
 
         {% elif request.path == '/' %}
@@ -47,22 +47,22 @@
 
        {% if object.slug in request.path %}
       <meta property="og:title" content="{{object.title}}">
-      <meta property="og:url" content="http://yourwebsite.com/{{object.slug}}" >
+      <meta property="og:url" content="https://foodingemotion.com/{{object.slug}}" >
 
       <meta property="og:description" content="{% if object.summary %}{{object.summary|striptags|truncatechars:160}}{% else %}
       {{object.text|safe|striptags|truncatechars:160}}{% endif %}">
 
       <meta property="og:image" content="{% if post.header_image %}{{ post.header_image.url }}
-      {% else %}http://yourwebsite.com{% static 'images/home-office.jpg' %}{% endif %}">
+      {% else %}https://foodingemotion.com{% static 'images/home-office.jpg' %}{% endif %}">
 
       <meta name="twitter:card" content="summary_large_image" />
       <title>{{object.title}}</title>
       {% else %}
-      <title>Your title</title>
-      <meta property="og:title" content="Your title">
+      <title>Fooding Emotion</title>
+      <meta property="og:title" content="Recetas Saludables">
       <meta property="og:description" content="Description up to 160 characters">
-      <meta property="og:image" content="http://image-url.png">
-      <meta property="og:url" content="http://yourwebsite.com" >
+      <meta property="og:image" content="https://image-url.png">
+      <meta property="og:url" content="https://foodingemotion.com" >
 
       <meta name="twitter:card" content="summary_large_image" />   
 
@@ -79,11 +79,11 @@
       <meta property="og:title" content="Recetas Saludables, Alimentacion Saludable - EmotionsFood">
       <meta property="og:type" content="articulo">
       <meta property="og:site_name" content="FooodEmotions">
-      <meta property="og:url" content="https://www.emotionsfood.com/">
+      <meta property="og:url" content="https://www.foodingemotion.com/">
       <meta property="og:description" content="Encuentre recetas saludables y deliciosas e ideas para menús de nuestros cocineros profesionales. Aprenda a elegir alimentos más saludables todos los días. ">
-      <meta name="pinterest:url" content="https://www.foodemotions.com/">
+      <meta name="pinterest:url" content="https://www.foodingemotion.com/">
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:url" content="https://www.foodemotions.com/">
+      <meta name="twitter:url" content="https://www.foodingemotion.com/">
       <meta name="twitter:title" content="Food Emotions: Recetas Saludables, Alimentacion Saludable">
       <meta name="twitter:description" content="Encuentre recetas saludables y deliciosas e ideas para menús de nuestros cocineros profesionales. Aprenda a elegir alimentos más saludables todos los días..">
       <meta name="twitter:site" content="@">
@@ -270,7 +270,7 @@
                 </li>
 
                <li > 
-              <a class="{% active 'appfood:dietas-especiales-y-alimentacion-sana' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}"> Dietas y Alimentacion  </a> 
+              <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"> Dietas y Alimentacion  </a> 
               </li>
 
                 
@@ -303,7 +303,7 @@
                 
                 <li> 
                 <a class="{% active 'appfood:recetas-saludables' %}"  href="{% url 'appfood:recetas-saludables' %}" >
-                   Recetas Sanas    
+                   Recetas Saludables 
                   <i class ="fa fa-caret-down"></i>
                  </a>
                         <ul>  
@@ -329,23 +329,18 @@
 
 
                 <li > 
-                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-sana' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}"> Dietas y Alimentacion Sana  </a> 
+                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"> Dietas y Alimentacion Saludable  </a> 
                 </li>
 
                 
 
                 <li> 
-                <a class="{% active 'appfood:noticias-turismo-gastronomico' %}" href="{% url 'appfood:noticias-turismo-gastronomico' %}">Turismo </a>
+                <a class="{% active 'appfood:noticias-turismo-gastronomico' %}" href="{% url 'appfood:noticias-turismo-gastronomico' %}">Turismo y Noticias </a>
                        
                 </li>
               
-
-              
-
-
-
                 <li> 
-                <a class="{% active 'appfood:nosotros' %}" href="{% url 'appfood:nosotros' %}"> Nosotros </a> 
+                <a class="{% active 'appfood:nosotros' %}" href="{% url 'appfood:nosotros' %}">Nosotros </a> 
                 </li>
 
                  <li> 
@@ -682,7 +677,7 @@
                                      {% endif %}
                                      {% if LINK_TWITTER %}
                                      <li> 
-                                     <a href="{{LINK_TWITTER}}" target="_blank"> <i class="fab fa-twitter"></i> </a>
+                                     <a href="{{LINK_TWITTER}}" target="_blank"> <i class="fab fa-pinterest"></i> </a>
                                      </li>
                                      {% endif %}
                                      {% if LINK_INSTAGRAM %}

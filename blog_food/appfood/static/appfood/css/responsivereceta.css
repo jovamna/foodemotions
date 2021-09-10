@@ -836,7 +836,7 @@
     }
      
 
-    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
+    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
     
   #controls-responsive{
     display: block;
@@ -848,16 +848,16 @@
   }
 
 
-   #custom-search-input-responsive{
-   width: 342px;
-   height: 35px;
-   border: 1px solid#c9c9c9;
-   border-radius: 4px;
+    #custom-search-input-responsive{
+    width: 342px;
+    height: 35px;
+    border: 1px solid#c9c9c9;
+    border-radius: 4px;
      display: flex;
      flex-direction: row;
      justify-content: space-between;
      margin: auto;
-   }
+    }
 
 
    #controls-responsive .sin-borde-responsive{
@@ -875,7 +875,7 @@
    }
 
 
-    /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
+    /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA...............FIN BUSCADOR RESPONSIVE*/
 
 
 

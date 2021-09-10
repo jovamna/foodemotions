@@ -57,7 +57,7 @@
               <!--CONTAINER QUE ESTA ENCIMA DE LA FOTO LETRAS-->
               <div class="portada-img3-responsive">
               <div id="menu-simple-responsive">
-                  <ul>
+                  <ul class ="scrollresponsive">
                   <li>
                   <a href="{% url 'appfood:index' %}"  >
                   <p>Inicio<i class="right"></i></p>
@@ -97,12 +97,12 @@
 
         <!-----SUBCATEGORIAS MENU-------<td id="left">&#8592;</td>-- id="right">&#8594---------------------->
   
-          <!-------------------------------------------------------------4----------->
+          <!--------------CAJA QUE SE DESLIZA SCROLL-----------------------------------------------4----------->
            <div class="caja-texto-slider">         
             <!--TITULO DE LAS CATEGORIAS-------------------------------------3--->
              <div class= "endfor">
                 <!---------------------&lt;----------FLECHA LEFT NAV----------------------2------->
-                <div class="leftNav"><span class="arrow-left">&#129120;</span></div>
+               <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
                 <!------------------------------------------------------1------>
                  <ul class="scrollmenu">    
                     {% for categoria in categorias %}
@@ -119,7 +119,7 @@
                     {% endfor %}
                  </ul>
                 <!------------------------FIN UL SCROLLMENU-----&gt;--------------------------1----->
-                <div class="rightNav"><span class="arrow-right">&#129122;</span></div>
+                <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 
               <!--------------------------FLECHA--------------------------.-----2---->
             </div>
             <!--FIN ENDFOR---------------------------------------------3---->   

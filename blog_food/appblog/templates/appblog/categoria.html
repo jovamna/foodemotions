@@ -1,4 +1,4 @@
-{% extends 'appblog/base_categoria.html' %}
+{% extends 'appblog/base-categoria.html' %}
 {% load static %}          
 {% block title %}Categoria Dietas Especiales y Alimentacion Sana{% endblock %}  
  
@@ -20,7 +20,7 @@
                            <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
                            </li>
                            <li>    
-                           <a  href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}">Alimentacion Sana<i class="right"></i> </a>
+                           <a  href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}">Alimentacion Sana<i class="right"></i> </a>
                            </li>
 
                         <!--CATEGORIAS------------------------>
@@ -32,7 +32,7 @@
                         {% for kategoria in categories %} 
                         <!--  TITULO--CATEGORIA---> 
                         <li>
-                        <a href="/dietas-especiales-y-alimentacion-sana/categoria/{{ kategoria.slug }}">
+                        <a href="/dietas-especiales-y-alimentacion-saludable/categoria/{{ kategoria.slug }}">
                         <p> {{categoria.name}}</p> 
                         </a>    
                         </li>
@@ -45,7 +45,7 @@
                            <li>
                            {% load mptt_tags %}
                            {% for posts in category_deals %}
-                           <a href="/dietas-especiales-y-alimentacion-sana/categoria/{{ posts.slug }}">
+                           <a href="/dietas-especiales-y-alimentacion-saludable/categoria/{{ posts.slug }}">
                            <p> {{category_deals.get}}<i class="right"></i></p>
                            </a>
                            {% endfor %}
@@ -111,7 +111,7 @@
                  {% for child in kategoria.get_children %}
                 <li> 
                 <!-- SUBCATEGORIAS ---->
-                 <a href="/dietas-especiales-y-alimentacion-sana/subcategoria/{{ child.slug }}">
+                 <a href="/dietas-especiales-y-alimentacion-saludable/subcategoria/{{ child.slug }}">
                   <h3>{{ child.name }}</h3>
                 </a>
                 </li>
@@ -159,13 +159,13 @@
                </div>
                <!--CONTAINER DE LA DESCRIPCION------->
                <div class="por-descripcion">
-               <a href="/dietas-especiales-y-alimentacion-sana/post/{{ perd.slug}}">
+               <a href="/dietas-especiales-y-alimentacion-saludable/post/{{ perd.slug}}">
                <!-------TITULO PLAN DE COMIDA-------->
                <h2>{{ post.title }}</h2>
                </a>
                <!-------DESCRIPCION POST PLAN DE COMIDA APPBLOG--------->
                <p>{{post.description|truncatechars:190|safe}} </p>
-               <a href ="/dietas-especiales-y-alimentacion-sana/post/{{ post.slug }}/" class="arrow1">
+               <a href ="/dietas-especiales-y-alimentacion-saludable/post/{{ post.slug }}/" class="arrow1">
                 LEE MAS
               <span class="arrow-right"></span>
                </a>

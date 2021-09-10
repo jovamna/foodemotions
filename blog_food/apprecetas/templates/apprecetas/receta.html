@@ -1,4 +1,4 @@
-  {% extends 'apprecetas/recetas_base.html' %}
+  {% extends 'apprecetas/receta-base.html' %}
   {% load static %}
 
    <!---SEO--->
@@ -8,7 +8,7 @@
 
 
 
-  {% block menu-responsive %}
+  {% block buscador-responsive %}
         <div id="controls-responsive">
                 <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
                     <div id="custom-search-input-responsive">
@@ -21,7 +21,7 @@
                     </div>
                 </form>
 	        </div>
-             {% endblock menu-responsive %}
+             {% endblock buscador-responsive %}
  
                    <!-- PRIMER  SEGMENTO MENU SIMPLE-->
                {% block menusimple %}
@@ -87,7 +87,7 @@
          <div class="redes">
             <ul class="iconos-social">
             <li> 
-            {% with base_url="http://emotionsfood.com" %} 
+            {% with base_url="https://foodingemotion.com" %} 
             <a href="https://www.facebook.com/sharer/sharer.php?u={{ base_url|urlencode }}{{ request.get_full_path|urlencode }}&t={{ object.title }}" target="_foodemotions">
             {% endwith %}
             <i class="fab fa-facebook-f"></i></a> <br>
@@ -95,7 +95,7 @@
                 
 
             <li> 
-            {% with base_url="http://emotionsfood.com" %} 
+            {% with base_url="https://foodingemotion.com" %} 
             <a href="https://twitter.com/share?text={{ user.username }}&url={{ base_url|urlencode }}{{ request.get_full_path|urlencode}} " target="_blank" title="Share on Twitter"> 
             {% endwith %}
             <i class="fab fa-twitter"></i>  </a> <br>
@@ -103,7 +103,7 @@
 
 
               <li>
-             {% with base_url="http://emotionsfood.com" %} 
+             {% with base_url="https://foodingemotion.com" %} 
             <a href="http://pinterest.com/pin/create/button/?url=LINK&media=URL_IMAGEN&description=TEXTO={{ base_url|urlencode }}{{ request.get_full_path|urlencode }}&t={{ object.title }}" target="_blank">
             {% endwith %} 
             <i class="fab fa-pinterest" aria-hidden="true"></i> </a> <br>

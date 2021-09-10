@@ -1,7 +1,32 @@
-{% extends 'apprecetas/recetas_base.html' %}
+{% extends 'apprecetas/receta-base.html' %}
 {% load static %}
 
 {% block titulo %}Receta{% endblock titulo %}  
+
+
+
+   <!---BUSCADOR RESPONSIVE----------------------------------------------------------->
+
+  {% block buscador-responsive %}
+        <div id="controls-responsive">
+                <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
+                    <div id="custom-search-input-responsive">
+	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
+                                 
+                          <button type="submit" name="submit" class="boton-responsive btn-succes" value="Search"> 
+                          <span class="icon"><i class="fa fa-search"></i></span>   
+                          </button>
+                          <!--</span>-->
+                    </div>
+                </form>
+	        </div>
+             {% endblock buscador-responsive %}
+
+   <!--FIN BUSCADOR RESPONSIVE------------------------------------------------------>
+
+
+
+    <!-----MENU DEL ARTICULO---------------------------->
         
            {% block menusimple %}
          <div id="menu-simple">

@@ -1,4 +1,4 @@
-{% extends 'appblog/articulo_base.html' %}
+{% extends 'appblog/articulo-base.html' %}
 {% load static %}
 
 {% block title %} {{ object.some_varyable_from_query }}{% endblock %}
@@ -9,7 +9,24 @@
              {% block container-search %}  {% endblock container-search %}
               <!--FIN --------DE LA PAGINA SEARCH----------------->
 
+  <!---BUSCADOR RESPONSIVE----------------------------------------------------------->
 
+  {% block buscador-responsive %}
+        <div id="controls-responsive">
+                <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
+                    <div id="custom-search-input-responsive">
+	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
+                                 
+                          <button type="submit" name="submit" class="boton-responsive btn-succes" value="Search"> 
+                          <span class="icon"><i class="fa fa-search"></i></span>   
+                          </button>
+                          <!--</span>-->
+                    </div>
+                </form>
+	        </div>
+             {% endblock buscador-responsive %}
+
+   <!--FIN BUSCADOR RESPONSIVE------------------------------------------------------>
 
 
               
@@ -22,7 +39,7 @@
             </a>
             </li>
             <li > 
-            <a href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}"> 
+            <a href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"> 
             <p>Dietas y Alimentacion Saludable <i class="right"></i></p>
             </a>
             </li>
@@ -303,7 +320,7 @@
                                           <!--CATEGORIAS CON LIKS --->  
                                         {% load mptt_tags %}
                                          {% for categoria in categories %} 
-                                         <a href="/dietas-especiales-y-alimentacion-sana/categoria/{{ categoria.slug }}" style="text-decoration: none">   
+                                         <a href="/dietas-especiales-y-alimentacion-saludable/categoria/{{ categoria.slug }}" style="text-decoration: none">   
                                         <em>  <h3>{{ categoria }}</h3></em></a>       
                                         {% endfor %}
                                       <!--ENDFOR FINAL DE LA CATEGORIA --->              

@@ -343,10 +343,105 @@ nav{
       margin-bottom: 30px;
      }
     
-    #texto-slider::-webkit-scrollbar { /* WebKit */
+
+     #texto-slider .scroll{
+      display: flex;
+      flex-direction: row;
+      width:  100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* Internet Explorer 10+ */
+      white-space: nowrap;
+       padding: 8px 2px;
+       }
+    #texto-slider::-webkit-scroll { /* WebKit */
     width: 0px;
     height: 10px;
     }
+
+    .scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+
+/*CAJA DE LA FLECHA..*/
+#texto-slider .caja-texto-slider .leftNav {
+  display: inline-block;
+  width:25px;
+  height: 25px;
+  border-radius: 15px;
+  position: absolute;
+  top: 15px;
+  left: 0em;
+  background-color: #568632;
+  }
+
+
+   /*--FLECHAS  "Arial Black";----*/
+   #texto-slider .leftNav .arrow-left{
+  margin-top: 13px;
+  margin-left: 3px;
+  display: inline-block;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+  font-weight:500;
+  cursor: pointer;
+  transform: translateY(-50%);
+  }
+
+
+   #texto-slider .caja-texto-slider:hover  .leftNav {
+    visibility: visible;
+   }
+
+
+   /*..CIRCULO Y FLECHA  MOVER A LO ALTO...*/
+    #texto-slider .caja-texto-slider .leftNav  { 
+    width:25px;
+    height: 25px;
+    display: inline-block;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 15px;
+    position: absolute;
+    top:  360px;
+   left: 45PX;
+    background-color: #568632;
+  }
+  
+ 
+
+   /*..CIRCULO Y FLECHA  MOVER A LO ALTO...*/
+  #texto-slider .caja-texto-slider .rightNav {
+    width:25px;
+    height: 25px;
+    display: inline-block;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 15px;
+    position: absolute;
+    top:  440px;
+    right: 0em;
+    background-color: #568632;
+    }
+   
+    #texto-slider .rightNav .arrow-right{
+  margin-top: 13px;
+  margin-left: 3.5px;
+  display: inline-block;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transform: translateY(-50%);
+   }
+
 
      .endfor ul{
       display: 100%;

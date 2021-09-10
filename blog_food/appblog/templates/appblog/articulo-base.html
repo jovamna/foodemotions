@@ -111,7 +111,7 @@
                 </li>
               
                 <li>
-                 <a class="{% active 'appfood:recetas-dieteticas' %}" href="{% url 'appfood:recetas-dieteticas' %}">Recetas dieteticas
+                 <a class="{% active 'appfood:recetas-dieteticas' %}" href="{% url 'appfood:recetas-dieteticas' %}">
                 <p>Recetas dieteticas</p>
                 </a>
                                                       <ul>
@@ -125,7 +125,7 @@
                 </li>
 
                <li > 
-                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-sana' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}"><p> Dietas y Alimentacion Sana </p>  </a> 
+                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"><p> Dietas y Alimentacion Saludable </p>  </a> 
                 </li>
 
                 <li> 
@@ -159,14 +159,15 @@
 
     <!-- CONTENEDOR DEL CUERPO DEL BODY------------------------------------------------------------------------->
     <div id="container-articulo">
-
-               
-
-                    {% block menusimple %}
-                    <!-- PRIMER  SEGMENTO MENU SIMPLE-->
-              
+        <!--BUSCADORMINIATURA DEL MOVIL----------------------->
+          {% block buscador-responsive %}
+            
+            {% endblock buscador-responsive %}
+               <!---FIN DEL BUSCADOR RESPONSIVE DEL MOVIL---->
+                    <!-- PRIMER  SEGMENTO MENU SIMPLE----------------->
+                    {% block menusimple %}             
                       {% endblock menusimple %}
-                       <!--------------FINAL MENU SIMPLE---------------------------------------------------->
+                    <!--------------FINAL MENU SIMPLE------------------->
 
 
 
@@ -368,7 +369,7 @@
      <div class="container-total-carrusell">
          <!-- CARROUSEL DE MAGENES-->
          <div id="carrusel">
-                       <h2>Lo que buscas...</h2>
+                       <h2>Descubre mas novedades.</h2>
 
                                <!-----FLECHAS------------------------------------->
                                <div class="carusel">
@@ -383,67 +384,67 @@
             <div class="carrusel">
                                <!----------------------------------------->
                                <div class="product" id="product_0">
-                              <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                               <a href="{% url 'appblog:dietas-especiales-y-alimentacion-sana' %}">
-                               <p>Alimentacion Sana</p>
+                              <img src="{% static 'appfood/img/carrusell/260-210-recetasalud.jpg' %}" />
+                               <a href="{% url 'appfood:recetas-saludables' %}">
+                               <p>Recetas Saludables</p>
                                </a>
                              </div>
                            
                            <!---------------------------------------------->
                         <!---------------------------------------------->
                          <div class="product" id="product_1">
-                         <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                          <a href="{% url 'appfood:plan-comidas-saludables' %}">
-                          <p>Dietas Especiales</p>
-                           </a>
+                          <img src="{% static 'appfood/img/carrusell/260-210perder.jpg' %}" />
+                               <a href="{% url 'appfood:plan-comidas-saludables' %}">
+                               <p>Perder Peso</p>
+                               </a>
                     </div>
                      <!---------------------------------------------->
                       <!---------------------------------------------->
                     <div class="product" id="product_2">
-                        <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                         <a href="{% url 'appfood:recetas-saludables' %}"> 
-                         <p>Recetas Saludables</p>
+                        <img src="{% static 'appfood/img/carrusell/260-210-recetdiet.jpg' %}" />
+                         <a href="{% url 'appfood:recetas-dieteticas' %}"> 
+                         <p>Batidos</p>
                          </a>
                     </div>
                      <!---------------------------------------------->
                      <!---------------------------------------------->
                     <div class="product" id="product_3">
-                        <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                        <img src="{% static 'appfood/img/carrusell/260-210-vegano.jpg' %}" />
                         <a href="{% url 'appfood:recetas-dieteticas' %}">
-                         <p>Batidos y Ensaladas</p>
+                         <p>Recetas Veganas</p>
                           </a>
                     </div>
                      <!---------------------------------------------->
                       <!---------------------------------------------->
                     <div class="product" id="product_4">
-                         <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                         <a href="{% url 'appblog:dietas-especiales-y-alimentacion-sana' %}">
-                        <p>pierde peso1</p>
+                         <img src="{% static 'appfood/img/carrusell/260-210-turisfrut.jpg' %}" />
+                         <a href="{% url 'appfood:noticias-turismo-gastronomico' %}">
+                        <p>Frutas exóticas</p>
                         </a>
                     </div>
                      <!---------------------------------------------->
                       <!---------------------------------------------->
                     <div class="product" id="product_5">
-                         <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                        <a href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}">
-                        <p>pierde peso1</p>
+                         <img src="{% static 'appfood/img/carrusell/260-210-dietaalimen1.jpg' %}" />
+                        <a href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}">
+                        <p>Dieta Vegetariana</p>
                         </a>
                     </div>
                       <!---------------------------------------------->
                       <!---------------------------------------------->
                     <div class="product" id="product_6">
-                        <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                        <a href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}">
-                         <p>pierde peso1</p>
+                        <img src="{% static 'appfood/img/carrusell/260-210-gastroitalo.jpg' %}" />
+                        <a href="{% url 'appfood:recetas-saludables' %}">
+                         <p>Gastronomia Italiana</p>
                          </a>
                     </div>
                      <!---------------------------------------------->
                    <!---------------------------------------------->
                     <div class="product" id="product_7">
-                         <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                             <a href="{% url 'appblog:dietas-especiales-y-alimentacion-sana' %}">
-                         <p>pierde peso1</p>
-                         </a>>
+                         <img src="{% static 'appfood/img/carrusell/260-210-dietaalimen.jpg' %}" />
+                             <a href="{% url 'appblog:dietas-especiales-y-alimentacion-saludable' %}">
+                         <p>Alimentacion y Dietas Saludables</p>
+                         </a>
                     </div>
                      <!---------------------------------------------->
 
@@ -477,9 +478,9 @@
                                     <i class="far fa-envelope"></i> </a></li>
                             <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank"><i
                                         class="icon fab fa-facebook-f"></i> </a></li>
-                            <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                            <li> <a href="http://twitter.com/foodemotions" target="_blank">
                                     <i class="fab fa-twitter"></i> </a></li>
-                            <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                            <li> <a href="http://instagram.com/foodemotions" target="_blank">
                                     <i class="fab fa-instagram"></i> </a></li>
                           </ul>
                           </div>
@@ -523,7 +524,7 @@
                var imagenes = new Array();
 
             $(document).ready(function () {
-            var numImages = 6;
+            var numImages = 7;
             if (numImages <= 3) {
            $('.right-arrow').css('display', 'none');
            $('.left-arrow').css('display', 'none');

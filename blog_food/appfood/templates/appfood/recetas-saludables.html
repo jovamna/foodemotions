@@ -97,11 +97,11 @@
           <!-- SUBCATEGORIAS ---->
           <div class= "subcategorias">
                 {% if kategory.image %}
-                <a href="/recetas-saludables/subcategoria/{{ child.slug }}">
+                <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
                 <img src="{{kategory.image.url}}"></a>
                 {% endif %}
                 <div class="nombredesubcategoria">
-                <a href="/recetas-saludables/subcategoria/{{ child.slug }}">
+                <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
                 <h1>{{ kategory.name|linebreaksbr|truncatechars:31}}</h1> 
                 <!------CATEGORIA RESPONSIVE--------------------->
                 <h2>{{ kategory.name|linebreaksbr|truncatechars:12}}</h2>

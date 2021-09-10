@@ -36,7 +36,7 @@
                                   {% for kategory in categoria %}
                                  <!--  TITULO--CATEGORIA---> 
                                    <li>
-                                    <a href="/recetas_saludables/categoria/{{ kategory.slug }}">
+                                    <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
                                    <p> {{kategory.name}}</p> 
                                      </a>    
                                    </li>
@@ -49,7 +49,7 @@
                                 <!--NOMBRE DE LA SUBCATEGORIA----->
                               {% for receta in category %}
                               <li>
-                              <a href="/recetas_saludables/subcategoria/{{ receta.slug }}">
+                              <a href="/recetas-saludables/subcategoria/{{ receta.slug }}">
                               <p> {{categori}}<i class="right"></i></p>
                               </a>
                              </li>
@@ -109,7 +109,7 @@
                         {% if child.image %}
                         <img src="{{child.image.url}}">
                         {% endif %}      
-                        <a href="/recetas_saludables/subcategoria/{{ child.slug }}"><h3>{{ child.name }}</h3>
+                        <a href="/recetas-saludables/subcategoria/{{ child.slug }}"><h3>{{ child.name }}</h3>
                         </a>
                        </div>
                        <!--FIN SUBCATEGORY-->  
@@ -163,7 +163,7 @@
                                   <!--  DESCRIPTION DEL POST PERDER---->
                                   <p>{{receta.description|truncatechars:90|safe}} </p> 
                                    <!--  LINK QUE REDIRIGE AL POST --->
-                                    <a href ="/recetas_sanas/receta/{{ receta.slug }}/">
+                                    <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
                                    <p>Leer mas...</p></a>
                                 
                                    <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->

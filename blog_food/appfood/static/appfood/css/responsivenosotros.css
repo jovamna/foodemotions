@@ -648,7 +648,10 @@ nav{
     margin:  auto;
     z-index: 10;
     }
-      
+      .articulo{
+        width: 100%;
+    
+      }
     .nosotros .articulo h1{
     line-height: 22px;
     font-weight: bolder;
@@ -667,64 +670,25 @@ nav{
     font-family: 'Open sans';
     }
           
-        
+      
 
+     /*IMAGENES*/
+     .dos-imagenes{
+     width: 100%;
+     max-width: 800px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin-top: 30px;
+    }
 
-
-
-  /*quinta       caja ..................................... */
-  /*ARTICULO DOS */
- .articulo-dos{
- display: flex;
- flex-direction: row;
- width: 100%;
- justify-content: space-around;
- margin-top: 20%;
- margin-bottom: 20%;
- }
-  
-
-  
- .articulo-dos-uno{
-  width: 49%;
-  max-width: 250px;
-  margin-bottom: 4%;
-  }
-  
-.articulo-dos-uno h1{
-line-height: 15px;
-font-weight: bolder;
-font-size: 1.2rem;
-word-spacing: 4px;
-letter-spacing: -1.5px;
-font-family: 'Open sans';
-}
-
-
-
-
-
-.articulo-dos-uno p {
-font-family: "Open sans";
-font-size: 0.9rem;
-font-weight: 400;
-line-height: 1.45;
-color: #666;
-}
- /*IMAGENES*/
- .dos-imagenes{
-   width: 100%;
-   max-width: 800px;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
- }
- .foto{
+   .foto{
   width: 49.9%;
- }
-.foto img{
+   }
+
+  .foto img{
   width: 100%;
-}
+   }
 
  blockquote{
   width: 100%;
@@ -774,7 +738,49 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
   width: 100%;
  
    }
-
+   
+   
+  /*quinta       caja ..................................... */
+  /*ARTICULO DOS */
+ .articulo-dos{
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+  margin-top: 6%;
+  margin-bottom: 20%;
+  }
+   
+ 
+   
+  .articulo-dos .articulo-dos-uno{
+   width: 100%;
+   max-width: 600px;
+   display: flex;
+   flex-direction:column;
+   margin-bottom: 4%;
+   }
+   
+ .articulo-dos-uno h1{
+ line-height: 15px;
+ font-weight: bolder;
+ font-size: 1.2rem;
+ word-spacing: 2px;
+ letter-spacing: -0.8px;
+ font-family: 'Open sans';
+ margin-bottom: 10px;
+ }
+ 
+ 
+ 
+ 
+ 
+ .articulo-dos-uno p {
+ font-family: "Open sans";
+ font-size: 0.9rem;
+ font-weight: 400;
+ line-height: 1.45;
+ color: #666;
+ }
   /*  FINAL SEGUNDA COLUMNA ......................................................................*/
    /*  SEGUNDA COLUMNA ......................................................................*/
   .fijo1{

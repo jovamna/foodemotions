@@ -50,7 +50,7 @@ urlpatterns = [
     # Paths de appblog  primero va el nombre de la vista blog
     #IMPORTANTE PONER ASI  path('', include('appblog.urls')), SI NO , NO ENCUENTRA TODOS LOS ARCHIVOS EN APPFOOD
     #path('', include('appblog.urls',  namespace='appblog')),
-    path('dietas-especiales-y-alimentacion-sana/',
+    path('dietas-especiales-y-alimentacion-saludable/',
          include('appblog.urls', namespace='appblog')),
 
     # Paths de apprecetas  primero va el nombre de la vista blog
@@ -88,9 +88,9 @@ urlpatterns = [
     path('plan_comidas_saludables',
          views.plan_comidas,
          name="plan_comidas_saludables"),
-    path('dietas-especiales-y-alimentacion-sana/',
+    path('dietas-especiales-y-alimentacion-saludable/',
          views.dieta_alimentacion,
-         name="dietas-especiales-y-alimentacion-sana"),
+         name="dietas-especiales-y-alimentacion-saludable"),
     path('noticias_turismo_gastronomico',
          views.noticias_turismo,
          name="noticias_turismo_gastronomico"),

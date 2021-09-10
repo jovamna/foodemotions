@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 #import environ
 
-DEBUG=(bool, False)
+DEBUG = (bool, False)
 
 #SECRET_KEY = 'hr808$*z)hlsz@vkjkw!laua+8yvc9r7&8_@pk@u)oua%=yd0@'
 #env = environ.Env()
@@ -21,8 +21,8 @@ DEBUG=(bool, False)
 #environ.Env.read_env()
 
 #env = environ.Env(
-    #SECRET_KEY=str,
-    #DEBUG=(bool, False),
+#SECRET_KEY=str,
+#DEBUG=(bool, False),
 #)
 
 # Where BASE_DIR is a django source root, ROOT_DIR is a whole project root
@@ -187,9 +187,11 @@ STATIC_URL = '/static/'
 #N EL ORDENADOR
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#CON NGNIX
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = '/home/jovamna/myprojectdir/foodemotions/blog_food/blog_food/staticfiles/'
 STATICFILES_DIRS = [
-    '/home/jovamna/myprojectdir/foodemotions/blog_food/app_food/static',
+    '/home/jovamna/myprojectdir/foodemotions/blog_food/appfood/static',
 ]
 
 #CON NGNIX

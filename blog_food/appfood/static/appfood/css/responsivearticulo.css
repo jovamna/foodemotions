@@ -760,6 +760,53 @@ border-radius:6px;
             width: 100%;
           }
           
+
+          .controls{
+            display: none;
+          }
+         /*FI
+
+
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+  #controls-responsive{
+    display: block;
+    visibility: visible;
+    width: 100%;
+    height: 35px;
+    margin-top: 8px;
+   
+  }
+
+
+    #custom-search-input-responsive{
+    width: 342px;
+    height: 35px;
+    border: 1px solid#c9c9c9;
+    border-radius: 4px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin: auto;
+    }
+
+
+   #controls-responsive .sin-borde-responsive{
+     width: 80%;
+     height: 32px;
+     max-width: 290px;
+     display: inline-flex;
+   }
+
+
+   #controls-responsive .boton-responsive{
+     width: 20%;
+     max-width: 60px;
+     height: 32px;
+   }
+
+          /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA...............FIN BUSCADOR RESPONSIVE*/
+
+
         
     .cabecera{
     width: 100%;
@@ -1147,26 +1194,15 @@ border-radius:6px;
       margin-right: 90px;
      }
 
+
+     /*ELIMNADO EL BUSCADO QUE VA EN EL ASIDE PORQUE HAY BUSCADOR RESPONSIVE ARRIBA DE TODO*/
    .tercera-columna-fija{
      display: flex;
      flex-direction: column;
      width: 100%;
      max-width: 640px;
    }
-          .controls{
-            width: 90%;
-            margin: auto;
-            margin-bottom: 30px;
-          }
-
-
-    /*BUSCADOR DA COLOR*/
-    #custom-search-input{
-    margin: auto;
-    width: 99.9%;
-    height: 52px;
-    }
-   
+          
 
     .tercera-columna{
      width: 100%;
@@ -1200,9 +1236,9 @@ border-radius:6px;
 
     .container-total-carrusell{
       display: block;
+      position: relative;
+      width: 100%;
       margin-bottom: 15px;
- 
-
     }
      /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
   /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
@@ -1220,9 +1256,10 @@ border-radius:6px;
      /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
     #carrusel h2{
         font-size:24px;
-        word-spacing: -3px;
-        letter-spacing: -2px;
-        font-family: 'Archivo Black', sans-serif;
+        font-weight: 900;
+        word-spacing: -2px;
+        letter-spacing: 0.4px;
+        font-family: 'Times New Roman', Times, serif;
         padding-bottom: 10px;
         
     }
@@ -1298,8 +1335,7 @@ border-radius:6px;
   .carrusel>div {
   float: left;
   width: 100%;
-  max-width: 222px;
-  height: 180px;
+
   margin-right: 5px;   /*ESPACIO */
   text-align:center;
   }
@@ -1472,57 +1508,71 @@ border-radius:6px;
    }
 
    
-    /*CAJA BUSCADOR...*/
+    /*BUSCADOR NO ELIMINAR ES EL BUSCADOR DE LA PAGINA SEARCH ...*/
+    /*..ESTE MISMI BUSCADOR DE USA PARA EL RESPPONSIVE DE LA PAGINA SEARCH..*/
     #controls-uno{
     width: 100%;
+    margin-top: -20px;
+
     }
 
 
-     /*PAGINA BUSCADOR.NO ELIMINAR ...*/
+     /*...NO ELIMNAR ES LA PAGINA DEL BUSCADOR ...PAGINA BUSCADOR.NO ELIMINAR ...*/
     #container-search{
     width: 100%;
     max-width: 600px;
     margin-bottom: 40px;
+   margin-top: 10px;
     }
 
 
     #container-search  h1{
     font-size: 1.8rem;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.2px;
+    line-height: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+    font-weight: 600;
     }
 
 
-    .container-pinterest{
-    display: flex;
-    flex-direction: column;
-    }
-
-
-    .elemento{
-    width: 100%;
-    max-width: 600px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
+     .container-pinterest{
+      width: 100%;
+     display: flex;
+     flex-direction: column;
      }
 
 
-     .elemento-imagen{
+    #container-search  .elemento{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+     }
+
+
+     #container-search .elemento-imagen{
+       display: flex;
+       flex-direction: column;
       width:  100%;
+      max-width: 600px;
+      height: 100%;
+      max-height: 230px;
       margin: auto;
       }
 
-     .elemento-imagen img{
+     
+      #container-search  .elemento-imagen img{
       width: 100%;
       height: 100%;
-      max-height: 230px;
- 
       }
 
 
-      .elemento  .elemento-descripcion{
-      display:  block;
+     #container-search .elemento-descripcion{
       width: 100%;
+      height: 100%;
       margin-top: 10px;
       }
 

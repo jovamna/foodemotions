@@ -1,4 +1,4 @@
-{% extends 'appblog/articulo_base.html' %}
+{% extends 'appblog/articulo-base.html' %}
 {% load static %}
 {% block title %} {{ object.some_varyable_from_query }}{% endblock %}
 
@@ -9,6 +9,26 @@
         {% block container-search %}  {% endblock container-search %}
         <!--FIN --------DE LA PAGINA SEARCH----------------->
 
+     <!---BUSCADOR RESPONSIVE----------------------------------------------------------->
+
+  {% block buscador-responsive %}
+        <div id="controls-responsive">
+                <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
+                    <div id="custom-search-input-responsive">
+	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
+                                 
+                          <button type="submit" name="submit" class="boton-responsive btn-succes" value="Search"> 
+                          <span class="icon"><i class="fa fa-search"></i></span>   
+                          </button>
+                          <!--</span>-->
+                    </div>
+                </form>
+	        </div>
+             {% endblock buscador-responsive %}
+
+   <!--FIN BUSCADOR RESPONSIVE------------------------------------------------------>
+
+     <!---MENU DE TURISMO INICIO TRISMO GASTRO--------------------->
          {% block menusimple %}
           <!-- PRIMER  SEGMENTO MENU SIMPLE-->
           <div id="menu-simple">
@@ -59,10 +79,10 @@
                         <i class="fab fa-facebook-f"></i> </a> <br>
                         </li>
                         {% endif %}
-                        <li> <a href="http://twitter.com/foodemtoions" target="_blank">
+                        <li> <a href="http://twitter.com/foodemotions" target="_blank">
                         <i class="fab fa-twitter"></i> </a> <br>
                         </li>
-                        <li> <a href="http://instagram.com/foodemtoions" target="_blank">
+                        <li> <a href="http://instagram.com/foodemotions" target="_blank">
                         <i class="fab fa-instagram"></i> </a> <br>
                         </li>
                         </ul>

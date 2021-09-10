@@ -1,4 +1,4 @@
-{% extends 'appblog/base_categoria.html' %}
+{% extends 'appblog/base-categoria.html' %}
 {% load static %}          
 {% block title %}Categoria Plan de Comidas Saludables{% endblock %}  
  
@@ -94,7 +94,8 @@
            <div class="caja-texto-slider">
             <!--TITULO DE LAS CATEGORIAS-->
              <div class= "endfor">
-                 <ul>    
+               <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
+                 <ul class="scroll">    
                     {% for categoria in category_deals %}
                     {% if not node.is_leaf_node %}
                     {% for child in categoria.get_children %}
@@ -108,6 +109,7 @@
                     {% endif %}
                     {% endfor %}
                  </ul>
+               <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 
             </div>
             <!--FIN SUBCATEGORY-->    
         </div>
@@ -137,9 +139,9 @@
                             <a href="/plan-comidas-saludables/post/{{ perderpeso.slug}}">
                             <!-------TITULO POST PERDERPESO---------->
                             <h2>{{ perderpeso.title }}</h2>
-                            </a>------->
-                            <p>{{perderpeso.description|truncatecha
-                            <!-------DESCRIPCION POST PERDERPESO---rs:190|safe}} </p>
+                            </a>
+                            <!--DESCRIPCION------------------------------------>
+                            <p>{{perderpeso.description|truncatechars:190|safe}} </p>
                             <a href ="/plan-comidas-saludables/post/{{ perderpeso.slug }}/" class="arrow1">
                               LEE MAS
                            <span class="arrow-right"></span>

@@ -1,4 +1,4 @@
-{% extends 'appblog/base_categoria.html' %}
+{% extends 'appblog/base-categoria.html' %}
 {% load static %}
 {% block title %}Subcategorias{% endblock title %}
 
@@ -18,7 +18,7 @@
                              <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
                              </li>
                              <li>    
-                             <a  href="{% url 'appblog:dietas_especiales_y_alimentacion_saludable' %}">
+                             <a  href="{% url 'appblog:dietas-especiales-y-alimentacion-saludable' %}">
                              Alimentacion Sana<i class="right"></i> 
                              </a>
                              </li>
@@ -32,7 +32,7 @@
                               {% for category in categorias %} 
                                 <li>
                               <!-- LAS DOS CATEGORIAS CON SUS SUBCATEGORIAS---->
-                              <a href="/dietas_especiales_y_alimentacion_saludable/categoria/{{ category.slug }}">
+                              <a href="/dietas-especiales-y-alimentacion-saludable/categoria/{{ category.slug }}">
                               <p>{{ category }}<i class="right"></i>
                               </p>
                               </a>
@@ -46,8 +46,8 @@
                         <!--MENU MENU TITULO SUBCATEGORIA----------------->
                         {% for category in category %}
                         <li>    
-                        <a href="/dietas_especiales_y_alimentacion_saludable/subcategoria/{{ category.slug }}">
-                        <p> {{ category.name }}{{ child.get }}</p>  
+                        <a href="/dietas-especiales-y-alimentacion-saludable/subcategoria/{{ category.slug }}">
+                        <p> {{ category.ame }}{{ child.get }}</p>  
                         </a>
                         </li>
                         {% endfor %}
@@ -65,7 +65,7 @@
                                          {% if not node.is_leaf_node %}
                                         <!--  TITULO--CATEGORIA---> 
                                         <div class="menu-intro-titulo">  
-                                          <a href="/dietas_especiales_y_alimentacion_saludable/subcategoria/{{ category.slug }}"> 
+                                          <a href="/dietas_especiales-y-alimentacion-saludable/subcategoria/{{ category.slug }}"> 
                                            <h2> {{ category.name }} {{ child.get }}</h2>
                                           </a>
                                         </div>
@@ -112,7 +112,7 @@
                     <li> 
                     <!-- SUBCATEGORIAS ---->
                      <!-- CATEGORIAS ---->
-                 <a href="/dietas_especiales_y_alimentacion_saludable/subcategoria/{{ category.slug }}">
+                 <a href="/dietas-especiales-y-alimentacion-saludable/subcategoria/{{ category.slug }}">
                   <h3>{{ category.name }}{{ child.get }}</h3>
                     </a>
                     </li>
@@ -160,13 +160,13 @@
                                 </div>
 
                                  <div class="por-descripcion">
-                                    <a href="/dietas_especiales_y_alimentacion_saludable/post/{{ perd.slug}}">
+                                    <a href="/dietas-especiales-y-alimentacion-saludable/post/{{ perd.slug}}">
                                      <!-------TITULO POST PERDERPESO---------->
                                      <h2>{{ post.title }}</h2>
                                      </a>
                                      <!-------DESCRIPCION POST PERDERPESO---------->
                                      <p>{{post.description|truncatechars:190|safe}} </p>
-                                     <a href ="/dietas_especiales_y_alimentacion_saludable/post/{{ post.slug }}/">
+                                     <a href ="/dietas-especiales-y-alimentacion-saludable/post/{{ post.slug }}/">
                                      <em><p>Leer mas...</p></em>
                                      </a>
                                       <em><p>Categoria: {{post.kategoria}} </p></em> 

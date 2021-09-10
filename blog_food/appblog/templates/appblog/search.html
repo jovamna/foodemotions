@@ -1,19 +1,19 @@
-{% extends 'appblog/articulo_base.html' %}
+{% extends 'appblog/articulo-base.html' %}
 {% load static %}
   
 {% block title %}Resultados{% endblock title %}
 
-                      <!-- PARA QUE NO SALGA NADA-->
+                 <!-- PARA QUE NO SALGA NADA-->
                  {% block menusimple %}  {% endblock menusimple %}
                  
-             {% block content %}  
-                  {% block primera-columna %}   {% endblock primera-columna %} 
-                  {% endblock content %}   
-                  {% block tercera-columna %}{% endblock tercera-columna %}
-                   <!-------CON ESTO NO SALE EL ASIDE----->
+    {% block content %}  
+                     {% block primera-columna %}   {% endblock primera-columna %} 
+                     {% endblock content %}   
+                    {% block tercera-columna %}{% endblock tercera-columna %}
+                     <!-------CON ESTO NO SALE EL ASIDE----->
 
 
-  
+    <!--BUSCADOR PRINCIPAL--------------------------->
         {% block buscador-search %} 
                 <div id="controls-uno">
                    <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
@@ -36,7 +36,7 @@
         {% endblock buscador-search %} 
 
   
-            
+            <!---------FIN BUSCADO---->
 
 
 
@@ -44,11 +44,11 @@
     <!-- CONTAINER LE PUSE DOS DIVS QUE SON COLUMNA PRIMERA Y PRIMERA COLUMNA------------->
         {% block container-search %} 
         <div id ="container-search">
-                    <h1>Resultados de busqueda para <b>"{{ request.GET.q }}"</b> </h1>
+                    <h1>Resultados de busqueda para "{{ request.GET.q }}" </h1>
+
+
                     <!---DIV CONTAINER DE 4 POST Y DE RECETAS--->
                     <div class = "container-pinterest">
-
-
                                 {% if posts.exists %}
                                     <!---DIV DE 4 POST DE POSTS--->
                                 {% for post in posts %}
@@ -79,11 +79,16 @@
                                  {% endfor %}
                                    <!---FINAL ENDFOR DE 4 POST IN POSTS--->
                                  {% endif %}
-                 <!----------------------------------------------------------------------------------------------------------->                        
+                 <!------------------------------------------------------------------------------->                        
                                       <!-- AQUI EL QUERY PARA CUANDO NO HAY RESULTADOS -->
-                                     
-  <!-----------------------------FINAL DE TODO EL POST EN GENERAL------------------------------------------------------------------------------------------->
-                                          
+                          
+                     </div>
+                  <!-----DIV FIN CONTAINER-PINTEREST------------------------>
+
+
+  <!-----------------------------FINAL DE TODO EL POST EN GENERAL------------------------------------------>
+                    <div class = "container-pinterest">  
+
                             <!---DIV DE 4 POST DE RECETAS SANAS--->
                              {% if recetas.exists %}
                             {% for receta in recetas %}
@@ -110,9 +115,15 @@
                           {% endfor %}
                            {% endif %}
                           <!---ENDFOR FINAL   4  DE RECETAS--->
-                                   
+
+                               <!----------------------------------->
+                               </div>  
+                                <!-----DIV FIN CONTAINER-PINTEREST------------------->  
   <!-------------------------------------------------------------------------------------------------------------------------->
-                                  
+                                    
+
+
+            <div class = "container-pinterest">
                       <!---DIV DE 4 POST DE RECiPES ZUMOS Y ENSALADAS--->
                        {% if recipes.exists %}
                       {% for recipe in recipes %}
@@ -129,8 +140,7 @@
                       </a>
                       <p>{{recipe.description|safe|linebreaksbr|truncatechars:100}} </p> 
                       <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
-                        <button type="button" class="btn btn-outline-success">ver receta</button>
-                   
+                        <button type="button" class="btn btn-outline-success">ver receta</button>       
                     </a>
                      <!--CATEGORIA----->
                  
@@ -141,10 +151,12 @@
                    {% endif %}
                                        <!---ENDFOR FINAL   4  DE RECETAS--->
    <!--------------------- FINAL SEARCH RECIPES ZUMOS Y ENSALADAS  ------------------------------>
-                                
+              </div>  
+            <!-----DIV FIN CONTAINER-PINTEREST------------------------>       
+      <!---------------------------------------------------------------->
 
-
-<!-------------------------------------------------------------------------------------------------------------------------->
+      <div class = "container-pinterest">
+      <!-------------------------------------------------------------------------------------------------------------------------->
                   <!---DIV DE 4 POST DE PERDERPESO--->
                     {% if perderpes.exists %}
                     {% load mptt_tags %}
@@ -173,9 +185,10 @@
                   <!---ENDFOR FINAL   4  DE RECETAS--->
    <!--------------------- FINAL SEARCH RECIPES ZUMOS Y ENSALADAS  ------------------------------>
 
-
-
-
+       </div>
+      <!-----DIV FIN CONTAINER-PINTEREST------------------------>
+      <!------------------------------------------------------------------>
+               <div class = "container-pinterest">
 
    <!-------------------------------------------------------------------------------------------------------------------------->
                   <!---DIV DE 4 POST DE TURISMO--->
@@ -207,16 +220,10 @@
    <!--------------------- FINAL SEARCH RECIPES ZUMOS Y ENSALADAS  ------------------------------>
 
 
-
-
-
-
-
-
                                       
                      <!---FINAL DIV DE CONTAINER-PINTEREST--->
-                      
                         </div>
+                         <!-----DIV FIN CONTAINER-PINTEREST------------------------>
 <!------------------------------------------------------------------------------------------------------------------------>
 
               <!--- FIN CONTAINER SEARCH------------------------------------------------------------------------> 

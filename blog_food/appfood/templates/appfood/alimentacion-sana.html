@@ -22,8 +22,8 @@
                      </a>
                      </li>
                      <li>
-                     <a href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}"> 
-                     <p>Dietas Especiales y Alimentacion sana <i class="right"></i></p>
+                     <a href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"> 
+                     <p>Dietas Especiales y Alimentacion saludable <i class="right"></i></p>
                      </a>
                      </li>
                      <li >
@@ -57,15 +57,15 @@
               <!-- LETRAS-->
               <div class="portada-img3-responsive">
               <div id="menu-simple-responsive">
-                  <ul>
+                  <ul class ="scrollresponsive">
                   <li>
               <a href="{% url 'appfood:index' %}"  >
                   <p>Inicio<i class="right"></i></p>
                   </a>
                 </li>
                 <li>
-                <a href="{% url 'appfood:dietas-especiales-y-alimentacion-sana' %}"> 
-                <p>Dietas y Alimentacion Sana <i class="right"></i></p>
+                <a href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"> 
+                <p>Dietas y Alimentacion Saludable <i class="right"></i></p>
                 </a>
                 </li>
                 <li >
@@ -119,7 +119,7 @@
                     {% for child in kategoria.get_children %}
                     <li> 
                     <!-- SUBCATEGORIAS ----------------------->
-                    <a href="/dietas-especiales-y-alimentacion-sana/subcategoria/{{ child.slug }}">
+                    <a href="/dietas-especiales-y-alimentacion-saludable/subcategoria/{{ child.slug }}">
                     <h3>{{ child.name }}</h3>
                     </a>
                     </li>
