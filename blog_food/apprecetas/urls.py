@@ -5,7 +5,6 @@ app_name = 'apprecetas'
 
 urlpatterns = [
     path('', views.categorias, name="recetas-saludables"),
-    #path('', views.recetas, name="recetas"),   #al poner el enlace va de esta forma  <a href="{% url 'receta' %}">
     path('receta/<slug:slug>/', views.receta_detail, name="receta"),
     path('addcomment/', views.addcomment, name='addcomment'),
     path(
@@ -15,4 +14,5 @@ urlpatterns = [
     path('subcategoria/<slug:slug>/',
          views.show_subcategory,
          name="subcategoria"),
+    #path('', views.recetas, name="recetas"),
 ]

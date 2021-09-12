@@ -15,7 +15,7 @@
 
 @media only screen and (min-width: 250px) and (max-width: 359px)   {
   
-#wrapper {
+  #wrapper {
   margin:0;
   box-sizing: border-box;
   display: flex;
@@ -23,16 +23,16 @@
   min-height: 100vh;
     }
       
-  #wrapper > * {
+   #wrapper > * {
    padding: 15px;
    }
 
-  #container{
-  width:   100%;
-  margin: auto;
-  margin-top: 14%;
-  margin-bottom: 180px;
-  }
+   #container{
+   width:   100%;
+   margin: auto;
+   margin-top: 14%;
+   margin-bottom: 180px;
+   }
 
   header{
   width:100%;
@@ -43,12 +43,13 @@
     }
     
    header.black{
-  background-color: #fff;
-  height: 55px;
+   background-color: #fff;
+   height: 55px;
+   width: 100%;
    }
 
      /* max-width: 359px;*/
- .cabecera{
+   .cabecera{
   width:  100%;        
   height: 30px; 
   display: block;
@@ -1041,9 +1042,6 @@ text-align: center;
    height: 15px;
  }
 
-
- 
-
   
    .final-food p{
      font-size: 0.4rem;
@@ -1053,6 +1051,9 @@ text-align: center;
 
 
    }
+
+
+
   
    @media only screen and (min-width: 320px) and  (max-width: 568px)  {
     #wrapper {
@@ -1063,7 +1064,7 @@ text-align: center;
       min-height: 100vh;
       }
       #wrapper > * {
-        padding: 17px;
+        padding: 12px;
         }  
 
     body{
@@ -1072,57 +1073,108 @@ text-align: center;
     }
 
 
-    .cabecera{
+     .cabecera{
       width: 100%;
-      max-width: 568px;
-      max-width: 320px;
+      max-width: 290px;
       height: 40px; 
       display: flex;
       flex-direction: row;
+      margin-left: 2px;
+      }
+      
+
+      .menu-btn .suscribe h4{
+      font-size: 0.8rem;
       }
 
-    #container{
-      display: flex;
-      flex-direction: column;
+
+       #container{
       width: 100%;
-      max-width: 568px;
-      min-width: 320px;
       margin: auto;
-      margin-top: 16%;
-    }  
+      margin-top: 30%;
+      }  
 
       /*.. #DCDCDC ..*/
       header{
         width: 100%;
-        max-width:568px;
-        min-width:320px;
+        max-width: 320px;
         height:99px;
-        top:0;
         position:fixed;
-        z-index:2000;
+        z-index: 999;
         margin: auto;
         box-shadow: 0 8px 6px -6px;
-        background-color: #fff;
        }
     
 
     
     header.black{
     height:  99px;
-    width: 100%;
-    background-color: #fff;
+    height: 99px;
+
     }
+
+     .buscador-responsive{
+       width: 100%;
+       max-width: 300px;
+       margin: auto;
+     }
+
+     .buscador-responsive #controls-responsive{
+       width: 100%;
+     }
+
+     .buscador-responsive #controls-responsive   #custom-search-input-responsive{
+      width: 99%;
+      height: 35px;
+      display: flex;
+      flex-direction: row;
+      font-weight: 700;
+      padding: 0.5px 0.5px;
+      border-radius: 8px;
+      border: 1px solid #f4f4f4;
+      }
+  
+      .buscador-responsive #controls-responsive   #custom-search-input-responsive .sin-borde{
+        height: 25px;
+        width: 90%;
+        border-radius: 15px;
+        font-weight: lighter;
+        padding-left: 10px; /*MUEVE LA LETRA*/
+        }
+    
+    
+    
+        .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
+        height: 25px;
+        width: 10%;
+        border-radius: 10px;
+        background-color: #fff;
+        }
+    
+      /* CUANDO SE ESCRIBE EN EL PLACEHOLDER..*/
+      .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
+      outline: none;
+      border: 0;
+      color: #000000;
+      font-size: 1.1rem;
+      }
+    
+      /*..CUANDO ESTA ESCRITO EN EL PLACEHOLDER..*/
+      .buscador-responsive #controls-responsive #custom-search-input-responsive input::placeholder { 
+       color: #2d2d2d; 
+       font-size: 1rem;
+       margin-top: 3px;
+      }
+
 
 
     /*FIN ANIMACION SUBRAYADO */
      .portada{
        width: 100%;
-      max-width:550px;
-      min-width:320px;
-      display: block;
-     position: relative;  /*ESTO ARREGLO LA CABECERA*/
-     float: left;
-    margin: auto;
+       max-width: 300;
+       margin: auto;
+      display: flex;
+      flex-direction: column;
       z-index: 30;
      }
 
@@ -1145,8 +1197,6 @@ text-align: center;
       display: flex;
       flex-direction: column;
       width: 100%;
-      max-width: 568px;
-      min-width: 320px;
       z-index: 80;
       margin: auto;
       }
@@ -1154,18 +1204,18 @@ text-align: center;
     
       .portada .portada-img-responsive .imagen-responsive-movil {
         width: 100%;
-        max-width: 568px;
-        min-width: 320px;
-
+        max-width: 290px;
+        margin: auto;
       }
+
+
     /*.............MOVIL...................*/
      .portada-img-responsive .imagen-responsive-movil img{
-   width: 100%;
-    max-width: 520px;
-     min-width: 320px;
-    padding: 0 0;
-    z-index: 40;
-    }
+      width: 100%;
+      max-width: 290px;
+      padding: 0 0;
+      z-index: 40;
+      }
      
 
     /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
@@ -1182,6 +1232,147 @@ text-align: center;
       z-index: 120;
       }
   
+       
+     /*-----imagen grande de contacto----------------*/
+     .portada-img{
+      display: none;
+      visibility: hidden;
+    }
+    
+    .portada-img  .portada-titulo{
+      display: none;
+      visibility: hidden;
+    }
+    
+    .portada-img  .portada-titulo1{
+      display: none;
+      visibility: hidden;
+    }
+    
+    /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
+    .portada .portada-img-responsive .portada-img3-responsive{
+      width:92%;
+      height: 55%;
+      display: block;
+      position: absolute;
+      margin-top: 170px;
+      margin-left:  12px;
+      background-color: #fff;
+      border-bottom: 3px solid #568632;
+      border-right: 3px solid #568632;
+      z-index: 120;
+      }
+  
+
+     /*EL MENU*/
+      .portada-img-responsive #menu-simple-responsive{
+      width: 100%;
+      height: 30px;
+      display: block;
+       }
+  
+       /*TITULO FLOTANTEDE LA PORTADA PRINCIPAL*/
+   .portada-img-responsive .portada-titulo{
+    width: 100%;
+    position: absolute;
+    margin-top: 60px;
+    }
+
+    .portada-img-responsive .portada-titulo1{
+    width: 100%;
+    position: absolute;
+    margin-top: -300px;
+    }
+
+    /*TITULO DE LA PAGINA PUESTA ABAJ DE LA PORTADA*/
+    .portada-img3-responsive h1{
+    font-size: 1.2rem;
+    }
+
+   .endfor .leftNav{
+   display: none;
+   visibility: hidden;
+   }
+
+   .endfor .rightNav{
+    display: none;
+   visibility: hidden;
+   }
+
+
+    /*--TITULO PRIMERO ...*/
+     #container .titulo-principal{
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     margin: auto;
+     margin-top: 40px;
+     margin-bottom: 10px;
+     }
+
+    #container  .titulo-principal .escrito {
+    width: 95%;
+    }
+
+     #container  .titulo-principal .escrito h1{
+     font-size: 1rem; 
+    font-family: 'Archivo Black', sans-serif;
+    }
+
+    #menu-simple-responsive  .scrollresponsive{
+    display: flex;
+    flex-direction: row;
+    width:  100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    white-space: nowrap;
+    padding: 8px 2px;
+    }
+  
+  
+    .scrollresponsive::-webkit-scrollbar {
+    display: none;
+    }
+  
+       #menu-simple-responsive ul{
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+      margin-bottom: 20px;
+       }
+  
+         
+     #menu-simple-responsive ul li{
+     list-style: none;
+     }
+      
+                
+    #menu-simple-responsive ul li  p{
+    font-size: 1rem;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    margin-left: 8px;
+     }
+  
+  
+     #menu-simple-responsive li p i {
+    border: 1px solid #000000;
+    border-width: 0 0.8px 0.8px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-right: 9px;  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
+    }
+            
+     #menu-simple-responsive .right {
+     transform: rotate(-45deg);
+     -webkit-transform: rotate(-45deg);
+    }
+            
+  
+   
   /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
   .cabecera .logo{
     display: inline-flex;
@@ -1323,91 +1514,303 @@ text-align: center;
   z-index: 800;  
   }
 
-    
-    /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
-    .portada .portada-img-responsive .portada-img3-responsive{
-      width:92%;
-      height: 55%;
-      display: block;
-      position: absolute;
-      margin-top: 170px;
-      margin-left:  12px;
-      background-color: #fff;
-      border-bottom: 3px solid #568632;
-      border-right: 3px solid #568632;
-      z-index: 120;
+  /*..NAV.................*/
+     /*margin-left: 5.4%;/*IMPORTANTE */
+    nav{
+    width: 100%;
+    max-width: 330px;
+    top: -10px;
+     z-index: 200;
+    }
+  
+     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      nav .nav{
+     display: flex;
+     flex-direction: column;
+     width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
+     max-width: 260px;
+      height: 90%;/*IMPORTANTE */
+      margin-left: 0;/*IMPORTANTE **/
+      z-index:30;
       }
   
+       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+      nav .nav li{
+      margin-top: 5px;/*IMPORTANTE */
+      margin-bottom: 2px;
+      list-style: none;
+      height: 50px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+      cursor:pointer;
+      }
       
-  
-  
-     /*EL MENU*/
-      .portada-img-responsive #menu-simple-responsive{
+      nav .nav li a {
+      z-index: 100;
       width: 100%;
-      height: 30px;
-      display: block;
-       }
+      color: #fff;
+      font-weight: lighter;
+      font-size: 1rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  sans-serif;
+      }
+    
+       /*IMPORTANTE*/
   
-       #menu-simple-responsive  .scrollresponsive{
-        display: flex;
-        flex-direction: row;
-        width:  100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* Internet Explorer 10+ */
-        white-space: nowrap;
-         padding: 8px 2px;
-  
-         }
-  
-  
-         .scrollresponsive::-webkit-scrollbar {
-          display: none;
+       
+      
+   
+        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+         nav .nav li:hover > ul {
+         display: block;
+        height: 200px;
+        visibility: visible; 
+        z-index: 598;
         }
   
-       #menu-simple-responsive ul{
+      nav .nav li ul li a{
+      font-size: 1rem;
+     display: flex;
+     flex-direction: column;
+      max-width: 200px;
+      width: 100%;
+      margin-left: -2px;
+      padding-bottom: -2px;
+      margin-left: -76px;
+      }
+  
+       nav .nav ul {
+      visibility: hidden;
+      }
+  
+        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+    
+   /*ANIMACION SUBRAYADO */
+   nav a {
+   display: inline-block;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   z-index: 40;
+   }
+  
+    nav  a:after {
+   content: "";
+   display: block;
+   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+   height: 2px;
+   width: 0px;
+   transition: all .8s;
+   z-index: 10;
+   }
+  
+  
+  
+    nav  a:hover:after {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: -150px;
+    height: 2px;
+    background: white;
+    }
+  
+  /*..FIN NAV...*/
+
+     .primer-segmento{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+     }
+
+     .dos-columnas{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+     }
+
+      .dos-columnas .columna-left{
+      display: block;
+      position: relative;
+      float: left;
+       width: 300px;
+      }
+ 
+      .dos-columnas .columna-right{
+       display: block;
+       position: relative;
+       float: left;
+       width: 100%;
+       margin: auto;
+      }
+
+
+      .dos-columnas .columna-right .columna-right-column{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+      }
+
+     .quinto-segmento{
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+     }
+
+     .resumen{
+      width: 49%;
       display: flex;
       flex-direction: row;
-      margin-top: 10px;
-      margin-bottom: 20px;
-       }
-  
-         
-     #menu-simple-responsive ul li{
-     list-style: none;
+    
      }
-      
-                
-    #menu-simple-responsive ul li  p{
-    font-size: 1rem;
-    color: #000000;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 900;
-    margin-left: 8px;
+
+      .resumen1{
+        width: 1%;
+
+      }
+      .resumen2{
+        width: 96%;
+        
+      }
+      .resumen3{
+        width: 3%;
+      }
+
+     .quinto{
+      width: 48%;
+      margin-left: 10px;
      }
-  
-  
-     #menu-simple-responsive li p i {
-    border: 1px solid #000000;
-    border-width: 0 0.8px 0.8px 0;
-    display: inline-block;
-    padding: 3px;
-    margin-right: 9px;  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
+
+     .container-portada{
+      width: 100%;
+    height: 100%;
+    max-height: 340px;
+    position: relative;
+    float: left;
+    margin-bottom: 20px;
+    background-image: url(../img/slider/700-400containerportadaindex.jpg);
+    background-size: 100%;
+    animation: movimiento 15s infinite linear alternate;  
+     }
+
+     .container-details{
+      width: 100%;
+      height: 100%;
+     max-height: 340px;
+      position: relative;
+      margin: auto;
+      }
+    
+    
+      .details{
+      width: 100%;
+      height: 100%;
+      max-height: 340px;
+      position: relative;
+      top: 20px;
+      color: white;
+      }
+
+
+
+   
+     
+     .details h1{
+      font-size: 1.2rem;
+      font-weight: lighter;
+      margin-left: 10px;
+      margin-top: -13px;
+      word-spacing: -3px;
+      letter-spacing: -1.5px;
+      font-family: 'Archivo Black', sans-serif;
+      }
+    
+    .details p{
+      margin-top: 3px;
+      font-size: 0.9rem;
+      font-weight: 100;
+      margin-left: 10px;
     }
-            
-     #menu-simple-responsive .right {
-     transform: rotate(-45deg);
-     -webkit-transform: rotate(-45deg);
+    
+    .details button{
+      padding: 5px 5px;
+      font-size: 1.1rem;
+      background: none;
+      border-style: none;
+      border: 1px solid white;
+      color: white;
+      margin-top: 5px;
+      transition: background 300ms;
+      cursor: pointer;
+      margin-left: 10px;
     }
-            
-  
-    /*-----imagen grande de contacto----------------*/
-     .portada-img{
-       display: none;
-       visibility: hidden;
+    
+   
+
+    .texto-animado{
+      display: block;
+      position: relative;
+      float: left;
+      width: 90%;
+      margin-bottom: 40px;
      }
- 
+
+     #footer{
+      width: 100%;
+      bottom: 0;  
+      left: 0;
+      right: 0;
+      top: 0; 
+      margin: auto;
+      clear: both;
+      display: flex;
+      flex-direction: column;
+      z-index: 10;
+     }
+
+      #footer .footer-primero{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        height: 100%;
+        max-height: 500px;
+      }
+
+  .icon-email{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon-social1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+  }
+   .icon-email  .box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+    .menu-footer{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+  
+
+    #footer #footer-second{
+      height: 25px;  /*IMPORTANTE*/
+      display: block;
+      position: relative;
+      float: left;
+    margin-top: 5px;
+    }
 
    }
 
@@ -1442,19 +1845,19 @@ text-align: center;
       display: flex;
       flex-direction: row;
       }
-  /*caja  B*/
- .menu-btn {
+
+    /*caja  B*/
+   .menu-btn {
     display:flex;
     width: 25%;
     position: relative;
     margin-left: 70%;
     cursor: pointer;
     transition: all .5s ease-in-out;
-
     }
 
-    /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-  .menu-btn__burger {
+     /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+    .menu-btn__burger {
     display: block;
     margin-left: 20%;
     margin-top: 25%;
@@ -1490,7 +1893,7 @@ text-align: center;
 
    /*.....................8 ...............*/
    @media only screen and (min-width: 360px) and (max-width: 640px){
-    html, body{
+      html, body{
       padding:0;
       margin: 0;
       background-color: #fff;
@@ -1517,29 +1920,29 @@ text-align: center;
     }  
 
       #container{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 640px;
-        margin: auto;
-        margin-top: 83px;
-        bottom:  4px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 640px;
+      margin: auto;
+      margin-top: 83px;
+      bottom:  4px;
       height: auto;
       }
 
 
       /*.. #DCDCDC ..*/
       header{
-        width: 100%;
-        max-width:370px;
-        height:99px;
-        min-width:360px;
-        top:0;
-        position:fixed;
-        z-index:2000;
-        margin: auto;
-        box-shadow: 0 8px 6px -6px;
-        background-color: #fff;
+      width: 100%;
+      max-width:370px;
+      height:99px;
+      min-width:360px;
+      top:0;
+      position:fixed;
+      z-index:2000;
+      margin: auto;
+      box-shadow: 0 8px 6px -6px;
+      background-color: #fff;
        }
     
 
@@ -1564,11 +1967,11 @@ text-align: center;
     
     /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
      .cabecera .logo{
-      display: inline-flex;
-     width: 100%;
-     max-width: 190px;
+    display: inline-flex;
+    width: 100%;
+    max-width: 190px;
     height: 38px;
-      }
+    }
        
    
      .cabecera .logo img{
@@ -1637,8 +2040,6 @@ text-align: center;
     height: 30px;
     display: flex;
     flex-direction: row;
-    font-size: 1.4em;
-    color: #050505;
     padding: 1px 1px;
     border-radius: 8px;
     border: 2px solid #f4f4f4;
@@ -1665,12 +2066,21 @@ text-align: center;
     }
 
 
-    .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
-    outline: none;
-    border: 0;
-    background-color: #fff;
-    }
-      
+   
+        /* CUANDO SE ESCRIBE EN EL PLACEHOLDER..*/
+      .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
+      outline: none;
+      border: 0;
+      color: #000000;
+      font-size: 1.1rem;
+      }
+    
+      /*..CUANDO ESTA ESCRITO EN EL PLACEHOLDER..*/
+      .buscador-responsive #controls-responsive #custom-search-input-responsive input::placeholder { 
+       color: #2d2d2d; 
+       font-size: 1rem;
+       margin-top: 3px;
+      }
 
        /*---------------------------------------------------------------------*/
      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
@@ -1750,40 +2160,41 @@ text-align: center;
     }
 
 
-
+  /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+   .menu{
+     display: none;
+     visibility: hidden;
+   }
     
     /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
-  
   /*margin-left: 5.4%;/*IMPORTANTE */
   nav{
-  width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
-  height: 100%;/*IMPORTANTE */
   position: fixed;
+  width: 100%;
+  max-width: 380px;
+  height: 100%;
    top:-8px;  /*IMPORTANTE para que arriba no tenga espacios */
-  min-height: 100vh;
   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  background-color:#000000; /*FONDO DEL MENU*/
-  background-position:72% 50%;
-  background-repeat:no-repeat;
-  opacity: 1;
+  opacity: 0.97;
+  background-color: #000000;
   z-index:40;
   }
 
    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
     nav .nav{
-   display: flex;
-   flex-direction: column;
-   width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
-    height: 93%;/*IMPORTANTE */
-    margin-left: -42%;/*IMPORTANTE **/
-    z-index:30;
+   width:100%; 
+   height: 90%;  
+   max-width: 380px;
+   margin-top: 20px;
     }
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
     nav .nav li{
     margin-top: 1.5%;/*IMPORTANTE */
     list-style: none;
-    height: 70px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    height: 40px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 23px;
+    margin-bottom: 15px;
     cursor:pointer;
     }
     
@@ -1791,11 +2202,11 @@ text-align: center;
     z-index: 100;
     background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
     display: block;
-    position: absolute;
-    width: 60%;
+    width: 100%;
+    height: 40px;
     color: #fff;
     font-weight: lighter;
-    font-size: 1rem;
+    font-size: 1.26rem;
     text-transform: lowercase;
     letter-spacing: 1px;
     font-family:  sans-serif;
@@ -1853,21 +2264,22 @@ text-align: center;
  }
 
 
-
+  /* width: 100%;*/
   nav  a:hover:after {
-  width: 100%;
+ 
   padding-left: 40px;
   padding-right: -150px;
   height: 2px;
   background: white;
   }
 
-    /*FIN ANIMACION SUBRAYADO */
-     .portada{
-     position: relative;  /*ESTO ARREGLO LA CABECERA*/
-    margin: auto;
-      z-index: 30;
-     }
+       /*FIN ANIMACION SUBRAYADO position: relative;  /*ESTO ARREGLO LA CABECERA*/
+      .portada{
+       width: 100%;
+       display: block;
+       margin: auto;
+       z-index: 30;
+      }
 
      .portada .portada-img{
       display: none;
@@ -1885,18 +2297,22 @@ text-align: center;
 
     /*CONTAINER PRINCIPAL DE LA IMAGEN Y DE LA CAJA DE TITULO Y MENU*/
    .portada .portada-img-responsive{
-    display: flex;
-    flex-direction: column;
+     width: 100%;
     z-index: 80;
     margin: auto;
     }
     
+     /*.............MOVIL...................*/
+    .portada  .portada-img-responsive .imagen-responsive-movil {
+      width: 100%;
+      max-width: 640px;
+     margin: auto;
+     }
 
     /*.............MOVIL...................*/
-     .portada-img-responsive .imagen-responsive-movil img{
+    .portada  .portada-img-responsive .imagen-responsive-movil img{
      width: 100%;
-    padding: 0 0;
-    z-index: 40;
+     max-width: 640px;
     margin: auto;
     }
      
@@ -1953,12 +2369,12 @@ text-align: center;
 
     /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
     .portada .portada-img-responsive .portada-img3-responsive{
-    width:92%;
-    height: 55%;
+    width:85%;
+    height: 130px;
     display: block;
     position: absolute;
     margin-top: 170px;
-    margin-left:  27px;
+    margin-left:  22px;
     background-color: #fff;
     border-bottom: 3px solid #568632;
     border-right: 3px solid #568632;
@@ -1969,14 +2385,14 @@ text-align: center;
 
 
    /*EL MENU*/
-    .portada-img-responsive #menu-simple-responsive{
-    width: 100%;
+    .portada-img3-responsive #menu-simple-responsive{
+    width: 90%;
     height: 30px;
     display: block;
      }
 
 
-     #menu-simple-responsive  .scrollresponsive{
+      #menu-simple-responsive  .scrollresponsive{
       display: flex;
       flex-direction: row;
       width:  100%;
@@ -1986,12 +2402,11 @@ text-align: center;
       -ms-overflow-style: none;  /* Internet Explorer 10+ */
       white-space: nowrap;
        padding: 8px 2px;
-
        }
 
 
-       .scrollresponsive::-webkit-scrollbar {
-        display: none;
+      .scrollresponsive::-webkit-scrollbar {
+      display: none;
       }
 
      #menu-simple-responsive ul{
@@ -2846,7 +3261,7 @@ width: 100%;
    }
 
 .quinto-segmento h1 i{
-  font-size: 150%;
+  font-size: 1.8rem;
 }
 /*Portada.......................................................................................................................................*/
 .container-portada{

@@ -541,8 +541,7 @@
   /* --FIN NAV--------------------------------------------------------*/
 
 
-
-
+ 
 
     /*SLIDER ........... width: 100vw;
   bottom: 0;  
@@ -1993,7 +1992,6 @@ animation: textomaq 5s infinite alternate;
     /*CAJA PRINCIPAL DEL PRIMER FOOTER............................................................... */
    #footer .footer-primero{
   width: 90%;
- 
   margin: auto;
   height: 250px; /*IMPORTANTE*/
   display: flex;

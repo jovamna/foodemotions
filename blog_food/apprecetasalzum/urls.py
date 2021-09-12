@@ -12,7 +12,5 @@ urlpatterns = [
     path('subcategoria/<str:slug>/',
          views.show_subcategory,
          name="subcategoria"),
-
-    #path('', views.recetas, name="ensaladasyzumos"),   #al poner el enlace va de esta forma  <a href="{% url 'receta' %}">
     #path('categorias/', views.categorias, name="categorias"),
 ]

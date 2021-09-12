@@ -49,32 +49,32 @@
               class="slider__img">
               </div>
               <!------------------------------------->
-                  <div class="imagen-responsive-ipod">
+              <div class="imagen-responsive-ipod">
               <img src="{% block imag %}{% static 'appfood/img/slider/760-360frutipod.jpg' %}{% endblock  %}"
               class="slider__img">
-                </div>
+              </div>
               <!-- FIN IMAGEN-->
               <!-- LETRAS-->
               <div class="portada-img3-responsive">
-              <div id="menu-simple-responsive">
-                  <ul class ="scrollresponsive">
-                  <li>
-              <a href="{% url 'appfood:index' %}"  >
+                   <div id="menu-simple-responsive">
+                   <ul class ="scrollresponsive">
+                   <li>
+                  <a href="{% url 'appfood:index' %}"  >
                   <p>Inicio<i class="right"></i></p>
                   </a>
-                </li>
-                <li>
-                <a href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"> 
-                <p>Dietas y Alimentacion Saludable <i class="right"></i></p>
-                </a>
-                </li>
-                <li >
-                {% for receta in post_receta %}
-                <p>{{ receta.kategory }}<i class="right"></i></p></em>
-                {% endfor %}
-                </li>
-            </ul>
-        </div>
+                  </li>
+                  <li>
+                  <a href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"> 
+                  <p>Dietas y Alimentacion Saludable <i class="right"></i></p>
+                  </a>
+                  </li>
+                  <li>
+                  {% for receta in post_receta %}
+                  <p>{{ receta.kategory }}<i class="right"></i></p></em>
+                  {% endfor %}
+                  </li>
+                  </ul>
+                  </div>
               <h1>DIETAS Y ALIMENTACION SALUDABLE</h1>
               <p>comer sano y delicioso es posible!</p>
               <!-- <img src="{% block imagen7 %}{% static 'appfood/img/foodemotions.png' %}{% endblock  %}" class="slider__img">--->
