@@ -1,7 +1,7 @@
 
 
   /*............................EN CONFLICTO*/
-  @media screen and (max-width: 320px) {
+  @media only screen and (min-width: 320px) and (max-width: 359px)   {
     body{
       padding:0;
       margin: 0;
@@ -22,7 +22,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      min-width:250px;
+      min-width: 320px;
       height: auto;
       flex-wrap: wrap;
     }
@@ -38,7 +38,7 @@
        display:flex;
        flex-direction: column;
         width: 100%;
-        max-width: 300px;
+        max-width: 359px;
         margin: auto;
         margin-top: 88px;
         bottom:  4px;
@@ -50,7 +50,7 @@
         header{
           display: block;
           width:100%;
-          max-width: 300px;
+          max-width: 359px;
           height: 99px;
           top:0;
           position: fixed;
@@ -64,7 +64,7 @@
     header.black{
     height:  99px;
     width: 100%;
-    max-width: 310px;
+    max-width: 359px;
       }
     
     /*.. max-with:640px;...*/
@@ -1653,7 +1653,7 @@
 
     /*@media screen and (max-width: 375px) {*/
    /*.....................MOVIL MEDIO.............*/
-  @media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: portrait){
+  @media only screen and (min-width: 360px) and (max-width: 640px){
    
     body{
       padding:0;
