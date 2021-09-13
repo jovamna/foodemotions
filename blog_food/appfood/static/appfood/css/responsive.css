@@ -1,1340 +1,521 @@
 
 
-	/* Mayor de 960px (dispositivos y navegadores) */
-	
-	@media only screen and (min-width: 959px) {
-		.menuPeq {visibility: hidden; display:none;}
-		.menuMed {visibility: hidden; display:none;}
-		.secundario {visibility: hidden; display:none;}
-		}
+  /*............................EN CONFLICTO*/
+  @media screen and (max-width: 320px) {
 
-    
-  
-
-/*.......................9........*/
-
-@media only screen and (min-width: 250px) and (max-width: 359px)   {
-  
-  #wrapper {
-  margin:0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    #wrapper {
+      flex-wrap: nowrap;
     }
-      
-   #wrapper > * {
-   padding: 15px;
-   }
 
-   #container{
-   width:   100%;
-   margin: auto;
-   margin-top: 14%;
-   margin-bottom: 180px;
-   }
-
-  header{
-  width:100%;
-  position: fixed;
-  z-index: 2000;   /*IMPORTANTE  */
-  height: 55px;
-  box-shadow: 0 8px 6px -6px #DCDCDC;
+    #wrapper > * {
+    padding: 15px;
+    }  
+    div {
+      flex-basis: 33%;
     }
-    
-   header.black{
-   background-color: #fff;
-   height: 55px;
-   width: 100%;
-   }
 
-     /* max-width: 359px;*/
-   .cabecera{
-  width:  100%;        
-  height: 30px; 
-  display: block;
-  margin: auto;
-  }
-
-  .icon-social{
-  display: none;
-  }
-
-
-  .logo{
-   display: block;
-   width: 30%;
-   height: 30px;
-   }
-
-  .logo img{
-  width: 100%;
-  height: 30px;
-  margin: auto;
-   }
-
- 
-       /*caja hay 2. A */
-
-  .suscribe{
-    display: none;
-  }
-    
-       /*caja  B*/
-     .menu-btn {
-      display:  block;
-      position: relative;
-      float: right;
-      width: 37px;
-      height: 30px;
-      margin-top: -32px;
-      cursor: pointer;
-      transition: all .5s ease-in-out;
   
-      }
-        
-
-      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-      .menu-btn  .menu-btn__burger {
-        display: block;
-        position: relative;
-        margin-top: 19px;
-        width: 34px;
-        height: 3.5px;
-        background: #2d2d2d;
-        border-radius: 2px;
-        box-shadow: 0 2px 5px rgba(255,101,47,.2);
-        transition: all .5s ease-in-out;
-        z-index: 1000;
+      #wrapper > * {
+      padding: 10px;
+      }  
+  
+        #container{
+       display:flex;
+       flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+        margin-top: 88px;
+        bottom:  4px;
+        height: auto;
+        }
+  
+  
+        /*.. #DCDCDC ..*/
+        header{
+          display: block;
+          width:100%;
+          max-width: 300px;
+          height: 99px;
+          top:0;
+          position: fixed;
+          z-index: 2000;   /*IMPORTANTE  */
+          margin: auto;
+          box-shadow: 0 8px 6px -6px #DCDCDC; 
          }
       
-        .menu-btn__burger::before,
-        .menu-btn__burger::after {
-          content: '';
-          position: absolute;
-          height: 3.5px;
-          width: 34px;  /*IMPORTANTE*/
-          background:#2d2d2d;
-          border-radius: 2px;
-          box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-          transition: all .5s ease-in-out;
-         z-index: 800;  
-        }
-
-
-
-   .menu-btn__burger::before {
-    transform: translateY(-8px);  /*ESPACIOS ENTRE LINEAS*/
-    z-index:3000; 
-    }
-
-  .menu-btn__burger::after {
-    transform: translateY(8px);   /*ESPACIOS ENTRE LINEAS*/
-    z-index:3000;
-    }
-  /* ANIMATION */
-  .menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-  }
-  .menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-    background: #fff;
-  }
-  .menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-    background: #fff;
-  }
   
-/* ESTE ES EL MENU NAV*/
-
-/*margin-left: 5.4%;/*IMPORTANTE */
-nav{
-  width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
-  height: 100%;/*IMPORTANTE */
-  position: fixed;
-   top:0px;  /*IMPORTANTE para que arriba no tenga espacios */
-  min-height: 100vh;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  background-color:#000000; /*FONDO DEL MENU*/
-  background-position:72% 50%;
-  background-repeat:no-repeat;
-  opacity: 1;
-  z-index:40;
-  }
-
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL*/
-   nav .nav{
-    margin-left: 2%;/*IMPORTANTE */
-    width: 70%;/*IMPORTANTE */
-    z-index:30;
-    display: flex;
-    flex-direction: column;  /* CON ESTO MODIFICO QUE NO SE VEA EL MENU FUERA*/
-    }
-
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav .nav li{
-    display: flex;
-  
-    filter: alpha(opacity=80);
-    height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
-    list-style: none;
-    cursor:pointer;
-    margin-left: 14% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
-   
-    }
-    
-    nav .nav li a {
-    z-index: 100;
-     color: #fff;
-     background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-    font-weight: lighter;
-    font-size: 1rem;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-
-    }
-  
- 
-      /* NAV ESCONDIDO  NAV ESCONDIDO*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-     nav .nav li:hover > ul {
-    display: block;
-    margin-left: -200px;
-    margin-top:-40px;
-    height: 200px;
-    visibility: visible; 
-    z-index: 598;
-     }
-
-    nav .nav li ul li a p{
-    font-size: 0.7rem;
-    display: block;
-    position: absolute;
-    max-width: 200px;
+      
+    header.black{
+    height:  99px;
     width: 100%;
-    margin-left: -2px;
-    padding-bottom: -2px;
-    }
-  
- 
-    nav .nav li ul li a{
-    margin-left: -76px;
-    }
-  
-
-    nav .nav ul {
-    visibility: hidden;
-    }
-
-    /* .FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...........MENU ESCONIDDO DEL NAV ARROW......*/
-/*ANIMACION SUBRAYADO */
-.nav a {
- display: inline-block;
- position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
-
-  .nav  a:after {
- content: "";
- display: block;
- margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
- height: 2px;
- width: 0px;
- transition: all .8s;
- z-index: 10;
- 
- }
-
-.nav  a:hover:after {
- width: 100%;
- max-width: 500px;
- padding-left: 40px;
- padding-right: -150px;
- height: 2px;
- background: white;
-    }
-
-   /*FIN ANIMACION SUBRAYADO */
-   /*MENU RESPONSIVE...*/
-   #menu-simple-responsive  .scrollresponsive{
+    max-width: 310px;
+      }
+    
+    /*.. max-with:640px;...*/
+    .cabecera{
+    width: 100%;
+    max-width: 300px;
     display: flex;
     flex-direction: row;
-    width:  100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    white-space: nowrap;
-     padding: 8px 2px;
-
-     }
-
-
-     .scrollresponsive::-webkit-scrollbar {
-      display: none;
+    justify-content: space-between;
+    height: 38px;
+    margin-top: -4px;
+    padding: 0 0 0 0;
+    margin-left: 8px;
     }
-
-
-
-  /*PORTADA CONTENEDOR*/
-  .portada{
+         
+       
+        
+    /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
+    .cabecera .logo{
+    display: inline-flex;
+    width: 100%;
+    max-width: 190px;
+    height: 38px;
+    }
+           
+       
+    .cabecera .logo img{
+    display: block;
+    width: 100%;
+    max-width: 190px;
+    height: 38px;
+    }
+       
+       /*caja hay 2. A */
+    .menu-btn {
+    display: block;
+    position: relative;
+    float: right;
+    width: 50%;
+    max-width: 240px;
+    height: 38px;
+    margin: auto;
+    }
+       
+    .suscribe {
     display: block;
     position: relative;
     float: left;
-  width: 100%;
-  max-width: 359px;
-  height: 120px;
-  margin: auto;
-  margin-bottom: 25px;
-  padding: 0 0 0 0 ;
-  }
-     .portada-img{
-       width: 100%;
-       display: flex;
-     }
-  .portada-img  img{
     width: 100%;
+    max-width: 85px;
+    height: 38px;
     }
-
-    /*MUEVE LA PRIMERA FRASE DE LA PORTADA*/
-  .portada-titulo{
-  width: 100%;
-  margin-top: -300px;
-
-
-  }
-
-  /*MUEVE LA SEGUNDA FRASE DE LA PORTADA*/
-  .portada-titulo1{
-    width: 100%;
-    margin-top: -370px;
+       
+         
+    .suscribe a h4{
+    font-size: 0.9rem;
+    margin-top: 22px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
     }
-  
-  
-  /*.PRIMER TITULO DE LA PORTADA*/
-  .portada-titulo  h2{
-  font-size: 0.7rem;
-  }
-  
-   /*..SEGUNDO TITULO DE LA PORTADA*/
-  .portada-titulo1  h6{
-    font-size: 0.7rem;
-    text-align: center;
+        
+    .cabecera .buscador{
+    display: none;
     }
-  
-  .portada-titulo h2 i{
-  font-size: 0.7rem;
-  }
-  .portada-titulo1  h6 i{
-    font-size: 0.7rem;
-    }
-     
-
-    /*PORTADA DE RECETAS SALUDABLES...........*/
-    .portada-receta{
-    width: 100%;
-     max-width: 414px;
-     height: 170px;
-     margin-top: -5%;
-     margin-bottom: 8%
-    }
-
-   
-
-
-     /*PRIMER TITULO DE LA PORTADA CON LETRAS EN MOVIMIENOT*/
-   .portada .portada-contacto-uno .azulplata{
-    font-size: 1rem;
-     }
-    /*--FORMA PARTE DEL .AZULPLATA PORQUE CAMBIE ESTILO DENTRO DE UN PARRAFO-----------------------*/
-    .portada .portada-contacto-uno .otroestilo { 
-     font-size: 1rem;
-      }
- 
-  /*---PORTATADA CONTACTO TERCER PARRAFO----*/
- .portada-img .portada-contacto-tres{
-  position: absolute;
-  overflow: hidden;
-  top: 80px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
-   left: 8px ;
-  width: 40%;
-  height: 30px;
-
- }
-
-    /*TERECER PARRAFO QUE SUBE*/
-    .portada-img .portada-contacto-tres span h2{
-    color:#639a3a;
-    word-spacing: -1px;
-    margin-top: -40px; /*DISTANCIA DE SEPARARCION DEL OTRO PARRAFO*/
-    font-family: 'Cabin', sans-serif;
-    font-size: 0.5rem;
-     }
-   /*SUSUCRIBETE*/
-    .portada-img .portada-contacto-tres span h4{
-    color:#fff;
-    margin-top: -40px; /*DISTANCIA DE SEPARARCION DEL OTRO PARRAFO*/
-    border-radius: 2px;
-    background-color: #639a3a;
-    font-family: 'Cabin', sans-serif;
-    padding: 5px 6px 5px 7px;
-    font-weight: 600;
-    font-size: 0.5rem;
-    margin-right: 15px;
-     }
-    /*FORMULARIO DE LA PAGINA DE CONTACTOS*/
-  .section-heading-upper{
-    font-size: 1rem;
-     }
-
-  .section-heading-lower{
-    font-size: 1rem;
-  }
-
-   /*CAJA DEL FORMLARIO*/
-   .row{
-    width: 100%;
-    }
-
-   /*SUBCAJA DEL FORUMMLARIO DE CORREO*/
-    .input-group{
-    width: 80%;
-    margin: auto;
-    }
-
-    /*BOTON ENVIAR SUBMIT*/
-    .text-center{
-    width: 90%;
-    margin-left: -15px;
-    }
-
-  /*BOTOM BUSCADOR */
-  .btn-succes{
-	border-right: 4px;
-	-moz-border-right: 2px;
-	-webkit-border-right: 2px;
-	font-size: 1em;
-	font-weight: 300;
-  padding: -2px;
-  width: 19%;
-  height: 45px;
-  background-color:#639a3a ;
-  color: #fff;
-  }
-
-   
-  
-    /*CAJA DEL BUSCADOR ...................*/
-
-     #controls{
-       width: 100%;
-       height: 50px;
-       display: block;
-       position: relative;
-       float: left;
-     }
-
-
-     #controls  #custom-search-input{
-      display: flex;
-      flex-direction: row;
-      width: 99.6%;
-      height: 29px;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    font-size: 1rem;
-    padding: 2px;
-    background-color: #639a3a;  
-    }
-
-
-    #custom-search-input .form-control{
-    border-left: 4px;
-    -moz-border-left: 2px;
-    -webkit-border-left: 2px;
-     font-size: 0.7rem;
-    font-weight: 6rem;
-    padding: 4px;
-    width: 78%;
-    height: 26px;
-    }
-
-    /*BOTOM BUSCADOR */
-    #custom-search-input .btn-succes{
-      border-right: 4px;
-      -moz-border-right: 2px;
-      -webkit-border-right: 2px;
-      font-size: 0.7rem;
-      font-weight: 300;
-      padding: -2px;
-      width: 15%;
-      height: 26px;
-      background-color:#639a3a ;
-      color: #fff;
-      }
     
-  /*TITULOS*/
-      .titulo{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      margin-bottom: 17px; /*RELACIONADO CON PLAN TOTAL ALIMENTACION*/
+      /*..BUSCADOR PARA EL MOVIL..........................*/
+      .buscador-responsive{
+        display: block;
+        position: relative;
+        float: left;
+       width: 100%;
+       max-width: 290px;
+      height: 40px;
+      margin-left: 10px;
+      z-index: 9;
       }
-
-      .titulo .escrito{
-      width: 90%;
-      max-width: 300px;
-      }
-
-      .vacio{
-      width: 5%;
-      max-width: 20px;
-      }
-
-      .titulo .escrito  h1{
-        font-size: 1.5rem;
-        color: #000000;
-        text-shadow: 0px 0.9px 0.9px white; 
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: 900;
-        letter-spacing: 0.1px;
-        word-spacing: 0.1px;
+       
+  
+       .buscador-responsive #controls-responsive{
         width: 100%;
-        max-width: 300px;
-       }
-
-  .titulo .escrito a h1{
-    width: 100%;
-    max-width: 300px;
-    font-size:   1.5rem;
-    color: #000000;
-    text-shadow: 0px 0.9px 0.9px white; 
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 900;
-    letter-spacing: 0.5px;
-    text-align: center;
-   }
-   
-   .titulo h2{
-    font-size:  1.4rem;
-    width: 100%;
-    max-width: 300px;
-   }
-    
-   .titulo p{
-    font-size:  1.4rem;
-    width: 100%;
-        max-width: 300px;
-   }
-
-
-
-   /*..............................................................*/
-
-
-   
-   /* SEGUNDO-SEGMENTO */
-   .primer-segmento{
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid #c9c9c9;
-    }
-  
-    .primer-segmento .tres{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3%;
-    }
-  
-    .tres img{
-     display: block;
-     position: relative;
-     float: left;
-     width: 100%;
-     height: 25%;
-    }
-  
-     /*CAJA DEL TITULO Y LA DESCRIPCION*/
-   /*ESTO VA EN INDEX DENTRO DEL CONTENEDOR SEGUNDO SEGMENTP TITULO NUTRICION DEL SEGUNDO SEGMENTO*/
-    .primer-segmento .tres a h1{
-     font-size: 1.2rem;
-     color: black;
-     word-spacing: -0.5px;
-     letter-spacing: -0.5px;
-     font-family: 'Archivo Black', sans-serif;
-     margin-top: 3px;
-     text-transform: lowercase;
-     }
-  
-    .primer-segmento .tres a p{
-    font-size: 1rem;
-    color: #2d2d2d;
-    word-spacing: -0.1px;
-    letter-spacing: 0.3px;
-    font-family: 'Times New Roman', Times, serif;
-    text-transform: lowercase;
-     }
+        height: 30px;
+       padding-top: 8px;
+        z-index: 10;
+        }
   
   
-    .primer-segmento .tres a {
-    font-size: 1rem;
-    color: #4b4b4b;
-    word-spacing: -0.5px;
-    letter-spacing: -0.5px;
-    font-family: 'Archivo Black', sans-serif;
-    text-transform: lowercase;
-    margin: auto;
-     }
-   /*.....................................................................*/
-
-
-
-   /*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS*/
-   .dos-columnas{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    }
-
-    
-     .dos-columnas .posts-ultimos{
-       width: 290px;
-      display: flex;
-      flex-direction: row;
-      }
-
-    .dos-columnas .posts-ultimos-imagen{
-     display: block;
-     position: relative;
-     float: left;
-     width: 26%;
-     max-width: 130px;
-     }
-
-   .posts-ultimos-imagen img{
-    width: 100%;
-    max-width: 120px;
-    height: 100%;
-    max-height: 80px;
-    }
-
-   .posts-ultimos-titulo{
-   display: block;
-   position: relative;
-   float: right;
-   width: 45%;
-   }
-
-   
-   .posts-ultimos-titulo h1{
-    font-size: 1.2rem;
-    }
-   
-    .posts-ultimos-titulo p{
-     font-size: 1rem;
-      }
-    
-    .aside-segunda{
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    /*EXPLORAR*/
-    .columna-right .explora h3{
-      font-size: 1.4rem;
-      font-family: 'Times New Roman', Times, serif;
-      color: #000000;
-      text-align: center;
-   
-    }
-    
-    /*TITULO CATEGORIAS */
-    .aside-segunda .categoria-aside-segunda a h1{
-     font-size: 1.1rem;
-     font-family: 'Times New Roman', Times, serif;
-     color: #000000;
-    margin-left: 10px;
-    margin-bottom: 2px;
-    }
-    /*..SUBCATEHORIAS*/
-    .aside-segunda .categoria-aside-segunda a h2{
-     font-size: 1rem;
-     font-family: 'Times New Roman', Times, serif;
-     color: #2d2d2d;
-   margin-left: 10px;
-    }
-
- /*FIN ULTIMOS*/
-
-   
-    /*SEGMENTO DE UNA FOTO GRANDE Y 4 PEQUEÑAS*/
-.plan-total-alimentacion{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 1px;  /*RELACIONADO CON TITULO*/
-}
-
-  .plan-imagen-responsive{
-    display: flex;
-    flex-direction: column;
-  }
-
-    /*TITULO DE LA IMAGEN GRANDE*/
-  .plan-imagen-responsive h1{
-    display: block;
-   font-size: 1.4rem;
-   word-spacing: -0.9px;
-   margin-top: 8px;
-   margin-bottom: 25px;
-  }
-
-  /*ANULANDO LA OTRA IMAGEN*/
-   .plan-imagen{
-     display: none;
-   }
-
-    /*CONTAINER DE LA CAJA PLAN-POST-ALIMENTACION ESTA 
-    TIENE A CAJA QUE TIENE PLAN POST Y PLAN-POST-LETRA*/
-     .plan-alimentacion{
-    display: block;
-     width: 100%;
-   }
-
-     /*CONTAINER DE PLAN-POST Y PLAN POST-LETRA*/
-    .plan-post-alimentacion{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-    }
-
-    /*CAJA DE LA IMAGEN-*/
-    .plan-post-imagen{
-     margin-right: 15px;
-    }
-
-    /*TITULO  DE LOS 4 POST PEQUEÑOS*/
-   .plan-post-letra h1{
-     font-size: 1.1rem; 
-   }
-
-    /*PAGINA FRONTAL DE RECETAS DIETA PLAN Y TURISMO*/
-    #container-plan{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: auto; 
-     }
-
-
-     .container-columna-posts{
-    width: 100%;
-    display: block;
-     }
-
-
-      /*..CAJA DE ELEMENTO-IMAGEN Y ELEMENT0-DESCRIPCION...*/
-      .elemento-post{
-      width: 100%;
-       display: flex;
-      flex-direction: column;  
-      }
- 
-     .elemento-imagen{
-      display: block;
-       width: 100%;
-       max-width: 400px;
-       margin-bottom: 20px;
-     }
-
-
-     .elemento-imagen img{
-    width: 100%;
-    max-width: 400px;
-     }
-
-    
-    .elemento-descripcion {
-    width: 100%;
-    }
-   
-     .elemento-descripcion h2{
-    font-size: 1.5rem;
-     }
-
-      .aside-plan{
-        width: 100%;
-      }
-   /*FIN PAGINA RECETAS SALUDABLES*/
-
-
-
-
-  
-    /*CIERRE CUARTO SEGMENTO.......NUTRICION......*/
-    .container-portada{
-      width: 100%;
-      height: 250px;
-      display: block;
-      position: relative;
-      float: left;
-    }
-
-    .container-portada h1{
-     font-size: 1.2rem;
-    }
-     
-    .container-portada p{
-    font-size:0.8rem;
-    }
-
-  
-  /*QUINTO-SEGMENTO........DE MEDIA QUERY 500 MAIXMO........*/
-   .quinto-segmento{
-     margin-top: 30px;
-    border-bottom: 1.5px solid 	#DCDCDC;   
-     }
-
-  .resumen2 h1 {
-  font-size: 24px;
-  }
-  
-  .resumen2 h1 i{
-  font-size: 28px;
-  }
-  
-  .texto-animado{
-    width: 100%;
-  }
-  .texto-animado h1{
-  font-size: 0.8rem;
-  margin: auto;
-  }
-  
-  /*IMPORTANTE PARA SEPARAR EL ULTIMO BLOQUE DEL FOOTER*/
-  .index-entre-footer-texto-animado{
-    display: flex;
-    width: 100%;
-    height: 70px;
-  }
-
-
-  /*FOOTER ........DE MEDIA QUERY 500 MAIXMO......................................*/
-  #footer{
-    clear: both;
-    position: relative;
-    height: 130px;
-    margin-top: -130px;
-   -webkit-box-shadow: 0px -3px 6px #DCDCDC;
-  -moz-box-shadow: 0px -3px 6px #DCDCDC;
-  box-shadow: 0px -3px 6px  #DCDCDC;
-   display: flex;
-   flex-direction: column;
-  width: 100%;
-  z-index: 1000;
-  bottom: 0;
-   background-color: #f4f4f4;
-  }
-  
-
- 
-    .footer-primero{
-     display: flex;
-     flex-direction: column;
-     width: 100%;
-     height: 420px;
-     background-color: #f4f4f4;
-     }
-     
-      /*CAJA DE FOOD EMOTIONS E ICONOS SOCALES Y BOX */
-    .icon-email{
-     width: 100%;
-     height:   150px;
-     display: flex;
-     flex-direction: column;
-     margin: auto;
-     margin-top: 0.5%;
-     margin-bottom: 1%; 
-     }
-
-    /*SUB-caja  DE FOOD Y REDES */
-  .icon-email .icon-social1{
-   width: 100%;
- 
-   height: 60px;
-   margin: auto;
-   margin-bottom: 0.8%;
-   }
-  
-   .icon-social1 .social2{
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-     width: 100%;
-      margin: auto;
-   }
-    /*FOOD EMOTIONS*/
-   .icon-email .icon-social1 p{
-     font-size: 1.4rem;
-     word-spacing: -3px;
-     letter-spacing: -2px;
-     padding-bottom: 0px;
-     text-align: center;
-
-     }
- 
-     .icon-email  ul li .fa-envelope{
-       background-color: oldlace;
-       color: #2d2d2d;
-       width:36px;
-       height: 36px;
-       padding: 2px 2px 2px 2px;
-       border-radius: 25px;
-       border: solid #E9E9E9;
-       }
-       
-       .icon-email  ul li .fa-facebook-f{
-         background-color: oldlace;
-         color:  #2d2d2d;
-         width:36px;
-         height: 36px;
-       padding: 2px 2px 2px 2px;
-         border-radius: 25px;
-         border: solid #E9E9E9;
-       }
-       
-       
-       .icon-email  ul li .fa-twitter{
-         background-color: oldlace;
-         color:   #2d2d2d;
-         width:36px;
-       height: 36px;
-        padding: 2px 2px 2px 2px;
-         border-radius: 25px;
-         border: solid #E9E9E9;
-       }
-       
-       
-       
-       
-       .icon-email ul li .fa-instagram{
-         background-color: oldlace;
-         color: #2d2d2d;
-         width:36px;
-         height: 36px;;
-         padding: 2px 2px 2px 2px;
-         border-radius: 25px;
-         border: solid #E9E9E9;
-       }
-       
-  /*SUBCAJA BOC */
-   .box{
-   width: 100%;
-   height: 60px;
-  display: block;
-  margin: auto;
-   }
- 
-   .box form{
-   display: flex;
-   flex-direction: row;
-   width: 90%;
-   margin: auto;
-   }
-
-  .box h3{
-   font-size: 1rem;
-   text-align: center;
-   letter-spacing: -1px;
-   word-spacing: -1px;
-   font-family: 'Fira Sans', sans-serif;
-    }
-  
-    /*CAJA ENVIO BLANCO DONDE SE ESCROBE*/
-   .box input[type="text"]{
-     width: 70%;
-     height: 38px;
-     font-size: 0.9rem;
-     border-radius: 3px 2px 2px 3px;
-     padding: 0 25px;
-     border: 2px solid 	#DCDCDC;
-    }
-
-   /*CAJA OSUCRA DONDE SE ENVIA*/
-   .box input[type="submit"]{
-     width: 25%;
-     height: 38px;
-     border-radius: 3px 6 6 3px;
-     font-size: 0.6rem;
-     left: -1px;
-     top: 0px;
-     border: 2px solid 	#2d2d2d;
-    }
-   
-   
- 
-      /*caja */
- .menu-footer{
- width:100%;
- height: 100px;
-display: flex;
-flex-direction: column;
- }
- 
- .menu-footer .footer-text{
-   height: 100%;
-   max-height: 25px;
- 
- }
- /*TITULO DEL MENU*/
-.menu-footer .footer-text h1{
-text-align: center;
-   font-size: 1.2rem;
- word-spacing: -2px;
- letter-spacing: -1.5px;
- 
- }
-
- .menu-footer .footer-lista {
-   height: 100%;
-   max-height: 120px;
- }
- /*OPCIONES DEL MENU*/
-.menu-footer .footer-lista p{
- line-height: 17px;
- font-weight: bold;
- font-size: 1rem;
- color: #2d2d2d;
- letter-spacing: -0.5px;
-
-text-align: center;
- }
- 
- 
-      /*caja */
-   .espacio{
-   width: 2%;
-   height: 80%;
-   margin-top: 0.5%;
-   margin-bottom: 1%;
-   }
- 
- /*CAJA PRINCIPAL DEL SEGUNDO FOOTER */
- #footer-second{
-  width: 100%;
-     max-width: 400px;
-     margin: auto;
-     height: 20px;
- }
- 
- .final-food{
-   display: block;
-   height: 15px;
- }
-
-  
-   .final-food p{
-     font-size: 0.4rem;
-     font-family: Arial, Helvetica, sans-serif;
-     font-weight: 900;
-   }
-
-
-   }
-
-
-
-  
-   @media only screen and (min-width: 320px) and  (max-width: 568px)  {
-    #wrapper {
-      margin:0;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      }
-      #wrapper > * {
-        padding: 12px;
-        }  
-
-    body{
-    margin: 0;
-    margin-bottom: 90px;
-    }
-
-
-     .cabecera{
-      width: 100%;
-      max-width: 290px;
-      height: 40px; 
-      display: flex;
-      flex-direction: row;
-      margin-left: 2px;
-      }
-      
-
-      .menu-btn .suscribe h4{
-      font-size: 0.8rem;
-      }
-
-
-       #container{
-      width: 100%;
-      margin: auto;
-      margin-top: 30%;
-      }  
-
-      /*.. #DCDCDC ..*/
-      header{
-        width: 100%;
-        max-width: 320px;
-        height:99px;
-        position:fixed;
-        z-index: 999;
-        margin: auto;
-        box-shadow: 0 8px 6px -6px;
-       }
-    
-
-    
-    header.black{
-    height:  99px;
-    height: 99px;
-
-    }
-
-     .buscador-responsive{
-       width: 100%;
-       max-width: 300px;
-       margin: auto;
-     }
-
-     .buscador-responsive #controls-responsive{
-       width: 100%;
-     }
-
-     .buscador-responsive #controls-responsive   #custom-search-input-responsive{
+      .buscador-responsive #controls-responsive   #custom-search-input-responsive{
       width: 99%;
-      height: 35px;
+      height: 30px;
       display: flex;
       flex-direction: row;
-      font-weight: 700;
-      padding: 0.5px 0.5px;
+      padding: 1px 1px;
       border-radius: 8px;
-      border: 1px solid #f4f4f4;
+      border: 2px solid #f4f4f4;
       }
+  
+  
   
       .buscador-responsive #controls-responsive   #custom-search-input-responsive .sin-borde{
-        height: 25px;
-        width: 90%;
-        border-radius: 15px;
-        font-weight: lighter;
-        padding-left: 10px; /*MUEVE LA LETRA*/
-        }
-    
-    
-    
-        .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
-        height: 25px;
-        width: 10%;
-        border-radius: 10px;
-        background-color: #fff;
-        }
-    
-      /* CUANDO SE ESCRIBE EN EL PLACEHOLDER..*/
-      .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
-      outline: none;
-      border: 0;
-      color: #000000;
-      font-size: 1.1rem;
+      height: 25px;
+      width: 90%;
+      border-radius: 15px;
+      font-size: 0.7em;
+      font-weight: lighter;
+      padding-left: 10px; /*MUEVE LA LETRA*/
       }
-    
-      /*..CUANDO ESTA ESCRITO EN EL PLACEHOLDER..*/
-      .buscador-responsive #controls-responsive #custom-search-input-responsive input::placeholder { 
-       color: #2d2d2d; 
-       font-size: 1rem;
-       margin-top: 3px;
-      }
-
-
-
-    /*FIN ANIMACION SUBRAYADO */
-     .portada{
-       width: 100%;
-       max-width: 300;
-       margin: auto;
-      display: flex;
-      flex-direction: column;
-      z-index: 30;
-     }
-
-     .portada .portada-img{
-      display: none;
-      visibility: hidden;
-         }
-
-
-          
-    /*--PORTADA RECETAS SALUDABLE--Y DEMAS PAGINAS--------------------------*/
-   /*...............................................*/
-    .imagen-responsive-ipod{
-      display: none;
-      visibility: hidden;
-    }
-
-    /*CONTAINER PRINCIPAL DE LA IMAGEN Y DE LA CAJA DE TITULO Y MENU*/
-    .portada .portada-img-responsive{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      z-index: 80;
-      margin: auto;
-      }
-
-    
-      .portada .portada-img-responsive .imagen-responsive-movil {
-        width: 100%;
-        max-width: 290px;
-        margin: auto;
-      }
-
-
-    /*.............MOVIL...................*/
-     .portada-img-responsive .imagen-responsive-movil img{
-      width: 100%;
-      max-width: 290px;
-      padding: 0 0;
-      z-index: 40;
-      }
-     
-
-    /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
-    .portada .portada-img-responsive .portada-img3-responsive{
-      width:92%;
-      height: 55%;
-      display: block;
-      position: absolute;
-      margin-top: 170px;
-      margin-left:  27px;
+  
+  
+  
+      .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
+      height: 25px;
+      width: 10%;
+      border-radius: 10px;
       background-color: #fff;
-      border-bottom: 3px solid #568632;
-      border-right: 3px solid #568632;
-      z-index: 120;
       }
+  
+  
+     
+          /* CUANDO SE ESCRIBE EN EL PLACEHOLDER..*/
+        .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
+        outline: none;
+        border: 0;
+        color: #000000;
+        font-size: 1.1rem;
+        }
+      
+        /*..CUANDO ESTA ESCRITO EN EL PLACEHOLDER..*/
+        .buscador-responsive #controls-responsive #custom-search-input-responsive input::placeholder { 
+         color: #2d2d2d; 
+         font-size: 1rem;
+         margin-top: 3px;
+        }
+  
+         /*---------------------------------------------------------------------*/
+       /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+      .menu-btn .menu-btn__burger {
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 24px;
+      width: 100%;
+      max-width: 34px;
+      height: 4px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+      z-index: 1000;
+      }
+      
+  
+  
+      .menu-btn__burger::before,
+      .menu-btn__burger::after {
+      content: '';
+      position: absolute;
+      height: 4px;
+      width: 34px;  /*IMPORTANTE*/
+      background:#2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+      transition: all .5s ease-in-out;
+      z-index: 800;  
+      }
+  
+        
+      .menu-btn__burger::before {
+      transform: translateY(-8px);
+      z-index:3000;
+      }
+  
+  
+      .menu-btn__burger::after {
+      transform: translateY(8px);
+      z-index:3000;
+      }
+  
+  
+      /* ANIMATION */
+      .menu-btn.open .menu-btn__burger {
+      transform: translateX(-50px);
+      background: transparent;
+      box-shadow: none;
+      }
+  
+  
+  
+      .menu-btn.open .menu-btn__burger::before {
+      transform: rotate(45deg) translate(35px, -35px);
+      background: #fff;
+      }
+  
+      .menu-btn.open .menu-btn__burger::after {
+      transform: rotate(-45deg) translate(35px, 35px);
+      background: #fff;
+      }
+  
+  
+  
+  
+      .menu-btn__burger:hover{
+      background-color: #639a3a;
+      }
+      
+  
+      .menu-btn__burger:hover::before,
+      .menu-btn__burger:hover::after{
+      background-color: #639a3a;
+      }
+  
+  
+    /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+  
+      /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+    /*margin-left: 5.4%;/*IMPORTANTE */
+    nav{
+    position: fixed;
+    width: 100%;
+    max-width: 319px;
+    height: 100%;
+     top:-8px;  /*IMPORTANTE para que arriba no tenga espacios */
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+    opacity: 0.97;
+   background-color: #000000;
+   z-index: 200;
+    }
+  
+     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      nav .nav{
+     width:100%; 
+     max-width: 290px;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     margin-left: 2px;
+     margin-top: 30px;
+     z-index: 60;
+      }
+  
+       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+      nav .nav li{
+      list-style: none;
+      height: 40px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+      margin-left: 10px;
+      margin-bottom: 10px;
+      margin-top: 12px;
+      cursor:pointer;
+      }
+      
+      nav .nav li a {
+      z-index: 100;
+      background-color: #000000;  /*IMPORTANTE  DAR COLOR NEGRO por sale borroso la letra*/
+      display: block;
+      width: 100%;
+      height: 40px;
+      color: #fff;
+      font-weight: lighter;
+      font-size: 1rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  sans-serif;
+      }
+    
+       /*IMPORTANTE*/
   
        
-     /*-----imagen grande de contacto----------------*/
-     .portada-img{
-      display: none;
-      visibility: hidden;
-    }
-    
-    .portada-img  .portada-titulo{
-      display: none;
-      visibility: hidden;
-    }
-    
-    .portada-img  .portada-titulo1{
-      display: none;
-      visibility: hidden;
-    }
-    
-    /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
-    .portada .portada-img-responsive .portada-img3-responsive{
-      width:92%;
-      height: 55%;
+      
+   
+        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+        nav .nav li:hover > ul {
+         display: block;
+        margin-left: -200px;
+        height: 200px;
+        visibility: visible; 
+        z-index: 598;
+        }
+  
+      nav .nav li ul li a{
+      font-size: 1rem;
       display: block;
       position: absolute;
-      margin-top: 170px;
-      margin-left:  12px;
+      max-width: 200px;
+      width: 100%;
+      margin-left: -2px;
+      padding-bottom: -2px;
+      margin-left: -76px;
+      }
+  
+       nav .nav ul {
+      visibility: hidden;
+      }
+  
+        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+    
+   /*ANIMACION SUBRAYADO */
+   nav a {
+   display: inline-block;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   z-index: 40;
+   }
+  
+    nav  a:after {
+   content: "";
+   display: block;
+   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+   height: 2px;
+   width: 0px;
+   transition: all .8s;
+   z-index: 10;
+   }
+  
+  
+    /* width: 100%;*/
+    nav  a:hover:after {
+   
+    padding-left: 40px;
+    padding-right: -150px;
+    height: 2px;
+    background: white;
+    }
+  
+         /*FIN ANIMACION SUBRAYADO position: relative;  /*ESTO ARREGLO LA CABECERA*/
+         .portada{
+          position: relative;  /*ESTO ARREGLO LA CABECERA*/
+         margin: auto;
+          width: 100%;
+          max-width: 320px;
+           z-index: 30;
+          }
+  
+        .portada .portada-img{
+          display: none;
+          visibility: hidden;
+         
+             }
+            
+      /*--PORTADA RECETAS SALUDABLE--Y DEMAS PAGINAS--------------------------*/
+     /*...............................................*/
+     .imagen-responsive-ipod{
+      display: none;
+      visibility: hidden;
+    }
+  
+      /*CONTAINER PRINCIPAL DE LA IMAGEN Y DE LA CAJA DE TITULO Y MENU*/
+     .portada .portada-img-responsive{
+      display: flex;
+      flex-direction: column;
+      z-index: 80;
+      margin: auto;
+  
+      }
+      
+       /*.............MOVIL...................*/
+      .portada  .portada-img-responsive .imagen-responsive-movil {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+       }
+  
+      /*.............MOVIL...................*/
+      .portada  .portada-img-responsive .imagen-responsive-movil img{
+        width: 100%;
+        max-width: 320px;
+        padding: 0 0;
+        z-index: 40;
+        margin: auto;
+  
+      }
+       
+  
+   /*----TITULO RESPONSIVE DE LA PORTADA DEL MOVIL..........TITULO MOVIL DENTRO DE LA PORTADA RESPONSIVE..*/
+      .portada .portada-img-responsive .portada-titulo{
+        width: 100%;
+        display: block;
+        position: absolute;
+        margin-top:  60px;
+        z-index: 80;
+       }
+
+       /*----TITULO RESPONSIVE DE LA PORTADA DEL MOVIL..........TITULO MOVIL DENTRO DE LA PORTADA RESPONSIVE..*/
+      .portada .portada-img-responsive .portada-titulo1{
+        width: 100%;
+        display: block;
+        position: absolute;
+        margin-top:  -320px;
+        }
+  
+    
+        .portada .portada-img-responsive .portada-titulo h2{
+        display:block;
+        margin: 0;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1;
+        -webkit-transform: translateY(10rem);
+                transform: translateY(10rem);               /*DISTANCIA DE SUBIDA*/
+        -webkit-animation: up 650ms linear forwards;        /*TIEMPO QUE SUBE */
+                animation: up 650ms linear forwards;
+                z-index: 1;
+                text-shadow: 0px 2px 2px #2d2d2d;           
+        color: azure;
+        font-family: 'Cabin', sans-serif;
+        word-spacing: 5px; ;
+        }
+        
+        .portada .portada-img-responsive .portada-titulo  h2 i{
+        font-size: 1.43em;
+        }
+    
+        .portada .portada-img-responsive .portada-titulo1  h6 i{
+          font-size: 1.3rem;
+          }
+      
+     
+        /*........*/
+        .portada .portada-img-responsive .portada-titulo1 h6{
+        font-size: 1.1rem;
+         }
+        
+   
+  
+      /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
+      .portada .portada-img-responsive .portada-img3-responsive{
+      width:92%;
+      height: 120px;
+      display: block;
+      position: absolute;
+      margin-top: 150px;
+      margin-left:  22px;
       background-color: #fff;
       border-bottom: 3px solid #568632;
       border-right: 3px solid #568632;
       z-index: 120;
       }
   
-
+      
+  
+  
      /*EL MENU*/
-      .portada-img-responsive #menu-simple-responsive{
-      width: 100%;
+      .portada-img3-responsive #menu-simple-responsive{
+      width: 90%;
       height: 30px;
       display: block;
        }
   
-       /*TITULO FLOTANTEDE LA PORTADA PRINCIPAL*/
-   .portada-img-responsive .portada-titulo{
-    width: 100%;
-    position: absolute;
-    margin-top: 60px;
-    }
-
-    .portada-img-responsive .portada-titulo1{
-    width: 100%;
-    position: absolute;
-    margin-top: -300px;
-    }
-
-    /*TITULO DE LA PAGINA PUESTA ABAJ DE LA PORTADA*/
-    .portada-img3-responsive h1{
-    font-size: 1.2rem;
-    }
-
-   .endfor .leftNav{
-   display: none;
-   visibility: hidden;
-   }
-
-   .endfor .rightNav{
-    display: none;
-   visibility: hidden;
-   }
-
-
-    /*--TITULO PRIMERO ...*/
-     #container .titulo-principal{
-     display: flex;
-     flex-direction: row;
-     width: 100%;
-     margin: auto;
-     margin-top: 40px;
-     margin-bottom: 10px;
-     }
-
-    #container  .titulo-principal .escrito {
-    width: 95%;
-    }
-
-     #container  .titulo-principal .escrito h1{
-     font-size: 1rem; 
-    font-family: 'Archivo Black', sans-serif;
-    }
-
-    #menu-simple-responsive  .scrollresponsive{
-    display: flex;
-    flex-direction: row;
-    width:  100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    white-space: nowrap;
-    padding: 8px 2px;
-    }
+  
+        #menu-simple-responsive  .scrollresponsive{
+        display: flex;
+        flex-direction: row;
+        width:  100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        white-space: nowrap;
+         padding: 8px 2px;
+         }
   
   
-    .scrollresponsive::-webkit-scrollbar {
-    display: none;
-    }
+        .scrollresponsive::-webkit-scrollbar {
+        display: none;
+        }
   
        #menu-simple-responsive ul{
       display: flex;
@@ -1372,665 +553,1213 @@ text-align: center;
     }
             
   
+    /*-----imagen grande de contacto----------------*/
+     .portada-img{
+       display: none;
+       visibility: hidden;
+     }
+    /*fin*/
+  
+     /*ESTO ES EL TITULO*/
+    .portada .portada-img3-responsive h1{
+    font-size: 1.1rem;
+     margin-left: 8px;
+    margin-bottom: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    color:#000000
+     }
+  
+     /*ESTE ES EL PARRAFO*/
+    .portada-img3-responsive p{
+    font-size: 1rem;
+    margin-left: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #2d2d2d;
+    }
+  
+  
+  /*..................................................................-*/
+      /*PORTADA CONTACTO*/
+      .portada-contacto{
+        padding-bottom: -50px; 
+      }
+  
+      /*PORTADA CONTACTO DONDE SE MUEVEN LAS LETRAS*/
+      .portada .portada-contacto-uno{
+        position: relative;
+        overflow: hidden;
+        top: -170px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
+        left: 30px ;
+        width: 48%;
+       }
+  
+         /*LETRA PROUDLY*/
+      .portada .portada-contacto-uno .azulplata{
+        display: block;
+        width: 100%;
+        font-weight: 900;
+        font-size: 0.6rem;
+        font-family: 'Cabin', sans-serif;
+        color:black;
+        line-height: 10px;
+      }
+      /*--LETRA CRAFTED----------------------*/
+      .portada .portada-contacto-uno .otroestilo { 
+        font-weight: 300 ;
+         font-size:   0.8rem;
+         color:black ;
+         display: inline-block;
+         font-family: 'Cabin', sans-serif;
+         font-style: italic;
+        }
+      
+        /*---SEGUNDO PARRAFO----*/
+  /*PROUDLY CRAFTED*/
+  .portada .portada-contacto-dos{
+    position: relative;
+    overflow: hidden;
+    top: -200px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+    left: 30px ;
+    width: 48%;
+   }
+    /* SEGUNDO PARRAFO Proudly crafted in  münich since 1987*/
+   .portada .portada-contacto-dos h6 {
+    display:inline-block;
+    padding-top: 43px; /*IMPORTANTE PARA DISTANCIAR EL PARRAFO DEL SIGIENTE PARRAFAO*/
+    margin: 0;
+    font-size: 0.7rem;
    
-  /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
-  .cabecera .logo{
-    display: inline-flex;
-   width: 100%;
-   max-width: 190px;
-  height: 38px;
+  }
+  
+  /*---TERCER PARRAFO----*/
+   .portada .portada-contacto-tres{
+    position: relative;
+    overflow: hidden;
+    top: -260px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
+    left: 30px ;
+    width: 48%;
+   }
+  
+    /*TERECER PARRAFO QUE SUBE*/
+      .portada .portada-contacto-tres span h2{
+      color:#639a3a;
+      padding: 5px 6px 5px 7px;
+      word-spacing: -1px;
+      margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
+      font-family: 'Cabin', sans-serif;
+      font-size: 0.5rem;
     }
-     
- 
-   .cabecera .logo img{
-     display: block;
+     /*SUSUCRIBETE*/
+      .portada .portada-contacto-tres span h4{
+      color:#fff;
+      padding: 0px 0px 0px 0px;
+      margin-top: 20px; /*DISTANCIA DE SEPARARCION DEL OTRO PARRAFO*/
+      border-radius: 5px;
+      background-color: #639a3a;
+      font-family: 'Cabin', sans-serif;
+      font-weight: lighter;
+      font-size: 0.5rem;
+    }
+  
+  
+  
+   /*...LETRAS DE PORTADA CONTACTO RESPONSIVE MOVIL.........................*/
+   .portada-img-responsive .portada-contacto-uno{
+    position: relative;
+    overflow: hidden;
+    top: -230px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
+    left: 1px ;
+    width: 60%;
+   }
+  
+     /*FRASE PRIMERA QUE LLEVA P*/
+  .portada-img-responsive .portada-contacto-uno .azulplata{
     width: 100%;
-    max-width: 190px;
-    height: 38px; 
+    font-weight: 900;
+    font-size: 0.6rem;
+    font-family: 'Cabin', sans-serif;
+    color:black;
+  }
+  /*--LETRA CRAFTED----------------------*/
+  .portada-img-responsive .portada-contacto-uno .otroestilo { 
+    font-weight: 300 ;
+     font-size:   0.8rem;
+     color:black ;
+     display: inline-block;
+     font-family: 'Cabin', sans-serif;
+     font-style: italic;
     }
- 
- 
-           /*caja hay 2. A */
-     .menu-btn {
+  
+    /*---SEGUNDO PARRAFO----*/
+  /*PROUDLY CRAFTED*/
+  .portada-img-responsive .portada-contacto-dos{
+  position: relative;
+  overflow: hidden;
+  top: -260px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+  left: 1px ;
+  width: 48%;
+  
+  }
+  /* SEGUNDO PARRAFO Proudly crafted in  münich since 1987*/
+  .portada-img-responsive .portada-contacto-dos h6 {
+  display:inline-block;
+  padding-top: 43px; /*IMPORTANTE PARA DISTANCIAR EL PARRAFO DEL SIGIENTE PARRAFAO*/
+  margin: 0;
+  font-size: 0.7rem;
+  }
+  
+  /*---TERCER PARRAFO----*/
+  .portada-img-responsive .portada-contacto-tres{
+  position: relative;
+  overflow: hidden;
+  top: -290px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
+  width: 48%;
+  left: 1px;
+  }
+  
+  /*TERECER PARRAFO QUE SUBE*/
+  .portada-img-responsive .portada-contacto-tres span h2{
+  color:#639a3a;
+  width: 100%;
+  display: block;
+  position: relative;
+  float: left;
+  word-spacing: -1px;
+  margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.5rem;
+  }
+  /*SUSUCRIBETE*/
+  .portada-img-responsive .portada-contacto-tres span h4{
+  color:#fff;
+  padding: 4px 2px 2px 2px;
+  margin-top: 20px; /*DISTANCIA DE SEPARARCION DEL OTRO PARRAFO*/
+  border-radius: 4px;
+  background-color: #639a3a;
+  font-family: 'Cabin', sans-serif;
+  font-weight: lighter;
+  font-size: 0.5rem;
+  width: 100%;
+  }
+  
+  /*..FIN LETRAS DE MOVIL RESPONSIVE...*/
+  
+  
+    /*FORMULARIO DE LA PAGINA DE CONTACTOS.............PAGINA CONTACTO ........*/
+    .section-heading-upper{
+      font-size: 1rem;
+    }
+  
+    .section-heading-lower{
+      font-size: 1rem;
+    }
+  
+    /*CAJA DEL FORMLARIO------------------------------------PAGINA CONTACTO*/
+      .row{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: -130px;
+      }
+  
+    /*SUBCAJA DEL FORUMMLARIO DE CORREO*/
+      .input-group{
+      width: 80%;
+      margin: auto;
+      }
+  
+      /*BOTON ENVIAR SUBMIT*/
+      .text-center{
+      width: 90%;
+      margin-left: -15px;
+      }
+  
+      
+        /*------------------------------------*/
+        .titulo-principal{
+          display: flex;
+          flex-direction: row;
+        width: 100%;
+        max-width: 310px;
+        margin: auto;
+        margin-top: 35px;
+        margin-bottom: 30px; /*REALCIONADO CON EL PLAN TOTAL DE ALIMENTACION EL MARGIN*/
+        }
+      
+        .titulo-principal .escrito{
+          display: flex;
+          flex-direction: column;
+        width: 98%;
+   
+        }
+      
+        .titulo-principal .vacio{
+        width: 1%;
+        }
+      
+        .titulo-principal .escrito  h1 a{
+          display: flex;
+          width: 100%;
+          max-width: 300px;
+          align-items: center;
+          align-content: center;
+          padding: 0 0 0 0;
+      
+          font-size:  1.7rem;
+          color: #000000;
+          text-shadow: 0px 0.9px 0.9px white; 
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 550;
+          letter-spacing: -0.5px;
+         }
+    
+      
+   
+      /*TITULO-------------------------------------------------------*/
+     .titulo{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: auto;
+      margin-top: 24px;
+      margin-bottom: 10px; /*REALCIONADO CON EL PLAN TOTAL DE ALIMENTACION EL MARGIN*/
+      }
+  
+    .titulo .escrito{
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    }
+  
+    .titulo .vacio{
+    width: 1%;
+    }
+  
+  
+      .titulo  h1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 300px;
+        font-size:  1.7rem;
+        margin: auto;
+        color: #000000;
+        text-shadow: 0px 0.9px 0.9px white; 
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 550;
+        letter-spacing: -0.5px;
+       }
+  
+    .titulo a h1{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 300px;
+      font-size:  1.7rem;
+      margin: auto;
+    color: #000000;
+    text-shadow: 0px 0.9px 0.9px white; 
+    font-weight: 550;
+    letter-spacing: -0.5px;
+     }
+   
+     .titulo h2{
+     font-size:  1.4rem;
+     font-family: 'Times New Roman', Times, serif;
+     color: #2d2d2d;
+     }
+   
+       .titulo p{
+         font-size: 1.3rem;
+         color: #2d2d2d;
+         text-align: center;
+       }
+     /*.................................*/
+  
+  
+     /*..NOTICIAS Y TURISMO*/
+     /* PRIMER-SEGMENTO */
+     .primer-segmento{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     margin: auto;
+     }
+   
+     .primer-segmento .tres{
+      width: 100%;
+      max-width: 640px;
+       display: flex;
+       flex-direction: column;
+       margin: auto;
+     }
+   
+      .primer-segmento .tres img{
+        width: 100%;
+        max-width: 640px;
+        margin: auto;
+        margin-bottom: 10px;
+       }
+   
+     /*TITUO Y DESCRIPCION*/
+    
+   
+      /*TITULO NOTICIA TURISMO*/
+      .primer-segmento .tres a h1{
+       width: 100%;
+       max-width: 640px;
+      font-size: 1.7rem;
+      color: #000000;
+      word-spacing: -0.7px;
+      letter-spacing: -0.5px;
+      font-family: 'Times New Roman', Times, serif;
+      margin-bottom: 3px;
+      }
+   
+     /*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
+     .primer-segmento .tres  p{
+       width: 100%;
+       max-width: 640px;
+     font-size: 1.1rem;
+     color: #2d2d2d;
+     letter-spacing: 0.2px;
+     font-family: 'Cabin', sans-serif;
+     margin-bottom: 4px;
+     }
+  
+     .primer-segmento .tres a p{
+      width: 100%;
+      max-width: 640px;
+    font-size: 1.1rem;
+    color: #2d2d2d;
+    letter-spacing: 0.2px;
+    font-family: 'Cabin', sans-serif;
+    margin-bottom: 40px;
+  
+    }
+  
+  
+  
+   
+     /*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS*/
+     /*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS....................................................*/
+      .dos-columnas{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+      }
+  
+        .dos-columnas .columna-left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+       }
+    
+     
+     .bloque-ultimo{
+      width: 100%;
+     display: flex;
+     flex-direction: column;
+     }
+  
+       .dos-columnas .posts-ultimos{
+        width: 100%;
+       display: flex;
+       flex-direction: column;
+       border-top: 0.8px solid #c9c9c9;
+       }
+  
+      .dos-columnas-segunda .posts-ultimos-imagen{
+      display: block;
+      position: relative;
+      float: left;
+      width: 45%;
+      max-width: 165px;
+      }
+  
+     .posts-ultimos-imagen img{
+     width: 100%;
+     max-width: 155px;
+     height: 100%;
+     max-height: 98px;
+     }
+  
+     .posts-ultimos-titulo{
      display: block;
      position: relative;
      float: right;
      width: 40%;
-     max-width: 210px;
-     height: 38px;
-    margin: auto;
      }
- 
-
-  .suscribe {
-  display: block;
-  position: relative;
-  float: left;
-  width: 100%;
-  max-width: 70px;
-  height: 34px;
-  }
- 
-   
-  .suscribe a h4{
-  font-size: 0.9rem;
-  margin-top: 22px;
-  margin-left: 8px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  }
   
-
-  .cabecera .buscador{
-  display: none;
-  }
-
-
-  .buscador-responsive{
-  display: block;
-  position: relative;
-  float: left;
-  width: 99.9%;
-  height: 32px;
-  margin-top: 8px;
-  }
-   
-
-   .buscador-responsive #controls-responsive{
-    width: 100%;
-    height: 30px;
-    z-index: 10;
-    }
-
-
-  .buscador-responsive #controls-responsive   #custom-search-input-responsive{
-  width: 99%;
-  height: 30px;
-  display: flex;
-  flex-direction: row;
-  font-size: 0.9em;
-  padding: 1px 1px;
-  border-radius: 8px;
-  border: 2px solid #f4f4f4;
-  }
-
-
-
-  .buscador-responsive #controls-responsive   #custom-search-input-responsive .sin-borde{
-  height: 25px;
-  width: 90%;
-  border-radius: 15px;
-  font-size: 0.7em;
-  font-weight: lighter;
-  padding-left: 10px; /*MUEVE LA LETRA*/
-  }
-
-
-
-  .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
-  height: 25px;
-  width: 10%;
-  border-radius: 10px;
-  background-color: #fff;
-  }
-
-
-  .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
-  outline: none;
-  border: 0;
-  background-color: #fff;
-  }
     
-
-     /*---------------------------------------------------------------------*/
-   /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-  .menu-btn .menu-btn__burger {
-  display: block;
-  position: relative;
-  float: right;
-  margin-top: 24px;
-  width: 100%;
-  max-width: 36px;
-  height: 4px;
-  background: #2d2d2d;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2);
-  transition: all .5s ease-in-out;
-  z-index: 1000;
-  }
-  
-
-
-  .menu-btn__burger::before,
-  .menu-btn__burger::after {
-  content: '';
-  position: absolute;
-  height: 4px;
-  width: 36px;  /*IMPORTANTE*/
-  background:#2d2d2d;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-  transition: all .5s ease-in-out;
-  z-index: 800;  
-  }
-
-  /*..NAV.................*/
-     /*margin-left: 5.4%;/*IMPORTANTE */
-    nav{
-    width: 100%;
-    max-width: 330px;
-    top: -10px;
-     z-index: 200;
-    }
-  
-     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-      nav .nav{
-     display: flex;
-     flex-direction: column;
-     width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
-     max-width: 260px;
-      height: 90%;/*IMPORTANTE */
-      margin-left: 0;/*IMPORTANTE **/
-      z-index:30;
-      }
-  
-       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-      nav .nav li{
-      margin-top: 5px;/*IMPORTANTE */
-      margin-bottom: 2px;
-      list-style: none;
-      height: 50px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-      cursor:pointer;
-      }
-      
-      nav .nav li a {
-      z-index: 100;
-      width: 100%;
-      color: #fff;
-      font-weight: lighter;
-      font-size: 1rem;
-      text-transform: lowercase;
-      letter-spacing: 1px;
-      font-family:  sans-serif;
-      }
+      .posts-ultimos-titulo h1{
+      font-size: 1.2rem;
+        word-spacing: -0.5px;
+       }
     
-       /*IMPORTANTE*/
-  
-       
-      
-   
-        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-         nav .nav li:hover > ul {
-         display: block;
-        height: 200px;
-        visibility: visible; 
-        z-index: 598;
-        }
-  
-      nav .nav li ul li a{
-      font-size: 1rem;
-     display: flex;
-     flex-direction: column;
-      max-width: 200px;
-      width: 100%;
-      margin-left: -2px;
-      padding-bottom: -2px;
-      margin-left: -76px;
-      }
-  
-       nav .nav ul {
-      visibility: hidden;
-      }
-  
-        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
-    
-   /*ANIMACION SUBRAYADO */
-   nav a {
-   display: inline-block;
-   position: relative;
-   color: white;
-   text-decoration: none;
-   z-index: 40;
-   }
-  
-    nav  a:after {
-   content: "";
-   display: block;
-   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-   height: 2px;
-   width: 0px;
-   transition: all .8s;
-   z-index: 10;
-   }
-  
-  
-  
-    nav  a:hover:after {
-    width: 100%;
-    padding-left: 40px;
-    padding-right: -150px;
-    height: 2px;
-    background: white;
-    }
-  
-  /*..FIN NAV...*/
-
-     .primer-segmento{
-       display: flex;
-       flex-direction: column;
-       width: 100%;
-     }
-
-     .dos-columnas{
-       display: flex;
-       flex-direction: column;
-       width: 100%;
-     }
-
-      .dos-columnas .columna-left{
-      display: block;
-      position: relative;
-      float: left;
-       width: 300px;
-      }
- 
-      .dos-columnas .columna-right{
-       display: block;
-       position: relative;
-       float: left;
-       width: 100%;
-       margin: auto;
-      }
-
-
-      .dos-columnas .columna-right .columna-right-column{
+      .posts-ultimos-titulo p{
+       font-size: 1rem;
+       }
+     
+       .dos-columnas .columna-right{
         display: block;
         position: relative;
         float: left;
+       width: 100%;
+       margin: auto;
+       margin-top: 10px;
+       margin-bottom: 30px;
+   
+      }
+  
+      .columna-right .explora{
+       width: 100%;
+       margin: auto;
+      }
+  
+       .columna-right .columna-vertical{
+       width: 100%;
+       max-width: 460px;
+       display: flex;
+       flex-direction: column;
+       margin: auto;
+       }
+  
+  
+       /*EXPLORAR*/
+       .explora h3{
+       font-size: 1.1rem;
+       font-family: 'Times New Roman', Times, serif;
+       color: #000000;
+      text-align: center;
+      text-decoration: underline;
+      margin-bottom: 15px;
+       }
+  
+       .columna-right .columna-vertical .subcontainer-right{
+         width: 100%;
+         max-width: 460px;
+         display: flex;
+         flex-direction: row;
+         margin: auto;
+       }
+  
+       .columna-right .columna-vertical .subcontainer-right  .imagen-right{
+         display: block;
+         position: relative;
+         float: left;
+        width: 120px;
+      }
+  
+  
+      .columna-right .columna-vertical .subcontainer-right  .titulo-right{
+        width: 100%;
+         max-width: 380px;
+         display: block;
+         position: relative;
+         float: right;
+       }
+     
+     /*TITULO*/
+     .titulo-right h1{
+      font: 1.1rem;
+      font-family: 'Times New Roman', Times, serif;
+      color: #000000;
+    
+     }
+     /*..SUBTITULO*/
+     .titulo-right h2{
+      font-size: 1.1rem;
+      font-family: 'Times New Roman', Times, serif;
+      color: #2d2d2d;
+    
+     }
+    
+      /*FIN ULTIMOS......................................................................*/
+  
+  
+      hr {
+        height: 1px;
+        border-width:0;
+        color:#d3d3d3;
+        background-color: #cecece;
+       width: 100%;
+       padding-left: 0;
+       padding-right: 0 ;
+    
+      }
+    
+    
+    /*RECETAS  DEL INDEX--------------RECETAS -------------------------------*/
+  
+    
+    /*CAJA TOTAL*/
+      .plan-total-alimentacion{
+      display: flex; 
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1px;  /*--RELACIONADO CON EL SEGMENTO TITULO*/
+      margin-bottom: 30px;
+  
+      }
+  
+     /*CONTAINER TOTAL INCLUYE LA CAJA PLAN-POST-ALIMENTACION*/
+      .plan-alimentacion{
+        display: block;
         width: 100%;
       }
-
-     .quinto-segmento{
+      
+      /*CAJA DE PLAN-POST Y PLAN-POST-LETRA..*/
+      .plan-post-alimentacion{
+        width: 100%;
+      
+        display: flex;
+        flex-direction: row;
+        border-top: 0.8px solid #c9c9c9;
+        }
+         
+        /*CAJA DE IMAGEN---------------------------------------------.*/
+        .plan-post-alimentacion .plan-post-imagen{
+        display: block;
+        position: relative;
+        float: left;
+        width: 40%;
+       
+       }
+  
+       .plan-post-imagen img{
+        display: block;
+        width: 100%;
+        }
+  
+  
+        /*CAJA DEL TITULO Y DESCRIPCION*/
+        .plan-alimentacion .plan-post-letra{
+        display: block;
+        position: relative;
+        float: left;
+        width: 55%;
+        max-width:210px;
+        margin-left: 9px;
+        }
+  
+        .plan-post-letra h1{
+        font-size: 1.1rem;
+        word-spacing: -0.5px;
+        }
+  
+  
+     /*ESTE ES DEL TAMAÑO NORMAL*/
+      .plan-imagen{
+       display: none;
+       }
+  
+       /*CAJA DE LA IMAGEN GRANDE RESPONSIVE*/
+      .plan-imagen-responsive{
+        display: flex;
+        flex-direction: column;
+        width:  100%;
+        margin-bottom: 25px;
+       }
+  
+       .plan-imagen-responsive img{
+        width: 100%;
+       }
+     
+      /*TITULO DE LA IMAGEN GRANDE CON LOS 4 POSTS*/
+      .plan-total-alimentacion .plan-imagen-responsive h1{
+        font-size: 1.6rem;
+        margin-top: 7px;
+        }
+  
+    /*FIN DE LAS 4 FOTOS Y UNA GRANDE*/
+  
+  
+     /*----------------------------------------------------------------------*/
+     /*------------------------------------------------------------*/
+    
+  
+  
+    /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS..................................................*/
+    /* NO PONER DISPLAY FLEX NI FLEX DIRECCION */
+    .categorias-subcategorias{
        width: 100%;
-       display: flex;
-       flex-direction: row;
-     }
-
-     .resumen{
-      width: 49%;
+      height: 100%;
+      max-height: 150px;
       display: flex;
       flex-direction: row;
-    
-     }
-
-      .resumen1{
-        width: 1%;
-
+      margin-top: 80px;
+      margin-bottom:  25px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* Internet Explorer 10+ */
+      white-space: nowrap;
+      padding: 8px 2px;
       }
-      .resumen2{
-        width: 96%;
-        
-      }
-      .resumen3{
-        width: 3%;
-      }
-
-     .quinto{
-      width: 48%;
-      margin-left: 10px;
-     }
-
-     .container-portada{
-      width: 100%;
-    height: 100%;
-    max-height: 340px;
-    position: relative;
-    float: left;
-    margin-bottom: 20px;
-    background-image: url(../img/slider/700-400containerportadaindex.jpg);
-    background-size: 100%;
-    animation: movimiento 15s infinite linear alternate;  
-     }
-
-     .container-details{
-      width: 100%;
-      height: 100%;
-     max-height: 340px;
-      position: relative;
-      margin: auto;
-      }
-    
-    
-      .details{
-      width: 100%;
-      height: 100%;
-      max-height: 340px;
-      position: relative;
-      top: 20px;
-      color: white;
-      }
-
-
-
-   
-     
-     .details h1{
-      font-size: 1.2rem;
-      font-weight: lighter;
-      margin-left: 10px;
-      margin-top: -13px;
-      word-spacing: -3px;
-      letter-spacing: -1.5px;
-      font-family: 'Archivo Black', sans-serif;
-      }
-    
-    .details p{
-      margin-top: 3px;
-      font-size: 0.9rem;
-      font-weight: 100;
-      margin-left: 10px;
-    }
-    
-    .details button{
-      padding: 5px 5px;
-      font-size: 1.1rem;
-      background: none;
-      border-style: none;
-      border: 1px solid white;
-      color: white;
-      margin-top: 5px;
-      transition: background 300ms;
-      cursor: pointer;
-      margin-left: 10px;
-    }
-    
-   
-
-    .texto-animado{
-      display: block;
-      position: relative;
-      float: left;
-      width: 90%;
-      margin-bottom: 40px;
-     }
-
-     #footer{
-      width: 100%;
-      bottom: 0;  
-      left: 0;
-      right: 0;
-      top: 0; 
-      margin: auto;
-      clear: both;
+  
+      .categorias-subcategorias .subcategorias{
       display: flex;
       flex-direction: column;
-      z-index: 10;
-     }
-
-      #footer .footer-primero{
+      width: 100%;
+      max-width: 80px;
+      height:  100%;
+       max-height: 140px;
+      }
+  
+       .subcategorias img{
+         width: 100%;
+         max-width: 80px;
+         height: 58px;
+       }
+  
+      .subcategorias .nombredesubcategoria{
         display: flex;
         flex-direction: column;
         width: 100%;
-        max-width: 300px;
+        max-width: 70px;
+        height: 100%;
+        max-height: 60px;
+        }
+  
+      .subcategorias .nombredesubcategoria a h2{
+       display: block;
+      font-size: 0.7rem;
+      }
+  
+        .nombredesubcategoria a h1{
+          display: none;
+          }
+  
+  
+        /*--SLIDER DE CATEGORIAS DE PLAN, DIETA Y TURISMO---------------------------------------.*/
+       .caja-texto-slider{
+        display: block;
+        width: 100%;
+        margin-top: 52px;
+        }
+      
+        .endfor {
+          margin-top: 20px;
+        }
+  
+  
+       /*..ELIMINANDO LAS FLECHAS PORQUE NO SE VISIBILIZAN BIEN EN EL MOVI..*/
+        .endfor .leftNav{
+        display: none;
+        visibility: hidden;
+        }
+  
+       .endfor  .rightNav{
+        display: none;
+        visibility: hidden;
+        }
+      /*..FIN DE LAS FLECHAS RESPONSIVE..*/
+  
+          /*---UL-----*/
+          .caja-texto-slider .scrollmenu{
+            display: flex;
+            flex-direction: row;
+            width:  100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            white-space: nowrap;
+             padding: 8px 2px;
+          
+             }
+          
+       /*------------TITULO DE RECETAS, PLANE,DIETA,TURMO---*/
+       .titulo-otras-paginas{
+        width: 100%;
+        height:40px;
+        display: block;
+        margin-bottom: 20px;
+        margin-top: 5px;
+        }
+    
+      .titulo-otras-paginas h1{
+       font-family: 'Times New Roman', Times, serif;
+       letter-spacing:   -0.3px;
+       word-spacing: 0.9px;
+       font-size: 1.6rem;
+       color: #000000;
+       font-weight: 600;
+       }
+    
+  
+     /* LAS PAGINAS FRONTALES RECETAS  DIETA-PLAN Y TURISMO -----------------*/
+     #container-plan{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       margin: auto;
+     }
+   
+     /*CONTAINER COLUMNA*/
+     #container-plan .container-columna-posts{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+     }
+    
+  
+     #container-plan .container-columna-posts .recetas-bloque{
+      width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+  
+    /*..CONTAINER DE ELEMENTO-IMAGEN Y DE ELEMENTO-DESCRIPCION..*/
+    #container-plan .container-columna-posts .recetas-bloque .elemento-post{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       margin: auto;
+     
+     }
+  
+      /*..CAJA CONTIENE IMAGEN..*/
+      .elemento-post .elemento-imagen{
+        width: 100%;
+        max-width: 320px;
         height: 100%;
         max-height: 500px;
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 8px;
       }
-
-  .icon-email{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  
+      .elemento-imagen img{
+      width: 100%;
+      max-width:  320px ;
+      max-height: 300px;
+      height: 100%; 
+      }
+     
+       /*..CAJA CONTIENE TITULO Y DESCRIPCION.*/
+      .elemento-descripcion{
+        width: 100%;
+       margin-bottom: 30px;
+      }
+  
+       .elemento-descripcion-columna h2{
+         font-size: 1.3rem;
+       }
+  
+    /*QUINTO SEGMENTO .........................................................................  */
+    .quinto-segmento{
+     width: 100%;
+     border-bottom: 1.5px solid	#DCDCDC;
+     margin-top: 30px;
+     margin-bottom: 30px;
+     }
+  
+     .resumen{
+      width: 48%;
+      margin-right: 2%;
+      }
+  
+      .resumen1{
+        width: 1%;
+      }
+  
+      .resumen3{
+        width: 3%;
+      }
+      /*DONDE ESTNA LAS LETRAS..*/
+      .resumen2{
+        width: 96%;
+      }
+     .quinto{
+      width: 45%;
+       }
+  
+    .quinto-segmento h1{
+     font-size: 140%;
+     }
+  
+     .quinto img{
+      width: 100%;
+     }
+  
+  .quinto-segmento h1 i{
+    font-size: 1.8rem;
   }
-
-  .icon-social1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  /*Portada.......................................................................................................................................*/
+  .container-portada{
     width: 100%;
-    max-width: 300px;
+    height: 300px;
+    position: relative;
+    margin-bottom: 20px;
+    background-image: url(../img/slider/700-400containerportadaindex.jpg);
+    background-size: 200%;
+    animation: movimiento 15s infinite linear alternate;  
   }
-   .icon-email  .box{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  
+   .container-portada h1{
+    font-size: 1.5rem;
+    font-size: 0.9rem;
   }
-
-    .menu-footer{
+  
+   .texto-animado{
+     width: 100%;
+     margin: auto;
+     margin-bottom: 40px;
+   }
+  
+   .texto-animado h1{
+    font-size: 1rem;
+  }
+  
+  
+     /*FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN...............................................................................*/
+     #footer{
+      width: 100%;
+      clear: both;
       display: flex;
       flex-direction: column;
-      width: 100%;
-    }
-
+       -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+      -moz-box-shadow: 0px -3px 6px #DCDCDC;
+      box-shadow: 0px -3px 6px  #DCDCDC;
+      z-index: 10;
+      bottom: 0;  
+      left: 0;
+      right: 0;
+      margin-bottom: 0;
+      background-color: #f4f4f4;
+       }
+    
+       #footer .footer-primero{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 520px;
+        background-color: #f4f4f4;
+        }
+        
+         /*CAJA DE FOOD EMOTIONS E ICONOS SOCALES Y BOX */
+       .icon-email{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        }
   
-
-    #footer #footer-second{
-      height: 25px;  /*IMPORTANTE*/
+       /*SUB-caja  DE FOOD Y REDES */
+     .icon-email .icon-social1{
+      width: 100%;
+      height: 60px;
+     display: flex;
+     flex-direction: column;
+     margin: auto;
+      margin-bottom: 10px;
+      }
+  
+       /*CAJA DE REDES*/
+      .social2{
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      }
+     
+       /*FOOD EMOTIONS*/
+       .icon-email .icon-social1 p{
+        font-size: 1.6rem;
+        word-spacing: -4px;
+        letter-spacing: -2px;
+        text-align: center;
+        }
+    
+        .icon-email  ul li .fa-envelope{
+          background-color: oldlace;
+          color: #2d2d2d;
+          width: 38px;
+          height: 38px;
+          padding: 2px 2px 2px 2px;
+          border-radius: 25px;
+          border: solid #E9E9E9;
+          margin-right: 5px;
+          }
+          
+          .icon-email  ul li .fa-facebook-f{
+            background-color: oldlace;
+            color:  #2d2d2d;
+            width: 38px;
+          height: 38px;
+          padding: 2px 2px 2px 2px;
+            border-radius: 25px;
+            border: solid #E9E9E9;
+            margin-right: 5px;
+          }
+          
+          
+          .icon-email  ul li .fa-twitter{
+            background-color: oldlace;
+            color:   #2d2d2d;
+            width: 38px;
+            height: 38px;
+           padding: 2px 2px 2px 2px;
+            border-radius: 25px;
+            border: solid #E9E9E9;
+            margin-right: 5px;
+          }
+          
+          
+          
+          
+          .icon-email ul li .fa-instagram{
+            background-color: oldlace;
+            color: #2d2d2d;
+            width: 38px;
+            height: 38px;
+            padding: 2px 2px 2px 2px;
+            border-radius: 25px;
+            border: solid #E9E9E9;
+          }
+          
+     /*SUBCAJA BOC */
+      .box{
+      width: 100%;
       display: block;
       position: relative;
       float: left;
-    margin-top: 5px;
-    }
-
-   }
-
-
-
-
-   @media only screen and  (max-width: 640px) and (min-width: 360px){
-
-       #wrapper {
-      margin:0;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      height: 80px;
+     margin: auto;
       }
-
-    body{
-    margin: 0;
-    margin-bottom: 90px;
-    }
-
-    #container{
-      width: 100%;
-      margin: auto;
-      margin-top: 16%;
-    }
-
-    .cabecera{
-      width: 100%;
-      max-width: 640px;
-      height: 40px; 
+    
+      .box form{
       display: flex;
       flex-direction: row;
+      width: 90%;
+      margin: auto;
       }
-
-    /*caja  B*/
-   .menu-btn {
-    display:flex;
-    width: 25%;
-    position: relative;
-    margin-left: 70%;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-    }
-
-     /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-    .menu-btn__burger {
-    display: block;
-    margin-left: 20%;
-    margin-top: 25%;
-    width: 38px;
-    height: 5px;
-    background: #2d2d2d;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(255,101,47,.2);
-    transition: all .5s ease-in-out;
-    z-index: 1000;
-     }
-
-
-    /*CAJA DEL BUSCADOR */
-  #custom-search-input{
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	font-size: 1em;
-	font-weight: 3rem;
-	padding: 2px;
-  width: 100%;
-  height: 48px;
-  background-color: #639a3a;
-  z-index: 300;
-   }
-
-   }
-
-
-
-   /*.....................8 ...............*/
-   @media only screen and (min-width: 360px) and (max-width: 640px){
-      html, body{
-      padding:0;
-      margin: 0;
-      background-color: #fff;
-      color: rgba(0,0,0,.95);
-      font-family: "Argos",serif;
-      line-height: 1.15;
-      -webkit-text-size-adjust: 100%;
-      height: 100%;
+  
+     .box h3{
+      font-size: 1rem;
+      text-align: center;
+      letter-spacing: -1px;
+      word-spacing: -1px;
+      font-family: 'Fira Sans', sans-serif;
+  
+       }
+     
+       /*CAJA ENVIO BLANCO DONDE SE ESCROBE*/
+      .box input[type="text"]{
+        width: 70%;
+        height: 39px;
+        font-size: 0.9rem;
+        border-radius: 3px 2px 2px 3px;
+        padding: 0 25px;
+        border: 2px solid 	#DCDCDC;
        }
   
+      /*CAJA OSUCRA DONDE SE ENVIA*/
+      .box input[type="submit"]{
+        width: 25%;
+        height: 39px;
+        border-radius: 3px 6 6 3px;
+        font-size: 0.6rem;
+        left: -1px;
+        top: 0px;
+        border: 2px solid 	#2d2d2d;
+       }
+      
+      
+    
+         /*caja */
+    .menu-footer{
+    width:100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .menu-footer .footer-text{
+      height: 100%;
+      max-height: 25px;
+    
+    }
+     /*TITULO DEL MENU*/
+     .menu-footer .footer-text h1{
+     text-align: center;
+      font-size: 1.2rem;
+     word-spacing: -2px;
+     letter-spacing: -1.5px;
+     }
+  
+      .menu-footer .footer-lista {
+      height: 100%;
+      max-height: 100px;
+      }
+  
+    /*OPCIONES DEL MENU*/
+    .menu-footer .footer-lista p{
+    line-height: 17px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #2d2d2d;
+    letter-spacing: -0.5px;
+     text-align: center;
+    }
+    
+    
+         /*caja */
+      .espacio{
+      display: none;
+      }
+    
+    /*CAJA PRINCIPAL DEL SEGUNDO FOOTER */
+    #footer-second{
+      display: block;
+    width: 100%;
+    height: 15px;
+  
+    }
+    
+  
+  
+    .final-food p{
+      font-size: 0.7rem;
+    }
+  
+  
+  }
+  
 
+
+  /*.........................*/
+
+
+    /*@media screen and (max-width: 375px) {*/
+   /*.....................MOVIL MEDIO.............*/
+  @media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: portrait){
+   
      #wrapper {
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      min-width:250px;
-      height: auto;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
 
     #wrapper > * {
-    padding: 17px;
+    padding: 15px;
     }  
+    div {
+      flex-basis: 33%;
+    }
 
-      #container{
+       #container{
       display: flex;
       flex-direction: column;
       width: 100%;
-      max-width: 640px;
       margin: auto;
-      margin-top: 83px;
-      bottom:  4px;
       height: auto;
       }
 
 
       /*.. #DCDCDC ..*/
       header{
-      width: 100%;
-      max-width:370px;
-      height:99px;
-      min-width:360px;
-      top:0;
-      position:fixed;
-      z-index:2000;
-      margin: auto;
-      box-shadow: 0 8px 6px -6px;
-      background-color: #fff;
+        display: block;
+        width:100%;
+        max-width: 375px;
+        height: 99px;
+        top:0;
+        position: fixed;
+        z-index: 2000;   /*IMPORTANTE  */
+        margin: auto;
+        box-shadow: 0 8px 6px -6px #DCDCDC; 
+ 
        }
     
 
     
-    header.black{
-    height:  99px;
-    width: 100%;
-    background-color: #fff;
-    }
+      header.black{
+      height:  99px;
+      width: 100%;
+      }
   
-    /*.. max-with:640px;...*/
-    .cabecera{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 38px;
-    margin-top: -4px;
-      }
-     
-   
-    
-    /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
-     .cabecera .logo{
-    display: inline-flex;
-    width: 100%;
-    max-width: 190px;
-    height: 38px;
-    }
-       
-   
-     .cabecera .logo img{
-       display: block;
+      header .cabecera{
       width: 100%;
-      max-width: 190px;
-      height: 38px; 
-      }
-   
-   
-             /*caja hay 2. A */
-       .menu-btn {
-       display: block;
-       position: relative;
-       float: right;
-       width: 40%;
-       max-width: 210px;
-       height: 38px;
-      margin: auto;
-       }
-   
-
-    .suscribe {
-    display: block;
-    position: relative;
-    float: left;
-    width: 100%;
-    max-width: 70px;
-    height: 34px;
-    }
-   
+      max-width: 370px;
+      display: block;
+      position: relative;
+      height: 38px;
+      margin-top: -4px;
+        }
+       
      
-    .suscribe a h4{
-    font-size: 0.9rem;
-    margin-top: 22px;
-    margin-left: 8px;
-    font-weight: 700;
-    letter-spacing: 0.2px;
-    }
-    
-   /*BUSCADO PANTALL NORMAL.............*/
-    .cabecera .buscador{
-    display: none;
-    }
+      
+      /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
+       .cabecera .logo{
+        display: block;
+        position: relative;
+        float: left;
+       width: 100%;
+       max-width: 320px;
+       height: 38px;
+        }
+         
+     
+       .cabecera .logo img{
+        width: 100%;
+        max-width: 320px;
+        height: 38px;
+        margin-left: -0.4px;
+        }
+     
+     
+               /*caja hay 2. A */
+        .cabecera  .menu-btn {
+         display: block;
+         position: relative;
+         float: right;
+         width: 100%;
+         max-width: 200px;
+         height: 38px;
+        margin-top: -39px;
+         }
+     
 
-    /*..BUSCADOR PARA EL MOVIL..........................*/
-    .buscador-responsive{
-    display: block;
-    position: relative;
-    float: left;
-    width: 99.9%;
-    height: 32px;
-    margin-top: 8px;
-    }
+        .cabecera .menu-btn .suscribe {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        max-width: 80px;
+        height: 34px;
+         }
+       
+          .menu-btn  .suscribe a h4{
+          font-size: 0.9rem;
+          margin-top: 22px;
+          margin-left: 2px;
+          font-weight: 700;
+          letter-spacing: 0.2px;
+          }
+      
+          .cabecera .buscador{
+            display: none;
+            visibility: hidden;
+          }
+  
+     /*..BUSCADOR PARA EL MOVIL..........................*/
+     .buscador-responsive{
+      display: block;
+      position: relative;
+      float: left;
+      width: 348px;
+      height: 40px;
+      z-index: 9;
+      }
      
 
      .buscador-responsive #controls-responsive{
       width: 100%;
       height: 30px;
+     padding-top: 8px;
       z-index: 10;
       }
 
@@ -2084,13 +1813,13 @@ text-align: center;
 
        /*---------------------------------------------------------------------*/
      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-    .menu-btn .menu-btn__burger {
+    .cabecera .menu-btn .menu-btn__burger {
     display: block;
     position: relative;
     float: right;
-    margin-top: 24px;
     width: 100%;
     max-width: 36px;
+    margin-top: 24px;
     height: 4px;
     background: #2d2d2d;
     border-radius: 2px;
@@ -2107,6 +1836,7 @@ text-align: center;
     position: absolute;
     height: 4px;
     width: 36px;  /*IMPORTANTE*/
+    width: 100%;
     background:#2d2d2d;
     border-radius: 2px;
     box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
@@ -2161,11 +1891,7 @@ text-align: center;
 
 
   /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
-   .menu{
-     display: none;
-     visibility: hidden;
-   }
-    
+
     /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
   /*margin-left: 5.4%;/*IMPORTANTE */
   nav{
@@ -2176,37 +1902,42 @@ text-align: center;
    top:-8px;  /*IMPORTANTE para que arriba no tenga espacios */
   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
   opacity: 0.97;
-  background-color: #000000;
-  z-index:40;
+   background-color: #000000;
+   z-index: 200;
   }
 
    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
     nav .nav{
-   width:100%; 
-   height: 90%;  
-   max-width: 380px;
-   margin-top: 20px;
+    width:100%; 
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;  
+     margin-left: 2px;
+    top : 40px;
+     z-index: 60; 
+  
     }
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
     nav .nav li{
-    margin-top: 1.5%;/*IMPORTANTE */
+      margin-top: 5px;/*IMPORTANTE */
     list-style: none;
     height: 40px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-left: 23px;
-    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-bottom: 20px;
     cursor:pointer;
     }
     
     nav .nav li a {
     z-index: 100;
     background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-    display: block;
+    display: flex;
     width: 100%;
-    height: 40px;
+    height: 55px;
     color: #fff;
     font-weight: lighter;
-    font-size: 1.26rem;
+    font-size: 1.24rem;
     text-transform: lowercase;
     letter-spacing: 1px;
     font-family:  sans-serif;
@@ -2266,7 +1997,6 @@ text-align: center;
 
   /* width: 100%;*/
   nav  a:hover:after {
- 
   padding-left: 40px;
   padding-right: -150px;
   height: 2px;
@@ -2274,63 +2004,71 @@ text-align: center;
   }
 
        /*FIN ANIMACION SUBRAYADO position: relative;  /*ESTO ARREGLO LA CABECERA*/
-      .portada{
-       width: 100%;
-       display: block;
+       .portada{
+        display: flex;
+        flex-direction: column;
        margin: auto;
-       z-index: 30;
-      }
+       margin-top: 87px;
+        z-index: 30;
+        }
 
-     .portada .portada-img{
-      display: none;
-      visibility: hidden;
-         }
-
-
+      .portada .portada-img{
+        display: none;
+        visibility: hidden;
+       
+           }
           
     /*--PORTADA RECETAS SALUDABLE--Y DEMAS PAGINAS--------------------------*/
    /*...............................................*/
-    .imagen-responsive-ipod{
-      display: none;
-      visibility: hidden;
-    }
+   .imagen-responsive-ipod{
+    display: none;
+    visibility: hidden;
+  }
 
     /*CONTAINER PRINCIPAL DE LA IMAGEN Y DE LA CAJA DE TITULO Y MENU*/
    .portada .portada-img-responsive{
-     width: 100%;
+    display: flex;
+    flex-direction: column;
     z-index: 80;
     margin: auto;
+
     }
     
-     /*.............MOVIL...................*/
+     /*.............MOVIL..........---MOVIL....MOVI.............*/
     .portada  .portada-img-responsive .imagen-responsive-movil {
+      display: flex;
+      flex-direction: column;
       width: 100%;
       max-width: 640px;
-     margin: auto;
      }
 
     /*.............MOVIL...................*/
     .portada  .portada-img-responsive .imagen-responsive-movil img{
-     width: 100%;
-     max-width: 640px;
-    margin: auto;
+      width: 100%;
+      padding: 0 0;
+      z-index: 40;
+      margin: auto;
+
     }
      
 
-
-    .portada .portada-img-responsive .portada-titulo{
+     /*..RESPONSIVE TITULO DENTRO DE LA PORTADA...........TITULO RESPONSIVE DEL MOVIL EN LA PORTADA.................*/
+     .portada .portada-img-responsive .portada-titulo{
       width: 100%;
+      max-width: 330px;
       display: block;
       position: absolute;
+      margin: auto;
       margin-top:  70px;
       z-index: 80;
      }
 
-    .portada .portada-img-responsive .portada-titulo1{
+     .portada .portada-img-responsive .portada-titulo1{
       width: 100%;
+      max-width: 330px;
       display: block;
       position: absolute;
-      margin-top:  -250px;
+      margin-top:  -320px;
       }
 
   
@@ -2348,7 +2086,7 @@ text-align: center;
               text-shadow: 0px 2px 2px #2d2d2d;           
       color: azure;
       font-family: 'Cabin', sans-serif;
-      word-spacing: 5px; ;
+      word-spacing: 5px; 
       }
       
       .portada .portada-img-responsive .portada-titulo  h2 i{
@@ -2622,6 +2360,7 @@ margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
 font-family: 'Cabin', sans-serif;
 font-size: 0.5rem;
 }
+
 /*SUSUCRIBETE*/
 .portada-img-responsive .portada-contacto-tres span h4{
 color:#fff;
@@ -2676,7 +2415,6 @@ width: 100%;
       margin: auto;
       margin-top: 35px;
       margin-bottom: 30px; /*REALCIONADO CON EL PLAN TOTAL DE ALIMENTACION EL MARGIN*/
-    
       }
     
       .titulo-principal .escrito{
@@ -2689,11 +2427,11 @@ width: 100%;
       width: 5%;
       }
     
-      .titulo-principal .escrito a h1{
+      .titulo-principal .escrito  h1 a{
         width: 300px;
         font-size:  1.7rem;
         color: #000000;
-        text-shadow: 0px 0.9px 0.9px white; 
+  
         font-family: 'Times New Roman', Times, serif;
         font-weight: 550;
         letter-spacing: -0.5px;
@@ -3187,17 +2925,16 @@ width: 100%;
   flex-direction: column;
   }
 
-  /*..CONTAINER DE ELEMENTO-IMAGEN Y DE ELEMENTO-DESCRIPCION..*/
-  #container-plan .container-columna-posts .recetas-bloque .elemento-post{
+    /*..CONTAINER DE ELEMENTO-IMAGEN Y DE ELEMENTO-DESCRIPCION..*/
+    #container-plan .container-columna-posts .recetas-bloque .elemento-post{
      width: 100%;
      display: flex;
      flex-direction: column;
-     margin: auto;
-   
-   }
+     margin: auto; 
+     }
 
-    /*..CAJA CONTIENE IMAGEN..*/
-    .elemento-post .elemento-imagen{
+     /*..CAJA CONTIENE IMAGEN..*/
+     .elemento-post .elemento-imagen{
       width: 98%;
       max-width: 640px;
       height: 100%;
@@ -3205,7 +2942,7 @@ width: 100%;
       flex-direction: column;
       margin: auto;
       margin-bottom: 8px;
-    }
+     }
 
     .elemento-imagen img{
     width: 100%;
@@ -3506,6 +3243,81 @@ width: 100%;
   }
 
 
+  /*.....................HORIZONTAL*/
+  @media only screen   and (min-width: 320px) and (max-width: 736px) and (orientation: landscape){
+
+    #wrapper {
+   margin:0;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+
+   }
+
+ body{
+ margin: 0;
+ margin-bottom: 90px;
+ }
+
+ #container{
+   width: 100%;
+   margin: auto;
+   margin-top: 16%;
+ }
+
+ .cabecera{
+   width: 100%;
+   max-width: 640px;
+   height: 40px; 
+   display: flex;
+   flex-direction: row;
+   }
+
+ /*caja  B*/
+.menu-btn {
+ display:flex;
+ width: 25%;
+ position: relative;
+ margin-left: 70%;
+ cursor: pointer;
+ transition: all .5s ease-in-out;
+ }
+
+  /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+ .menu-btn__burger {
+ display: block;
+ margin-left: 20%;
+ margin-top: 25%;
+ width: 38px;
+ height: 5px;
+ background: #2d2d2d;
+ border-radius: 2px;
+ box-shadow: 0 2px 5px rgba(255,101,47,.2);
+ transition: all .5s ease-in-out;
+ z-index: 1000;
+  }
+
+
+ /*CAJA DEL BUSCADOR */
+#custom-search-input{
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+font-size: 1em;
+font-weight: 3rem;
+padding: 2px;
+width: 100%;
+height: 48px;
+background-color: #639a3a;
+z-index: 300;
+}
+
+}
+
+
 
   /*MEDIDA DESPUES DEL MOVIL*/
 
@@ -3589,21 +3401,19 @@ width: 100%;
  
   
   /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
-   .cabecera .logo{
+    .cabecera .logo{
     display: inline-flex;
-   width: 100%;
-   max-width: 290px;
-  height: 38px;
-     
+    width: 100%;
+    max-width: 290px;
+    height: 38px; 
     }
      
  
-   .cabecera .logo img{
+    .cabecera .logo img{
      display: block;
     width: 100%;
     max-width: 190px;
     height: 38px;
- 
     }
  
  
