@@ -5,7 +5,9 @@
 
           {% block portada %} 
             <div class="portada">
-            <!-- IMAGEN-->
+
+
+            <!-- IMAGEN--------------------------->
             <section class="portada-img">
                 <img src="{% block imagen %}{% static 'appfood/img/slider/1300-345tataky.jpg' %}{% endblock  %}"
                   class="slider__img">
@@ -98,7 +100,7 @@
           <div class= "subcategorias">
                 {% if kategory.image %}
                 <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
-                <img src="{{kategory.image.url}}"  style width="100%"></a>
+                <img src="{{kategory.image.url}}" ></a>
                 {% endif %}
                 <div class="nombredesubcategoria">
                 <a href="/recetas-saludables/categoria/{{ kategory.slug }}">

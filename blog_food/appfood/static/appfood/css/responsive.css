@@ -1,86 +1,91 @@
+	
+	@media only screen and (min-width: 959px) {
+		.menuPeq {visibility: hidden; display:none;}
+		.menuMed {visibility: hidden; display:none;}
+		.secundario {visibility: hidden; display:none;}
+		}
 
-
+  
+   
   /*............................EN CONFLICTO*/
-  @media only screen and (min-width: 320px) and (max-width: 359px)   {
-    body{
-      padding:0;
-      margin: 0;
-      background-color: #fff;
-      color: rgba(0,0,0,.95);
-      font-family: "Argos",serif;
-       }
-  
-    html, body {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
+   @media only screen and (max-device-width: 359px)  {
+    html, body{
+    width: 100%;
     height: 100%;
+    margin: 0;
     }
   
-
      #wrapper {
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      min-width: 320px;
+     width: 100%;
+     max-width: 100%;
+     overflow: hidden;
+     border-spacing: 0;
+     border-collapse: collapse;
+      }
+
+
+
+    /* ESTO ES SI SE HACE CON CELDA
+    #wrapper td {
+      width: 100%;
+      padding: 0;
+      vertical-align: middle;
+      text-align: center;
+   }  */
+
+       #wrapper img {
+      width: 100%;
       height: auto;
-      flex-wrap: wrap;
-    }
-
-
-  
+      border: 0;
+      }
   
       #wrapper > * {
       padding: 10px;
       }  
   
-        #container{
-       display:flex;
-       flex-direction: column;
-        width: 100%;
-        max-width: 359px;
-        margin: auto;
-        margin-top: 88px;
-        bottom:  4px;
-        height: auto;
-        }
-  
-  
-        /*.. #DCDCDC ..*/
-        header{
-          display: block;
-          width:100%;
-          max-width: 359px;
-          height: 99px;
-          top:0;
-          position: fixed;
-          z-index: 2000;   /*IMPORTANTE  */
-          margin: auto;
-          box-shadow: 0 8px 6px -6px #DCDCDC; 
-         }
+    
+    header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    max-width: 350px;
+    margin: auto;   
+    z-index: 2000;   /*IMPORTANTE  */
+    box-shadow: 0 8px 6px -6px #DCDCDC; 
+    min-height: 40px;
+    max-height: 99px;
+    }
       
-  
       
     header.black{
-    height:  99px;
     width: 100%;
-    max-width: 359px;
+    max-width: 350px;
+    height:  99px;
       }
     
     /*.. max-with:640px;...*/
     .cabecera{
     width: 100%;
-    max-width: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 38px;
     margin-top: -4px;
     padding: 0 0 0 0;
-    margin-left: 8px;
+    margin-left: 4px;
     }
          
-       
+    #container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    bottom:  4px;
+    }
+ 
         
     /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
     .cabecera .logo{
@@ -130,17 +135,16 @@
     display: none;
     }
     
-      /*..BUSCADOR PARA EL MOVIL..........................*/
-      .buscador-responsive{
-        display: block;
-        position: relative;
-        float: left;
-       width: 100%;
-       max-width: 290px;
-      height: 40px;
-      margin-left: 10px;
-      z-index: 9;
-      }
+    /*..BUSCADOR PARA EL MOVIL..........................*/
+    .buscador-responsive{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 40px;
+    margin-left: 2px;
+    z-index: 9;
+    }
        
   
        .buscador-responsive #controls-responsive{
@@ -174,29 +178,30 @@
   
   
   
-      .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
-      height: 25px;
-      width: 10%;
-      border-radius: 10px;
-      background-color: #fff;
-      }
+    .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
+    height: 25px;
+    width: 10%;
+    border-radius: 10px;
+    background-color: #fff;
+    }
   
   
      
-          /* CUANDO SE ESCRIBE EN EL PLACEHOLDER..*/
-        .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
-        outline: none;
-        border: 0;
-        color: #000000;
-        font-size: 1.1rem;
-        }
+    /* CUANDO SE ESCRIBE EN EL PLACEHOLDER..*/
+    .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
+    outline: none;
+    border: 0;
+    color: #000000;
+    font-size: 1.1rem;
+    }
+
       
-        /*..CUANDO ESTA ESCRITO EN EL PLACEHOLDER..*/
-        .buscador-responsive #controls-responsive #custom-search-input-responsive input::placeholder { 
-         color: #2d2d2d; 
-         font-size: 1rem;
-         margin-top: 3px;
-        }
+    /*..CUANDO ESTA ESCRITO EN EL PLACEHOLDER..*/
+    .buscador-responsive #controls-responsive #custom-search-input-responsive input::placeholder { 
+    color: #2d2d2d; 
+    font-size: 1rem;
+    margin-top: 3px;
+    }
   
          /*---------------------------------------------------------------------*/
        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
@@ -382,78 +387,68 @@
   
     /* width: 100%;*/
     nav  a:hover:after {
-   
     padding-left: 40px;
     padding-right: -150px;
     height: 2px;
     background: white;
     }
+
   
-         /*FIN ANIMACION SUBRAYADO position: relative;  /*ESTO ARREGLO LA CABECERA*/
-         .portada{
-          position: relative;  /*ESTO ARREGLO LA CABECERA*/
-         margin: auto;
-          width: 100%;
-          max-width: 320px;
-           z-index: 30;
-          }
   
-        .portada .portada-img{
-          display: none;
-          visibility: hidden;
-         
-             }
-            
-      /*--PORTADA RECETAS SALUDABLE--Y DEMAS PAGINAS--------------------------*/
-     /*...............................................*/
-     .imagen-responsive-ipod{
-      display: none;
-      visibility: hidden;
+    /*FIN ANIMACION SUBRAYADO position: relative;  /*ESTO ARREGLO LA CABECERA*/
+    .portada{
+    display: block;
+    position: relative;  /*ESTO ARREGLO LA CABECERA*/
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin-top: 93px;
+    z-index: 30;
     }
   
-      /*CONTAINER PRINCIPAL DE LA IMAGEN Y DE LA CAJA DE TITULO Y MENU*/
-     .portada .portada-img-responsive{
-      display: flex;
-      flex-direction: column;
-      z-index: 80;
-      margin: auto;
+    /*IMPORTANTE DEJARLO TAL CUAL*/
+    .portada .portada-img{
+    display: none;
+    visibility: hidden;
+    }
+            
+    /*--PORTADA RECETAS SALUDABLE--Y DEMAS PAGINAS--------------------------*/
+     /*...............................................*/
+    .imagen-responsive-ipod{
+    display: none;
+    visibility: hidden;
+    }
   
+    /*CONTAINER PRINCIPAL DE LA IMAGEN Y DE LA CAJA DE TITULO Y MENU*/
+    .portada .portada-img-responsive{
+    display: block;
+    position: relative;
+    z-index: 80;
       }
       
-       /*.............MOVIL...................*/
-      .portada  .portada-img-responsive .imagen-responsive-movil {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 320px;
-       }
-  
-      /*.............MOVIL...................*/
-      .portada  .portada-img-responsive .imagen-responsive-movil img{
-        width: 100%;
-        max-width: 320px;
-        padding: 0 0;
-        z-index: 40;
-        margin: auto;
-  
-      }
+    
+    /*.............MOVIL...................*/
+    .portada  .portada-img-responsive .imagen-responsive-movil img{
+    width: 100%;
+    z-index: 40;
+     }
        
   
-   /*----TITULO RESPONSIVE DE LA PORTADA DEL MOVIL..........TITULO MOVIL DENTRO DE LA PORTADA RESPONSIVE..*/
-      .portada .portada-img-responsive .portada-titulo{
-        width: 100%;
-        display: block;
-        position: absolute;
-        margin-top:  60px;
-        z-index: 80;
-       }
+     /*----TITULO RESPONSIVE DE LA PORTADA DEL MOVIL..........TITULO MOVIL DENTRO DE LA PORTADA RESPONSIVE..*/
+    .portada .portada-img-responsive .portada-titulo{
+    width: 100%;
+    display: block;
+    position: absolute;
+    margin-top:  -160px;
+    z-index: 80;
+    }
 
        /*----TITULO RESPONSIVE DE LA PORTADA DEL MOVIL..........TITULO MOVIL DENTRO DE LA PORTADA RESPONSIVE..*/
       .portada .portada-img-responsive .portada-titulo1{
         width: 100%;
         display: block;
         position: absolute;
-        margin-top:  -320px;
+        margin-top:  -270px;
         }
   
     
@@ -496,7 +491,7 @@
       height: 120px;
       display: block;
       position: absolute;
-      margin-top: 150px;
+      margin-top: -64px;
       margin-left:  22px;
       background-color: #fff;
       border-bottom: 3px solid #568632;
@@ -504,7 +499,26 @@
       z-index: 120;
       }
   
-      
+     
+ 
+    /*ESTO ES EL TITULO* del cuadro que esta en la PORTADA RESPOSIVE*/
+   .portada .portada-img3-responsive h1{
+   font-size: 1.1rem;
+    margin-left: 8px;
+   margin-bottom: 3px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 900;
+   color:#000000;
+
+    }
+ 
+    /*ESTE ES EL PARRAFO*/
+   .portada-img3-responsive p{
+   font-size: 1rem;
+   margin-left: 8px;
+   font-family: 'Times New Roman', Times, serif;
+   color: #2d2d2d;
+   }
   
   
      /*EL MENU*/
@@ -568,115 +582,18 @@
     }
             
   
-    /*-----imagen grande de contacto----------------*/
-     .portada-img{
-       display: none;
-       visibility: hidden;
-     }
-    /*fin*/
   
-     /*ESTO ES EL TITULO*/
-    .portada .portada-img3-responsive h1{
-    font-size: 1.1rem;
-     margin-left: 8px;
-    margin-bottom: 3px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 900;
-    color:#000000
-     }
-  
-     /*ESTE ES EL PARRAFO*/
-    .portada-img3-responsive p{
-    font-size: 1rem;
-    margin-left: 8px;
-    font-family: 'Times New Roman', Times, serif;
-    color: #2d2d2d;
-    }
   
   
   /*..................................................................-*/
       /*PORTADA CONTACTO*/
-      .portada-contacto{
-        padding-bottom: -50px; 
+      .portada .portada-contacto-uno{
+        visibility: hidden; 
       }
   
       /*PORTADA CONTACTO DONDE SE MUEVEN LAS LETRAS*/
-      .portada .portada-contacto-uno{
-        position: relative;
-        overflow: hidden;
-        top: -170px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
-        left: 30px ;
-        width: 48%;
-       }
-  
-         /*LETRA PROUDLY*/
-      .portada .portada-contacto-uno .azulplata{
-        display: block;
-        width: 100%;
-        font-weight: 900;
-        font-size: 0.6rem;
-        font-family: 'Cabin', sans-serif;
-        color:black;
-        line-height: 10px;
-      }
-      /*--LETRA CRAFTED----------------------*/
-      .portada .portada-contacto-uno .otroestilo { 
-        font-weight: 300 ;
-         font-size:   0.8rem;
-         color:black ;
-         display: inline-block;
-         font-family: 'Cabin', sans-serif;
-         font-style: italic;
-        }
-      
-        /*---SEGUNDO PARRAFO----*/
-  /*PROUDLY CRAFTED*/
-  .portada .portada-contacto-dos{
-    position: relative;
-    overflow: hidden;
-    top: -200px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
-    left: 30px ;
-    width: 48%;
-   }
-    /* SEGUNDO PARRAFO Proudly crafted in  münich since 1987*/
-   .portada .portada-contacto-dos h6 {
-    display:inline-block;
-    padding-top: 43px; /*IMPORTANTE PARA DISTANCIAR EL PARRAFO DEL SIGIENTE PARRAFAO*/
-    margin: 0;
-    font-size: 0.7rem;
    
-  }
-  
-  /*---TERCER PARRAFO----*/
-   .portada .portada-contacto-tres{
-    position: relative;
-    overflow: hidden;
-    top: -260px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
-    left: 30px ;
-    width: 48%;
-   }
-  
-    /*TERECER PARRAFO QUE SUBE*/
-      .portada .portada-contacto-tres span h2{
-      color:#639a3a;
-      padding: 5px 6px 5px 7px;
-      word-spacing: -1px;
-      margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
-      font-family: 'Cabin', sans-serif;
-      font-size: 0.5rem;
-    }
-     /*SUSUCRIBETE*/
-      .portada .portada-contacto-tres span h4{
-      color:#fff;
-      padding: 0px 0px 0px 0px;
-      margin-top: 20px; /*DISTANCIA DE SEPARARCION DEL OTRO PARRAFO*/
-      border-radius: 5px;
-      background-color: #639a3a;
-      font-family: 'Cabin', sans-serif;
-      font-weight: lighter;
-      font-size: 0.5rem;
-    }
-  
+
   
   
    /*...LETRAS DE PORTADA CONTACTO RESPONSIVE MOVIL.........................*/
@@ -904,7 +821,7 @@
    
      .primer-segmento .tres{
       width: 100%;
-      max-width: 640px;
+    
        display: flex;
        flex-direction: column;
        margin: auto;
@@ -912,7 +829,7 @@
    
       .primer-segmento .tres img{
         width: 100%;
-        max-width: 640px;
+    
         margin: auto;
         margin-bottom: 10px;
        }
@@ -923,7 +840,7 @@
       /*TITULO NOTICIA TURISMO*/
       .primer-segmento .tres a h1{
        width: 100%;
-       max-width: 640px;
+   
       font-size: 1.7rem;
       color: #000000;
       word-spacing: -0.7px;
@@ -935,7 +852,7 @@
      /*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
      .primer-segmento .tres  p{
        width: 100%;
-       max-width: 640px;
+  
      font-size: 1.1rem;
      color: #2d2d2d;
      letter-spacing: 0.2px;
@@ -945,7 +862,7 @@
   
      .primer-segmento .tres a p{
       width: 100%;
-      max-width: 640px;
+  
     font-size: 1.1rem;
     color: #2d2d2d;
     letter-spacing: 0.2px;
@@ -1202,7 +1119,7 @@
     .categorias-subcategorias{
        width: 100%;
       height: 100%;
-      max-height: 150px;
+      max-height: 120px;
       display: flex;
       flex-direction: row;
       margin-top: 80px;
@@ -1221,13 +1138,15 @@
       width: 100%;
       max-width: 80px;
       height:  100%;
-       max-height: 140px;
+       max-height: 80px;
       }
   
        .subcategorias img{
+         display: block;
          width: 100%;
          max-width: 80px;
-         height: 58px;
+         height: 100%;
+         max-height: 80px;
        }
   
       .subcategorias .nombredesubcategoria{
@@ -1502,16 +1421,16 @@
           margin-right: 5px;
           }
           
-          .icon-email  ul li .fa-facebook-f{
+            .icon-email  ul li .fa-facebook-f{
             background-color: oldlace;
             color:  #2d2d2d;
             width: 38px;
-          height: 38px;
-          padding: 2px 2px 2px 2px;
+            height: 38px;
+            padding: 2px 2px 2px 2px;
             border-radius: 25px;
             border: solid #E9E9E9;
             margin-right: 5px;
-          }
+           }
           
           
           .icon-email  ul li .fa-twitter{
@@ -1538,14 +1457,14 @@
             border: solid #E9E9E9;
           }
           
-     /*SUBCAJA BOC */
+       /*SUBCAJA BOC */
       .box{
       width: 100%;
       display: block;
       position: relative;
       float: left;
       height: 80px;
-     margin: auto;
+      margin: auto;
       }
     
       .box form{
@@ -1555,17 +1474,16 @@
       margin: auto;
       }
   
-     .box h3{
+       .box h3{
       font-size: 1rem;
       text-align: center;
       letter-spacing: -1px;
       word-spacing: -1px;
       font-family: 'Fira Sans', sans-serif;
-  
        }
      
-       /*CAJA ENVIO BLANCO DONDE SE ESCROBE*/
-      .box input[type="text"]{
+         /*CAJA ENVIO BLANCO DONDE SE ESCROBE*/
+        .box input[type="text"]{
         width: 70%;
         height: 39px;
         font-size: 0.9rem;
@@ -1574,8 +1492,8 @@
         border: 2px solid 	#DCDCDC;
        }
   
-      /*CAJA OSUCRA DONDE SE ENVIA*/
-      .box input[type="submit"]{
+        /*CAJA OSUCRA DONDE SE ENVIA*/
+         .box input[type="submit"]{
         width: 25%;
         height: 39px;
         border-radius: 3px 6 6 3px;
@@ -1595,14 +1513,15 @@
     flex-direction: column;
     }
     
-    .menu-footer .footer-text{
+     .menu-footer .footer-text{
       height: 100%;
-      max-height: 25px;
-    
-    }
+      max-height: 25px;   
+     }
+
+
      /*TITULO DEL MENU*/
-     .menu-footer .footer-text h1{
-     text-align: center;
+      .menu-footer .footer-text h1{
+      text-align: center;
       font-size: 1.2rem;
      word-spacing: -2px;
      letter-spacing: -1.5px;
@@ -1629,19 +1548,17 @@
       display: none;
       }
     
-    /*CAJA PRINCIPAL DEL SEGUNDO FOOTER */
-    #footer-second{
+      /*CAJA PRINCIPAL DEL SEGUNDO FOOTER */
+       #footer-second{
       display: block;
-    width: 100%;
-    height: 15px;
-  
-    }
+      width: 100%;
+      height: 15px;
+      }
     
   
-  
-    .final-food p{
+      .final-food p{
       font-size: 0.7rem;
-    }
+      }
   
   
   }
@@ -1651,148 +1568,141 @@
   /*.........................*/
 
 
-    /*@media screen and (max-width: 375px) {*/
    /*.....................MOVIL MEDIO.............*/
   @media only screen and (min-width: 360px) and (max-width: 640px){
    
-    body{
-      padding:0;
-      margin: 0;
-      background-color: #fff;
-      color: rgba(0,0,0,.95);
-      font-family: "Argos",serif;
-       }
-  
-    html, body {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
+    html, body{
+    width: 100%;
     height: 100%;
-    }
+    margin: 0;
+     }
+
+
+
+    #wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-spacing: 0;
+    border-collapse: collapse;
+   }
+
   
 
-     #wrapper {
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      min-width:250px;
-      height: auto;
-      flex-wrap: wrap;
-    }
-    #wrapper > * {
-    padding: 15px;
-    }  
+  #wrapper img {
+  width: 100%;
+  height: auto;
+  border: 0;
+   }
+
+    
+  #wrapper > * {
+  padding: 17px;
+  }  
    
 
-       #container{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin: auto;
-      height: auto;
-      }
+    #container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    height: auto;
+    }
 
 
       /*.. #DCDCDC ..*/
       header{
-        display: block;
-        width:100%;
-        max-width: 375px;
-        height: 99px;
-        top:0;
-        position: fixed;
-        z-index: 2000;   /*IMPORTANTE  */
-        margin: auto;
-        box-shadow: 0 8px 6px -6px #DCDCDC; 
- 
-       }
+      display: block;
+      width:100%;
+      height: 99px;
+      top:0;
+      position: fixed;
+      z-index: 2000;   /*IMPORTANTE  */
+      margin: auto;
+      box-shadow: 0 8px 6px -6px #DCDCDC; 
+      }
     
 
-    
       header.black{
       height:  99px;
-      width: 100%;
       }
   
-      header .cabecera{
-      width: 100%;
-      max-width: 370px;
-      display: block;
-      position: relative;
-      height: 38px;
-      margin-top: -4px;
-        }
+    .cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 38px;
+    margin-top: -4px;
+    }
        
      
       
-      /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
-       .cabecera .logo{
-        display: block;
-        position: relative;
-        float: left;
-       width: 100%;
-       max-width: 320px;
-       height: 38px;
-        }
+    /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
+    .cabecera .logo{
+    display: inline-flex;
+    width: 20%;
+    max-width: 190px;
+    height: 38px;
+    }
          
      
-       .cabecera .logo img{
+       .logo img{
+        display: block;
         width: 100%;
-        max-width: 320px;
-        height: 38px;
-        margin-left: -0.4px;
+        max-width: 120px;
+       
         }
      
      
                /*caja hay 2. A */
-        .cabecera  .menu-btn {
-         display: block;
-         position: relative;
-         float: right;
-         width: 100%;
-         max-width: 200px;
-         height: 38px;
-        margin-top: -39px;
-         }
+     .menu-btn {
+      display: block;
+      position: relative;
+      float: right;
+      width: 40%;
+      max-width: 210px;
+      height: 38px;
+      margin: auto;
+      }
      
 
-        .cabecera .menu-btn .suscribe {
-        display: block;
-        position: relative;
-        float: left;
-        width: 100%;
-        max-width: 80px;
-        height: 34px;
-         }
+    .suscribe {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 70px;
+    height: 34px;
+    }
        
-          .menu-btn  .suscribe a h4{
-          font-size: 0.9rem;
-          margin-top: 22px;
-          margin-left: 2px;
-          font-weight: 700;
-          letter-spacing: 0.2px;
-          }
+      .suscribe a h4{
+      font-size: 0.9rem;
+      margin-top: 22px;
+      margin-left: 2px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      }
       
-          .cabecera .buscador{
-            display: none;
-            visibility: hidden;
-          }
+      .cabecera .buscador{
+      display: none;
+      }
   
      /*..BUSCADOR PARA EL MOVIL..........................*/
      .buscador-responsive{
       display: block;
       position: relative;
       float: left;
-      width: 348px;
-      height: 40px;
-      z-index: 9;
+         width: 99.9%;
+         height: 33px;
+        margin-top: 4px;
       }
      
 
      .buscador-responsive #controls-responsive{
       width: 100%;
-      height: 30px;
-     padding-top: 8px;
+      height: 31px;
+     padding-top: 5px;
       z-index: 10;
       }
 
@@ -1930,7 +1840,7 @@
   nav{
   position: fixed;
   width: 100%;
-  max-width: 380px;
+  max-width: 420px;
   height: 100%;
    top:-8px;  /*IMPORTANTE para que arriba no tenga espacios */
   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
@@ -1939,6 +1849,11 @@
    z-index: 200;
   }
 
+  nav  .nav li a.active{
+    text-decoration:line-through;
+    color: #568632;
+    }
+
    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
     nav .nav{
     width:100%; 
@@ -1946,7 +1861,7 @@
     display: flex;
     flex-direction: column;
     height: 90%;  
-     margin-left: 2px;
+     margin-left: 6px;
     top : 40px;
      z-index: 60; 
   
@@ -2088,28 +2003,31 @@
      /*..RESPONSIVE TITULO DENTRO DE LA PORTADA...........TITULO RESPONSIVE DEL MOVIL EN LA PORTADA.................*/
      .portada .portada-img-responsive .portada-titulo{
       width: 100%;
-      max-width: 330px;
+      max-width: 375px;
       display: block;
       position: absolute;
-      margin: auto;
-      margin-top:  70px;
+      margin-top:  75px;
       z-index: 80;
+
      }
 
+
+     /*..LETRA RESPONSIVE DEL MOVIL....*/
      .portada .portada-img-responsive .portada-titulo1{
       width: 100%;
-      max-width: 330px;
+      max-width: 360px;
       display: block;
       position: absolute;
-      margin-top:  -320px;
+      margin-top:  -150px;
+
       }
 
   
       .portada .portada-img-responsive .portada-titulo h2{
-      display:block;
-      margin: 0;
+      display: flex;
+      justify-content: center;
       text-align: center;
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       line-height: 1;
       -webkit-transform: translateY(10rem);
               transform: translateY(10rem);               /*DISTANCIA DE SUBIDA*/
@@ -2123,17 +2041,18 @@
       }
       
       .portada .portada-img-responsive .portada-titulo  h2 i{
-      font-size: 1.6rem;
+      font-size: 1.4rem;
+      width: 100%;
       }
   
       .portada .portada-img-responsive .portada-titulo1  h6 i{
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         }
     
    
       /*........*/
       .portada .portada-img-responsive .portada-titulo1 h6{
-      font-size: 1.4rem;
+      font-size: 1.26rem;
        }
       
  
