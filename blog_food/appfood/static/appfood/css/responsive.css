@@ -25,14 +25,6 @@
 
 
 
-    /* ESTO ES SI SE HACE CON CELDA
-    #wrapper td {
-      width: 100%;
-      padding: 0;
-      vertical-align: middle;
-      text-align: center;
-   }  */
-
        #wrapper img {
       width: 100%;
       height: auto;
@@ -53,27 +45,17 @@
     z-index: 2000;   /*IMPORTANTE  */
     box-shadow: 0 8px 6px -6px #DCDCDC; 
     min-height: 40px;
-    max-height: 99px;
+    max-height: 91px;
     }
       
       
     header.black{
     width: 100%;
     max-width: 350px;
-    height:  99px;
+    height:  91px;
       }
     
-    /*.. max-with:640px;...*/
-    .cabecera{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 38px;
-    margin-top: -4px;
-    padding: 0 0 0 0;
-    margin-left: 4px;
-    }
+  
          
     #container{
     display: flex;
@@ -86,21 +68,30 @@
     bottom:  4px;
     }
  
+         /*.. max-with:640px;...*/
+    .cabecera{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 36px;
+  
+      }
         
     /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
     .cabecera .logo{
     display: inline-flex;
-    width: 100%;
-    max-width: 190px;
-    height: 38px;
+    width: 30%;
+    height: 36px;
+
     }
            
        
     .cabecera .logo img{
-    display: block;
     width: 100%;
     max-width: 190px;
-    height: 38px;
+    height: 100%;
+    max-height: 36px;
     }
        
        /*caja hay 2. A */
@@ -110,7 +101,7 @@
     float: right;
     width: 50%;
     max-width: 240px;
-    height: 38px;
+    height: 36px;
     margin: auto;
     }
        
@@ -120,7 +111,7 @@
     float: left;
     width: 100%;
     max-width: 85px;
-    height: 38px;
+    height: 36px;
     }
        
          
@@ -142,7 +133,7 @@
     float: left;
     width: 100%;
     height: 40px;
-    margin-left: 2px;
+    margin-top: 1px;
     z-index: 9;
     }
        
@@ -282,7 +273,11 @@
   
   
     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
-  
+    
+    nav .nav li a.active{
+      text-decoration:line-through;
+      color: #568632;
+      }
       /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
     /*margin-left: 5.4%;/*IMPORTANTE */
     nav{
@@ -437,18 +432,24 @@
      /*----TITULO RESPONSIVE DE LA PORTADA DEL MOVIL..........TITULO MOVIL DENTRO DE LA PORTADA RESPONSIVE..*/
     .portada .portada-img-responsive .portada-titulo{
     width: 100%;
+    max-width: 270px;
+    left: 50%;
+    margin-left: -135px;
+    margin-top:  -160px;
     display: block;
     position: absolute;
-    margin-top:  -160px;
     z-index: 80;
     }
 
        /*----TITULO RESPONSIVE DE LA PORTADA DEL MOVIL..........TITULO MOVIL DENTRO DE LA PORTADA RESPONSIVE..*/
       .portada .portada-img-responsive .portada-titulo1{
         width: 100%;
+       max-width: 270px;
+       left: 50%;
+       margin-left: -135px;
+       margin-top:  -270px;
         display: block;
         position: absolute;
-        margin-top:  -270px;
         }
   
     
@@ -456,7 +457,7 @@
         display:block;
         margin: 0;
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 0.95rem;
         line-height: 1;
         -webkit-transform: translateY(10rem);
                 transform: translateY(10rem);               /*DISTANCIA DE SUBIDA*/
@@ -470,17 +471,17 @@
         }
         
         .portada .portada-img-responsive .portada-titulo  h2 i{
-        font-size: 1.43em;
+        font-size: 1.1em;
         }
     
         .portada .portada-img-responsive .portada-titulo1  h6 i{
-          font-size: 1.3rem;
+          font-size: 1.1rem;
           }
       
      
         /*........*/
         .portada .portada-img-responsive .portada-titulo1 h6{
-        font-size: 1.1rem;
+        font-size:  0.85rem;
          }
         
    
@@ -587,65 +588,68 @@
   
   /*..................................................................-*/
       /*PORTADA CONTACTO*/
-      .portada .portada-contacto-uno{
-        visibility: hidden; 
-      }
+     
   
       /*PORTADA CONTACTO DONDE SE MUEVEN LAS LETRAS*/
    
 
   
   
-   /*...LETRAS DE PORTADA CONTACTO RESPONSIVE MOVIL.........................*/
-   .portada-img-responsive .portada-contacto-uno{
-    position: relative;
-    overflow: hidden;
-    top: -230px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
-    left: 1px ;
-    width: 60%;
+   /*..PRIMR PARRAFP DE LA PAGINA CONTACTP  LETRAS DE PORTADA CONTACTO RESPONSIVE MOVIL.........................*/
+    .portada .portada-contacto-uno{
+     display: block;
+     width: 100%;
+     position: absolute;
+     overflow: hidden;
+    top: -8px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
+    left: 1px;
    }
   
      /*FRASE PRIMERA QUE LLEVA P*/
   .portada-img-responsive .portada-contacto-uno .azulplata{
     width: 100%;
+    font-size: 0.5rem;
     font-weight: 900;
-    font-size: 0.6rem;
     font-family: 'Cabin', sans-serif;
-    color:black;
+    color:  #2d2d2d;
   }
-  /*--LETRA CRAFTED----------------------*/
+  /*--LETRA MAS GRANDE Y CURSIVA---------------------*/
   .portada-img-responsive .portada-contacto-uno .otroestilo { 
-    font-weight: 300 ;
-     font-size:   0.8rem;
-     color:black ;
+    font-weight: 900 ;
+     font-size:   0.7rem;
+     color:  #2d2d2d;
      display: inline-block;
      font-family: 'Cabin', sans-serif;
      font-style: italic;
+
     }
   
-    /*---SEGUNDO PARRAFO----*/
-  /*PROUDLY CRAFTED*/
+    /*---SEGUNDO PARRAFO-- DE LA PAGINA CONTACTO --*/
   .portada-img-responsive .portada-contacto-dos{
   position: relative;
   overflow: hidden;
-  top: -260px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+  top: -190px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
   left: 1px ;
   width: 48%;
-  
+
   }
+
   /* SEGUNDO PARRAFO Proudly crafted in  münich since 1987*/
   .portada-img-responsive .portada-contacto-dos h6 {
   display:inline-block;
   padding-top: 43px; /*IMPORTANTE PARA DISTANCIAR EL PARRAFO DEL SIGIENTE PARRAFAO*/
   margin: 0;
-  font-size: 0.7rem;
+  font-weight: 900;
+  font-size: 0.5rem;
+  font-family: 'Cabin', sans-serif;
+  color: #2d2d2d;
   }
   
-  /*---TERCER PARRAFO----*/
+  /*---TERCER PARRAFO--DE LA PAGINA CONTACTO--------------------------*/
   .portada-img-responsive .portada-contacto-tres{
-  position: relative;
+  position: absolute;
   overflow: hidden;
-  top: -290px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
+  top: 30px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
   width: 48%;
   left: 1px;
   }
@@ -692,7 +696,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      margin-top: -130px;
+      margin-top: -30px;
       }
   
     /*SUBCAJA DEL FORUMMLARIO DE CORREO*/
@@ -2003,23 +2007,25 @@
      /*..RESPONSIVE TITULO DENTRO DE LA PORTADA...........TITULO RESPONSIVE DEL MOVIL EN LA PORTADA.................*/
      .portada .portada-img-responsive .portada-titulo{
       width: 100%;
-      max-width: 375px;
+      max-width: 320px;
       display: block;
       position: absolute;
+      left: 50%;
+      margin-left: -160px;
       margin-top:  75px;
       z-index: 80;
-
      }
 
 
      /*..LETRA RESPONSIVE DEL MOVIL....*/
      .portada .portada-img-responsive .portada-titulo1{
       width: 100%;
-      max-width: 360px;
+      max-width: 300px;
       display: block;
       position: absolute;
+      left: 50%;
+      margin-left: -150px;
       margin-top:  -150px;
-
       }
 
   
@@ -2027,7 +2033,7 @@
       display: flex;
       justify-content: center;
       text-align: center;
-      font-size: 1.25rem;
+      font-size: 1rem;
       line-height: 1;
       -webkit-transform: translateY(10rem);
               transform: translateY(10rem);               /*DISTANCIA DE SUBIDA*/
@@ -2041,18 +2047,24 @@
       }
       
       .portada .portada-img-responsive .portada-titulo  h2 i{
-      font-size: 1.4rem;
-      width: 100%;
+      font-size: 1.2rem;
+      margin-left: 8px;
+      margin-right: 8px;
       }
   
       .portada .portada-img-responsive .portada-titulo1  h6 i{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        margin-left: 8px;
+        margin-right: 8px;
         }
     
    
       /*........*/
       .portada .portada-img-responsive .portada-titulo1 h6{
-      font-size: 1.26rem;
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      text-align: center;
        }
       
  
@@ -2136,7 +2148,7 @@
           
 
   /*-----imagen grande de contacto----------------*/
-   .portada-img{
+    .portada-img{
      display: none;
      visibility: hidden;
    }
@@ -2163,63 +2175,72 @@
 
 /*..................................................................-*/
     /*PORTADA CONTACTO*/
-    .portada-contacto{
-      padding-bottom: -50px; 
-    }
+
 
     /*PORTADA CONTACTO DONDE SE MUEVEN LAS LETRAS*/
-    .portada .portada-contacto-uno{
-      position: relative;
+    .portada .portada-img-responsive .portada-contacto-uno{
+      display: block;
+      position: absolute;
       overflow: hidden;
-      top: -170px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
-      left: 30px ;
+      top: 140px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
+      left: 10px;
       width: 48%;
      }
 
-       /*LETRA PROUDLY*/
-    .portada .portada-contacto-uno .azulplata{
-      display: block;
-      width: 100%;
+       /*LETRA EN PRINCIPIO*/
+       .portada-img-responsive .portada-contacto-uno .azulplata{
+         display: inline-flex;
+        width: 100%;
+        height: 30px;
+      font-size: 1rem;
+      color:  #2d2d2d;
       font-weight: 900;
-      font-size: 0.6rem;
       font-family: 'Cabin', sans-serif;
-      color:black;
-      line-height: 10px;
     }
-    /*--LETRA CRAFTED----------------------*/
-    .portada .portada-contacto-uno .otroestilo { 
-      font-weight: 300 ;
-       font-size:   0.8rem;
-       color:black ;
-       display: inline-block;
+    /*--LERA EN CURSIVA DE EN MEDIO-------------------*/
+     .portada-img-responsive .portada-contacto-uno  .otroestilo { 
+      display: inline-flex;
+      margin-left: 4px;
+      margin-right: 5px;
+      height: 30px;
+       font-size: 1.2rem;
+      margin-top: -32px;
+       color:  #2d2d2d;
+       font-weight: 900;
        font-family: 'Cabin', sans-serif;
        font-style: italic;
       }
     
       /*---SEGUNDO PARRAFO----*/
-/*PROUDLY CRAFTED*/
-.portada .portada-contacto-dos{
-  position: relative;
+  .portada .portada-img-responsive  .portada-contacto-dos{
+  display: block;
+  position: absolute;
   overflow: hidden;
-  top: -200px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
-  left: 30px ;
-  width: 48%;
- }
+  top: 180px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+  left: 10px ;
+  width: 50%;
+  height: 30px;
+  }
   /* SEGUNDO PARRAFO Proudly crafted in  münich since 1987*/
- .portada .portada-contacto-dos h6 {
+ .portada .portada-img-responsive .portada-contacto-dos h6 {
   display:inline-block;
-  padding-top: 43px; /*IMPORTANTE PARA DISTANCIAR EL PARRAFO DEL SIGIENTE PARRAFAO*/
+  padding-top: 2px; /*IMPORTANTE PARA DISTANCIAR EL PARRAFO DEL SIGIENTE PARRAFAO*/
   margin: 0;
   font-size: 0.7rem;
- 
+  color:  #2d2d2d;
+  font-weight: 900;
+  font-family: 'Cabin', sans-serif;
+  word-spacing: -0.2px;
+  width: 100%;
 }
 
 /*---TERCER PARRAFO----*/
- .portada .portada-contacto-tres{
-  position: relative;
+ .portada .portada-img-responsive .portada-contacto-tres{
+   display: block;
+  position: absolute;
   overflow: hidden;
-  top: -260px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
-  left: 30px ;
+  top: 160px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
+  left: 10px ;
   width: 48%;
  }
 
@@ -2343,7 +2364,7 @@ width: 100%;
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: -130px;
+    margin-top: 30px;
     }
 
   /*SUBCAJA DEL FORUMMLARIO DE CORREO*/
