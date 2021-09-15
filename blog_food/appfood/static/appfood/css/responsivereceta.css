@@ -234,7 +234,6 @@
     /*TITULO DE LA RECETA*/
     .recetas h1{
     width: 100%;
-    padding-bottom: ;
     font-size: 1.5rem;
     word-spacing: -3px;
     letter-spacing: -1px;
@@ -247,7 +246,6 @@
     /*DESCRIPCION DE LA RECETA*/
     .recetas p{
       width: 100%;
-      padding-bottom: ;
       font-size: 1rem;
       word-spacing: -0.5px;
       letter-spacing: -0.4px;
@@ -533,10 +531,9 @@
     text-align: start;
    }
   
-  .nutricional p{
+    .nutricional p{
     letter-spacing: -0.1px;
     font-family: 'Cabin', sans-serif;
-    text-align: ;
     font-size: 1rem;
     font-weight: 400;
     line-height: -0.4px;
@@ -721,9 +718,6 @@
                 font-family: 'Archivo Black', sans-serif;
                 }
                 
-          .box button[type="submit"]:hover{
-                background: ;
-                }
                 /*FIN de la cajita del correo */
                 
                 .final-food-recetas p{
@@ -733,21 +727,20 @@
                   font-size: 0.6rem;
                  }
                 
-                 #wrapper-recetas .tipeo{
-                  margin: auto;
-                  margin-bottom: 20%;
-                  display: table;
-                  width: 90%;
-                  height: 5%;
-                  background-color:;
-                  }
+      #wrapper-recetas .tipeo{
+      margin: auto;
+      margin-bottom: 20%;
+      display: table;
+      width: 90%;
+      height: 5%;
+      }
 
-                  #wrapper-recetas  .tipeo h4{
-                    position: relative; 
-                    float: left;
-                    color: #2d2d2d;
-                    font-size: 0.8em;
-                    }
+      #wrapper-recetas  .tipeo h4{
+      position: relative; 
+      float: left;
+      color: #2d2d2d;
+      font-size: 0.8em;
+      }
                   
                     #wrapper-recetas   .tipeo h1 { 
                     position: relative; 
@@ -1376,7 +1369,6 @@
         font-weight: 400;;
          line-height: -0.2px;
          color: #666;
-        margin-top: ;
          }
         
 
@@ -1674,9 +1666,7 @@
                 font-family: 'Archivo Black', sans-serif;
                 }
 
-              .box button[type="submit"]:hover{
-                background: ;
-                }
+            
                 /*FIN de la cajita del correo */
                 
                 .final-food-recetas p{
@@ -1692,7 +1682,6 @@
                   display: table;
                   width: 90%;
                   height: 5%;
-                  background-color:;
                   }
 
                   #wrapper-recetas  .tipeo h4{
@@ -2381,9 +2370,7 @@
                 font-family: 'Archivo Black', sans-serif;
                 }
                 
-                #footer-recetas  .box button[type="submit"]:hover{
-                background: ;
-                }
+        
                 /*FIN de la cajita del correo */
                 
                 .final-food-recetas p{
@@ -2399,7 +2386,6 @@
                   display: table;
                   width: 90%;
                   height: 5%;
-                  background-color:;
                   }
 
                   #wrapper-recetas  .tipeo h4{
@@ -3215,9 +3201,7 @@ z-index:3000;
                 font-family: 'Archivo Black', sans-serif;
                 }
                 
-                #footer-recetas  .box button[type="submit"]:hover{
-                background: ;
-                }
+             
                 /*FIN de la cajita del correo */
                 
                 .final-food-recetas p{
@@ -3233,7 +3217,6 @@ z-index:3000;
                   display: table;
                   width: 90%;
                   height: 5%;
-                  background-color:;
                   }
 
                   #wrapper-recetas  .tipeo h4{
@@ -3997,9 +3980,7 @@ z-index:3000;
                   font-family: 'Archivo Black', sans-serif;
                   }
                   
-                 .box button[type="submit"]:hover{
-                  background: ;
-                  }
+               
                   /*FIN de la cajita del correo */
                   
                   .final-food-recetas p{
@@ -4015,7 +3996,6 @@ z-index:3000;
                     display: table;
                     width: 90%;
                     height: 5%;
-                    background-color:;
                     }
   
                     #wrapper-recetas  .tipeo h4{
@@ -4772,9 +4752,7 @@ z-index:3000;
                   font-family: 'Archivo Black', sans-serif;
                   }
                   
-                 .box button[type="submit"]:hover{
-                  background: ;
-                  }
+             
                   /*FIN de la cajita del correo */
                   .footer-second-recetas{
                     height: 15px;
@@ -4798,7 +4776,6 @@ z-index:3000;
                     display: table;
                     width: 90%;
                     height: 5%;
-                    background-color:;
                     }
   
                     #wrapper-recetas  .tipeo h4{
@@ -5492,9 +5469,7 @@ nav li a p{
                 font-family: 'Archivo Black', sans-serif;
                 }
                 
-               .box button[type="submit"]:hover{
-                background: ;
-                }
+             
                 /*FIN de la cajita del correo */
                 
                 .final-food-recetas{
@@ -5514,7 +5489,6 @@ nav li a p{
                   display: table;
                   width: 90%;
                   height: 5%;
-                  background-color:;
                   }
 
                   #wrapper-recetas  .tipeo h4{
@@ -6191,9 +6165,7 @@ nav li a p{
                 font-family: 'Archivo Black', sans-serif;
                 }
                 
-               .box button[type="submit"]:hover{
-                background: ;
-                }
+            
                 /*FIN de la cajita del correo */
                 
                 .final-food-recetas{
@@ -6213,7 +6185,6 @@ nav li a p{
                   display: table;
                   width: 90%;
                   height: 5%;
-                  background-color:;
                   }
 
                   #wrapper-recetas  .tipeo h4{
@@ -6896,9 +6867,7 @@ nav li a p{
                 font-family: 'Archivo Black', sans-serif;
                 }
                 
-               .box button[type="submit"]:hover{
-                background: ;
-                }
+             
                 /*FIN de la cajita del correo */
                 
                 .final-food-recetas{
@@ -6917,7 +6886,6 @@ nav li a p{
                   display: table;
                   width: 90%;
                   height: 5%;
-                  background-color:;
                   }
 
                   #wrapper-recetas  .tipeo h4{
