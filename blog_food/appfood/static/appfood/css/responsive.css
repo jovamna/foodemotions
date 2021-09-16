@@ -182,17 +182,10 @@
     .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
     outline: none;
     border: 0;
-    color: #000000;
-    font-size: 1.1rem;
     }
 
       
-    /*..CUANDO ESTA ESCRITO EN EL PLACEHOLDER..*/
-    .buscador-responsive #controls-responsive #custom-search-input-responsive input::placeholder { 
-    color: #2d2d2d; 
-    font-size: 1rem;
-    margin-top: 3px;
-    }
+ 
   
          /*---------------------------------------------------------------------*/
        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
@@ -1630,6 +1623,7 @@
 
       header.black{
       height:  100px;
+      background-color:#fff ;
       }
   
     .cabecera{
@@ -1751,15 +1745,15 @@
         /* CUANDO SE ESCRIBE EN EL PLACEHOLDER..*/
         .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
           outline: none;
-          color: #2d2d2d; 
-          font-size: 0.9rem;
-          font-weight: 800;
           border: none ;
-          outline: none;
-          cursor: pointer;
           }
       
-     
+          .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]{
+            color: #2d2d2d; 
+            font-size: 0.9rem;
+            font-weight: 800;
+
+          }
    
 
        /*---------------------------------------------------------------------*/
@@ -1965,7 +1959,7 @@
         flex-direction: column;
        margin: auto;
        margin-top: 87px;
-        z-index: 30;
+        z-index: 40;
         }
 
       .portada .portada-img{
@@ -1985,7 +1979,7 @@
    .portada .portada-img-responsive{
     display: flex;
     flex-direction: column;
-    z-index: 80;
+    z-index: 50;
     margin: auto;
 
     }
@@ -2002,7 +1996,7 @@
     .portada  .portada-img-responsive .imagen-responsive-movil img{
       width: 100%;
       padding: 0 0;
-      z-index: 40;
+      z-index: 80;
       margin: auto;
 
     }

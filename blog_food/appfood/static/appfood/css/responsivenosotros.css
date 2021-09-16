@@ -276,15 +276,15 @@ html, body{
   flex-wrap: wrap;
 }
 
-#wrapper > * {
-padding: 17px;
-}  
+  #wrapper > * {
+  padding: 17px;
+  }  
 
 
-  .cabecera{
-  display: none;
-  visibility: hidden;
-  }
+    .cabecera{
+    display: none;
+    visibility: hidden;
+   }
 
 
       /*.. #DCDCDC ..*/
@@ -314,8 +314,6 @@ padding: 17px;
     justify-content: space-between;
     height: 38px;
     margin-top: -8px;
-    margin-left: -8px;
- 
      }
     
   
@@ -323,7 +321,7 @@ padding: 17px;
    /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
     .cabecera-responsive .logo{
      display: inline-flex;
-    width: 30%;
+    width: 20%;
     max-width: 190px;
    height: 38px;
      }
@@ -331,8 +329,8 @@ padding: 17px;
   
     .cabecera-responsive .logo img{
       display: block;
-     width: 90%;
-     max-width: 150px;
+     width: 100%;
+     max-width: 120px;
      height: 38px; 
      }
   
@@ -374,8 +372,7 @@ padding: 17px;
    display: block;
    position: relative;
     float: left;
-   width:  100%;
-   margin-left: -8px;
+   width:  99.8%;
    height: 30px;
    margin-top: 6px;
    }
@@ -517,66 +514,74 @@ padding: 17px;
 /*..FIN CABECERA RESPONSIVE.................*/
 /*margin-left: 5.4%;/*IMPORTANTE */
 nav{
-  width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
-  height: 100%;/*IMPORTANTE */
   position: fixed;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
    top:-8px;  /*IMPORTANTE para que arriba no tenga espacios */
-  min-height: 100vh;
   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  background-color:#000000; /*FONDO DEL MENU*/
-  background-position:72% 50%;
-  background-repeat:no-repeat;
-  opacity: 1;
-  z-index:40;
+  opacity: 0.97;
+   background-color: #000000;
+   z-index: 200;
   }
+
+  nav  .nav li a.active{
+    text-decoration:line-through;
+    color: #568632;
+    }
 
    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
    nav .nav{
-     display: flex;
-     flex-direction: column;
-    width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
-    height: 93%;/*IMPORTANTE */
-    margin-left: -42%;/*IMPORTANTE **/
-    z-index:30;
-    }
-
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav .nav li{
-    margin-top: 1.5%;/*IMPORTANTE */
-    list-style: none;
-    height: 70px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    cursor:pointer;
-    }
-    
-    nav .nav li a {
-    z-index: 100;
-    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-    display: block;
-    position: absolute;
-    width: 60%;
-    color: #fff;
-    font-weight: lighter;
-    font-size: 1rem;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-    font-family:  sans-serif;
-    }
+    width:100%; 
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;  
+     margin-left: 6px;
+    top : 40px;
+     z-index: 60; 
   
-     /*IMPORTANTE*/
+    }
+      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+      nav .nav li{
+        margin-top: 5px;/*IMPORTANTE */
+      list-style: none;
+      height: 40px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+      margin-left: 10px;
+      margin-bottom: 20px;
+      cursor:pointer;
+      }
+      
+      nav .nav li a {
+      z-index: 100;
+      background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+      display: flex;
+      width: 100%;
+      height: 55px;
+      color: #fff;
+      font-weight: lighter;
+      font-size: 1.24rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  sans-serif;
+      }
+    
+       /*IMPORTANTE*/
 
      
     
  
       /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
-       display: block;
-      margin-left: -200px;
-     
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
-      }
+   nav .nav li:hover > ul {
+    display: block;
+   margin-left: -200px;
+   height: 200px;
+   visibility: visible; 
+   z-index: 598;
+   }
 
     nav .nav li ul li a{
     font-size: 1rem;
@@ -629,7 +634,6 @@ nav{
    flex-direction: column;
    width: 100%;
     margin-top: 15%;
-    margin-left: -0.5px;
     }
 
 
@@ -637,7 +641,6 @@ nav{
     display: flex;
     flex-direction: column;
     width: 100%;
- 
     }
     
 
