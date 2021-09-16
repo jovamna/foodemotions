@@ -91,7 +91,7 @@
             <nav style="background-image: url({% static 'appfood/img/logo/250-60.png' %})">
                  <ul>
                  <li> 
-                 <a href="{% url 'appfood:index' %}"  class="current">
+                 <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
                  <p>Inicio</p> 
                  </a>  
                 </li>
