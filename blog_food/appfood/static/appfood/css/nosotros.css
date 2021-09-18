@@ -1,113 +1,140 @@
-*{
+  *{
   margin:0;
   padding:0;
   border:0;
   box-sizing: border-box;
-}
-/*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
-*,
-*::before,
-*::after {
-box-sizing: border-box;
-}
-/*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
-body{
-width: 100%;
-margin:auto;
-}
+  }
+   /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+   *,
+   *::before,
+   *::after {
+   box-sizing: border-box;
+   }
 
-img{
-max-width: 100%;
-}
 
-/*CONTENEDOR PRINCIPAL DE TODA LA CABECERA INCLUYENDO SLIDER*/
-#wrapper {
-  margin:0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-width:250px;
-  flex-wrap: wrap;
-}
+   /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+   body{
+  padding:0;
+  margin: 0;
+  background-color: #fff;
+  color: rgba(0,0,0,.95);
+  font-family: "Argos",serif;
+   }
+
+    html, body {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+    }
+
+   img{
+   max-width: 100%;
+   }
+
+   /*CONTENEDOR PRINCIPAL DE TODA LA CABECERA INCLUYENDO SLIDER*/
+   #wrapper {
+    min-height: 100vh;
+    min-width:250px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    }
     
-#wrapper > * {
-padding: 20px;
-}
+    #wrapper > * {
+    padding: 20px;
+    }
      
 
-#container-nosotros{
+   #container-nosotros{
+  display: flex;
+  flex-direction: column;
+   margin: auto;
   width: 100%;
   max-width: 1250px;
-  margin: auto;
+  bottom:  25px;
+  margin-top: 130px;
+  padding: 0 0 0 0;
   }
 
-header{
-width:100%;
-background-color: #fff;
-position: fixed;
-z-index: 2000;
-margin: auto;
-top: 0;
-height: 170px;
-}
+  header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:100%;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
+    top:0;
+    margin: auto;
+    height: 170px;
+    box-shadow: 0 8px 6px -6px #DCDCDC;
+    background-color: #fff;
+   }
 
 
-header.black{
-background-color: #fff;
-}
+  header.black{
+    height: 170px;
+  background-color: #fff;
+   }
 
- .cabecera-responsive{
+   .cabecera-responsive{
    display: none;
- }
+   }
 
-.cabecera{
-width:100%;
-max-width: 1250px;
-height: 100px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
-margin: auto;
-display: flex;
-margin-top:-4px;
- margin-bottom:5px;
-align-items: flex-end;
-}
+   .cabecera{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    max-width: 1250px;
+   height: 100px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+   margin-bottom: 5px;
+   margin-left: 5px;
+   }
  
-/*caja */
-.logo{
+    /*caja */
+    .cabecera .icon-social{
+    width:10%;
+    max-width: 100px;
+    display: inline-flex;
+    }
+
+  /*caja */
+  .cabecera .logo{
   width:60%;
   max-width: 320px;
   height: 80px;
   }
 
-  .logo img{
- width: 100%;
- height: 80px;
- align-items: center;
+  .cabecera .logo img{
+   width: 100%;
+   height: 80px;
   }
 
  /*caja */
- .menu-btn{
+  .cabecera .menu-btn{
  width: 10%;
  max-width: 100px;
  display: inline-flex;
 
  }
 
- .suscribe{
+ .menu-btn .suscribe{
  width: 10%;
  display: inline-flex;
  }
 
-.suscribe h4 {
- font-size: 0.9rem;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- color: #2d2d2d;
- font-weight: 700;
- display: inline-flex;
- justify-content: flex-end;
- text-transform: uppercase;
- letter-spacing: -0.7%;
- }
+  .cabecera .suscribe h4 {
+   font-size: 0.9rem;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #2d2d2d;
+   font-weight: 700;
+   display: inline-flex;
+   justify-content: flex-end;
+   text-transform: uppercase;
+   letter-spacing: -0.7%;
+   }
 
 
  /*...BURGER ESCONDIDO........BURGER ESCONDIDO....................*/
@@ -222,41 +249,38 @@ align-items: flex-end;
 
 
 
-.tres-columnas-nosotros{
-display: flex;
-width: 100%;
-max-width: 1250px;
-margin-top: 18%;
-margin-bottom: 10%;
+  .tres-columnas-nosotros{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1250px;
+   margin-top: 80px;
+  padding: 0 0 0 0;
+  }
 
-
-}
-
- /*PRIMERA COLUMNA ......................................................................................................*/
-.nosotros{
-width: 47%;
-max-width: 590px;
-flex-flow: column nowrap;
-margin: o auto;
-z-index: 10;
-margin-left:-20px;
-
-}
+   /*PRIMERA COLUMNA ......................................................................................................*/
+  .nosotros{
+  width: 45%;
+   max-width: 550px;
+   z-index: 10;
+   }
 
 
  /*primera caja ..................................... */
-.articulo{
-width: 100%;
+  .articulo{
+  width: 100%;
+  }
 
-}
-.nosotros h1{
-line-height: 22px;
-font-weight: bolder;
-font-size: 44px;
-word-spacing: 4px;
-letter-spacing: -1.5px;
-font-family: 'Archivo Black', sans-serif;
-}
+  .nosotros h1{
+  line-height: 22px;
+  font-weight: bolder;
+  font-size: 44px;
+  word-spacing: 4px;
+  letter-spacing: -1.5px;
+  font-family: 'Archivo Black', sans-serif;
+  margin-bottom: 50px;
+   }
 
 .nosotros .articulo p{
 font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
@@ -266,10 +290,6 @@ line-height: 1.45;
 color: #666;
 font-family: 'Cabin', sans-serif;
 text-align: start; 
- margin-top: 10%;
-
-
-
 }
 
 
@@ -294,9 +314,8 @@ text-align: start;
 display: flex;
 flex-direction: row;
 width: 100%;
-max-width: 590px;
+max-width: 550px;
 justify-content: space-between;
-
 margin-top: 20%;
 }
 
@@ -432,29 +451,35 @@ color: #666;
 
 
 /*  SEGUNDA COLUMNA ......................................................................*/
-.fijo1{
-  width: 10%;
-  max-width: 90px;
- 
-}
+  .fijo1{
+  width: 8%;
+  max-width: 70px;
+  }
 /*  FINAL SEGUNDA COLUMNA ......................................................................*/
 
 
-.fija{
-  width: 45%;
-  max-width: 600px;
+  .fija{
+  display: flex;
+  flex-direction: column;
+  width: 43%;
+  max-width:  600px;
   height: 90%;
   margin-bottom: 50%;
   }
 
-  .imagen-estatica{
+   .fija .imagen-estatica{
   width: 100%;
-  max-width: 600px;
+  max-width:  600px;
   height: 80%;
   position: fixed ;
   bottom:0;
   }
  
+  .imagen-estatica img{
+   width: 100%;
+   max-width: 600px;
+   margin-top: 50px;
+  }
  /*  FINAL SEGUNDA COLUMNA ...........................................
 
  

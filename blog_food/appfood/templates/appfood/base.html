@@ -158,17 +158,16 @@
     <div id="wrapper">
         <header>
               <div class="cabecera">
-                 <div class="logo">
-                    <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
-                    <img src="{% static 'appfood/img/logo/logd.svg' %}" width="100%" alt="Food Emotions"> 
-                    </a>
-                    </div>
+                     <div class="logo">
+                     <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
+                     <img src="{% static 'appfood/img/logo/logd.svg' %}" width="100%" alt="Food Emotions"> 
+                     </a>
+                     </div>
 
-      
-   <!------------------------------------------------------------------------------------------------------------>
-     <div class="buscador">
-        <div id="controls">
-              <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+            <!---------------------------------------------------------------------------->
+            <div class="buscador">
+               <div id="controls">
+                 <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
                   <!------------------------------------------------------------------>
                   <div id="custom-search-input-header">
 	                  <input type="text"  name="q" 
@@ -178,25 +177,24 @@
                     <button type="submit" name="submit" class="boton btn-succes" value="Search" >
                     <span class="icon"><i class="fa fa-search"></i></span> 
                   </button>
-                </div>
+                 </div>
                 <!--------------------------------------------------------------------->
-            </form>                 
-       </div>
-    </div>
+               </form>                 
+             </div>
+            </div>
    <!---------------------------------------------------------------------------------------------------------------->
-
-            <div class="menu-btn"> 
-                     <div class="suscribe">
-                     <a href="{% url 'appcontact:contacto' %}">   
-                     <h4>suscribete</h4>  
-                     </a>
-                     </div>
+                  <div class="menu-btn"> 
+                      <div class="suscribe">
+                      <a href="{% url 'appcontact:contacto' %}">   
+                      <h4>suscribete</h4>  
+                      </a>
+                      </div>
                      <!---------------MENU RESPONSIVE -------------->
-                    <div class="menu-btn__burger">  </div>
+                     <div class="menu-btn__burger">  </div>
                         <!----FIN  MENU RESPONSIVE ------->        
-           </div>
-          <!----FIN  MENU BTN------>
-                                     <!-----FIN  BOLETIN -------------->
+                   </div>
+                  <!----FIN  MENU BTN------>
+                  <!-----FIN  BOLETIN -------------->
       </div>  <!-----FIN  CABECERA------------------------------------------------------------------------------------->
 
          <!---<nav class="nav"> ---->

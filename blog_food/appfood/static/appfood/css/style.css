@@ -82,7 +82,7 @@
     font-weight: 500;
     text-decoration: none;
     text-decoration-skip-ink: none;
-}
+    }
 
 
 /*MUY IMPORTANTE*/
@@ -95,156 +95,110 @@
  
  
   /*CONTENEDOR PRINCIPAL DE TODA LA CABECERA INCLUYENDO SLIDER*/
-  #wrapper {
-    box-sizing: border-box;
+
+  /*  box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;*/
+    #wrapper {
     min-height: 100vh;
     min-width:250px;
-    flex-wrap: wrap;
-  
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
    }
       
    #wrapper > * {
    padding: 20px;
    }
      
-   div {
-  flex: 1;
-   }
+     div {
+    flex: 1;
+    }
 
 
    /*CONTAINER DE TODO EL BODY.......margin-top 152px.....................  */
-  #container{
+    #container{
     display: flex;
     flex-direction: column;
+     margin: auto;
     width: 100%;
     max-width: 1250px;
-    margin: auto;
-    margin-top: 129px;
-  bottom:  25px;
-  padding: 0 0 0 0 ;   /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
-  height: auto;
-  }
+    bottom:  25px;
+    margin-top: 130px;
+    padding: 0 0 0 0;
+     }
 
 
     /*height 125px*/
 
-   header{
-  width:100%;
-  position: fixed;
-  z-index: 2000;   /*IMPORTANTE  */
-  top:0;
-  margin: auto;
-  height: 125px;
-  box-shadow: 0 8px 6px -6px #DCDCDC;
-  
-   }
+    header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:100%;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
+    top:0;
+    margin: auto;
+    height: 125px;
+    box-shadow: 0 8px 6px -6px #DCDCDC;
+    }
 
-   header.black{
+    header.black{
     height: 125px;
     background-color: #fff;
-  }
+    }
 
   .cabecera{
   width:100%;
   max-width: 1250px;
-  height: 48px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
-  margin: auto;
+  height: 55px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  align-items: flex-end;
-  padding: 0 0 0 0;
    }
 
-  /*caja */
-  .icon-social{
-  width:10%;
-  max-width: 100px;
-  }
-
-  .icon-social li{
-  display: inline-flex;
-  }
-
-  .icon-social ul li .fa-envelope:hover {
-  color: #cbcbcb;
-  }
-  
-  .icon-social ul li .fa-facebook-f:hover {
-  color: #cbcbcb;
-  }
-  
-  .icon-social ul li .fa-twitter:hover {
-  color: #cbcbcb;
-  }
-  
-  .icon-social ul li .fa-instagram:hover {
-  color: #cbcbcb;
-  }
-  
-  .icon-social ul li .fa-envelope{
-  color: #2d2d2d;
-  }
-  
-  .icon-social ul li .fa-facebook-f{
-  color: #2d2d2d;
-  }
-  
-  .icon-social ul li .fa-twitter{
-  color: #2d2d2d;
-  }
-  
-  .icon-social ul li .fa-instagram{
-  color: #2d2d2d;
-  }
-  
+ 
     /*caja   margin-bottom: -30px;*/
    .logo{
    display: inline-flex;
    width: 25%;
-   max-width: 180px;
+   max-width: 190px;
    height: 55px;
-   margin-right: 25px;
-  
-
+ 
    }
 
-   .logo img{
-  width: 100%;
-  height: 100%;
-  margin: auto;
-
-   }
-
+     .logo img{
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      }
 
 
 
-  /*IMPORTANTE PARA EL MENU EN FILA Y QUE ESTE CENTRADO CON ALIGN-ITEM........................... */
 
-  .cabecera .buscador{
+    /*IMPORTANTE PARA EL MENU EN FILA Y QUE ESTE CENTRADO CON ALIGN-ITEM........................... */
+   .cabecera .buscador{
     display: inline-flex;
      width: 50%;
      max-width: 700px;
-     height: 48px;
-     margin: auto;
-    
-   
-   }
+     height: 55px;
+    }
  
    /*CONTAINER DEL BUSCADOR ................BUSCADOR DEL INDEX*/
    .buscador #controls{
    display: flex;
    flex-direction: column;
    width: 100%;
-   height: 60px;
+   height: 45px;
    max-width: 700px;
    margin: auto;
+   margin-top: 10px;
    z-index: 10;
-   padding-top: 5px;
-   
-   
+
    }
    
    
@@ -256,7 +210,7 @@
    font-weight: 1rem;
    width: 100%;
    max-width: 700px;
-   height: 40px;
+   height: 45px;
    border: 2px solid #d2d2d2;
    border-radius: 9px;
    z-index: 10;
@@ -296,7 +250,11 @@
 
     }
    
-   
+    #custom-search-input-header input {
+      margin-top: 3px;
+      margin-left: 4px;
+ 
+     }
    
 
  
@@ -305,20 +263,19 @@
   /*caja */
   .menu-btn{
     width: 10%;
-    max-width: 80px;
+    max-width: 90px;
     display: inline-flex;
-  
+    height: 55px; 
     }
   
     .suscribe{
-    width: 8%;
-    height: 26px;
+    width: 10%;
+    height: 55px; 
     display: inline-flex;
-  
     }
   
    .suscribe h4 {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #2d2d2d;
     font-weight: 700;
@@ -326,6 +283,7 @@
     justify-content: flex-end;
     text-transform: uppercase;
     letter-spacing: -0.7%;
+    margin-top: 38px;
     }
   
   
@@ -364,13 +322,13 @@
      }
 
     /*---UL--*/
-  .menu .nav{
-  width: 80%;
-  position: relative;
-  display: block;
-  float: right;
-  margin-top: 6px;
-  }
+   .menu .nav{
+   width: 80%;
+   position: relative;
+   display: block;
+   float: right;
+   margin-top: 6px;
+   }
 
     /*---LI---*/
   .menu .nav li{
@@ -404,44 +362,41 @@
      }
     
 
-        /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
+    /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
     .menu ul li a.active{
-      text-decoration:line-through;
-      color: #568632;
-      }
-      /*----fFIN -MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
+    text-decoration:line-through;
+    color: #568632;
+    }
+    /*----fFIN -MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
     
-
-
-  nav{
-  display: none;
-
-  }
+    nav{
+    display: none;
+    }
 
   
   
-  nav{
-  width:100%;
-  max-width: 1250px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  margin: auto;
-  margin-top: 8px;
+    nav{
+    width:100%;
+    max-width: 1250px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 8px;
    }
      
   
     /* ESTE ES EL UL  IMPORTANTE PARA EL MENU EN FILA Y QUE ESTE CENTRADO*/
-     nav .nav{
-      display: flex;
-      flex-direction: row;
-      width:100%;
-      max-width: 1260px;
-      z-index: 30;
-      position: fixed;   /*IMPORTANTE PARA QUE EL SUBMENU NO SE MUEVA*/
-      margin:0;
-      padding:0;
-      }
+    nav .nav{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    max-width: 1260px;
+    z-index: 30;
+    position: fixed;   /*IMPORTANTE PARA QUE EL SUBMENU NO SE MUEVA*/
+    margin:0;
+    padding:0;
+    }
   
   
     nav .nav li{
@@ -550,16 +505,18 @@
   top: 0; 
   margin: auto;................  SLIDER................................  */
   .portada{
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-   padding: 0 0 0 0 ;
   }
 
-  .portada-img{
-  z-index: 80;
-  }
+   .portada .portada-img{
+    display: flex;
+   flex-direction: column;
+   z-index: 80;
+   }
   
-   .portada-img img{
+   .portada .portada-img img{
    width: 100%;
    height: 100%;
    z-index: 40;
@@ -2101,7 +2058,6 @@ border: solid #E9E9E9;
 
 .box input[type="text"]
 {
-background-color: #FFF;
 display: inline-block;
 width:42%;
 height: 50px;
