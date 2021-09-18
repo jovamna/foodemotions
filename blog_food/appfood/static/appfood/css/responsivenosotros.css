@@ -37,7 +37,6 @@
     display: flex;
     flex-direction: row;
     margin: auto;
-    background-color: lime;
   }
   .logo{
     height: 50px;
@@ -641,6 +640,7 @@ nav{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 40px;
     }
     
 
@@ -651,9 +651,10 @@ nav{
     margin:  auto;
     z-index: 10;
     }
+
+
       .articulo{
         width: 100%;
-    
       }
     .nosotros .articulo h1{
     line-height: 22px;
@@ -662,6 +663,7 @@ nav{
     word-spacing: 2px;
     letter-spacing: -0.2;
     font-family: 'Archivo Black', sans-serif;
+    margin-bottom: 20px;
     }
 
     .nosotros .articulo p{
@@ -671,6 +673,7 @@ nav{
     word-spacing: 1px;
     letter-spacing: -0.02rem;
     font-family: 'Open sans';
+    margin-top: 5px;
     }
           
       
@@ -750,7 +753,7 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
   flex-direction:column;
   width: 100%;
   margin-top: 6%;
-  margin-bottom: 20%;
+  margin-bottom: 1px;
   }
    
  
@@ -787,28 +790,27 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
   /*  FINAL SEGUNDA COLUMNA ......................................................................*/
    /*  SEGUNDA COLUMNA ......................................................................*/
   .fijo1{
-  width: 100%;
-   display: flex;
-  flex-direction: column;
+  display: none;
+   visibility: hidden;
   }
 
-.fija{
-width: 100%;
-max-width: 790px;
-height: 100%;
-display: flex;
-flex-direction: column;
-}
+   .fija{
+   width: 100%;
+   display: block;
+   position: relative;
+   float: left;
+   }
 
-.imagen-estatica{
-  width: 100%;
-  max-width: 790px;
-  height: 80%;
- position: relative;
+   .fija .imagen-estatica{
+   width: 100%;
+   margin-top: 2px;
+   display: block;
+   position: relative;
+   float: left;
   }
 
 
-  .imagen-estatica img{
+   .imagen-estatica img{
     width: 100%;
     bottom:0;
     }
@@ -816,21 +818,20 @@ flex-direction: column;
 
  /*  FOOTER NOSOTROS..........................................*/
 
- #footer1{
+  #footer1{
   clear: both;
   position: relative;
   height: 30px;
   margin-top: -30px;
- -webkit-box-shadow: 0px -3px 6px #DCDCDC;
--moz-box-shadow: 0px -3px 6px #DCDCDC;
-box-shadow: 0px -3px 6px  #DCDCDC;
- display: flex;
- flex-direction: column;
-width: 100%;
-z-index: 1000;
-bottom: 0; 
-
-}
+  -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+  -moz-box-shadow: 0px -3px 6px #DCDCDC;
+  box-shadow: 0px -3px 6px  #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1000;
+  bottom: 0; 
+  }
 
 
 
@@ -844,9 +845,8 @@ bottom: 0;
     color:#fff;
     text-align: center;
     width: 100%;
-     max-width: 500px;
-  
-  }
+     max-width: 500px; 
+    }
 
  }
 

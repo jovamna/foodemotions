@@ -132,7 +132,7 @@
      }
 
 
-    /*height 125px*/
+    /*height 125px                 box-shadow: 0 8px 6px -6px #DCDCDC;*/
 
     header{
     display: flex;
@@ -144,7 +144,7 @@
     top:0;
     margin: auto;
     height: 125px;
-    box-shadow: 0 8px 6px -6px #DCDCDC;
+  
     }
 
     header.black{
