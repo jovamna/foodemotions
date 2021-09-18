@@ -200,28 +200,27 @@
          <!---<nav class="nav"> ---->
 
 
-     <!------------------------------------------------------------------------------------------------------------>
+     <!------------------------------------------------------------------------------------------------------
      <div class="buscador-responsive">
         <div id="controls-responsive">
               <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
-                  <!------------------------------------------------------------------>
+                
                   <div id="custom-search-input-responsive">
 	                  <input type="text"  name="q" 
                     value= "{{ request.GET.q }}" class="sin-borde" 
                     placeholder=  "    Buscar en Food Emotions ... " autocomplete="off" >
-                    <!---------------------------------------------------------------->             
+                              
                     <button type="submit" name="submit" class="boton btn-succes" value="Search" >
                     <span class="icon"><i class="fa fa-search"></i></span> 
                   </button>
                 </div>
-                <!--------------------------------------------------------------------->
+            
             </form>                 
        </div>
-    </div>
-   <!---------------------------------------------------------------------------------------------------------------->
+    </div>------------------------------------------------------------------------------------------------->
 
 
-   <!----- NAVEGATION--------EN PANTALLA----AGRANDE----------------------------------------------------------------->
+   <!----- NAVEGATION--------EN PANTALLA----AGRANDE---------------------------------------------------------------->
       <nav class="menu">
           <div class="caja">   </div>
               <ul class="nav">
@@ -354,6 +353,27 @@
             <!---------------FIN HEADER----------------------------------------->
 
   <div id ="container"> 
+  
+     <!------------------------------------------------------------------------------------------------------------>
+     <div class="buscador-responsive">
+        <div id="controls-responsive">
+              <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                  <!------------------------------------------------------------------>
+                  <div id="custom-search-input-responsive">
+	                  <input type="text"  name="q" 
+                    value= "{{ request.GET.q }}" class="sin-borde" 
+                    placeholder=  "    Buscar en Food Emotions ... " autocomplete="off" >
+                    <!---------------------------------------------------------------->             
+                    <button type="submit" name="submit" class="boton btn-succes" value="Search" >
+                    <span class="icon"><i class="fa fa-search"></i></span> 
+                  </button>
+                </div>
+                <!--------------------------------------------------------------------->
+            </form>                 
+       </div>
+    </div>
+   <!---------------------------------------------------------------------------------------------------------------->
+
 
      <!-- CONTAINER PRINCIPAL DE TODO EL CONTENIDO-->
 
