@@ -806,14 +806,13 @@ border-radius:6px;
 
 
      /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-  #controls-responsive{
+    #controls-responsive{
     display: block;
     visibility: visible;
     width: 100%;
     height: 35px;
-    margin-top: 58px;
-   
-  }
+    margin-top: 58px;  
+     }
 
 
     #custom-search-input-responsive{
@@ -828,19 +827,17 @@ border-radius:6px;
     }
 
 
-   #controls-responsive .sin-borde-responsive{
+     #controls-responsive .sin-borde-responsive{
      width: 80%;
      height: 32px;
-
      display: inline-flex;
-   }
+      }
 
 
-   #controls-responsive .boton-responsive{
+     #controls-responsive .boton-responsive{
      width: 20%;
-
      height: 32px;
-   }
+      }
 
           /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA...............FIN BUSCADOR RESPONSIVE*/
 
@@ -1023,6 +1020,96 @@ border-radius:6px;
 
 
   /*  EMPIEZA EL CONTENIDO*/
+   /*..PAGINA DEL SEARCH CAJA BUSCADO ..............CAJA BUSCADOR*/
+ 
+    /*BUSCADOR NO ELIMINAR ES EL BUSCADOR DE LA PAGINA SEARCH ...*/
+    /*..ESTE MISMI BUSCADOR DE USA PARA EL RESPPONSIVE DE LA PAGINA SEARCH..*/
+    #controls-uno{
+      width: 100%;
+      margin-top: 40px;
+  
+      }
+  
+  
+       /*...NO ELIMNAR ES LA PAGINA DEL BUSCADOR ...PAGINA BUSCADOR.NO ELIMINAR ...*/
+      #container-search{
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 40px;
+     margin-top: 20px;
+      }
+  
+  
+      #container-search  h1{
+      font-size: 1.8rem;
+      letter-spacing: -0.2px;
+      line-height: 30px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #2d2d2d;
+      margin-bottom: 20px;
+      font-weight: 600;
+      }
+  
+  
+       .container-pinterest{
+        width: 100%;
+       display: flex;
+       flex-direction: column;
+       }
+  
+  
+      #container-search  .elemento{
+      width: 100%;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+       }
+  
+  
+       #container-search .elemento-imagen{
+         display: flex;
+         flex-direction: column;
+        width:  100%;
+        max-width: 600px;
+        height: 100%;
+        max-height: 230px;
+        margin: auto;
+        }
+  
+       
+        #container-search  .elemento-imagen img{
+        width: 100%;
+        height: 100%;
+        }
+  
+  
+       #container-search .elemento-descripcion{
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+        }
+  
+     .elemento-descripcion h2{
+     font-size: 1.7rem;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: 900;
+     letter-spacing: -0.3px;
+     margin-bottom: 2px;
+     }
+  
+  
+     .elemento-descripcion p{
+       font-size: 1.3rem;
+       letter-spacing: 0.5px;
+      
+     }
+  
+      /*FIN DEL BUSCADOR*/
+  
+  
+
+    /*CONTENIDO...............*/
    #tres-columnas-articulo{
    width: 100%;
    display: flex;
@@ -1572,92 +1659,6 @@ border-radius:6px;
    }
 
    
-    /*BUSCADOR NO ELIMINAR ES EL BUSCADOR DE LA PAGINA SEARCH ...*/
-    /*..ESTE MISMI BUSCADOR DE USA PARA EL RESPPONSIVE DE LA PAGINA SEARCH..*/
-    #controls-uno{
-    width: 100%;
-    margin-top: -20px;
-
-    }
-
-
-     /*...NO ELIMNAR ES LA PAGINA DEL BUSCADOR ...PAGINA BUSCADOR.NO ELIMINAR ...*/
-    #container-search{
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 40px;
-   margin-top: 10px;
-    }
-
-
-    #container-search  h1{
-    font-size: 1.8rem;
-    letter-spacing: -0.2px;
-    line-height: 30px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #2d2d2d;
-    margin-bottom: 20px;
-    font-weight: 600;
-    }
-
-
-     .container-pinterest{
-      width: 100%;
-     display: flex;
-     flex-direction: column;
-     }
-
-
-    #container-search  .elemento{
-    width: 100%;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-     }
-
-
-     #container-search .elemento-imagen{
-       display: flex;
-       flex-direction: column;
-      width:  100%;
-      max-width: 600px;
-      height: 100%;
-      max-height: 230px;
-      margin: auto;
-      }
-
-     
-      #container-search  .elemento-imagen img{
-      width: 100%;
-      height: 100%;
-      }
-
-
-     #container-search .elemento-descripcion{
-      width: 100%;
-      height: 100%;
-      margin-top: 10px;
-      }
-
-   .elemento-descripcion h2{
-   font-size: 1.7rem;
-   font-family: 'Times New Roman', Times, serif;
-   font-weight: 900;
-   letter-spacing: -0.3px;
-   margin-bottom: 2px;
-   }
-
-
-   .elemento-descripcion p{
-     font-size: 1.3rem;
-     letter-spacing: 0.5px;
-    
-   }
-
-    /*FIN DEL BUSCADOR*/
-
-
 
    }
 
@@ -1880,6 +1881,59 @@ nav li a p{
     }
 
   /*  EMPIEZA EL CONTENIDO*/
+   /*..PAGINA DEL SEARCH CAJA BUSCADO ..............CAJA BUSCADOR*/
+  #controls-uno{
+    display: flex;
+   flex-direction: column;
+    width: 100%;
+    height: 80px;
+    margin: auto;
+   
+    }
+
+
+  /*PAGINA BUSCADOR.NO ELIMINAR ...*/
+   #container-search{
+    width: 100%;
+    max-width: 600px;
+    }
+
+    #container-search  h1{
+    font-size: 1.8rem;
+    }
+
+
+
+   .elemento{
+    width: 100%;
+    height: 500px;
+   display: flex;
+   flex-direction: column;
+   }
+
+
+   .elemento-imagen{
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 400px;
+    margin: auto;
+    }
+
+   .elemento-imagen img{
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 400px;
+    }
+
+
+   .elemento  .elemento-descripcion{
+    width: 100%;
+    height: 90px;
+    margin-top: 10px;
+    }
+
 
       #tres-columnas-articulo{
         display: flex;
@@ -2292,59 +2346,9 @@ nav li a p{
   /* FINAL.....FOOTER..................*/
 
 
-  /*CAJA BUSCADOR*/
-  #controls-uno{
-    display: block;
-    width: 100%;
-    height: 80px;
-    margin: auto;
-    padding-top: 40px;
-    }
+  
 
-
-  /*PAGINA BUSCADOR.NO ELIMINAR ...*/
-   #container-search{
-    width: 100%;
-    max-width: 600px;
-    }
-
-    #container-search  h1{
-    font-size: 1.8rem;
-    }
-
-
-
-   .elemento{
-    width: 100%;
-    height: 500px;
-   display: flex;
-   flex-direction: column;
-   }
-
-
-   .elemento-imagen{
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    max-height: 400px;
-    margin: auto;
-    }
-
-   .elemento-imagen img{
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    max-height: 400px;
-    }
-
-
-   .elemento  .elemento-descripcion{
-    width: 100%;
-    height: 90px;
-    margin-top: 10px;
-    }
-
-
+  }
 
 
 
@@ -7026,15 +7030,17 @@ nav li a p{
 
 /* 1200 A 1290 ..................................................................................... */
   
-
-@media only screen and (min-width: 1247px) and (max-width: 1290px){
 /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+@media only screen and (min-width: 1247px) and (max-width: 1290px){
 
-    
+
+    body{
+      width: 100%;
+    }
 
 
 
 }
-   }
+   
 
 /* 1200px DESKTOP 1024px LAPTOP  768px TABLET   480px IPHONE ...*

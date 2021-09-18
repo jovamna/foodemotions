@@ -201,23 +201,25 @@
 
 
      <!------------------------------------------------------------------------------------------------------>
-     <div class="buscador-responsive">
+ 
         <div id="controls-responsive">
               <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
                 
-                  <div id="custom-search-input-responsive">
-	                  <input type="text"  name="q" 
-                    value= "{{ request.GET.q }}" class="sin-borde" 
-                    placeholder=  "    Buscar en Food Emotions ... " autocomplete="off" >
+                        <div id="custom-search-input-responsive">
+	                           <input type="text"  name="q" 
+                             value= "{{ request.GET.q }}" class="sin-borde"  id="letra"
+                             placeholder=  "    Buscar en Food Emotions ... " autocomplete="off" >
                               
-                    <button type="submit" name="submit" class="boton btn-succes" value="Search" >
-                    <span class="icon"><i class="fa fa-search"></i></span> 
-                  </button>
-                </div>
+
+                            <button type="submit" name="submit" class="boton btn-succes" value="Search" >
+                            <span class="icon"><i class="fa fa-search"></i></span> 
+                           </button>
+
+                      </div>
             
             </form>                 
        </div>
-    </div>
+
     <!------------------------------------------------------------------------------------------------->
 
 
