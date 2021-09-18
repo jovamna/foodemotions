@@ -346,14 +346,14 @@
                  <li> 
                 <a class="{% active 'appcontact:contacto' %}" href="{% url 'appcontact:contacto' %}">Contacto</a>    
                 </li>
-
-        </ul>
-        </nav> 
-        <!-----FIN  NAVEGATION------------>
-
-
+             </ul>
+             </nav> 
+            <!-----FIN  NAVEGATION------------>
        </header>
             <!---------------FIN HEADER----------------------------------------->
+
+
+
 
   <div id ="container"> 
   
@@ -376,18 +376,19 @@
        </div>
     </div>------------------------------------------------------------------------------------------->
 
-
+   {% block content %}    
      <!-- CONTAINER PRINCIPAL DE TODO EL CONTENIDO-->
 
         <!-- ----------------------------------------PORTADA------------------------------->
         {% block portada %} 
             <div class="portada">
-              <div class="portada-img"><img src=""   class="slider__img">
-                      <div class="portada-titulo"><h2>proudly <i>crafted</i>in  münich since 1987   </h2>
-                      </div>
-                      <div class="portada-titulo1"><a href="index.html"><h6>proudly <i>crafted</i> in münich since 19887 </h6></a>
-                      </div>
-              </div>
+                      <div class="portada-img"><img src="" class="slider__img">
+
+                           <div class="portada-titulo"><h2>proudly <i>crafted</i>in  münich since 1987   </h2>
+                           </div>
+                           <div class="portada-titulo1"><a href="index.html"><h6>proudly <i>crafted</i> in münich since 19887 </h6></a>
+                          </div>
+                     </div>
           </div>
       {% endblock portada %} 
 
@@ -397,7 +398,7 @@
 
     
               
- {% block content %}     
+ 
      <!---BUSCADOR ------------------------------------------------------------ -->
               {% block buscador-search %} 
              <div id="controls-uno"> 
