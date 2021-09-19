@@ -6,11 +6,11 @@
 
   <head>
         <meta charset="utf-8">
-        <meta meta content="width=device-width, initial-scale=1,  maximum-scale=1" name="viewport"  >
+        <meta meta content="width=device-width, initial-scale=1,  maximum-scale=1" name="viewport">
         <title>{% block titulo %} {% endblock titulo %}</title>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="Encuentre recetas saludables y deliciosas e ideas para menús de nuestros cocineros de prueba y expertos en nutrición en la revista EatingWell. Aprenda a elegir alimentos más saludables todos los días..">
-        <meta name="keywords" content="Healthy Recipes, Weight Loss, Special Diets, Meal Plans, Healthy Eating">
+        <meta name="keywords" content="Recetas Saludables, Recetas, Alimentacio Saludable, Plande comidas dieteticas">
         <link rel="canonical" href="https://www.foodingemotion.com/">
 
 
@@ -24,12 +24,12 @@
         <meta name="twitter:card" value="summary">
 
         {% elif request.path == '/' %}
-        <title>Homepage Title</title>
-        <meta name="description" content="This is the description for the homepage.">
+        <title>Food Emotions</title>
+        <meta name="description" content="Revista Gastronomica, recetas saludables, plan de comidas dieteticas, almentacion saludable">
 
        {% else %}
-       <title>Another Title</title>
-       <meta name="description" content="This is the description ...">
+       <title>FoodingEmotion</title>
+       <meta name="description" content="Dietas, Intolerancias Alimenticias, plan de comidas para bajar de peso...">
        {% endif %}
       
 
@@ -46,14 +46,14 @@
 
 
        {% if object.slug in request.path %}
-      <meta property="og:title" content="{{object.title}}">
-      <meta property="og:url" content="https://foodingemotion.com/{{object.slug}}" >
+      <meta property="og:title" content="{{object.Foodingemotion}}">
+      <meta property="og:url" content="https://www.foodingemotion.com/{{object.slug}}" >
 
       <meta property="og:description" content="{% if object.summary %}{{object.summary|striptags|truncatechars:160}}{% else %}
       {{object.text|safe|striptags|truncatechars:160}}{% endif %}">
 
       <meta property="og:image" content="{% if post.header_image %}{{ post.header_image.url }}
-      {% else %}https://foodingemotion.com{% static 'images/home-office.jpg' %}{% endif %}">
+      {% else %}https://www.foodingemotion.com{% static 'images/home-office.jpg' %}{% endif %}">
 
       <meta name="twitter:card" content="summary_large_image" />
       <title>{{object.title}}</title>
@@ -62,7 +62,7 @@
       <meta property="og:title" content="Recetas Saludables">
       <meta property="og:description" content="Description up to 160 characters">
       <meta property="og:image" content="https://image-url.png">
-      <meta property="og:url" content="https://foodingemotion.com" >
+      <meta property="og:url" content="https://www.foodingemotion.com" >
 
       <meta name="twitter:card" content="summary_large_image" />   
 
@@ -96,24 +96,30 @@
       <meta property="fb:pages" content="10053803772">
 
    <!---  "/apple-icon-36x36.png" --->
-     <link  rel = "apple-touch-icon"  tamaños = "36x36"  href = "/favicon/android-icon-36x36.png" > 
-     <link  rel = "apple-touch-icon"  tamaños = "48x48"  href = "/favicon/android-icon-48x48.png" > 
-     <link  rel = " apple-touch-icon "  tamaños = " 72x72 "  href = "/favicon/android-icon-72x72.png " > 
-     <link  rel = " apple-touch-icon "  tamaños = "96x96"  href = "/favicon/android-icon-96x96.png" > 
-     <link  rel = "apple-touch-icon "  tamaños = "144x144"  href = "/favicon/android-icon-144x144.png"> 
-     <link  rel = "apple-touch-icon"  tamaños = "192x192"  href = "/favicon/android-icon-192x192.png" > 
+     <link  rel = "food-touch-icon"  type="icon/png" tamaños = "36x36"  href = "img/favicon/android-icon-36x36.png" > 
+     <link  rel = "food-touch-icon"  type="icon/png" tamaños = "48x48"  href = "img/favicon/android-icon-48x48.png" > 
+     <link  rel = "food-touch-icon " type="icon/png"  tamaños = " 72x72 "  href = "img/favicon/android-icon-72x72.png " > 
+     <link  rel = "food-touch-icon "  type="icon/png" tamaños = "96x96"  href = "img/favicon/android-icon-96x96.png" > 
+     <link  rel = "food-touch-icon "  type="icon/png" tamaños = "144x144"  href = "img/favicon/android-icon-144x144.png"> 
+     <link  rel = "food-touch-icon" type="icon/png"  tamaños = "192x192"  href = "img/favicon/android-icon-192x192.png" > 
 
+     <!--<link rel="shorcut icon" href="favicon.png"-->
 
+     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+     <link  rel="icon"   href="imagenes/favicon.png" type="image/png" />
      <link  rel = "apple-touch-icon"  tamaños = "57x57"  href = "/favicon/android-icon-57x57.png" > 
-     <link  rel = "apple-touch-icon"  tamaños = "60x60"  href = "/favicon/android-icon-60x60.png " > 
-     <link  rel = " apple-touch-icon "  tamaños = " 72x72 "  href = "/favicon/android-icon-72x72.png" > 
-     <link  rel = " apple-touch-icon "  tamaños = "76x76"  href = "/favicon/android-icon-76x76.png" > 
-     <link  rel = "apple-touch-icon "  tamaños = " 114x114 "  href = " /favicon/android-icon-114x114.png "> 
-     <link  rel = "apple-touch-icon"  tamaños = "120x120"  href = "/favicon/android-icon-120x120.png" > 
-     <link  rel = "apple-touch-icon"  tamaños = "144x144"  href = "/favicon/android-icon-144x144.png " > 
-     <link  rel = " apple-touch-icon "  tamaños = " 152x152 "  href = " /favicon/android-icon-152x152.png" > 
-     <link  rel = " apple-touch-icon "  tamaños = "180x180"  href = "/favicon/android-icon-180x180.png" > 
-     <enlace  rel = "icono"  tipo = "imagen / png"  tamaños = "192x192"  href = "/favicon/android-icon-192x192.png" >  
+
+     
+     <link  rel = "food-touch-icon"  tamaños = "60x60"  href = "img/favicon/android-icon-60x60.png " > 
+     <link  rel = "food-touch-icon" tamaños = " 72x72 "  href = "img/favicon/android-icon-72x72.png" > 
+     <link  rel = "food-touch-icon"  tamaños = "76x76"  href = "img/favicon/android-icon-76x76.png" > 
+     <link  rel ="food-touch-icon"  tamaños = " 114x114 "  href = "img/favicon/android-icon-114x114.png "> 
+     <link  rel = "food-touch-icon" tamaños = "120x120"  href = "img/favicon/android-icon-120x120.png" > 
+     <link  rel = "food-touch-icon" tamaños = "144x144"  href = "img/favicon/android-icon-144x144.png " > 
+     <link  rel = "food-touch-icon" tamaños = " 152x152 "  href = "img/favicon/android-icon-152x152.png" > 
+     <link  rel = "food-touch-icon" tamaños = "180x180"  href = "img/favicon/android-icon-180x180.png" > 
+     <link  rel = "food-touch-icon"   type="icon/png"  tamaños = "192x192"  href = "img/favicon/android-icon-192x192.png" >  
      <link  rel = " manifiesto " href = "/manifest.json" > 
      <meta  nombre ="msapplication-TileColor"  content = "#ffffff" > 
      <meta  name = "msapplication-TileImage"  content = "/ms-icon-144x144.png" > 

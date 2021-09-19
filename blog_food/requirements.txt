@@ -1,0 +1,5 @@
+django_ckeditor==6.1.0
+django_environ==0.6.0
+Django==3.2.7
+django_mptt==0.13.3
+environ==1.0
