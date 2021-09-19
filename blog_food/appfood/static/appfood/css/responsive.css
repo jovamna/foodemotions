@@ -1642,7 +1642,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 108px;
+    margin-top: 107px;
     padding-top: 0;
      padding-left: 0;
     padding-right: 0;
@@ -1660,13 +1660,14 @@
       position: fixed;
       z-index: 2000;   /*IMPORTANTE  */
       margin: auto;
-    background-color: darksalmon;
+      background-color: #fff;
+      box-shadow: 0 8px 6px -6px #c6c6c6;
       }
     
 
       header.black{
       height:  105px;
-     
+      background-color: #fff;
       }
   
     .cabecera{
@@ -1747,25 +1748,13 @@
     
   }
 
-  #controls-responsive #letra{
-    width: 360px;
-    padding: 2px 0 2px 5px;
- 
-    border: 0 none;
-    height: 38px;
-    margin-right: 0;
-    color: #2d2d2d;
-    outline: none;
-    background: #fff;
-    float: left;
-    box-sizing: border-box;
-    transition: all 0.15s;
-}
      #controls-responsive{
        display: block;
       width: 100%;
       height: 40px;
       z-index: 5;
+      border-radius: 5px 5px 5px 5px;
+      padding-top: 1px;
 
       }
 
@@ -1776,9 +1765,11 @@
     height: 38px;
     display: flex;
     flex-direction: row;
-    padding: 0.5px 0.5px;
+    padding-top: 1px;
     border-radius: 5px 5px 5px 5px;
     z-index: 6;
+    border: 1.3px solid #e7e7e7;
+
     }
 
 
@@ -1786,18 +1777,18 @@
 
    #controls-responsive   #custom-search-input-responsive .sin-borde{
      width: 85%;
-    height: 38px;
+    height: 34px;
     border-radius: 15px;
     font-size: 0.7em;
     font-weight: lighter;
     padding-left: 4px; /*MUEVE LA LETRA*/
-  
+
     }
 
 
 
      #controls-responsive   #custom-search-input-responsive .boton{
-    height: 38px;
+    height: 34px;
     width: 15%;
     border-radius: 10px;
     background-color: #fff;
@@ -1805,7 +1796,20 @@
     }
 
     
-
+   
+  #controls-responsive #letra{
+    width: 360px;
+    padding: 2px 0 2px 5px;
+    border: 0 none;
+    height: 38px;
+    margin-right: 0;
+    color: #000000;
+    outline: none;
+    background: #f4f4f4;
+    float: left;
+    box-sizing: border-box;
+    transition: all 0.15s;
+}
 
    #controls-responsive #custom-search-input-responsive  input[type=text] {
       float: none;
@@ -1816,27 +1820,28 @@
       margin: 0;
       z-index: 6;
       font-size: 1rem;
+      color: #000000;
       }
    
 
       
    
-          .buscador-responsive #controls-responsive #custom-search-input-responsive  input#text::-webkit-input-placeholder {
-            color: #65737e;
+        #controls-responsive #custom-search-input-responsive  input#text::-webkit-input-placeholder {
+            color: #2d2d2d;
             z-index: 6;
          }
           
-         .buscador-responsive #controls-responsive #custom-search-input-responsive  input#text:-moz-placeholder { /* Firefox 18- */
+        #controls-responsive #custom-search-input-responsive  input#text:-moz-placeholder { /* Firefox 18- */
+          color: #2d2d2d;
+            z-index: 6; 
+         }
+          
+      #controls-responsive #custom-search-input-responsive  input#text::-moz-placeholder {  /* Firefox 19+ */
             color: #65737e; 
             z-index: 6; 
          }
           
-         .buscador-responsive #controls-responsive #custom-search-input-responsive  input#text::-moz-placeholder {  /* Firefox 19+ */
-            color: #65737e; 
-            z-index: 6; 
-         }
-          
-         .buscador-responsive #controls-responsive #custom-search-input-responsive  input#text:-ms-input-placeholder {  
+       #controls-responsive #custom-search-input-responsive  input#text:-ms-input-placeholder {  
             color: #65737e;  
             z-index: 6;
          }
