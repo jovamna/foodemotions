@@ -19,6 +19,12 @@
       text-decoration: none;
        }
     
+       #controls-responsive{
+         display: none;
+         visibility: hidden;
+       }
+
+
 #wrapper-categorias {
   margin:0;
   box-sizing: border-box;
@@ -66,9 +72,223 @@
       background-color:#fff ;
       }
   
-    
-/* ESTE ES EL MENU NAV*/
+     /*CABECERA */
+     #cabecera-categorias{
+      width: 100%;
+      max-width: 1190px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: auto;
+      height: 40px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+      }
+  
+     /*caja */
+     #cabecera-categorias  .logo{
+      display: inline-flex;
+     width: 19.8%;
+     max-width: 450px;
+    height: 40px; 
+      ;
+     }
+      
+     /*IMAGEN DEL LOGO*/
+     .logo img{
+      width: 100%;
+      height: 40px;  
+      }
+       
+     
 
+      /*CONTAINER DEL BUSCADOR................. */
+      #cabecera-categorias .controls{
+  display: block;
+  position: relative;
+  float: left;
+  width: 30%;
+   max-width: 390px;
+  height: 38px;  
+ margin-top: 1px;
+ }
+
+ #cabecera-categorias #custom-search-input input[type=text]:focus {
+  outline: none;
+  border: 0;
+  background-color: #fff;
+  padding-left: 8px; /*MUEVE LA LETRA*/
+ }
+
+
+
+
+  /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
+  #cabecera-categorias #custom-search-input{
+  width: 100%;
+  max-width: 390px;
+  height: 38px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 1em;
+  font-weight: 3rem;
+  
+  margin-top:;
+  box-shadow: 4px 8px 6px -6px #8c8c8c;
+
+  background: #FEFEFE;
+  background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+  border: 2px solid #FAFAFA;
+ 
+   }
+
+  /*CAMPO SEARCH BUSCADOR */
+  #cabecera-categorias  #custom-search-input .sin-borde{
+  border: 0px solid #fff;
+  -moz-border: 0px  solid #fff;
+  -webkit-border: 0px solid #fff;
+  font-size: 1em;
+  font-weight: 6rem;
+  width: 92%;
+  max-width: 340px;
+  height: 36px;
+  padding-left: 8px; /*MUEVE LA LETRA*/
+  }
+
+
+  input::placeholder {
+   width: 250px;
+
+  }
+
+
+  /*BOTOM BUSCADOR */
+  #cabecera-categorias .controls .boton{
+    border-right: 4px;
+    -moz-border-right: 2px;
+    -webkit-border-right: 2px;
+   color: #fff;
+   padding-left:2px; /*MUEVE LA LETRA*/ 
+   width: 15%;
+   max-width: 55px;
+   height: 36px;
+   background-color: #fff;
+  }
+
+  #cabecera-categorias   .controls .icon .fa-search{
+    color: #000000;
+  }
+
+  
+  
+  /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
+     .menu-btn {
+    display: flex;
+    flex-direction: row;
+     justify-content: space-between;
+    align-items: flex-end;
+   width: 30%;
+   max-width: 170px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+    height: 38px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  
+  }
+  
+   
+      /*CONTENEDOR  REVISTA Y SOCIALES*/
+      .menu-btn  .boletin{
+        width: 95%;
+        max-width: 150px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
+        height: 38px;
+    
+      }
+  
+      .boletin  a h4{
+       width: 100%;
+       max-width: 90px;
+        font-size: 1rem;
+        word-spacing: -3px;
+        letter-spacing: 0.4px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        color:#2d2d2d;
+         margin-top: 24px;
+        }
+    
+    
+  
+     /*LETRA INSCRIBETE*/
+     .boletin a h4:hover{
+      color: #639a3a;
+      text-decoration: none;
+     }
+  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+  
+  
+  
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+    .menu-btn__burger {
+     display: block;
+     position: relative;
+     float: left;
+     margin: auto;
+     margin-top: 25px;
+      width: 5%;
+      max-width: 38px;
+      height: 4.2px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+      z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/   
+      }
+      /*HAMBURGUESA*/
+
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 38px;
+  height: 4.2px;
+  background:#2d2d2d;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+  transition: all .5s ease-in-out;
+ }
+
+
+  .menu-btn__burger::before {
+  transform: translateY(-10px);
+  }
+
+  .menu-btn__burger::after {
+  transform: translateY(10px);
+
+   }
+
+ /* ANIMATION */
+ .menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  }
+
+  .menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background: #fff;
+  }
+  .menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background: #fff;
+   }
+
+
+/* ESTE ES EL MENU NAV*/
+   
 /*margin-left: 5.4%;/*IMPORTANTE */
 nav{
   width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
@@ -189,140 +409,7 @@ nav{
   background: white;
   }
 
-    /*CABECERA */
-    #cabecera-categorias{
-  
-        width: 100%;
-        max-width: 1190px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin: auto;
-        height: 45px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
-    
-      }
-    
-       /*caja */
-       .logo{
-        display: inline-flex;
-        height: 45px; 
-       }
-        
-       /*IMAGEN DEL LOGO*/
-       .logo img{
-        width: 100%;
-        height: 45px;  
-        }
-         
-       
-    
-    
-    /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
-       .menu-btn {
-      display: flex;
-      flex-direction: row;
-       justify-content: space-between;
-      align-items: flex-end;
-     width: 30%;
-     max-width: 160px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
-      height: 45px;
-      cursor: pointer;
-      transition: all .5s ease-in-out;
-    
-    }
-    
-     
-        /*CONTENEDOR  REVISTA Y SOCIALES*/
-        .boletin{
-          width: 95%;
-          max-width: 140px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
-         align-items: flex-start; 
-          display: inline-flex;
-          justify-content: flex-start;
-        }
-    
-        .boletin  a h4{
-         width: 100%;
-         max-width: 90px;
-          font-size: 1rem;
-          word-spacing: -3px;
-          letter-spacing: -1px;
-          font-family: 'Cabin', sans-serif;
-          font-weight: 600;
-          color:#2d2d2d;
-           margin: auto; /*IMPMORTANTE PARA LA LETRA*/
-          }
-      
-      
-    
-       /*LETRA INSCRIBETE*/
-       .boletin a h4:hover{
-        color: #639a3a;
-        text-decoration: none;
-       }
-    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-    
-    
-    
-          /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-    .menu-btn__burger {
-      display: block;
-      position: relative;
-      float: left;
-     margin: auto;
-     margin-top: 25px;
-        width: 5%;
-        max-width: 38px;
-        height: 5px;
-      background: #2d2d2d;
-      border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(255,101,47,.2);
-      transition: all .5s ease-in-out;
-      z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
-       
-     }
-    /*HAMBURGUESA*/
-  
-  .menu-btn__burger::before,
-  .menu-btn__burger::after {
-    content: '';
-    position: absolute;
-    width: 38px;
-    height: 5px;
-    background:#2d2d2d;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-    transition: all .5s ease-in-out;
-   }
-  
-  
-    .menu-btn__burger::before {
-    transform: translateY(-11px);
-    }
-
-    .menu-btn__burger::after {
-    transform: translateY(11px);
-  
-     }
-  
-   /* ANIMATION */
-   .menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-    }
-
-    .menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-    background: #fff;
-    }
-    .menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-    background: #fff;
-     }
-
-
+   
     /*CONTENEDOR PERDERPESO CATEGORIA........................................ */
      #container-categorias-subcategorias{
     width: 100%;

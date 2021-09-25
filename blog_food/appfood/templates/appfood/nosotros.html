@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{% static 'appfood/css/nosotros.css' %}">
     <link rel="stylesheet" href="{% static 'appfood/css/responsive.css' %}">
     <link rel="stylesheet" href="{% static 'appfood/css/responsivenosotros.css' %}">
+    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-192x192.png' %}"/>
 
     <style type="text/css" media="screen">
         A:link {
@@ -99,48 +100,31 @@
 
      <div class="cabecera-responsive">
                      <div class="logo">
-                    <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
-                    <img src="{% static 'appfood/img/logo/logd.svg' %}" width="100%" alt="Food Emotions"> 
+                     <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
+                     <img src="{% static 'appfood/img/logo/logd.svg' %}" width="100%" alt="Food Emotions"> 
                     </a>
                     </div>
 
       <!---------------------------------------------------------------------------------------------------------------->
 
-                 <div class="menu-btn"> 
-                    <div class="suscribe">
-                    <a href="{% url 'appcontact:contacto' %}">   
-                    <h4>suscribete</h4>  
-                    </a>
-                    </div>
+                  <div class="menu-btn"> 
+                         <!------------------------------------>
+                        <div class="suscribe">
+                        <a href="{% url 'appcontact:contacto' %}">   
+                        <h4>suscribete</h4>  
+                        </a>
+                        </div>
+                        <!--------------------------------->
                         <!---------------MENU RESPONSIVE -------------->
                       <div class="menu-btn__burger"> </div>
                        <!----FIN  MENU RESPONSIVE ------->                
                  </div>
                  <!----FIN  MENU BTN------->
-                                     <!-----FIN  BOLETIN -------------->
+                                    
       </div> 
 
  
-     <!------------------------------------------------------------------------------------------------------------>
-     <div class="buscador-responsive">
-               <div id="controls-responsive">
-              <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
-                  <!------------------------------------------------------------------>
-                  <div id="custom-search-input-responsive">
-	                  <input type="text"  name="q" 
-                    value= "{{ request.GET.q }}" class="sin-borde" 
-                    placeholder=  "    Buscar en Food Emotions ... " autocomplete="off" >
-                    <!---------------------------------------------------------------->             
-                    <button type="submit" name="submit" class="boton btn-succes" value="Search" >
-                    <span class="icon"><i class="fa fa-search"></i></span> 
-                  </button>
-                </div>
-                <!--------------------------------------------------------------------->
-             </form>                 
-             </div>
-    </div>
-   <!---------------------------------------------------------------------------------------------------------------->
-
+    
 
 
    <!---FIN CABECERA RESPONSIVE FIN CABECERA RESPONSIVE ------------------------------>
@@ -242,6 +226,26 @@
 
         <!-- CONTAINER GENERAL SEGUNDO  -->
         <div id="container-nosotros">
+         <!------------------------------------------------------------------------------------------------------------>
+     <div class="buscador-responsive">
+               <div id="controls-responsive">
+              <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                  <!------------------------------------------------------------------>
+                  <div id="custom-search-input-responsive">
+	                  <input type="text"  name="q" 
+                    value= "{{ request.GET.q }}" class="sin-borde" 
+                    placeholder=  "    Buscar en Foodingemotion.com ... " autocomplete="off" >
+                    <!---------------------------------------------------------------->             
+                    <button type="submit" name="submit" class="boton btn-succes" value="Search" >
+                    <span class="icon"><i class="fa fa-search"></i></span> 
+                  </button>
+                </div>
+                <!--------------------------------------------------------------------->
+             </form>                 
+             </div>
+    </div>
+   <!---------------------------------------------------------------------------------------------------------------->
+
 
             <div class="tres-columnas-nosotros">
                 <!-- PRIMERA COLUMNA DE LOS CONTENIDOS-->
@@ -249,22 +253,34 @@
                     <!-- primera caja-->
                     <div class="articulo">
                         <h1><strong><u>nuestra historia</u></strong></h1>
-                        <p> Food Emotions, es un projecto concebido cuando me iniciè en el mundo de la cocina.
-                         Nuestra pasión por la cocina como aficionados, 
-                        nos lleva a crear esta revista gastronómica como parte de una 
-                        memoria imborrable de la cocina Fusionando lo mejor de la tierra 
+                        <p> Food Emotions, es un projecto concebido cuando me inicié en el mundo de la cocina.
+                         Mi pasión por la cocina primero como aficonado y luego a nivel profesional, 
+                         me llevo a descubrir sabores exóticos y mesclarlos con el sabor mediterráneo,
+                         vengo de una familia de cocineros aficonados que conservamos las recetas tradicionales,
+                         todo esto me llevo a crear
+                         crear esta revista gastronómica junto a un equipo de colaboradores, como parte de una 
+                        memoria imborrable de la cocina fusionando lo mejor de la tierra 
                         con lo mejor del mar en platos sencillos pero muy sabrosos.
 
-
-                           En FoodEmotions podeis ver todo de tipo de cocina, 
+                          <br>
+                          <br>
+                           En Food Emotions podeis ver todo de tipo de cocina, 
                            aunque lo que más me gusta es la cocina tradicional, sobre todo la 
                           la italiana, japonesa y peruana. 
-
-               Quiero compartir con vosotros este viaje culinario, platos 
+                     <br>
+                     <br>
+             
+                   Dentro de la web  también podeis encontrar 
+                 una sección dedicada sobre recetas propias y otras tradicionales, 
+                   recetas de todas partes del mundo,
+                   como tambièn recetas dieteticas, para bajar de peso , por intolerancias,
+                    recetas vegetarias o veganas, como también plan de comidas para perder peso, 
+                  o ganar masa muscular, o baja en calorias, etc
+                  <br>
+                  <br>
+                   Quiero compartir con vosotros este viaje culinario, platos 
                    exóticos y mediterraneos como una ceviche, una boloñesa tradicional, 
-                 un salmorejo, etc, tambien encontrareis recetas vegetarias o veganas, etc  y plan de comidas para perder peso 
-                 o ganar masa muscular o baja en calorias, etc
-        
+                 un salmorejo, etc,
              Espero os guste!
 
                         </p>
@@ -315,9 +331,8 @@ compensando con sabores ácidos o frescos los más grasos,
                             <p> 
                             Cocinar es un proceso de aprendizaje continuo que si te apasiona 
                               nos estimula a investigar permanentemente. Es como tirarse a 
-                              un abismo que nunca se acaba. Da algo de vértigo, pero también es 
-                              divertido y adrenalínico. Gran parte de mi tiempo
-                               no laboral (soy psicólogo y trabajo en consultoría de marca) de los últimos
+                              un abismo que nunca se acaba.  Gran parte de mi tiempo
+                               de los últimos
                                 años los he dedicado a investigar, leer, aprender y poner en práctica
                                  técnicas de cocina – tanto clásicas como nuevas: ahumar, fermentar, 
                                  cocinar al vacío… – revisando, cuestionando y repensando lo que hago
@@ -330,6 +345,7 @@ compensando con sabores ácidos o frescos los más grasos,
 
                              </p>
                         </div>
+                        <div class="articulo-dos-uno-vacio"> </div>
                         <div class="articulo-dos-uno">
                             <h1>Nunca se acaba de aprender</h1>
                             <p>
@@ -339,10 +355,9 @@ compensando con sabores ácidos o frescos los más grasos,
                               con algunas que intentamos renovar.
 
 Este blog nació sin grandes pretensiones pero con mucha ilusión. 
-Ir actualizándolo cada día con recetas fáciles e imágenes atractivas
- es para nosotras un reto que empezó, precisamente, como un juego.
-  Aunque con el tiempo se ha ido haciendo más complicado, siempre
-   hemos querido que todos podáis participar de él, jugando con nosotras.
+Iremos actualizándolo  con recetas fáciles e imágenes atractivas
+ es para nosotros un reto que empezó, con mucha ilusión.
+  Aunque con el tiempo se ha ido haciendo más complicado, y nos gustaría que participaran en esta aventura con vuestras sugerencias.
 
 Por eso, estaremos encantadas de que os pongáis
  en contacto con nosotras si creéis que podemos ayudaros en algo
@@ -352,9 +367,7 @@ Por eso, estaremos encantadas de que os pongáis
 
 
 
-Dentro de la web  podemos encontrar 
-una sección dedicada sobre recetas propias y otras tradicionales, recetas de todas partes del mundo,
-como tambièn recetas dieteticas, perosnas que buscan bajar de peso , otras por intolernacias, etc etc
+
  
 .</p>
                         </div>

@@ -4,9 +4,10 @@
 
 {% block titulo %}Contacto{% endblock titulo %}
 
+    {% block content %}
+
     {% block portada %} 
- 
- <div class="portada">
+    <div class="portada">
                               <!-- IMAGEN-->
                               <section class="portada-img">
                              <img src="{% block imagen %}{% static 'appfood/img/contacto/1300-600cont.png' %}{% endblock  %}"
@@ -77,28 +78,20 @@
               <!-- FIN IMAGEN-------------------->
 
         <!-- LETRAS----------------------->
-      
-
             
       </section>
 
-   <!---FIN SECTION PORTADA RESPONSIVE MOVIL Y IPOD --------------------->
-
-
-
-
-                </div>
-                {% endblock portada %} 
+       <!---FIN SECTION PORTADA RESPONSIVE MOVIL Y IPOD --------------------->
+       </div>
+     {% endblock portada %} 
  
 
 
         {% block buscador-search %}   {% endblock buscador-search %} 
 
-   {% block batido-dietas %}  {% endblock batido-dietas %} 
 
 
 
-     {% block content %} 
 
      <!-- FORMULARIO-->
  
@@ -128,29 +121,28 @@
              </div>
                </form>    -->
  
-          
                          <form action="" method="POST">
-                          {% csrf_token %}
+                             {% csrf_token %}
                             <div class="form-group"><label>Nombre *</label>
                                <div class="input-group">{{form.name}}
                            </div>{{form.name.errors}} </div>
 
 
-                <div class="form-group"><label>Email *</label>
-                    <div class="input-group">
+                     <div class="form-group"><label>Email *</label>
+                        <div class="input-group">
                         {{form.email}}</div> {{form.email.errors}}
-                    </div>
+                        </div>
 
 
-                <div class="form-group"><label>Mensaje *</label>
-                    <div class="input-group">
-                    {{form.content}}
+                  <div class="form-group"><label>Mensaje *</label>
+                      <div class="input-group">
+                     {{form.content}}
                     </div> {{form.content.errors}}
                 </div>
 
-                   <div class="text-center">
-                   <input type="submit" class="btn btn-primary btn-block py-2" value="Enviar">
-                </div>
+                    <div class="text-center">
+                    <input type="submit" class="btn btn-primary btn-block py-2" value="Enviar">
+                    </div>
              </form>
           <!-- FORM ACTION FINAL -->
             <!-- Fin formulario de contacto -->

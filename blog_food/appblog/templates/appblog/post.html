@@ -9,24 +9,7 @@
              {% block container-search %}  {% endblock container-search %}
               <!--FIN --------DE LA PAGINA SEARCH----------------->
 
-  <!---BUSCADOR RESPONSIVE----------------------------------------------------------->
-
-  {% block buscador-responsive %}
-        <div id="controls-responsive">
-                <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
-                    <div id="custom-search-input-responsive">
-	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
-                                 
-                          <button type="submit" name="submit" class="boton-responsive btn-succes" value="Search"> 
-                          <span class="icon"><i class="fa fa-search"></i></span>   
-                          </button>
-                          <!--</span>-->
-                    </div>
-                </form>
-	        </div>
-             {% endblock buscador-responsive %}
-
-   <!--FIN BUSCADOR RESPONSIVE------------------------------------------------------>
+ 
 
 
               
@@ -124,20 +107,26 @@
      <!------------------------------------------------------------------------------------>
           <!--TITULO------NARRATIVA--------------->
          <div class="contentwo">
+          {% if post.subtitleuno %}
             <div class="title-two">
            <h1> {{post.subtitleuno|safe}}</h1>
            </div>
+           {% endif %} 
            <!---CONTENIDO---NARRATIVA---------->
+            {% if post.narrativa %}
            <div class="content-two">
            <p> {{post.narrativa|safe}}</p>
           </div> 
+          {% endif %} 
       </div> 
      <!-------------------------------------------------------------------------------->                   
          <!-- UNO----------------UNO-------------->
          <div class="contentwo">
+             {% if post.titleone %}
             <div class="title-two">
             <h1>{{post.titleone|safe}}</h1>  
             </div> 
+               {% endif %}  
           <!----------IMAGEN-------->
             {% if post.imageone %}
            <div class="image-two">
@@ -150,10 +139,12 @@
          <h2> {{post.subtitleone|safe}} </h2>
          </div>
            {% endif %}
-         <!--CONTENIDO  UNO---------->  
+         <!--CONTENIDO  UNO----------> 
+          {% if post.contenone %} 
          <div class="content-two">
          <p> {{post.contenone|safe}}</p>
          </div>
+            {% endif %}  
       </div>
 
         <!------------------------------------------------------------------------------------------------>
@@ -161,9 +152,11 @@
           <!----CONTAIINER DOS--------->
             <div class="contentwo">
                         <!---SUBTITULO--->
+                         {% if post.titletwo %}
                       <div class="title-two">
                       <h1>{{post.titletwo|safe}}</h1>  
                       </div> 
+                       {% endif %}  
                       <!--IMAGEN SEGUNDO---->
                         {% if post.imagetwo %}
                       <div class="image-two">
@@ -178,19 +171,23 @@
                       </a> 
                      </div>
                      {% endif %}
-                    <!--CONTENIDO SEGUNDO------------->  
+                    <!--CONTENIDO SEGUNDO-------------> 
+                     {% if post.contentwo %} 
                     <div class="content-two">
                     <p>{{post.contentwo|safe}}</p>
                    </div>
+                    {% endif %}  
           </div>
 
 
        <!-----------------------TRES------------------------------------------------------->
           <div class="contentwo">
             <!--------SUBTITULO------------------>
+               {% if post.titlethree %}
                <div class="title-two">
                <h1>{{post.titlethree|safe}}</h1>  
                </div> 
+               {% endif %}
                <!--IMAGEN SEGUNDO---->
                {% if post.imagethree %}
                <div class="image-two">
@@ -203,19 +200,23 @@
                <h2> {{post.subtitlethree|safe}} </h2>
                </div>
                {% endif %}
-               <!--CONTENIDO SEGUNDO------------->  
+               <!--CONTENIDO SEGUNDO-------------> 
+                 {% if post.subtitlethree %}
                <div class="content-two">
                <p>{{post.contenthree|safe}}</p>
                </div>
+               {% endif %}
       </div>
 
 
          <!-------------------------CUATRO----------------------------------------------------->
                <div class="contentwo">
                   <!---TITULO----------------->
+                    {% if post.titlefour %}
                   <div class="title-two">
                      <h1>{{post.titlefour|safe}}</h1>  
                   </div> 
+                   {% endif %}
                   <!--IMAGEN SEGUNDO---->
                   {% if post.imagefour %}
                   <div class="image-two">     
@@ -228,10 +229,12 @@
                   <h2> {{post.subtitlefour|safe}} </h2>
                   </div>
                   {% endif %} 
-                  <!--CONTENIDO SEGUNDO------------->  
+                  <!--CONTENIDO SEGUNDO-------------> 
+                    {% if post.contenfour %} 
                   <div class="content-two">
                   <p> {{post.contenfour|safe}} </p>
                   </div>
+                   {% endif %}
              </div>
    
 
@@ -242,9 +245,11 @@
          <!--------------------QUINTO---------------------------------------------------------->
             <div class="contentwo">
                <!--subtitulo-------------->
+                {% if post.titlefive %}
                <div class="title-two">
                <h1>{{post.titlefive|safe}}</h1>  
                </div> 
+                {% endif %}
                <!--IMAGEN --->
                 {% if post.imagefive %}
                <div class="image-two">
@@ -257,10 +262,12 @@
                <p> {{post.subtitlefive|safe}} </p>
                </div>
                 {% endif %} 
-               <!--CONTENIDO SEGUNDO------------->  
+               <!--CONTENIDO SEGUNDO-------------> 
+                  {% if post.contenfive %}
                <div class="content-two">
                <p> {{post.contenfive|safe}} </p>
                </div>
+               {% endif %} 
             </div>
   <!------------------------------------------------------------------------------------------->
    
@@ -268,30 +275,35 @@
        
 
          <!------------------------------------------------------------------------------>
+         
          <div class="contentwo">
-            <div class="title-two">
-            <h1>{{post.titleultimo|safe}}</h1>  
-            </div> 
+             {% if post.titleultimo %}
+             <div class="title-two">
+             <h1>{{post.titleultimo|safe}}</h1>  
+             </div> 
+              {% endif %}
               <!--IMAGEN---->
-            {% if post.image %}
-            <div class="image-two">
-            <img src="{{post.image.url}}" alt=""> 
-            </div>
+             {% if post.image %}
+             <div class="image-two">
+             <img src="{{post.image.url}}" alt=""> 
+             </div>
              {% endif %} 
-           <!--CONTENIDO SEGUNDO------------->  
+           <!--CONTENIDO SEGUNDO------------->
+              {% if post.contentultimo %}
             <div class="content-two">
             <p> {{post.contentultimo|safe}} </p>
             </div>
+             {% endif %} 
          </div>
-   
+         
 
   <!------------------------------------------------------------------------------------------->
 
 
               <!---SEXTA CAJA CON DOS TITULOS (TERCER TITULO DE DOS)------->
               <section class="articulo-ultimo">
-                    <!--AUTOR IMAGEN Y NOMBRE-->
-                    <div class="autor-nombre">
+                      <!--AUTOR IMAGEN Y NOMBRE-->
+                      <div class="autor-nombre">
                            <!--FOTO AUTOR--->
                            <div class="autor-foto">
                            {% if post.imageauthor %}
@@ -302,14 +314,14 @@
                            <div class="autor-letra">  
                            <em><h3>Por: {{post.author}}</h3></em>
                            </div>
-                    </div>
+                      </div>
                     <!-------CIERRE AUTOR-NOMBRE---------------------------->
-                      <!------CATEGORIA SIN LINK-------------- --->  
-                        <div class="categoria-en-post">
+                         <!------CATEGORIA SIN LINK-------------- --->  
+                         <div class="categoria-en-post">
                             <em><h2>Categoria:</h2><p>{{ post.kategoria}}</p></em>
                         </div>
             <!-----------CIERRE DIV DE CATEGORIA SIN LINKS---------------------------- --->  
-            </section> 
+              </section> 
           <!---------------CIERRE SECTION DE ARTICULO ULTIMO------------------------ --->  
                          
               
@@ -335,22 +347,6 @@
    
 
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -476,12 +472,7 @@
          </div>
        <!----CIERRE DIV COMENTARIOS---------FIN ALL COMMENTS---------------------------->
 
-
-
-   <!----------------FIN FORMULARIO--------------------------------------->
-
-
-  
+   <!----------------FIN ORMULARIO--------------------------------------->
 
 
    <!---CIERRE DEL BLOCK QUE CONTIENE COFIDICACION---->
@@ -494,8 +485,9 @@
 
                              
 <!------------------------- TERCERA COLUMNA----------------------------------------------------------->
+      {% block tercera-columna %}
         <div class="tercera-columna-fija">
- {% block tercera-columna %}
+
         <!-------------------------BUSCADOR------------------>
                   <div class="controls">
                      <form  method = "GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}"> {% csrf_token %}
@@ -511,8 +503,10 @@
         <!------------------FINAL BUSCADOR--------------------------->
          <div class="tercera-columna">
                  <em><h2> mas temas..</h2></em>
+                     <div class="aside-colum">
                  <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
                    <p>How to take the shame out of self-promotion </p>
+                   </div>
          </div>
         <!----------------------------- -------------->
       
@@ -522,20 +516,20 @@
           <em><h4>   Categorias: </h4></em>
                                            {% load mptt_tags %}
                                          {% for categoria in categories %} 
-                                         <a href="/dietas-especiales-y-alimentacion-sana/categoria/{{ categoria.slug }}" style="text-decoration: none">   
+                                         <a href="/dietas-especiales-y-alimentacion-saludable/categoria/{{ categoria.slug }}" style="text-decoration: none">   
                                         <em>  <h3>{{ categoria.name}}</h3></em></a>       
                                         {% endfor %}                
 
            </div>          
     <!-------------FIN CATEGORIAS------------------------------>
-    {% endblock tercera-columna %}
-    </div>
-       <!-- FINAL DIV TERCERA COLUMNA-->
+
+     </div>
+     {% endblock tercera-columna %}
+     <!-- FINAL DIV TERCERA COLUMNA-->
      
-  
     </div>    
 
-<!------------------------------>
+    <!------------------------------>
 
 
 

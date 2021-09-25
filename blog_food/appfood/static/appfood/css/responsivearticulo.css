@@ -11,90 +11,104 @@
 
 
     @media only screen and (max-device-width: 359px)  { 
-  
-  html, body{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    }
-  
-     #wrapper {
-     width: 100%;
-     max-width: 100%;
-     overflow: hidden;
-     border-spacing: 0;
-     border-collapse: collapse;
-      }
-
-
-
-       #wrapper img {
+      html, body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+         }
+    
+    
+    
+        #wrapper-articulo {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        border-spacing: 0;
+        border-collapse: collapse;
+       }
+    
+      
+    
+      #wrapper-articulo img {
       width: 100%;
       height: auto;
       border: 0;
-      }
+       }
   
+       #wrapper-articulo > * {
+      padding: 16px;
+      }  
+         
+  
+       #container-articulo{
+       display: flex;
+       flex-direction: column;
+       width:100%;
+       margin-top: 52px;
+       margin-bottom: 96px;
+       padding-right: 0;
+        padding-left: 0;
+       }
+  
+  
+  
+        /*border-bottom: 2px solid #DDD;*/
+        header{
+        display: block;
+        width:100%;
+        height: 58px;
+        top:0;
+        position: fixed;
+        z-index: 2000;   /*IMPORTANTE  */
+        margin: auto;
+        box-shadow: 0 8px 6px -6px #DCDCDC; 
+        background-color: #fff;
+       }
     
-          
-    #wrapper-articulo > * {
-    padding: 5px;
-    }
-
-
-    #container-articulo{
-      width:96%;
-      display: flex;
-     flex-direction: column;
-      margin-top: 20%;
-      margin-left:auto;
-      margin-right:auto;
-  
-      }
-
-       header{
-      width: 100%;
-      z-index: 999;
-      position: fixed;
-      margin: auto;
-      height:  60px;
-      box-shadow: 0 8px 6px -6px #c9c9c9;
-      }
+       header.black{
+       background-color:#fff ;
+       height:  58px;
+       }
       
-      header.black{
-      background-color:#fff;
-      width: 100%;
-      height:  60px;
+      #menu-simple{
+      width: 92%;
+      margin: auto;
+      margin-top: 14px;
+      margin-bottom: 5px;
+    
       }
-        
-
+  
+      #menu-simple ul{
+      height: 50px;
+      }
+  
+  
       #comentarios{
-        display: flex;
-        flex-direction: column;
-        width: 300px;
-        
+        width: 92%;
+        margin: auto; 
       }
 
 
       .cabecera{
-      width: 45%;
+      width: 100%;
       display: flex;
       flex-direction: row;
       height: 35px; 
-     margin-left: -0.1px;
+  
       }
          
         
       /*caja */
       .logo{
         display: block;
-        height: 30px;
+        height: 35px;
       width: 40%;
       }
             
       
     .logo img {
-    width: 90%;
-    height: 30px;
+    width: 100%;
+    height: 35px;
     margin: auto; 
     }
      
@@ -103,7 +117,7 @@
         display: block;
         width: 20%;
         max-width: 140px;
-        height: 30px;
+        height: 35px;
         cursor: pointer;
         transition: all .5s ease-in-out;  
       
@@ -265,8 +279,9 @@
   /*..FINAL MENU HAMBURGUESA*/
 
    #menu-simple{
-     width: 100%;
-     margin-top: 1%;
+     width: 92%;
+     margin: auto;
+     margin-top: 10px;
    }
    #menu-simple .arrow1 p{
      font-size: 0.6rem;
@@ -278,23 +293,43 @@
     /*EMPIEZA L CONTENIDO*/
       #tres-columnas-articulo{
         width: 100%;
-        max-width: 340px;
         margin: auto;
         display: flex;
         flex-direction: column;
 
       }
   
+      .columna-primera{
+        width: 100%;
+      }
       .primera-columna{
-       width: 299px;
+       width: 100%;
         display: block;
    
       }
-    
-      .columna-primera{
-        margin-bottom: 6%;
-       
+      .primer-articulo{
+        width: 92%;
+        margin: auto;
       }
+    
+        /*PRIMER ARTICULO TITULO*/
+        .primer-articulo h1{
+          font-size: 1.8rem;
+          color:#000000;
+          font-weight: 800;
+          font-family: 'Times New Roman', Times, serif;
+          letter-spacing: -0.3px;
+          word-spacing: -0.1px;
+        
+        }
+          
+        
+  
+      .primer-articulo p {
+        font-size: 1.4rem;
+        
+      }
+      
        .primera-columna h1{
          font-size: 1.5rem;
        }
@@ -311,7 +346,7 @@
 
       .redes{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 65%;
    
     
@@ -326,34 +361,23 @@
    height: 100%;
       }
 
-      .primer-articulo{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-  
-    
-      }
-      /*PRIMER ARTICULO TITULO*/
-      .primer-articulo h1{
-        font-size: 1.8rem;
-        color:#000000;
-        font-weight: 800;
-        font-family: 'Times New Roman', Times, serif;
-        letter-spacing: -0.3px;
-        word-spacing: -0.1px;
-      
-      }
-        
-      
+       .imagen-principal{
+         width: 100%;
+       }
 
-    .primer-articulo p {
-      font-size: 1.4rem;
-      
-    }
+      .imagen-principal img {
+        width: 100%;
+      }
+
+     
+      .segundo-articulo {
+        width: 92%;
+        margin: auto;
+        
+      }
     
     .segundo-articulo p {
       font-size: 1.4rem;
-      
     }
     .pricolumna-articulo p{
       font-size: 1.4rem;
@@ -392,6 +416,10 @@
       
       }
 
+       .cursiva{
+         width: 92%;
+         margin: auto;
+       }
      .blockquote .blockquote-text{
           font-size: 1rem;
        
@@ -399,7 +427,7 @@
         }
 
        .blockquote{
-          width:100%;
+          width:92%;
           margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
           padding: 20px;
           border:  1px solid #DDD;
@@ -435,35 +463,76 @@
             
           }
 
+    .contentwo{
+     width: 92%;
+     margin: auto;
+    }
+        
+    .semana{
+      width: 92%;
+      margin: auto;
+     }
+
+     .container-dia{
+      width: 92%;
+      margin: auto;
+     }
+
+     .title-finth{
+       width:92%;
+      margin: auto;
+     }
+         
+     .content-fin{
+       width: 92%;
+       margin: auto;
+      }
+ 
+      .articulo-ultimo{
+       width: 92%;
+       margin: auto;
+      }
+ 
+   .categorias-posts-links{
+    width: 92%;
+    margin: auto;
+   }
+
 
            /*TERCERA COLUMNA  ......................................................................................3.......COLUMNA...... */
          .tercera-columna-fija{
-            width: 100%;
-     
-            display: flex;
-            flex-direction: column;
-          
+            width: 92%;
+          margin: auto;
             }
    
             .tercera-columna{
-              width:100%;
+              width: 92%;
               flex-direction: column;
               }
   
             
-            .tercera-columna img{
-              width: 100%;
-              margin-bottom: 6px;
-              }
+          
             /* BUSCADOR INTERNO */
             /*CONTAINER DEL BUSCADOR.................................................................... */
             .controls{
-              width: 100%;
-              margin-top: 35%;
-              margin-bottom: 20%;
-              flex-direction: column;
+              display: none;
             }
+
+
+            .aside-colum{
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+            }
+
+            .aside-colum img{
+              width: 45%;
+              margin-bottom: 6px;
+              }
           /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+          .container-total-carrusell{
+            width: 100%;
+          }
  .carrusel1{
   width: 100%;
   display: flex;
@@ -484,7 +553,11 @@
   }
 
  
-
+ #carrusel h2{
+   margin-left: 15px;
+   font-size: 1.2rem;
+   word-spacing: 1px;
+ }
 
     /*PARA QUE LAS FLECHAS DESPAREZCAN */
 #carrusel:hover  li.left-arrow{
@@ -565,126 +638,143 @@ border-radius:6px;
  
      /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
 
-  #footer-articulo{
+   /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+   #footer-articulo{
     clear: both;
-      position: relative;
-      height: 70px;
-      margin-top: -70px;
-     border-top: solid 1.5px #DCDCDC;
-     display: flex;
-     flex-direction: column;
+    position: relative;
+    height: 140px;
+    margin-top: -140px;
+    border-top: solid 1.5px #DCDCDC;
+    display: block;
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
+    padding-top: 0;
     }
     
     
       /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
-    .footer-primero-articulo{
+      #footer-articulo .footer-primero-articulo{
       width: 100%;
-    margin: 0 auto;
-    height: 60px;
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between;
-    clear: both;
-    position: relative;
-    z-index: 1000;
-     margin-bottom: 0.8%; 
-    
+  
+      height: 170px;
+     display: flex;
+     flex-direction: column;
+    padding-top: 0;
+    margin-bottom: 10px;
+    z-index: 10;
     }
 
-    /*CAJA DE SOCIALES Y LETRA*/
-       .icon-social1{
-       display: flex;
-       flex-direction: column;
-     
-    }
-    .icon-social1 p{
-       font-size: 0.9rem;
 
+     /*CAJA DE SOCIALES Y LETRA*/
+     #footer-articulo .icon-social1{
+      width: 90%;
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+     margin: auto;
+     padding-top: 0;
+      }
+
+
+      #footer-articulo .footer-primero-articulo .icon-social1 p{
+        margin: auto;
+      font-size: 1.2rem;
+  
+      }
+
+       /* UL */
+      #footer-articulo .social2{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 60%;
+      height: 40px;
+      padding-top: 0;
+      margin: auto;
      }
 
-   .social2{
-       margin-top: -8%;
-     }
-    #footer-articulo .icon-social1  ul li .fa-envelope{
+
+     #footer-articulo .social2  ul li .fa-envelope{
   background-color: oldlace;
   color: #2d2d2d;
-  width:25px;
-  height: 25px;
-  padding: 2px 2px 2px 2px;
-  border-radius: 25px;
+  width: 8px;
+  height: 8px;
+  padding: 0.5px 0.5px 0.5px 0.5px;
+  border-radius: 2px;
   border: solid #E9E9E9;
-  
   }
   
-    #footer-articulo .icon-social1  ul li .fa-facebook-f{
+    #footer-articulo .social2  ul li .fa-facebook-f{
   background-color: oldlace;
   color:  #2d2d2d;
-  width:25px;
-  height: 25px;
-  padding: 2px 2px 2px 2px;
-  border-radius: 25px;
+  width: 8px;
+  height: 8px;
+  padding: 0.5px 0.5px 0.5px 0.5px;
+  border-radius: 2px;
   border: solid #E9E9E9;
-  
   }
   
   
-    #footer-articulo .icon-social1  ul li .fa-twitter{
+    #footer-articulo .social2  ul li .fa-twitter{
     background-color: oldlace;
     color:   #2d2d2d;
-    width:25px;
-    height: 25px;
-    padding: 2px 2px 2px 2px;
-    border-radius: 25px;
+    width: 8px;
+    height: 8px;
+    padding: 0.5px 0.5px 0.5px 0.5px;
+    border-radius: 2px;
     border: solid #E9E9E9;
      }
   
-      #footer-articulo .icon-social1 ul li .fa-instagram{
-       background-color: oldlace;
-       color: #2d2d2d;
-        width:25px;
-       height: 25px;
-        padding: 2px 2px 2px 2px;
-        border-radius: 25px;
-        border: solid #E9E9E9;
-       }
-  
-    .box{
-    width: 40%;
- 
-    margin-top: 1px;
+
+    #footer-articulo .social2 ul li .fa-instagram{
+    background-color: oldlace;
+    color: #2d2d2d;
+    width: 8px;
+    height: 8px;
+    padding: 0.5px 0.5px 0.5px 0.5px;
+    border-radius: 2px;
+    border: solid #E9E9E9;
     }
+
+  
+    #footer-articulo  .box{
+     width: 100%;
+    height: 50px;
+   }
 
    /*LETRA ENCIMA DEL BOX*/   
-    .box h3{
-     font-size: 0.5rem;
-     margin-right: 7px;
+   #footer-articulo  .box h3{
+     font-size: 1rem;
+     
+      margin: auto;
+     }
+
+     #footer-articulo .box form{
+      width: 90%;
+     display: flex;
+     flex-direction: row;
+     margin: auto;
+    margin-top: -3px;
     }
 
-     .box form{
-     width:100%;
-    
-    }
-
-     .box input[type="text"]
+    #footer-articulo .box input[type="text"]
     {
     background-color: #fff;
-    display: flex;
-    width:60%;
-     height: 20px;
+    width:70%;
+     height: 38px;
     border: 1.5px solid 	#DCDCDC;
-    padding: 0 10px;
+    padding: 0 5px;
     border-radius: 5px 0 0 5px;
     font-size: 0.7rem;
     }
      
 
-    .box button[type="submit"]{
+    #footer-articulo .box button[type="submit"]{
     left: 6px;  /*EL TRUCO IMPORTANTE*/
     border-radius: 0 5px 5px 0;
-    width: 40%;
-    height: 20px;
+    width: 30%;
+    height: 38px;
     border: none ;
     outline: none;
     cursor: pointer;
@@ -692,27 +782,28 @@ border-radius:6px;
     color: #fff;
     font-size: 0.6rem;
     font-family: 'Archivo Black', sans-serif;
+    padding: 0 5px 1px 1px;
     }
 
-  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
-  .footer-second-articulo{
-  width: 100%;
-  height: 10px;
-  margin-top: -10px;
+
+   /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+   #footer-articulo  .footer-second-articulo{
+   width: 100%;
+   height: 20px; 
    }
   
-   .final-food-articulo {
-   width: 100%;
+   #footer-articulo  .final-food-articulo {
+    width: 100%;
     margin: auto;
     }
  
-  .final-food-articulo p{
-  text-align: center;
-  padding-top: 8px;  /*BAJAN LAS LETRAS*/
-  color: #2d2d2d;
-  font-size: 0.6rem;
-  }
 
+    #footer-articulo .final-food-articulo p{
+   text-align: center;
+   color: #2d2d2d;
+   font-size: 0.6rem;
+   padding-bottom: 8px;
+   }
 
    }
   
@@ -725,7 +816,7 @@ border-radius:6px;
 
 
    @media only screen and (min-width: 360px) and (max-width: 640px){
-    html, body{
+       html, body{
       width: 100%;
       height: 100%;
       margin: 0;
@@ -750,22 +841,24 @@ border-radius:6px;
      }
 
      #wrapper-articulo > * {
-      padding: 15px;
-      }  
+    padding: 16px;
+    }  
        
 
      #container-articulo{
      display: flex;
      flex-direction: column;
      width:100%;
-     margin-top: 5px;
-     margin-bottom: 96px;
+     margin-top: 52px;
+     margin-bottom: 190px;
+     padding-right: 0;
+      padding-left: 0;
      }
 
 
 
       /*border-bottom: 2px solid #DDD;*/
- header{
+      header{
       display: block;
       width:100%;
       height: 58px;
@@ -777,15 +870,16 @@ border-radius:6px;
       background-color: #fff;
      }
   
-    header.black{
+     header.black{
      background-color:#fff ;
      height:  58px;
-    }
+     }
     
     #menu-simple{
-    width: 100%;
+    width: 92%;
     margin-top: 14px;
     margin-bottom: 5px;
+    margin-left: 15px;
     }
 
     #menu-simple ul{
@@ -793,52 +887,8 @@ border-radius:6px;
     }
 
 
-      #comentarios{
-      display: flex;
-      width: 100%;
-      }
-          
 
-      .controls{
-      display: none;
-      }
-        
-
-
-     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-    #controls-responsive{
-    display: block;
-    visibility: visible;
-    width: 100%;
-    height: 35px;
-    margin-top: 58px;  
-     }
-
-
-    #custom-search-input-responsive{
-    width: 99%;
-    height: 35px;
-    border: 1px solid#c9c9c9;
-    border-radius: 4px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     margin: auto;
-    }
-
-
-     #controls-responsive .sin-borde-responsive{
-     width: 80%;
-     height: 32px;
-     display: inline-flex;
-      }
-
-
-     #controls-responsive .boton-responsive{
-     width: 20%;
-     height: 32px;
-      }
-
+     
           /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA...............FIN BUSCADOR RESPONSIVE*/
 
 
@@ -885,9 +935,8 @@ border-radius:6px;
     position: relative;
     float: left;
     width: 100%;
-    max-width: 70px;
+    max-width: 100px;
     height: 38px;
-   
     }
   
     .menu-btn  .boletin  h4{
@@ -895,16 +944,58 @@ border-radius:6px;
       margin-top: 22px;
       margin-left: 2px;
       font-weight: 700;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.9px;
+      font-family: 'Times New Roman', Times, serif;
     }
    
+    .controls{
+      display: none;
+      }
+        
+
+
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+    #controls-responsive{
+    display: block;
+    visibility: visible;
+    width: 92%;
+    height: 35px;
+    margin-top: 58px;  
+    margin: auto;
+     }
+
+
+     #custom-search-input-responsive{
+     width: 99%;
+     height: 35px;
+     border: 1px solid#c9c9c9;
+     border-radius: 4px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin: auto;
+     }
+
+
+     #controls-responsive .sin-borde-responsive{
+     width: 80%;
+     height: 32px;
+     display: inline-flex;
+    }
+
+
+     #controls-responsive .boton-responsive{
+     width: 20%;
+     height: 32px;
+      }
+
 
         /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-    .menu-btn  .menu-btn__burger {
+    .cabecera .menu-btn  .menu-btn__burger {
     display: block;
     position: relative;
     float: right;
-    margin-top: 21px;
+    margin-top: 25px;
     width: 37px;
     height: 4px;
     background: #2d2d2d;
@@ -974,7 +1065,7 @@ border-radius:6px;
           }
 
     nav{
-    background-position:  65% 90%;
+    background-position:  80% 90%;
       }
 
 
@@ -999,7 +1090,6 @@ border-radius:6px;
    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
    display: block;
    margin-top:8px;
-   position: absolute;
    z-index: 200;
    margin-left: -5px;
    color: #fff;
@@ -1117,10 +1207,6 @@ border-radius:6px;
    margin-top: 2px;
    }
 
-  .categorias-posts-links{
-  margin-bottom: 30%;
-  border-bottom: 2px solid	#DCDCDC;
-  }
 
   .columna-primera{
   width: 100%;
@@ -1132,6 +1218,11 @@ border-radius:6px;
   .primera-columna{
   width: 100%;
   }
+
+   .primer-articulo{
+    width: 92%;
+    margin: auto;
+   }
 
   /*FECHA EN INICIO DEL POST*/
   .primer-articulo h4{
@@ -1148,12 +1239,14 @@ border-radius:6px;
   letter-spacing: -0.3px;
   word-spacing: -0.1px;
   }
-          
+ 
+
+
+    .primer-articulo p {
+      font-size: 1.5rem;    
+    }
      
-  .primera-columna p{
-  font-size: 1.1rem;
-  }
-    
+
      
   .imagen-central{
   width: 100%;
@@ -1164,80 +1257,73 @@ border-radius:6px;
    .imagen-principal{
      width: 100%;
    }
+
+   .imagen-central img{
+    width: 100%;
+    height: 100%;
+    }
     .imagen-principal img{
       width: 100%;
     }
+   
+   
+
+    .redes{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: 15px;
+     }
 
 
-      .redes{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-      }
+    .iconos-social{
+    width: 100%;
+    display: flex;
+   flex-direction: row;
+    }
 
+    .iconos-social  li .fa-envelope{
+    font-size:  10px;
+    width: 30px;
+    height: 30px;
+    padding: 5px 5px 5px 5px;
+    margin-right: 8px;
+    }
 
-      .iconos-social{
-        width: 70%;
-        display: flex;
-        flex-direction: row;
-      }
-
-      .iconos-social  li .fa-envelope{
+        .iconos-social li .fa-facebook-f{
         font-size:  10px;
         width: 30px;
         height: 30px;
         padding: 5px 5px 5px 5px;
         margin-right: 8px;
-      }
-
-      .iconos-social li .fa-facebook-f{
-        font-size:  10px;
-        width: 30px;
-        height: 30px;
-        padding: 5px 5px 5px 5px;
-        margin-right: 8px;
-      }
+       }
       
-      .iconos-social  li .fa-twitter{
+       .iconos-social  li .fa-twitter{
         font-size:  10px;
         width: 30px;
         height: 30px;
         padding: 5px 5px 5px 5px;
         margin-right: 8px;
-      }
+        }
     
-      .iconos-social  li .fa-instagram{
+       .iconos-social  li .fa-instagram{
         font-size:  10px;
         width: 30px;
         height: 30px;
         padding: 5px 5px 5px 5px;    
-      }
+        }
 
 
-      .imagen-central img{
-      width: 100%;
-      height: 100%;
+      .segundo-articulo{
+      width: 92%;
+      margin: auto;
+     padding-bottom: 10px;
       }
 
    
-    .primer-articulo h1{
-    font-size: 2.2rem;
-    color:#000000;
-    font-weight: 900;
-    font-family: 'Times New Roman', Times, serif;
-    letter-spacing: -1.2px;
-    word-spacing: 1.8px;
-      }
-
-
-    .primer-articulo p {
-      font-size: 1.5rem;    
-    }
-    
-  
      /*SEGUNDO TITULO*/
      .segundo-articulo h1{
-      font-size: 1.9rem;
+      font-size: 1.7rem;
       color:#000000;
       font-weight: 900;
       font-family: 'Times New Roman', Times, serif;
@@ -1249,7 +1335,14 @@ border-radius:6px;
      
      .segundo-articulo p {
       font-size: 1.5rem;    
+     
      }
+
+     .cursiva{
+      width: 92%;
+      margin: auto;
+    }
+
    
       .imageone{
         width: 100%;
@@ -1277,15 +1370,15 @@ border-radius:6px;
     letter-spacing: -1px;
       }
    
-
+      
       .blockquote .blockquote-text{
       font-size: 1rem;
       margin-left: -1px;
       }
 
     .blockquote{
-    width:100%;
-    max-width: 400px;
+    width:92%;
+    max-width: 600px;
     margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
     padding: 20px;
     border:  1px solid #DDD;
@@ -1314,6 +1407,61 @@ border-radius:6px;
     .blockquote-text-credit{
     text-align: right;
     width: 90%;     
+    }
+
+
+     .contentwo{
+       display: flex;
+       flex-direction: column;
+      width: 92%;
+      margin: auto;
+     }
+     
+
+     .title-two{
+       display: flex;
+       width: 100%;
+       margin-top: 20px;
+     }
+
+     .contentwo .title-two h1{
+      font-size: 1.5rem;
+     }
+
+    .contentwo .subtitle-two h2{
+      font-size: 1.3rem;
+     }
+
+    .contentwo  .content-two  p{
+      font-size: 1rem;
+     }
+
+    /*PAGINA PERDER PESO PLAN DE COMIDAS*/
+    .semana{
+      width: 92%;
+      margin: auto;
+    }
+    .container-dia{
+      width: 92%;
+      margin: auto;
+    }
+
+    .title-fin{
+      width: 92%;
+      margin: auto;
+    }
+
+    .content-fin{
+      width: 92%;
+      margin: auto;
+    }
+
+
+    /*..CONTENEDOR DEL AUTOR...*/
+    .articulo-ultimo{
+      width: 92%;
+      margin: auto;
+      margin-top: 1px;
     }
 
     .autor-nombre{
@@ -1345,24 +1493,61 @@ border-radius:6px;
       margin-right: 90px;
      }
 
+     /*CATEGORIA.......*/
+     .categoria-en-post{
+       display: flex;
+       flex-direction: column;
+       margin-bottom: 1px;
+     }
+
+     .categoria-en-post h2{
+       width: 100%;
+     }
+
+     .categoria-en-post p{
+      width: 100%;
+      position: relative;
+      float: right;
+      }
+
+    /*..FIN DE CONTAINER ARTICULO ULTIMO..*/
+
+     /*CATEGORIAS...*/
+     .categorias-posts-links{
+      width: 92%;
+      margin: auto;
+       margin-top: 2px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid	#DCDCDC;
+      }
+    
+      /*COMENTARIOS*/
+      #comentarios{
+        width: 92%;
+        margin: auto;
+      }
 
      /*ELIMNADO EL BUSCADO QUE VA EN EL ASIDE PORQUE HAY BUSCADOR RESPONSIVE ARRIBA DE TODO*/
-   .tercera-columna-fija{
-     display: flex;
-     flex-direction: column;
-     width: 100%;
-     max-width: 640px;
-   }
+     .tercera-columna-fija{
+     display: block;
+     width: 92%;
+     max-width: 600px;
+     margin: auto;
+     }
           
 
     .tercera-columna{
      width: 100%;
-    max-width: 640px;
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
     }
-        
+
+    .aside-colum{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+        }
     .tercera-columna-imagen{
     width: 100%;
     display: flex;
@@ -1384,20 +1569,21 @@ border-radius:6px;
       display: none;
     }
 
-
+    /*..CARRUSELL.............................*/
     .container-total-carrusell{
       display: block;
       position: relative;
       width: 100%;
-      margin-bottom: 15px;
+      height: 300px;
     }
+
      /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
-  /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
-  #carrusel {
+    /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
+    #carrusel {
     float:left;
     width: 100%;
     overflow:hidden;
-    height: 250px;
+    height: 280px;
     position:relative;
     margin: auto;
     margin-bottom: 10px;
@@ -1406,42 +1592,44 @@ border-radius:6px;
     
      /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
     #carrusel h2{
-        font-size:24px;
-        font-weight: 900;
-        word-spacing: -2px;
-        letter-spacing: 0.4px;
-        font-family: 'Times New Roman', Times, serif;
-        padding-bottom: 10px;
-        
+    font-size:1.6rem;
+    font-weight: 900;
+    word-spacing: -2px;
+    letter-spacing: 0.4px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 10px;   
+    margin-left: 15px;
     }
+
+    
     /*ESCONDE IMAGGENES*/
     /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
-    .carrusel{
-    width:4000px;
-    height: 180px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
-    left: 0px;
-    position:absolute;
+     .carrusel{
+     width:4000px;
+     height: 210px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+     left: 0px;
+     position:absolute;
      z-index:0;
-      }
+    }
 
  
    /*CIRCULO   IZQUIERDO*/
-   #carrusel li.left-arrow{
+    #carrusel li.left-arrow{
     margin-right: 3.8%;
     }
 
      /*CIRCULO  DERECHO NO PONERLO TAN ANCHO PORQUE PIERDE LA FORMA EL CIRCULO PONERLO DEBAJO DE 90*/
-  #carrusel li.right-arrow{
+    #carrusel li.right-arrow{
     margin-left:75%;
     }
 
     /**MUY IMPORTANTE..*/
-  /*CIRCULO MODIFICA ALTO Y ANCHO.................. */
+   /*CIRCULO MODIFICA ALTO Y ANCHO.................. */
    .carusel{
     width: 100%;
     display: flex;
     position: absolute;
-    margin-top: 23%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+    margin-top: 30%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
     margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
     }
 
@@ -1506,115 +1694,126 @@ border-radius:6px;
     #footer-articulo{
     clear: both;
     position: relative;
-    height: 100px;
-    margin-top: -100px;
+    height: 140px;
+    margin-top: -140px;
     border-top: solid 1.5px #DCDCDC;
     display: block;
     width: 100%;
     z-index: 10;
+    padding-top: 0;
     }
     
     
       /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
-    .footer-primero-articulo{
+      #footer-articulo .footer-primero-articulo{
       width: 100%;
-    margin: auto;
-    height: 80px;
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between;
-    padding-top: 10px;
-    margin-bottom: 20px;
+  
+      height: 170px;
+     display: flex;
+     flex-direction: column;
+    padding-top: 0;
+    margin-bottom: 10px;
     z-index: 10;
     }
 
+
      /*CAJA DE SOCIALES Y LETRA*/
-     .icon-social1{
+     #footer-articulo .icon-social1{
+      width: 90%;
+      height: 40px;
       display: flex;
       flex-direction: column;
-      height: 60px;
-      width: 49.5%;
+     margin: auto;
+     padding-top: 0;
       }
 
 
-      .icon-social1 p{
-      font-size: 0.95rem;
+      #footer-articulo .footer-primero-articulo .icon-social1 p{
+        margin: auto;
+      font-size: 1.2rem;
+  
       }
 
-    #footer-articulo .social2{
-    margin-top: -13px;
+       /* UL */
+      #footer-articulo .social2{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 60%;
+      height: 40px;
+      padding-top: 0;
+      margin: auto;
      }
 
 
-  .icon-social1  ul li .fa-envelope{
+     #footer-articulo .social2  ul li .fa-envelope{
   background-color: oldlace;
   color: #2d2d2d;
-  width:25px;
-  height: 25px;
-  padding: 2px 2px 2px 2px;
-  border-radius: 25px;
+  width: 8px;
+  height: 8px;
+  padding: 0.5px 0.5px 0.5px 0.5px;
+  border-radius: 2px;
   border: solid #E9E9E9;
   }
   
-    #footer-articulo .icon-social1  ul li .fa-facebook-f{
+    #footer-articulo .social2  ul li .fa-facebook-f{
   background-color: oldlace;
   color:  #2d2d2d;
-  width:25px;
-  height: 25px;
-  padding: 2px 2px 2px 2px;
-  border-radius: 25px;
+  width: 8px;
+  height: 8px;
+  padding: 0.5px 0.5px 0.5px 0.5px;
+  border-radius: 2px;
   border: solid #E9E9E9;
   }
   
   
-    #footer-articulo .icon-social1  ul li .fa-twitter{
+    #footer-articulo .social2  ul li .fa-twitter{
     background-color: oldlace;
     color:   #2d2d2d;
-    width:25px;
-    height: 25px;
-    padding: 2px 2px 2px 2px;
-    border-radius: 25px;
+    width: 8px;
+    height: 8px;
+    padding: 0.5px 0.5px 0.5px 0.5px;
+    border-radius: 2px;
     border: solid #E9E9E9;
      }
   
 
-    #footer-articulo .icon-social1 ul li .fa-instagram{
+    #footer-articulo .social2 ul li .fa-instagram{
     background-color: oldlace;
     color: #2d2d2d;
-    width:25px;
-    height: 25px;
-    padding: 2px 2px 2px 2px;
-    border-radius: 25px;
+    width: 8px;
+    height: 8px;
+    padding: 0.5px 0.5px 0.5px 0.5px;
+    border-radius: 2px;
     border: solid #E9E9E9;
     }
 
   
-    .box{
-    width: 50%;
-    height: 60px;
-    display: flex;
-    flex-direction: column;
+    #footer-articulo  .box{
+     width: 100%;
+    height: 50px;
    }
 
    /*LETRA ENCIMA DEL BOX*/   
-     .box h3{
-     font-size: 0.7rem;
-      margin-top:-1px;
+   #footer-articulo  .box h3{
+     font-size: 1rem;
+     
+      margin: auto;
      }
 
-    .box form{
+     #footer-articulo .box form{
       width: 90%;
      display: flex;
      flex-direction: row;
-     align-items: flex-start;
-     justify-content: start;
+     margin: auto;
+    margin-top: -3px;
     }
 
-     .box input[type="text"]
+    #footer-articulo .box input[type="text"]
     {
     background-color: #fff;
-    width:80%;
-     height: 34px;
+    width:70%;
+     height: 38px;
     border: 1.5px solid 	#DCDCDC;
     padding: 0 5px;
     border-radius: 5px 0 0 5px;
@@ -1622,11 +1821,11 @@ border-radius:6px;
     }
      
 
-    .box button[type="submit"]{
+    #footer-articulo .box button[type="submit"]{
     left: 6px;  /*EL TRUCO IMPORTANTE*/
     border-radius: 0 5px 5px 0;
-    width: 40%;
-    height: 34px;
+    width: 30%;
+    height: 38px;
     border: none ;
     outline: none;
     cursor: pointer;
@@ -1639,19 +1838,18 @@ border-radius:6px;
 
 
    /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
-   .footer-second-articulo{
+   #footer-articulo  .footer-second-articulo{
    width: 100%;
    height: 20px; 
    }
   
-    .final-food-articulo {
+   #footer-articulo  .final-food-articulo {
     width: 100%;
-    max-width: 400px;
     margin: auto;
     }
  
 
-   .final-food-articulo p{
+    #footer-articulo .final-food-articulo p{
    text-align: center;
    color: #2d2d2d;
    font-size: 0.6rem;
@@ -2372,60 +2570,103 @@ nav li a p{
       padding: 30px;
       }
         
-      #container-articulo{
-        width:100%;
-        margin-left:auto;
-        margin-right:auto;
-        }
+    #container-articulo{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    }
 
-        #menu-simple{
-          width: 100%;
-          margin: auto;
-        }
+    #menu-simple{
+    width: 100%;
+    margin: auto;
+    }
   
+
     header{
-        width: 100%;
-        z-index: 999;
-        position: fixed;
-        margin: auto;
-        height:  90px;
-        box-shadow: 0 8px 6px -6px #c9c9c9;
-          }
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  90px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+    background-color:#fff;
+    }
         
       header.black{
-            background-color:#fff;
-            width: 100%;
-            height:  90px;
-            }
+      background-color:#fff;
+      width: 100%;
+      height:  90px;
+      }
+
+             /*BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
+    
+    #controls-responsive{
+    display: block;
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    margin-top: -8px;
+    }
+
+
+     #custom-search-input-responsive{
+     width: 100%;
+     height: 45px;
+     border: 1px solid #c9c9c9;
+     border-radius: 8px;
+     display: flex;
+     flex-direction: row;
+     margin-top: 1.5px;
+   
+    }
+
+
+    #controls-responsive .sin-borde-responsive{
+     width: 88%;
+     height: 38px;
+     border-radius: 4px;
+     display: inline-flex;
+     margin-top: 2px;
+     }
+
+
+     #controls-responsive .boton-responsive{
+     width: 12%;
+     height: 38px;
+     margin-top: 2px;
+     }
+
           
     .cabecera{
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin: auto;
     height: 55px;
     margin-top: -10px;
-        }
+    }
            
           
-            
-             /*caja */
-               .logo{
-              display:block;
-             width: 60%;
-             height: 45px;
-             }
+    /*caja */
+    .logo{
+    display:inline-flex;
+    width: 60%;
+    max-width: 450px;
+    height: 55px;
+    }
                 
-          .logo img {
-             width: 48%;
-             height: 45px;
-            margin: auto;
-           }
+    .logo img {
+    width: 100%;
+    height: 55px;
+    margin: auto;
+    }
            
           
            .menu-btn {
-            width:20%;
-            height: 45px;
+            width:40%;
+            max-width: 300px;
+            height: 55px;
             display: flex;
             flex-direction: row;
             margin: auto;
@@ -2436,11 +2677,13 @@ nav li a p{
 
              /*CONTENEDOR  REVISTA Y SOCIALES*/
              .menu-btn .boletin{
-            width: 15%;
+            width: 35%;
+            max-width: 250px;
             display: block;
             position: relative;
             float: right;
-            height: 20px;
+            height: 55px;
+            margin-right: 5px;
             }
 
           /*LETRA FOOD EMOTIONS*/
@@ -2448,12 +2691,11 @@ nav li a p{
           /*LETRA INSCRIBETE*/
            .menu-btn .boletin a h4{
             font-size: 1.1rem;
-            word-spacing: -3px;
-            letter-spacing: -1px;
-            font-family: 'Cabin', sans-serif;
+            letter-spacing: 0.4px;
+            font-family: 'Times New Roman', Times, serif;
             font-weight: 800;
             color:#2d2d2d;
-            margin-top: 5px;
+            margin-top: 33px;
             }
           
        
@@ -2472,8 +2714,8 @@ nav li a p{
           display: block;
           position: relative;
           float: left;
-        margin-top: 32px;
-        width: 38px;
+        margin-top: 38px;
+        width: 41px;
         height: 5px;
         background: #2d2d2d;
         border-radius: 2px;
@@ -2482,11 +2724,11 @@ nav li a p{
         z-index: 1000;
         }
           
-        .menu-btn__burger::before,
-        .menu-btn__burger::after {
+        .menu-btn  .menu-btn__burger::before,
+        .menu-btn  .menu-btn__burger::after {
         content: '';
         position: absolute;
-        width: 38px;
+        width: 40px;
         height: 5px;
         background:#2d2d2d;
         border-radius: 2px;
@@ -2536,21 +2778,26 @@ nav li a p{
           
             
      /*IMPORTANTE*/
+     nav{
+      background-position:82% 88%;
+      background-repeat:no-repeat;
+     }
+     nav ul{
+       margin-top: 95px;
+       width: 80%;
+     }
+
+
     nav li a p{
     background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
     display: block;
-    border-radius: 8px solid #639a3a;
-     margin-top:8px;
-    position: absolute;
-    padding: 1px 1px ;
     z-index: 200;
-    margin-left: -5px;
     color: #fff;
     font-weight: lighter;
-    font-size: 1rem;
+    font-size: 1.9rem;
     text-transform: lowercase;
     letter-spacing: 1px;
-    font-family:  sans-serif;
+    font-family:  'Times New Roman', Times, serif;
     }
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
@@ -2595,43 +2842,41 @@ nav li a p{
       #comentarios{
       background-color: violet;
       display: flex;
-      width: 100%;
+      width: 100%; 
      }
     
-    /*BUSCADOR*/
-     .controls .form-control{
-      width: 75%;
-      }
 
-     .controls .boton{
-      width: 25%;
-      font-size: 1rem;
-      }
+    
       /*FIN BUSCADOR*/
+
+      #menu-simple{
+        margin-top: 15px;
+      }
 
       #menu-simple ul{
         height: 50px;
       }
 
-       /*EMPIEZA EL CONTENIDO*/
-        #tres-columnas-articulo{
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          margin-top: 4%;
-        }
+
+    /*EMPIEZA EL CONTENIDO*/
+    #tres-columnas-articulo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    }
   
 
-        .primera-columna{
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-        
-        }
-        .columna-primera{
-        width: 100%;
-       
-        }
+  .primera-columna{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  }
+
+
+   .columna-primera{
+    width: 100%;
+  }
 
         .imagen-central{
          width: 100%;
@@ -2678,16 +2923,18 @@ nav li a p{
       padding: 5px 5px  5px  5px;
       font-size:  5px;
       width: 35px;
-      height: 38px;
-     
-     
-    }
+      height: 38px;  
+      }
     
-        .imagen-central  img{
+     /*CONTAINER IMAGEN PRINCIPAL Y REDES..*/
+      .imagen-central{
+      width: 100%;
+      }
+      
+      /*. CAJA DE LA IMAGEN PRINCIPAL..*/
+      .imagen-principal{
         width: 100%;
-        }
-         
-    
+      }
     .primer-articulo h1{
       font-size: 2.4rem;
     }
@@ -2762,11 +3009,14 @@ nav li a p{
           font-size: 1.3rem;
           font-family: 'Times New Roman', Times, serif;
         }
-        .segundo-articulo p{
-          font-size: 1.3rem;
-          font-family: 'Times New Roman', Times, serif;
-        }
+
+
+    .segundo-articulo p{
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    }
       
+
     /*ESTO SERVIRA PARA SEPARAR UN ARTICULO DEL OTRO*/
      .categorias-posts-links{
       margin-bottom: 20%;
@@ -2780,10 +3030,10 @@ nav li a p{
     }
 
    .blockquote .blockquote-text{
-            font-size: 1.1rem;
-            margin-left: 9px;
-            margin-top: 2px;
-          }
+    font-size: 1.1rem;
+    margin-left: 9px;
+    margin-top: 2px;
+    }
   
            .blockquote{
             width:100%;
@@ -2829,9 +3079,51 @@ nav li a p{
               text-align: right;
               width: 90%;  
               }
+          /*CONTAINER DE AUTOR Y NOMBRE*/
+              .articulo-ultimo{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-top: 2px;
+              }
+             
+              /*CONTAINER DEL AUTOR Y NOMBRE*/
+              .autor-nombre{
+                width: 50%;
+                height: 60px;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+              }
+            
+              /*FOTO DEL AUTOR*/
+              .autor-foto{
+                display: inline-flex;
+                width: 30%;
+                height: 60px;
+              }
+          
+          .autor-foto img{
+            width: 100%;
+            height: 60px;
+            display: inline-flex;
+          }
+
+              /*NOMBRE DE AUTOR*/
+              .autor-letra{
+                width: 30%;
+                display: block;
+                position: relative;
+                float: right;
+                margin-left: 6px;
+    
+              }
+
   
             /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
-
+     .categorias-posts-links{
+      margin-bottom: 10px;
+      }
 
      /*CONTAINER GENERAL DEL CARRUSEL............................................. */
      .container-total-carrusell{
@@ -2845,7 +3137,7 @@ nav li a p{
         float:left;
         width:100%;
         overflow:hidden;
-       height: 245px;
+       height: 300px;
         position:relative;
         margin: auto;
         margin-bottom: 20px;
@@ -2863,8 +3155,32 @@ nav li a p{
     }
   
    
+     /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+   .carrusel>div {
+    float: left;
+    width: 100%;
+    max-width: 221px;
+    height: 200px;
+    margin-right:  0.4%;   /*ESPACIO */
+    text-align:center;
+    }
+    /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+     .carrusel img {
+     cursor:pointer;
+     width: 100%;
+     height: 200px;
+     border: 4px solid #DDD ;
+     padding: 4px ;
+     border-radius:6px;
+     }
     
-  
+     .carrusel p{
+      margin-top: 6px;
+      color: #000000;
+      font-size: 1rem;
+    }
+   /*HASTA AQUI ES EL CONTAINER DE LAS IMAGENES*/
+
       /*PARA QUE LAS FLECHAS DESPAREZCAN */
     #carrusel:hover  li.left-arrow{
     background-color: #fff;
@@ -2886,7 +3202,7 @@ nav li a p{
       width: 100%;
       display: flex;
       position: absolute;
-      margin-top: 12%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+      margin-top: 14%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
       margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
       }
       
@@ -2924,61 +3240,47 @@ nav li a p{
     }
    
   
-   /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
-   .carrusel>div {
-   float: left;
-   width: 100%;
-   max-width: 221px;
-   height: 160px;
-   margin-right:  0.4%;   /*ESPACIO */
-   text-align:center;
-   }
-   /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
-    .carrusel img {
-    cursor:pointer;
-    width: 100%;
-    height: 160px;
-    border: 4px solid #DDD ;
-    padding: 4px ;
-    border-radius:6px;
-    }
+  
 
 
     /*COLUMNA SEGUNDA*/
     .segunda-columna{
       width: 100%;
+      height: 20px;
+      display: block;
      }
 
      .tercera-columna-fija{
        width: 100%;
-       max-width: 700px;
-       display: flex;
-       flex-direction: column;
+       max-width: 720px;
+      display: block;
+      margin-top: 100px;
      }
+
+
     .controls{
-     width: 85%;
-     display: flex;
-     flex-direction: column;
-     margin: auto;
-     margin-bottom: 30px;
+     display: none;
     }
    
     .tercera-columna{
       width: 100%;
-      display: flex;
-      flex-direction: row;
      margin-bottom: 20px;
     }
 
     .tercera-columna  h2{
-   display: none;
+     display: none;
     }
-    
+    .aside-colum{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+
     .tercera-columna img{
     width: 50%;
      display: inline-flex;
-     align-items: flex-start;
-     margin-right: 30px;
     }
 
     .tercera-columna  p{

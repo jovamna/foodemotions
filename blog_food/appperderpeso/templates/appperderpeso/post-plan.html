@@ -717,10 +717,11 @@
                     <img src="{{perderpeso.imagediaveinticuatro.url}}" alt="">
                     {% endif %} 
                     </div> 
-
+                    {% if perderpeso.diaveinticuatro %}
                     <div class="dia">
                     <p>{{perderpeso.diaveinticuatro|safe}}</p>
                    </div>
+                    {% endif %}
               </div>
 
                       <!-- DIA 25-------------------------->
@@ -879,10 +880,10 @@
   
 
 
-
+ {% block tercera-columna %}
            <!------------------------- TERCERA COLUMNA----------------------------------------------------------->
         <div class="tercera-columna-fija">
- {% block tercera-columna %}
+
         <!-------------------------BUSCADOR------------------>
                   <div class="controls">
                      <form  method = "GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}"> {% csrf_token %}
@@ -898,8 +899,10 @@
         <!------------------FINAL BUSCADOR--------------------------->
          <div class="tercera-columna">
                  <em><h2> mas temas..</h2></em>
+                 <div class="aside-colum">
                  <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
                    <p>How to take the shame out of self-promotion </p>
+                   </div>
          </div>
         <!----------------------------- -------------->
       
@@ -916,8 +919,10 @@
                                  {% endfor %}
               </div>          
       <!-------------FIN CATEGORIAS------------------------------>
-        {% endblock tercera-columna %}
+        
         </div>
+       {% endblock tercera-columna %}
+
        <!-- FINAL DIV TERCERA COLUMNA-->
      
     </div>    

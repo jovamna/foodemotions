@@ -1,23 +1,41 @@
 {% load static %}
 {% load menu %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-       <title>{% block title %}Articulo{% endblock %}</title>
-      <!-- STILOS -->
-      <link rel="stylesheet" href="{% static 'appfood/css/articulo.css' %}">
-      <link rel="stylesheet" href="{% static 'appfood/css/responsivearticulo.css' %}">
+  <!DOCTYPE html>
+   <html lang="en">
+           <head>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <meta http-equiv="X-UA-Compatible" content="ie=edge">
+           <title>{% block title %}Articulo{% endblock %}</title>
+           <!-- STILOS -->
+          <link rel="stylesheet" href="{% static 'appfood/css/articulo.css' %}">
+         <link rel="stylesheet" href="{% static 'appfood/css/responsivearticulo.css' %}">
     
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-48x48.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-60x60.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-72x72.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-96x96.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-144x144.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-192x192.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-icon.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-310x310.png' %}"/>
+
+
+
+
+
+
+
+
       <!--copiado bostrap----------------->
 
       <!--CARRUSEL--->
@@ -97,7 +115,7 @@
                 </li>
         
                 <li> 
-                <a class="{% active 'appfood:recetas-saludables' %}" href="{% url 'appfood:recetas-saludables' %}"> <p> Recetas Sanas</p> </a>
+                <a class="{% active 'appfood:recetas-saludables' %}" href="{% url 'appfood:recetas-saludables' %}"> <p> Recetas Saludables</p> </a>
                         <ul>  
                         {% load mptt_tags %} 
                         <!-- LAS CATEGORIAS------->
@@ -156,14 +174,25 @@
 
     </header>
 
-
+ 
     <!-- CONTENEDOR DEL CUERPO DEL BODY------------------------------------------------------------------------->
     <div id="container-articulo">
-        <!--BUSCADORMINIATURA DEL MOVIL----------------------->
-          {% block buscador-responsive %}
-            
-            {% endblock buscador-responsive %}
-               <!---FIN DEL BUSCADOR RESPONSIVE DEL MOVIL---->
+            {% block buscador-responsive %}
+        <div id="controls-responsive">
+                <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
+                    <div id="custom-search-input-responsive">
+	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
+                                 
+                          <button type="submit" name="submit" class="boton-responsive btn-succes" value="Search"> 
+                          <span class="icon"><i class="fa fa-search"></i></span>   
+                          </button>
+                          <!--</span>-->
+                    </div>
+                </form>
+	        </div>
+             {% endblock buscador-responsive %}
+
+
                     <!-- PRIMER  SEGMENTO MENU SIMPLE----------------->
                     {% block menusimple %}             
                       {% endblock menusimple %}
@@ -274,8 +303,9 @@
 
 
       <!------------------------ TERCERA COLUMNA--------------->
+     {% block tercera-columna %}
     <div class="tercera-columna-fija">
-          {% block tercera-columna %}
+         
                   <!------------CAJA BUSCADOR--------CONTROLS---------->
                   <div class="controls">
                   <!---FORMULARIO-------->
@@ -296,8 +326,10 @@
               <div class="tercera-columna">
                  <em><h2> mas temas..</h2></em>
                  <!--------IMAGEN----------------------------------->
+                  <div class="aside-colum">
                  <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
                    <p>How to take the shame out of self-promotion </p>
+                   </div>
              </div>
         <!----------------------------- -------------->
          <!--CATEGORIAS------------------------------->
@@ -305,8 +337,9 @@
 
            </div>          
          <!-------------FIN CATEGORIAS------------------------------>
-        {% endblock tercera-columna %}
+       
         </div>
+         {% endblock tercera-columna %}
         <!-- FIN DIV TERCERA COLUMNA  FIJA-->
      </div>    
      <!-- CIERRE DE LAS TRES COLUMNAS-->
@@ -470,29 +503,29 @@
             <!-- FOOTER PRIMERO ESTA DENTRO DEL CONTAINER DE CONTENIDO-->
         <div id="footer-articulo">
                 <div class="footer-primero-articulo">
-                    <!-- PRIMER FOOTER--------------->
+                        <!-- PRIMER FOOTER--------------->
                         <div class="icon-social1">
-                        <p>food emotions</p>
-                        <ul class="social2">
-                            <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                               <p>food emotions</p>
+                               <ul class="social2">
+                                <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
                                     <i class="far fa-envelope"></i> </a></li>
-                            <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank"><i
+                                <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank"><i
                                         class="icon fab fa-facebook-f"></i> </a></li>
-                            <li> <a href="http://twitter.com/foodemotions" target="_blank">
+                                <li> <a href="http://twitter.com/foodemotions" target="_blank">
                                     <i class="fab fa-twitter"></i> </a></li>
-                            <li> <a href="http://instagram.com/foodemotions" target="_blank">
+                                <li> <a href="http://instagram.com/foodemotions" target="_blank">
                                     <i class="fab fa-instagram"></i> </a></li>
-                          </ul>
+                              </ul>
                           </div>
 
-                <!-----------BOX---------BOX---------------------------------------->
-                <div class="box">
-                        <h3>Suscribete a nuestro Newsletter.</h3>
-                        <form action="." method="POST">
-                        <input type="text" name="email" id="email" placeholder="Escribe tu email">
+                         <!-----------BOX---------BOX-------------->
+                         <div class="box">
+                         <h3>Suscribete a nuestro Newsletter.</h3>
+                         <form action="." method="POST">
+                         <input type="text" name="email" id="email" placeholder="Escribe tu email">
                         <button type="submit" class="submit">Suscribete</button>
                         </form>
-                </div>
+                         </div>
 
                 </div> <!-- FIN FOOTER PRIMERO--------------->
 

@@ -542,95 +542,170 @@ font-family: 'Archivo Black', sans-serif;
   
    @media only screen and (min-width: 360px) and (max-width: 640px){
 
-  #wrapper-categorias {
-  margin:0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  }
-      
-  #wrapper-categorias > * {
-  padding:10px;
-  }
+    html, body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+       }
   
+       #wrapper-categorias {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      border-spacing: 0;
+      border-collapse: collapse;
+     }
+  
+    
+    #wrapper-articulo img {
+    width: 100%;
+    height: auto;
+    border: 0;
+     }
+
+     #wrapper-categorias > * {
+    padding: 15px;
+    }  
+       
+    #cabecera-categorias .controls{
+      display: none;
+      visibility: hidden;
+    }
+
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+     #controls-responsive{
+      display: block;
+      visibility: visible;
+      width: 92%;
+      height: 35px;
+      margin-top: 3px;  
+      margin-bottom: 20px;
+     margin-left: 14px; 
+       }
+  
+  
+       #custom-search-input-responsive{
+       width: 100%;
+       height: 35px;
+       border: 1px solid#c9c9c9;
+       border-radius: 4px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+     
+       }
+  
+  
+       #controls-responsive .sin-borde-responsive{
+       width: 80%;
+       height: 32px;
+       display: inline-flex;
+      }
+  
+  
+       #controls-responsive .boton-responsive{
+       width: 20%;
+       height: 32px;
+        }
+  
+            /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA...............FIN BUSCADOR RESPONSIVE*/
+  
+    #container-categorias{
+     display: flex;
+     flex-direction: column;
+     width:100%;
+     margin: auto;
+     margin-top: 55px;
+     padding-left: 0;
+     padding-right: 0;
+     }
+
+
+
+      /*border-bottom: 2px solid #DDD;*/
+      header{
+      display: block;
+      width:100%;
+      height: 58px;
+      top:0;
+      position: fixed;
+      z-index: 2000;   /*IMPORTANTE  */
+      margin: auto;
+      box-shadow: 0 8px 6px -6px #DCDCDC; 
+      background-color: #fff;
+     }
+  
+     header.black{
+     background-color:#fff ;
+     height:  58px;
+     }
+    
     div {
     flex: 1;
     }
   
     /*...CATEGORIA Y SUCATEGRIAS............................................*/
    /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
-  #container-categorias{
-  width:100%;
-  margin: auto;
-  margin-top: 70px;
-  }
-
-
-  /*HEADER LLAMADO CATEGORIA*/
-   header{
-    width: 100%;
-    z-index: 999;
-    position: fixed;
-    margin: auto;
-    height:  65px;
-    box-shadow: 0 8px 6px -6px #c9c9c9;
-     }
-    /*HEADER LLAMADO CATEGORIA*/
-    header.black{
-      width: 100%;
-      height:  65px;
-      background-color:#fff ;
-      }
-  
            /*FIN ANIMACION SUBRAYADO */
   #cabecera-categorias{
     width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 40px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
-}
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 38px;
+      margin-top: -4px;
+           }
 
     
   
      /*caja */
      #cabecera-categorias .logo{
-      height: 40px; 
-      width: 40%;
+      display: inline-flex;
+      width: 20%;
+      max-width: 190px;
+      height: 38px;
     }
        
-    .logo img {
-    width: 72%;
-    height: 40px;
+    #cabecera-categorias .logo img {
+      display: block;
+      width: 100%;
+      max-width: 150px;
+      height: 38px;
     }
  
  /*CONTENEDOR  REVISTA Y SOCIALES*/
     /*CONTAINER DE LA HAMBURGUESA*/
-    .menu-btn {
-      display: inline-flex;
-      width: 39px;
-     cursor: pointer;
-      transition: all .5s ease-in-out;
+    #cabecera-categorias .menu-btn {
+      display: block;
+      position: relative;
+      float: right;
+      width: 40%;
+      max-width: 210px;
+      height: 38px;
+      margin: auto;
       }
      
     
  
  /*BOTON ICONO REVISTA Y SOCIALES*/
-  .boletin{
-  width: 5%;
-  display: inline-flex;
-  max-width: 110px;
+ #cabecera-categorias .menu-btn .boletin{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  max-width: 120px;
+  height: 38px;
    }
  
  
    /*LETRA INSCRIBETE*/
-   .boletin h4 {
-   font-size: 0.9rem;
-   letter-spacing: -0.2px;
-   font-family: 'Cabin', sans-serif;
-   font-weight: 600;
-   color:#2d2d2d;
+   #cabecera-categorias .menu-btn .boletin h4 {
+    font-size: 0.9rem;
+    margin-top: 22px;
+    margin-left: 2px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    font-family: 'Times New Roman', Times, serif;
     }
 
    .boletin a h4:hover{
@@ -643,30 +718,30 @@ font-family: 'Archivo Black', sans-serif;
  
    /*HAMBURGUESA*/
    .menu-btn__burger {
-   display: block;
-   margin: auto;
-   margin-top: 17%;
-   width: 38px;
-   height: 4px;
-   background: #2d2d2d;
-   border-radius: 2px;
-   box-shadow: 0 2px 5px rgba(255,101,47,.2);
-   transition: all .5s ease-in-out;
-   z-index: 1000;
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 22px;
+    width: 37px;
+    height: 4px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+    z-index: 1000;
   }
    
    .menu-btn__burger::before,
    .menu-btn__burger::after {
-   content: '';
-   position: absolute;
-   width: 38px;
-   height: 4px;
-   
-   background:#2d2d2d;
-   border-radius: 2px;
-   box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-   transition: all .5s ease-in-out;
-   z-index: 800;
+    content: '';
+      position: absolute;
+      width: 37px;
+      height: 4px;
+      background:#2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+      transition: all .5s ease-in-out;
+      z-index: 800;   
    }
  
  
@@ -682,42 +757,68 @@ font-family: 'Archivo Black', sans-serif;
 
    /*NAV*/
 
+  
    nav{
-    background-position:78% 90%;
-   }
-     nav ul{
-       margin-top: 18%;
-       width: 90%;
-     }
-     nav ul li{
-      margin-left: -4%;
-     }
+     width: 100%;
+    background-position:  80% 90%;
+      }
 
-    nav ul li p{
-      font-size: 0.9rem;
-      z-index: 1000;
+
+     nav ul{
+        display: block;
+        width: 85%;
+        margin-top: 55px;
+        margin-left: 5px;
+      }
+
+          /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+     nav ul li{
+      display: flex;
+      flex-direction: column;
+      margin-top: 5px;/*IMPORTANTE */
+      margin-left: -0.5px;
+      height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
+      list-style: none;
+      }
+
+   nav ul li a {
+    width: 100%;
+    display: block;
+   background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+   margin-top:8px;
+  
+   z-index: 200;
+  
+  
     }
 
- 
-
- /*NAV ESCONDIDO*/
- nav ul li:hover > ul {
-  display: none;
- margin-left: 4%;
- 
-  }
+    nav ul li a p{
+      width: 95%;
+      margin-left: 30px;
+      color: #fff;
+      font-weight: lighter;
+      font-size: 1.2rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  'Times New Roman', Times, serif;
+    }
+    nav ul li ul li a{
+      text-transform: lowercase;
+      margin-left: 5%;
+    }
 
  
    /*CIERRE NAV*/
  
       /*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
       #container-categorias-subcategorias{
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    }
+      width: 92%;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      margin-left: 15px;
+      display: flex;
+      flex-direction: column;
+      }
   
  /*CONTIANER TOTAL DE INTRO Y INTRO-DOS-VACIOS*/
     .intro{
@@ -821,11 +922,11 @@ font-family: 'Archivo Black', sans-serif;
 
   /*...................*/
    .container-posts-categorias{
-     width: 100%;
+     width: 92%;
      display: flex;
      flex-direction: column;
-  
-  }
+     margin: 0 auto;
+    }
 
     .columna-categorias{
     width: 100%;
@@ -846,7 +947,7 @@ font-family: 'Archivo Black', sans-serif;
     }
 
     .por-foto img{
-      width: 95%;
+      width: 100%;
       margin: auto;
     }
 
@@ -856,6 +957,7 @@ font-family: 'Archivo Black', sans-serif;
      display: flex;
      flex-direction: column;
      width: 100%;
+     margin: auto;
    }
 
 
@@ -980,267 +1082,302 @@ font-family: 'Archivo Black', sans-serif;
       font-weight: bolder;
       color: #000000;
       }
-  
-     /*...................*/
-     #carrusel {
-      float:left;
-      width:95%;
-      overflow:hidden;
-      height: 280px;
-      position:relative;
-      margin-bottom: 50px;  
-      }
 
-      .carrusel {
-        width:4000px;
-        height: 200px;
-        left: 1px;
-        position:absolute;
-        z-index:0; 
-       }
 
-       .carrusel>div {
-        float: left;
-        height: 100%;
-        max-height: 200px;
-        margin-right: 14px;   /*ESPACIO */
-        width: 100%;
-        max-width: 210px;
+
+  /*..CARRUSELL.............................*/
+    .container-total-carrusell{
+      display: block;
+      position: relative;
+      width: 95%;
+      margin-bottom: 150px;
     }
 
-    .carrusel img {
-      width: 100%;
-      max-width: 210px;
-      height: 100%;
-      max-height: 190px;
-      padding: 2px 2px;
+     /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+    /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
+    #carrusel {
+    float:left;
+    width: 100%;
+    overflow:hidden;
+    height: 280px;
+    position:relative;
+    margin: auto;
+    margin-bottom: 10px;
+    }
     
-      }
-       
-   .product p{
-    margin-top: 8px;
+    
+     /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
+    #carrusel h2{
+    font-size:24px;
+    font-weight: 900;
+    word-spacing: -2px;
+    letter-spacing: 0.4px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 10px;   
+    }
+
+    
+    /*ESCONDE IMAGGENES*/
+    /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+     .carrusel{
+     width:4000px;
+     height: 210px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+     left: 0px;
+     position:absolute;
+     z-index:0;
+    }
+
+ 
+   /*CIRCULO   IZQUIERDO*/
+    #carrusel li.left-arrow{
+    margin-right: 3.8%;
+    }
+
+     /*CIRCULO  DERECHO NO PONERLO TAN ANCHO PORQUE PIERDE LA FORMA EL CIRCULO PONERLO DEBAJO DE 90*/
+    #carrusel li.right-arrow{
+    margin-left:75%;
+    }
+
+    /**MUY IMPORTANTE..*/
+   /*CIRCULO MODIFICA ALTO Y ANCHO.................. */
+   .carusel{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    margin-top: 25%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+    margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+    }
+
+
+   /*MUY IMPORTNATE*/  
+      /* ARROW LEFT ..........SOLO ARROW LEFT........ */
+    .carrusel1 ul li.left-arrow span{
+    top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+    left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+    transform: translateY(-50%) rotate(-45deg);
+    border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+    border-bottom: none;
+    }
+
+    
+   /*MUY IMPORTNATE*/  
+   /* ARROW RIGHT.....ARROW RIGHT SIN PALO......... */
+   .carrusel1 ul li.right-arrow span{
+   top: 48%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+   right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+   transform: translateY(-50%) rotate(-45deg);
+   border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+   border-top: none;
    }
-
-
-    /*..CONTAINER DE LAS FLECHAS Y CIRCULO ...*/ 
-    /*ALTURA DEL CIRCULO CON LA FLECHA INCLUIDA......... */
-    .carusel{
-      width: 100%;
-      display: flex;
-      position: absolute;
-      margin-top: 20%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
-      margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+ 
+    /*PARA QUE LAS FLECHAS DESPAREZCAN */
+   #carrusel:hover  li.left-arrow{
+   background-color: #fff;
+   opacity: .4;
+   top: 54px;
+   transition:all .5s ease-in-out;
+   }
+      
+      #carrusel ul li.left-arrow:hover {
+      display: block;
+      background-color:  #fff;
+      opacity: 3;
       }
+ 
 
-     /*MARGIN-LEFT HACE QUE EL CIRCULO NO SE DEFORME*/
-     .container-total-carrusell li.right-arrow{
-      margin-left:80%;
-      background-color: #d9d9d9;
-      }
-    
-       /* FLECHA RIGHT.............................FLECHA RIGHT............................ */
-       .container-total-carrusell ul li.right-arrow span{
-        top:50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-        right: 1.5%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
-        transform: translateY(-50%) rotate(-45deg);
-        border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
-        border-top: none;
-        }
-        /*............................*/
-     /*........................*/
+  /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+  .carrusel>div {
+  float: left;
+  width: 100%;
+
+  margin-right: 5px;   /*ESPACIO */
+  text-align:center;
+  }
+
+  /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+ .carrusel img {
+  cursor:pointer;
+  width: 100%;
+  height: 180px;
+  border: 2px solid #DDD ;
+  padding: 3px ;
+  border-radius:6px;
+  }
+ 
        
 
 
 /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
 
-  #footer-categorias{
+ /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+ #footer-categorias{
   clear: both;
   position: relative;
-  height: 90px;
-  margin-top: -90px;
+  height: 140px;
+  margin-top: -140px;
   border-top: solid 1.5px #DCDCDC;
-  display: flex;
-  flex-direction: column;
+  display: block;
   width: 100%;
   z-index: 10;
+  padding-top: 0;
   }
   
   
     /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
-    .footer-primero-categorias{
+    #footer-categorias .footer-primero-categorias{
     width: 100%;
-    margin: auto;
-    height: 75px;
-    display: flex;
-    flex-direction: row;  
-    justify-content: space-between;
-    clear: both;
-     z-index: 1000;
-     margin-bottom: 10px;
-    }
- 
-  /*SUB-caja ICONOS SOCIALES*/
-  .icon-social1{
-   width: 49.5%;
+
+    height: 170px;
+   display: flex;
+   flex-direction: column;
+  padding-top: 0;
+  margin-bottom: 10px;
+  z-index: 10;
+  }
+
+
+   /*CAJA DE SOCIALES Y LETRA*/
+   #footer-categorias .icon-social1{
+    width: 90%;
+    height: 40px;
     display: flex;
     flex-direction: column;
-    margin: auto;
-    height: 75px;
+   margin: auto;
+   padding-top: 0;
     }
 
- .social2{
-   display: flex;
-   flex-direction: row;
-  
- }
 
-  .icon-social1 li{
-   list-style: none;
-   display: inline-flex;
+    #footer-categorias  .icon-social1 p{
+      display: flex;
+      margin: auto;
+    font-size: 1.2rem;
+
+    }
+
+     /* UL */
+     #footer-categorias .social2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    height: 40px;
+    padding-top: 0;
+    margin: auto;
    }
 
-.icon-social1 p{
-font-size: 1rem;
-word-spacing: -3px;
-letter-spacing: -2px;
-font-family: 'Archivo Black', sans-serif;
-padding-bottom: 10px;
-color: #2d2d2d;
-}
 
-.icon-social1 .icon-social1 ul{
-display: inline-flex;
-list-style: none;
-}
-
-
-.icon-social1  ul li .fa-envelope{
+   #footer-categorias .social2  ul li .fa-envelope{
 background-color: oldlace;
 color: #2d2d2d;
-width: 25px;
-height: 25px;
-padding: 2px 2px 2px 2px;
-border-radius: 25px;
+width: 8px;
+height: 8px;
+padding: 0.5px 0.5px 0.5px 0.5px;
+border-radius: 2px;
 border: solid #E9E9E9;
-
 }
 
-.icon-social1  ul li .fa-facebook-f{
+#footer-categorias  .social2  ul li .fa-facebook-f{
 background-color: oldlace;
 color:  #2d2d2d;
-width: 25px;
-height: 25px;
-padding: 2px 2px 2px 2px;
-border-radius: 25px;
+width: 8px;
+height: 8px;
+padding: 0.5px 0.5px 0.5px 0.5px;
+border-radius: 2px;
 border: solid #E9E9E9;
-
 }
 
 
-.icon-social1  ul li .fa-twitter{
-background-color: oldlace;
-color:   #2d2d2d;
-width: 25px;
-height: 25px;
-padding: 2px 2px 2px 2px;
-border-radius: 25px;
-border: solid #E9E9E9;
-
-}
-
+#footer-categorias .social2  ul li .fa-twitter{
+  background-color: oldlace;
+  color:   #2d2d2d;
+  width: 8px;
+  height: 8px;
+  padding: 0.5px 0.5px 0.5px 0.5px;
+  border-radius: 2px;
+  border: solid #E9E9E9;
+   }
 
 
-
-.icon-social1 ul li .fa-instagram{
-background-color: oldlace;
-color: #2d2d2d;
-width: 25px;
-height: 25px;
-padding: 2px 2px 2px 2px;
-border-radius: 25px;
-border: solid #E9E9E9;
-
-}
-
-
- /*SUBCONTENEDOR DONDE ESTA EL BOX*/
- .box{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 75px;
-   margin: auto;
-  }
-
- /*LETRA DE LA CAJA DE SUSCRIBIR*/
-.box h3{
-  display: block;
-letter-spacing: -0.1px;
-font-family: 'Archivo Black', sans-serif;
-font-size: .7rem;
-font-weight: 400;
-margin-top: 3.8%;
-color: #2d2d2d;
-margin-top: 0.7%;
-}
-
- /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
- .box form{
-  display: flex;
-  margin-top: -1%;
-  width: 100%;
-  margin: auto;
-}
-
-
-
-/*CAJA DEL IMPUT EL LADO DE DONDE SE ESCRIBE*/
-.box input[type="text"]
-{
-background-color: #fff;
-display: flex;
-width:65%;
-height: 35px;
-border: 1.5px solid 	#DCDCDC;
-padding: 0 9px;
-border-radius: 5px 0 0 5px;
-
-
-}
-/*.EL COMPLEMENTO DEL ANTERIOR*/
-.box button[type="submit"]{
-left: 7px;  /*EL TRUCO IMPORTANTE*/
-border-radius: 0 5px 5px 0;
-width: 35%;
-height: 35px;
-border: none ;
-outline: none;
-cursor: pointer;
-background-color: #2d2d2d;
-color: #fff;
-font-size: 0.7rem;
-font-family: 'Archivo Black', sans-serif;
-}
-
-/*FIN de la cajita del correo */
-
-
-/*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
-
- /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
-
-   #footer-second-categorias{
-   width: 100%;
-   height: 10px;  /*IMPORTANTE*/
-   margin:auto;
-  }
-/*..SUBCAJA DE DIV FOOTERSENIDN...*/
-  .final-food-categorias p{
-  text-align: center;
+   #footer-categorias .social2 ul li .fa-instagram{
+  background-color: oldlace;
   color: #2d2d2d;
+  width: 8px;
+  height: 8px;
+  padding: 0.5px 0.5px 0.5px 0.5px;
+  border-radius: 2px;
+  border: solid #E9E9E9;
+  }
+
+
+  #footer-categorias  .box{
+   width: 100%;
+  height: 50px;
+ }
+
+ /*LETRA ENCIMA DEL BOX*/   
+ #footer-categorias  .box h3{
+   font-size: 1rem;
+   
+    margin: auto;
+   }
+
+   #footer-categorias .box form{
+    width: 90%;
+   display: flex;
+   flex-direction: row;
+   margin: auto;
+  margin-top: -3px;
+  }
+
+  #footer-categorias .box input[type="text"]
+  {
+  background-color: #fff;
+  width:70%;
+   height: 38px;
+  border: 1.5px solid 	#DCDCDC;
+  padding: 0 5px;
+  border-radius: 5px 0 0 5px;
   font-size: 0.7rem;
   }
+   
 
+  #footer-categorias .box button[type="submit"]{
+  left: 6px;  /*EL TRUCO IMPORTANTE*/
+  border-radius: 0 5px 5px 0;
+  width: 30%;
+  height: 38px;
+  border: none ;
+  outline: none;
+  cursor: pointer;
+  background-color: #2d2d2d;
+  color: #fff;
+  font-size: 0.6rem;
+  font-family: 'Archivo Black', sans-serif;
+  padding: 0 5px 1px 1px;
+  }
+
+
+ /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+ #footer-categorias .footer-second-categorias{
+ width: 100%;
+ height: 20px; 
+ }
+
+ #footer-categorias .final-food-categorias {
+  width: 100%;
+  margin: auto;
+  }
+
+
+  #footer-categorias .final-food-categorias p{
+ text-align: center;
+ color: #2d2d2d;
+ font-size: 0.6rem;
+ padding-bottom: 8px;
+ }
+
+ 
 
     }
 
@@ -1705,10 +1842,10 @@ font-size: 0.7rem;
 font-family: 'Archivo Black', sans-serif;
 }
 
-/*FIN de la cajita del correo */
+   /*FIN de la cajita del correo */
 
 
- /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
 
    #footer-second-categorias{
    width: 100%;
@@ -1716,12 +1853,12 @@ font-family: 'Archivo Black', sans-serif;
    margin:auto;
   }
 
-   /*..SUBCAJA DE DIV FOOTERSENIDN...*/
-  .final-food-categorias p{
-  text-align: center;
-  color: #2d2d2d;
-  font-size: 0.7rem;
-  }
+     /*..SUBCAJA DE DIV FOOTERSENIDN...*/
+    .final-food-categorias p{
+    text-align: center;
+     color: #2d2d2d;
+     font-size: 0.7rem;
+     }
 
 
      }
@@ -1753,22 +1890,21 @@ font-family: 'Archivo Black', sans-serif;
   }
   
     /*...CATEGORIA Y SUCATEGRIAS............................................*/
-/*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
+   /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
   #container-categorias{
   width:100%;
   margin: auto;
   margin-top: 90px;
-
   }
 
 
     /*HEADER LLAMADO CATEGORIA*/
     header{
     width: 100%;
+    height:  90px;
     z-index: 999;
     position: fixed;
     margin: auto;
-    height:  90px;
     box-shadow: 0 8px 6px -6px #c9c9c9;
      }
 
@@ -1784,51 +1920,79 @@ font-family: 'Archivo Black', sans-serif;
     width: 100%;
     display: flex; 
     flex-direction: row;
+    justify-content: space-between;
     margin: auto;
-    height: 70px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    height: 50px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
     background-color: #fff;
     }
 
     
      /*caja */
-    .logo{
-    display:flex ;
-    width: 70%;
-
+     #cabecera-categorias  .logo{
+    display:inline-flex ;
+    width: 25%;
+    max-width: 200px;
     height: 50px;
     margin-bottom: 8px;
     }
        
-    .logo img {
+    #cabecera-categorias .logo img {
     width: 100%;
+    max-width: 240px;
+    height: 50px;
+    display: inline-flex;
     }
- 
-     /*CONTAINER DE LA HAMBURGUESA*/
-     .menu-btn {
-      width: 20%;
-      max-width: 150px;
-      cursor: pointer;
-      transition: all .5s ease-in-out;
-      margin-bottom: 8px;
 
+    #cabecera-categorias .controls{
+      display: inline-flex;
+      width: 30%;
+      max-width: 300px;
+      height: 50px;
+      }
+ 
+       .controls #custom-search-input{
+      display:flex;
+      flex-direction: row;
+      height: 50px;
+      width: 300px;
+      }
+
+     #cabecera-categorias #custom-search-input .sin-borde{
+     height: 50px;
+       width: 280px;
+     }
+
+
+     #cabecera-categorias #custom-search-input .boton{
+     height: 50px;
+     width: 10%;
+     }
+     /*CONTAINER DE LA HAMBURGUESA*/
+     #cabecera-categorias .menu-btn {
+      width: 30%;
+      max-width: 180px;
+      height: 50px;
+      margin-bottom: 8px;
        }
   
    /*BOTON ICONO REVISTA Y SOCIALES*/
-   .boletin{
+   #cabecera-categorias .menu-btn .boletin{
     width: 100%;
-    max-width: 120px;
+    max-width: 142px;
+    height: 50px;
 
     }
  
 
  
    /*LETRA INSCRIBETE*/
-  .boletin h4 {
+  .menu-btn .boletin h4 {
    font-size: 0.94rem;
    letter-spacing: -0.2px;
-   font-family: 'Cabin', sans-serif;
+   font-family: 'Times New Roman', Times, serif;
    font-weight: 600;
    color:#2d2d2d;
+   margin-top: 30px;
    }
    
     .boletin a h4:hover{
@@ -1842,8 +2006,9 @@ font-family: 'Archivo Black', sans-serif;
    .menu-btn__burger {
    display: block;
    width: 5%;
-   max-width: 38px;
+   max-width: 40px;
    height: 5px;
+   margin-top: 28px;
    background: #2d2d2d;
    border-radius: 2px;
    box-shadow: 0 2px 5px rgba(255,101,47,.2);
@@ -1855,7 +2020,7 @@ font-family: 'Archivo Black', sans-serif;
    .menu-btn__burger::after {
    content: '';
    position: absolute;
-   width: 38px;
+   width: 40px;
    height: 5px;
    margin-left: 1%;
    background:#2d2d2d;
@@ -1876,20 +2041,45 @@ font-family: 'Archivo Black', sans-serif;
    z-index:3000;
    }
 
-       /*NAV*/
-      nav ul  {
-      margin-left: -5px;
-       }
- 
-       nav ul li p{
-       font-size: 1rem;
-       z-index: 1000;
-       }
 
-      nav ul li ul li a{
-      width: 100%;
-       margin-left: 76px;
+   /*MENU NAV*/
+       /*NAV*/
+     /*IMPORTANTE*/
+     nav{
+      background-position:82% 88%;
+      background-repeat:no-repeat;
+     }
+     nav ul{
+       margin-top: 95px;
+       width: 80%;
+     }
+
+
+    nav li a p{
+    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+    display: block;
+    z-index: 200;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.9rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family:  'Times New Roman', Times, serif;
+    }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+     nav ul li{
+     display: flex;
+     width: 100%;
+     margin-top: 1.5%;/*IMPORTANTE */
+     filter: alpha(opacity=80);
+     list-style: none;
+     cursor:pointer;
+     margin-left: 1% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+      z-index: 1000;
       }
+      
+
       /*CIERRE NAV*/
  
     /*CAJA DEL MENU-INTROESCRITO Y INTRO-DOS-VACIOS (COSTADO)*/
@@ -2009,20 +2199,116 @@ font-family: 'Archivo Black', sans-serif;
        
   
      /*CARRUSELL*/
+   /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
+   #carrusel {
+    float:left;
+    width:100%;
+    overflow:hidden;
+   height: 300px;
+    position:relative;
+    margin: auto;
+    margin-bottom: 20px;
+    }
+    
+ 
+/*ESCONDE IMAGGENES*/
+/*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+.carrusel{
+width:4000px;
+height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+left: 0px;
+position:absolute;
+z-index:0;
+}
 
-     .carusel{
-      margin-top: 18%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
-     }
-     
 
-     /*CIRCULO  AYUDA A QUE ESTE REDONDO*/
-     .container-total-carrusell li.right-arrow{
-      margin-left: 87%;
-     }
-       
-     .container-total-carrusell ul li.right-arrow span{
-     left:  96%; 
-     }
+ /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+.carrusel>div {
+float: left;
+width: 100%;
+max-width: 221px;
+height: 200px;
+margin-right:  0.4%;   /*ESPACIO */
+text-align:center;
+}
+/*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+ .carrusel img {
+ cursor:pointer;
+ width: 100%;
+ height: 200px;
+ border: 4px solid #DDD ;
+ padding: 4px ;
+ border-radius:6px;
+ }
+
+ .carrusel p{
+  margin-top: 6px;
+  color: #000000;
+  font-size: 1rem;
+}
+/*HASTA AQUI ES EL CONTAINER DE LAS IMAGENES*/
+
+  /*PARA QUE LAS FLECHAS DESPAREZCAN */
+#carrusel:hover  li.left-arrow{
+background-color: #fff;
+opacity: .4;
+ top: 54px;
+transition:all .5s ease-in-out;
+}
+
+#carrusel ul li.left-arrow:hover {
+display: block;
+background-color:  #fff;
+opacity: 3;
+}
+ 
+
+/**MUY IMPORTANTE..*/
+/*ESTO MODIFICA EL ALTO DEL CIRCULO Y EL ANCHO.............................................................................................. */
+ .carusel{
+  width: 100%;
+  display: flex;
+  position: absolute;
+  margin-top: 14%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+  margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+  }
+  
+
+   /*CIRCULO   IZQUIERDO*/
+ #carrusel li.left-arrow{
+  margin-left: 3.8%;
+  }
+
+ /*CIRCULO  DERECHO PONER DEBAJO DE 90 PARA QUE EL CIRCULO SALGA ENTER0*/
+ #carrusel li.right-arrow{
+  margin-left:85%;
+  }
+
+
+  /*MUY IMPORTNATE*/  
+    /* ARROW LEFT .......................SOLO ARROW LEFT...................................ARROW LEFT SIN PALO............... */
+ .carrusel1 ul li.left-arrow span{
+  top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+ left:  5.2%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+ transform: translateY(-50%) rotate(-45deg);
+ border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+ border-bottom: none;
+  }
+
+  
+ /*MUY IMPORTNATE*/  
+   /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
+.carrusel1 ul li.right-arrow span{
+top: 50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+transform: translateY(-50%) rotate(-45deg);
+border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+border-top: none;
+}
+
+
+
+
 /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
 
   #footer-categorias{
@@ -2190,7 +2476,7 @@ font-size: 0.7rem;
 font-family: 'Archivo Black', sans-serif;
 }
 
-/*FIN de la cajita del correo */
+  /*FIN de la cajita del correo */
 
 
 
@@ -2198,8 +2484,8 @@ font-family: 'Archivo Black', sans-serif;
    width: 100%;
    height: 10px;  /*IMPORTANTE*/
    margin:auto;
-  }
-/*..SUBCAJA DE DIV FOOTERSENIDN...*/
+   }
+   /*..SUBCAJA DE DIV FOOTERSENIDN...*/
   .final-food-categorias p{
   text-align: center;
   color: #2d2d2d;
@@ -2207,20 +2493,9 @@ font-family: 'Archivo Black', sans-serif;
   }
 
 
-/* FINAL.....FOOTER......................*/
-
 
     }
   
-
-
-
-
-
-
-
-
-
 
 
 

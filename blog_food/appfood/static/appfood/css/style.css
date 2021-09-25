@@ -35,7 +35,7 @@
   }
 
 
-.elementoClicable {
+   .elementoClicable {
   cursor:url('../img/cursor.cur'), url('img/cursor.cur'), pointer;
   cursor:url('../img/cursor.cur') 5 10, url('img/cursor.cur') 5 10, pointer;
   }
@@ -498,14 +498,7 @@
   /* --FIN NAV--------------------------------------------------------*/
 
 
- 
-
-    /*SLIDER ........... width: 100vw;
-  bottom: 0;  
-  left: 0;
-  right: 0;
-  top: 0; 
-  margin: auto;................  SLIDER................................  */
+   /*PORTADA...*/
   .portada{
   display: flex;
   flex-direction: column;
@@ -788,7 +781,7 @@
   width: 100%;
   font-weight: 900;
   font-size: 3rem;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   color:black;
   line-height: 50px;
   }
@@ -799,7 +792,7 @@
    font-size:55px ;
    color:black ;
    display: inline-block;
-   font-family: 'Cabin', sans-serif;
+   font-family:'Times New Roman', Times, serif;
    font-style: italic;
   }
 
@@ -823,8 +816,8 @@
   line-height: 1;
           z-index: 1;
   text-shadow: 0px 1px 1px white;      
-  color: #6d6a6a;
-  font-family: 'Cabin', sans-serif;
+  color: #000000;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: lighter;
   word-spacing: 5px; ;
   -webkit-transform: translateY(10rem);
@@ -854,7 +847,7 @@
             z-index: 1;
     text-shadow: 0px 1px 1px white;      
     color: black;
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Times New Roman', Times, serif
     word-spacing: 5px; ;
     -webkit-transform: translateY(10rem);
     transform: transalteY(10rem);               /*DISTANCIA DE SUBIDA*/
@@ -920,7 +913,7 @@
   padding: 5px 6px 5px 7px;
   word-spacing: -1px;
   margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.1rem;
   }
     /*PORTADA DE CONTACTO NO BORRAR*/
@@ -930,7 +923,7 @@
   margin-top: 20px; /*DISTANCIA DE SEPARARCION DEL OTRO PARRAFO*/
   border-radius: 3px;
   background-color: #568632;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: lighter;
   font-size: 1rem;
   }
@@ -945,7 +938,7 @@
           z-index: 1;
   text-shadow: 0px 1px 1px white;      
   color: #568632;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: lighter;
   word-spacing: 2px; ;
   -webkit-transform: translateY(10rem);
@@ -2202,16 +2195,14 @@ margin-top: 4%;
 /*  FORMULARIO----.PAGINA CONTACTO------------------------....................*/
 
 /*   TABLA PRINCIPAL DEL FORMULARIO........................*/
-.row{
-  display: flex;
-  width: 67%;
+  .row{
+  display: block;
+  width: 80%;
   height: 600px;
-  flex-direction: column;
   margin: auto;
- margin-bottom: 150px;
- margin-top: 95px;
-  
-}
+ margin-bottom: 150px;  
+ background: #ebebeb;
+  }
 
 /*  igual MISMA TABLA............................*/
 

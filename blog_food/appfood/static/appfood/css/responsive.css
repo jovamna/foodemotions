@@ -1642,7 +1642,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 107px;
+    margin-top: 59px;
     padding-top: 0;
      padding-left: 0;
     padding-right: 0;
@@ -1655,7 +1655,7 @@
       header{
       display: block;
       width:100%;
-      height: 105px;
+      height: 58.5px;
       top:0;
       position: fixed;
       z-index: 2000;   /*IMPORTANTE  */
@@ -1666,7 +1666,7 @@
     
 
       header.black{
-      height:  105px;
+        height: 58.5px;
       background-color: #fff;
       }
   
@@ -1675,10 +1675,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 38px;
+    height: 35px;
     margin-top: -4px;
     margin-bottom: 10px;
-    
     }
        
      
@@ -1687,15 +1686,16 @@
     .cabecera .logo{
     display: inline-flex;
     width: 20%;
-    max-width: 190px;
-    height: 38px;
+    max-width: 200px;
+    height: 35px;
     }
          
      
       .cabecera .logo img{
         display: block;
         width: 100%;
-        max-width: 120px;
+        max-width: 114px;
+        height: 35px;
         }
      
      
@@ -1721,11 +1721,12 @@
     }
        
      .menu-btn   .suscribe a h4{
-      font-size: 0.9rem;
-      margin-top: 22px;
+      font-size: 1rem;
+      margin-top: 19px;
       margin-left: 2px;
       font-weight: 700;
       letter-spacing: 0.2px;
+      font-family: 'Times New Roman', Times, serif;
       }
       
       .cabecera .buscador{
@@ -1750,8 +1751,11 @@
 
      #controls-responsive{
        display: block;
-      width: 100%;
+      width: 91.8%;
       height: 40px;
+      margin-top: 8px;
+      margin-left: 15px;
+      margin-bottom: 6px;
       z-index: 5;
       border-radius: 5px 5px 5px 5px;
       padding-top: 1px;
@@ -1760,8 +1764,8 @@
 
        /*..f4f4f4..     border: 1.3px solid #e7e7e7;*/
    #controls-responsive   #custom-search-input-responsive{
-    width: 100%;
-    height: 38px;
+    width: 99%;
+    height: 35px;
     display: flex;
     flex-direction: row;
     padding-top: 1px;
@@ -1769,7 +1773,7 @@
     padding-right: 0;
     border-radius: 5px 5px 5px 5px;
     z-index: 6;
-    border: 1.3px solid #e7e7e7;
+    border: 1px solid #e7e7e7;
     }
 
 
@@ -1777,19 +1781,20 @@
 
    #controls-responsive   #custom-search-input-responsive .sin-borde{
      width: 85%;
-    height: 33px;
-    border-radius: 15px;
+    height: 30px;
+    border-radius: 8px;
     font-size: 0.7em;
     font-weight: lighter;
+    background-color: #f8f8f8;
     padding-left: 4px; /*MUEVE LA LETRA*/
     }
 
 
 
      #controls-responsive   #custom-search-input-responsive .boton{
-    height: 33px;
+    height: 30px;
     width: 15%;
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: #fff;
     z-index: 6;
     }
@@ -1855,7 +1860,7 @@
     float: right;
     width: 100%;
     max-width: 36px;
-    margin-top: 24px;
+    margin-top: 21px;
     height: 4px;
     background: #2d2d2d;
     border-radius: 2px;
@@ -2775,16 +2780,24 @@ width: 100%;
     .plan-total-alimentacion{
     display: flex; 
     flex-direction: column;
-    width: 92%;
+    width: 100%;
     margin: auto;
     margin-top: 1px;  /*--RELACIONADO CON EL SEGMENTO TITULO*/
     margin-bottom: 30px;
     }
 
+    .plan-imagen-responsive h1{
+      width: 99%;
+      margin-left: 15px;
+  
+    }
+
    /*CONTAINER TOTAL INCLUYE LA CAJA PLAN-POST-ALIMENTACION*/
     .plan-alimentacion{
       display: block;
-      width: 100%;
+      width: 92%;
+      margin-left: 15px;
+ 
     }
     
     /*CAJA DE PLAN-POST Y PLAN-POST-LETRA..*/
@@ -2858,13 +2871,15 @@ width: 100%;
 
   /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS..................................................*/
   /* NO PONER DISPLAY FLEX NI FLEX DIRECCION */
+  /*CATEGORIAS DE LA PAGINA RECETAS*/
   .categorias-subcategorias{
-     width: 04%;
+     width: 92%;
     height: 100%;
     max-height: 150px;
     display: flex;
     flex-direction: row;
     margin-top: 80px;
+    margin-left: 14px;
     margin-bottom:  25px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -2910,9 +2925,9 @@ width: 100%;
       /*--SLIDER DE CATEGORIAS DE PLAN, DIETA Y TURISMO--CATEGORIAS-------------------------------------.*/
      .caja-texto-slider{
       display: block;
-      width: 94%;
+      width: 92%;
       margin-top: 70px;
-      margin-left: 16px;
+      margin-left: 14px;
       }
     
       .endfor {
@@ -4602,24 +4617,23 @@ hr {
    
  
       /*caja */
- .menu-footer{
- width:100%;
-display: flex;
-flex-direction: column;
- }
+  .menu-footer{
+   width:100%;
+   display: flex;
+   flex-direction: column;
+  }
  
- .menu-footer .footer-text{
+  .menu-footer .footer-text{
    height: 100%;
    max-height: 25px;
- 
- }
- /*TITULO DEL MENU*/
-.menu-footer .footer-text h1{
-text-align: center;
+  }
+
+   /*TITULO DEL MENU*/
+   .menu-footer .footer-text h1{
+   text-align: center;
    font-size: 1.2rem;
- word-spacing: -2px;
- letter-spacing: -1.5px;
- 
+   word-spacing: -2px;
+   letter-spacing: -1.5px;
   }
 
    .menu-footer .footer-lista {
@@ -4670,33 +4684,32 @@ text-align: center;
 
 
 
-  /*......................................................................................IPAD.................................................*/
+  /*..............IPAD.................................................*/
    /*..............IPAD.......8 0........IPAD.......*/
- @media only screen and (min-width: 701px) and (max-width: 799px){
-
-   /*............................................*/
-   body{
-    padding:0;
+  @media only screen and (min-width: 701px) and (max-width: 799px){
+  html, body{
+    width: 100%;
+    height: 100%;
     margin: 0;
-    background-color: #fff;
-    color: rgba(0,0,0,.95);
-    font-family: "Argos",serif;
      }
 
-  html, body {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  height: 100%;
-  }
 
-   #wrapper {
-   margin:0;
-   box-sizing: border-box;
-   display: flex;
-   flex-direction: column;
-   min-height: 100vh;
+
+     #wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-spacing: 0;
+    border-collapse: collapse;
    }
-       
+
+  
+
+  #wrapper img {
+  width: 100%;
+  height: auto;
+  border: 0;
+   }
 
 
   #wrapper > * {
@@ -4707,6 +4720,7 @@ text-align: center;
   header{
   width:100%;
   height: 90px;
+  top:0;
   position: fixed;
   z-index: 2000;   /*IMPORTANTE  */
   margin: auto;
@@ -4714,57 +4728,55 @@ text-align: center;
   }
 
 
-  header.black{
+     header.black{
     width: 100%;
-  background-color: #fff;
-  height: 90px;
-  }
+    background-color: #fff;
+    height: 90px;
+    }
 
-   #container{
+     #container{
      display: flex;
      flex-direction: column;
-   width: 100%;
-  margin: auto;
-   margin-top:  70px;
-   margin-bottom: 180px;
-   }
-
-
-
-  
-     /*min-width: 641px;
-    max-width: 710px;*/
-    .cabecera{
-      width: 100%;
-      max-width: 718px;
-      display: block;
-      position: relative;
-      float: left;
-     height: 50px;
+     width: 100%;
+     margin-top:  70px;
+     margin-bottom: 180px;
+     padding-left: 0;
+     padding-right: 0;
      }
+ 
+
+  
+      .cabecera{
+       width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 50px;
+      }
   
 
-      /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
-     .cabecera .logo{
-      display: block;
-      position: relative;
-      float: left;
-      width: 100%;
-      max-width: 190px;
-       height: 50px;
+       /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
+    .cabecera .logo{
+      width: 25%;
+      max-width: 200px;
+      height: 50px;
        }
         
-       .logo img{
+       .cabecera .logo img{
+        display: block;
         width: 100%;
+        max-width: 150px;
         height: 50px;
-        margin-left: -13px;
+    
         }
       
     
         /*PARA QUE EL BOTON ENTRE EN EL CAJON DE SEARCH
    /*BUSCADOR*/
    .cabecera .buscador{
-     margin-left: -18px;
+   display: inline-flex;
+   width: 28%;
+   max-width: 350px;
    }
 
     .cabecera #controls{
@@ -4773,41 +4785,55 @@ text-align: center;
     margin-top: 4px;
     }
 
+    #custom-search-input-header {
+      width: 100%;
+      max-width: 330px;
+    }
+
       .buscador #controls   #custom-search-input-header .sin-borde{
+      width: 85%;
       font-size: 1em;
       padding: 4px;
       padding-left: 12px; /*MUEVE LA LETRA*/
       }
+
+      .buscador #controls   #custom-search-input-header .boton{
+        width: 12%;
+      }
     
+
+
+
               /*caja hay 2. A */
-    .menu-btn {
+    .cabecera .menu-btn {
     display: block;
     position: relative;
     float: right;
     width: 38%;
-    max-width: 140px;
+    max-width: 170px;
     height: 50px;
     margin: auto;
     }
     
 
 
-    .suscribe {
+    .cabecera .suscribe {
     display: block;
     position: relative;
     float: left;
     width: 100%;
-    max-width: 90px;
+    max-width: 130px;
     height: 50px;
-        }
+    }
     
       
-        .suscribe a h4{
-         font-size: 0.7rem;
+      .cabecera   .suscribe a h4{
+         font-size: 0.9rem;
          margin-top: 34px;
-         margin-left: 6px;
+         margin-left: 20px;
          font-weight: 700;
          letter-spacing: 0.5px;
+         font-family: 'Times New Roman', Times, serif;
         }
      
     
@@ -4833,7 +4859,6 @@ text-align: center;
    .menu-btn__burger::after {
     content: '';
     position: absolute;
- 
     width: 40px;
     height: 5px;
     background:#2d2d2d;
@@ -4842,7 +4867,7 @@ text-align: center;
     transition: all .5s ease-in-out;
     }
 
-  .boletin .menu-btn__burger:hover{
+    .boletin .menu-btn__burger:hover{
     background-color: #639a3a;
    }
 
@@ -4864,21 +4889,24 @@ text-align: center;
     z-index:3000;
    }
 
-  /* ANIMATION */
-  .menu-btn.open .menu-btn__burger {
+    /* ANIMATION */
+   .menu-btn.open .menu-btn__burger {
     transform: translateX(-50px);
     background: transparent;
     box-shadow: none;
-  }
-  .menu-btn.open .menu-btn__burger::before {
+    }
+
+    .menu-btn.open .menu-btn__burger::before {
     transform: rotate(45deg) translate(35px, -35px);
     background: #fff;
-  }
-  .menu-btn.open .menu-btn__burger::after {
+   }
+
+    .menu-btn.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
     background: #fff;
-  }
+     }
     
+
     /*margin-left: 5.4%;/*IMPORTANTE */
     nav{
     width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
@@ -4896,20 +4924,19 @@ text-align: center;
   
      /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL*/
       nav .nav{
-      margin-left: 10%;/*IMPORTANTE */
-      width: 48%;/*IMPORTANTE */
+      width: 80%;/*IMPORTANTE */
       height: 90%;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
       z-index: 60;
       display: flex;
       flex-direction: column;
+      margin-top: 40px;
+      margin-left: 50px;
       }
   
        /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
       nav .nav li{
       display: flex;
       width: 100%;
-      margin-top: 1.5%;/*IMPORTANTE */
-      filter: alpha(opacity=80);
       height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
       list-style: none;
       cursor:pointer;  
@@ -4919,22 +4946,16 @@ text-align: center;
       /*LETRAS*/
       nav .nav li a {
       transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-      width: 60%;
       height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
       z-index: 100;
       background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
       display: block;
-      border-radius: 8px solid #639a3a;
-       margin-top:3px;
-      position: absolute;
-       padding: 2px 2px ;
-      margin-left: -20px;
       color: #fff;
       font-weight: lighter;
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       text-transform: lowercase;
       letter-spacing: 1px;
-      font-family:  sans-serif;
+      font-family: 'Times New Roman', Times, serif;
       }
     
     
@@ -5142,26 +5163,24 @@ text-align: center;
    }
 
    /*ESTE ES EL PARRAFO*/
-  .portada-img3-responsive p{
-  font-size: 1.2rem;
-  margin-left: 8px;
-  font-family: 'Times New Roman', Times, serif;
-  color: #2d2d2d;
-  }
+   .portada-img3-responsive p{
+   font-size: 1.2rem;
+   margin-left: 8px;
+   font-family: 'Times New Roman', Times, serif;
+   color: #2d2d2d;
+   }
+     /*FIN  PORTADAS RESPONSIVE IPOD DE LAS DEMAS PAGINAS*/
 
-
-      /*FIN  PORTADAS RESPONSIVE IPOD DE LAS DEMAS PAGINAS*/
-
-
+  /* PAGINA CONTACTO RESPONSIVE IPOD*/
   /*..LETRAS DE IPOD RESPONSIVE....*/
-/*...PRIMER SEGMENTO DE LA PRIMERA FRASE................*/
-.imagen-responsive-ipod .portada-contacto-uno{
+  /*...CONTAINER DE LA PRIMERA FRASE................*/
+  .imagen-responsive-ipod .portada-contacto-uno{
   position: relative;
   overflow: hidden;
-  top: -300px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
-  left: 1px ;
+  top: -340px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
+  left: 50px ;
   width: 60%;
- }
+  }
 
    /*FRASE PRIMERA QUE LLEVA P*/
    .imagen-responsive-ipod .portada-contacto-uno .azulplata{
@@ -5170,9 +5189,9 @@ text-align: center;
   font-size: 1rem;
   font-family: 'Cabin', sans-serif;
   color:black;
-}
-/*--LETRA CRAFTED----------------------*/
-.imagen-responsive-ipod .portada-contacto-uno .otroestilo { 
+   }
+  /*--LETRA CRAFTED----------------------*/
+  .imagen-responsive-ipod .portada-contacto-uno .otroestilo { 
   font-weight: 300 ;
    font-size:   1.1rem;
    color:black ;
@@ -5181,31 +5200,34 @@ text-align: center;
    font-style: italic;
   }
 
-  /*---SEGUNDO PARRAFO-------------------------------------*/
-/*PROUDLY CRAFTED*/
+  /*---CONTAINER DEL SEGUNDO PARRAFO-------------------------------------*/
+  /*PROUDLY CRAFTED*/
 .imagen-responsive-ipod .portada-contacto-dos{
 position: relative;
 overflow: hidden;
-top: -320px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
-left: 1px ;
+top: -360px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+left: 50px ;
 width: 48%;
-
 }
 /* SEGUNDO PARRAFO Proudly crafted in  münich since 1987*/
 .imagen-responsive-ipod .portada-contacto-dos h6 {
 display:inline-block;
 padding-top: 43px; /*IMPORTANTE PARA DISTANCIAR EL PARRAFO DEL SIGIENTE PARRAFAO*/
 margin: 0;
-font-size: 1rem;
+font-size: 1.1rem;
+color: #000000;
+font-weight: 300;
+font-family: 'Cabin', sans-serif;
 }
 
-/*---TERCER PARRAFO----*/
+/*---CONTAINER DE SUSCRIBETE TERCER PARRAFO----*/
 .imagen-responsive-ipod .portada-contacto-tres{
 position: relative;
 overflow: hidden;
-top: -350px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
+top: -380px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
 width: 48%;
-left: 1px;
+left: 50px;
+
 }
 
 /*TERECER PARRAFO QUE SUBE*/
@@ -5235,6 +5257,12 @@ width: 100%;
 
 /*..FIN LETRAS DE IPOD RESPONSIVE...*/
 
+ /*FORMULARIO DE LA PAGINA CONTACTO IPOD RESPONSIVE*/
+ .row{
+   width: 90%;
+   margin-top: -120px;
+ }
+
 
    
     /*CONTENEDORES DE LOS TITULOS AISLADOS .......DE MEDIA QUERY 500 MAIXMO........*/
@@ -5263,7 +5291,7 @@ width: 100%;
 
 
   
-   .titulo-principal  .escrito a h1{
+   .titulo-principal  .escrito  h1{
    font-size: 2.1rem;
    width: 600px;
    letter-spacing: -0.9px;
@@ -5323,13 +5351,14 @@ width: 100%;
    /* SEGUNDO-SEGMENTO */
 
    .primer-segmento{
-   width: 100%;
-   margin: auto;
-   margin-top: 35px;  /*RELACIONADO CON EL TITULO*/
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
+    width: 93%;
+    margin: auto;
+    margin-top: 35px;  /*RELACIONADO CON EL TITULO*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     }
+
 
   .primer-segmento .tres{
   width: 25%;
@@ -5369,13 +5398,12 @@ width: 100%;
 
   /*CONTAINER DE POSTS ULIMOS */
   .dos-columnas{
-  width: 100%;
-  max-width: 750px;
+  width: 93%;
   display: flex;
   flex-direction: column;
   margin-top: 35px;  /*RELACIONADO CON EL DIV TITULO*/
   margin-bottom: 50px;
-
+  margin: auto;
   }
 
   .columna-left{
@@ -5394,62 +5422,61 @@ width: 100%;
 
    .post-ultimo{
      width: 100%;
-     max-width: 700px;
+     max-width: 720px;
      height: 200px;
      display: flex;
      flex-direction: row;
      justify-content: space-between; 
     }
 
-   .post-ultimo .posts-ultimos-imagen{
+
+
+    .post-ultimo .posts-ultimos-imagen{
+     width: 40%;
+     max-width: 320px;
+     height: 180px;
+     display: block;
+     position: relative;
+     float: left;
+     margin-right: 1px;
+     }
+
+
+    .posts-ultimos-imagen img{
+    width: 100%;
+     max-width: 290px;
+     }
+
+   .post-ultimo  .posts-ultimos-titulo{
    width: 40%;
-   max-width: 300px;
-   height: 160px;
+   max-width: 400px;
+   height: 200px;
    display: block;
    position: relative;
-   float: left;
-   margin-right: 1px;
-    }
-
-
-   .posts-ultimos-imagen img{
-   width: 100%;
-   max-width: 245px;
-   height: 160px;
+   float: right;
+   margin-right: 2px;
    }
 
-  .post-ultimo  .posts-ultimos-titulo{
-  width: 40%;
-  max-width: 400px;
-  height: 200px;
-  display: block;
-  position: relative;
-  float: right;
-  margin-right: 2px;
-  }
-
-  .posts-ultimos-titulo h1{
-  font-size: 1.6rem;
-  }
+   .posts-ultimos-titulo h1{
+   font-size: 1.6rem;
+   }
  
 
    /*-------------------#e9e9e9----------*/
-  .dos-columnas .columna-right{
-  display: block;
-  position: relative;
-  float: left;
-  width: 100%;
-  max-width: 700px;
-  margin-left: -0.01px;
-  }
+   .dos-columnas .columna-right{
+   display: block;
+   position: relative;
+   float: left;
+   width: 100%;
+    margin-left: -0.01px;
+    }
   
-   .columna-right-column{
-    width: 60%;
-    max-width: 700px;
+     .columna-right-column{
+    width: 80%;
     display: flex;
     flex-direction: column;
     margin: auto;
-   }
+      }
 
 
    .columna-vertical{
@@ -5494,7 +5521,6 @@ width: 100%;
   /*..CONTAINER DE LA FOTO GRANDE Y LOS POSTS.DEL INDEX UNA FOTO GRANDE Y 4 PEQUÑEAS*/
   .plan-total-alimentacion{
   width: 100%;
-  max-width: 850px;
   display: flex;
   flex-direction: column;
   margin-top:   15px;
@@ -5508,7 +5534,6 @@ width: 100%;
 
   .plan-imagen-responsive{
    width: 100%;
-   max-width: 850px;
    display: block;
    }
 
@@ -5518,60 +5543,62 @@ width: 100%;
   margin-bottom: 10px;
   }
 
-  .plan-total-alimentacion  .plan-imagen-responsive h2{
+  .plan-total-alimentacion  .plan-imagen-responsive h1{
   display: block;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 900;
+  margin-left: 26px;
+  margin-right: 20px;
   letter-spacing: -0.3px;
   }
 
 
-  /*..CONTAINER TOTAL TODOS LOS POSTS*/
-  .plan-alimentacion{
+  /*..CONTAINER PLAN-ALIMENTACION QUE TIENE A TODOS CONTAINER PLAN POST ALIMENT*/
+  .plan-total-alimentacion .plan-alimentacion{
    width: 100%;
-   max-width: 850px;
+   max-width: 714px;
    display: block;
+   margin: auto;
    margin-top: 40px;
   }
 
 
-    /*CONTAINER DE PLAN POST Y DE PLAN-POST-LETRA*/
-   .plan-post-alimentacion{
-   width: 340px;
-   height: 310px;
+    /*CONTAINER QUE TIENE A LA IMAGEN Y SU DESCRICPION */
+   .plan-alimentacion .plan-post-alimentacion{
+   width: 49.5%;
+   height: 100%;
+   max-height: 320px;
    display: block;
    position: relative;
    float: left;
    }
 
 
-   /*.................*/
-  /*CAJA DE LA IMAGEN*/
-     .plan-post-imagen{
+    /*.................*/
+   /*CAJA DE LA IMAGEN*/
+   .plan-post-alimentacion .plan-post-imagen{
       width: 100%;
-     max-width: 140px;
+      height: 190px;
      display: block;
      position: relative;
      float: left;
      }
 
-     .plan-post-imagen img{
+     .plan-post-alimentacion  .plan-post-imagen img{
       width: 100%;
-      max-width: 140px;
-      height: 100%;
-      max-height: 90px;
+  
       }
 
 
    /*CAJA PARA EL TITULO Y DESCRIPCION*/
    .plan-post-letra{
-    width: 100%;
-    max-width: 180px;
+    width: 45%;
+    
     display: block;
     position: relative;
     float: right;
-    margin-right: 9px;
+    margin-right: 20px;
    }
 
    .plan-post-letra h1{
@@ -5582,12 +5609,31 @@ width: 100%;
 
 
    /*DE LAS PAGINAS DE DIETA, PLAN Y TURISMO....................................*/
+
+    .categorias-subcategorias{
+      width: 93%;
+      margin-left: 28px;
+    }
+
+    .caja-texto-slider{
+      width: 93%;
+      margin-left: 28px;
+    }
+
+
+   .titulo-otras-paginas{
+     margin-left: 28px;
+   }
+
+
   #container-plan{
-  width: 100%;
-  max-width: 850px;
+  width: 93%;
   display: flex;
   flex-direction: column;
+  margin: auto;
    }
+
+
 
    #container-plan .container-columna-posts{
   width: 100%;

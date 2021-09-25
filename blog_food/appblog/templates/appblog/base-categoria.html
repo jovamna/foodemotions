@@ -10,7 +10,17 @@
     <title>{% block title %}Categoria{% endblock %}</title>
     <!-- STILOS -->
     <link rel="stylesheet" href="{% static 'appfood/css/categoria.css' %}">
-     <link rel="stylesheet" href="{% static 'appfood/css/responsivecategoria.css' %}">
+    <link rel="stylesheet" href="{% static 'appfood/css/responsivecategoria.css' %}">
+
+
+    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-48x48.png' %}"/>
+    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-60x60.png' %}"/>
+    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-72x72.png' %}"/>
+    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-96x96.png' %}"/>
+    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-144x144.png' %}"/>
+    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-192x192.png' %}"/>
+    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-icon.png' %}"/>
+    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-310x310.png' %}"/>
     
 
 
@@ -50,6 +60,20 @@
                                  </div>
                                 <!------- final caja logo------->
 
+
+            <div class="controls">
+              <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
+                  <div id="custom-search-input">
+	                <input type="text"  class="sin-borde" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
+                    <button type="submit" name="submit" class="boton btn-succes" value="Search"> 
+                    <span class="icon"><i class="fa fa-search"></i></span>   
+                    </button>
+                          <!--</span>-->
+                 </div>
+             </form>
+	       </div>
+                    
+
                              
                            <!-- BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
                              <div class="menu-btn">
@@ -82,7 +106,7 @@
                 </li>
         
                 <li> 
-                <a class="{% active 'appfood:recetas-saludables' %}" href="{% url 'appfood:recetas-saludables' %}"> <p> Recetas Sanas</p> </a>
+                <a class="{% active 'appfood:recetas-saludables' %}" href="{% url 'appfood:recetas-saludables' %}"><p>Recetas Saludables</p></a>
                         <ul>  
                         {% load mptt_tags %} 
                         <!-- LAS CATEGORIAS------->
@@ -97,7 +121,7 @@
               
                 <li>
                 <a href="{% url 'appfood:recetas-dieteticas' %}">
-                <p>Batidos y Ensaladas</p>
+                <p>Recetas Dieteticas</p>
                 </a>
                                                       <ul>
                                                        <li><a href="#menu">batidos</a></li>
@@ -110,18 +134,12 @@
                 </li>
 
                <li > 
-                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"><p> Dietas y Alimentacion Sana </p>  </a> 
+                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"><p> Dietas y Alimentacion Saludable </p>  </a> 
                 </li>
 
                 <li> 
                 <a class="{% active 'appfood:noticias-turismo-gastronomico' %}" href="{% url 'appfood:noticias-turismo-gastronomico' %}"><p> Turismo</p>  </a>
-                        <ul> 
-                             <li><a href="#menu">Naranjas</a>
-                             </li>
-                                                     
-                             <li><a href="#menu">Naranjas</a>
-                             </li>
-                        </ul>
+                    
                 </li>
               
                 <li> 
@@ -140,9 +158,25 @@
                         </header>
 
 
+
               <!-- CONTENEDOR DEL CUERPO DEL BODY------------------------------------------------------------------------->
  <div id="container-categorias">
  
+       {% block buscador-responsive %}
+        <div id="controls-responsive">
+                <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
+                    <div id="custom-search-input-responsive">
+	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
+                                 
+                          <button type="submit" name="submit" class="boton-responsive btn-succes" value="Search"> 
+                          <span class="icon"><i class="fa fa-search"></i></span>   
+                          </button>
+                          <!--</span>-->
+                    </div>
+                </form>
+	        </div>
+             {% endblock buscador-responsive %}
+
    <!-- CARROUSEL DE MAGENES-------------------------------------------------------------------------->
  
       {% block content %}        

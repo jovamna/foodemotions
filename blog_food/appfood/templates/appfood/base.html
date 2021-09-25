@@ -40,11 +40,6 @@
 
 
        
-
-
-
-
-
        {% if object.slug in request.path %}
       <meta property="og:title" content="{{object.Foodingemotion}}">
       <meta property="og:url" content="https://www.foodingemotion.com/{{object.slug}}" >
@@ -95,13 +90,7 @@
       <meta property="fb:app_id" content="165082593548215">
       <meta property="fb:pages" content="10053803772">
 
-   <!---  "/apple-icon-36x36.png" --->
-     <link  rel = "food-touch-icon"  type="icon/png" tamaños = "36x36"  href = "img/favicon/android-icon-36x36.png" > 
-     <link  rel = "food-touch-icon"  type="icon/png" tamaños = "48x48"  href = "img/favicon/android-icon-48x48.png" > 
-     <link  rel = "food-touch-icon " type="icon/png"  tamaños = " 72x72 "  href = "img/favicon/android-icon-72x72.png " > 
-     <link  rel = "food-touch-icon "  type="icon/png" tamaños = "96x96"  href = "img/favicon/android-icon-96x96.png" > 
-     <link  rel = "food-touch-icon "  type="icon/png" tamaños = "144x144"  href = "img/favicon/android-icon-144x144.png"> 
-     <link  rel = "food-touch-icon" type="icon/png"  tamaños = "192x192"  href = "img/favicon/android-icon-192x192.png" > 
+ 
 
      <!--<link rel="shorcut icon" href="favicon.png"-->
 
@@ -110,18 +99,25 @@
      <link  rel="icon"   href="img/favicon.png" type="image/png" />
      <link  rel = "apple-touch-icon"  tamaños = "57x57"  href = "/favicon/android-icon-57x57.png" > 
 
-     <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-48x48.png' %}"/>
-  
-     <link  rel = "food-touch-icon"  tamaños = "60x60"  href = "img/favicon/android-icon-60x60.png " > 
-     <link  rel = "food-touch-icon" tamaños = " 72x72 "  href = "img/favicon/android-icon-72x72.png" > 
-     <link  rel = "food-touch-icon"  tamaños = "76x76"  href = "img/favicon/android-icon-76x76.png" > 
-     <link  rel ="food-touch-icon"  tamaños = " 114x114 "  href = "img/favicon/android-icon-114x114.png "> 
-     <link  rel = "food-touch-icon" tamaños = "120x120"  href = "img/favicon/android-icon-120x120.png" > 
-     <link  rel = "food-touch-icon" tamaños = "144x144"  href = "img/favicon/android-icon-144x144.png " > 
-     <link  rel = "food-touch-icon" tamaños = " 152x152 "  href = "img/favicon/android-icon-152x152.png" > 
-     <link  rel = "food-touch-icon" tamaños = "180x180"  href = "img/favicon/android-icon-180x180.png" > 
-     <link  rel = "food-touch-icon"   type="icon/png"  tamaños = "192x192"  href = "img/favicon/android-icon-192x192.png" >  
-     <link  rel = " manifiesto " href = "/manifest.json" > 
+
+       <!---PROBAR EN ANDROID--->
+      <meta name="viewport" content="width=device-width"> 
+      <meta name="mobile-web-app-capable" content="yes">   
+       <!----------------------->
+       
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-48x48.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-60x60.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-72x72.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-96x96.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-144x144.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-192x192.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-icon.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-310x310.png' %}"/>
+
+
+
+     <!--<link  rel = "manifest" href = "/manifest.json" > -->
+     <link rel="manifest" href="{% static 'appfood/js/manifest.webmanifest' %}">
      <meta  nombre ="msapplication-TileColor"  content = "#ffffff" > 
      <meta  name = "msapplication-TileImage"  content = "/ms-icon-144x144.png" > 
      <meta  name = "theme-color"  content = "#ffffff" >
@@ -207,27 +203,7 @@
          <!---<nav class="nav"> ---->
 
 
-     <!------------------------------------------------------------------------------------------------------>
- 
-        <div id="controls-responsive">
-              <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
-                
-                        <div id="custom-search-input-responsive">
-	                           <input type="text"  name="q" 
-                             value= "{{ request.GET.q }}" class="sin-borde"  id="letra"
-                             placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off" >
-                              
-
-                            <button type="submit" name="submit" class="boton btn-succes" value="Search" >
-                            <span class="icon"><i class="fa fa-search"></i></span> 
-                           </button>
-
-                      </div>
-            
-            </form>                 
-       </div>
-
-    <!------------------------------------------------------------------------------------------------->
+    
 
 
    <!----- NAVEGATION--------EN PANTALLA----AGRANDE---------------------------------------------------------------->
@@ -382,6 +358,27 @@
             </form>                 
        </div>
     </div>------------------------------------------------------------------------------------------->
+     <!------------------------------------------------------------------------------------------------------>
+ 
+        <div id="controls-responsive">
+              <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                
+                        <div id="custom-search-input-responsive">
+	                           <input type="text"  name="q" 
+                             value= "{{ request.GET.q }}" class="sin-borde"  id="letra"
+                             placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off" >
+                              
+
+                            <button type="submit" name="submit" class="boton btn-succes" value="Search" >
+                            <span class="icon"><i class="fa fa-search"></i></span> 
+                           </button>
+
+                      </div>
+            
+            </form>                 
+       </div>
+
+    <!------------------------------------------------------------------------------------------------->
 
    {% block content %}    
      <!-- CONTAINER PRINCIPAL DE TODO EL CONTENIDO-->

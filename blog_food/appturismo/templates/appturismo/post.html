@@ -241,33 +241,9 @@
      <!-- CIERRE DIV DE PRIMERA COLUMNA----------------------------------------------------------------------------------------------->
    
 
-   <!---------------OTRO COMMENT-->
-
- <!---OTRO COMENTS???-----------------------ESTE ES EL QUE FALLA------------------------------------------------>
-   
-<!------------------------------------------------------------------------------->
  
 
-<!------------OTRO FORMULARIO---------------------------------------------------->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!---------------------------------------------------------------------->
      <!----------COMENTARIOS COMENTARIOS COMENTARIOS COMENTARIOS---------------------->
         <div id="comentarios">
            <!---------------------------------------------------------------------------->
@@ -388,22 +364,8 @@
        <!----CIERRE DIV COMENTARIOS---------FIN ALL COMMENTS---------------------------->
 
 
-
-
-
-
-
-
-<!----------------FIN FORMULARIO--------------------------------------->
-
-
-
-
-
-
-<!---FIN OTRO COMMENT---------------->
   
-<!-----------------FIN ALL COMMENTS---------------------------->
+      <!-----------------FIN ALL COMMENTS---------------------------->
 
 
    <script>
@@ -480,30 +442,17 @@
 </script>
 
 
-
-
-
-   
-  
-
-
-
    <!--CIERRE COMEMNTS----------------------------------------->
 
-
-
-
-
-   <!---CIERRE DEL BLOCK QUE CONTIENE COFIDICACION---->
           {% endblock content %}
       <!-- CIERRE DIV DE  COLUMNA PRIMERA------------------->
        </div> 
 
                        
  
-<!------------------------- TERCERA COLUMNA----------------------------------------------------------->
+    <!------------------------- TERCERA COLUMNA----------------------------------------------------------->
+   {% block tercera-columna %}
         <div class="tercera-columna-fija">
- {% block tercera-columna %}
         <!-------------------------BUSCADOR------------------>
                   <div class="controls">
                      <form  method = "GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}"> {% csrf_token %}
@@ -519,8 +468,10 @@
         <!------------------FINAL BUSCADOR--------------------------->
          <div class="tercera-columna">
                  <em><h2> mas temas..</h2></em>
+                     <div class="aside-colum">
                  <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
                    <p>How to take the shame out of self-promotion </p>
+                   </div>
          </div>
         <!----------------------------- -------------->
       
@@ -535,15 +486,12 @@
                                    {% endfor %}            
 
            </div>          
-    <!-------------FIN CATEGORIAS------------------------------>
-{% endblock tercera-columna %}
+         <!-------------FIN CATEGORIAS------------------------------>
         </div>
+        {% endblock tercera-columna %}
        <!-- FINAL DIV TERCERA COLUMNA-->
      
      <!-- CIERRE DE LAS TRES COLUMNAS-->
-
-
-
 
     </div>    
 
