@@ -226,26 +226,6 @@
 
         <!-- CONTAINER GENERAL SEGUNDO  -->
         <div id="container-nosotros">
-         <!------------------------------------------------------------------------------------------------------------>
-     <div class="buscador-responsive">
-               <div id="controls-responsive">
-              <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
-                  <!------------------------------------------------------------------>
-                  <div id="custom-search-input-responsive">
-	                  <input type="text"  name="q" 
-                    value= "{{ request.GET.q }}" class="sin-borde" 
-                    placeholder=  "    Buscar en Foodingemotion.com ... " autocomplete="off" >
-                    <!---------------------------------------------------------------->             
-                    <button type="submit" name="submit" class="boton btn-succes" value="Search" >
-                    <span class="icon"><i class="fa fa-search"></i></span> 
-                  </button>
-                </div>
-                <!--------------------------------------------------------------------->
-             </form>                 
-             </div>
-    </div>
-   <!---------------------------------------------------------------------------------------------------------------->
-
 
             <div class="tres-columnas-nosotros">
                 <!-- PRIMERA COLUMNA DE LOS CONTENIDOS-->

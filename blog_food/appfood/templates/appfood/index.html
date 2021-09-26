@@ -143,13 +143,13 @@
                 <div class="posts-ultimos-titulo">
                  <!------------------------------------->
                 <div class="post-ultimo-titulo">
-                <a href ="{% url 'apprecetas:receta' receta.slug %}">
-                <h1>{{receta.title}}</h1>
-                </a>        
-                <p>{{receta.description|safe|linebreaksbr|truncatechars:130}}.</p>
-                <a href ="{% url 'apprecetas:receta' receta.slug %}">
-                <p>Leer mas...</p>
-                </a>
+                    <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                      <h1> {{receta.title}}</h1></a> 
+                      <p>{{receta.description|safe|linebreaksbr|truncatechars:200}}.</p>       
+              
+                        <p> <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                        Leer mas...
+                        </a></p>
                 </div>
                <!------------------------------------->
                </div>
@@ -178,7 +178,7 @@
                       <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
                       <h1>{{perderpeso.title}}</h1>
                       </a>
-                      <p>{{perderpeso.description|safe|truncatechars:90}}.</p>
+                      <p>{{perderpeso.description|safe|truncatechars:120}}.</p>
                       <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
                       <p>Leer mas...</p>
                       </a>
@@ -207,13 +207,15 @@
                       <div class="posts-ultimos-titulo">
                         <!------------------------------------->
                          <div class="post-ultimo-titulo">
-                           <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
-                           <h1>{{recipe.title}}</h1>
-                          </a>
-                          <p>{{recipe.description|safe|linebreaksbr|truncatechars:120}}.</p>
-                          <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
-                          <p>Leer mas...</p>
-                         </a>
+                            <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                            <h1>{{recipe.title}}</h1>
+                            </a>
+
+                            <p>{{recipe.description|safe|linebreaksbr|truncatechars:120}}.</p>
+
+                            <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                            <p>Leer mas...</p>
+                            </a>
                         </div>
                     <!-------------------------------------------->
                      </div>

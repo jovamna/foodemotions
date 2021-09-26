@@ -1020,12 +1020,8 @@ nav{
   /*CONTAINER GENERAL DEL CARRUSEL............................................. */
   .container-total-carrusell{
     display: block;
-    width: 100%;
-    margin: auto;
     position: relative;
-    margin-top: 5%;
-    margin-bottom: 80px;
-    
+  
     }
   
     /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
@@ -1033,21 +1029,20 @@ nav{
       float:left;
       width:90%;
       overflow:hidden;
-      height: 400px;
+     height: 305px;
       position:relative;
-      margin-bottom: 70px;
+      margin: auto;
+      margin-bottom: 20px;
       }
       
       
        /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
-      #carrusel h2{
-          font-size:  2rem;
+      #carrusel h1{
+          font-size:  24px;
           word-spacing: -3px;
           letter-spacing: -2px;
-          font-family: 'Times New Roman', Times, serif;
-          padding-bottom: 10px;
-          color: #000000;
-          margin-left: 5px;
+          font-family: 'Archivo Black', sans-serif;
+          margin-bottom: 8px;
           
       }
     
@@ -1055,7 +1050,6 @@ nav{
        /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
          .carrusel {
           width:4000px;
-          height: 480px;
           left: 1px;
           position:absolute;
           z-index:0;
@@ -1064,8 +1058,7 @@ nav{
        /*MODIFICAR ANCHO Y ALTO  */
       .carrusel>div {
           float: left;
-          height: 100%;
-          max-height: 250px;
+    
           margin-right: 14px;   /*ESPACIO */
           width: 100%;
           max-width: 260px;
@@ -1075,15 +1068,13 @@ nav{
       cursor:pointer;
       width: 100%;
       max-width: 260px;
-      height: 100%;
-      max-height: 245px;
+      height: 210px;
       border: #666 1px solid;
-    
       border-radius:6px;
       }
        
       #carrusel i{
-      border: 3px solid  #DCDCDC;
+      border: 3px solid  #c0b7b7;
       border-width: 0 2px 2px 0;
       display: inline-block;
       padding: 6px;
@@ -1097,19 +1088,19 @@ nav{
   
       .carrusel p{
           letter-spacing: -0.2px;
-          font-family: 'Archivo Black' 'sans serif';
+          font-family: 'Cabin', sans-serif;
           text-align: center;
           font-size: 1rem;
           font-weight: 400;
-          font-weight: 900;
           line-height: 1.45;
-          color: #2d2d2d;
+          color: #666;
           text-overflow: ellipsis;
       }
   
-      /*CNTAINER DE CADA IMAGEN*/
+      /*CNTAINER DE CADA IMAGEN no poner border    border:#CCCCCC 0px solid;*/
       .product {
-          border:#CCCCCC 1px solid;
+       width: 100%;
+       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         }
       
       
@@ -1119,7 +1110,7 @@ nav{
       width: 100%;
       display: flex;
       position: absolute;
-      margin-top: 11%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+      margin-top: 9%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
       margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
       }
     
@@ -1134,11 +1125,11 @@ nav{
       }
     
       /*MEDIDAS PARA HACER EL CIRCULO*/
-    .carusel li{
+     .carusel li{
      list-style: none;
      width: 40px;
      height: 40px;
-    display: flex;
+     display: flex;
      border-radius: 50%;
      transition: .5s;
     }
@@ -1146,6 +1137,7 @@ nav{
     .container-total-carrusell ul li:hover{
     background-color: #639a63;
     }
+  
     .container-total-carrusell .carusel ul li span{
       position: absolute;
       width: 15px;   /* TAMAÑO DEL CUADRADO QUE SE CONVERTIRA EN FLECHA ......... */
@@ -1223,19 +1215,12 @@ nav{
     .container-total-carrusell ul li.left-arrow:hover span:before{
       transform: rotate(45deg) translate(6px, 14px) scaleX(1);
       }
-      /*............................................*/
-  
-  
-        /*NO PONER NADA AQUI*/
-
-   
-    
-    /*FINAL CARRUSEL...................... */
+     
     
     
     
-  /*FINAL CARRUSEL.........FINAL CARRUSEL................. */
-/*FINAL CARRUSEL................................................................FINAL CARRUSEL.................................... */
+       /*FINAL CARRUSEL.........FINAL CARRUSEL................. */
+     /*FINAL CARRUSEL................................................................FINAL CARRUSEL.................................... */
 
 
 /* ...PAGINACION ...................................*/

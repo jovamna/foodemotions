@@ -352,7 +352,7 @@
      <div class="container-total-carrusell">
          <!-- CARROUSEL DE MAGENES-->
          <div id="carrusel">
-                       <em><h2>Novedades</h2></em>
+                       <em><h1>Novedades</h1></em>
 
                                <!-----FLECHAS------------------------------------->
                                <div class="carusel">
@@ -366,62 +366,70 @@
             
             <div class="carrusel">
                                <!----------------------------------------->
+                                  <!----------------------------------------->
                                <div class="product" id="product_0">
-                              <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                              <img src="{% static 'appfood/img/carrusell/260-210-recetasalud.jpg' %}" />
                                <a href="{% url 'appfood:recetas-saludables' %}">
-                               <p>Alimentacion Sana</p>
+                               <p>Recetas Saludables</p>
                                </a>
                              </div>
                            
                            <!---------------------------------------------->
                         <!---------------------------------------------->
                          <div class="product" id="product_1">
-                         <img src="{% static 'appfood/img/articulo/230-250carul.jpg' %}" width="230" height="250" />
-                         <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}">
-                           <p> Dietas y Alimentacion Sana </p>  </a>
-                        
+                          <img src="{% static 'appfood/img/carrusell/260-210perder.jpg' %}" />
+                               <a href="{% url 'appfood:plan-comidas-saludables' %}">
+                               <p>Perder Peso</p>
+                               </a>
                     </div>
                      <!---------------------------------------------->
                       <!---------------------------------------------->
                     <div class="product" id="product_2">
-                        <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                         <a href="{% url 'appfood:recetas-saludables' %}"> 
-                         <p>Recetas Saludables</p>
+                        <img src="{% static 'appfood/img/carrusell/260-210-recetdiet.jpg' %}" />
+                         <a href="{% url 'appfood:recetas-dieteticas' %}"> 
+                         <p>Batidos</p>
                          </a>
                     </div>
                      <!---------------------------------------------->
                      <!---------------------------------------------->
                     <div class="product" id="product_3">
-                        <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
+                        <img src="{% static 'appfood/img/carrusell/260-210-vegano.jpg' %}" />
                         <a href="{% url 'appfood:recetas-dieteticas' %}">
-                         <p>Recetas Dieteticas</p>
+                         <p>Recetas Veganas</p>
                           </a>
                     </div>
                      <!---------------------------------------------->
                       <!---------------------------------------------->
                     <div class="product" id="product_4">
-                         <img src="{% static 'appfood/img/articulo/230-250carul.png' %}" />
-                         <a href="{% url 'appfood:recetas-saludables' %}">
-                        <p>Novedades en Recetas Sanas</p>
+                         <img src="{% static 'appfood/img/carrusell/260-210-turisfrut.jpg' %}" />
+                         <a href="{% url 'appfood:noticias-turismo-gastronomico' %}">
+                        <p>Frutas exóticas</p>
                         </a>
                     </div>
                      <!---------------------------------------------->
                       <!---------------------------------------------->
                     <div class="product" id="product_5">
-                         <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                         <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"><p> Dietas y Alimentacion Sana </p>  </a>
+                         <img src="{% static 'appfood/img/carrusell/260-210-dietaalimen1.jpg' %}" />
+                        <a href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}">
+                        <p>Dieta Vegetariana</p>
+                        </a>
                     </div>
                       <!---------------------------------------------->
                       <!---------------------------------------------->
                     <div class="product" id="product_6">
-                        <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                     <a class="{% active 'appfood:plan-comidas-saludables' %}" href="{% url 'appfood:plan-comidas-saludables' %}">Plan Comidas Saludables</a>
+                        <img src="{% static 'appfood/img/carrusell/260-210-gastroitalo.jpg' %}" />
+                        <a href="{% url 'appfood:recetas-saludables' %}">
+                         <p>Gastronomia Italiana</p>
+                         </a>
                     </div>
                      <!---------------------------------------------->
                    <!---------------------------------------------->
                     <div class="product" id="product_7">
-                         <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                         <a class="{% active 'appfood:noticias-turismo-gastronomico' %}" href="{% url 'appfood:noticias-turismo-gastronomico' %}">Turismo </a>
+                         <img src="{% static 'appfood/img/carrusell/260-210-dietaalimen.jpg' %}" />
+                             <a href="{% url 'appblog:dietas-especiales-y-alimentacion-saludable' %}">
+                         <p>Alimentacion y Dietas Saludables</p>
+                         </a>
+                    </div>
                      <!---------------------------------------------->
 
               </div>

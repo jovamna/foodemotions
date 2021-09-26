@@ -1233,13 +1233,13 @@ height: 100%;
     
     
      /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
-    #carrusel h2{
+        #carrusel h1{
         font-size:  24px;
         word-spacing: -3px;
         letter-spacing: -2px;
         font-family: 'Archivo Black', sans-serif;
-        
-    }
+        margin-bottom: 8px;
+        }
   
     /*CONTAINER DE TODAS LAS IMAGENES*/
      /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
@@ -1269,7 +1269,7 @@ height: 100%;
     }
      
     #carrusel i{
-    border: 3px solid  #c70808;
+    border: 3px solid  #635f5f;
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 6px;
@@ -1292,11 +1292,12 @@ height: 100%;
         text-overflow: ellipsis;
     }
 
-    /*CNTAINER DE CADA IMAGEN*/
+    /*CNTAINER DE CADA IMAGEN no poner border    border:#CCCCCC 0px solid;*/
     .product {
-        border:#CCCCCC 1px solid;
-      }
-    
+      width: 100%;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+       }
+     
     
   /*..CONTAINER DE LAS FLECHAS Y CIRCULO ...*/ 
   /*ALTURA DEL CIRCULO CON LA FLECHA INCLUIDA......... */
@@ -1332,6 +1333,7 @@ height: 100%;
   background-color: #639a63;
   }
 
+  /*PALO*/
   .container-total-carrusell .carusel ul li span{
     position: absolute;
     width: 15px;   /* TAMAÑO DEL CUADRADO QUE SE CONVERTIRA EN FLECHA ......... */

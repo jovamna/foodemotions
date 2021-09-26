@@ -31,251 +31,543 @@
   
     
   
-    #wrapper img {
-    width: 100%;
-    height: auto;
-    border: 0;
+     #wrapper img {
+     width: 100%;
+     height: auto;
+     border: 0;
      }
-
-
-
-
-
-
-  header{
-    width:100%;
-    background-color: #fff;
+  
+  
+     #wrapper > * {
+     padding: 17px;
+     }  
+  
+  
+      .cabecera{
+      display: none;
+      visibility: hidden;
+      }
+  
+  
+        /*.. #DCDCDC ..*/
+         header{
+          display: block;
+          width:100%;
+         height: 58px;
+         top:0;
+         position: fixed;
+         z-index: 2000;   /*IMPORTANTE  */
+         margin: auto;
+         box-shadow: 0 8px 6px -6px #c6c6c6;
+         background-color: #fff;
+        }
+     
+  
+     
+     header.black{
+      height:  58px;
+     }
+   
+     /*.. max-with:640px;...*/
+     .cabecera-responsive{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 35px;
+      margin-top: -4px;
+       padding-top: 0;
+       padding-bottom: 0;
+       }
+      
+    
+     
+     /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
+      .logo{
+        display: block;
+        position: relative;
+        float: left;
+        width: 20%;
+        max-width: 190px;
+        height: 35px;
+       
+       }
+        
+    
+        .logo img{
+        width: 100%;
+        max-width: 114px;
+       height: 35px; 
+  
+       }
+    
+    
+              /*caja hay 2. A */
+        .cabecera-responsive .menu-btn {
+          display: block;
+          position: relative;
+          float: right;
+          width: 30%;
+          max-width: 200px;
+          height: 35px;
+          margin: auto;
+        }
+    
+  
+        .cabecera-responsive  .menu-btn  .suscribe {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          max-width: 90px;
+          height: 36px;
+          margin: auto;
+         }
+    
+      
+        .cabecera-responsive .menu-btn  .suscribe a h4{
+          font-size: 0.9rem;
+          margin-top: 20px;
+          margin-left: 2px;
+          font-weight: 700;
+          letter-spacing: 0.2px;
+          font-family: 'Times New Roman', Times, serif;
+        }
+     
+  
+       
+  
+    
+  
+        /*---------------------------------------------------------------------*/
+      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+      .cabecera-responsive .menu-btn .menu-btn__burger {
+       display: block;
+       position: relative;
+       float: right;
+       margin-top: 22px;
+        width: 34px;
+        height: 4px;
+        background: #2d2d2d;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2);
+        transition: all .5s ease-in-out;
+        z-index: 1000;
+         }
+     
+  
+  
+         .cabecera-responsive  .menu-btn__burger::before,
+         .cabecera-responsive .menu-btn__burger::after {
+           content: '';
+           position: absolute;
+           height: 4px;
+           width: 34px;  /*IMPORTANTE*/
+           background:#2d2d2d;
+           border-radius: 2px;
+           box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+           transition: all .5s ease-in-out;
+          z-index: 800;  
+         }
+  
+       
+         .cabecera-responsive  .menu-btn .menu-btn__burger::before {
+       transform: translateY(-8px);
+  
+       }
+  
+  
+       .cabecera-responsive .menu-btn .menu-btn__burger::after {
+     transform: translateY(8px);
+  
+     }
+  
+  
+     /* ANIMATION */
+     .cabecera-responsive  .menu-btn.open .menu-btn__burger {
+     transform: translateX(-50px);
+     background: transparent;
+     box-shadow: none;
+     }
+  
+     .cabecera-responsive .menu-btn.open .menu-btn__burger::before {
+     transform: rotate(45deg) translate(35px, -35px);
+     background: #fff;
+     }
+  
+     .cabecera-responsive  .menu-btn.open .menu-btn__burger::after {
+         transform: rotate(-45deg) translate(35px, 35px);
+         background: #fff;
+       }
+  
+  
+  
+  
+  
+  
+       .cabecera-responsive .nenu-btn .menu-btn__burger:hover{
+         background-color: #639a3a;
+       }
+     
+  
+       .cabecera-responsive  .menu-btn .menu-btn__burger:hover::before{
+        background-color: #639a3a;
+      }
+  
+  
+       .cabecera-responsive   .menu-btn .menu-btn__burger:hover::after{
+         background-color: #639a3a;
+       }
+  
+  
+  
+  
+  
+  
+  /*..FIN CABECERA RESPONSIVE.................*/
+  /*margin-left: 5.4%;/*IMPORTANTE */
+  nav{
     position: fixed;
-    z-index: 2000;
-    margin: auto;
-    top: 0;
-    height: 50px;
-    }
-    
-    
-    header.black{
-    background-color: #fff;
-    }
-    
-
-  #wrapper > * {
-  padding: 5px;
-  }
-  .cabecera{
     width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-  }
-  .logo{
-    height: 50px;
-  }
-
-  .logo img{
-    width: 100%;
-    height: 50px;
-  }
-  .boletin{
-    display: block;
-
-  }
-  .boletin .menu-btn{
-    display: block;
- 
-  }
-
-   .menu-btn__burger{
-    display: block;
-    margin: auto;
+    max-width: 420px;
+    height: 100%;
+     top: 0px;  /*IMPORTANTE para que arriba no tenga espacios */
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+    opacity: 0.99;
+     background-color: #000000;
+     z-index: 200;
+    }
+  
+    nav  .nav li a.active{
+      text-decoration:line-through;
+      color: #568632;
+      }
+  
+     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+     nav .nav{
+      width:100%; 
+    
+      display: flex;
+      flex-direction: column;
+      height: 85%;  
+       margin-left: 6px;
+      top : 5px;
+       z-index: 60; 
+    
+      }
+        /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+        nav .nav li{
+          margin-top: 5px;/*IMPORTANTE */
+        list-style: none;
+        height: 35px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+        margin-left: 10px;
+        margin-bottom: 15px;
+        cursor:pointer;
+        }
+        
+        nav .nav li a {
+        z-index: 100;
+        background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+        display: flex;
+        width: 100%;
+        height: 55px;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 1.24rem;
+        text-transform: lowercase;
+        letter-spacing: 1px;
+        font-family:  sans-serif;
+        }
+      
+         /*IMPORTANTE*/
+  
+       
+      
+   
+        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+     
+        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+     nav .nav li:hover > ul {
+      display: block;
+     margin-left: -200px;
+     height: 200px;
+     visibility: visible; 
+     z-index: 598;
+     }
+  
+      nav .nav li ul li a{
+      font-size: 1rem;
+      display: block;
+      position: absolute;
+      max-width: 200px;
+      width: 100%;
+      margin-left: -2px;
+      padding-bottom: -2px;
+      margin-left: -76px;
+      }
+  
+       nav .nav ul {
+      visibility: hidden;
+      }
+  
+        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+    
+   /*ANIMACION SUBRAYADO */
+   nav a {
+   display: inline-block;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   z-index: 40;
    }
-  #container-nosotros{
+  
+    nav  a:after {
+   content: "";
+   display: block;
+   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+   height: 2px;
+   width: 0px;
+   transition: all .8s;
+   z-index: 10;
+   }
+  
+    nav  a:hover:after {
     width: 100%;
-    margin: auto;
-    margin-top: 18%;
-
+    padding-left: 40px;
+    padding-right: -150px;
+    height: 2px;
+    background: white;
     }
-
-
-  .tres-columnas-nosotros{
+  
+  
+    /*.......................................*/
+     #container-nosotros{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+      margin-top: 50px;
+      padding-left: 0;
+      padding-right: 0;
+      }
+  
+  
+     .tres-columnas-nosotros{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 40px;
+      }
+      
+  
+      .nosotros{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin:  auto;
+      z-index: 10;
+      }
+  
+  
+        .articulo{
+          width: 93%;
+          margin: auto;
+        }
+      .nosotros .articulo h1{
+      line-height: 22px;
+      font-weight: bolder;
+      font-size: 1.3rem;
+      word-spacing: 2px;
+      letter-spacing: -0.2;
+      font-family: 'Archivo Black', sans-serif;
+      margin-bottom: 20px;
+      }
+  
+      .nosotros .articulo p{
+      line-height: 22px;
+      font-weight: bolder;
+      font-size: 0.9rem;
+      word-spacing: 1px;
+      letter-spacing: -0.02rem;
+      font-family: 'Open sans';
+      margin-top: 5px;
+      }
+            
+        
+  
+       /*IMAGENES*/
+       .dos-imagenes{
+       width: 100%;
+       max-width: 800px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin-top: 30px;
+      }
+  
+     .foto{
+    width: 49.9%;
+     }
+  
+    .foto img{
+    width: 100%;
+     }
+  
+   blockquote{
+    width: 100%;
+    margin-top: 10%;
+     }
+     
+   blockquote h3{
+    margin-top: -30px;
+    margin-left: 38px;
+    margin-right: 30px;
+   font-size: 0.8rem;
+  color: #666;
+  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+  }
+  
+     blockquote p {
+    margin-top: 30px;
+    margin-left: 150px;
+    font-size: 0.6rem;
+    color: #000;
+    font-weight: 900;
+     font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+     }
+  
+     blockquote .otroestilo{
+    margin-top: 30px;
+    margin-left: 5px;
+    font-size: 0.5rem;
+    color:#666;
+    font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+     }
+   /*NOMBRE DEL FINDADOR*/
+  
+       blockquote p{
+      font-size: 0.6rem;
+      margin-right: 8px;
+      }
+  
+  
+      /* cuarta ..caja ............................. */
+    .dibujo{
+    width: 100%;
+    margin-top: 10%;
+    }
+  
+    .dibujo img{
+    width: 100%;
+   
+     }
+     
+     
+    /*quinta       caja ..................................... */
+    /*ARTICULO DOS */
+   .articulo-dos{
+    display: flex;
+    flex-direction:column;
+    width: 93%;
+    margin: auto;
+    margin-top: 6%;
+    margin-bottom: 1px;
+    }
+     
+   
+     
+    .articulo-dos .articulo-dos-uno{
+     width: 100%;
+     max-width: 600px;
+     display: flex;
+     flex-direction:column;
+     margin-bottom: 4%;
+     }
+     
+   .articulo-dos-uno h1{
+   line-height: 15px;
+   font-weight: bolder;
+   font-size: 1.2rem;
+   word-spacing: 2px;
+   letter-spacing: -0.8px;
+   font-family: 'Open sans';
+   margin-bottom: 10px;
+   }
+   
+   
+   
+   
+   
+   .articulo-dos-uno p {
+   font-family: "Open sans";
+   font-size: 0.9rem;
+   font-weight: 400;
+   line-height: 1.45;
+   color: #666;
+   }
+    /*  FINAL SEGUNDA COLUMNA ......................................................................*/
+     /*  SEGUNDA COLUMNA ......................................................................*/
+    .fijo1{
+    display: none;
+     visibility: hidden;
+    }
+  
+     .fija{
+     width: 100%;
+     display: block;
+     position: relative;
+     float: left;
+     }
+  
+     .fija .imagen-estatica{
+     width: 100%;
+     margin-top: 2px;
+     display: block;
+     position: relative;
+     float: left;
+    }
+  
+  
+     .imagen-estatica img{
+      width: 100%;
+      bottom:0;
+      }
+  
+  
+   /*  FOOTER NOSOTROS..........................................*/
+  
+    #footer1{
+    clear: both;
+    position: relative;
+    height: 55px;
+    margin-top: -30px;
+    -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+    -moz-box-shadow: 0px -3px 6px #DCDCDC;
+    box-shadow: 0px -3px 6px  #DCDCDC;
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 20%;
-    margin-bottom: 10%;
-  margin: auto;
+    z-index: 1000;
+    bottom: 0; 
+    background-color: #000000;
     }
-    
-
-    .nosotros{
+  
+  
+  
+     .footer-second1{
+       width: 100%;
+       max-width: 500px;
+       background-color: #000000;
+     }
+           
+     .footer-second1 p{
+      font-size: 0.7rem;
+      color:#fff;
+      text-align: center;
       width: 100%;
-     max-width:  359px;
-   margin: auto;
-      z-index: 10;
+       max-width: 500px; 
       }
-      
-      .nosotros .articulo h1{
-        line-height: 22px;
-        font-weight: bolder;
-        font-size: 1.3rem;
-        word-spacing: 2px;
-        letter-spacing: -0.2;
-        font-family: 'Archivo Black', sans-serif;
-        }
-
-        .nosotros .articulo p{
-          line-height: 22px;
-          font-weight: bolder;
-          font-size: 0.9rem;
-          word-spacing: 1px;
-          letter-spacing: -0.02rem;
-          font-family: 'Open sans';
-          }
-          
-        
-
-
-
-
-  /*quinta       caja ..................................... */
-/*ARTICULO DOS */
-.articulo-dos{
-display: flex;
-flex-direction: row;
-width: 100%;
-justify-content: space-around;
-margin-top: 20%;
-margin-bottom: 20%;
-
-}
   
-
-  
-.articulo-dos-uno{
-  width: 49%;
-  margin-bottom: 4%;
-  }
-  
-.articulo-dos-uno h1{
-line-height: 15px;
-font-weight: bolder;
-font-size: 1.2rem;
-word-spacing: 4px;
-letter-spacing: -1.5px;
-font-family: 'Open sans';
-}
-
-
-
-
-
-.articulo-dos-uno p {
-font-family: "Open sans";
-font-size: 0.9rem;
-font-weight: 400;
-line-height: 1.45;
-color: #666;
-}
- /*IMAGENES*/
- .dos-imagenes{
-   width: 100%;
-   max-width: 390px;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
- }
- .foto{
-  width: 49.9%;
- }
-.foto img{
-  width: 100%;
-}
-
- blockquote{
-  width: 100%;
-  margin-top: 10%;
-   }
-   
- blockquote h3{
-  margin-top: -30px;
-  margin-left: 38px;
-  margin-right: 30px;
- font-size: 0.8rem;
-color: #666;
-font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-}
-
-blockquote p {
-  margin-top: 30px;
-  margin-left: 150px;
- font-size: 0.6rem;
-color: #000;
-font-weight: 900;
-font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-}
-
-blockquote .otroestilo{
-  margin-top: 30px;
-  margin-left: 5px;
- font-size: 0.5rem;
-color:#666;
-font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-}
- /*NOMBRE DEL FINDADOR*/
-
-  blockquote p{
-    font-size: 0.6rem;
-    margin-right: 8px;
-  }
-
-
-    /* cuarta          caja ..................................... */
-.dibujo{
-width: 100%;
-  
-margin-top: 10%;
-}
-
-.dibujo img{
-  width: 100%;
- 
-  height: 400px;
-}
-
-/*  FINAL SEGUNDA COLUMNA ......................................................................*/
-/*  SEGUNDA COLUMNA ......................................................................*/
- .fijo1{
-width: 100%;
-display: flex;
-  flex-direction: column;
- }
-
-.fija{
-width: 100%;
-max-width: 390px;
-height: 100%;
-display: flex;
-flex-direction: column;
-}
-
-.imagen-estatica{
-  width: 100%;
-  max-width: 390px;
-  height: 80%;
- position: relative;
-  }
-
-
-  .imagen-estatica img{
-    width: 100%;
-    bottom:0;
-    }
-
-
-
- #footer1 p a{
-   font-size: 0.5rem;
- }
 
 }
 
@@ -410,64 +702,7 @@ flex-direction: column;
 
      
 
-   .buscador-responsive{
-   display: block;
-   position: relative;
-    float: left;
-   width:  99.8%;
-   height: 30px;
-   margin-top: 6px;
-   }
-    
-
-    .buscador-responsive #controls-responsive{
-     width: 100%;
-     height: 32px;
-     z-index: 10;
-     
-      }
-
-
-      .buscador-responsive #controls-responsive   #custom-search-input-responsive{
-        width: 99%;
-        height: 30px;
-        display: flex;
-        flex-direction: row;
-        font-size: 0.9em;
-         padding: 1px 1px;
-         border-radius: 8px;
-      
-      }
-
-
-
-      .buscador-responsive #controls-responsive   #custom-search-input-responsive .sin-borde{
-        height: 25px;
-        width: 90%;
-        border-radius: 15px;
-        font-size: 0.7em;
-        font-weight: lighter;
-        background-color: #f8f8f8;
-        padding-left: 10px; /*MUEVE LA LETRA*/
-      }
-
-
-
-      .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
-        height: 25px;
-        width: 10%;
-        border-radius: 10px;
-        background-color: #fff;
-      }
-
-
-
-      .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
-       outline: none;
-       border: 0;
-       background-color: #fff;
-      }
-     
+  
 
       /*---------------------------------------------------------------------*/
     /*--MUEVE EL MENU............ESTE ES EL BURGER*/
@@ -561,9 +796,9 @@ nav{
   width: 100%;
   max-width: 420px;
   height: 100%;
-   top:-8px;  /*IMPORTANTE para que arriba no tenga espacios */
+   top: 0px;  /*IMPORTANTE para que arriba no tenga espacios */
   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  opacity: 0.97;
+  opacity: 0.99;
    background-color: #000000;
    z-index: 200;
   }
@@ -677,6 +912,8 @@ nav{
    flex-direction: column;
    width: 100%;
     margin-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
     }
 
 
@@ -698,7 +935,8 @@ nav{
 
 
       .articulo{
-        width: 100%;
+        width: 93%;
+        margin: auto;
       }
     .nosotros .articulo h1{
     line-height: 22px;
@@ -795,7 +1033,8 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
  .articulo-dos{
   display: flex;
   flex-direction:column;
-  width: 100%;
+  width: 93%;
+  margin: auto;
   margin-top: 6%;
   margin-bottom: 1px;
   }
@@ -865,7 +1104,7 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
   #footer1{
   clear: both;
   position: relative;
-  height: 30px;
+  height: 55px;
   margin-top: -30px;
   -webkit-box-shadow: 0px -3px 6px #DCDCDC;
   -moz-box-shadow: 0px -3px 6px #DCDCDC;
@@ -875,6 +1114,7 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
   width: 100%;
   z-index: 1000;
   bottom: 0; 
+  background-color: #000000;
   }
 
 
@@ -882,6 +1122,7 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
    .footer-second1{
      width: 100%;
      max-width: 500px;
+     background-color: #000000;
    }
          
    .footer-second1 p{

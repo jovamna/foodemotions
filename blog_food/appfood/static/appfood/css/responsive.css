@@ -30,7 +30,6 @@
      }
   
     
-  
     #wrapper img {
     width: 100%;
     height: auto;
@@ -42,34 +41,24 @@
     padding: 10px;
     }  
      
-  
-   
-
-
-       #wrapper img {
-      width: 100%;
-      height: auto;
-      border: 0;
-      }
-  
-   
     
     header{
     position: fixed;
     top:0;
     width: 100%;
     max-width: 350px;
+    height: 50px;
     margin: auto;   
     z-index: 2000;   /*IMPORTANTE  */
     box-shadow: 0 8px 6px -6px #DCDCDC; 
-    max-height: 91px;
     }
       
       
     header.black{
     width: 100%;
     max-width: 350px;
-    height:  91px;
+    height:  50px;
+
       }
     
   
@@ -79,48 +68,28 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    margin-top: 94px;
-    padding: 0 0 0 0;
+    margin-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
     }
 
 
-  /*.. #DCDCDC ..*/
-  header{
-    display: block;
-    width:100%;
-    height: 105px;
-    top:0;
-    position: fixed;
-    z-index: 2000;   /*IMPORTANTE  */
-    margin: auto;
-    box-shadow: 0 8px 6px -6px #DCDCDC; 
-
+     /*.. #DCDCDC ..*/
+    .cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 33px;
+    margin-top: -2px;
     }
-  
-
-    header.black{
-    height:  105px;
-    background-color:#fff ;
-    }
-
-  .cabecera{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 36px;
-  margin-top: -4px;
-  }
      
-  
    
-        
     /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
     .cabecera .logo{
     display: inline-flex;
     width: 30%;
-    height: 36px;
-
+    height: 33px;
     }
            
        
@@ -128,9 +97,10 @@
     width: 100%;
     max-width: 190px;
     height: 100%;
-    max-height: 36px;
+    max-height: 33px;
     }
-       
+     
+    
        /*caja hay 2. A */
     .menu-btn {
     display: block;
@@ -138,7 +108,7 @@
     float: right;
     width: 50%;
     max-width: 240px;
-    height: 36px;
+    height: 33px;
     margin: auto;
     }
        
@@ -148,15 +118,16 @@
     float: left;
     width: 100%;
     max-width: 85px;
-    height: 36px;
+    height: 33px;
     }
        
          
     .suscribe a h4{
     font-size: 0.9rem;
-    margin-top: 22px;
+    margin-top: 19px;
     font-weight: 700;
     letter-spacing: 0.2px;
+    font-family: 'Times New Roman', Times, serif;
     }
         
     .cabecera .buscador{
@@ -164,41 +135,34 @@
     }
     
     /*..BUSCADOR PARA EL MOVIL..........................*/
-    .buscador-responsive{
-    display: block;
-    position: relative;
-    float: left;
-    width: 100%;
-    height: 40px;
-    margin-top: 1px;
-    z-index: 9;
-    }
-       
   
-       .buscador-responsive #controls-responsive{
-        width: 100%;
-        height: 30px;
-       padding-top: 8px;
+       
+     #container  #controls-responsive{
+       display: block;
+        width: 93.5%;
+        height: 40px;
+        margin-left: 9.5px;
+       margin-bottom: 6px;
         z-index: 10;
         }
   
   
-      .buscador-responsive #controls-responsive   #custom-search-input-responsive{
+   #controls-responsive   #custom-search-input-responsive{
       width: 99%;
-      height: 30px;
+      height: 28px;
       display: flex;
       flex-direction: row;
-      padding: 1px 1px;
-      border-radius: 8px;
-      border: 2px solid #f4f4f4;
+      padding: 0.4px 0.4px;
+      border-radius: 3px;
+      border: 1px solid #f4f4f4;
       }
   
   
   
-      .buscador-responsive #controls-responsive   #custom-search-input-responsive .sin-borde{
+     #controls-responsive   #custom-search-input-responsive .sin-borde{
       height: 25px;
       width: 90%;
-      border-radius: 15px;
+      border-radius: 6px;
       font-size: 0.7em;
       font-weight: lighter;
       padding-left: 10px; /*MUEVE LA LETRA*/
@@ -206,17 +170,17 @@
   
   
   
-    .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
+    #controls-responsive   #custom-search-input-responsive .boton{
     height: 25px;
     width: 10%;
-    border-radius: 10px;
+    border-radius: 6px;
     background-color: #fff;
     }
   
   
      
     /* CUANDO SE ESCRIBE EN EL PLACEHOLDER..*/
-    .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
+    #controls-responsive #custom-search-input-responsive input[type=text]:focus {
     outline: none;
     border: 0;
     }
@@ -230,7 +194,7 @@
       display: block;
       position: relative;
       float: right;
-      margin-top: 24px;
+      margin-top: 20px;
       width: 100%;
       max-width: 34px;
       height: 4px;
@@ -477,7 +441,7 @@
        max-width: 270px;
        left: 50%;
        margin-left: -135px;
-       margin-top:  -270px;
+       margin-top:  430px;
         display: block;
         position: absolute;
         }
@@ -847,7 +811,7 @@
      /*..NOTICIAS Y TURISMO*/
      /* PRIMER-SEGMENTO */
      .primer-segmento{
-     width: 92%;
+     width: 93.5%;
      display: flex;
      flex-direction: column;
      margin: auto;
@@ -937,19 +901,16 @@
        border-top: 0.8px solid #c9c9c9;
        }
   
-      .dos-columnas-segunda .posts-ultimos-imagen{
+      .posts-ultimos  .posts-ultimos-imagen{
       display: block;
       position: relative;
       float: left;
       width: 45%;
-      max-width: 165px;
+      max-width: 165px; 
       }
   
      .posts-ultimos-imagen img{
      width: 100%;
-     max-width: 155px;
-     height: 100%;
-     max-height: 98px;
      }
   
      .posts-ultimos-titulo{
@@ -960,30 +921,35 @@
      }
   
     
-      .posts-ultimos-titulo h1{
-      font-size: 1.2rem;
+       .post-ultimo-titulo h1{
+       font-size: 1.1rem;
+       font-family: 'Times New Roman', Times, serif;
+       font-weight:bolder;
         word-spacing: -0.5px;
+        padding-top: 0;
+        margin: auto;
        }
-    
-      .posts-ultimos-titulo p{
-       font-size: 1rem;
-       }
+
+
+       .post-ultimo-titulo  p{
+        font-size: 0.8rem;
+        }
+     
      
        .dos-columnas .columna-right{
         display: block;
         position: relative;
         float: left;
-       width: 92%;
-       margin: auto;
-       margin-top: 10px;
-       margin-bottom: 30px;
-   
-      }
+        width: 92%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        }
   
-      .columna-right .explora{
+       .columna-right .explora{
        width: 100%;
        margin: auto;
-      }
+       }
   
        .columna-right .columna-vertical{
        width: 100%;
@@ -1057,7 +1023,9 @@
     
       }
     
-    
+    .titulo .escrito a h1{
+      font-size: 1.7rem;
+    }
     /*RECETAS  DEL INDEX--------------RECETAS -------------------------------*/
   
     
@@ -1065,7 +1033,7 @@
       .plan-total-alimentacion{
       display: flex; 
       flex-direction: column;
-      width: 92%;
+      width: 100%;
       margin-top: 1px;  /*--RELACIONADO CON EL SEGMENTO TITULO*/
       margin-bottom: 30px;
       margin: auto;
@@ -1074,9 +1042,23 @@
      /*CONTAINER TOTAL INCLUYE LA CAJA PLAN-POST-ALIMENTACION*/
       .plan-alimentacion{
         display: block;
-        width: 100%;
+        width: 93.5%;
+        margin-left: 11px;
       }
       
+    .plan-total-alimentacion .plan-imagen-responsive a h1{
+      margin-left: 11px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.4rem;
+      word-spacing: 0.5px;
+      line-height: 24px;
+
+    }
+
+
+
+
+
       /*CAJA DE PLAN-POST Y PLAN-POST-LETRA..*/
       .plan-post-alimentacion{
         width: 100%;
@@ -1662,6 +1644,7 @@
       margin: auto;
       background-color: #fff;
       box-shadow: 0 8px 6px -6px #c6c6c6;
+      background-color: #fff;
       }
     
 
@@ -1785,7 +1768,6 @@
     border-radius: 8px;
     font-size: 0.7em;
     font-weight: lighter;
-    background-color: #f8f8f8;
     padding-left: 4px; /*MUEVE LA LETRA*/
     }
 
@@ -1809,7 +1791,7 @@
     margin-right: 0;
     color: #000000;
     outline: none;
-    background: #f8f8f8;
+    background: #fff;
     float: left;
     box-sizing: border-box;
     transition: all 0.15s;
