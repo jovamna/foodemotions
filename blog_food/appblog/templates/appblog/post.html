@@ -502,10 +502,14 @@
 	     	    </div>
         <!------------------FINAL BUSCADOR--------------------------->
          <div class="tercera-columna">
-                 <em><h2> mas temas..</h2></em>
+                <h1> alimentación saludable y dietas..</h1>
                      <div class="aside-colum">
-                 <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                   <p>How to take the shame out of self-promotion </p>
+                      {% for post in pos %} 
+                <img src ="{{post.imagefront.url}}">
+                  <a href ="{% url 'appblog:post' post.slug %}">
+                   <p>{{ post.title}} </p>
+                   </a>
+                    {% endfor %} 
                    </div>
          </div>
         <!----------------------------- -------------->

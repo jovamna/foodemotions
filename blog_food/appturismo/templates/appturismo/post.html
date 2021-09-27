@@ -467,11 +467,15 @@
 	     	    </div>
         <!------------------FINAL BUSCADOR--------------------------->
          <div class="tercera-columna">
-                 <em><h2> mas temas..</h2></em>
-                     <div class="aside-colum">
-                 <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                   <p>How to take the shame out of self-promotion </p>
-                   </div>
+                     <h1> todo sobre gastronomia internacional..</h1>
+                      <div class="aside-colum">
+                       {% for posturismo in post_turismo %} 
+                         <img src="{{posturismo.imagefront.url}}">
+                         <a href ="{% url 'appturismo:post' posturismo.slug %}">
+                         <p>{{ posturismo.title}}</p>
+                         </a>
+                        {% endfor %} 
+                     </div>
          </div>
         <!----------------------------- -------------->
       

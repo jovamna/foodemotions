@@ -8,6 +8,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>{% block titulo %}Acerca de Nosotros{% endblock titulo %}</title>
+  
+
+       <!----COLOR DE LA BARRRA URL----------------------------------------->
+     <!---PROBAR EN ANDROID--->
+      <meta name="viewport" content="width=device-width"> 
+      <meta name="mobile-web-app-capable" content="yes">   
+       <!----------------------->
+     <!--<link  rel = "manifest" href = "/manifest.json" > -->
+     <link rel="manifest" href="{% static 'appfood/js/manifest.webmanifest' %}">
+     <meta  nombre ="msapplication-TileColor"  content = "#ffffff" > 
+     <meta  name = "msapplication-TileImage"  content = "/ms-icon-144x144.png" > 
+     
+     <!--Chrome Firefox OS y Operac–-->
+     <meta name="theme-color" content= "#568632">
+      <meta name="theme-color" content="#568632" /> 
+     <!--iOS Safari-->
+
+     <meta name=»apple-mobile-web-app-status-bar-style» content= "#568632">
+
+     <!--Windows Phone-->
+
+    <meta name=»msapplication-navbutton-color» content= "#568632">
+
+     <meta name=»apple-mobile-web-app-status-bar-style» content=»black-translucent»>
+
+     <meta name=»apple-mobile-web-app-status-bar-style» content=»black»> 
+
+      <!-- Windows Phone --> 
+     <meta name="msapplication-navbutton-color" content="#568632"> 
+     <!-- iOS Safari --> 
+     <meta name="apple-mobile-web-app-capable" content="yes"> 
+     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+
+    <!------------------------------------------------------------------->
+
+
+
+
+
+
+
     <!-- STILOS -->
     <link rel="stylesheet" href="{% static 'appfood/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'appfood/css/nosotros.css' %}">
@@ -78,7 +119,7 @@
                   </div>
                   <div class="logo">
                         <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
-                        <img src="{% static 'appfood/img/logo/logd.svg' %}" alt="Food Emotions">
+                        <img src="{% static 'appfood/img/logo/981-219-logo-nosotros.png' %}" alt="Food Emotions">
                     </a>
                   </div>
 
@@ -101,7 +142,7 @@
      <div class="cabecera-responsive">
                      <div class="logo">
                      <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
-                     <img src="{% static 'appfood/img/logo/logd.svg' %}" width="100%" alt="Food Emotions"> 
+                     <img src="{% static 'appfood/img/logo/fooding11.png' %}" width="100%" alt="Food Emotions"> 
                     </a>
                     </div>
 

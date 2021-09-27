@@ -25,10 +25,12 @@
 
   #container-articulo{
     width:100%;
-    max-width: 1230px;
+    max-width: 1200px;
     margin-left:auto;
     margin-right:auto;
-    margin-top: 87px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 80px;
     margin-bottom: 140px;
     }
 
@@ -74,14 +76,14 @@ a {
   z-index: 999;
   position: fixed;
   margin: auto;
-  height:  74px;
+  height:  70px;
   box-shadow: 0 8px 6px -6px #c9c9c9;
   background-color:#fff;
   }
 
   header.black{
    background-color:#fff ;
-   height:  74px;
+   height:  70px;
   }
   
   
@@ -93,13 +95,14 @@ a {
 
   .cabecera{
     width: 100%;
-    max-width: 1190px;
+    max-width: 1200px;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     margin: auto;
-    height: 40px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
+    margin-top: -2px;
   }
 
    /*caja */
@@ -122,27 +125,24 @@ a {
 
 /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
    .menu-btn {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+   flex-direction: row;
    justify-content: space-between;
-  align-items: flex-end;
- width: 30%;
- max-width: 160px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
-  height: 40px;
+   align-items: flex-start;
+   width: 30%;
+   max-width: 160px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+  height: 32px;
   cursor: pointer;
-  transition: all .5s ease-in-out;
-
-}
+   }
 
  
-    /*CONTENEDOR  REVISTA Y SOCIALES*/
-    .boletin{
+     /*CONTENEDOR  REVISTA Y SOCIALES*/
+      .boletin{
       width: 95%;
       max-width: 140px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
-     align-items: flex-start; 
       display: inline-flex;
-      justify-content: flex-start;
-    }
+      height: 32px;
+      }
 
     .boletin  a h4{
      width: 100%;
@@ -153,7 +153,7 @@ a {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-weight: 700;
       color:#2d2d2d;
-       margin: auto; /*IMPMORTANTE PARA LA LETRA*/
+      margin-top:  16px;
       }
   
   
@@ -173,7 +173,7 @@ a {
   position: relative;
   float: left;
    margin: auto;
-   margin-top: 25px;
+   margin-top: 18px;
     width: 5%;
     max-width: 38px;
     height: 4.2px;
@@ -486,7 +486,7 @@ a {
 /* COLUMNA  ........................................................................PRIMERA  COLUMNA.....1------------------. */
   .columna-primera{
   width:70%;
-  max-width: 840px;
+  max-width: 820px;
   display: flex;
   flex-direction: column;
 
@@ -1091,7 +1091,7 @@ a {
     /*SEGUNDA COLUMNA .....................................2............. */
     .segunda-columna{
     width:12%;
-    max-width: 160px;
+    max-width: 180px;
     display: flex;
 
     }
@@ -1100,10 +1100,49 @@ a {
     /*TERCERA COLUMNA  ......................3.......COLUMNA...... */
     .tercera-columna-fija{
     width: 18%;
-    max-width: 260px;
+    max-width: 220px;
     display: flex;
     flex-direction: column;
          }
+
+         .tercera-columna{
+          width:100%;
+          display: block;
+          max-height: 300px;
+          height: 100%;
+          margin-top: 20px;
+         }
+
+         /*ASIDE IMAGEN Y TUTULO*/
+         .aside-colum{
+           width: 100%;
+         }
+
+         .aside-colum p{
+          font-size: 1.1rem;
+          font-family: 'Times New Roman', Times, serif;
+          color: #2d2d2d;
+          line-height:  20px;
+          letter-spacing: 0.2px;
+        }
+      
+        /*FIN BUSCADOR*/  
+
+ 
+
+ .tercera-columna h1{
+  font-size:1.1rem;
+  color:#000;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  }
+
+
+
+  .tercera-columna img{
+    width: 100%;
+    margin-bottom: 6px;
+    }
 
 
 
@@ -1160,36 +1199,6 @@ a {
 
     }
   
-/*FIN BUSCADOR*/  
-
-.tercera-columna{
-  width:100%;
-display: block;
-max-height: 300px;
-height: 100%;
-
-  }
-
-.tercera-columna h2{
-  font-size:1.3rem;
-  color:#000;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 800;
-  }
-
-.tercera-columna p{
-  color: #666;
-  font-size: 1.1rem;
-  font-family: sans serif;
-  font-weight: bold;
-  letter-spacing: -0.2px ;
-  }
-
-  .tercera-columna img{
-    width: 100%;
-    margin-bottom: 6px;
-    }
-
 
 
   .categorias-aside{
@@ -1202,30 +1211,32 @@ height: 100%;
 
    .categorias-aside h4{
     color: #000000;
+    font-weight: 900;
     font-size: 1.4rem;
     font-family: 'Times New Roman', Times, serif;
+ 
    }
 
-   .categorias-aside h3{
-   color:#2d2d2d;
-   font-size: 1.2rem;
- font-family: 'Times New Roman', Times, serif;
-  }
+     .categorias-aside h3{
+     color:#2d2d2d;
+     font-size: 1.2rem;
+     font-family: 'Times New Roman', Times, serif;
+    }
  
   
-  /*CONTAINER GENERAL DEL CARRUSEL............................................. */
+    /*CONTAINER GENERAL DEL CARRUSEL............................................. */
    .container-total-carrusell{
-  display: block;
-  position: relative;
+    display: block;
+    position: relative;
 
-  }
+     }
 
-  /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
-  #carrusel {
+    /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
+    #carrusel {
     float:left;
     width:90%;
     overflow:hidden;
-   height: 305px;
+     height: 305px;
     position:relative;
     margin: auto;
     margin-bottom: 20px;

@@ -898,10 +898,15 @@
 	     	    </div>
         <!------------------FINAL BUSCADOR--------------------------->
          <div class="tercera-columna">
-                 <em><h2> mas temas..</h2></em>
+       
+                 <h1> plan de comidas..</h1>
                  <div class="aside-colum">
-                 <img src="{% static 'appfood/img/articulo/espinaca.png' %}" />
-                   <p>How to take the shame out of self-promotion </p>
+                  {% for perderpeso in post_plan %} 
+                <img src="{{perderpeso.imagefront.url}}">
+                   <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                   <p>{{ perderpeso.title}}</p>
+                   </a>
+                   {% endfor %} 
                    </div>
          </div>
         <!----------------------------- -------------->

@@ -29,8 +29,40 @@
       <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-icon.png' %}"/>
       <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-310x310.png' %}"/>
 
+       
+        <!----COLOR DE LA BARRRA URL----------------------------------------->
+     <!---PROBAR EN ANDROID--->
+      <meta name="viewport" content="width=device-width"> 
+      <meta name="mobile-web-app-capable" content="yes">   
+       <!----------------------->
+     <!--<link  rel = "manifest" href = "/manifest.json" > -->
+     <link rel="manifest" href="{% static 'appfood/js/manifest.webmanifest' %}">
+     <meta  nombre ="msapplication-TileColor"  content = "#ffffff" > 
+     <meta  name = "msapplication-TileImage"  content = "/ms-icon-144x144.png" > 
+     
+     <!--Chrome Firefox OS y Operac–-->
+      <meta name="theme-color" content= "#568632">
+      <meta name="theme-color" content="#568632" /> 
+     <!--iOS Safari-->
 
-      <!--copiado bostrap----------------->
+      <meta name=»apple-mobile-web-app-status-bar-style» content= "#568632">
+
+     <!--Windows Phone-->
+
+      <meta name=»msapplication-navbutton-color» content= "#568632">
+
+     <meta name=»apple-mobile-web-app-status-bar-style» content=»black-translucent»>
+
+     <meta name=»apple-mobile-web-app-status-bar-style» content=»black»> 
+
+      <!-- Windows Phone --> 
+     <meta name="msapplication-navbutton-color" content="#568632"> 
+     <!-- iOS Safari --> 
+     <meta name="apple-mobile-web-app-capable" content="yes"> 
+     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+
+    <!------------------------------------------------------------------->
+ 
 
 
       
@@ -81,7 +113,7 @@
                 <!------ caja logo --------->
                 <div class="logo">
                 <a  href="{% url 'appfood:index' %}">
-                <img src="{% static 'appfood/img/logo/250-60-ult.png' %}" alt="Food Emotions">
+                <img src="{% static 'appfood/img/logo/logo-articulo.png' %}" alt="Food Emotions">
                 </a>
                 </div>
                 <!------- final caja logo------->
@@ -103,7 +135,7 @@
                 <!-- final caja MENU ASPA--------------------------------------------------------->
  
        <!-- NAV MENU QUE VA CON EL BOTON MENU-->
-            <nav style="background-image: url({% static 'appfood/img/logo/250-60.png' %})">
+            <nav style="background-image: url({% static 'appfood/img/logo/202-47-logomenu.png' %})">
                  <ul>
                  <li> 
                  <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">

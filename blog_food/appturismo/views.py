@@ -84,7 +84,8 @@ def post_turismo(request, slug):
     posts = Posturismo.objects.all().filter(slug=slug, status='published')
     categories = Categori.objects.filter(parent=None)
     per = Categori.objects.get(pk=1).get_leafnodes()
-
+    post_turismo = Posturismo.objects.all().order_by(
+        '-publish')[:1]  #va en el aside de turismo
     #aqui empieza los coments
     posturismo = Posturismo.objects.get(slug=slug)
     allcomments = posturismo.comments.filter(status=True)
@@ -126,15 +127,17 @@ def post_turismo(request, slug):
 
     context = {
         'posts': posts,
+        'post_turismo': post_turismo,
         'categories': categories,
         'per': per,
         'comment_form': comment_form,
         'allcomments': allcomments,
+        'comments': comments,
     }
 
     print(posts)
     #print(categories)
-    #print(category)NO USAR
+    print(comments)
     print(per)
 
     return render(request, "appturismo/post.html", context)

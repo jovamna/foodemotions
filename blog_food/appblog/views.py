@@ -97,7 +97,7 @@ def post_detail(request, slug):
     #per=Kategoria.objects.get(pk=1).get_leafnodes()
     post = Post.objects.get(
         slug=slug)  #este codigo es de los comentarios no cambiar get
-    #pos = Post.objects.order_by('-slug')[:1]
+    pos = Post.objects.order_by('-slug')[:1]  #va en el aside
     posts_comment = Post.objects.all().prefetch_related(
         Prefetch(
             'comments',
@@ -145,6 +145,7 @@ def post_detail(request, slug):
     context = {
         'posts': posts,
         'post': post,
+        'pos': pos,
         'posts_comment': posts_comment,
         'categories': categories,
         'comment_form': comment_form,
@@ -155,7 +156,7 @@ def post_detail(request, slug):
     print(posts)
     #print(comments)
     print(categories)
-    #print(per)
+    print(pos)
 
     return render(request, "appblog/post.html", context)
 
