@@ -81,23 +81,20 @@
     flex-direction: row;
     justify-content: space-between;
     height: 33px;
-    margin-top: -2px;
     }
      
    
     /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
-    .cabecera .logo{
+    .logo{
     display: inline-flex;
-    width: 30%;
+    width: 25%;
     height: 33px;
+    margin-right: 20px;
     }
            
        
-    .cabecera .logo img{
+   .logo img{
     width: 100%;
-    max-width: 190px;
-    height: 100%;
-    max-height: 33px;
     }
      
     
@@ -106,27 +103,27 @@
     display: block;
     position: relative;
     float: right;
-    width: 50%;
-    max-width: 240px;
+    width: 35%;
+    max-width: 200px;
     height: 33px;
-    margin: auto;
     }
        
     .suscribe {
     display: block;
     position: relative;
     float: left;
-    width: 100%;
+    width: 85%;
     max-width: 85px;
-    height: 33px;
+    height: 16px;
+    margin-top: 16px;
     }
        
          
     .suscribe a h4{
-    font-size: 0.9rem;
-    margin-top: 19px;
+    font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.2px;
+    margin: auto;
     font-family: 'Times New Roman', Times, serif;
     }
         
@@ -195,8 +192,7 @@
       position: relative;
       float: right;
       margin-top: 20px;
-      width: 100%;
-      max-width: 34px;
+     width: 34px;
       height: 4px;
       background: #2d2d2d;
       border-radius: 2px;
@@ -1659,7 +1655,6 @@
     flex-direction: row;
     justify-content: space-between;
     height: 36px;
-    margin-top: -4px;
     background-color: tan;
     }
        
@@ -1697,7 +1692,9 @@
      
 
    .menu-btn .suscribe {
-  display: inline-flex;
+    display: block;
+    position: relative;
+    float: left;
     width: 80%;
     max-width: 180px;
     height: 36px;
@@ -1862,35 +1859,20 @@
   
       
      
-    #controls-responsive #letra{
-     
-      padding: 0.4px  0px 0.4px 9px;
-      border: 0 none;
-      height: 26px;
    
-      color: #000000;
-      outline: none;
-      background: #fff;
-      float: left;
-      box-sizing: border-box;
-    
-  }
-  
-     #controls-responsive #custom-search-input-responsive  input[type=text] {
-        float: none;
-        display: block;
-        text-align: left;
-        border: none;
-        width: 100%;
-        margin: 0;
-        z-index: 6;
-        font-size: 1rem;
-        font-weight: 400;
-        color: #000000;
-        }
+
+      #controls-responsive #letra{
      
-  
-        
+        padding: 0.4px  0px 0.4px 9px;
+        border: 0 none;
+        height: 26px;
+     
+        color: #000000;
+        outline: none;
+        background: #fff;
+        float: left;
+        box-sizing: border-box;
+      }
      
           #controls-responsive #custom-search-input-responsive  input#text::-webkit-input-placeholder {
               color: #2d2d2d;
