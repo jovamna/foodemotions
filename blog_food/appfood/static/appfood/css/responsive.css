@@ -1654,6 +1654,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
     height: 36px;
     background-color: tan;
     }
@@ -1662,16 +1663,16 @@
       
     /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
     .cabecera .logo{
-    display: inline-flex;
-    width: 15%;
-    max-width: 150px;
-    height: 34px;
+
+    width: 20%;
+    max-width: 170px;
+    height: 36px;
     background-color: teal;
     }
          
      
          .logo img{
-        display:inline-flex;
+        display:block;
         width: 100%;
         max-width: 130px;
     
@@ -1680,14 +1681,14 @@
      
                /*caja hay 2. A */
   .menu-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-      width: 20%;
-      max-width: 180px;
-      height: 36px;
-   
-      justify-content: flex-end;
+    display: block;
+    position: relative;
+    float: right;
+    width: 40%;
+    max-width: 200px;
+    height: 36px;
+    margin: auto;
+    justify-content: flex-end;
       background-color: red;
       }
      
@@ -1697,15 +1698,15 @@
     position: relative;
     float: left;
     width:  100%;
-    max-width: 140px;
+    max-width: 130px;
     height: 36px;
-    margin-right: 60px;
+
     background-color: yellowgreen;
     }
        
      .menu-btn   .suscribe a h4{
       font-size: 0.8rem;
-      margin-top:  17px;
+      margin-top:  15px;
 
       font-weight: 700;
       letter-spacing: 0.1px;
@@ -1720,13 +1721,13 @@
 
        /*---------------------------------------------------------------------*/
      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-  .cabecera .menu-btn .menu-btn__burger {
+   .menu-btn .menu-btn__burger {
     display: block;
-   position: relative;
-  float: right;
-  width: 36px;
+    position: relative;
+    float: right;
+     width: 36px;
     height: 4px;
-    margin-top: 17px;
+ margin-top: 17px;
     background: #2d2d2d;
     border-radius: 2px;
     box-shadow: 0 2px 5px rgba(255,101,47,.2);
