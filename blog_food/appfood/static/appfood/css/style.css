@@ -2043,6 +2043,7 @@ border: solid #E9E9E9;
 .box{
   width: 100%;
  height: 100px;
+ display: block;
  position:  relative;
  left:5%;
  transform: translate(-5%, -5%);
@@ -2069,6 +2070,7 @@ border-radius: 5px 0 0 5px;
 }
 
 .box input[type="submit"]{
+  display: block;
   position: relative;
   left: -5px;  /*EL TRUCO IMPORTANTE*/
   border-radius: 0 5px 5px 0;

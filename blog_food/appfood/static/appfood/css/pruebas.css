@@ -203,6 +203,21 @@
               z-index: 6;
            }
   
+
+
+           
+      #controls-responsive #letra{
+     
+        padding: 0.4px  0px 0.4px 9px;
+        border: 0 none;
+        height: 26px;
+         font-size: 0.7rem;
+        color: #000000;
+        outline: none;
+        background: #fff;
+        float: left;
+        box-sizing: border-box;
+      }
          /*---------------------------------------------------------------------*/
        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
       .cabecera .menu-btn .menu-btn__burger {
