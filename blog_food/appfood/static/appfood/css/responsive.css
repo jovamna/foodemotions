@@ -1663,8 +1663,8 @@
     /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
     .cabecera .logo{
     display: inline-flex;
-    width: 10%;
-    
+    width: 15%;
+    max-width: 150px;
     height: 34px;
     background-color: teal;
     }
@@ -1680,13 +1680,13 @@
      
                /*caja hay 2. A */
   .menu-btn {
-      display: block;
-      position: relative;
-      float: right;
-      width: 45%;
-      max-width: 260px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+      width: 20%;
+      max-width: 180px;
       height: 36px;
-      margin: auto;
+   
       justify-content: flex-end;
       background-color: red;
       }
@@ -1696,9 +1696,10 @@
     display: block;
     position: relative;
     float: left;
-    width: 78%;
-    max-width: 170px;
+    width:  100%;
+    max-width: 140px;
     height: 36px;
+    margin-right: 60px;
     background-color: yellowgreen;
     }
        
@@ -1721,9 +1722,9 @@
      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
   .cabecera .menu-btn .menu-btn__burger {
     display: block;
-  position: relative;
-    float: right;
-    width: 35px;
+   position: relative;
+  float: right;
+  width: 36px;
     height: 4px;
     margin-top: 17px;
     background: #2d2d2d;
@@ -1740,8 +1741,8 @@
     content: '';
     position: absolute;
     height: 4px;
-     width: 35px;  /*IMPORTANTE*/
 
+    width: 36px;
     background:#2d2d2d;
     border-radius: 2px;
     box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
