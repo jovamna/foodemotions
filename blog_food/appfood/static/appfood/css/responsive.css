@@ -1720,7 +1720,7 @@
      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
     .cabecera .menu-btn .menu-btn__burger {
     display: block;
-    position: relative;
+  position: relative;
     float: right;
     width: 35px;
     margin-top: 15px;
@@ -1800,9 +1800,16 @@
 
       /*..BUSCADOR PARA EL MOVIL..........................*/
    
-
+      .input, button {
+        width: 100%;
+        box-sizing: border-box; /* add this */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+      }
   
-
+      input[type=text]{
+        box-sizing:border-box;
+    }
       input {
         font-style: Roboto;
         font-variant-ligatures:normal ;
@@ -1816,7 +1823,7 @@
   
        #controls-responsive{
          display: block;
-        width: 91.8%;
+        width: 90%;
         height: 40px;
        margin: auto;
        margin-bottom: 10px;
