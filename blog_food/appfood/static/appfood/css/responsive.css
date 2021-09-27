@@ -1663,22 +1663,23 @@
     /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
     .cabecera .logo{
     display: inline-flex;
-    width: 20%;
-    max-width: 130px;
-    height: 36px;
+    width: 10%;
+    
+    height: 34px;
     background-color: teal;
     }
          
      
-      .cabecera .logo img{
-        display: block;
+         .logo img{
+        display:inline-flex;
         width: 100%;
+        max-width: 130px;
     
         }
      
      
                /*caja hay 2. A */
-    .cabecera .menu-btn {
+  .menu-btn {
       display: block;
       position: relative;
       float: right;
@@ -1687,7 +1688,7 @@
       height: 36px;
       margin: auto;
       justify-content: flex-end;
-      background-color: seagreen;
+      background-color: red;
       }
      
 
@@ -1695,16 +1696,16 @@
     display: block;
     position: relative;
     float: left;
-    width: 80%;
-    max-width: 180px;
+    width: 78%;
+    max-width: 170px;
     height: 36px;
     background-color: yellowgreen;
     }
        
      .menu-btn   .suscribe a h4{
       font-size: 0.8rem;
-      margin-top:  12px;
-      margin-left: 50px;
+      margin-top:  17px;
+
       font-weight: 700;
       letter-spacing: 0.1px;
       font-family: 'Times New Roman', Times, serif;
@@ -1718,13 +1719,13 @@
 
        /*---------------------------------------------------------------------*/
      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-    .cabecera .menu-btn .menu-btn__burger {
+  .cabecera .menu-btn .menu-btn__burger {
     display: block;
   position: relative;
     float: right;
     width: 35px;
-    margin-top: 15px;
     height: 4px;
+    margin-top: 17px;
     background: #2d2d2d;
     border-radius: 2px;
     box-shadow: 0 2px 5px rgba(255,101,47,.2);
@@ -1833,7 +1834,7 @@
   
          /*..f4f4f4..     border: 1.3px solid #e7e7e7;*/
      #controls-responsive   #custom-search-input-responsive{
-      width: 99%;
+      width: 100%;
       height: 32px;
       display: flex;
       flex-direction: row;
@@ -1852,6 +1853,7 @@
        width: 85%;
       height: 26px;
       border-radius: 8px;
+      font-size: 0.7rem;
       }
   
   
@@ -1873,7 +1875,7 @@
         padding: 0.4px  0px 0.4px 9px;
         border: 0 none;
         height: 26px;
-     
+         font-size: 0.7rem;
         color: #000000;
         outline: none;
         background: #fff;
@@ -3191,44 +3193,35 @@ width: 100%;
     }
   
     .box form{
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    margin: auto;
-    }
-
-   .box h3{
-    font-size: 1rem;
-    text-align: center;
-    letter-spacing: -1px;
-    word-spacing: -1px;
-    font-family: 'Fira Sans', sans-serif;
-
-     }
-   
-     /*CAJA ENVIO BLANCO DONDE SE ESCROBE*/
-    .box input[type="text"]{
-      width: 70%;
-      height: 39px;
-      font-size: 0.9rem;
-      border-radius: 3px 2px 2px 3px;
-      padding: 0 25px;
-      border: 2px solid 	#DCDCDC;
-     }
-
-    /*CAJA OSUCRA DONDE SE ENVIA*/
-    .box input[type="submit"]{
-      width: 25%;
-      height: 39px;
-      border-radius: 3px 6 6 3px;
-      font-size: 0.6rem;
-      left: -1px;
-      top: 0px;
-      border: 2px solid 	#2d2d2d;
-     }
-    
-    
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: auto;
+      }
   
+      .box h3{
+        font-size: 1rem;
+        text-align: center;
+        letter-spacing: -1px;
+        word-spacing: -1px;
+        font-family: 'Fira Sans', sans-serif;
+    
+         }
+       
+         /*CAJA ENVIO BLANCO DONDE SE ESCROBE*/
+        .box input[type="text"]{
+          width: 70%;
+         
+         }
+    
+        /*CAJA OSUCRA DONDE SE ENVIA*/
+        .box input[type="submit"]{
+          width: 25%;
+         
+         }
+        
+        
+      
        /*caja */
   .menu-footer{
   width:100%;
