@@ -1712,9 +1712,17 @@
       }
   
    
-
+  .menu-btn .hamburguesa{
+    display: block;
+    position: relative;
+    float: right;
+    width: 30%;
+    height: 30px;
+    max-width: 40px;
+    background-color: saddlebrown;
+  }
        /*---------------------------------------------------------------------*/
-       .cabecera .menu-btn  .menu-btn__burger {
+       .cabecera .menu-btn .hamburguesa .menu-btn__burger {
         display: block;
         position: relative;
         float: right;

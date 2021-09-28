@@ -942,7 +942,7 @@ margin-left: 8px;
        }
       
 
-       #wrapper-recetas .cabecera-recetas{
+     .cabecera-recetas{
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -952,19 +952,19 @@ margin-left: 8px;
 
 
         /*caja */
-        .cabecera-recetas .logo{
-          display: block;
-          width: 20%;
-          max-width: 190px;
+          .logo{
+          display:inline-flex;
+          width:  40%;
           height: 38px;
+  
         }
     
     /*IMAGEN DEL LOGO*/
     .cabecera-recetas  .logo img{
       display: block;
       width: 100%;
-      max-width: 140px;
-      height: 38px;
+   
+   
        }
      
 
@@ -976,62 +976,21 @@ margin-left: 8px;
 
     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
     
-  #controls-responsive{
-    display: block;
-    visibility: visible;
-    width: 92%;
-    height: 35px;
-    margin-top: 8px;
-   margin: auto;
-  }
-
-
-    #custom-search-input-responsive{
-    width: 100%;
-    height: 35px;
-    border: 1px solid#c9c9c9;
-    border-radius: 4px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     margin: auto;
-    }
-
-
-   #controls-responsive .sin-borde-responsive{
-     width: 80%;
-     height: 32px;
-     max-width: 290px;
-     display: inline-flex;
-   }
-
-
-   #controls-responsive .boton-responsive{
-     width: 20%;
-     max-width: 60px;
-     height: 32px;
-   }
-
-
-    /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA...............FIN BUSCADOR RESPONSIVE*/
-
-
-
+ 
     /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-    .cabecera-recetas  .menu-btn {
+       .menu-btn {
       display: block;
         position: relative;
         float: right;
-        width: 40%;
-        max-width: 210px;
+        width: 45%;
+        max-width: 340px;
         height: 38px;
-        margin: auto;
-   }
+       }
 
 
   
   /*CONTENEDOR  REVISTA Y SOCIALES*/
-  .cabecera-recetas  .menu-btn .boletin{
+    .menu-btn .boletin{
     display: block;
     position: relative;
     float: left;
@@ -1110,6 +1069,48 @@ margin-left: 8px;
   transform: rotate(-45deg) translate(35px, 35px);
     }
 
+
+    #controls-responsive{
+      display: block;
+      visibility: visible;
+      width: 92%;
+      height: 35px;
+      margin-top: 8px;
+     margin: auto;
+    }
+  
+  
+      #custom-search-input-responsive{
+      width: 100%;
+      height: 35px;
+      border: 1px solid#c9c9c9;
+      border-radius: 4px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin: auto;
+      }
+  
+  
+     #controls-responsive .sin-borde-responsive{
+       width: 80%;
+       height: 32px;
+       max-width: 290px;
+       display: inline-flex;
+     }
+  
+  
+     #controls-responsive .boton-responsive{
+       width: 20%;
+       max-width: 60px;
+       height: 32px;
+     }
+  
+  
+      /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA...............FIN BUSCADOR RESPONSIVE*/
+  
+  
+  
 
    /*NAV*/
 

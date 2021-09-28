@@ -974,24 +974,24 @@ border-radius:6px;
     }
          
     /*caja */
-    .cabecera .logo{
+    .logo{
       display: inline-flex;
       width: 20%;
       max-width: 190px;
       height: 38px;
     }
               
-    .cabecera .logo img {
+       .logo img {
       display: block;
       width: 100%;
       max-width: 140px;
-      height: 38px;
+  
      }
          
     /*CONTENEDOR  REVISTA Y SOCIALES*/
    
     /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-    .cabecera .menu-btn {
+       .menu-btn {
       display: block;
       position: relative;
       float: right;
@@ -1012,7 +1012,7 @@ border-radius:6px;
   
     .menu-btn  .boletin  h4{
       font-size: 0.8rem;
-      margin-top: 15px;
+      margin-top: 10px;
         margin-left: 2px;
         font-weight: 700;
         letter-spacing: 0.9px;
@@ -1033,7 +1033,7 @@ border-radius:6px;
     height: 35px;
     margin-top: 58px;  
     margin: auto;
-    background-color: red;
+
      }
 
 
@@ -1065,11 +1065,11 @@ border-radius:6px;
 
 
         /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-    .cabecera .menu-btn  .menu-btn__burger {
+    .menu-btn  .menu-btn__burger {
     display: block;
     position: relative;
     float: right;
-    margin-top: 15px;
+    margin-top: 10px;
     width: 37px;
     height: 4px;
     background: #2d2d2d;
