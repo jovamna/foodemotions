@@ -970,7 +970,7 @@ border-radius:6px;
       flex-direction: row;
       justify-content: space-between;
       height: 38px;
-      margin-top: -4px;
+  
     }
          
     /*caja */
@@ -984,7 +984,7 @@ border-radius:6px;
     .cabecera .logo img {
       display: block;
       width: 100%;
-      max-width: 150px;
+      max-width: 140px;
       height: 38px;
      }
          
@@ -1011,12 +1011,12 @@ border-radius:6px;
     }
   
     .menu-btn  .boletin  h4{
-      font-size: 0.9rem;
-      margin-top: 22px;
-      margin-left: 2px;
-      font-weight: 700;
-      letter-spacing: 0.9px;
-      font-family: 'Times New Roman', Times, serif;
+      font-size: 0.8rem;
+      margin-top: 15px;
+        margin-left: 2px;
+        font-weight: 700;
+        letter-spacing: 0.9px;
+        font-family: 'Times New Roman', Times, serif;
     }
    
     .controls{
@@ -1069,7 +1069,7 @@ border-radius:6px;
     display: block;
     position: relative;
     float: right;
-    margin-top: 25px;
+    margin-top: 15px;
     width: 37px;
     height: 4px;
     background: #2d2d2d;

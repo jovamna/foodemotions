@@ -1708,6 +1708,7 @@
      
       .cabecera .buscador{
       display: none;
+      visibility: hidden;
       }
   
    
@@ -1821,7 +1822,7 @@
     }
 
     #controls-responsive input#search{
-      width: 200px;
+      width: 280px;
       height: 28px;
       border: none;
       font-size: 0.8rem;
@@ -1877,8 +1878,7 @@
   
   
     
-  
-     #controls-responsive   #custom-search-input-responsive .sin-borde{
+    #custom-search-input-responsive .sin-borde{
        width: 85%;
       height: 28px;
       border-radius: 8px;
@@ -1888,7 +1888,7 @@
   
   
   
-       #controls-responsive   #custom-search-input-responsive .boton{
+     #custom-search-input-responsive .boton{
       height: 28px;
       width: 15%;
       border-radius: 8px;
