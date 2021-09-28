@@ -271,3 +271,7 @@
     
           
       /* FIN DEL INDEX 360*/
+
+
+      /* <!--<link  rel = "manifest" href = "/manifest.json" > -->
+     <link rel="manifest" href="{% static 'appfood/js/manifest.webmanifest' %}">*/

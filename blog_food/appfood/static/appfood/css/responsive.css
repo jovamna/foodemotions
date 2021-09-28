@@ -1620,7 +1620,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 55px;
+    margin-top: 52px;
      padding-left: 0;
     padding-right: 0;
    
@@ -1806,7 +1806,7 @@
        #controls-responsive{
          display: block;
          position: relative;
-        width: 90%;
+        width: 92.2%;
         height: 45px;
        margin: auto;
        margin-bottom: 10px;
@@ -1854,8 +1854,7 @@
          
     #controls-responsive input#search{
       width: 85%;
-      max-width: 280px;
-      height: 28px;
+      height: 30px;
       border: none;
       font-size: 0.8rem;
       float: left;
@@ -1874,6 +1873,7 @@
 
     #controls-responsive button#boton{
       width: 15%;
+      height: 30px;
      background-color: teal;
     }
 
