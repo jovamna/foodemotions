@@ -1623,7 +1623,7 @@
     margin-top: 55px;
      padding-left: 0;
     padding-right: 0;
-    background-color: slateblue;
+   
     }
 
 
@@ -1640,7 +1640,7 @@
       margin: auto;
       background-color: #fff;
       box-shadow: 0 8px 6px -6px #c6c6c6;
-      background-color: yellow;
+   
       }
     
 
@@ -1663,7 +1663,7 @@
         width: 20%;
         max-width: 190px;
         height: 38px;
-        background-color: rgb(235, 13, 13);
+ 
       }
                 
       .cabecera .logo img {
@@ -1684,7 +1684,7 @@
         max-width: 210px;
         height: 38px;
         margin: auto;
-        background-color: violet;
+  
       }
   
       .suscribe{
@@ -1694,7 +1694,7 @@
       width: 100%;
       max-width: 100px;
       height: 38px;
-      background-color: seagreen;
+  
       }
     
       .menu-btn  .suscribe  h4{
@@ -1719,7 +1719,7 @@
     width: 30%;
     height: 30px;
     max-width: 40px;
-    background-color: saddlebrown;
+
   }
        /*---------------------------------------------------------------------*/
        .cabecera .menu-btn .hamburguesa .menu-btn__burger {
@@ -1798,64 +1798,11 @@
     }
 
 
-  /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+       /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
 
 
 
       /*..BUSCADOR PARA EL MOVIL..........................*/
-   
-      .input, button {
-        width: 100%;
-        box-sizing: border-box; /* add this */
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-      }
-  
-      input[type=text]{
-        box-sizing:border-box;
-    }
-      input {
-        font-style: Roboto;
-        font-variant-ligatures:normal ;
-        font-variant-caps: normal;
-        font-variant-numeric:normal ;
-        font-variant-east-asian: normal;
-        font-stretch: normal;
-     
-      
-    }
-
-    form{
-    display: block;
-    }
-
-    #controls-responsive input#search{
-      width: 280px;
-      height: 28px;
-      border: none;
-      font-size: 0.8rem;
-      float: left;
-      color: #262626;
-      padding-left: 4px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-    
-      
-        -webkit-transition: background .55s ease;
-      -moz-transition: background .55s ease;
-      -ms-transition: background .55s ease;
-      -o-transition: background .55s ease;
-      transition: background .55s ease;
-    }
-
-    #custom-search-input-responsive input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
-      outline:none;
-      background: #ffffff;
-    }
-
-
-
        #controls-responsive{
          display: block;
          position: relative;
@@ -1863,7 +1810,7 @@
         height: 45px;
        margin: auto;
        margin-bottom: 10px;
-        background-color: red;
+      
         }
   
   
@@ -1904,8 +1851,70 @@
       z-index: 6;
       }
   
+         
+    #controls-responsive input#search{
+      width: 85%;
+      max-width: 280px;
+      height: 28px;
+      border: none;
+      font-size: 0.8rem;
+      float: left;
+      color: #262626;
+      padding-left: 4px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+        -webkit-transition: background .55s ease;
+      -moz-transition: background .55s ease;
+      -ms-transition: background .55s ease;
+      -o-transition: background .55s ease;
+      transition: background .55s ease;
+      background-color: yellow;
+    }
+
+    #controls-responsive button#boton{
+      width: 15%;
+     background-color: teal;
+    }
+
+
+
+
+    #custom-search-input-responsive input#search:hover,
+    #custom-search-input-responsive input#search:focus, 
+    #custom-search-input-responsive input#search:active{
+      outline:none;
+      background: #ffffff;
+    }
+
+
+
       
+      .input, button {
+        width: 100%;
+        box-sizing: border-box; /* add this */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+      }
+  
+      input[type=text]{
+        box-sizing:border-box;
+    }
+      input {
+        font-style: Roboto;
+        font-variant-ligatures:normal ;
+        font-variant-caps: normal;
+        font-variant-numeric:normal ;
+        font-variant-east-asian: normal;
+        font-stretch: normal;
      
+      
+    }
+
+    form{
+    display: block;
+    }
+
    
 
      
