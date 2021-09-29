@@ -108,18 +108,21 @@
         <!---DIV DE 4 POST DE PERDERPESO--->  
         {% block imagenes-categorias %} 
          <div class="categorias-subcategorias">
+                   <!-- SUBCATEGORIAS ---->
+                  <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
 
                   <!----------------------------------------------------------->
                     {% load mptt_tags %} 
                     {% for category in categories %} 
-                    <div class= "subcategorias">
+                    {% if not node.is_leaf_node %}  
+                    <div class= "scrollmenu">
                             <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
                             {% if category.image %}
                             <img src ="{{category.image.url}}" style="width:100%">
                             {% endif %}
                              </a>
                       
-                            <div class="nombredesubcategoria">
+                     
                             <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
                             <h1>{{ category.name|linebreaksbr|truncatechars:31}}</h1>
                             </a>
@@ -127,10 +130,12 @@
                             <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
                             <h2>{{ category.name|linebreaksbr|truncatechars:12 }}</h2>
                             </a>
-                            </div>          
+                              
                     </div>
+                      {% endif %}
                     {% endfor %}
                     <!-----FIN SUBCATEGORY-------------------------------------------------> 
+                <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 
         </div>
            {% endblock imagenes-categorias %} 
 
@@ -173,7 +178,7 @@
                         <!----------------------------------->
                         <div class="elemento-descripcion">
                            <div class ="elemento-descripcion-columna">
-                           <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}"><h2>{{recipe.title}}</h2>  </a>
+                           <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}"><h1>{{recipe.title}}</h1>  </a>
                            <p>{{recipe.description|truncatechars:60|safe}}</p> 
                            </div>
                            <div class="elemento-leer">

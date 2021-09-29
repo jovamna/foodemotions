@@ -1,6 +1,6 @@
 {% extends 'appfood/base.html' %}
 {% load static %}
-{% block titulo %}Food Emotions: Recetas Saludables, Alimentacion Saludable{% endblock titulo %}
+{% block titulo %}Fooding Emotion: Recetas Saludables, Alimentacion Saludable{% endblock titulo %}
  
   <!-- SLIDER ---------------------------------------------------------------------->
  
@@ -256,6 +256,55 @@
           </div>            
           {% endfor %}
         <!----------------------------------------------------------------------------->
+
+         <!------------------------------------------------------------------------->
+      {% for posturismo in posturisultimo %}
+        <div class="posts-ultimos">
+            <div class="post-ultimo">
+
+                  <div class="posts-ultimos-imagen">
+                  {% if posturismo.imagefront %}
+                  <img src ="{{posturismo.imagefront.url}}" >
+                  {% endif %}
+                  </div>
+
+                   <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                  <div class="posts-ultimos-titulo">
+                  <!----------------------------------------->
+                  <div class="post-ultimo-titulo">
+                  <a href ="{% url 'appturismo:post' posturismo.slug %}">
+                  <h1>{{posturismo.title}}</h1>
+                   </a>
+                  <p>{{posturismo.description|safe|linebreaksbr|truncatechars:65}}.</p>
+                  <a href ="{% url 'appturismo:post' posturismo.slug %}">
+                  <p>Leer mas...</p>
+                  </a>
+                  </div>
+                  <!------------------------------------------->
+                 </div>
+                <!------------------------------------->
+
+              </div>         
+          </div>            
+          {% endfor %}
+        <!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!------------------------------------------------------------------>
     
      </div>   <!----bloque-ultimo--->

@@ -1,4 +1,4 @@
-{% extends 'appblog/base_categoria.html' %}
+{% extends 'appblog/base-categoria.html' %}
 {% load static %}          
 {% block title %}Subcategoria Recetas{% endblock %}  
  
@@ -23,24 +23,28 @@
                                <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
                                </li>
                                <li>    
-                                <a  href="{% url 'apprecetas:recetas_saludables' %}">Recetas Saludables<i class="right"></i> </a>
+                                <a  href="{% url 'apprecetas:recetas-saludables' %}">Recetas Saludables<i class="right"></i> </a>
                                </li>
                            
                               <!--MENU ESCONDIDO -CATEGORIAS------------------>
                               <li>
-                                  <p>Categorias<i class="right"></i></p>
+                                  <p>Subcategoria<i class="right"></i></p>
 
                                   <ul>
                                  
                                    {% load mptt_tags %}
-                                  {% for kategory in categoria %}
+                                    {% for kategory in category_deals %}
+                       {% if not node.is_leaf_node %}
+                                  {% for child in kategory.get_children %}
                                  <!--  TITULO--CATEGORIA---> 
                                    <li>
-                                    <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
-                                   <p> {{kategory.name}}</p> 
+                                    <a href="/recetas-saludables/subcategoria/{{ child.slug }}">
+                                   <p> {{ child.name }jova</p> 
                                      </a>    
                                    </li>
-                                 {% endfor %}
+                                 {% endfor %}
+                      {% endif %}
+                       {% endfor %}
                               
                                   </ul>
                                   </li>
@@ -90,12 +94,6 @@
 <!-------------------------------------------------------------------------------------------------------------------->
 
 
-    <!---ARREGLAR BUSCAR EL FALLO
-                             {% for post in category_deals   %}
-                              <a href="/recetas_saludables/categoria/{{ kategory.slug }}">
-                              <p>{{category_deals.get }}<i class="right"></i></p>
-                             </a>
-                                  {% endfor %}---->
 
 <!-------------------------------------------------------------------------------------------------------------------->
                   <!---FIN DIV SUBCATEGORIA PERDER-->

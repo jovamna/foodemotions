@@ -120,55 +120,47 @@
 
 
             
-    <!---100%--->
+    <!---100%------------------------------------------->
     <div class="container-posts-categorias">   
-                <!------------columna de 100%----------------------->
-               <div id = "posts-categorias-aside">
-
-
-           <!---DIV DE 4 POST DE POSTS dentro de posts-cetagoria poner 70%--->   
-
-
-            <div class=" post-cuatro-categorias">
-                 {% for receta in receta %}
-           <div class="elemento-categoria">   
-
+            <!------------columna de 100%----------------------->
+            <div id = "posts-categorias-aside">
               
+                  <!---DIV DE 4 POST DE POSTS dentro de posts-cetagoria poner 70%--->   
+                 <div class=" post-cuatro-categorias">
+                       {% for receta in receta %}
+                        <div class="elemento-categoria">   
+                            
+                              <!--  IMAGEN DEL POSTPERDER---->
+                              <div id="imagen-elemento-categoria"> 
+                              {% if receta.image %}
+                              <img src ="{{receta.image.url}}">
+                              {% endif %}
+
+                              <!--  DESCRIPCION RECETAS----------------->
+                              <div class ="imagen-descripcion">
+                              <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                              <h2>{{receta.title}}</h2>
+                              <!--  DESCRIPTION DEL POST PERDER---->
+                             <p>{{receta.description|truncatechars:60|safe}} </p> 
+                             <!--  LINK QUE REDIRIGE AL POST --->
+                             </a>                           
+                            <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
+                             <span class="a" >Por:<span class="o"> {{ receta.author }}</span> </span> 
+                            <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE EBDFOR--->
+                            </div>
+                           <!--fin IMAGEB descripcion------------------------------>
 
 
-
-
-                   <!--  IMAGEN DEL POSTPERDER---->
-                   <div id="imagen-elemento-categoria"> 
-                    {% if receta.image %}
-                    <img src ="{{receta.image.url}}">
-                    {% endif %}
-                    <!--  DESCRIPCION RECETAS----------------->
-                    <div class ="imagen-descripcion">
-                    <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
-                    <h2>{{receta.title}}</h2>
-                    <!--  DESCRIPTION DEL POST PERDER---->
-                    <p>{{receta.description|truncatechars:60|safe}} </p> 
-                    <!--  LINK QUE REDIRIGE AL POST --->
-                    </a>                           
-                    <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
-                    <span class="a" >Por:<span class="o"> {{ receta.author }}</span> </span> 
-                    <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE EBDFOR--->
-                    </div>
-                    <!--fin IMAGEB descripcion------------------------------>
-                </div>
-                <!--25%  FIN IMAGEN ELEMENTO CATEGORIA ------------------------>  
-
-
-
-
-
+                           </div>
+                            <!--25%  FIN IMAGEN ELEMENTO CATEGORIA ------------------------>  
+         
+         
                 <!----------CIERRA EL POST ---------->  
          </div>
-                 {% empty %}
-            <p>No hay posts</p>
+              {% empty %}
+         <p>No hay posts</p>
         {% endfor %}  
-           
+    
         <!---------------FIN ELEMENTO CATEGORIA-----------------------> 
        </div> 
        <!--FINAL QUE COERRA POST 4 CATEGORIAS----------------->

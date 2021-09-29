@@ -409,7 +409,7 @@ nav{
     max-width: 1230px;
     }
   
-    /*SEGMENTO DE LAS SUBCATEGORIAS*/
+    /*SEGMENTO DE LAS SUBCATEGORIAS DE LAS APGINAS PLAN DE COMIDAS, DIETAS Y TURISMO*/
     #texto-slider{
       display: block;
       width: 100%;
@@ -421,6 +421,7 @@ nav{
       margin: 4px, 4px;
       padding: 8px 2px;
       margin-bottom: 30px;
+    
      }
     
 
@@ -435,6 +436,9 @@ nav{
       white-space: nowrap;
        padding: 8px 2px;
        }
+
+
+
     #texto-slider::-webkit-scroll { /* WebKit */
     width: 0px;
     height: 10px;
@@ -445,17 +449,17 @@ nav{
     }
 
 
-/*CAJA DE LA FLECHA..*/
-#texto-slider .caja-texto-slider .leftNav {
-  display: inline-block;
-  width:25px;
-  height: 25px;
-  border-radius: 15px;
-  position: absolute;
-  top: 15px;
-  left: 0em;
-  background-color: #568632;
-  }
+   /*CAJA DE LA FLECHA..*/
+   #texto-slider .caja-texto-slider .endfor .leftNav {
+    display: inline-block;
+    width:25px;
+    height: 25px;
+    border-radius: 15px;
+    position: absolute;
+    top: 363px;
+    left: 5em;
+    background-color: #568632;
+    }
 
 
    /*--FLECHAS  "Arial Black";----*/
@@ -504,8 +508,8 @@ nav{
     cursor: pointer;
     border-radius: 15px;
     position: absolute;
-    top:  440px;
-    right: 0em;
+    top:  363px;
+    right: 4.8em;
     background-color: #568632;
     }
    
@@ -544,7 +548,7 @@ nav{
 
 
 
-      /*......................................*/
+      /*.........AL PRINCIPIO DE LA PAGINA  EL MENU QUE LEVA INICIO ETC.............................*/
      
       .intro{
       display: flex;
@@ -744,6 +748,8 @@ nav{
     
     /*FIN FIN IMPORTANTE PARA LAS RAYAS ANIMADAS DEL MENU*/
 
+
+       /*A--CATEGORIAS DE LA PAGINA RECETAS SALUDABLES Y DIETETICAS CON IMAGENES REDONDAD*/
     .imagenes-pequeñas{
       width: 100%;
       margin-bottom: 80px;  /*SEPARA BARRA DE SUBCATEGORIAS DE LOS POSTS*/
@@ -755,9 +761,9 @@ nav{
 
         .imagenes-pequeñas  img{
          width: 100%;
-         max-width: 90px;
-         height: 60%;
-         max-width: 80px;
+         max-width: 65px;
+         height: 65px;
+  
         }
 
       .imagenes-pequeñas .subcategoria {
@@ -780,28 +786,26 @@ nav{
     
   
 
-/*CONTINER DE LA PUBLICACION ESTA ES DE RECETAS Y DE DIETA Y PLAN Y TURISMO*/
-
-    .container-posts-categorias{
+    /*CONTINER TOTAL DE LA PPAGINA  DE RECETAS Y DE DIETA Y PLAN Y TURISMO...*/
+      .container-posts-categorias{
       display: flex;
       flex-direction:column;
       justify-content: space-between;
       width: 100%;
-    }
+      }
 
       /*..........................*/
 
       /*PAGINA CATEGORIA DE APPBLOG DIETAS ESPECIALES  APPPERDERPESO PLAN DE COMIDA Y APPTURISMO*/
   /*DONDE ESTA EL POST ESTE ES EL BLOQUE DE POR FOTO Y POR DESCRIPCION */
-  .por-categoria{
+     .por-categoria{
     width: 100%;
     max-width: 1250px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 30px;
-
-  }
+     }
 
     
 
@@ -887,40 +891,42 @@ nav{
    position: relative;
    float: right;
      max-width: 280px;
-     width:  25%;
+     width:  20%;
     }
 
 
-  /*CONTAINER ESTE CONTAINER ES DE RECETAS..............  #max-width:950px;.................*/
-   #posts-categorias-aside{
-    display: flex;
-    flex-direction: row;
+  /*CONTAINER ESTE CONTAINER ES DE RECETAS..CONTIENE COLUMNA Y ASIDE..........*/
+     #posts-categorias-aside{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
     width: 100%;
-  }
+     }
   
-   .post-cuatro-categorias{
-    display: block;
+     /*XOLUMNA CONTENEDOR DE VARIOS POSTS*/
+     .post-cuatro-categorias{
+     display: block;
     position: relative;
-    float: left;
-    width: 75%;
-    max-width: 900px;
-   }
+     float: left;
+    width: 80%;
+    max-width: 950px;
+    }
 
-    /*CONTAINER DE REECTAS*/
-    /*... background-color: #f9e4e3;..*/
+
+    /*IMPORTANTE QUE SEA BLOCK PARA QUE LOS POSTS SE ACOMODEN*/
+    /*CAJA DE RECETAS*/
    /* CONTAINER DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
-   .elemento-categoria{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-bottom: 10px;
+       .elemento-categoria{
+       display: block;
+       width: 100%;
+       max-width: 900px;
     }
      
-     #imagen-elemento-categoria{
+    .elemento-categoria #imagen-elemento-categoria{
        display: block;
        position: relative;
        float: left;
-       margin-right: 24px;
+       margin-right: 14px;
        border-radius: 4px;
        break-inside: avoid-column;
        overflow: hidden;
@@ -934,7 +940,6 @@ nav{
        height: 460px;
       width: 30%;
       max-width: 270px;
-       margin-right: 20px;
        margin-bottom: 30px;
      }
 
@@ -942,6 +947,9 @@ nav{
        /*CAJA DE LA IMAGEN*/
        #imagen-elemento-categoria img {
         width: 100%;
+        display: block;
+        position: relative;
+        float: left;
         max-width:265px;
         height: 270px;
         margin: auto;

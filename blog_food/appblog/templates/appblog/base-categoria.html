@@ -4,48 +4,133 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}Categoria{% endblock %}</title>
-    <!-- STILOS -->
-    <link rel="stylesheet" href="{% static 'appfood/css/categoria.css' %}">
-    <link rel="stylesheet" href="{% static 'appfood/css/responsivecategoria.css' %}">
+     <meta charset="utf-8">
+        <meta meta content="width=device-width, initial-scale=1,  maximum-scale=1" name="viewport">
+        <title>{% block titulo %}{{object.title}} {% endblock titulo %}</title>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Encuentre recetas saludables y deliciosas e ideas para menús  en la revista FoodingEmotion. Aprenda a elegir alimentos más saludables todos los días..">
+        <meta name="keywords" content="Recetas Saludables, Recetas, Alimentacio Saludable, Plande comidas dieteticas">
+        <link rel="canonical" href="https://www.foodingemotion.com/">
 
 
-    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-48x48.png' %}"/>
-    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-60x60.png' %}"/>
-    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-72x72.png' %}"/>
-    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-96x96.png' %}"/>
-    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-144x144.png' %}"/>
-    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-192x192.png' %}"/>
-    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-icon.png' %}"/>
-    <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-310x310.png' %}"/>
-    
-    <!----COLOR DE LA BARRRA URL----------------------------------------->
-     <!---PROBAR EN ANDROID--->
+        {% if object.slug in request.path %}
+        <title>{{object.title}}</title>
+        <meta property="og:title" content="{{object.title}}">
+        <meta name="description" property="og:description" content="{{object.content|striptags|truncatewords:20}}">
+        <meta property="og:image" content="{{object.image_field.url}}">
+        <meta property="og:image:alt" content="{{object.image_alt}}">
+        <meta property="og:url" content="https://www.foodingemotion.com/{{object.slug}}">
+        <meta name="twitter:card" value="summary">
+
+        {% elif request.path == '/' %}
+        <title>Fooding Emotions</title>
+        <meta name="description" content="Revista Gastronomica, recetas saludables, plan de comidas dieteticas, almentacion saludable">
+
+       {% else %}
+       <title>FoodingEmotion</title>
+       <meta name="description" content="Dietas, Intolerancias Alimenticias, plan de comidas para bajar de peso...">
+       {% endif %}
+      
+
+       {% block meta_extend %}
+       <meta name="description" content="{{ obj.description }}">
+       <meta name="title" content="{{ obj.title }}">
+       {% endblock %}
+
+
+       
+       {% if object.slug in request.path %}
+      <meta property="og:title" content="{{object.Foodingemotion}}">
+      <meta property="og:url" content="https://www.foodingemotion.com/{{object.slug}}" >
+
+      <meta property="og:description" content="{% if object.summary %}{{object.summary|striptags|truncatechars:160}}{% else %}
+      {{object.text|safe|striptags|truncatechars:160}}{% endif %}">
+
+      <meta property="og:image" content="{% if post.header_image %}{{ post.header_image.url }}
+      {% else %}https://www.foodingemotion.com{% static 'images/home-office.jpg' %}{% endif %}">
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <title>{{object.title}}</title>
+      {% else %}
+      <title>Fooding Emotion</title>
+      <meta property="og:title" content="Recetas Saludables">
+      <meta property="og:description" content="Description up to 160 characters">
+      <meta property="og:image" content="https://image-url.png">
+      <meta property="og:url" content="https://www.foodingemotion.com" >
+
+      <meta name="twitter:card" content="summary_large_image" />   
+
+     {% endif %}
+     <meta name="twtter:site" content="@website_handle" />
+      <meta name="twtter:creator" content="@your_handle" />  
+
+
+
+
+
+
+
+      <meta property="og:title" content="Recetas Saludables, Alimentacion Saludable - FoodingEmotion">
+      <meta property="og:type" content="articulo">
+      <meta property="og:site_name" content="FoodingEmotion">
+      <meta property="og:url" content="https://www.foodingemotion.com/">
+      <meta property="og:description" content="Encuentre recetas saludables y deliciosas e ideas para menús de nuestros cocineros profesionales. Aprenda a elegir alimentos más saludables todos los días. ">
+      <meta name="pinterest:url" content="https://www.foodingemotion.com/">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:url" content="https://www.foodingemotion.com/">
+      <meta name="twitter:title" content="Fooding Emotions: Recetas Saludables, Alimentacion Saludable">
+      <meta name="twitter:description" content="Encuentre recetas saludables y deliciosas e ideas para menús de nuestros cocineros profesionales. Aprenda a elegir alimentos más saludables todos los días..">
+      <meta name="twitter:site" content="@">
+      <meta name="pinterest:media" content="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F02%2F04%2Fcrispy-smashed-brussel-sprouts-2000.jpg">
+      <meta name="twitter:image" content="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1000&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F02%2F04%2Fcrispy-smashed-brussel-sprouts-2000.jpg">
+      <meta property="og:image" content="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1000&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F02%2F04%2Fcrispy-smashed-brussel-sprouts-2000.jpg">
+      <meta property="og:image:width" content="2000">
+      <meta property="og:image:height" content="1000">
+      <meta property="fb:app_id" content="165082593548215">
+      <meta property="fb:pages" content="10053803772">
+
+ 
+
+     <!--favicon-->
+     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+     <link  rel="icon"   href="img/favicon.png" type="image/png" />
+     <link  rel = "apple-touch-icon"  tamaños = "57x57"  href = "/favicon/android-icon-57x57.png" > 
+
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-48x48.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-60x60.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-72x72.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-96x96.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-144x144.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-192x192.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-icon.png' %}"/>
+      <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-310x310.png' %}"/>
+
+
+      
+       <!---PROBAR EN ANDROID--->
       <meta name="viewport" content="width=device-width"> 
-      <meta name="mobile-web-app-capable" content="yes">   
-       <!----------------------->
-     <!--<link  rel = "manifest" href = "/manifest.json" > -->
-     <link rel="manifest" href="{% static 'appfood/js/manifest.webmanifest' %}">
-     <meta  nombre ="msapplication-TileColor"  content = "#ffffff" > 
+      <meta name="mobile-web-app-capable" content="yes"> 
+
+
+       <!----------------AQUI IBA EL MANIFIESTO------->
+     <meta  nombre ="msapplication-TileColor"  content = "#7aac41" > 
      <meta  name = "msapplication-TileImage"  content = "/ms-icon-144x144.png" > 
      
      <!--Chrome Firefox OS y Operac–-->
-     <meta name="theme-color" content= "#568632">
-      <meta name="theme-color" content="#568632" /> 
+     <meta name="theme-color" content= "#7aac41">
+      <meta name="theme-color" content="#7aac41"/> 
      <!--iOS Safari-->
 
-     <meta name=»apple-mobile-web-app-status-bar-style» content= "#568632">
+     <meta name= "apple-mobile-web-app-status-bar-style" content= "#7aac41">
 
      <!--Windows Phone-->
 
-    <meta name=»msapplication-navbutton-color» content= "#568632">
+    <meta name= "msapplication-navbutton-color" content= "#7aac41">
 
-     <meta name=»apple-mobile-web-app-status-bar-style» content=»black-translucent»>
+     <meta name= "apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-     <meta name=»apple-mobile-web-app-status-bar-style» content=»black»> 
+     <meta name= "apple-mobile-web-app-status-bar-style" content="black"> 
 
       <!-- Windows Phone --> 
      <meta name="msapplication-navbutton-color" content="#568632"> 
@@ -55,6 +140,9 @@
 
     <!------------------------------------------------------------------->
 
+      <!-- STILOS --------------------------------------------------------->
+        <link rel="stylesheet" href="{% static 'appfood/css/categoria.css' %}">
+        <link rel="stylesheet" href="{% static 'appfood/css/responsivecategoria.css' %}">
     
 
 
@@ -640,6 +728,51 @@
                 })
 
             </script>
+
+
+ <!----SCROLL TEXTO SLIDER---DE LAS CATEGORIAS DE LA PAGINA PLAN DE COMIDAS.DIETAS , TURISMO--------------------------------------------->
+             <script type="text/javascript">
+           var $this = $('.scroll');
+          var scrollAmount = 50;
+
+      function moveRight() {
+     if ($this[0].scrollWidth - $this.scrollLeft() > $this.outerWidth()) {
+    $this.scrollLeft($this.scrollLeft() + scrollAmount);
+    }
+    }
+
+     function moveLeft() {
+    if ($this.scrollLeft() > 0) {
+    $this.scrollLeft($this.scrollLeft() - scrollAmount);
+    }
+    }
+
+     $("body").keydown(function(e) {
+    // left arrow
+     if ((e.keyCode || e.which) == 37) {
+    moveLeft();
+    }
+  // right arrow
+  if ((e.keyCode || e.which) == 39) {
+    moveRight();
+    }
+    });
+
+    $this.bind('mousewheel', function(e) {
+   if (e.originalEvent.wheelDelta / 120 > 0) {
+    moveLeft();
+   } else {
+    moveRight();
+   }
+    });
+
+    // push button navigation
+    $('.leftNav').click(moveLeft);
+    $('.rightNav').click(moveRight);
+   </script>
+   <!----------------------------------------------------------------------->
+ 
+
 
             <!--  PARA ANIMAR AL HACER SCROLL-->
             <script src="{% static 'appfood/js/animar.js' %}"></script>

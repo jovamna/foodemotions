@@ -12,17 +12,40 @@
 
 
     @media only screen and (min-width: 250px) and (max-width: 359px)   {
-  #wrapper-categorias {
-  margin:0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  }
+
+
+      html, body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+         }
+    
+    
+    
+         #wrapper-categorias  {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        border-spacing: 0;
+        border-collapse: collapse;
+       }
+    
       
-  #wrapper-categorias > * {
-  padding: 20px;
-  }
+    
+       #wrapper-categorias  img {
+      width: 100%;
+      height: auto;
+      border: 0;
+       }
+  
+       #wrapper-categorias  > * {
+      padding: 12px;
+      }  
+
+
+
+
+
   
     div {
     flex: 1;
@@ -33,7 +56,10 @@
   #container-categorias{
   width: 100%;
   margin: auto;
-  margin-top: 72px;
+  margin-top: 60px;
+  padding-right: 0;
+  padding-left: 0;
+  margin-bottom: 150px;
   }
 
  /*border-bottom: 2px solid #DDD;*/
@@ -43,83 +69,93 @@
     z-index: 999;
     position: fixed;
     margin: auto;
-    height:  60px;
+    height:  45px;
     box-shadow: 0 8px 6px -6px #c9c9c9;
    }
     /*HEADER LLAMADO CATEGORIA*/
       header.black{
       width: 100%;
-      height:  60px;
+      height:  45px;
       background-color:#fff ;
       }
 
 
-   
-      #cabecera-categorias{
+   /*ANULAR BUSCADOR DE LA CABECERA ORDENADIR*/
+
+      .controls{
+     display: none;
+     visibility: hidden;
+      }
+
+
+        #cabecera-categorias{
         width: 100%;
         display: flex;
         flex-direction: row;
-        height: 35px; 
+        justify-content: space-between;
+        height: 32px; 
         margin: auto;
-        margin-left: -0.1px;
         }
            
           
         /*caja */
-        .logo{
-          display: block;
-          height: 30px;
-        width: 50%;
-        }
+      #cabecera-categorias .logo{
+      display: inline-flex;
+      height: 32px;
+      width: 26%;
+      max-width: 200px;
+      }
               
         
-      .logo img {
-      width: 80%;
-      height: 30px;
-      margin: auto; 
+        #cabecera-categorias .logo img {
+        display: block;
+      width: 100%;
+       width: 130px;
       }
        
-         /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-         .menu-btn {
-          display: block;
-          width: 20%;
-          max-width: 140px;
-          height: 30px;
-          cursor: pointer;
-          transition: all .5s ease-in-out;  
+
+      /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+      #cabecera-categorias .menu-btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 35%;
+      max-width: 240px;
+      height: 32px;
+      cursor: pointer;
+      transition: all .5s ease-in-out; 
+      margin: auto; 
+      margin-left: -36px;
         }
   
           
-       /*CONTENEDOR  REVISTA Y SOCIALES*/
-      .boletin{
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+    .menu-btn  .boletin{
+    width: 90%;
+    max-width: 200px;
+    height: 32px;
+    display: block;
+    position: relative;
+    float: left;
+    }
+  
+  
+      /*LETRA INSCRIBETE*/
+       .boletin a h4{
+      font-size: 0.6rem;
+      letter-spacing: 0.2px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 600;
+      color:#2d2d2d;
+      margin-top: 8px;
       width: 100%;
-      max-width: 65px;
-      display: block;
-      position: relative;
-      float: left;
-      margin-top: 15px;
-  
-       }
-  
-  
-          /*LETRA FOOD EMOTIONS*/
-          
-          
-          /*LETRA INSCRIBETE*/
-             .boletin a h4{
-            font-size: 0.8rem;
-            word-spacing: -3px;
-            letter-spacing: -1px;
-            font-family: 'Cabin', sans-serif;
-            font-weight: 600;
-            color:#2d2d2d;
-            margin: auto;
-            }
+        }
+
           
        .boletin a h4:hover{
-              color: #639a3a;
-              text-decoration: none;
-             }
+      color: #639a3a;
+      text-decoration: none;
+      }
             
         
   
@@ -128,9 +164,10 @@
             display: block;
            position: relative;
            float: right;
-            margin-top:  16px;
-            width: 35px;
-            height: 4px;
+            margin-top: 8px;
+            width: 5%;
+            max-width: 32px;
+            height: 3.1px;
             background: #2d2d2d;
             border-radius: 2px;
             box-shadow: 0 2px 5px rgba(255,101,47,.2);
@@ -142,9 +179,8 @@
             .menu-btn__burger::after {
               content: '';
               position: absolute;
-              width: 35px;
-              height: 4px;
-           
+              width: 32px;
+              height: 3.1px;
               background:#2d2d2d;
               border-radius: 2px;
               box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
@@ -153,11 +189,11 @@
              
             }
             .menu-btn__burger::before {
-              transform: translateY(-8px);
+              transform: translateY(-7px);
               z-index:3000; 
             }
             .menu-btn__burger::after {
-              transform: translateY(8px);
+              transform: translateY(7px);
               z-index:3000;
             }
 
@@ -187,11 +223,11 @@
       /*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
   
     #container-categorias-subcategorias{
-    width: 100%;
-    max-width: 350px;
+    width: 92%;
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+    margin: auto;
     }
   
         /*CAJA DE NAVEGACION DE LAS CATEGORIAS Y SUBCATEGORIAS*/
@@ -220,7 +256,15 @@
       color:#2d2d2d;
       }
 
-     
+     /*CATEGORIA DE PLAN COMIDAS, DIETSA ETC..*/
+     .leftNav{
+       display: none;
+       visibility: hidden;
+     }
+     .rightNav{
+       display: none;
+       visibility: hidden;
+     }
      
         
     /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
@@ -238,7 +282,6 @@
    /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/
   .container-posts-categorias{
     width: 100%;
-    max-width: 350px;
     margin-top: 12%; /*PARA QUE ENTRE LA FECHA EN LA FOTO*/
     display: flex;
     flex-direction: column;
@@ -282,17 +325,16 @@
           max-width: 150px;
           height: 100%;
           max-height: 150px;
-          margin-right: 15px;
-    
-         
+          margin-right: 15px;     
         }
      
             /*..CAJA DE RECETAS..*/
        #imagen-elemento-categoria .imagen-descripcion{
+         width: 92%;
         display: block;
         position: relative;
         float: right;
-  
+        margin: auto;
        }
   
          /* TITULO DEL POST*/
@@ -311,9 +353,10 @@
         /*...PAGINAS DE DIETA PLAN DE COMIDA Y TURISMO*/
        /* USANDO EL MISMO CONRTAINER DE RECETAS container-posts-categorias*/
      .columna-categorias{
+    
        display: flex;
        flex-direction: column;
-
+      margin: auto;
      }
 
      .por-categoria{
@@ -329,14 +372,17 @@
        margin-bottom: 15px;
      }
 
+      /*CONTAINER DE .A DESCRIPCION DE LA FOTO*/
     .por-descripcion{
      display: block;
-     width: 100%;
+     width: 92%;
+     margin: auto;
     }
 
     #aside{
      display: block;
-     width: 100%;
+     width: 90%;
+     margin: auto;
     }
 
    /*..FINDE DIETA PLAN Y TURISMO*/
@@ -352,186 +398,195 @@
        /*CIRCULO  DERECHO*/
        #carrusel li.right-arrow{
         margin-left:70%;
-      
         }
-    
+
+
+        #carrusel h1{
+          margin-left: 15px;
+          font-size: 1.3rem;
+          word-spacing: 1px;
+        }
+
+        /**MUY IMPORTANTE..*/
+   /*CIRCULO MODIFICA ALTO Y ANCHO.................. */
+   .carusel{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    margin-top: 36%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+    margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+    }
+
     
        
 /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
 
-  #footer-categorias{
-  clear: both;
-  position: relative;
-  height: 80px;
-  margin-top: -80px;
-  border-top: solid 1.5px #DCDCDC;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  z-index: 10;
-  }
-  
-  
-    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
-    .footer-primero-categorias{
-    width: 100%;
-    margin: auto;
-    height: 70px;
-    display: flex;
-    flex-direction: row;  
-    justify-content: space-between;
-    clear: both;
-    z-index: 100;
-    }
  
-   /*SUB-caja ICONOS SOCIALES*/
-   .icon-social1{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    height: 70px;
+    /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
+
+    #footer-categorias{
+      clear: both;
+      position: relative;
+      height: 140px;
+      margin-top: -140px;
+      border-top: solid 1.5px #DCDCDC;
+      display: block;
+      width: 100%;
+      z-index: 10;
+      padding-top: 0;
+      }
+      
+      
+        /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+        .footer-primero-categorias{
+        width: 100%;
+        height: 170px;
+       display: flex;
+       flex-direction: column;
+      padding-top: 0;
+      margin-bottom: 10px;
+      z-index: 10;
+      }
+  
+  
+       /*CAJA DE SOCIALES Y LETRA*/
+         .icon-social1{
+        width: 90%;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding-top: 0;
+        }
+  
+  
+         .footer-primero-categorias .icon-social1 p{
+          margin: auto;
+        font-size: 1.2rem;
+    
+        }
+  
+         /* UL */
+         .social2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60%;
+        height: 40px;
+        padding-top: 0;
+        margin: auto;
+       }
+  
+     .social2  ul li .fa-envelope{
+    background-color: oldlace;
+    color: #2d2d2d;
+    width: 8px;
+    height: 8px;
+    padding: 0.5px 0.5px 0.5px 0.5px;
+    border-radius: 2px;
+    border: solid #E9E9E9;
     }
-
-  .social2{
-   display: flex;
-   flex-direction: row; 
-   }
-
-  .icon-social1 li{
-  list-style: none;
-  display: inline-flex;
-  }
-
-.icon-social1 p{
-font-size: 1rem;
-word-spacing: -3px;
-letter-spacing: -2px;
-font-family: 'Archivo Black', sans-serif;
-padding-bottom: 10px;
-color: #2d2d2d;
-}
-
-.icon-social1 .icon-social1 ul{
-display: inline-flex;
-list-style: none;
-}
-
-
-.icon-social1  ul li .fa-envelope{
-background-color: oldlace;
-color: #2d2d2d;
-width: 25px;
-height: 25px;
-padding: 2px 2px 2px 2px;
-border-radius: 25px;
-border: solid #E9E9E9;
-}
-
-.icon-social1  ul li .fa-facebook-f{
-background-color: oldlace;
-color:  #2d2d2d;
-width: 25px;
-height: 25px;
-padding: 2px 2px 2px 2px;
-border-radius: 25px;
-border: solid #E9E9E9;
-}
-
-
-.icon-social1  ul li .fa-twitter{
-background-color: oldlace;
-color:   #2d2d2d;
-width: 25px;
-height: 25px;
-padding: 2px 2px 2px 2px;
-border-radius: 25px;
-border: solid #E9E9E9;
-}
-
-.icon-social1 ul li .fa-instagram{
-background-color: oldlace;
-color: #2d2d2d;
-width: 25px;
-height: 25px;
-padding: 2px 2px 2px 2px;
-border-radius: 25px;
-border: solid #E9E9E9;
-}
-
-
- /*SUBCONTENEDOR DONDE ESTA EL BOX*/
-  .box{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 70px;
-  }
-
- /*LETRA DE LA CAJA DE SUSCRIBIR*/
-  .box h3{
-  display: block;
-  letter-spacing: -0.1px;
-  font-family: 'Archivo Black', sans-serif;
-  font-size: .4rem;
-  font-weight: 400;
-  margin-top: 5px;
-  color: #2d2d2d;
-   }
-
- /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
-  .box form{
-  display: flex;
-  flex-direction: row;
-  margin-top: 15px;
-  width: 100%;
-  }
-
-
-/*CAJA DEL IMPUT EL LADO DE DONDE SE ESCRIBE*/
-.box input[type="text"]
-{
-background-color: #fff;
-display: flex;
-width:65%;
-height: 25px;
-border: 1.5px solid 	#DCDCDC;
-padding: 0 9px;
-border-radius: 5px 0 0 5px;
-font-size: 0.5rem;
-}
-/*.EL COMPLEMENTO DEL ANTERIOR*/
-.box button[type="submit"]{
-left: 7px;  /*EL TRUCO IMPORTANTE*/
-border-radius: 0 5px 5px 0;
-width: 35%;
-height: 25px;
-border: none ;
-outline: none;
-cursor: pointer;
-background-color: #2d2d2d;
-color: #fff;
-font-size: 0.4rem;
-font-family: 'Archivo Black', sans-serif;
-}
-
-
-/*FIN de la cajita del correo */
-
-
-  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
-   #footer-second-categorias{
-   width: 100%;
-   height: 10px;  /*IMPORTANTE*/
-   margin:auto;
-   }
-
-   /*..SUBCAJA DE DIV FOOTERSENIDN...*/
-  .final-food-categorias p{
-  text-align: center;
-  color: #2d2d2d;
-  font-size: 0.5rem;
-  }
+    
+      .social2  ul li .fa-facebook-f{
+    background-color: oldlace;
+    color:  #2d2d2d;
+    width: 8px;
+    height: 8px;
+    padding: 0.5px 0.5px 0.5px 0.5px;
+    border-radius: 2px;
+    border: solid #E9E9E9;
+    }
+    
+    
+       .social2  ul li .fa-twitter{
+      background-color: oldlace;
+      color:   #2d2d2d;
+      width: 8px;
+      height: 8px;
+      padding: 0.5px 0.5px 0.5px 0.5px;
+      border-radius: 2px;
+      border: solid #E9E9E9;
+       }
+    
+  
+        .social2 ul li .fa-instagram{
+      background-color: oldlace;
+      color: #2d2d2d;
+      width: 8px;
+      height: 8px;
+      padding: 0.5px 0.5px 0.5px 0.5px;
+      border-radius: 2px;
+      border: solid #E9E9E9;
+      }
+  
+    
+         .box{
+       width: 100%;
+      height: 50px;
+     }
+  
+     /*LETRA ENCIMA DEL BOX*/   
+         .box h3{
+       font-size: 1rem;
+       
+        margin: auto;
+       }
+  
+        .box form{
+        width: 90%;
+       display: flex;
+       flex-direction: row;
+       margin: auto;
+      margin-top: -3px;
+      }
+  
+        .box input[type="text"]
+      {
+      background-color: #fff;
+      width:70%;
+       height: 38px;
+      border: 1.5px solid 	#DCDCDC;   
+      padding: 0 5px;
+      border-radius: 5px 0 0 5px;
+      font-size: 0.7rem;
+      }
+       
+      .box button[type="submit"]{
+      left: 6px;  /*EL TRUCO IMPORTANTE*/
+      border-radius: 0 5px 5px 0;
+      width: 30%;
+      height: 38px;
+      border: none ;
+      outline: none;
+      cursor: pointer;
+      background-color: #2d2d2d;
+      color: #fff;
+      font-size: 0.6rem;
+      font-family: 'Archivo Black', sans-serif;
+      padding: 0 5px 1px 1px;
+      }
+  
+  
+     /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+     #footer-second-categorias{
+     width: 100%;
+     height: 20px; 
+     }
+    
+     .final-food-categorias  {
+      width: 100%;
+      margin: auto;
+      }
+   
+  
+      .final-food-categorias  p{
+     text-align: center;
+     color: #2d2d2d;
+     font-size: 0.6rem;
+     padding-bottom: 8px;
+     }
+  
+     
 
    }
   
@@ -567,46 +622,7 @@ font-family: 'Archivo Black', sans-serif;
     padding: 15px;
     }  
        
-    #cabecera-categorias .controls{
-      display: none;
-      visibility: hidden;
-    }
-
-     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-     #controls-responsive{
-      display: block;
-      visibility: visible;
-      width: 92%;
-      height: 35px;
-      margin-top: 3px;  
-      margin-bottom: 20px;
-     margin-left: 14px; 
-       }
-  
-  
-       #custom-search-input-responsive{
-       width: 100%;
-       height: 35px;
-       border: 1px solid#c9c9c9;
-       border-radius: 4px;
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between;
-     
-       }
-  
-  
-       #controls-responsive .sin-borde-responsive{
-       width: 80%;
-       height: 32px;
-       display: inline-flex;
-      }
-  
-  
-       #controls-responsive .boton-responsive{
-       width: 20%;
-       height: 32px;
-        }
+   
   
             /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA...............FIN BUSCADOR RESPONSIVE*/
   
@@ -644,16 +660,13 @@ font-family: 'Archivo Black', sans-serif;
     flex: 1;
     }
   
-    /*...CATEGORIA Y SUCATEGRIAS............................................*/
-   /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
-           /*FIN ANIMACION SUBRAYADO */
-  #cabecera-categorias{
-    width: 100%;
+   
+      #cabecera-categorias{
+      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       height: 38px;
-      margin-top: -4px;
            }
 
     
@@ -669,8 +682,7 @@ font-family: 'Archivo Black', sans-serif;
     #cabecera-categorias .logo img {
       display: block;
       width: 100%;
-      max-width: 150px;
-      height: 38px;
+      max-width: 140px;
     }
  
  /*CONTENEDOR  REVISTA Y SOCIALES*/
@@ -688,23 +700,23 @@ font-family: 'Archivo Black', sans-serif;
     
  
  /*BOTON ICONO REVISTA Y SOCIALES*/
- #cabecera-categorias .menu-btn .boletin{
+ #cabecera-categorias .menu-btn  .boletin{
   display: block;
   position: relative;
   float: left;
   width: 100%;
-  max-width: 120px;
+  max-width: 100px;
   height: 38px;
    }
  
  
    /*LETRA INSCRIBETE*/
-   #cabecera-categorias .menu-btn .boletin h4 {
-    font-size: 0.9rem;
-    margin-top: 22px;
+   #cabecera-categorias .menu-btn  .boletin h4 {
+    font-size: 0.8;
+    margin-top:  15.5px;
     margin-left: 2px;
     font-weight: 700;
-    letter-spacing: 0.9px;
+    letter-spacing: 0.2px;
     font-family: 'Times New Roman', Times, serif;
     }
 
@@ -717,11 +729,10 @@ font-family: 'Archivo Black', sans-serif;
   
  
    /*HAMBURGUESA*/
-   .menu-btn__burger {
+   .menu-btn .menu-btn__burger {
     display: block;
     position: relative;
     float: right;
-    margin-top: 22px;
     width: 37px;
     height: 4px;
     background: #2d2d2d;
@@ -746,17 +757,57 @@ font-family: 'Archivo Black', sans-serif;
  
  
    .menu-btn__burger::before {
-   transform: translateY(-10px);
+   transform: translateY(-8px);
    z-index:3000; 
    }
 
    .menu-btn__burger::after {
-   transform: translateY(10px);
+   transform: translateY(8px);
    z-index:3000;
    }
 
    /*NAV*/
-
+      /*BUSCADR RESPONSIVE*/
+      #cabecera-categorias .controls{
+        display: none;
+        visibility: hidden;
+      }
+  
+       /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+       #controls-responsive{
+        display: block;
+        visibility: visible;
+        width: 92%;
+        height: 35px;
+        margin-top: 3px;  
+        margin-bottom: 20px;
+       margin-left: 14px; 
+         }
+    
+    
+         #custom-search-input-responsive{
+         width: 100%;
+         height: 35px;
+         border: 1px solid#c9c9c9;
+         border-radius: 4px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+       
+         }
+    
+    
+         #controls-responsive .sin-borde-responsive{
+         width: 80%;
+         height: 32px;
+         display: inline-flex;
+        }
+    
+    
+         #controls-responsive .boton-responsive{
+         width: 20%;
+         height: 32px;
+          }
   
    nav{
      width: 100%;
@@ -916,6 +967,11 @@ font-family: 'Archivo Black', sans-serif;
   /*..........................*/
   /*PAGINA DE RECETAS SUBCATEGORIAS IMAGENES*/
 
+  .imagenes-pequeñas{
+    width: 92%;
+   margin-left: 15px;
+   margin-bottom: 35px;
+  }
   .imagenes-pequeñas .subcategoria h3{
     font-size: 0.8rem;
   }
@@ -974,47 +1030,36 @@ font-family: 'Archivo Black', sans-serif;
     #aside{
      width: 100%;
     }
-  /*...................*/
+     /*...................*/
 
 
-  /*....CONTAINER DONDE ESTAN LAS SUBCATEGORIAS PERO DE PALABRAS SIN IMAGENES...........*/
-  #texto-slider{
+    /*....CONTAINER DONDE ESTAN LAS SUBCATEGORIAS PERO DE PALABRAS SIN IMAGENES...........*/
+    #texto-slider{
     display: block;
     width: 96%;
-  }
+     }
 
 
-#texto-slider::-webkit-scrollbar { /* WebKit */
-  width: 0px;
-  height: 5px;
-  background-color: #568632;
-  }
-
-  /*.............................*/
-  
-     
-
-
-   /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/
- 
-    .fecha{
-      display: none;
+    #texto-slider::-webkit-scrollbar { /* WebKit */
+    width: 0px;
+    height: 5px;
+    background-color: #568632;
     }
 
-      #posts-categorias-aside{
-      display: flex;
-      flex-direction: column ;
-      width: 100%;
-     }
+      /*CATEGORIA DE PLAN COMIDAS, DIETSA ETC..*/
+     .leftNav{
+      display: none;
+      visibility: hidden;
+    }
+    .rightNav{
+      display: none;
+      visibility: hidden;
+    }
     
-     .post-cuatro-categorias{
-     width: 100%;
-     display: flex;
-     flex-direction: column;   
-     }
-
-
-    #aside{
+       
+  /*.............................*/
+  
+  #aside{
     width: 100%;
     }
 
@@ -1028,44 +1073,65 @@ font-family: 'Archivo Black', sans-serif;
         text-decoration: none;
          }
       
+
+
+   /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/
+ 
+    .fecha{
+      display: none;
+    }
+      /*CONTAINER QUE DIVIDE LOS POST DE RECTAS Y EL ASIDE VA EN 100 PERO AQUI SERA EN COLUMN*/
+      #posts-categorias-aside{
+      display: flex;
+      flex-direction: column ;
+      width: 100%;
+     }
+    
+     /*LA COLUMNA DE LOS PSTS*/
+     .post-cuatro-categorias{
+     width: 100%;
+     display: flex;
+     flex-direction: column;   
+     }
+
+
+   
   /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
     .elemento-categoria{
     width: 100%;
     display: flex;
     flex-direction: column;
     border-radius: 2px;
+    margin-bottom: 10px;
     }
 
 
-    /*CONTIENE SOLO LA IMAGEN*/
-    #imagen-elemento-categoria{
+    /*CONTIENE SOLO LA IMAGEN y DENTRO EL DIV DESCRIPCION*/
+   .elemento-categoria #imagen-elemento-categoria{
     width: 100%;
-    max-width: 630px;
-    height: 100%;
-    max-height: 200px;
-    display: block;
-    position: relative;
-    float: left;
-    margin-bottom: 30px;
+    max-width: 600px;
+     height: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+    margin-bottom: 10px;
     border-top: 2px solid #DCDCDC;
     }
 
 
     #imagen-elemento-categoria img{
-    width: 40%;
-    height: 100%;
-    max-width: 220px;
-    max-height: 160px;
+    width: 45%;
+     height: 140px;
     display: block;
     position: relative;
     float: left;
+    margin-right: 15px;
     }
 
    
     #imagen-elemento-categoria .imagen-descripcion{
-    width: 56%;
-    max-width: 340px;
-    margin-left: 2px;
+    width: 52%;
+    max-width: 300px;
     display: block;
     position: relative;
     float: right;
@@ -1076,11 +1142,11 @@ font-family: 'Archivo Black', sans-serif;
        /* TITULO DEL POST*/
       #imagen-elemento-categoria .imagen-descripcion h2{
       font-size: 1.3rem;
-      margin-top: 0.6%;
-      margin-bottom: 1.2%;
+      margin-bottom: 5px;
       font-family: 'Times New Roman', 'sans serif';
       font-weight: bolder;
       color: #000000;
+      top: 0;
       }
 
 
@@ -1996,7 +2062,7 @@ font-family: 'Archivo Black', sans-serif;
    }
    
     .boletin a h4:hover{
-    color: #639a3a;
+    color: #7aac41;
     text-decoration: none;
     }
  
@@ -2111,7 +2177,28 @@ font-family: 'Archivo Black', sans-serif;
     font-size: 0.8rem;
    }
   
+    /*....CONTAINER DONDE ESTAN LAS SUBCATEGORIAS PERO DE PALABRAS SIN IMAGENES...........*/
+    #texto-slider{
+      display: block;
+      width: 100%;
+       }
   
+  
+      #texto-slider::-webkit-scrollbar { /* WebKit */
+      width: 0px;
+      height: 5px;
+      background-color: #7aac41;
+      }
+  
+        /*CATEGORIA DE PLAN COMIDAS, DIETSA ETC..*/
+       .leftNav{
+        display: none;
+        visibility: hidden;
+      }
+      .rightNav{
+        display: none;
+        visibility: hidden;
+      }
     
        
      
@@ -2127,54 +2214,92 @@ font-family: 'Archivo Black', sans-serif;
   
   
   
-     /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/
+     /*CONTAINER GENERAL DE RECETAS , PLAN, DIETAS Y TURISMO................................*/
       .container-posts-categorias{
       width: 100%;
       margin-top: 12%; /*PARA QUE ENTRE LA FECHA EN LA FOTO*/
       display: flex;
       flex-direction: column;
       margin: auto;
+      padding-left: 0;
       }
   
+
+      /*DE LA PAGINA RECETAS...............*/
+      #posts-categorias-aside{
+        width: 94%;
+        max-width: 750px;
+        display: block;
+        position: relative;
+        float: left;
+        padding-left: 0;
+      }
   
-    .container-posts-categorias #posts-categoria{
+
+      .post-cuatro-categorias{
       display: block;
+      position: relative;
+      float: left;
       width: 100%;
-    }
-  
+       max-width: 750px;
+       padding-left: 0;
+       padding-right: 0;
+      }
+
+
+
+
   
           /*... background-color: #f9e4e3;..   #EFF4EB*/
     /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
        .elemento-categoria{
-      width: 610px;
-      display: flex;
-      flex-direction: column;
-       border-radius: 2px ;
+        display: block;
+       width: 100%;
+       max-width: 700px;
+       border-radius: 2px;
+       
       }
   
          /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
-        #imagen-elemento-categoria{
-          width: 100%;
-          height: 100%;
-          max-height: 180px;
+         .elemento-categoria  #imagen-elemento-categoria{
+          display: block;
+          position: relative;
+          float: left;
+          width: 40%;
+          max-width: 280px;
+           height: 400px;
         }
   
   
         #imagen-elemento-categoria img{
-          width: 160px;
-          height: 160px;
+          width: 100%;
+          max-width: 300px;
           display: block;
           position: relative;
           float: left;
         }
   
       .imagen-descripcion{
-      width: 380px;
+        width: 100%;
+      max-width: 300px;
       display: block;
       position: relative;
-      float: right;
-      margin-right:  45px;
+    
       }
+
+      .imagen-descripcion a h2{ 
+        margin-top: 7px;
+        font-size: 1.1rem;
+        letter-spacing: 0.8px;
+        word-spacing: 1px;
+        font-family: 'Times New Roman', Times, serif;
+        width: 100%;
+      }
+      
+      .imagen-descripcion p{ 
+        margin-top: 1px;
+      }
+
   
              /* TITULO DEL POST*/
      .elemento-categoria h2{
@@ -2197,6 +2322,13 @@ font-family: 'Archivo Black', sans-serif;
         color: #2d2d2d;
        }
        
+
+             /*FIN PAGINAS RECETAS ..........*/
+    .container-posts-categorias #posts-categoria{
+      display: block;
+      width: 100%;
+    }
+  
   
      /*CARRUSELL*/
    /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/

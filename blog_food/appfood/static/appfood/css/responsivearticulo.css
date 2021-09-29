@@ -624,7 +624,7 @@
   }
 
  
- #carrusel h2{
+ #carrusel h1{
    margin-left: 15px;
    font-size: 1.2rem;
    word-spacing: 1px;
@@ -1761,7 +1761,6 @@ border-radius:6px;
   .carrusel>div {
   float: left;
   width: 100%;
-
   margin-right: 5px;   /*ESPACIO */
   text-align:center;
   }

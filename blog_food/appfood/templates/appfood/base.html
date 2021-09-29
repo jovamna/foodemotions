@@ -9,7 +9,7 @@
         <meta meta content="width=device-width, initial-scale=1,  maximum-scale=1" name="viewport">
         <title>{% block titulo %} {% endblock titulo %}</title>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="description" content="Encuentre recetas saludables y deliciosas e ideas para menús de nuestros cocineros de prueba y expertos en nutrición en la revista EatingWell. Aprenda a elegir alimentos más saludables todos los días..">
+        <meta name="description" content="Encuentre recetas saludables y deliciosas e ideas para menús  en la revista FoodingEmotion. Aprenda a elegir alimentos más saludables todos los días..">
         <meta name="keywords" content="Recetas Saludables, Recetas, Alimentacio Saludable, Plande comidas dieteticas">
         <link rel="canonical" href="https://www.foodingemotion.com/">
 
@@ -24,7 +24,7 @@
         <meta name="twitter:card" value="summary">
 
         {% elif request.path == '/' %}
-        <title>Food Emotions</title>
+        <title>Fooding Emotions</title>
         <meta name="description" content="Revista Gastronomica, recetas saludables, plan de comidas dieteticas, almentacion saludable">
 
        {% else %}
@@ -71,15 +71,15 @@
 
 
 
-      <meta property="og:title" content="Recetas Saludables, Alimentacion Saludable - EmotionsFood">
+      <meta property="og:title" content="Recetas Saludables, Alimentacion Saludable - FoodingEmotion">
       <meta property="og:type" content="articulo">
-      <meta property="og:site_name" content="FooodEmotions">
+      <meta property="og:site_name" content="FoodingEmotion">
       <meta property="og:url" content="https://www.foodingemotion.com/">
       <meta property="og:description" content="Encuentre recetas saludables y deliciosas e ideas para menús de nuestros cocineros profesionales. Aprenda a elegir alimentos más saludables todos los días. ">
       <meta name="pinterest:url" content="https://www.foodingemotion.com/">
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:url" content="https://www.foodingemotion.com/">
-      <meta name="twitter:title" content="Food Emotions: Recetas Saludables, Alimentacion Saludable">
+      <meta name="twitter:title" content="Fooding Emotions: Recetas Saludables, Alimentacion Saludable">
       <meta name="twitter:description" content="Encuentre recetas saludables y deliciosas e ideas para menús de nuestros cocineros profesionales. Aprenda a elegir alimentos más saludables todos los días..">
       <meta name="twitter:site" content="@">
       <meta name="pinterest:media" content="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F02%2F04%2Fcrispy-smashed-brussel-sprouts-2000.jpg">
@@ -92,15 +92,12 @@
 
  
 
-     <!--<link rel="shorcut icon" href="favicon.png"-->
-
+     <!--favicon-->
      <link rel="icon" href="favicon.ico" type="image/x-icon"/>
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
      <link  rel="icon"   href="img/favicon.png" type="image/png" />
      <link  rel = "apple-touch-icon"  tamaños = "57x57"  href = "/favicon/android-icon-57x57.png" > 
 
-
-       
       <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-48x48.png' %}"/>
       <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-60x60.png' %}"/>
       <link rel="shortcut icon" href="{% static 'appfood/img/favicon/android-icon-72x72.png' %}"/>
@@ -114,62 +111,56 @@
       
        <!---PROBAR EN ANDROID--->
       <meta name="viewport" content="width=device-width"> 
-      <meta name="mobile-web-app-capable" content="yes">   
-       <!----------------AQUI IBA EL MANIFIESTO------->
-    
-     <meta  nombre ="msapplication-TileColor"  content = "#ffffff" > 
+      <meta name="mobile-web-app-capable" content="yes">  
+
+
+       <!---------------AQUI CAMBIADO #ffffff------->
+     <meta  nombre ="msapplication-TileColor"  content = "#7aac41" > 
      <meta  name = "msapplication-TileImage"  content = "/ms-icon-144x144.png" > 
      
      <!--Chrome Firefox OS y Operac–-->
-     <meta name="theme-color" content= "#568632">
-      <meta name="theme-color" content="#568632"/> 
+     <meta name="theme-color" content= "#7aac41">
+      <meta name="theme-color" content="#7aac41"/> 
      <!--iOS Safari-->
 
-     <meta name= "apple-mobile-web-app-status-bar-style" content= "#568632">
+     <meta name= "apple-mobile-web-app-status-bar-style" content= "#7aac41">
 
      <!--Windows Phone-->
 
-    <meta name= "msapplication-navbutton-color" content= "#568632">
+    <meta name= "msapplication-navbutton-color" content= "#7aac41">
 
-     <meta name= "apple-mobile-web-app-status-bar-style" content=»black-translucent»>
+     <meta name= "apple-mobile-web-app-status-bar-style" content=·black-translucent">
 
-     <meta name= "apple-mobile-web-app-status-bar-style" content=»black»> 
+     <meta name= "apple-mobile-web-app-status-bar-style" content="black"> 
 
       <!-- Windows Phone --> 
-     <meta name="msapplication-navbutton-color" content="#568632"> 
+     <meta name="msapplication-navbutton-color" content="#7aac41"> 
      <!-- iOS Safari --> 
-    <meta name="apple-mobile-web-app-capable" content="yes"> 
+     <meta name="apple-mobile-web-app-capable" content="yes"> 
      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
 
 
-
-
-
-
-
-
-
      
-     <!-- LO PUSE PARA RESOLVER EL ERROR QUE ME SALIA EN LA CONSOLA -->
+         <!-- LO PUSE PARA RESOLVER EL ERROR QUE ME SALIA EN LA CONSOLA -->
 
-       <!-- STILOS --------------------------------------------------------->
+        <!-- STILOS --------------------------------------------------------->
         <link rel="stylesheet" href="{% static 'appfood/css/style.css' %}">
         <link rel="stylesheet" href="{% static 'appfood/css/responsive.css' %}">
   
-     <!-- ICONOS -------------------------------------------------------------->
+       <!-- ICONOS -------------------------------------------------------------->
         <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
         integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
         crossorigin="anonymous"></script>
 
        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-      <!-- COOKIES-----------------COOKIES-------------- -->
+       <!-- COOKIES-----------------COOKIES-------------- -->
       
-    <!--------SCROLL MENU------------------------------------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+       <!--------SCROLL MENU------------------------------------->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 
 
-      <!-- SCRIPT PARA CABECERA FIJA-------------------------------- -->
+              <!-- SCRIPT PARA CABECERA FIJA-------------------------------- -->
               <script src="http://code.jquery.com/jquery-latest.js"></script>
 
 
