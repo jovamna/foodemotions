@@ -531,7 +531,7 @@
                 <!--RESPONSIVE--rIMAGEN RESPONSIVE------->
         {% for perderpeso in perder %}
         <div class="plan-imagen-responsive">
-         {% if perderpeso.imagefront %}
+                        {% if perderpeso.imagefront %}
                        <img src ="{{perderpeso.imagefront.url}}" >
                        {% endif %}
                        <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">

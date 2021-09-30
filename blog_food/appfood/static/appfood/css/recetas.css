@@ -1388,10 +1388,10 @@ nav a {
     /*FINAL ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE */
 
 
-    /*COMMENTS*/
+    /*COMMENTS
     .id_content{
       background-color: yellow;
-    }
+    }  */
 
 
 
@@ -1442,19 +1442,19 @@ nav a {
   
 /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
 
-#footer-recetas{
+  #footer-recetas{
   clear: both;
     position: relative;
     height: 10px;
     margin-top: -10px;
-   border-top: solid 1.5px #DCDCDC;
-   display: flex;
-   flex-direction: column;
-  width: 100%;
-  z-index: 10;
- 
-  bottom: 0;
-  }
+    border-top: solid 1.5px #DCDCDC;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 10;
+    bottom: 0;
+    background-color: #f4f4f4;
+    }
   
     /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
   .footer-primero-recetas{

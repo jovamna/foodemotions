@@ -54,9 +54,12 @@
                    <div class="articulo-flex-colum">
                   <!-------------------------->
                    <div class="recetas">
-                   
+                     {% if receta.title %}
                    <h1>{{receta.title|safe}} </h1>
+                    {% endif %}
+                    {% if receta.imageauthor %}
                    <p>{{receta.description|safe}} </p>
+                    {% endif %}
                    </div>       
                    <!------------------->
                    <div id="foto-autor">
@@ -65,9 +68,11 @@
                    <img src="{{receta.imageauthor.url}}" >
                    {% endif %}
                    </figure>
+                    {% if receta.author  %}
                    <figcaption>
                    <em><h4>Por: {{receta.author }}</h4></em>
                    </figcaption>
+                   {% endif %}
                   </div>
                   <!--------FIN FOTO-AUTOR-------------->
                   <!----FECHA------------------------------>
@@ -145,14 +150,18 @@
                        <!--TIEMPO----------------->
                        <div class="temps-porciones">
                        <!--TIEMPO--->
+                       {% if receta.titletime %}
                        <div class="temps">
                        <h2>Tiempo <span>{{receta.titletime}}</span></h2>
                        </div>
+                        {% endif %} 
                        <!---------------------------------->
                       <!--PORCIONES--->
+                      {% if receta.porcion %}
                       <div class="porciones">
                       <h2>Porciones : <span>{{receta.porcion|safe}}</span></h2>
                      </div>
+                       {% endif %} 
                      <!----------------------->
                      </div>
                      <!--FIN DIV TEMPS PORCIONES---------------------->
@@ -183,14 +192,14 @@
       <div class="primera-columna">
       <div class="ingredientes-tres">
                 <div class="ingrediente-titulo-pic">
+                           {% if receta.titleingredients %}
                           <div class="ingrediente-titulo">
-                          {% if receta.titleingredients  %}
                           <h2>{{receta.titleingredients|safe}}</h2>
-                          {% endif %} 
                           </div>
                           <div class="ingrediente-pic">
                           <img src= "{% static 'appfood/img/gif/uno.png' %}"/>
-                          </div>       
+                          </div> 
+                          {% endif %}       
                 </div>
 
 
@@ -321,19 +330,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
                      <!---------------SALSA INGREDIENTES----TITULO--------------------------------->
-                      {% if receta.salsaingredients != Null %} 
+                      {% if receta.salsaingredients %} 
                       <div class ="salsa">   
                        <h2>{{receta.salsaingredients|safe}}</h2>
                        </div>
@@ -488,16 +486,17 @@
       <div class="preparacion-total">
                        <!------TITULO-Y DIBUJO PREPARARCION------>
                        <section class="preparacion-titulo"> 
-                           <!--TITULO PREPARARCION------>
-                           <div class="prepa-titulo">
-                           {% if receta.titlepreparation != Null %}
+                            <!--TITULO PREPARARCION------>
+                            {% if receta.titlepreparation %}
+                            <div class="prepa-titulo">
                             <h2>{{receta.titlepreparation|safe}}</h2>
-                           {% endif %}
                             </div>
+                          
                             <!--PIC DE LA PREPARARCIOM--->
                             <div class="prepa-pic">  
                             <img src= "{% static 'appfood/img/gif/dos.png' %}"/>
                             </div>
+                            {% endif %}
                       </section>
                       <!--TIEMPO-------------------------->
                      
@@ -560,15 +559,15 @@
 
 
 
-                      <!--PASO CUATRO------------------->
+                       <!--PASO CUATRO------------------->
                        {% if receta.stepfour %}
-                      <div class="paso"> 
-                      <div class="checkbox">
-                      <input type="checkbox" id="checkbox26" name="" value="">
-                      <label for="checkbox26"><span>{{receta.stepfour}}</span></label>
-                      </div> 
-                      </div>
-                      {% endif %} 
+                       <div class="paso"> 
+                       <div class="checkbox">
+                       <input type="checkbox" id="checkbox26" name="" value="">
+                       <label for="checkbox26"><span>{{receta.stepfour}}</span></label>
+                       </div> 
+                       </div>
+                       {% endif %} 
                       <!--PREPARACION CUATRO------------------->
                       {% if receta.fourprepare %}
                       <div class="preparacion"> 
@@ -678,20 +677,20 @@
 
                         <!-------------------------------------------------->
                             <!--PASO DIEZ-------------->
-                               {% if receta.stepten %}
+                             {% if receta.stepten %}
                              <div class="paso"> 
                              <div class="checkbox">
                              <input type="checkbox" id="checkbox32" name="" value="">
                              <label for="checkbox30"><span>{{receta.stepten}}</span></label> 
                              </div>
-                            </div>
+                             </div>
                              {% endif %}
-                           <!--PREPARACION OCHO------------->
-                          {% if receta.tenprepare %}
-                          <div class="preparacion"> 
+                            <!--PREPARACION OCHO------------->
+                            {% if receta.tenprepare %}
+                            <div class="preparacion"> 
                             <p>{{receta.tenprepare|safe}}</p>
-                         </div>
-                         {% endif %}
+                            </div>
+                            {% endif %}
                          <!--FIN PREPARARCION OCHO-------->
                         <!------------------------------------------------------->
 
@@ -715,46 +714,46 @@
                 {% endif %}
                 <!--FIN PREPARARCION ONCE------->
                 <!------------------------------------------------------->
-    <!-------------------FINAL SECTION DE TODA LA PREPARACION------------------------------------->
-    </section>
-    </div>
+      <!-------------------FINAL SECTION DE TODA LA PREPARACION------------------------------------->
+      </section>
+      </div>
     <!-------------------------------FINAL PREPARACION --------------------------------------------->
 
-          {% if receta.titulo != Null %}
-          <div class="tips-titulo-pic">
-          <!------TITULO-------------------->
-          <div class="tips-titulo">
+            {% if receta.titulo %}
+            <div class="tips-titulo-pic">
+            <!------TITULO-------------------->
+            <div class="tips-titulo">
                 <h2>{{receta.titulotips|safe}}</h2>
-          </div>
+            </div>
             <!----GIF COSTADO DEL TITULO------------>
-          <div class="tips-pic"> 
-          <img src= "{% static 'appfood/img/gif/tres.png' %}"/>
-          </div>
-          <!--FIN GIF COSTADO DEL TITULO------------------------->
-          </div>
-           {% endif %}
+            <div class="tips-pic"> 
+            <img src= "{% static 'appfood/img/gif/tres.png' %}"/>
+            </div>
+            <!--FIN GIF COSTADO DEL TITULO------------------------->
+            </div>
+            {% endif %}
     <!-------------------------------------------------------------------->
-         <div class="tip-contenido"> 
-          {% if receta.tips != Null %}
-          <p>{{receta.tips|safe}}</p>
-          {% endif %}
-         </div>
+            {% if receta.tips %}
+            <div class="tip-contenido"> 
+            <p>{{receta.tips|safe}}</p>
+            </div>
+            {% endif %}
    <!-----FIN DIV TIP CONTENIDO------------------------------------------->
 
 
             <!---SECTION INFORMACION NUTRICIONAL---------------------------------------------->
             <section class="nutricion-informe">
                         <article class="nutricional">
-                                   {% if receta.titlenutricion != Null %}
-                                    <h2>{{receta.titlenutricion|safe}}</h2>
-                                       {% endif %}
-                                     {% if receta.nutricional != Null %}
-                                    <p>{{receta.nutricional|safe}}</p>
-                                     {% endif %}
+                                {% if receta.titlenutricion %}
+                                <h2>{{receta.titlenutricion|safe}}</h2>
+                                {% endif %}
+                                {% if receta.nutricional %}
+                                <p>{{receta.nutricional|safe}}</p>
+                                {% endif %}
                         </article>
                         <!--LAS CATEGORIAS DENTRO DE LA SECTION INFORME NUTRICIONAL--------------->
                         <div class="categoria">
-                                {% if receta.kategory != Null %}
+                                {% if receta.kategory %}
                                <em><h2>Categoria:</h2><p>{{ receta.kategory }}</p></em>
                                {% endif %}          
                         <!--<a href="/recetas_sanas/categoria/{{kategory.slug }}">{{ kategory.nane }}</a>---> 
@@ -924,13 +923,13 @@
               </form>');
 
     document.querySelector('#id_parentt [value="' + id + '"]').selected = true;
-   }
+    }
 
-  $('#myForm').trigger("reset");
-  </script>
+    $('#myForm').trigger("reset");
+    </script>
 
     </div>
- {% endblock content %}
+    {% endblock content %}
  
   <!--FIN DIV PRIMERA COLUMNA--------------->
 

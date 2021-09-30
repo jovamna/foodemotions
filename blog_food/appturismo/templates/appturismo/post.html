@@ -453,24 +453,14 @@
     <!------------------------- TERCERA COLUMNA----------------------------------------------------------->
    {% block tercera-columna %}
         <div class="tercera-columna-fija">
-        <!-------------------------BUSCADOR------------------>
-                  <div class="controls">
-                     <form  method = "GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}"> {% csrf_token %}
-                            <div id="custom-search-input">
-	                            <input type="text"  name="q" value="{{ request.GET.q }}" class="sin-borde" placeholder="  Buscar...." >
-                                <button type="submit" name="submit" class="boton btn-succes" value="Search">
-                                <span class="icon"><i class="fa fa-search"></i></span>   
-                                </button>
-                                        
-                             </div>
-                    </form>
-	     	    </div>
-        <!------------------FINAL BUSCADOR--------------------------->
+      
          <div class="tercera-columna">
                      <h1> todo sobre gastronomia internacional..</h1>
                       <div class="aside-colum">
                        {% for posturismo in post_turismo %} 
+                         {% if posturismo.imagefront %}
                          <img src="{{posturismo.imagefront.url}}">
+                        {% endif %}
                          <a href ="{% url 'appturismo:post' posturismo.slug %}">
                          <p>{{ posturismo.title}}</p>
                          </a>

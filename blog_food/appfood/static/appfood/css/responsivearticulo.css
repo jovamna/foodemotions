@@ -275,6 +275,43 @@
   
     }
 
+    /*BUSCADOR RESPONSIVE..*/
+      /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+      #controls-responsive{
+        display: block;
+        visibility: visible;
+        width: 92%;
+        height: 35px;
+        margin-top: 58px;  
+        margin: auto;
+         }
+    
+         #custom-search-input-responsive{
+         width:  100%;
+         height: 35px;
+         border: 1px solid #c9c9c9;
+         border-radius: 4px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         margin: auto;
+         }
+    
+    
+         #controls-responsive .sin-borde-responsive{
+         width: 80%;
+         height: 32px;
+         display: inline-flex;
+        }
+    
+    
+         #controls-responsive .boton-responsive{
+         width: 20%;
+         height: 32px;
+         background-color: #ffffff;
+          }
+    
+   /*..FIN BUSCADOR RESPONSIVE..*/    
 
     /*PAGINA DEL BUSCADOR*/
      #controls-uno{
@@ -604,7 +641,9 @@
           .container-total-carrusell{
             width: 100%;
           }
- .carrusel1{
+
+
+  .carrusel1{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -614,8 +653,8 @@
   }
    
   /*ESCONDE IMAGGENES*/
- /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
- .carrusel{
+   /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+  .carrusel{
   width:4000px;
   height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
   left: 0px;
@@ -624,14 +663,14 @@
   }
 
  
- #carrusel h1{
+    #carrusel h1{
    margin-left: 15px;
    font-size: 1.2rem;
    word-spacing: 1px;
- }
+   }
 
     /*PARA QUE LAS FLECHAS DESPAREZCAN */
-#carrusel:hover  li.left-arrow{
+   #carrusel:hover  li.left-arrow{
   background-color: #fff;
   opacity: .4;
    top: 54px;
@@ -665,20 +704,22 @@
   #carrusel li.left-arrow{
     margin-left: 3.8%;
     }
- /*MUY IMPORTNATE*/  
+
+
+    /*MUY IMPORTNATE*/  
       /* ARROW LEFT .......................SOLO ARROW LEFT...................................ARROW LEFT SIN PALO............... */
- .carrusel1 ul li.left-arrow span{
+   .carrusel1 ul li.left-arrow span{
     top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-  left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
-  transform: translateY(-50%) rotate(-45deg);
-  border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
-  border-bottom: none;
-  }
+   left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+   transform: translateY(-50%) rotate(-45deg);
+   border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+    border-bottom: none;
+    }
 
     
-   /*MUY IMPORTNATE*/  
+    /*MUY IMPORTNATE*/  
      /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
- .carrusel1 ul li.right-arrow span{
+   .carrusel1 ul li.right-arrow span{
   top: 40%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
   right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
   transform: translateY(-50%) rotate(-45deg);
@@ -702,7 +743,6 @@ cursor:pointer;
 width:100%;
 height: 130px;
 border: 4px solid #DDD ;
-
 padding: 4px ;
 border-radius:6px;
 }
@@ -1033,16 +1073,12 @@ border-radius:6px;
     height: 35px;
     margin-top: 58px;  
     margin: auto;
-
      }
-
-
-
 
      #custom-search-input-responsive{
      width:  100%;
      height: 35px;
-     border: 1px solid#c9c9c9;
+     border: 1px solid #c9c9c9;
      border-radius: 4px;
      display: flex;
      flex-direction: row;
@@ -1061,8 +1097,10 @@ border-radius:6px;
      #controls-responsive .boton-responsive{
      width: 20%;
      height: 32px;
+     background-color: #ffffff;
       }
 
+       /*..............................*/
 
         /*--MUEVE EL MENU............ESTE ES EL BURGER*/
     .menu-btn  .menu-btn__burger {
@@ -1883,7 +1921,6 @@ border-radius:6px;
    /*LETRA ENCIMA DEL BOX*/   
    #footer-articulo  .box h3{
      font-size: 1rem;
-     
       margin: auto;
      }
 

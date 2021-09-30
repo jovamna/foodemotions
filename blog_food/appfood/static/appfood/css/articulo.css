@@ -769,39 +769,39 @@ a {
     }
 
 
-   .articulo  p{
+    .articulo  p{
     font-family:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 1.3rem;
     font-weight:400;
     line-height: 1.3;
     color: #2d2d2d;
-  }
+    }
  
 
 
-  /*container de dos imagenes*/
+     /*container de dos imagenes*/
      .articulo-imagen{
-  width: 100%;
-  display: block;
-  background-color: green;
-   }
+    width: 100%;
+    display: block;
+    background-color: green;
+    }
  
 
     .articulo-imagen img{
-  width: 100%;
-  max-width: 840px;
-   }
+    width: 100%;
+    max-width: 840px;
+    }
 
 
    .articulo{
-  width: 100%;
-  }
+   width: 100%;
+   }
  
 
 
-  .imagen-sola{
+   .imagen-sola{
     width: 100%;
-  }
+    }
 
   .imagen-sola img{
     width: 100%;
@@ -1344,14 +1344,13 @@ a {
   background-color: #639a63;
   }
 
-  /*PALO*/
-  .container-total-carrusell .carusel ul li span{
+    /*PALO*/
+    .container-total-carrusell .carusel ul li span{
     position: absolute;
     width: 15px;   /* TAMAÑO DEL CUADRADO QUE SE CONVERTIRA EN FLECHA ......... */
     height: 15px;                /* IMPORTANTE PARA REDUCIR TAMAÑO DE FLECHA......... */
     border:3px solid #fff; /* da color solo a la flecha y no al palo*/
-    transition: .5s;
-   
+    transition: .5s; 
    }
 
      
@@ -1366,42 +1365,43 @@ a {
     background-color: #d9d9d9;
     }
   
-  /*.........................................*/
-    /* FLECHA LEFT ....FLECHA LEFT............... */
-    .container-total-carrusell ul li.left-arrow span{
+     /*.........................................*/
+     /* FLECHA LEFT ....FLECHA LEFT............... */
+     .container-total-carrusell ul li.left-arrow span{
       top:50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
       left:2.8%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
       transform: translateY(-50%) rotate(-45deg);
       border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
       border-bottom: none;  
-    }
-  /* FLECHA RIGHT.............................FLECHA RIGHT............................ */
-  .container-total-carrusell ul li.right-arrow span{
-  top:50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-  right: 2.8%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
-  transform: translateY(-50%) rotate(-45deg);
-  border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
-  border-top: none;
-  }
-  /*............................*/
+      }
+
+     /* FLECHA RIGHT.............................FLECHA RIGHT............................ */
+    .container-total-carrusell ul li.right-arrow span{
+     top:50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+     right: 2.8%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+     transform: translateY(-50%) rotate(-45deg);
+     border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+     border-top: none;
+      }
+     /*............................*/
 
 
     /*.................................*/
-  /* PALO ..............PALO.....PALO DERECHO................ */
+     /* PALO ..............PALO.....PALO DERECHO................ */
     .container-total-carrusell ul li.right-arrow span:before{
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 2px;
-  background: #fff;
-  transform-origin: left;
-  transform: rotate(45deg) translate(-4px, 0px) scaleX(0) ;    /* ENCAJA EL ARROW AL PALO.......... */
-  transition: .5s;                                                 /* Y EL SCALE DESPARECE EL PALO.......... */
-  }
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+     transform-origin: left;
+     transform: rotate(45deg) translate(-4px, 0px) scaleX(0) ;    /* ENCAJA EL ARROW AL PALO.......... */
+     transition: .5s;                                                 /* Y EL SCALE DESPARECE EL PALO.......... */
+     }
   
     
-  /* PALO ........PALO IZQUIERDO LEFT */
-  .container-total-carrusell ul li.left-arrow span:before{
+    /* PALO ........PALO IZQUIERDO LEFT */
+    .container-total-carrusell ul li.left-arrow span:before{
     content: '';
     position: absolute;
     width: 20px;
@@ -1487,6 +1487,7 @@ a {
     display: block;
     width: 100%;
     z-index: 10;
+    background-color: #f4f4f4;
     }
   
   

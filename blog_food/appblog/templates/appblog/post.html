@@ -354,7 +354,7 @@
         <div id="comentarios">
         {% for comment in post.latest_comments %}
    <p>{{ comment.user.username }}: {{ comment.description }}</p>
-{% endfor %}
+     {% endfor %}
            <!---------------------------------------------------------------------------->
            <div class="col-md-10">
                {% with allcomments.count as total_comments %}
@@ -503,10 +503,12 @@
         <!------------------FINAL BUSCADOR--------------------------->
          <div class="tercera-columna">
                 <h1> alimentación saludable y dietas..</h1>
-                     <div class="aside-colum">
+                <div class="aside-colum">
                       {% for post in pos %} 
-                <img src ="{{post.imagefront.url}}">
-                  <a href ="{% url 'appblog:post' post.slug %}">
+                       {% if post.imagefront %}
+                   <img src ="{{post.imagefront.url}}">
+                    {% endif %}
+                   <a href ="{% url 'appblog:post' post.slug %}">
                    <p>{{ post.title}} </p>
                    </a>
                     {% endfor %} 

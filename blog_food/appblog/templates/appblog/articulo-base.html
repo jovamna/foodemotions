@@ -113,32 +113,30 @@
       <meta name="mobile-web-app-capable" content="yes"> 
 
 
-       <!----------------AQUI CAMBIE #ffffffO------->
-     <meta  nombre ="msapplication-TileColor"  content = "#7aac41" > 
+       <!---------------AQUI CAMBIADO #ffffff------->
+     <meta  nombre ="msapplication-TileColor"  content = "#568632" > 
      <meta  name = "msapplication-TileImage"  content = "/ms-icon-144x144.png" > 
      
      <!--Chrome Firefox OS y Operac–-->
-     <meta name="theme-color" content= "#7aac41">
-      <meta name="theme-color" content="#7aac412"/> 
+     <meta name="theme-color" content= "#568632">
+      <meta name="theme-color" content="#568632"/> 
      <!--iOS Safari-->
 
-     <meta name= "apple-mobile-web-app-status-bar-style" content= "#7aac41">
+     <meta name= "apple-mobile-web-app-status-bar-style" content= "#568632">
 
      <!--Windows Phone-->
 
-    <meta name= "msapplication-navbutton-color" content= "#7aac41">
+    <meta name= "msapplication-navbutton-color" content= "#568632">
 
      <meta name= "apple-mobile-web-app-status-bar-style" content="black-translucent">
 
      <meta name= "apple-mobile-web-app-status-bar-style" content="black"> 
 
       <!-- Windows Phone --> 
-     <meta name="msapplication-navbutton-color" content="#7aac41"> 
+     <meta name="msapplication-navbutton-color" content="#568632"> 
      <!-- iOS Safari --> 
-     <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
-
-
  
         <!----COLOR DE LA BARRRA URL----------------------------------------->
      <!---PROBAR EN ANDROID--->
@@ -301,7 +299,7 @@
         <div id="controls-responsive">
                 <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
                     <div id="custom-search-input-responsive">
-	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
+	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder="   Buscar .." >
                                  
                           <button type="submit" name="submit" class="boton-responsive btn-succes" value="Search"> 
                           <span class="icon"><i class="fa fa-search"></i></span>   
@@ -746,7 +744,8 @@
             <script src="{% static 'appfood/js/animar.js' %}"></script>
 
       
-  <!---CODIGO PARA LOS COMNETARIOS----------------------------------->
+      <!---------------------------------------------------------------->
+      <!---CODIGO PARA LOS COMNETARIOS----------------------------------->
    <script>
       $(document).on('click', '#newcomment, #newcommentinner', function (e) {
     e.preventDefault();
@@ -820,6 +819,13 @@
   
      </script>
     <!---FIN DE LOS CMENTARIOS-------------------------->
+
+
+
+
+
+
+      <!-------------------------------------------------------------------->
 
 
 

@@ -902,7 +902,9 @@
                  <h1> plan de comidas..</h1>
                  <div class="aside-colum">
                   {% for perderpeso in post_plan %} 
+                    {% if perderpeso.imagefront %}
                 <img src="{{perderpeso.imagefront.url}}">
+                  {% endif %}
                    <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
                    <p>{{ perderpeso.title}}</p>
                    </a>

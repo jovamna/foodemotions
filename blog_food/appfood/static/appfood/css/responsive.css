@@ -1840,6 +1840,11 @@
       z-index: 6;
       }
   
+      #controls-responsive #custom-search-input-responsive .icon .fa-search{
+        color: #000000;
+        font-size: 1rem;
+        }
+        
          
     #controls-responsive input#search{
       width: 85%;
