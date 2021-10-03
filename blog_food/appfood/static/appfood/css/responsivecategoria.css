@@ -719,6 +719,7 @@
      width:100%;
      margin: auto;
      margin-top: 55px;
+     margin-bottom: 130px;
      padding-left: 0;
      padding-right: 0;
      }
@@ -808,7 +809,7 @@
     }
 
    .boletin a h4:hover{
-    color: #639a3a;
+    color: #7aac41;
     text-decoration: none;
     }
  
@@ -921,15 +922,12 @@
       list-style: none;
       }
 
-   nav ul li a {
+     nav ul li a {
     width: 100%;
     display: block;
    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
    margin-top:8px;
-  
    z-index: 200;
-  
-  
     }
 
     nav ul li a p{
@@ -1065,6 +1063,41 @@
     font-size: 0.8rem;
   }
 
+
+  /* APP DIETA. PLAN COMIDA Y TURISMO*/
+   /*....CONTAINER DONDE ESTAN LAS SUBCATEGORIAS PERO DE PALABRAS SIN IMAGENES...........*/
+   #texto-slider{
+    display: block;
+    width: 92%;
+    margin-left: 12px;
+     }
+
+
+    #texto-slider::-webkit-scrollbar { /* WebKit */
+    width: 0px;
+    height: 5px;
+    background-color: #7aac41;
+    }
+
+    .scrollmenu::-webkit-scrollbar {
+      display: none;
+    }
+
+
+
+      /*CATEGORIA DE PLAN COMIDAS, DIETSA ETC..*/
+      #texto-slider .leftNav{
+      display: none;
+      visibility: hidden;
+    }
+    #texto-slider .rightNav{
+      display: none;
+      visibility: hidden;
+    }
+  
+
+   
+   
   /*...................*/
    .container-posts-categorias{
      width: 92%;
@@ -1122,36 +1155,9 @@
      /*...................*/
 
 
-    /*....CONTAINER DONDE ESTAN LAS SUBCATEGORIAS PERO DE PALABRAS SIN IMAGENES...........*/
-    #texto-slider{
-    display: block;
-    width: 96%;
-     }
-
-
-    #texto-slider::-webkit-scrollbar { /* WebKit */
-    width: 0px;
-    height: 5px;
-    background-color: #568632;
-    }
-
-      /*CATEGORIA DE PLAN COMIDAS, DIETSA ETC..*/
-     .leftNav{
-      display: none;
-      visibility: hidden;
-    }
-    .rightNav{
-      display: none;
-      visibility: hidden;
-    }
-    
-       
-  /*.............................*/
+   
   
-  #aside{
-    width: 100%;
-    }
-
+  
     a:link {
       color: black;
     
@@ -1240,130 +1246,131 @@
 
 
 
-  /*..CARRUSELL.............................*/
-    .container-total-carrusell{
-      display: block;
-      position: relative;
-      width: 95%;
-      margin-bottom: 150px;
-    }
+   /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+       /*..CARRUSELL.............................*/
+       .container-total-carrusell{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 300px;
+      }
 
-     /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+
     /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
     #carrusel {
-    float:left;
-    width: 100%;
-    overflow:hidden;
-    height: 280px;
-    position:relative;
-    margin: auto;
-    margin-bottom: 10px;
-    }
-    
-    
-     /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
-    #carrusel h2{
-    font-size:24px;
-    font-weight: 900;
-    word-spacing: -2px;
-    letter-spacing: 0.4px;
-    font-family: 'Times New Roman', Times, serif;
-    padding-bottom: 10px;   
-    }
-
-    
-    /*ESCONDE IMAGGENES*/
-    /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
-     .carrusel{
-     width:4000px;
-     height: 210px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
-     left: 0px;
-     position:absolute;
-     z-index:0;
-    }
-
-    .product {
-      background-color: crimson;
-    }
- 
-   /*CIRCULO   IZQUIERDO*/
-    #carrusel li.left-arrow{
-    margin-right: 3.8%;
-    }
-
-     /*CIRCULO  DERECHO NO PONERLO TAN ANCHO PORQUE PIERDE LA FORMA EL CIRCULO PONERLO DEBAJO DE 90*/
-    #carrusel li.right-arrow{
-    margin-left:75%;
-    }
-
-    /**MUY IMPORTANTE..*/
-   /*CIRCULO MODIFICA ALTO Y ANCHO.................. */
-   .carusel{
-    width: 100%;
-    display: flex;
-    position: absolute;
-    margin-top: 25%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
-    margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
-    }
-
-
-   /*MUY IMPORTNATE*/  
-      /* ARROW LEFT ..........SOLO ARROW LEFT........ */
-    .carrusel1 ul li.left-arrow span{
-    top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-    left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
-    transform: translateY(-50%) rotate(-45deg);
-    border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
-    border-bottom: none;
-    }
-
-    
-   /*MUY IMPORTNATE*/  
-   /* ARROW RIGHT.....ARROW RIGHT SIN PALO......... */
-   .carrusel1 ul li.right-arrow span{
-   top: 48%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-   right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
-   transform: translateY(-50%) rotate(-45deg);
-   border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
-   border-top: none;
-   }
- 
-    /*PARA QUE LAS FLECHAS DESPAREZCAN */
-   #carrusel:hover  li.left-arrow{
-   background-color: #fff;
-   opacity: .4;
-   top: 54px;
-   transition:all .5s ease-in-out;
-   }
-      
-      #carrusel ul li.left-arrow:hover {
-      display: block;
-      background-color:  #fff;
-      opacity: 3;
+      float:left;
+      width: 100%;
+      overflow:hidden;
+      height: 280px;
+      position:relative;
+     margin: auto;
+      margin-bottom: 10px;
       }
- 
-
-  /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
-  .carrusel>div {
-  float: left;
-  width: 100%;
-
-  margin-right: 5px;   /*ESPACIO */
-  text-align:center;
-  }
-
-  /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
- .carrusel img {
-  cursor:pointer;
-  width: 100%;
-  height: 180px;
-  border: 2px solid #DDD ;
-  padding: 3px ;
-  border-radius:6px;
-  }
- 
+      
+      
+       /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
+      #carrusel h1{
+      font-size:1.4rem;
+      font-weight: 900;
+      word-spacing: -2px;
+      letter-spacing: 0.4px;
+      font-family: 'Times New Roman', Times, serif;
+      padding-bottom: 10px;   
+      margin-left: 15px;
+      }
+  
+      .product {
        
-
+        box-shadow: #f3f3f3 0px 13px 27px -5px, #f3f3f3 0px 8px 16px -8px;
+      }
+   
+      
+      /*ESCONDE IMAGGENES*/
+      /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+       .carrusel{
+       width:4000px;
+       height: 210px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+       left: 0px;
+       position:absolute;
+       z-index:0;
+      }
+  
+   
+     /*CIRCULO   IZQUIERDO*/
+      #carrusel li.left-arrow{
+      margin-right: 3.8%;
+      }
+  
+       /*CIRCULO  DERECHO NO PONERLO TAN ANCHO PORQUE PIERDE LA FORMA EL CIRCULO PONERLO DEBAJO DE 90*/
+      #carrusel li.right-arrow{
+      margin-left:75%;
+      }
+  
+      /**MUY IMPORTANTE..*/
+     /*CIRCULO MODIFICA ALTO Y ANCHO.................. */
+     .carusel{
+      width: 100%;
+      display: flex;
+      position: absolute;
+      margin-top: 24%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+      margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+      }
+  
+  
+     /*MUY IMPORTNATE*/  
+        /* ARROW LEFT ..........SOLO ARROW LEFT........ */
+      .carrusel1 ul li.left-arrow span{
+      top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+      left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+      transform: translateY(-50%) rotate(-45deg);
+      border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+      border-bottom: none;
+      }
+  
+      
+     /*MUY IMPORTNATE*/  
+     /* ARROW RIGHT.....ARROW RIGHT SIN PALO......... */
+     .carrusel1 ul li.right-arrow span{
+     top: 48%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+     right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+     transform: translateY(-50%) rotate(-45deg);
+     border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+     border-top: none;
+     }
+   
+      /*PARA QUE LAS FLECHAS DESPAREZCAN */
+     #carrusel:hover  li.left-arrow{
+     background-color: #fff;
+     opacity: .4;
+     top: 54px;
+     transition:all .5s ease-in-out;
+     }
+        
+        #carrusel ul li.left-arrow:hover {
+        display: block;
+        background-color:  #fff;
+        opacity: 3;
+        }
+   
+  
+    /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
+    .carrusel>div {
+    float: left;
+    width: 100%;
+    margin-right: 5px;   /*ESPACIO */
+    text-align:center;
+    }
+  
+    /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+   .carrusel img {
+    cursor:pointer;
+    width: 100%;
+    height: 180px;
+    border: 2px solid #DDD ;
+    padding: 3px ;
+    border-radius:6px;
+    }
+   
 
 /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
 

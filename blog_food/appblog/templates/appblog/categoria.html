@@ -101,11 +101,12 @@
 
 
 
- <div id="texto-slider">
-      <div class="caja-texto-slider">
-            <!--TITULO DE LAS CATEGORIAS-->
+     <div id="texto-slider">
+         <div class="caja-texto-slider">
+             <!--TITULO DE LAS CATEGORIAS-->
              <div class= "endfor">
-                 <ul>    
+              <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
+                    <ul class="scrollmenu">    
                      {% for kategoria in category_deals %}
                  {% if not node.is_leaf_node %}
                  {% for child in kategoria.get_children %}
@@ -119,11 +120,12 @@
               {% endif %}
               {% endfor %}
               </ul>
+               <!------------------------FIN UL SCROLLMENU-----&gt;--------------------------1----->
+                <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 
              </div>
-             <!--FIN SUBCATEGORY-->    
+             <!------------------------------------>    
             </div>
-
-</div>
+           </div>
 
 
 
