@@ -1143,13 +1143,12 @@ border-radius:6px;
 
 
      .menu-btn__burger:hover{
-      background-color: #639a3a;
+      background-color: #7aac41;
     }
         
      .menu-btn__burger:hover::before,
     .menu-btn__burger:hover::after{
-    background-color: #639a3a;    
-    }
+    background-color: #7aac41;
 
      /* ANIMATION */
    .menu-btn.open .menu-btn__burger {

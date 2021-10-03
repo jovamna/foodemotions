@@ -449,16 +449,16 @@ nav{
     }
 
 
-   /*CAJA DE LA FLECHA..*/
-   #texto-slider .caja-texto-slider .endfor .leftNav {
-    display: inline-block;
+   /*CAJA DE LA FLECHA. display: inline-block;
     width:25px;
     height: 25px;
     border-radius: 15px;
     position: absolute;
     top: 363px;
     left: 5em;
-    background-color: #7aac41;
+    background-color: #7aac41;.*/
+   #texto-slider .caja-texto-slider .endfor .leftNav {
+    display: none;
     }
 
 
@@ -546,7 +546,16 @@ nav{
       color: #000000;
     }
 
-
+    #texto-slider::-webkit-scrollbar { /* WebKit */
+      width: 0px;
+      height: 5px;
+     
+      }
+  
+      .scrollmenu::-webkit-scrollbar {
+        display: none;
+      }
+  
 
       /*.........AL PRINCIPIO DE LA PAGINA  EL MENU QUE LEVA INICIO ETC.............................*/
      

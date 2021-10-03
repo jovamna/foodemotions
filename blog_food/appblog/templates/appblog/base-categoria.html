@@ -666,8 +666,8 @@
                 var imagenes = new Array();
 
                 $(document).ready(function () {
-                    var numImages = 8;
-                    if (numImages <= 4) {
+                    var numImages = 7;
+                    if (numImages <= 3) {
                         $('.right-arrow').css('display', 'none');
                         $('.left-arrow').css('display', 'none');
                     }
@@ -676,10 +676,10 @@
                         if (current > 0) {
                             current = current - 1;
                         } else {
-                            current = numImages - 4;
+                            current = numImages - 3;
                         }
 
-                        $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 900);
+                        $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 600);
 
                         return false;
                     });
@@ -697,13 +697,13 @@
                     });
 
                     $('.right-arrow').on('click', function () {
-                        if (numImages > current + 4) {
+                        if (numImages > current + 3) {
                             current = current + 1;
                         } else {
                             current = 0;
                         }
 
-                        $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 900);
+                        $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 600);
 
                         return false;
                     });

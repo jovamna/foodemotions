@@ -958,7 +958,6 @@ margin: auto;
        flex-direction: row;
        justify-content: space-between;
         height: 29px;
-        background-color: darkmagenta;
        margin-top: 1.5px;
     }
 
@@ -969,7 +968,6 @@ margin: auto;
         width: 45%;
         max-width: 290px;
         height: 29px;
-        background-color: cyan;
         }
     
     /*IMAGEN DEL LOGO*/
@@ -998,7 +996,6 @@ margin: auto;
       width: 50%;
       max-width: 280px;
       height: 29px;
-      background-color: darkgoldenrod;
        }
 
 
@@ -1011,7 +1008,6 @@ margin: auto;
     width: 70%;
     max-width: 120px;
     height: 29px;
-    background-color: darkgreen;
   }
 
   .cabecera-recetas .boletin a h4{
@@ -1027,7 +1023,7 @@ margin: auto;
 
 
   .boletin a h4:hover{
-    color: #639a3a;
+    color: #7aac41;
     text-decoration: none;
       }
 
