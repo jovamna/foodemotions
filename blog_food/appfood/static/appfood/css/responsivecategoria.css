@@ -11,7 +11,7 @@
 
 
 
-    @media only screen and (min-width: 250px) and (max-width: 359px)   {
+    @media only screen and (max-device-width: 359px)  { 
 
 
       html, body{
@@ -56,7 +56,7 @@
   #container-categorias{
   width: 100%;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 40px;
   padding-right: 0;
   padding-left: 0;
   margin-bottom: 150px;
@@ -198,37 +198,120 @@
             }
 
    
-   /*NAV*/
-    nav{
-    background-position:   70% 88%;
-    }
-  
-
-     nav ul li p{
-     font-size: 0.8rem;
-     }
-   
-     nav ul {
-     margin-left: -55px;
-     width: 90%;
-  
+     /*BUSCADR RESPONSIVE*/
+     #cabecera-categorias .controls{
+      display: none;
+      visibility: hidden;
     }
 
-     nav ul li{
-       height: 40px;
-     }
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+     #controls-responsive{
+      display: block;
+      visibility: visible;
+      width: 92%;
+      height: 35px; 
+      margin-bottom: 20px;
+     margin-left: 13px; 
+     margin-top: 3px;
+     border: 1px solid#c9c9c9;
+       }
+  
+  
+       #custom-search-input-responsive{
+       width: 99%;
+       height: 35px;
+      margin: auto;
+     
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       padding-top: 1.5px;
+       }
+  
+  
+       #controls-responsive .sin-borde-responsive{
+       width: 85%;
+       height: 30px;
+       border-radius: 6px;
+      }
+  
+  
+       #controls-responsive .boton-responsive{
+       width: 15%;
+       height: 30px;
+       border-radius: 6px;
+       background-color: #ffffff;
+        }
+        
+
+ nav{
+   width: 100%;
+  background-position:  80% 90%;
+    }
+
+
+   nav ul{
+      display: block;
+      width: 85%;
+      margin-top: 30px;
+      margin-left: 5px;
+    }
+
+        /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+   nav ul li{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;/*IMPORTANTE */
+    margin-left: -0.5px;
+    height: 55px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
+    list-style: none;
+    }
+
+ nav ul li a {
+  width: 100%;
+  display: block;
+ background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+ margin-top:8px;
+
+ z-index: 200;
+
+
+  }
+
+  nav ul li a p{
+    width: 95%;
+    margin-left: 30px;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family:  'Times New Roman', Times, serif;
+  }
+  nav ul li ul li a{
+    text-transform: lowercase;
+    margin-left: 5%;
+  }
+
+
+ /*CIERRE NAV*/
+
+    /*CONTENEDOR DONDE ESTA EL MENU DE INICIO  PAGINA Y CATEGORIA------------------------------........................................ */
+    #container-categorias-subcategorias{
+    width: 92%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    }
+
    /*CIERRE NAV*/
 
 
       /*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
   
-    #container-categorias-subcategorias{
-    width: 92%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-    margin: auto;
-    }
+
   
         /*CAJA DE NAVEGACION DE LAS CATEGORIAS Y SUBCATEGORIAS*/
      .intro{
@@ -265,7 +348,11 @@
        display: none;
        visibility: hidden;
      }
-     
+      
+     #texto-slider{
+       width: 92%;
+       margin-left: 12px;
+     }
         
     /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
       #subcategoria{
@@ -807,8 +894,10 @@
          #controls-responsive .boton-responsive{
          width: 20%;
          height: 32px;
+         background-color: #ffffff;
           }
-  
+          
+
    nav{
      width: 100%;
     background-position:  80% 90%;
@@ -1193,6 +1282,9 @@
      z-index:0;
     }
 
+    .product {
+      background-color: crimson;
+    }
  
    /*CIRCULO   IZQUIERDO*/
     #carrusel li.left-arrow{

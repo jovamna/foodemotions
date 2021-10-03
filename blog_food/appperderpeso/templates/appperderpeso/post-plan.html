@@ -58,14 +58,17 @@
                 {% for perderpeso in post %}
                 <!-- caja 1-------------------------->
                 <div class="primer-articulo">
-                    <p>{{perderpeso.published}}</p>
                     <!-- TITULO 1-----------------> 
                     <h1>  {{perderpeso.title}}</h1> 
                     <!-- DESCRIPCION--------------->              
                     <p> {{perderpeso.description}}</p> 
-                    <!----------LINK PARA ACORTAR EL ARTICULO--------------------------->                                  
+                    <!----------LINK PARA ACORTAR EL ARTICULO--------------------------->                              
               </div>
-                         <!------------------------------------------------------->
+
+              <div class= "fecha">
+              <p>{{perderpeso.publish}}</p> 
+              </div>   
+                      <!------------------------------------------------------->
                          <div class="imagen-central">
                             <div class="redes">
                                 <ul class="iconos-social">

@@ -289,7 +289,7 @@
         <div id="controls-responsive">
                 <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
                     <div id="custom-search-input-responsive">
-	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder="   Buscar .. >
+	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder= "   Buscar .." >
                                  
                           <button type="submit" name="submit" class="boton-responsive btn-succes" value="Search"> 
                           <span class="icon"><i class="fa fa-search"></i></span>   

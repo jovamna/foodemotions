@@ -1,4 +1,12 @@
+  /* Mayor de 960px (dispositivos y navegadores) */
+	
+	@media only screen and (min-width: 959px) {
+		.menuPeq {visibility: hidden; display:none;}
+		.menuMed {visibility: hidden; display:none;}
+		.secundario {visibility: hidden; display:none;}
+		}
 
+  
 
    @media only screen and (max-device-width: 359px)  { 
   
@@ -395,15 +403,14 @@ margin: auto;
 
   .vista-imagen-receta{
    width: 100%;
+   border-radius: 6px;
+   }
 
- border-radius: 6px;
- }
 
-
-.redes{
-display: block;
-margin-left: 8px;
-}
+  .redes{
+  display: block;
+   margin-left: 8px;
+   }
 
 
  /*UL*/
@@ -413,19 +420,19 @@ margin-left: 8px;
   }
 
  
- .iconos-social  li .fa-envelope{
+  .iconos-social  li .fa-envelope{
    font-size: 0.8rem;
- width: 30px;
- height: 30px;
- padding: 5px 5px 5px 5px;
- }
+   width: 30px;
+   height: 30px;
+   padding: 5px 5px 5px 5px;
+   }
 
   .iconos-social  li .fa-facebook-f{
    font-size: 0.8rem;
- width: 30px;
- height: 30px;
- padding: 5px 5px 5px 5px;
- margin-right: 10px;
+   width: 30px;
+    height: 30px;
+   padding: 5px 5px 5px 5px;
+    margin-right: 10px;
    }
 
 
@@ -446,47 +453,46 @@ margin-left: 8px;
        margin-right: 10px;
        }
        
- .contiene{
+   .contiene{
    width:  92%;
    display: flex;
- flex-direction: column;
- margin: auto;
-
- }
-
-
-  .temps{
-    width: 100%;
-    margin: auto;
- 
+   flex-direction: column;
+   margin: auto;
   }
 
-  .porciones{
+
+    .temps{
     width: 100%;
     margin: auto;
-  }
+    }
 
-  .nutricional-imagen{
+    .porciones{
     width: 100%;
     margin: auto;
-  }
+    }
 
- /*TIEMPO*/
- .temps p{
+    .nutricional-imagen{
+    width: 100%;
+    margin: auto;
+     }
+
+   /*TIEMPO*/
+   .temps p{
    font-size: 1.2rem;
    letter-spacing:-0.001rem ;
    word-spacing: 0.01rem;
    color: #000000;
    font-family: 'Times New Roman', Times, serif;
- }
- /*PORCIONES*/
- .porciones p{
+   }
+
+   /*PORCIONES*/
+   .porciones p{
    font-size: 1.4rem;
    color: #000000;
    font-family: 'Times New Roman', Times, serif;
    letter-spacing:-0.001rem ;
    word-spacing: -0.01rem;
- }
+   }
      
                  /*PERFIL NUTRICIONAL */
        .nutricional-imagen h2{
@@ -530,13 +536,14 @@ margin-left: 8px;
     width: 99%;
   }
 
-  .prepa-titulo{
+    .prepa-titulo{
     display: block;
     width: 80%;
-  }
-  .prepa-pic{
+   }
+
+   .prepa-pic{
     width: 10%;
-  }
+   }
 
 
   .tips-titulo{
@@ -890,11 +897,14 @@ margin-left: 8px;
   
   
        #wrapper-recetas {
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-      border-spacing: 0;
-      border-collapse: collapse;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        border-spacing: 0;
+        border-collapse: collapse;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
      }
   
     
@@ -926,7 +936,7 @@ margin-left: 8px;
       header{
         display: block;
         width:100%;
-        height: 59px;
+        height: 58px;
         top:0;
         left: 0;
         position: fixed;
@@ -945,26 +955,29 @@ margin-left: 8px;
      .cabecera-recetas{
         width: 100%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 38px;
+       flex-direction: row;
+       justify-content: space-between;
+        height: 29px;
+        background-color: darkmagenta;
+       margin-top: 1.5px;
     }
 
 
         /*caja */
-          .logo{
-          display:inline-flex;
-          width:  40%;
-          height: 38px;
-  
+        .cabecera-recetas .logo{
+        display: inline-flex;
+        width: 45%;
+        max-width: 290px;
+        height: 29px;
+        background-color: cyan;
         }
     
     /*IMAGEN DEL LOGO*/
-    .cabecera-recetas  .logo img{
-      display: block;
+    .cabecera-recetas .logo img{
+      display: inline-flex;
       width: 100%;
-   
-   
+      max-width: 145px;
+      height: 29px;
        }
      
 
@@ -980,11 +993,12 @@ margin-left: 8px;
     /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
        .menu-btn {
       display: block;
-        position: relative;
-        float: right;
-        width: 45%;
-        max-width: 340px;
-        height: 38px;
+      position: relative;
+      float: right;
+      width: 50%;
+      max-width: 280px;
+      height: 29px;
+      background-color: darkgoldenrod;
        }
 
 
@@ -994,14 +1008,15 @@ margin-left: 8px;
     display: block;
     position: relative;
     float: left;
-    width: 100%;
-    max-width: 100px;
-    height: 38px;
+    width: 70%;
+    max-width: 120px;
+    height: 29px;
+    background-color: darkgreen;
   }
 
   .cabecera-recetas .boletin a h4{
     font-size: 0.8rem;
-    margin-top: 15px;
+    margin-top: 9px;
       margin-left: 2px;
       font-weight: 700;
       letter-spacing: 0.9px;
@@ -1023,7 +1038,7 @@ margin-left: 8px;
   display: block;
   position: relative;
   float: right;
-  margin-top: 15px;
+  margin-top: 10px;
   width: 37px;
   height: 4px;
   background: #2d2d2d;
@@ -1048,10 +1063,10 @@ margin-left: 8px;
 
   /*ESTO AVORTA ESPACIO ENTRE LAS LINEAS*/
  .menu-btn__burger::before {
-  transform: translateY(-9px);
+  transform: translateY(-7px);
   }
  .menu-btn__burger::after {
-  transform: translateY(9px);
+  transform: translateY(7px);
  
    }
    /* ANIMATION */
@@ -1104,6 +1119,7 @@ margin-left: 8px;
        width: 20%;
        max-width: 60px;
        height: 32px;
+       background-color: #fff;
      }
   
   
