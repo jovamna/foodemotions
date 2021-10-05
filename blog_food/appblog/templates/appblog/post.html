@@ -84,15 +84,20 @@
             <!-- caja 2-------------------------------------------------------->
             <div class="segundo-articulo">
             <!-- SUBTITULO 2------------------->
+             {% if post.subtitle %}
             <h1>{{post.subtitle|safe}}</h1> 
-            <p>{{post.content|safe}}</p>  
+             {% endif %}
+             {% if post.content %}
+            <p>{{post.content|safe}}</p> 
+             {% endif %} 
            </div>
 
    <!---------------------------------------------------------------------->
-                     
+          {% if post.cursiva %}  
          <div class="cursiva">
             <p><em>{{post.cursiva|safe}}</em> </p>
          </div>
+          {% endif %} 
    <!------------------------------------------------------------------------>
                         
                  
@@ -106,6 +111,7 @@
 
      <!------------------------------------------------------------------------------------>
           <!--TITULO------NARRATIVA--------------->
+          
          <div class="contentwo">
           {% if post.subtitleuno %}
             <div class="title-two">
@@ -509,7 +515,7 @@
                    <img src ="{{post.imagefront.url}}">
                     {% endif %}
                    <a href ="{% url 'appblog:post' post.slug %}">
-                   <p>{{ post.title}} </p>
+                   <h2>{{ post.title }} </h2>
                    </a>
                     {% endfor %} 
                    </div>

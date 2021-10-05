@@ -1257,6 +1257,16 @@
         height: 300px;
       }
 
+         /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
+         .container-total-carrusell h1{
+          font-size:1.4rem;
+          font-weight: 900;
+          word-spacing: -2px;
+          letter-spacing: 0.4px;
+          font-family: 'Times New Roman', Times, serif;
+          padding-bottom: 10px;   
+          margin-left: 15px;
+          }
 
     /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
     #carrusel {
@@ -1270,16 +1280,7 @@
       }
       
       
-       /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
-      #carrusel h1{
-      font-size:1.4rem;
-      font-weight: 900;
-      word-spacing: -2px;
-      letter-spacing: 0.4px;
-      font-family: 'Times New Roman', Times, serif;
-      padding-bottom: 10px;   
-      margin-left: 15px;
-      }
+    
   
       .product {
         box-shadow: #f3f3f3 0px 13px 27px -5px, #f3f3f3 0px 8px 16px -8px;

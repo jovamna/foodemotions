@@ -663,7 +663,7 @@
   }
 
  
-    #carrusel h1{
+  .container-total-carrusell h1{
    margin-left: 15px;
    font-size: 1.2rem;
    word-spacing: 1px;
@@ -1731,6 +1731,18 @@ border-radius:6px;
       height: 300px;
     }
 
+       /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
+     .container-total-carrusell h1{
+      font-size:1.6rem;
+      font-weight: 900;
+      word-spacing: -2px;
+      letter-spacing: 0.4px;
+      font-family: 'Times New Roman', Times, serif;
+      padding-bottom: 10px;   
+      margin-left: 15px;
+      }
+
+
      /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
     /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
     #carrusel {
@@ -1744,16 +1756,7 @@ border-radius:6px;
     }
     
     
-     /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
-    #carrusel h2{
-    font-size:1.6rem;
-    font-weight: 900;
-    word-spacing: -2px;
-    letter-spacing: 0.4px;
-    font-family: 'Times New Roman', Times, serif;
-    padding-bottom: 10px;   
-    margin-left: 15px;
-    }
+    
 
     .product {
      
@@ -3425,9 +3428,10 @@ nav li a p{
      margin-bottom: 20px;
     }
 
-    .tercera-columna  h2{
-     display: none;
+    .tercera-columna  h1{
+    font-size: 1.4rem;
     }
+
     .aside-colum{
       width: 100%;
       display: flex;
@@ -3439,10 +3443,16 @@ nav li a p{
     .tercera-columna img{
     width: 50%;
      display: inline-flex;
+     margin-right: 15px;
     }
 
-    .tercera-columna  p{
-    width: 45%;
+    .tercera-columna  a h2{
+      display: inline-flex;
+    width: 98%;
+    max-width: 390px;
+    font-size: 1.3rem;
+    color: #2d2d2d;
+    margin-top: 20px;
     }
 
        /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
