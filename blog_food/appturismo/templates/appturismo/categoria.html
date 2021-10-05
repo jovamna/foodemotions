@@ -88,8 +88,8 @@
       <div id="texto-slider">
            <div class="caja-texto-slider">
             <!--TITULO DE LAS CATEGORIAS-->
-             <div class= "endfor">
-                 <ul>    
+  
+                 <ul class = "scrollmenu">    
                     {% for categori in category_deals %}
                     {% if not node.is_leaf_node %}
                     {% for child in categori.get_children %}
@@ -103,7 +103,7 @@
                     {% endif %}
                     {% endfor %}
                  </ul>
-            </div>
+         
             <!--FIN SUBCATEGORY-->    
         </div>
     </div>
@@ -137,10 +137,10 @@
                <div class="por-descripcion">
                                 <a href="/noticias-turismo-gastronomico/post/{{ posturismo.slug}}">
                                   <!-------TITULO POST PERDERPESO---------->
-                                  <h2>{{ posturismo.title }}</h2>
+                                  <h1>{{ posturismo.title }}</h1>
                                   </a>
                                   <!-------DESCRIPCION POST PERDERPESO---------->
-                                 <p>{{posturismo.description|truncatechars:190|safe}} </p>
+                                 <p>{{posturismo.description|truncatechars_html:70|safe}} </p>
                                  <a href ="/noticias-turismo-gastronomico/post/{{ posturismo.slug }}/"  class="arrow1">
                                       LEE MAS
                                   <span class="arrow-right"></span>

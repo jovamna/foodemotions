@@ -1010,21 +1010,20 @@ margin: auto;
     height: 29px;
   }
 
-  .cabecera-recetas .boletin a h4{
-    font-size: 0.8rem;
-    margin-top: 9px;
+      .cabecera-recetas .boletin a h4{
+      font-size: 0.8rem;
+      margin-top: 9px;
       margin-left: 2px;
       font-weight: 700;
       letter-spacing: 0.9px;
       font-family: 'Times New Roman', Times, serif;
- 
-  }
+     }
 
 
 
-  .boletin a h4:hover{
-    color: #7aac41;
-    text-decoration: none;
+     .boletin a h4:hover{
+     color: #7aac41;
+     text-decoration: none;
       }
 
 

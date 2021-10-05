@@ -124,150 +124,108 @@
     <div class="container-posts-categorias">   
             <!------------columna de 100%----------------------->
             <div id = "posts-categorias-aside">
-              
-                  <!---DIV DE 4 POST DE POSTS dentro de posts-cetagoria poner 70%--->   
-                 <div class=" post-cuatro-categorias">
-                       {% for receta in receta %}
+                     <!---DIV DE 4 POST DE POSTS dentro de posts-cetagoria poner 70%--->   
+                  
+                     <div class=" post-cuatro-categorias">
+
+                            {% for receta in receta %}
+                   
                         <div class="elemento-categoria">   
+
+  
+
                             
                               <!--  IMAGEN DEL POSTPERDER---->
                               <div id="imagen-elemento-categoria"> 
                               {% if receta.image %}
                               <img src ="{{receta.image.url}}">
                               {% endif %}
-
                               <!--  DESCRIPCION RECETAS----------------->
                               <div class ="imagen-descripcion">
-                              <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
-                              <h2>{{receta.title}}</h2>
-                              <!--  DESCRIPTION DEL POST PERDER---->
-                             <p>{{receta.description|truncatechars:60|safe}} </p> 
-                             <!--  LINK QUE REDIRIGE AL POST --->
-                             </a>                           
-                            <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
-                             <span class="a" >Por:<span class="o"> {{ receta.author }}</span> </span> 
-                            <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE EBDFOR--->
-                            </div>
-                           <!--fin IMAGEB descripcion------------------------------>
+                               <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                               <h1>{{receta.title}}</h1>  </a>  
+                               <!--  DESCRIPTION DEL POST PERDER---->
+                               <p>{{receta.description|truncatechars_html:70|safe}} </p> 
+                       
+                               <!--LINK QUE REDIRIGE AL POST--->
+                                 <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                                 <em><p>Leer mas  ...</p></em>
+                               </a>                      
+                               <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
+                               <p class="a" >Por: <span class="o"> {{ receta.author }}</span> </p> 
+                               <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE EBDFOR--->
+                             </div>
+                             <!--fin IMAGEN DESCRIPCION------------------------------>
+                             </div>
+                             <!--25%  FIN IMAGEN ELEMENTO CATEGORIA ------------------------>         
+                        <!----------CIERRA EL POST ---------->  
 
+                </div>
+              <!---------------FIN ELEMENTO CATEGORIA----------------------->
+                {% empty %}
+               <p>No hay posts</p>
+               {% endfor %}  
 
-                           </div>
-                            <!--25%  FIN IMAGEN ELEMENTO CATEGORIA ------------------------>  
-         
-         
-                <!----------CIERRA EL POST ---------->  
-         </div>
-              {% empty %}
-         <p>No hay posts</p>
-        {% endfor %}  
-    
-        <!---------------FIN ELEMENTO CATEGORIA-----------------------> 
-       </div> 
-       <!--FINAL QUE COERRA POST 4 CATEGORIAS----------------->
-       
 
  
-      
+           </div> 
+           <!--FINAL  POST 4 CATEGORIAS----------------->
+          
+       
                <!---75% FIN POSTS CATEGORIAS --->   
                   <div id="aside">  </div>
                 <!---FINAL ENDFOR DE 4 POST IN POSTS--->
                  </div>
-                 <!-----FINAL POOST-CATEGORIAS-ASIDE----------------->
-                  </div>
-           <!---100%-FIN CONTAINER POSTS CATEGORIAS---------------------------->
-             
-        
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    {% endblock content %}   
- <!---------------------------FIN ENDBLOCK CONTAINER PERDER CATEGORIA------------------------------->
-
-
-
-
-
- {% block redes %}
-            {% endblock redes %}
-
-
-
- {% block carrusell %}
-  {% endblock carrusell %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     <!---------------- PAGINACION--------------------------------------------------------------->
-      {% block paginacion %}
-            <div class="paginacion">
-                    <nav>
-                      <ul class="pagination">
-                      {% if posts.has_previous %}
-                      <li class="page-item">
-                      <a class="page-link" href="?page=1">Primero</a>
-                      </li>
-                      <li class="page-item">
-                      <a class="page-link" href="?page={{ posts.previous_page_number }}">&laquo;</a>
-                      </li>
-                      {% endif %}
-                      <!------------------------------------------------------>
-                      {% for pagina in paginas %}
-                      <li class="page-food{% if current_page == pagina %} active {% endif %}">
-                      <a class="page-link" href="?page={{ pagina }}">{{ pagina }}</a>
-                      </li>
-                      {% endfor %}
-                      <!--------------------------------------------------------------->
-                      <!---------------------------- ------------------------------------>
-                      {% if posts.has_next %}
-                      <li class="page-item">
-                      <a class="page-link" href="?page={{ posts.next_page_number }}">&raquo;</a>
-                      </li>
-                      <li class="page-item">
-                      <a class="page-link" href="?page={{ posts.paginator.num_pages}}">Ùltima</a>
-                      </li>
-                      {% endif %}
-                      </ul>
-                      </nav>
                       </div>
-                      {% endblock paginacion %}
-                    <!--------------------------------------------------------------------------------->
+           <!---100%-FIN CONTAINER GENERAL DE LOS POSTS--------------------------->
+                 <!-----FINAL POST-CATEGORIAS-ASIDE----------------->
+
+          
+
+  {% endblock content %} 
 
 
-                           
+
+   {% block redes %}
+            {% endblock redes %}
+          {% block paginacion %} 
+          {% endblock paginacion %}
+
+          
+ 
+     <!------------FIN ENDBLOCK CONTAINER PERDER CATEGORIA------------------------------->
  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+ 
+            
+    
 
 
 

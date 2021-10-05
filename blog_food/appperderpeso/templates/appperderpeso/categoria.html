@@ -93,9 +93,9 @@
       <div id="texto-slider">
            <div class="caja-texto-slider">
             <!--TITULO DE LAS CATEGORIAS-->
-             <div class= "endfor">
+         
                <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
-                 <ul class="scroll">    
+                 <ul class="scrollmenu">    
                     {% for categoria in category_deals %}
                     {% if not node.is_leaf_node %}
                     {% for child in categoria.get_children %}
@@ -109,9 +109,8 @@
                     {% endif %}
                     {% endfor %}
                  </ul>
-               <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 
-            </div>
-            <!--FIN SUBCATEGORY-->    
+                <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 
+            <!--FIN SUBCATEGORY-->  
         </div>
     </div>
     <!------------------------------------------------------------------->
@@ -124,30 +123,31 @@
         <div class = "container-posts-categorias">
                <!--COLUMNA CATEGORIAS DE 70% -------->
                <div class="columna-categorias">
-              <!---DIV CONTAINER DE 4 POST Y DE RPLAN DE ALIMENTACION--->
-                 {% load mptt_tags %}
-                {% for perderpeso in post_plan %}
-               <div class="por-categoria">
-                         <div class="por-foto">                              
+                    <!---DIV CONTAINER DE 4 POST Y DE RPLAN DE ALIMENTACION--->
+                    {% load mptt_tags %}
+                    {% for perderpeso in post_plan %}
+                    <div class="por-categoria">
+                            <div class="por-foto">                              
                                     <!--IMAGEN-->
                                     {% if perderpeso.image %}
                                     <img src ="{{perderpeso.image.url}}">
                                     {% endif %} 
-                            </div>
-              
-                          <div class="por-descripcion">
-                            <a href="/plan-comidas-saludables/post/{{ perderpeso.slug}}">
-                            <!-------TITULO POST PERDERPESO---------->
-                            <h2>{{ perderpeso.title }}</h2>
-                            </a>
-                            <!--DESCRIPCION------------------------------------>
-                            <p>{{perderpeso.description|truncatechars:190|safe}} </p>
+                             </div>
+                             <!------------------------------------------->
+                             <div class="por-descripcion">
+                             <a href="/plan-comidas-saludables/post/{{ perderpeso.slug}}">
+                             <!-------TITULO POST PERDERPESO---------->
+                             <h1>{{ perderpeso.title }}</h1>
+                             </a>
+                             <!--DESCRIPCION------------------------------------>
+                            <p>{{perderpeso.description|truncatechars_html:70|safe}} </p>
                             <a href ="/plan-comidas-saludables/post/{{ perderpeso.slug }}/" class="arrow1">
                               LEE MAS
-                           <span class="arrow-right"></span>
+                            <span class="arrow-right"></span>
                             </a>
                             <!--- <em><p>Categoria: {{perderpeso.kategoria}} </p></em> ---->                 
                            </div>
+                           <!-------------------------------------------->
                   
             </div>
            {% empty %}
@@ -171,8 +171,6 @@
 
 
  
-
-
 
 
 

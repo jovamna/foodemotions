@@ -198,23 +198,19 @@
                     
 
                              
-                           <!-- BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
-                             <div class="menu-btn">
-
-
-                                        <!------  caja boletin--------------------------->
+                          <!-- BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
+                          <div class="menu-btn">
+                                    <!------  caja boletin--------------------------->
                                     <div class="boletin">
                                             <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
                                            <h4>SUSCRIBETE</h4>  
                                            </a>
-                                </div>
-                            <!---------- final caja boletin------------------->
+                                    </div>
+                                   <!---------- final caja boletin------------------->
 
                                   <div class="menu-btn__burger"></div>
-
-
-                                  </div>
-                            <!-- final caja MENU ASPA--------------------------------------------------------->
+                        </div>
+                        <!-- final caja MENU ASPA--------------------------------------------------------->
                                                             
  
                         <!-- NAV MENU QUE VA CON EL BOTON MENU-->
@@ -283,199 +279,115 @@
 
 
               <!-- CONTENEDOR DEL CUERPO DEL BODY------------------------------------------------------------------------->
- <div id="container-categorias">
- 
-       {% block buscador-responsive %}
-        <div id="controls-responsive">
+    <div id="container-categorias">
+             {% block buscador-responsive %}
+             <div id="controls-responsive">
                 <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
                     <div id="custom-search-input-responsive">
 	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder= "   Buscar .." >
                                  
-                          <button type="submit" name="submit" class="boton-responsive btn-succes" value="Search"> 
-                          <span class="icon"><i class="fa fa-search"></i></span>   
+                           <button type="submit" name="submit" class="boton-responsive btn-succes" value="Search"> 
+                           <span class="icon"><i class="fa fa-search"></i></span>   
                           </button>
                           <!--</span>-->
                     </div>
                 </form>
-	        </div>
-             {% endblock buscador-responsive %}
+	         </div>
+          {% endblock buscador-responsive %}
 
-   <!-- CARROUSEL DE MAGENES-------------------------------------------------------------------------->
+      <!-- CARROUSEL DE MAGENES-------------------------------------------------------------------------->
  
-      {% block content %}        
-      <div id ="container-categorias-subcategorias">    
+      {% block content %}   
+
+                    <div id ="container-categorias-subcategorias">    
                        <!--  CAJA DE NAVEGACION DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
-                
-                 <!---------------------------------------------------------------->
-                 <div class="intro">
-                       <div class="intro-escrito"></div>
-                  
-                       <div class="intro-dos-vacios"></div>
-                 </div>
- </div>
+                         <!---------------------------------------------------------------->
+                        <div class="intro">
+                           <div class="intro-escrito"></div>
+                           <div class="intro-dos-vacios"></div>
+                      </div>
+                   </div>
+                  <!------------------------------------------>
 
-
+                      <!------------------------------>
                        <div class="imagenes-pequeñas">
                        <div id= "subcategoria">
                             <!--SUBCATEGORIAS--->
                              <h3> </h3>
                         </div>
-                           <!------------- FIN SUBCATEGORY-------->
                        </div>
-
-
-
-
-                <!-------------------------------------------------------------------->
+                     <!------------------------------------------------------------------->
                                                    
-                      
-                     
                      <!----------------------------------------------------------->
                       <div id="texto-slider">
-                      <div class="contentBlock">
-                     </div>
+                     
                     </div>
 
                      <!--------------------------------------------------------------->
 
+              <!---DIV  DEBE MEDIR 100%  CONTAINER DE 4 POST Y DE RECETAS--->
+             <div class="container-posts-categorias">
+                        <div id = "posts-categorias-aside">
+                         <div class=" post-cuatro-categorias">
+                         <div class="elemento-categoria">   
+                             <div id="imagen-elemento-categoria"> 
+                               <div class ="imagen-descripcion">
+                               </div>
+                               </div>
+                               </div>
+                               </div>
 
 
+                  <!--------------plan, turims. dieta-->
+          <div class="columna-categorias">
+            <div class="por-categoria">
+                         <div class="por-foto"> </div>
+          
+               <div class="por-descripcion"> </div>
+               <!--FIN DIV CONTAINER DE LA DESCRIPCION----------------->
+               </div>
+               <!---FIN COLUMNA CATEGORIAS------->
+                  </div>
+                <!----------------------------------->
+              
 
-
-        <!---DIV  DEBE MEDIR 100%  CONTAINER DE 4 POST Y DE RECETAS--->
-        <div class="container-posts-categorias">
-
-                   <div class="columna-categorias">
-                    <div class="por-categoria">
-
-
-                    
-                        <div class="por-foto">
-                         <div class="fecha">
-                              </div>  
-                              </div>
-
-
-
-                                <div class="por-descripcion">
-                                  </div>
-
-
-
-
-                                    </div>
-                                            </div>
 
                      <!-- 20% ASIDE --->
                     <div id="aside">  </div>
                     <!--FIN ASIDE 20%--->
-           </div>
-           <!--100% FIN DEL POSTS CATEGORIAs--->
+                      </div>
+                      </div>
+            <!--100% FIN DEL POSTS CATEGORIAs--->
             
 
 
 
 
+    {% endblock content %}    
 
-
-                  <!--DEBE MEDIR  80%-------------80%---------->
-                  <div class = "posts-categoria">
-                         <!--------------- INICIO POST CATEGORIA--------------->
-                               <!---DEBE MEDIR 25%  DIV DE 4 POST DE POSTS--->
-                              <div class="elemento-categoria">  
-                                   <img src ="">                              
-                                   <!--IMAGEN-->
-                                   <div class="elemento-descripcion"> 
-                                   </div>            
-                             </div>   
-                       <!----FIN DE DEBE MEDIR 25%----------->
-                               <p>No items</p>
-                             </div>
 
                      <!---------------------------------------->
-                           <!---DEBE MEDIR 25%  DIV DE 4 POST DE POSTS--->
-                              <div class="elemento-categoria">  
-                                   <img src ="">                              
-                                   <!--IMAGEN-->
-                                   <div class="elemento-descripcion"> 
-                                   </div>            
-                               </div>   
-                             <!----FIN DE DEBE MEDIR 25%----------->
-                               <p>No items</p>
-                              </div>
-                     <!---------------------------------------->
-                                  <!---DEBE MEDIR 25%  DIV DE 4 POST DE POSTS--->
-                                  <div class="elemento-categoria">  
-                                   <img src ="">                              
-                                   <!--IMAGEN-->
-                                   <div class="elemento-descripcion"> 
-                                   </div>            
-                                 </div>   
-                                  <!----FIN DE DEBE MEDIR 25%----------->
-                                 <p>No items</p>
-                                  </div>
-            <!---FIN POST-CATEGORIA DEBE MEDIR 80% ENDFOR 4 POSTS------------------->
-            </div>
+                          
                   
-                      <!--- DIV ASIDE DEBE MEDIR 20%--->
-                           <div id="aside"><p>Hola que hay </p></div>
-                     <!--FIN ASIDE DEBE MEDIR 20%-->
-                </div>
+            <!---FIN POST-CATEGORIA DEBE MEDIR 80% ENDFOR 4 POSTS------------------->
+          
+          
          
 <!--- FIN CONTAINER GENRAL  CATEGORIAS SUBCATEGORIAS-----------------------------------------> 
-   
-           {% endblock content %}                 
+                
                <!------------------------------------------->
 
 
 
 
-
-     <!---------------- PAGINACION--------------------------------------------------------------->
-                              {% block paginacion %}
-                             <div class="paginacion">
-                                    <nav>
-                                      <ul class="pagination">
-                                      {% if posts.has_previous %}
-                                        <li class="page-item">
-                                         <a class="page-link" href="?page=1">Primero</a>
-                                            </li>
-                                        <li class="page-item">
-                                         <a class="page-link" href="?page={{ posts.previous_page_number }}">&laquo;</a>
-                                             </li>
-                                    {% endif %}
-                              <!---------------------------------------------------->
-                                       {% for pagina in paginas %}
-                               <li class="page-food{% if current_page == pagina %} active {% endif %}">
-                          <a class="page-link" href="?page={{ pagina }}">{{ pagina }}</a>
-                                         </li>
-                                {% endfor %}
-                     <!---------------------------------------------------------------->
-
-            <!----- ----------------------------- ------------------------------------>
-                      {% if posts.has_next %}
-                          <li class="page-item">
-                          <a class="page-link" href="?page={{ posts.next_page_number }}">&raquo;</a>
-                            </li>
-                           <li class="page-item">
-                           <a class="page-link" href="?page={{ posts.paginator.num_pages}}">Ùltima</a>
-                         </li>
-                     {% endif %}
-               </ul>
-             </nav>
-             </div>
-        {% endblock paginacion %}
-     <!------------------------ ----------------------------- ---------------------------------->
-
-
-
-     
-  
+            
      <!-- CARROUSEL DE MAGENES-------------------------------------------------------------------------->
+       {% block carrusell %}
      <div class="container-total-carrusell">
+         <em><h1>Recetas Saludables, dietas..</h1></em>
          <!-- CARROUSEL DE MAGENES-->
          <div id="carrusel">
-                       <em><h1>Recetas Saludables, dietas..</h1></em>
+                     
 
                                <!-----FLECHAS------------------------------------->
                                <div class="carusel">
@@ -499,20 +411,20 @@
                            
                            <!---------------------------------------------->
                         <!---------------------------------------------->
-                         <div class="product" id="product_1">
+                          <div class="product" id="product_1">
                           <img src="{% static 'appfood/img/carrusell/260-210perder.jpg' %}" />
                                <a href="{% url 'appfood:plan-comidas-saludables' %}">
                                <p>Perder Peso</p>
                                </a>
-                    </div>
+                         </div>
                      <!---------------------------------------------->
                       <!---------------------------------------------->
-                    <div class="product" id="product_2">
+                        <div class="product" id="product_2">
                         <img src="{% static 'appfood/img/carrusell/260-210-recetdiet.jpg' %}" />
                          <a href="{% url 'appfood:recetas-dieteticas' %}"> 
                          <p>Batidos</p>
                          </a>
-                    </div>
+                        </div>
                      <!---------------------------------------------->
                      <!---------------------------------------------->
                     <div class="product" id="product_3">
@@ -561,19 +473,60 @@
          </div>
         <!-- FIN CONTAINER DIV ID--SEPARAR-CARRUSEL-------------------------->
                   
+             {% endblock carrusell %}
 
 
+
+             <!----------------------------------------------------------->
+             <!---------------- PAGINACION--------------------------------------------------------------->
+                              {% block paginacion %}
+                             <div class="paginacion">
+                                    <nav>
+                                      <ul class="pagination">
+                                      {% if posts.has_previous %}
+                                        <li class="page-item">
+                                         <a class="page-link" href="?page=1">Primero</a>
+                                            </li>
+                                        <li class="page-item">
+                                         <a class="page-link" href="?page={{ posts.previous_page_number }}">&laquo;</a>
+                                             </li>
+                                    {% endif %}
+                              <!---------------------------------------------------->
+                                       {% for pagina in paginas %}
+                               <li class="page-food{% if current_page == pagina %} active {% endif %}">
+                          <a class="page-link" href="?page={{ pagina }}">{{ pagina }}</a>
+                                         </li>
+                                {% endfor %}
+                     <!---------------------------------------------------------------->
+
+            <!----- ----------------------------- ------------------------------------>
+                      {% if posts.has_next %}
+                          <li class="page-item">
+                          <a class="page-link" href="?page={{ posts.next_page_number }}">&raquo;</a>
+                            </li>
+                           <li class="page-item">
+                           <a class="page-link" href="?page={{ posts.paginator.num_pages}}">Ùltima</a>
+                         </li>
+                     {% endif %}
+               </ul>
+             </nav>
+             </div>
+        {% endblock paginacion %}
+     <!------------------------ ----------------------------- ---------------------------------->
+         
+
+     
       </div> <!-- DIV FINAL DEL CONTAINER DE TODO EL CONTENIDO-->
 
+         
 
-
-
-            <!-- FOOTER PRIMERO ESTA DENTRO DEL CONTAINER DE CONTENIDO-->
-     <div id="footer-categorias">
+            <!---------------------------------------------------------------------------------->
+                   <!-- FOOTER PRIMERO ESTA DENTRO DEL CONTAINER DE CONTENIDO-->
+     <div id ="footer-categorias">
                   <div class="footer-primero-categorias">
                            <!-- PRIMER FOOTER--------------->
                            <div class="icon-social1">
-                           <p>food emotions</p>
+                           <p>FoodingEmotion</p>
                            <ul class="social2">
                             <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
                                     <i class="far fa-envelope"></i> </a></li>
@@ -600,7 +553,7 @@
                 <!--  FOOTER segundo--------------->
                          <div id="footer-second-categorias">
                         <div class= "final-food-categorias">
-                         <p>© 2021 Food Emotions,  El
+                         <p>© 2021 Fooding Emotion,  El
                         uso de este sitio implica la aceptación de nuestros Términos de uso,
                         Política de privacidad y Política de datos derechos reservados</p>
                         </div>
@@ -608,6 +561,10 @@
                 <!----------------------------------------------->
             </div> 
             <!-- DIV FINAL DE TODO EL FOOTER-->
+
+
+            <!--------------------------------------------------------------------------------->
+    
 
 
             <!-- PARA CONVERTIR EL MENU A ASPA-->
@@ -692,7 +649,7 @@
 
  <!----SCROLL TEXTO SLIDER---DE LAS CATEGORIAS DE LA PAGINA PLAN DE COMIDAS.DIETAS , TURISMO--------------------------------------------->
              <script type="text/javascript">
-           var $this = $('.scroll');
+           var $this = $('.scrollmenu');
           var scrollAmount = 50;
 
       function moveRight() {
@@ -740,13 +697,10 @@
 
 
        <!-- DIV FINAL CIERRE DEL WRAPPER PRINCIPALDE TODA LA WEB-->
-    </div>
+        
+
+</div>
+       </body>
 
 
-
-
-
-     </body>
-
-
-    </html>
+       </html>

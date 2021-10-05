@@ -750,11 +750,11 @@
   
    
       #cabecera-categorias{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      height: 38px;
+        width: 100%;
+        display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+        height: 29px;
            }
 
     
@@ -762,15 +762,16 @@
      /*caja */
      #cabecera-categorias .logo{
       display: inline-flex;
-      width: 20%;
-      max-width: 190px;
-      height: 38px;
+      width: 45%;
+      max-width: 290px;
+      height: 29px;
     }
        
     #cabecera-categorias .logo img {
-      display: block;
+      display: inline-flex;
       width: 100%;
-      max-width: 140px;
+      max-width: 145px;
+      height: 29px;
     }
  
  /*CONTENEDOR  REVISTA Y SOCIALES*/
@@ -779,10 +780,9 @@
       display: block;
       position: relative;
       float: right;
-      width: 40%;
-      max-width: 210px;
-      height: 38px;
-      margin: auto;
+      width: 50%;
+      max-width: 280px;
+      height: 29px;
       }
      
     
@@ -792,20 +792,21 @@
   display: block;
   position: relative;
   float: left;
-  width: 100%;
-  max-width: 100px;
-  height: 38px;
+  width: 70%;
+  max-width: 120px;
+  height: 29px;
    }
  
  
    /*LETRA INSCRIBETE*/
    #cabecera-categorias .menu-btn  .boletin h4 {
-    font-size: 0.8;
-    margin-top:  15.5px;
-    margin-left: 2px;
-    font-weight: 700;
-    letter-spacing: 0.2px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.8rem;
+    margin-top: 9px;
+      margin-left: 2px;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      font-family: 'Times New Roman', Times, serif;
+ 
     }
 
    .boletin a h4:hover{
@@ -819,10 +820,11 @@
    /*HAMBURGUESA*/
    .menu-btn .menu-btn__burger {
     display: block;
-    position: relative;
-    float: right;
-    width: 37px;
-    height: 4px;
+  position: relative;
+  float: right;
+  margin-top: 10px;
+  width: 37px;
+  height: 4px;
     background: #2d2d2d;
     border-radius: 2px;
     box-shadow: 0 2px 5px rgba(255,101,47,.2);
@@ -845,12 +847,12 @@
  
  
    .menu-btn__burger::before {
-   transform: translateY(-8px);
+   transform: translateY(-7px);
    z-index:3000; 
    }
 
    .menu-btn__burger::after {
-   transform: translateY(8px);
+   transform: translateY(7px);
    z-index:3000;
    }
 

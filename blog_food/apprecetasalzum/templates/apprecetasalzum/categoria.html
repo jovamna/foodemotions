@@ -9,14 +9,10 @@
     {% block content %}           
     <div id ="container-categorias-subcategorias">                                  
               <!--  CAJA DE NAVEGACION DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
-               
               <!--------------------------------------------------------------->
               <div class="intro">
-
               <!---A-------------------------------------------------------------------->
                    <div class="menu-introescrito">
-
-
                       <!--MENU---------------------------------------------------------->
                       <div class="menu">
                                <ul>
@@ -113,72 +109,63 @@
          <!--------------- FIN CAJA DE NAVEGACION DE LAS SUBCATEGORIA-PERDER------------------->
 
 
-
-                            <!---DIV CONTAINER DE 4 POST Y DE RECETAS--->
-
         <!---DIV  DEBE MEDIR 100%  CONTAINER DE 4 POST Y DE RECETAS--->
-   <div class="container-posts-categorias">
-          <!--DEBE MEDIR  80%-------------80%---------->
-         <div id = "posts-categorias-aside">
-          <!--------------- INICIO POST CATEGORIA------------------------->
-        <div class=" post-cuatro-categorias">
-        <!---DIV DE 4 POST DE POSTS--->
+       <div class="container-posts-categorias">
+             <!--DEBE MEDIR  80%-------------80%---------->
+             <div id = "posts-categorias-aside">
+                <!--------------- INICIO POST CATEGORIA------------------------->
+                <div class=" post-cuatro-categorias">
+                <!---DIV DE 4 POST DE POSTS---> 
 
-        
-             
-        <div class="elemento-categoria">
 
- {% for recipe in post_recipe %}
-            
-              <!---FECHA E IMAGEN-->  
-              <div id="imagen-elemento-categoria"> 
-                   <!-- IMAGEN--->
-                   {% if recipe.image %}             
-                   <img src ="{{recipe.image.url}}">
-                   {% endif %}       
-                   <!-------FIN -IMAGEN CON FECHA---------->
+                     {% for recipe in post_recipe %}
+                  <div class="elemento-categoria"> 
 
-                   <!-------AQUI NO SE PUSO EL CODIGO QUE SE PUSO EN APPRECTAS SANAS PORQUE AQUI HAY CHILDREN Y EL OTRO SOLO CATEGORIAS-------->
-                   <!--TITULO DEL POST ENSALADAS Y ZUMOS-->
-                   <div class="imagen-descripcion">
-                   <a href="/recetas-dieteticas/receta/{{ recipe.slug}}">
-                   <h2>{{ recipe.title }}</h2>
-                   </a>
-                   <!--DESCRIPCION DEL POST-->
-                   <p>{{recipe.description|safe}}</p>
-                   <a href ="/recetas-dieteticas/receta/{{ recipe.slug }}/">
-                   <em><p>Leer mas...</p></em>
-                   </a>
-                   <p class="a">Por <span class="o"> {{ recipe.author }}</span> </p> 
-                   <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE EBDFOR--->
-                   </div>
-                    <!--fin IMAGEB descripcion--->
+
+                      <!---FECHA E IMAGEN-->  
+                      <div id="imagen-elemento-categoria"> 
+                      <!-- IMAGEN--->
+                      {% if recipe.image %}             
+                      <img src ="{{recipe.image.url}}">
+                     {% endif %}       
+                     <!------------------------>
+                     <!-------AQUI NO SE PUSO EL CODIGO QUE SE PUSO EN APPRECTAS SANAS PORQUE AQUI HAY CHILDREN Y EL OTRO SOLO CATEGORIAS-------->
+                     <!--TITULO DEL POST ENSALADAS Y ZUMOS-->
+                    <div class="imagen-descripcion">
+                    <a href="/recetas-dieteticas/receta/{{ recipe.slug}}">
+                    <h1>{{ recipe.title }}</h1>
+                    </a>
+                    <p>{{recipe.description|safe|truncatechars_html:60}}</p>
+                    <a href ="/recetas-dieteticas/receta/{{ recipe.slug }}/">
+                    <em><p>Leer mas...</p></em>
+                    </a>
+                    <p class="a">Por <span class="o"> {{ recipe.author }}</span> </p> 
+                    </div>
+                    <!------FIN DIV IMAGEN DESCRIPCION---------------->
+                    </div> 
+             <!--25%  FIN DIV ID imagen-elemento-categoria--->   
+
+
              </div>
-            <!--25%  FIN imagen-elemento-categoria--->  
-       {% empty %}
+               {% empty %}
             <p>No hay posts</p>
-            {% endfor %}  
-            
-            <!----------CIERRA EL POST ---------->  
-             </div>
-           
-
-
-
+            {% endfor %} 
+            <!-----FIN DIV ELEMENTO CATEGORIA -----CIERRA EL POST ---------->  
+          
        </div> 
-          <!---FIN DIV POSTS CATEGORIA 75%--->    
-
-
+      
+          <!---FIN DIV POSTS 4 CATEGORIA 75%--->    
 
                      <!-- 20% ASIDE --->
                     <div id="aside">    </div>
                     <!--FIN ASIDE 20%--->
-           </div>
-                    <!---------------FIN POST CATGEORIA Y ASIDE--->
+            </div>
+            <!---------------FIN POST CATGEORIA Y ASIDE--->
       <!--FIN CONTAINER CATEGORIAS Y SUBCATEGORIA 100% TODO-->     
       </div>
                <!------------------------------------------->
 
+ 
   {% endblock content %}
 
 
@@ -192,14 +179,12 @@
 
 
 
-
- {% block redes %}
+          {% block redes %}
             {% endblock redes %}
- {% block paginacion %} {% endblock paginacion %}
+          {% block paginacion %} 
+          {% endblock paginacion %}
 
 
- {% block carrusell %}
-  {% endblock carrusell %}
 
 
 
