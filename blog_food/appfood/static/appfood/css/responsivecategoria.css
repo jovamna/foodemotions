@@ -663,6 +663,8 @@
      .final-food-categorias  {
       width: 100%;
       margin: auto;
+      height: 30px;
+      margin-bottom: 25px;
       }
    
   
@@ -1530,6 +1532,8 @@ border: solid #E9E9E9;
  #footer-categorias .final-food-categorias {
   width: 100%;
   margin: auto;
+  height: 30px;
+  margin-bottom: 25px;
   }
 
 

@@ -1,7 +1,8 @@
 import os
+import environ
 
-#env = environ.Env()
-#environ.Env.read_env()
+env = environ.Env()
+environ.Env.read_env()
 
 from blog_food.settings.base import *
 
@@ -15,21 +16,30 @@ ALLOWED_HOSTS = [
     '127.0.0.1', 'localhost', 'www.foodingemotion.com', 'foodingemotion.com'
 ]
 
-#SECRET_KEY = env.str('SECRET_KEY')
-SECRET_KEY = 'hr808$*z)hlsz@vkjkw!laua+8yvc9r7&8_@pk@u)oua%=yd0@'
+SECRET_KEY = env.str('SECRET_KEY')
 
-# Database
-# Database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'foodemotion',
-        'USER': 'jovamna',
-        'PASSWORD': 'Palmira@67',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASS'),
+        'HOST': env('DATABASE_HOST'),
+        'PORT': env('DATABASE_PORT'),
     }
 }
+
+# Database
+#DATABASES = {
+#'default': {
+#'ENGINE': 'django.db.backends.mysql',
+#'NAME': 'foodemotion',
+#'USER': 'jovamna',
+#'PASSWORD': 'Palmira@67',
+#'HOST': 'localhost',
+#'PORT': '3306',
+#}
+#}
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -41,8 +51,6 @@ CACHES = {
         'LOCATION': '127.0.0.1:11211',
     }
 }
-
-
 
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 #configuracion para los archivos media, esto esta hecho antes de hacer los modelos despues de la appfo>
@@ -58,8 +66,6 @@ STATIC_ROOT = '/home/jovamna/myprojectdir/foodemotions/blog_food/blog_food/stati
 STATICFILES_DIRS = [
     '/home/jovamna/myprojectdir/foodemotions/blog_food/appfood/static',
 ]
-
-#MEDIA_URL = '/media/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

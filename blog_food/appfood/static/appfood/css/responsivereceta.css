@@ -384,21 +384,20 @@
   
     .vista-imagen-receta {
       width: 100%;
-    
-      
     }
-.vista{
-width: 100%;
-display: flex;
-flex-direction: column;
-margin: auto;
-
- }
 
 
- .vista-imagen-receta{
+   .vista{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+     margin: auto;
+    }
+
+
+   .vista-imagen-receta{
    width: 100%;
- }
+  }
 
 
   .vista-imagen-receta{
@@ -427,17 +426,17 @@ margin: auto;
    padding: 5px 5px 5px 5px;
    }
 
-  .iconos-social  li .fa-facebook-f{
-   font-size: 0.8rem;
-   width: 30px;
+    .iconos-social  li .fa-facebook-f{
+    font-size: 0.8rem;
+    width: 30px;
     height: 30px;
-   padding: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
     margin-right: 10px;
-   }
+    }
 
 
-   .iconos-social  li .fa-twitter{
-     font-size: 0.8rem;
+    .iconos-social  li .fa-twitter{
+      font-size: 0.8rem;
      width: 30px;
      height: 30px;
      padding: 5px 5px 5px 5px;
@@ -453,6 +452,7 @@ margin: auto;
        margin-right: 10px;
        }
        
+
    .contiene{
    width:  92%;
    display: flex;
@@ -872,6 +872,8 @@ margin: auto;
      #footer-recetas .final-food-recetas {
       width: 100%;
       margin: auto;
+      height: 30px;
+      margin-bottom: 25px;
       }
    
   
@@ -1912,6 +1914,8 @@ margin: auto;
      #footer-recetas .final-food-recetas {
       width: 100%;
       margin: auto;
+      height: 30px;
+      margin-bottom: 25px;
       }
    
   
