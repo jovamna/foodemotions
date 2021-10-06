@@ -694,10 +694,10 @@
                         <section class="icon-email">
                         <!-------------------------------------------------------------->
                                 <div class="icon-social1">
-                                    <p>food emotions</p>
+                                    <p>fooding emotion</p>
                                      <ul class="social2">
                                      <li> 
-                                     <a href="malito:contacto@emotionsfood.com" target="_blank"> <i class="far fa-envelope"></i> </a>
+                                     <a href="malito:contacto@foodingemotion.com" target="_blank"> <i class="far fa-envelope"></i> </a>
                                      </li>
                                      {% if LINK_FACEBOOK %}
                                      <li> 
@@ -737,11 +737,21 @@
                             <h1>Temas</h1>
                         </div>
                         <div class="footer-lista">
-                            <p>Recetas</p>
-                            <p>Nutricion</p>
-                            <p>Perder peso</p>
-                            <p>Gastronomia Internacional</p>
-                            <p>Tendencias.</p>
+                             <a  href="{% url 'appfood:recetas-saludables' %}">
+                            <p>Recetas Saludables</p>
+                            </a>
+                              <a href="{% url 'appfood:recetas-dieteticas' %}">
+                            <p>Recetas Dieteticas</p>
+                              </a>
+                             <a href="{% url 'appfood:plan-comidas-saludables' %}">
+                            <p>Plan de Comidas Saludables</p>
+                              </a>
+                                 <a href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}">
+                            <p>Dieta y Alimentacion Saludable</p>
+                              </a>
+                            <a href="{% url 'appfood:noticias-turismo-gastronomico' %}">
+                            <p>Noticias en el Mundo Gastronomico</p>
+                              </a>
                         </div>
                 </section>
 <!-- CUARTO FOOTER--------------->
@@ -753,12 +763,22 @@
                             <h1>acerca de nosotros</h1>
                         </div>
                         <div class="footer-lista">
-                            <p>Nosotros</p>
-                            <p>Privacidad.</p>
-                            <p>Terminos & Condiciones</p>
-                            <p>Noticias</p>
+                             <a href="{% url 'appfood:nosotros' %}">
+                             <p>Nosotros</p>
+                             </a>
+
+                             <a href="{% url 'appfood:noticias-turismo-gastronomico' %}">
+                             <p>Noticias</p>
+                             </a>
+                             <a href="{% url 'appcontact:contacto' %}">
                             <p>Contacto</p>
-                         
+                            </a>
+                             <a href="{% url 'appcontact:contacto' %}">
+                              <p>Privacidad.</p>
+                              </a>
+                              <a href="{% url 'appcontact:contacto' %}">
+                             <p>Terminos & Condiciones</p>
+                             </a>
                         </div>
                     </section>
                     <!-- SEXTO FOOTER--------------->

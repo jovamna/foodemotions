@@ -1113,13 +1113,20 @@ a {
           margin-top: 20px;
          }
 
+         .tercera-columna h2{
+           font-family: 'Times New Roman', Times, serif;
+         font-size: 1.2rem;
+         color: #000000;
+         font-weight: 900;
+         }
+
          /*ASIDE IMAGEN Y TUTULO*/
          .aside-colum{
            width: 100%;
          }
 
-         .aside-colum h2{
-          font-size: 1.1rem;
+         .tercera-columna  a h1{
+          font-size: 1rem;
           font-family: 'Times New Roman', Times, serif;
           color: #2d2d2d;
           line-height:  20px;

@@ -960,21 +960,22 @@
       flex-direction: column;
       }
   
- /*CONTIANER TOTAL DE INTRO Y INTRO-DOS-VACIOS*/
+
+     /*CONTIANER TOTAL DE INTRO Y INTRO-DOS-VACIOS*/
     .intro{
      display: flex;
      flex-direction: row;
      width: 100%;
      height: 100%;
      max-height: 230px;
-    }
+     }
 
-   .menu-introescrito{
+     .menu-introescrito{
      width: 95%;
-    height: 180px;
+     height: 180px;
      display: flex;
      flex-direction: column;
-   }
+     }
 
 
 
@@ -987,8 +988,6 @@
      height: 100%;
      max-height: 120px;
      }
-
-  
 
 
     .menu{
@@ -1004,8 +1003,6 @@
       flex-direction: row;
      }
      
-    
-  
   
        /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
        .menu  ul ul {
@@ -1097,15 +1094,14 @@
       visibility: hidden;
     }
   
-
-   
-   
-  /*...................*/
+  
+    /*...................*/
    .container-posts-categorias{
      width: 92%;
      display: flex;
      flex-direction: column;
      margin: 0 auto;
+     margin-bottom: 80px;
     }
 
     .columna-categorias{
@@ -1172,11 +1168,12 @@
       
 
 
-   /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/
- 
+    /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/ 
     .fecha{
       display: none;
-    }
+     }
+
+
       /*CONTAINER QUE DIVIDE LOS POST DE RECTAS Y EL ASIDE VA EN 100 PERO AQUI SERA EN COLUMN*/
       #posts-categorias-aside{
       display: flex;
@@ -1193,7 +1190,7 @@
 
 
    
-  /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
+    /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
     .elemento-categoria{
     width: 100%;
     display: flex;
@@ -1208,9 +1205,9 @@
     width: 100%;
     max-width: 600px;
      height: 100%;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-bottom: 10px;
     border-top: 2px solid #DCDCDC;
     }
@@ -1259,12 +1256,11 @@
 
          /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
          .container-total-carrusell h1{
-          font-size:1.4rem;
+          font-size: 1.4rem;
           font-weight: 900;
           word-spacing: -2px;
           letter-spacing: 0.4px;
-          font-family: 'Times New Roman', Times, serif;
-          padding-bottom: 10px;   
+          font-family: 'Times New Roman', Times, serif; 
           margin-left: 15px;
           }
 
@@ -1394,32 +1390,32 @@
     /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
     #footer-categorias .footer-primero-categorias{
     width: 100%;
-
     height: 170px;
-   display: flex;
-   flex-direction: column;
-  padding-top: 0;
-  margin-bottom: 10px;
-  z-index: 10;
-  }
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    margin-bottom: 10px;
+    z-index: 10;
+     }
 
 
-   /*CAJA DE SOCIALES Y LETRA*/
-   #footer-categorias .icon-social1{
+    /*CAJA DE SOCIALES Y LETRA*/
+     #footer-categorias .icon-social1{
     width: 90%;
     height: 40px;
     display: flex;
     flex-direction: column;
-   margin: auto;
-   padding-top: 0;
+     margin: auto;
+     padding-top: 0;
     }
 
 
-    #footer-categorias  .icon-social1 p{
+    #footer-categorias .footer-primero-categorias  .icon-social1 p{
       display: flex;
       margin: auto;
     font-size: 1.2rem;
-
+    letter-spacing: 0.1px;
+        word-spacing: 0.2px;
     }
 
      /* UL */

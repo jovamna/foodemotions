@@ -195,8 +195,9 @@
               {% endif %}  
               </div>
 
-
+                
               <!--AUTOR IMAGEN Y NOMBRE-->
+                <section class="articulo-ultimo">
               <div class="autor-nombre">
                   <div class="autor-foto">
                   {% if posturismo.imageauthor %}
@@ -209,37 +210,32 @@
             </div>
 
                          
-                                         <!-------FIN-POST-------------------------------->
-                                             <!--CATEGORIA TITULO SIN LINK---> 
-                                            <div class="categoria-en-post">
-                                              <em><p>Categoria: {{ posturismo.categori}}</p></em>
-                                            </div>
-                                            <!--CIERRE CATEGORIA-EN-POST TITULO SIN LINK--->
-                                      <!---------------CIERRE DIV ARTICULO-UNO------------------------ --->  
-                        
-                                  <!---------------CIERRE SECTION ARTICULO-ULTIMO------------------------- --->  
-                         
-
-
-              
-                            <!-- CATEGORIAS DENTRO DEL DIV ARTICULO-UNO------------------>
-                                      <div class="categorias-posts-links">
-                                        <!--CATEGORIA ACTUAL--->
-                                        <em><h4>   Categorias: </h4></em>
-                                          <!--CATEGORIAS CON LIKS --->  
-                                        {% load mptt_tags %}
-                                         {% for categori in categories %} 
-                                         <a href="/noticias-turismo-gastronomico/categoria/{{ categori.slug }}"  style="text-decoration: none">   
-                                        <em>  <h3>{{ categori}}</h3></em></a>       
-                                        {% endfor %}
-                                      <!--ENDFOR FINAL DE LA CATEGORIA --->              
-                                     </div>
-                                     <!--DIV CIERRE DE CATEGORIAS-POSTS-LINKS--->
-
-                 {% endfor %}
-        <!---------------ENDFOR FINAL DE PRIMERA COLUMNA------------------------- --->  
+              <!-------FIN-POST-------------------------------->
+              <!--CATEGORIA TITULO SIN LINK---> 
+              <div class="categoria-en-post">
+              <em><p>Categoria: {{ posturismo.categori}}</p></em>
+              </div>
+              <!--CIERRE CATEGORIA-EN-POST TITULO SIN LINK--->
+              <!---------------CIERRE DIV ARTICULO-UNO------------------------ --->  
+               </section>               
+                               
+              <!-- CATEGORIAS DENTRO DEL DIV ARTICULO-UNO------------------>
+              <div class="categorias-posts-links">
+              <!--CATEGORIA ACTUAL--->
+              <em><h4>   Categorias: </h4></em>
+              <!--CATEGORIAS CON LIKS --->  
+              {% load mptt_tags %}
+              {% for categori in categories %} 
+              <a href="/noticias-turismo-gastronomico/categoria/{{ categori.slug }}"  style="text-decoration: none">   
+              <em>  <h3>{{ categori}}</h3></em></a>       
+              {% endfor %}
+              <!--ENDFOR FINAL DE LA CATEGORIA --->              
+              </div>
+             <!--DIV CIERRE DE CATEGORIAS-POSTS-LINKS--->
+            {% endfor %}
+          <!---------------ENDFOR FINAL DE PRIMERA COLUMNA------------------------- --->  
              </div>                           
-     <!-- CIERRE DIV DE PRIMERA COLUMNA----------------------------------------------------------------------------------------------->
+           <!-- CIERRE DIV DE PRIMERA COLUMNA----------------------------------------------------------------------------------------------->
    
 
  
@@ -456,14 +452,14 @@
         <div class="tercera-columna-fija">
       
          <div class="tercera-columna">
-                     <h1> todo sobre gastronomia internacional..</h1>
+                     <h2> todo sobre gastronomia internacional..</h2>
                       <div class="aside-colum">
                        {% for posturismo in post_turismo %} 
                          {% if posturismo.imagefront %}
                          <img src="{{posturismo.imagefront.url}}">
                         {% endif %}
                          <a href ="{% url 'appturismo:post' posturismo.slug %}">
-                         <p>{{ posturismo.title}}</p>
+                         <h1>{{ posturismo.title}}</h1>
                          </a>
                         {% endfor %} 
                      </div>

@@ -508,14 +508,14 @@
 	     	    </div>
         <!------------------FINAL BUSCADOR--------------------------->
          <div class="tercera-columna">
-                <h1> alimentación saludable y dietas..</h1>
+                <h2> alimentación saludable y dietas..</h2>
                 <div class="aside-colum">
                       {% for post in pos %} 
                        {% if post.imagefront %}
                    <img src ="{{post.imagefront.url}}">
                     {% endif %}
                    <a href ="{% url 'appblog:post' post.slug %}">
-                   <h2>{{ post.title }} </h2>
+                   <h1>{{ post.title }} </h1>
                    </a>
                     {% endfor %} 
                    </div>

@@ -824,16 +824,14 @@
              </div>
        <!---SEXTA CAJA CON DOS TITULOS (TERCER TITULO DE DOS)------->
               <section class="articulo-ultimo">
-
-                 
-                            <div class="autor-solo-nombre">
-                            <em><p>{{perderpeso.author}}</p></em>
-                            </div>
+                    <div class="autor-solo-nombre">
+                    <em><p>{{perderpeso.author}}</p></em>
+                    </div>
                      <!--CATEGORIA TITULO SIN LINK---> 
-                           <div class="categoria-en-post">
-                           <em> <h2>Categoria:{{ perderpeso.categoria }}</h2></em>        
-                          </div>
-                       <!--FINAL CATEGORIA TITULO SIN LINK---> 
+                    <div class="categoria-en-post">
+                    <em> <h2>Categoria:{{ perderpeso.categoria }}</h2></em>        
+                    </div>
+                    <!--FINAL CATEGORIA TITULO SIN LINK---> 
                 
              </section> 
        <!-- cierre de la sexta caja con dos columnas---------------------->
@@ -902,14 +900,14 @@
         <!------------------FINAL BUSCADOR--------------------------->
          <div class="tercera-columna">
        
-                 <h1> plan de comidas..</h1>
+                 <h2> plan de comidas..</h2>
                  <div class="aside-colum">
                   {% for perderpeso in post_plan %} 
                     {% if perderpeso.imagefront %}
                 <img src="{{perderpeso.imagefront.url}}">
                   {% endif %}
                    <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
-                   <p>{{ perderpeso.title}}</p>
+                   <h1>{{ perderpeso.title}}</h1>
                    </a>
                    {% endfor %} 
                    </div>
