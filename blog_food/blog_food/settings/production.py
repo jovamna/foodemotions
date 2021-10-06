@@ -30,18 +30,6 @@ DATABASES = {
 }
 
 # Database
-#DATABASES = {
-#'default': {
-#'ENGINE': 'django.db.backends.mysql',
-#'NAME': 'foodemotion',
-#'USER': 'jovamna',
-#'PASSWORD': 'Palmira@67',
-#'HOST': 'localhost',
-#'PORT': '3306',
-#}
-#}
-
-# Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 CACHES = {
     'default': {
@@ -53,7 +41,7 @@ CACHES = {
 }
 
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-#configuracion para los archivos media, esto esta hecho antes de hacer los modelos despues de la appfo>
+#configuracion para los archivos media, esto esta hecho antes de hacer los modelos despues de la appfood
 #luego de haber creado la carpeta media en el fichero raiz
 
 STATIC_URL = '/static/'
@@ -72,8 +60,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_ROOT = '/home/jovamna/myprojectdir/foodemotions/blog_food/media'
 
 #email config
-EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '208b46a9cbb412'
-EMAIL_HOST_PASSWORD = 'e350193eb5faa7'
-EMAIL_PORT = '2525'
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = env('EMAIL_PORT')
 EMAIL_USE_TLS = True

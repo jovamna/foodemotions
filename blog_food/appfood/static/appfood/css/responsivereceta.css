@@ -1275,29 +1275,29 @@
       margin-left: 8px;
       }
       
-      #foto-autor  figure{
+         #foto-autor  figure{
         width: 20%;
-      display: inline-flex;
-     
-      }
+        display: inline-flex;
+       }
 
       /*FOTO AUTOR*/
       #foto-autor figure img{
-     
         width: 100%;
         }
 
-  #foto-autor figcaption {
-  width: 90%;
-  height:  25px;
-  margin-top:  20px;
-  margin-left: 4px;
-  }
 
-   #foto-autor figcaption h4 {
+    #foto-autor figcaption {
+     width: 90%;
+     height:  25px;
+     margin-top:  20px;
+     margin-left: 4px;
+     }
+
+
+     #foto-autor figcaption h4 {
     margin-left: 5px;
     margin: auto;
-   }
+     }
 
    
       /*CONTIENE FOTO REDES Y CONTIENE PERFIL NUTRI PORCION Y TIEMPO  */
@@ -1310,9 +1310,9 @@
        
          .vista-imagen-receta {
            width: 100%;
-         
-           
          }
+
+
      .vista{
      width: 100%;
      display: flex;
@@ -1327,10 +1327,9 @@
       }
 
 
-       .vista-imagen-receta{
-        width: 100%;
-
-      border-radius: 6px;
+    .vista-imagen-receta{
+     width: 100%;
+    border-radius: 6px;
       }
 
      
@@ -1620,18 +1619,22 @@
           width: 30px;
          }
 
-
+       /*CONTAINER QUE INCLUYE NUTRICIONAL Y CATEGORIA*/
          .nutricion-informe{
            width: 100%;
            display: flex;
            flex-direction: column;
          }
 
-         .nutricional{
+         .nutricion-informe .nutricional{
            display: flex;
            flex-direction: column;
            margin: auto;
+           margin-bottom: 30px;
+    
          }
+
+
            /*TITULO DE NUTRICION*/
          .nutricion-informe .nutricional h2{
           font-weight: 800;
@@ -1658,7 +1661,7 @@
           width: 100%;
           display: flex;
           flex-direction: column;
-          margin-top: 2%;
+          margin-top: 5px;
         }
         /*..TITULO CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
          .categoria h2{

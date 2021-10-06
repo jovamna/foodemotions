@@ -8,27 +8,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-#import environ
+
 
 DEBUG = (bool, False)
 
-#env = environ.Env()
-#importante porque si no se pone da fallos
-#environ.Env.read_env()
-
-#env = environ.Env(
-#SECRET_KEY=str,
-#DEBUG=(bool, False),
-#)
-
-
 #ROOT_DIR = BASE_DIR
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = env.bool('DEBUG', default=False)
@@ -193,16 +177,6 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-#email config
-#EMAIL_HOST = env('EMAIL_HOST')
-#EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-#EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-#EMAIL_PORT = env('EMAIL_PORT')
 
 
-#EN EL ORDENADOR
-#STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
 
-#CON NGNIX
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-#STATIC_ROOT='/var/www/ENV-nombreApp/nombreApp/statics/'
