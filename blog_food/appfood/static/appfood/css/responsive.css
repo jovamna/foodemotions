@@ -2605,8 +2605,7 @@ width: 100%;
   
  
     /*TITULO NOTICIA TURISMO*/
-    .primer-segmento .tres a h1{
-     width: 100%;
+    .tres a h1{
     font-size: 1.2rem;
     color: #000000;
     word-spacing: -0.7px;
@@ -2616,27 +2615,28 @@ width: 100%;
   
     }
 
-    .primer-segmento .tres  h1{
+      .tres  h1{
       font-size: 1.2rem;
       margin-top: 6px;
     }
    
  
    /*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
-   .primer-segmento .tres  p{
+   .tres  p{
    font-size: 1rem;
    color: #2d2d2d;
    letter-spacing: 0.2px;
    font-family: 'Cabin', sans-serif;
-   margin-top: 3px;
+   margin-top: 5px;
    margin-bottom: 4px;
    }
 
-   .primer-segmento .tres a p{
+    .tres a p{
   font-size: 1rem;
   color: #2d2d2d;
   letter-spacing: 0.2px;
   font-family: 'Cabin', sans-serif;
+  margin-top: 5px;
   margin-bottom: 30px;
   }
 

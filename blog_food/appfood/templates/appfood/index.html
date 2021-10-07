@@ -91,10 +91,10 @@
                         {% endif %}
 
                         <a href ="{% url 'appturismo:post' posturismo.slug %}">
-                        <h1>{{posturismo.title}}</h1>
+                        <h1>{{ posturismo.title }}</h1>
                          </a> 
 
-                        <p>{{posturismo.description|linebreaksbr|truncatechars:70}}</p>
+                        <p>{{ posturismo.description|linebreaksbr|truncatechars_html:70 }}</p>
 
                         <a href ="{% url 'appturismo:post' posturismo.slug %}">
                        <p>Leer mas...<p>
@@ -157,40 +157,8 @@
               </div>
               </div>
         {% endfor %}
-     
-           
-              {% for perderpeso in perderultimo %}
-              <div class="posts-ultimos">
-               <div class="post-ultimo">
-              
-
-                      <div class="posts-ultimos-imagen">
-                      {% if perderpeso.imagefront %}
-                      <img src ="{{perderpeso.imagefront.url}}" >
-                      {% endif %}
-                      </div>
-
-                        <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
-                      <div class="posts-ultimos-titulo">
-                      <!--------------------------------->
-                      <div class="post-ultimo-titulo">
-                      <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
-                      <h1>{{perderpeso.title}}</h1>
-                      </a>
-                      <p>{{perderpeso.description|safe|truncatechars:120}}.</p>
-                      <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
-                      <p>Leer mas...</p>
-                      </a>
-                     </div>
-                    <!----------------------------------------->
-                     </div>
-                    <!--------------------------------------------------------------------->
-                
-              </div>           
-            </div>
-             {% endfor %}
-        <!------------------------------------------------------------------------------------->
-<!------------------------------------------------------------------------->
+     <!-------------------------------------------------------------------->
+     <!------------------------------------------------------------------------->
            {% for recipe in recipedietaultimo %}
          <div class="posts-ultimos">
                <div class="post-ultimo">
@@ -223,6 +191,44 @@
             </div>
          {% endfor %}
         <!------------------------------------------------------------------------------------->
+
+
+
+
+      <!------------------------------------------------------------------>
+           
+              {% for perderpeso in perderultimo %}
+              <div class="posts-ultimos">
+               <div class="post-ultimo">
+              
+
+                      <div class="posts-ultimos-imagen">
+                      {% if perderpeso.imagefront %}
+                      <img src ="{{perderpeso.imagefront.url}}" >
+                      {% endif %}
+                      </div>
+
+                        <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                      <div class="posts-ultimos-titulo">
+                      <!--------------------------------->
+                      <div class="post-ultimo-titulo">
+                      <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                      <h1>{{perderpeso.title}}</h1>
+                      </a>
+                      <p>{{perderpeso.description|safe|truncatechars:120}}.</p>
+                      <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                      <p>Leer mas...</p>
+                      </a>
+                     </div>
+                    <!----------------------------------------->
+                     </div>
+                    <!--------------------------------------------------------------------->
+                
+              </div>           
+            </div>
+             {% endfor %}
+        <!------------------------------------------------------------------------------------->
+
 
         <!------------------------------------------------------------------------->
       {% for post in postultimo %}
