@@ -2118,11 +2118,11 @@
      /*..RESPONSIVE TITULO DENTRO DE LA PORTADA...........TITULO RESPONSIVE DEL MOVIL EN LA PORTADA.................*/
      .portada .portada-img-responsive .imagen-responsive-movil .portada-titulo{
       width: 100%;
-      max-width: 320px;
+      max-width: 360px;
       display: block;
       position: relative;
       left: 50%;
-      margin-left: -160px;
+      margin-left: -180px;
       margin-top:  -170px;
       z-index: 110;
      }
@@ -2159,13 +2159,13 @@
       }
       
       .portada .portada-img-responsive .portada-titulo  h2 i{
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-left: 8px;
       margin-right: 8px;
       }
   
       .portada .portada-img-responsive .portada-titulo1  h6 i{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-left: 8px;
         margin-right: 8px;
         }
