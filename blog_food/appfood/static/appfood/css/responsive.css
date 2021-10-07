@@ -2547,7 +2547,7 @@ width: 100%;
 
     .titulo  h1{
       width: 310px;
-      font-size:  1.9rem;
+      font-size:  1.8rem;
       color: #000000;
       text-shadow: 0px 0.9px 0.9px white; 
       font-family: 'Times New Roman', Times, serif;
@@ -2557,7 +2557,7 @@ width: 100%;
 
   .titulo a h1{
     width: 310px;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   color: #000000;
   text-shadow: 0px 0.9px 0.9px white; 
   font-weight: 550;
@@ -2599,7 +2599,6 @@ width: 100%;
       width: 100%;
       max-width: 640px;
       margin: auto;
-      margin-bottom: 10px;
      }
  
    /*TITUO Y DESCRIPCION*/
@@ -2609,7 +2608,7 @@ width: 100%;
     .primer-segmento .tres a h1{
      width: 100%;
      max-width: 640px;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: #000000;
     word-spacing: -0.7px;
     letter-spacing: -0.5px;
@@ -2621,7 +2620,7 @@ width: 100%;
    .primer-segmento .tres  p{
      width: 100%;
      max-width: 640px;
-   font-size: 1.1rem;
+   font-size: 1rem;
    color: #2d2d2d;
    letter-spacing: 0.2px;
    font-family: 'Cabin', sans-serif;
@@ -2666,6 +2665,8 @@ width: 100%;
 
      .dos-columnas .posts-ultimos{
       width: 100%;
+      height:  100%;
+      max-height: 120px;
      display: flex;
      flex-direction: column;
      border-top: 0.8px solid #c9c9c9;
@@ -2682,8 +2683,7 @@ width: 100%;
    .posts-ultimos-imagen img{
    width: 100%;
    max-width: 155px;
-   height: 100%;
-   max-height: 98px;
+  
    }
 
    .posts-ultimos-titulo{
@@ -2695,12 +2695,13 @@ width: 100%;
 
   
     .posts-ultimos-titulo h1{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
       word-spacing: -0.5px;
      }
   
     .posts-ultimos-titulo p{
-     font-size: 1rem;
+     visibility: hidden;
+     display: none;
      }
    
      .dos-columnas .columna-right{
@@ -2804,10 +2805,13 @@ width: 100%;
     margin-top: 1px;  /*--RELACIONADO CON EL SEGMENTO TITULO*/
     margin-bottom: 30px;
     }
-
+    /*..TITULO DE LA IMAGEN GRANDE RESPONSIVE*/
     .plan-imagen-responsive h1{
-      width: 99%;
-      margin-left: 15px;
+      display: block;
+      width: 92%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.3rem;
   
     }
 
