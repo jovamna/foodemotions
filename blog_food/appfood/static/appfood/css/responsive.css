@@ -2550,7 +2550,7 @@ width: 100%;
 
     .titulo  .escrito h1{
       width: 310px;
-      font-size:  1.6rem;
+      font-size:  1.5rem;
       color: #000000;
       text-shadow: 0px 0.9px 0.9px white; 
       font-family: 'Times New Roman', Times, serif;
@@ -2560,7 +2560,7 @@ width: 100%;
 
   .titulo .escrito a h1{
     width: 310px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #000000;
   text-shadow: 0px 0.9px 0.9px white; 
   font-weight: 550;
@@ -2568,7 +2568,7 @@ width: 100%;
    }
  
    .titulo .escrito p{
-   font-size:  1.1rem;
+   font-size:  1rem;
    font-family: 'Times New Roman', Times, serif;
    color: #2d2d2d;
    }
@@ -2826,11 +2826,13 @@ width: 100%;
       width: 100%;
       margin-left: 15px;
       padding-right: 15px;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
      color: #000;
     }
 
- 
+    .plan-total-alimentacion .plan-imagen-responsive a h1{
+      font-size: 1.2rem;
+    }
   
 
      .plan-imagen-responsive img{
@@ -3333,12 +3335,12 @@ width: 100%;
   .menu-footer .footer-lista  p{
     display: flex;
     flex-direction: column;
-  line-height: 17px;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #2d2d2d;
-  letter-spacing: -0.5px;
- align-items: center;     /*IMPORTANTE*/
+   line-height: 17px;
+   font-weight: bold;
+   font-size: 1rem;
+   color: #2d2d2d;
+   letter-spacing: -0.5px;
+   align-items: center;     /*IMPORTANTE*/
   }
   
   
@@ -3346,14 +3348,15 @@ width: 100%;
     .espacio{
     display: none;
     }
+
   
-  /*CAJA PRINCIPAL DEL SEGUNDO FOOTER */
-  #footer-second{
+   /*CAJA PRINCIPAL DEL SEGUNDO FOOTER */
+    #footer-second{
     display: block;
-  width: 100%;
-  height: 30px;
-  margin-bottom: 25px;
-  }
+    width: 100%;
+    height: 30px;
+    margin-bottom: 25px;
+    }
   
 
 
