@@ -2550,7 +2550,7 @@ width: 100%;
 
     .titulo  .escrito h1{
       width: 310px;
-      font-size:  1.5rem;
+      font-size:  1.6rem;
       color: #000000;
       text-shadow: 0px 0.9px 0.9px white; 
       font-family: 'Times New Roman', Times, serif;
@@ -2560,7 +2560,7 @@ width: 100%;
 
   .titulo .escrito a h1{
     width: 310px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #000000;
   text-shadow: 0px 0.9px 0.9px white; 
   font-weight: 550;
@@ -2598,6 +2598,7 @@ width: 100%;
       width: 100%;
       max-width: 640px;
       margin: auto;
+      margin-bottom: 1px;
      }
  
    /*TITUO Y DESCRIPCION*/
@@ -2606,18 +2607,18 @@ width: 100%;
     /*TITULO NOTICIA TURISMO*/
     .primer-segmento .tres a h1{
      width: 100%;
-     max-width: 640px;
     font-size: 1.2rem;
     color: #000000;
     word-spacing: -0.7px;
     letter-spacing: -0.5px;
     font-family: 'Times New Roman', Times, serif;
-    margin-bottom: 3px;
+    margin-top: 6px;
   
     }
 
     .primer-segmento .tres  h1{
       font-size: 1.2rem;
+      margin-top: 6px;
     }
    
  
@@ -2659,6 +2660,7 @@ width: 100%;
       width: 100%;
       display: flex;
       flex-direction: column;
+      margin-bottom: 40px;
      }
   
    
@@ -2677,18 +2679,19 @@ width: 100%;
      border-top: 0.8px solid #c9c9c9;
      }
 
-    .dos-columnas-segunda .posts-ultimos-imagen{
+  .post-ultimo .posts-ultimos-imagen{
     display: block;
     position: relative;
     float: left;
     width: 45%;
-    max-width: 165px;
+    max-width: 165px;  
     }
 
-   .posts-ultimos-imagen img{
+   .post-ultimo .posts-ultimos-imagen img{
    width: 100%;
    max-width: 155px;
-  
+   height: 100%;
+  max-height: 120px;
    }
 
    .posts-ultimos-titulo{
@@ -2702,6 +2705,7 @@ width: 100%;
     .posts-ultimos-titulo h1{
     font-size: 1.1rem;
       word-spacing: -0.5px;
+      margin-top: 4px;
      }
   
     .posts-ultimos-titulo p{
@@ -2715,9 +2719,9 @@ width: 100%;
       float: left;
      width: 92%;
      margin: auto;
-     margin-top: 10px;
+    
      margin-bottom: 30px;
- 
+     background-color: darkorchid;
     }
 
     .columna-right .explora{
@@ -2837,6 +2841,7 @@ width: 100%;
 
      .plan-imagen-responsive img{
       width: 100%;
+      margin-bottom: 6px;
      }
    
     
