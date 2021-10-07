@@ -928,7 +928,7 @@
       flex-direction: column;
       width:100%;
       margin-top: 52px;
-      margin-bottom: 230px;
+      margin-bottom: 130px;
       padding-right: 0;
       padding-left: 0;
       }
@@ -1193,8 +1193,7 @@
    /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
    #tres-columnas-recetas{
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 1px;
     }
   
 
@@ -1665,7 +1664,7 @@
         }
         /*..TITULO CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
          .categoria h2{
-          font-size:  1.4rem;
+          font-size:  1.3rem;
           font-family: 'Times New Roman', sans serif;
           color:#000000;
           letter-spacing:-0.001rem ;
@@ -1677,12 +1676,12 @@
           font-family: 'Times New Roman', sans serif;
           color:#524c56;
           letter-spacing:-0.001rem ;
-          word-spacing: -0.0rem;
+          word-spacing: -0.01rem;
         }
 
          /*ESTO ES SOLO LA PALABRA CATEGORIAS TITULO CATEGORIAS EN PRIMERA COLUMNA*/
          #wrapper-recetas .categorias-recetas-links h2{
-          font-size:  1.4rem;
+          font-size:  1.3rem;
           font-family: 'Times New Roman', sans serif;
           color:#000000;
           letter-spacing:-0.001rem ;
@@ -1698,7 +1697,10 @@
           word-spacing: -0.01rem;
          }
   
-
+   /*..COMENTARIOS*/
+   .comentarios{
+    width: 100%;
+   }
       
 
        /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
@@ -1762,8 +1764,7 @@
 
     #footer-recetas{
       clear: both;
-      height: 200px;
-      margin-top: -200px;
+      height: 230px;
       border-top: solid 1.5px #DCDCDC;
       width: 100%;
       z-index: 10;
@@ -1778,7 +1779,7 @@
        display: flex;
        flex-direction: column;
        margin: auto;
-      margin-bottom: 2px;
+      margin-bottom: 10px;
       padding-top: 0;
       z-index: 10;
       }
@@ -1867,7 +1868,6 @@
      /*LETRA ENCIMA DEL BOX*/   
      #footer-articulo  .box h3{
        font-size: 1rem;
-       
         margin: auto;
        }
   
@@ -1910,15 +1910,15 @@
      /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
      #footer-recetas .footer-second-recetas{
      width: 100%;
-     height: 20px; 
+     height: 30px;
+     margin-bottom: 8px;
      }
 
 
      #footer-recetas .final-food-recetas {
       width: 100%;
       margin: auto;
-      height: 30px;
-      margin-bottom: 25px;
+    
       }
    
   

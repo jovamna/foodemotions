@@ -2432,9 +2432,18 @@ span.finded{
 
 
 
+/*DE LA APLICAGION PAGES*/
 
+.page-section {
 
- 
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.page-section .container{
+  margin-top: 150px;
+
+}
      
   
    

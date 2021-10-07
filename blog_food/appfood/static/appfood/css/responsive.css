@@ -588,11 +588,11 @@
    /*..PRIMR PARRAFP DE LA PAGINA CONTACTP  LETRAS DE PORTADA CONTACTO RESPONSIVE MOVIL.........................*/
     .portada .portada-contacto-uno{
      display: block;
-     width: 100%;
+     width: 60%;
      position: absolute;
      overflow: hidden;
-    top: -8px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
-    left: 1px;
+    top: 10px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
+    left: 20px;
    }
   
      /*FRASE PRIMERA QUE LLEVA P*/
@@ -619,9 +619,8 @@
   position: relative;
   overflow: hidden;
   top: -190px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
-  left: 1px ;
+  left: 20px ;
   width: 48%;
-
   }
 
   /* SEGUNDO PARRAFO Proudly crafted in  münich since 1987*/
@@ -639,9 +638,9 @@
   .portada-img-responsive .portada-contacto-tres{
   position: absolute;
   overflow: hidden;
-  top: 30px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
+  top: 35px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
   width: 48%;
-  left: 1px;
+  left: 15px;
   }
   
   /*TERECER PARRAFO QUE SUBE*/
@@ -1659,13 +1658,13 @@
         background-color: #fff;
        }
   
-      .cabecera{
+       .cabecera{
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         height: 38px;
-      }
+       }
            
 
       /*caja */
@@ -2293,9 +2292,10 @@
       display: block;
       position: absolute;
       overflow: hidden;
-      top: 140px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
-      left: 10px;
+      top: 180px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
+      left: 30px;
       width: 48%;
+ 
      }
 
        /*LETRA EN PRINCIPIO*/
@@ -2327,8 +2327,8 @@
   display: block;
   position: absolute;
   overflow: hidden;
-  top: 180px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
-  left: 10px ;
+  top: 220px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+  left: 30px ;
   width: 50%;
   height: 30px;
   }
@@ -2350,8 +2350,8 @@
    display: block;
   position: absolute;
   overflow: hidden;
-  top: 160px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
-  left: 10px ;
+  top: 190px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
+  left: 25px ;
   width: 48%;
  }
 
@@ -2395,6 +2395,7 @@
   font-family: 'Cabin', sans-serif;
   color:black;
 }
+
 /*--LETRA CRAFTED----------------------*/
 .portada-img-responsive .portada-contacto-uno .otroestilo { 
   font-weight: 300 ;
@@ -3131,6 +3132,11 @@ width: 100%;
 
  .texto-animado h1{
   font-size: 1rem;
+   }
+
+   .texto-animado h1 span{
+    top:  0.2px;
+    border-left: solid 1px #000;
    }
 
 

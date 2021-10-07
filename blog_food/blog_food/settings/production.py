@@ -40,10 +40,6 @@ CACHES = {
     }
 }
 
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-#configuracion para los archivos media, esto esta hecho antes de hacer los modelos despues de la appfood
-#luego de haber creado la carpeta media en el fichero raiz
-
 STATIC_URL = '/static/'
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

@@ -16,12 +16,12 @@ DEBUG = (bool, False)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = env.bool('DEBUG', default=False)
-
 #SECURE_SSL_REDIRECT = env.bool('SECURE_SSL_REDIRECT', default=False)
 
 SITE_ID = 1
-# Application definition
 
+
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

@@ -1881,10 +1881,9 @@ border-radius:6px;
     #footer-articulo{
     clear: both;
     position: relative;
-    height: 140px;
-    margin-top: -140px;
-    border-top: solid 1.5px #DCDCDC;
     display: block;
+    height: 230px;
+    border-top: solid 1.5px #DCDCDC;
     width: 100%;
     z-index: 10;
     padding-top: 0;
@@ -1894,8 +1893,7 @@ border-radius:6px;
       /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
       #footer-articulo .footer-primero-articulo{
       width: 100%;
-  
-      height: 170px;
+      height: 200px;
      display: flex;
      flex-direction: column;
     padding-top: 0;
@@ -2026,15 +2024,14 @@ border-radius:6px;
 
    /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
    #footer-articulo  .footer-second-articulo{
-   width: 100%;
-   height: 20px; 
+    width: 100%;
+    height: 30px;
+     margin-bottom: 8px;
    }
   
    #footer-articulo  .final-food-articulo {
     width: 100%;
     margin: auto;
-    height: 30px;
-    margin-bottom: 25px;
     }
  
 
