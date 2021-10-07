@@ -205,14 +205,14 @@
 
                <section class="ingredientes"> 
                    <div class="lista-ingredientes"> 
-                       {% if receta.ingredienone != Null %}    
+                       {% if receta.ingredienone %}    
                        <div class="checkbox">
                        <input type="checkbox" id="checkbox1" name="" value="">
                        <label for="checkbox1"><span>{{receta.ingredienone|safe}} </span></label>
                        </div>
                       {% endif %}
                     <!----------------------INGREDIENTE 2------>
-                      {% if receta.ingredientwo != Null %}    
+                      {% if receta.ingredientwo %}    
                       <div class="checkbox">
                       <input type="checkbox" id="checkbox2" name="" value="">
                       <label for="checkbox2"><span>{{receta.ingredientwo|safe}} </span></label>
@@ -220,7 +220,7 @@
                      {% endif %}
 
                       <!----------------------INGREDIENTE 3------>
-                      {% if receta.ingredienthree != Null %}    
+                      {% if receta.ingredienthree  %}    
                       <div class="checkbox">
                       <input type="checkbox" id="checkbox3" name="" value="">
                       <label for="checkbox3"><span>{{receta.ingredienthree|safe}} </span></label>
@@ -228,7 +228,7 @@
                     {% endif %}
 
                       <!----------------------INGREDIENTE 4------>
-                      {% if receta.ingredienfour != Null %}    
+                      {% if receta.ingredienfour %}    
                       <div class="checkbox">
                       <input type="checkbox" id="checkbox4" name="" value="">
                       <label for="checkbox4"><span>{{receta.ingredienfour|safe}} </span></label>
@@ -462,7 +462,7 @@
                       {% if receta.ingredientwentynine  %}    
                       <div class="checkbox">
                       <input type="checkbox" id="checkbox22" name="" value="">
-                      <label for="checkbox22"><span>{{receta.ingredientwentynine|safe}} 15 </span></label>
+                      <label for="checkbox22"><span>{{receta.ingredientwentynine|safe}}  </span></label>
                       </div>
                       {% endif %}
 

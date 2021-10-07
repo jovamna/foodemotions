@@ -1624,7 +1624,7 @@
 
     
   #wrapper > * {
-  padding: 17px;
+  padding: 12px;
   }  
    
 
@@ -2588,7 +2588,6 @@ width: 100%;
  
    .primer-segmento .tres{
     width: 100%;
-    max-width: 640px;
      display: flex;
      flex-direction: column;
      margin: auto;
@@ -2598,46 +2597,64 @@ width: 100%;
       width: 100%;
       max-width: 640px;
       margin: auto;
-      margin-bottom: 1px;
      }
  
    /*TITUO Y DESCRIPCION*/
   
  
     /*TITULO NOTICIA TURISMO*/
-    .tres a h1{
-    font-size: 1.2rem;
+    .primer-segmento .tres a h1{
+    font-size: 1.1rem;
     color: #000000;
     word-spacing: -0.7px;
     letter-spacing: -0.5px;
     font-family: 'Times New Roman', Times, serif;
-    margin-top: 6px;
-  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: auto;
+     margin-right: auto;
     }
 
-      .tres  h1{
-      font-size: 1.2rem;
-      margin-top: 6px;
+    .primer-segmento .tres  h1{
+      font-size: 1.1rem;
+      margin-top: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
    
  
    /*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
-   .tres  p{
-   font-size: 1rem;
+   .primer-segmento  .tres  p{
+   font-size: 0.9rem;
    color: #2d2d2d;
    letter-spacing: 0.2px;
    font-family: 'Cabin', sans-serif;
    margin-top: 5px;
    margin-bottom: 4px;
+   margin-right: auto;
+   margin-left: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    }
 
-    .tres a p{
-  font-size: 1rem;
+   .primer-segmento  .tres a p{
+  font-size: 0.9rem;
   color: #2d2d2d;
   letter-spacing: 0.2px;
   font-family: 'Cabin', sans-serif;
   margin-top: 5px;
   margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   }
 
 
@@ -2826,10 +2843,18 @@ width: 100%;
       padding-right: 15px;
       font-size: 1.2rem;
      color: #000;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
     }
 
     .plan-total-alimentacion .plan-imagen-responsive a h1{
       font-size: 1.2rem;
+      margin-left: 15px;
+      padding-right: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   
 
