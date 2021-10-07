@@ -115,18 +115,18 @@ flex: 1;
 
 
  /*CONTAINER DE TODO EL BODY.......margin-top 152px.....................  */
-#container{
+  #container{
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 1250px;
   margin: auto;
   height: 520px;
-bottom:  25px;
-padding: 0 0 0 0 ;   /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
-height: auto;
-
-}
+  bottom:  25px;
+  padding: 0 0 0 0 ;   /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
+  height: auto;
+  margin-top: 110px;
+   }
 
 
   /*height 125px  left 0 */
