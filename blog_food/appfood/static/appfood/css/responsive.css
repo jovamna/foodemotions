@@ -2511,6 +2511,10 @@ width: 100%;
       .titulo-principal .vacio{
       width: 5%;
       }
+
+      .titulo-principal .escrito  h1 {
+        font-size: 1.7rem;
+      }
     
       .titulo-principal .escrito  h1 a{
         width: 300px;
@@ -2546,7 +2550,7 @@ width: 100%;
 
     .titulo  .escrito h1{
       width: 310px;
-      font-size:  1.7rem;
+      font-size:  1.6rem;
       color: #000000;
       text-shadow: 0px 0.9px 0.9px white; 
       font-family: 'Times New Roman', Times, serif;
@@ -2556,7 +2560,7 @@ width: 100%;
 
   .titulo .escrito a h1{
     width: 310px;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   color: #000000;
   text-shadow: 0px 0.9px 0.9px white; 
   font-weight: 550;
@@ -2603,7 +2607,7 @@ width: 100%;
     .primer-segmento .tres a h1{
      width: 100%;
      max-width: 640px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #000000;
     word-spacing: -0.7px;
     letter-spacing: -0.5px;
@@ -2612,6 +2616,9 @@ width: 100%;
   
     }
 
+    .primer-segmento .tres  h1{
+      font-size: 1.2rem;
+    }
    
  
    /*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
@@ -2628,7 +2635,7 @@ width: 100%;
    .primer-segmento .tres a p{
     width: 100%;
     max-width: 640px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #2d2d2d;
   letter-spacing: 0.2px;
   font-family: 'Cabin', sans-serif;
@@ -2803,6 +2810,14 @@ width: 100%;
     margin-top: 1px;  /*--RELACIONADO CON EL SEGMENTO TITULO*/
     margin-bottom: 30px;
     }
+
+           /*CAJA DE LA IMAGEN GRANDE RESPONSIVE*/
+           .plan-imagen-responsive{
+            display: flex;
+            flex-direction: column;
+            width:  100%;
+            margin-bottom: 25px;
+           }
     /*..TITULO DE LA IMAGEN GRANDE RESPONSIVE*/
    .plan-total-alimentacion .plan-imagen-responsive  h1{
       display: block;
@@ -2812,8 +2827,17 @@ width: 100%;
       margin-left: 15px;
       padding-right: 15px;
       font-size: 1.3rem;
+     color: #000;
     }
 
+ 
+  
+
+     .plan-imagen-responsive img{
+      width: 100%;
+     }
+   
+    
    /*CONTAINER TOTAL INCLUYE LA CAJA PLAN-POST-ALIMENTACION*/
     .plan-alimentacion{
       display: block;
@@ -2865,23 +2889,7 @@ width: 100%;
      display: none;
      }
 
-     /*CAJA DE LA IMAGEN GRANDE RESPONSIVE*/
-    .plan-imagen-responsive{
-      display: flex;
-      flex-direction: column;
-      width:  100%;
-      margin-bottom: 25px;
-     }
-
-     .plan-imagen-responsive img{
-      width: 100%;
-     }
-   
-    /*TITULO DE LA IMAGEN GRANDE CON LOS 4 POSTS*/
-    .plan-total-alimentacion .plan-imagen-responsive h1{
-      font-size: 1.6rem;
-      margin-top: 7px;
-      }
+  
 
   /*FIN DE LAS 4 FOTOS Y UNA GRANDE*/
 
