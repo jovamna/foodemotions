@@ -15,19 +15,20 @@
                              <!-- FIN IMAGEN-->
                              <!-- LETRAS-->
                             
-                            <div class="portada-contacto-uno"><a href="{% url 'appfood:index' %}">
+                            <div class="portada-contacto-uno">
                             <p class="azulplata">dietas <span class="otroestilo"> recetas </span> plan de comidas</p> 
-                               </a>
+                       
                             </div>
                     
                            <div class="portada-contacto-dos">
-                            <a href="{% url 'appfood:index' %}"><h6>Con la pasión por la gastronomia</h6></a>
+                         <h6>Con la pasión por la gastronomia</h6>
                            </div>
 
                            <div class="portada-contacto-tres">
-                            <a href="{% url 'appfood:index' %}"><span><h2> FOOD EMOTIONS<h2> &nbsp;&nbsp;<h4>Suscribete</h4></span></a>
+                           <span><h2> FOODING EMOTION<h2> &nbsp;&nbsp;   </span>
+                         
                            </div>
-                        
+                      
                            <!-- FIN LETRAS-->
                     </section>
 
@@ -39,17 +40,17 @@
               <img src="{% block img %}{% static 'appfood/img/contacto/contacto-movil-640-450.png' %}{% endblock  %}">
 
                            <!-------------LETRAS EN MOVIMIENOTO DE MOVIL RESPONSIVE----------------->
-                           <div class="portada-contacto-uno"><a href="{% url 'appfood:index' %}">
+                           <div class="portada-contacto-uno">
                             <p class="azulplata">dietas <span class="otroestilo">recetas </span> plan de comidas</p> 
-                           </a>
+                       
                             </div>
                     
                            <div class="portada-contacto-dos">
-                            <a href="{% url 'appfood:index' %}"><h6>Con la pasión por la gastronomia</h6></a>
+                       <h6>Con la pasión por la gastronomia</h6>
                            </div>
 
                            <div class="portada-contacto-tres">
-                            <a href="{% url 'appfood:index' %}"><span><h2>FOOD&nbsp;&nbsp;&nbsp;EMOTIONS<h2>&nbsp;&nbsp;<h4>Suscribete</h4></span></a>
+                          <span><h2>FOODING&nbsp;&nbsp;&nbsp;EMOTION<h2>&nbsp;&nbsp;</span>
                            </div>
                         
               <!----FIN LETRAS EN MOVIMIENTO---------------------->
@@ -58,17 +59,17 @@
               <div class="imagen-responsive-ipod">
               <img src="{% block imag %}{% static 'appfood/img/contacto/contacto-ipod-760-360.png' %}{% endblock  %}">
                <!--LETRAS DE IPOD--RESPONSIVE---------------------------------------------------------->
-                   <div class="portada-contacto-uno"><a href="{% url 'appfood:index' %}">
+                   <div class="portada-contacto-uno">
                             <p class="azulplata">dietas <span class="otroestilo">recetas</span>  plan de comidas</p> 
-                               </a>
+                            
                             </div>
                     
                            <div class="portada-contacto-dos">
-                            <a href="{% url 'appfood:index' %}"><h6>Con la pasión por la gastronomia</h6></a>
+                      <h6>Con la pasión por la gastronomia</h6>
                            </div>
 
                            <div class="portada-contacto-tres">
-                            <a href="{% url 'appfood:index' %}"><span><h2>FOOD&nbsp;&nbsp;&nbsp;EMOTIONS<h2>&nbsp;&nbsp;<h4>Suscribete</h4></span></a>
+                         <span><h2>FOODING&nbsp;&nbsp;&nbsp;EMOTION<h2>&nbsp;&nbsp;</span>
                            </div>
 
 
@@ -120,33 +121,43 @@
    <div class="text-center"><input type="submit" class="btn btn-primary btn-block py-2" value="Enviar">
              </div>
                </form>    -->
- 
-                         <form action="" method="POST">
-                             {% csrf_token %}
-                            <div class="form-group"><label>Nombre *</label>
-                               <div class="input-group">{{form.name}}
-                           </div>{{form.name.errors}} </div>
+  
+      <form  method="POST"  action=" " value=" ">{% csrf_token %}
 
 
-                     <div class="form-group"><label>Email *</label>
+                  <div class="form-group">
+                  <label>Nombre *</label>
+                  <div class="input-group">
+                  {{form.name}}
+                   </div>
+                   {{form.name.errors}}
+                   </div>
+
+
+                       <div class="form-group">
+                        <label>Email *</label>
                         <div class="input-group">
-                        {{form.email}}</div> {{form.email.errors}}
+                        {{form.email}}
+                        </div> 
+                        {{form.email.errors}}
                         </div>
 
 
-                  <div class="form-group"><label>Mensaje *</label>
-                      <div class="input-group">
-                     {{form.content}}
-                    </div> {{form.content.errors}}
-                </div>
+                        <div class="form-group">
+                        <label>Mensaje *</label>
+                         <div class="input-group">
+                         {{form.content}}
+                         </div> 
+                         {{form.content.errors}}
+                         </div>
 
-                    <div class="text-center">
-                    <input type="submit" class="btn btn-primary btn-block py-2" value="Enviar">
-                    </div>
+                         <div class="text-center">
+                          <input type="submit" class="btn btn-primary btn-block py-2" value="Enviar">
+                        </div>
              </form>
           <!-- FORM ACTION FINAL -->
             <!-- Fin formulario de contacto -->
-            
+      
 
 
           </div>
