@@ -284,6 +284,11 @@ margin-top: -3px;
     display: inline-flex;
     height: 43px; 
     }
+
+    .suscripcion{
+      width: 100%;
+      height: 43pc;
+    }
   
    .suscribe h4 {
     font-size: 0.9rem;
@@ -1870,7 +1875,6 @@ margin-top: -3px;
     display: block;
   width: 100%;
   height: 100%;
-
   position: absolute;
   opacity: 0.5;
 
@@ -1925,7 +1929,8 @@ margin-top: -3px;
   padding: 10px 20px;
   background: none;
   border-style: none;
-  border: 2px solid #7aac41;
+  border: 3px solid #fff;
+  outline: 2px solid #7aac41;
   color:  #7aac41;
   margin-top: 20px;
   transition: background 300ms;
@@ -1933,13 +1938,17 @@ margin-top: -3px;
   margin-left: 10px;
 }
 
+
+
+
+
   .details button a{
   color:  #7aac41;
   font-size: 1.2rem;
   font-family: 'Archivo Black', sans-serif;
   font-weight: 900;
   -webkit-text-fill-color: #fff;
-  -webkit-text-stroke: 1.6px #7aac41;
+  -webkit-text-stroke: 1.1px #7aac41;
    }
 
 
