@@ -31,10 +31,7 @@
       text-decoration: none;
        }
     
-       #controls-responsive{
-         display: none;
-         visibility: hidden;
-       }
+
 
         #wrapper-categorias{
         display: flex;
@@ -60,23 +57,19 @@
     padding:20px;
     }
     
-    div {
-      flex: 1;
-    }
- 
+
    /*...CATEGORIA Y SUCATEGRIAS............................................*/
     /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
     #container-categorias{
       display: flex;
       flex-direction: column;
-      height: auto;
       width:100%;
-      max-width: 1200px;
-      margin:auto;
-      margin-top:  70px;
-      padding-left: 0;
-      padding-right: 0;
-      padding-bottom: 0;
+    max-width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
+     padding-left: 0;
+     padding-right: 0;
+     margin-top: 72px;
      }
   
 
@@ -99,40 +92,51 @@
      /*CABECERA */
      #cabecera-categorias{
       width: 100%;
-    max-width: 1200px;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: auto;
-    margin-top: -2px;
+      max-width: 1200px;
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: auto;
+      margin-top: -2px;
       }
   
-       /*caja */
-       #cabecera-categorias  .logo{
-      display: inline-flex;
-      width: 19.8%;
-      max-width: 450px;
-      height: 40px;      
-      }
+    /*caja */
+    .logo{
+    display: inline-flex;
+    width: 19.8%;
+    max-width: 350px;
+    height: 40px; 
+    }
       
      /*IMAGEN DEL LOGO*/
-     .logo img{
+     #cabecera-categorias .logo img{
       width: 100%;
       height: 40px;  
       }
        
      
+     #container-categorias #controls-responsive{
+        display: none;
+        visibility: hidden;
+      }
 
       /*CONTAINER DEL BUSCADOR................. */
-        #cabecera-categorias .controls{
-        display: inline-flex;
-        width: 30%;
-        max-width: 390px;
+      #cabecera-categorias  .controls{
+        display: block;
+        position: relative;
+        float: left;
+        width: 35%;
+        max-width: 550px;
         height: 38px;  
-        margin: auto;
         }
+
+
+          #cabecera-categorias .controls form{
+          width: 100%;
+          max-width: 390px;
+          }
+
 
    #cabecera-categorias #custom-search-input input[type=text]:focus {
   outline: none;
@@ -143,23 +147,22 @@
 
 
   /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
-  #cabecera-categorias #custom-search-input{
-  height: 32px;
-  display: flex;
-  flex-direction: row;
-  border-radius: 0px;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  font-size: 1em;
-  font-weight: 3rem;
-  box-shadow: 4px 8px 6px -6px #8c8c8c;
-  background: #FEFEFE;
-  background-image: linear-gradient(45deg, #FFF, #F9F9F9);
-  border: 2px solid #FAFAFA; 
-   }
-
+    #cabecera-categorias #custom-search-input{
+    width: 390px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+   -webkit-border-radius: 0px;
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   margin-top: 0.5px;
+   box-shadow: 4px 8px 6px -6px #8c8c8c;
+   background: #FEFEFE;
+   background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+   border: 1.2px solid #FAFAFA; 
+    }
 
 
     /*CAMPO SEARCH BUSCADOR */
@@ -176,7 +179,9 @@
 
 
     input::placeholder {
-   width: 250px;
+    width: 250px;
+    font-size: 1rem;
+    color: #2d2d2d;
     }
 
 
@@ -193,75 +198,85 @@
     background-color: #fff;
     }
 
-  #cabecera-categorias   .controls .icon .fa-search{
+
+    #cabecera-categorias   .controls .icon .fa-search{
     color: #000000;
-  }
+    }
 
   
-  
-  /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
-     .menu-btn {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      width: 30%;
-      max-width: 190px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
-     height: 32px;
-     cursor: pointer; 
+     /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
+     /*CONTENEDOR  REVISTA Y SOCIALES*/
+     #cabecera-categorias .suscribe{
+      width: 20%;
+      max-width: 110px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
+      display: inline-flex;
+      height: 32px;
+      }
+
+
+     .suscribe  a h4{
+      width: 100%;
+      max-width: 90px;
+      font-size: 1rem;
+      word-spacing: -3px;
+      letter-spacing: -0.7%;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 700;
+      color:#2d2d2d;
+      margin-top:  16px;
       }
   
-   
-      /*CONTENEDOR  REVISTA Y SOCIALES*/
-        .menu-btn  .boletin{
-        width:   100%;
-        max-width: 150px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
-        display: inline-flex;
-        height: 32px; 
-        }
-  
-        .boletin  a h4{
-        width: 100%;
-        max-width: 90px;
-       font-size: 0.9rem;
-       letter-spacing: 0.3px;
-       font-family: 'Times New Roman', Times, serif;
-       font-weight: 700;
-       color:#2d2d2d;
-       margin-top:  18px;
-        }
-    
-    
-  
-     /*LETRA INSCRIBETE*/
-     .boletin a h4:hover{
-      color: #7aac41;
-      text-decoration: none;
+
+   /*LETRA INSCRIBETE*/
+ n  .suscribe a h4:hover{
+    color: #7aac41;
+    text-decoration: none;
      }
-    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-  
-  
-  
-        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-    .menu-btn__burger {
-     display: block;
-     position: relative;
-     float: left;
-     margin: auto;
-     margin-top: 18px;
-      width: 5%;
-      max-width: 38px;
-      height: 4.2px;
-      background: #2d2d2d;
-      border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(255,101,47,.2);
-      transition: all .5s ease-in-out;
-      z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/   
-      }
-      /*HAMBURGUESA*/
 
-  .menu-btn__burger::before,
-  .menu-btn__burger::after {
+
+    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+    /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
+    #cabecera-categorias .menu-btn {
+    display: inline-flex;
+    width: 10%;
+    max-width: 39px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+    height: 32px;
+    cursor: pointer;
+     }
+
+
+       #cabecera-categorias .menu-btn  .hamburguesa{
+        width: 100%;
+        max-width: 39px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+        height: 32px;
+        display: block;
+        position: relative;
+        float: left;
+        margin: auto;
+       }
+
+
+      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+      .menu-btn .hamburguesa .menu-btn__burger {
+      display: block;
+      position: relative;
+      float: left;
+      margin: auto;
+      margin-top: 17px ;
+      width: 100%;
+      max-width: 38px;
+     height: 4.2px;
+     background: #2d2d2d;
+     border-radius: 2px;
+     box-shadow: 0 2px 5px rgba(255,101,47,.2);
+     transition: all .5s ease-in-out;
+     z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/   
+      }
+
+
+   /*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+ .menu-btn__burger::before,
+ .menu-btn__burger::after {
   content: '';
   position: absolute;
   width: 38px;
@@ -270,33 +285,53 @@
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
   transition: all .5s ease-in-out;
+ z-index: 800;
+  
+  
+ }
+ .menu-btn__burger::before {
+   transform: translateY(-10px);
+ }
+ .menu-btn__burger::after {
+   transform: translateY(10px);
+  
  }
 
 
-  .menu-btn__burger::before {
-  transform: translateY(-10px);
-  }
 
-  .menu-btn__burger::after {
-  transform: translateY(10px);
 
-   }
+  /* ANIMATION */
+  /* ANIMATION */
+  .hamburguesa.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    }
 
- /* ANIMATION */
- .menu-btn.open .menu-btn__burger {
-  transform: translateX(-50px);
-  background: transparent;
-  box-shadow: none;
-  }
 
-  .menu-btn.open .menu-btn__burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
-  background: #fff;
-  }
-  .menu-btn.open .menu-btn__burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
-  background: #fff;
-   }
+     /* background: #fff;  */
+    .hamburguesa.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+   
+    }
+
+
+    /* background: #fff;  */
+    .hamburguesa.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+
+    }
+
+    .menu-btn__burger:hover{
+      background-color: #639a3a;
+    }
+  
+     .menu-btn__burger:hover::before,
+     .menu-btn__burger:hover::after{
+      background-color: #639a3a;
+    }
+
+
 
 
 /* ESTE ES EL MENU NAV*/
@@ -1248,9 +1283,10 @@ nav{
   .icon-social ul li{
    margin-left: 5px;
    }
+   
    .icon-social ul li .fa-envelope{
     background-color: oldlace;
-    color: #639a3a;
+    color: #7aac41;
     width: 35px;
     height:   35px;
     padding: 5px 5px 5px 5px;
@@ -1260,7 +1296,7 @@ nav{
 
   .icon-social  ul li .fa-twitter{
     background-color: #fff;
-    color:    #639a3a;
+    color:    #7aac41;
     width:35px;
     height: 35px;
     padding: 5px 5px 5px 5px;
@@ -1282,66 +1318,69 @@ nav{
   
    /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............#f4f4f4................................. */
     #footer-categorias{
-    width: 100%;
-    height: 120px;
-     display: block;
-    margin: auto;
-    clear: both;
-     -webkit-box-shadow: 0px -3px 6px #DCDCDC;
-    -moz-box-shadow: 0px -3px 6px #DCDCDC;
-    box-shadow: 0px -3px 6px  #DCDCDC;
-    z-index: 10;
-    background-color: #f4f4f4;
+      width: 100%;
+      bottom: 0;  
+      left: 0;
+      right: 0;
+      top: 0; 
+      margin: auto;
+      clear: both;
+      display: flex;
+      flex-direction: column;
+       -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+      -moz-box-shadow: 0px -3px 6px #DCDCDC;
+      box-shadow: 0px -3px 6px  #DCDCDC;
+      z-index: 10;
+      background-color: #f4f4f4;
     }
   
   
     /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
     .footer-primero-categorias{
-      width: 100%;
-      max-width: 900px;
-      margin: auto;
-      height: 90px;
-      margin-bottom: 15px;
-      display: flex;
-      flex-direction: row;  
-      justify-content: space-between;
-    
+      width: 80%;
+  max-width: 900px;
+  height: 92px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+
     }
  
-    /*SUB-caja ICONOS SOCIALES*/
-    .icon-social1{
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 90px;
-    }
+     /*SUB-caja ICONOS SOCIALES*/
+     .icon-social1{
+      width: 49.5%;
+      max-width: 250px;
+      height: 90px;
+     }
 
       .icon-social1 p{
       font-size: 1.2rem;
       word-spacing: -3px;
-      letter-spacing: -2px;
+      letter-spacing: -1px;
       font-family: 'Archivo Black', sans-serif;
-      padding-bottom: 10px;
       color: #2d2d2d;
-      text-align: start;
       }
     
 
-   .icon-social1 li{
-   list-style: none;
-   display: inline-flex;
-   }
-
+ 
 
 
     /* UL*/
-   .social2{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
+    .icon-social1  .social2{
+    display: inline-flex;
+  list-style: none;
+  width: 80%;
+  display: block;
+  position: relative;
+   margin-top: 9px;
     }
-
+   
+    .social2 li{
+      list-style: none;
+      display: inline-flex;
+      }
+   
 
     .social2  li  .fa-envelope{
       background-color: oldlace;
@@ -1372,7 +1411,6 @@ nav{
       padding: 5px 5px 5px 5px;
       border-radius: 25px;
       border: solid #E9E9E9;
-      
       }
       
       
@@ -1390,63 +1428,64 @@ nav{
        /*SUB-caja contenedor de la caja correo*/
       
        /*SUBCONTENEDOR DONDE ESTA EL BOX*/
-       .box{
-        display: flex;
-        flex-direction: column;
-        justify-content:end;
-        width: 45%;
-        height: 90px;
-        }
-       /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
-       .box form{
-        display: flex;
-       flex-direction: row;
-       justify-content: flex-end;
-        width: 100%;
-        max-width: 300px;
-        }
-      
-      
-      /*LETRA DE LA CAJA DE SUSCRIBIR*/
-      .box h3{
-      letter-spacing: -0.1px;
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 1rem;
-      font-weight: 400;
-      margin-bottom: 6px;
-      color: #2d2d2d;
-      margin-left: 30px;
-      margin-top: 3px;
-      }
-      
-      
-      .box input[type="text"]
-      {
-      background-color: #fff;
-      display: flex;
-      width:60%;
-      height: 50px;
-      border: 1.5px solid 	#DCDCDC;
-      padding: 0 18px;
-      border-radius: 5px 0 0 5px;
-      font-size: 1rem;
-      font-family: 'Times New Roman', Times, serif;
-      }
-      
-      .box button[type="submit"]{
-      left: 10px;  /*EL TRUCO IMPORTANTE*/
-      border-radius: 0 5px 5px 0;
-      width: 30%;
-      height: 50px;
-      border: none ;
-      outline: none;
-      cursor: pointer;
-      background-color: #2d2d2d;
-      color: #fff;
-      font-size: 12px;
-      font-family: 'Archivo Black', sans-serif;
-      }
-      
+         /*SUB-caja contenedor de la caja correo*/
+   .box{
+    width: 45%;
+    margin-left: 5% ;
+    margin-top: 8px; /*SUBE CAJA A MENOS TOP*/
+    transform: translate(-5%, -5%);
+    height: 90px;
+     }
+  
+  .box h3{
+  letter-spacing: -0.1px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: .8rem;
+  font-weight: 400;
+  line-height: -0.4px;
+  margin-left: 16%;
+  color: #2d2d2d;
+  }
+
+
+   /*cajita del correo */
+  .box form{
+    display: flex;
+    margin-left: 4%;
+    margin-top: 9px;
+  }
+  
+  .box input[type="text"]
+  {
+  background-color: #fff;
+  display: flex;
+  width:60%;
+  height: 50px;
+  border: 1.5px solid 	#DCDCDC;
+  padding: 0 18px;
+  border-radius: 5px 0 0 5px;
+  
+  }
+  
+  .box button[type="submit"]{
+  left: 10px;  /*EL TRUCO IMPORTANTE*/
+  border-radius: 0 5px 5px 0;
+  width: 30%;
+  height: 50px;
+  border: none ;
+  outline: none;
+  cursor: pointer;
+  background-color: #2d2d2d;
+  color: #fff;
+  font-size: 12px;
+  font-family: 'Archivo Black', sans-serif;
+  }
+  
+
+  /*FIN de la cajita del correo */
+  
+  
+  
   
       /*FIN de la cajita del correo */
       
@@ -1460,20 +1499,21 @@ nav{
 
    #footer-second-categorias{
     width: 100%;
-   height: 20px;  /*IMPORTANTE*/
-
-  }
+    display: block;
+    height: 20px;  
+    }
 
   .final-food-categorias{
+    height: 15px;
+    display: block;
     width: 100%;
-     height: 20px;
   }
     /*..SUBCAJA DE DIV FOOTERSENIDN...*/
   .final-food-categorias p{
-  text-align: center;
-  color: #2d2d2d;
-  font-size: 0.8rem;
-  font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #2d2d2d;
+    font-size: 0.78rem;
   }
 
 

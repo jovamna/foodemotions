@@ -209,17 +209,22 @@
 
                              
                 <!-- BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
-                <div class="menu-btn">
-                <!------  caja boletin--------------------------->
-                    <div class="boletin">
+                         <!------  caja boletin--------------------------->
+                     <div class="suscribe">
                     <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
                     <h4>SUSCRIBETE</h4>  
                     </a>
                     </div>
                 <!---------- final caja boletin------------------->
 
-                    <div class="menu-btn__burger"></div>
-                    </div>
+                 <div class="menu-btn"> 
+                   
+                     <!---------------MENU RESPONSIVE -------------->
+                     <div class="hamburguesa">
+                     <div class="menu-btn__burger">  </div>
+                     </div>
+                        <!----FIN  MENU RESPONSIVE ------->        
+                   </div>
                 <!-- final BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
                 <!-- final caja MENU ASPA--------------------------------------------------------->
  
@@ -667,8 +672,8 @@
                var imagenes = new Array();
 
             $(document).ready(function () {
-            var numImages = 7;
-            if (numImages <= 3) {
+            var numImages = 8;
+            if (numImages <= 4) {
            $('.right-arrow').css('display', 'none');
            $('.left-arrow').css('display', 'none');
            }
@@ -677,7 +682,7 @@
             if (current > 0) {
             current = current - 1;
             } else {
-            current = numImages - 3;
+            current = numImages - 4;
             }
 
         $(".carrusel").animate({ "left": -($('#product_' + current).position().left) }, 600);
@@ -698,7 +703,7 @@
     });
 
     $('.right-arrow').on('click', function () {
-        if (numImages > current + 3) {
+        if (numImages > current + 4) {
             current = current + 1;
         } else {
             current = 0;

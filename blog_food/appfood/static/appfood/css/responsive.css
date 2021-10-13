@@ -1622,12 +1622,11 @@
   border: 0;
    }
 
-    
-  #wrapper > * {
-  padding: 14px;
-  }  
-   
-
+   #wrapper > * {
+    padding: 15px;
+    }  
+  
+  
     #container{
     display: flex;
     flex-direction: column;
@@ -1671,7 +1670,7 @@
       .cabecera .logo{
         display: block;
         width: 20%;
-        max-width: 190px;
+        max-width: 180px;
         height: 38px;
       }
                 
@@ -1684,35 +1683,23 @@
            
       /*CONTENEDOR  REVISTA Y SOCIALES*/
      
-      /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-      .cabecera .menu-btn {
-        display: block;
-        position: relative;
-        float: right;
-        width: 40%;
-        max-width: 210px;
-        height: 38px;
-        margin: auto;
-  
-      }
+     
   
       .suscribe{
-        display: block;
+      display: block;
       position: relative;
       float: left;
-      width: 100%;
-      max-width: 100px;
+      width: 20%;
+      max-width: 95px;
       height: 38px;
-  
       }
     
-      .menu-btn  .suscribe  h4{
-        font-size: 0.8rem;
+     .suscribe  h4{
+      font-size: 0.8rem;
       margin-top: 14px;
-        margin-left: 2px;
-        font-weight: 700;
-        letter-spacing: 0.9px;
-        font-family: 'Times New Roman', Times, serif;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      font-family: 'Times New Roman', Times, serif;
       }
      
       .cabecera .buscador{
@@ -1720,18 +1707,28 @@
       visibility: hidden;
       }
   
-   
+    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+     .cabecera .menu-btn {
+      display: block;
+      position: relative;
+      float: right;
+      width: 8%;
+      max-width: 40px;
+      height: 38px;
+      }
+
+    
     .menu-btn .hamburguesa{
     display: block;
     position: relative;
     float: right;
-    width: 30%;
+    width: 100%;
     height: 30px;
-    max-width: 40px;
+    max-width: 80px;
      }
 
        /*---------------------------------------------------------------------*/
-       .cabecera .menu-btn .hamburguesa .menu-btn__burger {
+     .menu-btn .hamburguesa .menu-btn__burger {
         display: block;
         position: relative;
         float: right;
@@ -1774,35 +1771,37 @@
 
 
     /* ANIMATION */
-    .menu-btn.open .menu-btn__burger {
+    .hamburguesa.open .menu-btn__burger {
     transform: translateX(-50px);
     background: transparent;
     box-shadow: none;
     }
 
 
-
-    .menu-btn.open .menu-btn__burger::before {
+     /* background: #fff;  */
+    .hamburguesa.open .menu-btn__burger::before {
     transform: rotate(45deg) translate(35px, -35px);
-    background: #fff;
+   
     }
 
-    .menu-btn.open .menu-btn__burger::after {
+
+    /* background: #fff;  */
+    .hamburguesa.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
-    background: #fff;
+
     }
 
 
 
 
     .menu-btn__burger:hover{
-    background-color: #639a3a;
+    background-color: #7aac41;
     }
     
 
     .menu-btn__burger:hover::before,
     .menu-btn__burger:hover::after{
-    background-color: #639a3a;
+    background-color: #7aac41;
     }
 
 
@@ -2580,27 +2579,34 @@ width: 100%;
    /*..NOTICIAS Y TURISMO  SEGEMTNO TURISMO PRIMERO NOTICIAS*/
    /* PRIMER-SEGMENTO */
    .primer-segmento{
-   width: 92%;
+   width: 93%;
    display: flex;
    flex-direction: column;
    margin: auto;
+   padding-right: 0;
+   padding-left: 0;
    }
  
    .primer-segmento .tres{
     width: 100%;
-     display: flex;
-     flex-direction: column;
-     margin: auto;
+   display: flex;
+   flex-direction: column;
+   max-width: 640px;
+   padding-left: 0;
+   padding-right: 0;
    }
  
-    .primer-segmento .tres img{
+   .primer-segmento  .tres img{
+      display: block;
       width: 100%;
       max-width: 640px;
-      margin: auto;
+     padding-left: 0;
+     padding-right: 0;
+  
      }
  
-   /*TITUO Y DESCRIPCION*/
-  
+
+   
  
     /*TITULO NOTICIA TURISMO*/
     .primer-segmento .tres a h1{
@@ -3150,6 +3156,7 @@ width: 100%;
     word-spacing: -3px;
     letter-spacing: -1.5px;
     font-family: 'Archivo Black', sans-serif;
+   
     }
   
   .details p{
@@ -3157,8 +3164,23 @@ width: 100%;
     font-size: 1.2rem;
     font-weight: 100;
     margin-left: 10px;
+    font-family: 'Archivo Black', sans-serif;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1.2px #7aac41;
   }
 
+    .details button{
+    width: 50%;
+    padding: 5px 10px;
+    }
+
+
+   .details button a{
+   font-size: 1.1rem;
+   font-weight: 900;
+   -webkit-text-fill-color: #fff;
+   -webkit-text-stroke: 1.5px #7aac41;
+   }
 
    /*FIN PORTADA GRADIENTE*/
    .texto-animado{
@@ -4811,7 +4833,7 @@ hr {
      flex-direction: column;
      width: 100%;
      margin-top:   57px;
-     margin-bottom: 180px;
+    
      padding-left: 0;
      padding-right: 0;
      }
@@ -4829,8 +4851,8 @@ hr {
 
        /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
     .cabecera .logo{
-      width: 25%;
-      max-width: 220px;
+      width: 30%;
+      max-width: 300px;
       height: 50px;
        }
         
@@ -4841,70 +4863,74 @@ hr {
         height: 50px;
     
         }
+
+
+      #container   #controls-responsive{
+          display: block;
+          width: 94%;
+          height: 52px;
+          border-radius: 8px;
+          margin: auto;
+          margin-top: 8px;
+          margin-bottom: 8px;
+        
+          }
       
+          #controls-responsive form{
+            display: block;
+            width: 100%;
+            height: 50px;
+         
+          }
+      
+          #controls-responsive   #custom-search-input-responsive{
+           width: 100%;
+           height: 50px;
+           border: 1px solid #c9c9c9;
+           border-radius: 8px;
+           display: flex;
+           flex-direction: row;
+           margin-top: 1.5px;
+          }
+      
+      
+          #controls-responsive #custom-search-input-responsive .sin-borde{
+           width: 85%;
+           height: 40px;
+           border-radius: 4px;
+           display: inline-flex;
+           margin-top: 2px;
+           }
+      
+      
+           #controls-responsive .boton{
+           width: 15%;
+           height: 40px;
+           margin-top: 2px;
+           }
+      
+                
     
         /*PARA QUE EL BOTON ENTRE EN EL CAJON DE SEARCH
    /*BUSCADOR  VA EN LA CABECERA DEL IPAD */
    .cabecera .buscador{
-   display: inline-flex;
-   width: 25%;
-   max-width: 320px;
-   height: 50px;
-   padding-top: 0;
+  display: none;
    }
 
-   .buscador #controls{
-    display: block;
-    height: 36px;
-    margin-top: 0.5px;
-    }
-
-    #custom-search-input-header {
-      width: 100%;
-      max-width: 300px;
-    }
-
-      .buscador #controls   #custom-search-input-header .sin-borde{
-      width: 85%;
-      height: 28px;
-      font-size: 1em;
-      padding: 4px;
-      padding-left: 12px; /*MUEVE LA LETRA*/
-      }
-
-      .buscador #controls   #custom-search-input-header .boton{
-        width: 12%;
-        height: 28px;
-      }
-    
-
-
-
-              /*caja hay 2. A */
-    .cabecera .menu-btn {
-    display: block;
-    position: relative;
-    float: right;
-    width: 38%;
-    max-width: 170px;
-    height: 50px;
-    margin: auto;
-    }
-    
-
+   
 
     .cabecera .suscribe {
     display: block;
     position: relative;
     float: left;
-    width: 100%;
-    max-width: 130px;
+    width: 30%;
+    max-width: 260px;
     height: 50px;
     }
     
       
       .cabecera   .suscribe a h4{
-         font-size: 0.9rem;
+         font-size: 1rem;
          margin-top: 18px;
          margin-left: 19px;
          font-weight: 700;
@@ -4912,7 +4938,19 @@ hr {
          font-family: 'Times New Roman', Times, serif;
         }
      
-    
+        .cabecera .menu-btn {
+          display: block;
+          position: relative;
+          float: right;
+          width: 10%;
+          max-width: 40px;
+          height: 50px;
+      
+          }
+          
+      .hamburguesa{
+        width: 100%;
+      }
 
   /*--MUEVE EL MENU............ESTE ES EL BURGER*/
   .menu-btn .menu-btn__burger {
@@ -4966,18 +5004,18 @@ hr {
    }
 
     /* ANIMATION */
-   .menu-btn.open .menu-btn__burger {
+   .hamburguesa.open .menu-btn__burger {
     transform: translateX(-50px);
     background: transparent;
     box-shadow: none;
     }
 
-    .menu-btn.open .menu-btn__burger::before {
+    .hamburguesa.open .menu-btn__burger::before {
     transform: rotate(45deg) translate(35px, -35px);
     background: #fff;
    }
 
-    .menu-btn.open .menu-btn__burger::after {
+    .hamburguesa.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
     background: #fff;
      }
@@ -5651,11 +5689,11 @@ width: 100%;
    }
 
 
-    /*.................*/
-   /*CAJA DE LA IMAGEN*/
-   .plan-post-alimentacion .plan-post-imagen{
-      width: 100%;
-      height: 190px;
+     /*.................*/
+    /*CAJA DE LA IMAGEN*/
+    .plan-post-alimentacion .plan-post-imagen{
+    width: 100%;
+    height: 190px;
      display: block;
      position: relative;
      float: left;
@@ -5663,23 +5701,22 @@ width: 100%;
 
      .plan-post-alimentacion  .plan-post-imagen img{
       width: 100%;
-  
       }
 
 
    /*CAJA PARA EL TITULO Y DESCRIPCION*/
    .plan-post-letra{
     width: 45%;
-    
     display: block;
     position: relative;
     float: right;
     margin-right: 20px;
-   }
+    }
 
    .plan-post-letra h1{
      font-size: 1.1rem;
     }
+
    /*.................*/
    /*..HASTA AQUI EL INDE CON FOTO GRANDE Y 4 PEQUEÑAS................................*/
 
@@ -5709,7 +5746,9 @@ width: 100%;
      margin-right: 18px ;
       }
    
-      .categorias-subcategorias .scrollmenu img{
+
+      
+    .categorias-subcategorias .scrollmenu img{
      width: 100%;
      max-width: 70px;
      height: 100%;
@@ -5726,6 +5765,7 @@ width: 100%;
       font-size: 0.9rem;
       }
 
+
     /*CAJA DE LA FLECHA..*/
     .categorias-subcategorias .leftNav {
     display: inline-block;
@@ -5737,6 +5777,7 @@ width: 100%;
     left: 0em;
     background-color: #7aac41;
     }
+
 
    /*--FLECHAS  "Arial Black";----*/
    .categorias-subcategorias  .leftNav .arrow-left{
@@ -5880,50 +5921,63 @@ width: 100%;
 
     /*FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN......................*/
     #footer{
-    width: 100%;
-    clear: both;
-    position: relative;
-    height: 180px;
-    margin-top: -180px;
-   -webkit-box-shadow: 0px -3px 6px #DCDCDC;
-   -moz-box-shadow: 0px -3px 6px #DCDCDC;
-   box-shadow: 0px -3px 6px  #DCDCDC;
-    background-color: #f4f4f4;
-    z-index: 1000;
-    bottom: 0;  
+      width: 100%;
+      bottom: 0;  
+      left: 0;
+      right: 0;
+      top: 0; 
+      margin: auto;
+      clear: both;
+      display: flex;
+      flex-direction: column;
+    
+       -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+      -moz-box-shadow: 0px -3px 6px #DCDCDC;
+      box-shadow: 0px -3px 6px  #DCDCDC;
+      z-index: 10;
+      background-color: #f4f4f4;
+     
     }
   
+     /*background-color: #f4f4f4; */
     .footer-primero{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
     width: 100%;
-    height: 180px;
-    margin: auto;
-    background-color: #f4f4f4
+   height: 220px;
+    padding-top: 0;
     }
       
        /*CAJA DE FOOD EMOTIONS E ICONOS SOCALES Y BOX */
     .icon-email{
+      display: flex;
+      flex-direction: column;
     width: 42%;
-    height: 150px;
+    height: 180px;
     margin: auto;
-    margin-top: 0.5%;
-    margin-bottom: 1%;
     }
 
      /*CAJA DE FOOD Y REDES*/
     .icon-email .icon-social1{
     width: 100%;
     height: 40px;
-    margin-bottom: 1%;;
     flex-direction: column;
-    margin-left: 1px;
+
     }
-    
+    .social2{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 40%;
+    }
+
+
   /*LETRA FOOD EMOTIONS*/
     .icon-email .icon-social1 p{
     font-size: 1rem;
     word-spacing: -1px;
-    letter-spacing: -1px;
-    padding-bottom: 0px;
+    letter-spacing: -1px
     }
   
     .icon-email  ul li .fa-envelope{
@@ -5971,40 +6025,40 @@ width: 100%;
         
    /*SUBCAJA BOC */
   .box{
+    display: block;
+    position: relative;
   width: 100%;
   height: 80px;
-  margin-top: 7%;
+
    }
 
   
  .box form{
+   width: 90%;
   display: flex;
   flex-direction: row;
   }
 
     .box h3{
-      padding-top: 2px;
-      padding-bottom: 2px;
       font-size: 0.6rem;
-      letter-spacing: -1px;
+      letter-spacing: -0.5px;
       word-spacing: -1px;
       font-family: 'Fira Sans', sans-serif;
      }
    
      /*CAJA ENVIO BLANCO DONDE SE ESCROBE*/
       .box input[type="text"]{
-      width: 60%;
-     
-      height: 45px;
+      width: 75%;
+      height: 50px;
       font-size: 0.5rem;
       border-radius: 3px 0 0 3px;
       padding: 0 25px;
-      border: 2px solid 	#DCDCDC;
+      border:  1.5px solid	#DCDCDC;
      }
     /*CAJA OSUCRA DONDE SE ENVIA*/
     .box input[type="submit"]{
-      width: 40%;
-      height: 45px;
+      width: 25%;
+      height: 50px;
       border-radius: 3px 6 6 3px;
       font-size: 0.6rem;
       left: -1px;
@@ -6017,8 +6071,8 @@ width: 100%;
        /*caja */
    .menu-footer{
     width: 27%;
-    height: 150px;
-    margin-top: 0.5%;
+    height: 170px;
+    margin-top: 0.2px;
     }
 
 
@@ -6054,27 +6108,38 @@ width: 100%;
        /*caja */
     .espacio{
     width: 2%;
-    height: 80%;
+    height: 170px;
     margin-top: 0.5%;
-    margin-bottom: 1%;
     }
   
   /*CAJA PRINCIPAL DEL SEGUNDO FOOTER */
-   #footer-second{
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
-    height: 10px;
-    margin-top: 1%;
-   }
-  
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+
+ #footer #footer-second{
+  height: 25px;  /*IMPORTANTE*/
+  display: block;
+  position: relative;
+  float: left;
+    margin-top: 10px;
+  }
+
+
+  /*..SUBCAJA DE DIV FOOTERSENIDN...*/
   .final-food{
-    height: 10px;
-   margin-top: -10px;
-  }
-  .footer-second p{
-    font-size: 0.6rem;
-  }
+  display: block;
+  position: relative;
+  float: left;   
+  width:100%;
+  height: 25px;
+ margin: auto;
+}
+
+.final-food p{
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 0.7rem;
+}
+
 
  }
 

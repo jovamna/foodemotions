@@ -114,14 +114,13 @@ flex: 1;
  }
 
 
- /*CONTAINER DE TODO EL BODY.......margin-top 152px.....................  */
+ /*CONTAINER DE TODO EL BODY.......margin-top 152px....  height: 520px;.................  */
   #container{
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 1250px;
   margin: auto;
-  height: 520px;
   bottom:  25px;
   padding: 0 0 0 0 ;   /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
   height: auto;
@@ -270,16 +269,20 @@ margin-top: -3px;
  
   /*caja */
   .menu-btn{
-    width: 15%;
+    display: none;
+ 
+    }
+     /*...BURGER ESCONDIDO........BURGER ESCONDIDO....................*/
+   .menu-btn .menu-btn__burger{
+    display: none;
+    }
+  
+  
+    .suscribe{
+      width: 15%;
     max-width: 98px;
     display: inline-flex;
     height: 43px; 
-    }
-  
-    .suscribe{
-    width: 100%;
-    height: 43px; 
-    display: inline-flex;
     }
   
    .suscribe h4 {
@@ -295,11 +298,7 @@ margin-top: -3px;
     }
   
   
-    /*...BURGER ESCONDIDO........BURGER ESCONDIDO....................*/
-   .menu-btn .menu-btn__burger{
-    display: none;
-    }
-  
+   
   
   
   
@@ -1903,18 +1902,23 @@ margin-top: -3px;
 
   .details h1{
   font-size: 2.4rem;
-  font-weight: lighter;
+  font-weight:600;
   margin-left: 10px;
   word-spacing: -3px;
   letter-spacing: -1.5px;
   font-family: 'Archivo Black', sans-serif;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke: 1.5px #7aac41;
   }
 
 .details p{
   margin-top: 10px;
-  font-size: 1.6rem;
-  font-weight: 100;
+  font-size: 1.4rem;
+  font-weight: 800;
   margin-left: 10px;
+  font-family: 'Archivo Black', sans-serif;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke: 1.6px #7aac41;
 }
 
 .details button{
@@ -1929,28 +1933,27 @@ margin-top: -3px;
   margin-left: 10px;
 }
 
-.details button a{
+  .details button a{
   color:  #7aac41;
   font-size: 1.2rem;
+  font-family: 'Archivo Black', sans-serif;
   font-weight: 900;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke: 1.6px #7aac41;
+   }
 
-}
 
+   .details button:hover{
+    z-index: 10;
+   }
 
-.details button:hover{
-
-  z-index: 10;
-}
-
-.details button a:hover{
+  .details button a:hover{
   color: black;
   z-index: 30;
-}
+   }
 
 
-/*TUTORIAL..............o*/
-
-
+   /*.................o*/
 .texto-animado{
  display: block;
  position: relative;

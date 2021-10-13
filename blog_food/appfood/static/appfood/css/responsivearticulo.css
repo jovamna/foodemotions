@@ -125,7 +125,7 @@
 
         
      /*CONTENEDOR  REVISTA Y SOCIALES*/
-    .boletin{
+    .suscribe{
     width: 100%;
     max-width: 65px;
     display: block;
@@ -140,7 +140,7 @@
         
         
         /*LETRA INSCRIBETE*/
-           .boletin a h4{
+           .suscribe a h4{
           font-size: 0.8rem;
           word-spacing: -3px;
           letter-spacing: -1px;
@@ -150,8 +150,8 @@
           margin: auto;
           }
         
-     .boletin a h4:hover{
-            color: #639a3a;
+     .suscribe a h4:hover{
+            color: #7aac41;
             text-decoration: none;
            }
           
@@ -197,25 +197,25 @@
 
 
        .menu-btn__burger:hover{
-          background-color: #639a3a;
+          background-color: #7aac41;
         }
         
        .menu-btn__burger:hover::before,
        .menu-btn__burger:hover::after{
-          background-color: #639a3a;
+          background-color: #7aac41;
         }
 
            /* ANIMATION */
-    .menu-btn.open .menu-btn__burger {
+    .hamburguesa.open .menu-btn__burger {
     transform: translateX(-50px);
     background: transparent;
     box-shadow: none;
     }
-           .menu-btn.open .menu-btn__burger::before {
+           .hamburguesa.open .menu-btn__burger::before {
             transform: rotate(45deg) translate(35px, -35px);
             background: #fff;
           }
-          .menu-btn.open .menu-btn__burger::after {
+          .hamburguesa.open .menu-btn__burger::after {
             transform: rotate(-45deg) translate(35px, 35px);
             background: #fff;
           }
@@ -237,7 +237,7 @@
    nav li a p{
    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
    display: block;
-   border-radius: 8px solid #639a3a;
+   border-radius: 8px solid #7aac41;
    margin-top:8px;
    position: absolute;
    padding: 1px 1px ;
@@ -938,11 +938,14 @@ border-radius:6px;
   
   
       #wrapper-articulo {
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-      border-spacing: 0;
-      border-collapse: collapse;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        border-spacing: 0;
+        border-collapse: collapse;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
      }
   
     
@@ -972,20 +975,21 @@ border-radius:6px;
 
       /*border-bottom: 2px solid #DDD;*/
       header{
-      display: block;
-      width:100%;
-      height: 58px;
-      top:0;
-      position: fixed;
-      z-index: 2000;   /*IMPORTANTE  */
-      margin: auto;
-      box-shadow: 0 8px 6px -6px #DCDCDC; 
-      background-color: #fff;
+        display: block;
+        width:100%;
+        height: 59px;
+        top:0;
+        left: 0;
+        position: fixed;
+        z-index: 2000;   /*IMPORTANTE  */
+        margin: auto;
+        background-color: #fff;
+        box-shadow: 0 8px 6px -6px #c6c6c6;
      }
   
      header.black{
      background-color:#fff ;
-     height:  58px;
+     height:  59px;
      }
     
     #menu-simple{
@@ -1001,6 +1005,40 @@ border-radius:6px;
 
 
 
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+     #controls-responsive{
+      display: block;
+      visibility: visible;
+      width: 92%;
+      height: 35px;
+      margin-top: 58px;  
+      margin: auto;
+       }
+  
+       #custom-search-input-responsive{
+       width:  100%;
+       height: 35px;
+       border: 1px solid #c9c9c9;
+       border-radius: 4px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin: auto;
+       }
+  
+  
+       #controls-responsive .sin-borde-responsive{
+       width: 80%;
+       height: 32px;
+       display: inline-flex;
+      }
+  
+  
+       #controls-responsive .boton-responsive{
+       width: 20%;
+       height: 32px;
+       background-color: #ffffff;
+        }
      
           /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA...............FIN BUSCADOR RESPONSIVE*/
 
@@ -1012,100 +1050,70 @@ border-radius:6px;
       flex-direction: row;
       justify-content: space-between;
       height: 38px;
-  
-    }
+      margin: auto;
+      }
          
     /*caja */
     .logo{
-      display: inline-flex;
-      width: 20%;
-      max-width: 190px;
-      height: 38px;
+    display: inline-flex;
+    width: 23%;
+    max-width: 180px;
+    height: 38px;
     }
               
        .logo img {
       display: block;
       width: 100%;
-      max-width: 140px;
-  
+      max-width: 142px;
      }
          
     /*CONTENEDOR  REVISTA Y SOCIALES*/
-   
-    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-       .menu-btn {
-      display: block;
-      position: relative;
-      float: right;
-      width: 40%;
-      max-width: 210px;
-      height: 38px;
-      margin: auto;
-    }
-
-    .boletin{
+    .cabecera .suscribe{
       display: block;
     position: relative;
     float: left;
-    width: 100%;
-    max-width: 100px;
+    width: 20%;
+    max-width: 95px;
     height: 38px;
     }
   
-    .menu-btn  .boletin  h4{
+    .cabecera .suscribe a h4{
       font-size: 0.8rem;
       margin-top: 10px;
-        margin-left: 2px;
-        font-weight: 700;
-        letter-spacing: 0.9px;
-        font-family: 'Times New Roman', Times, serif;
-    }
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      font-family: 'Times New Roman', Times, serif;
+       }
    
-    .controls{
+     .controls{
       display: none;
       }
         
 
 
-     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-    #controls-responsive{
-    display: block;
-    visibility: visible;
-    width: 92%;
-    height: 35px;
-    margin-top: 58px;  
-    margin: auto;
-     }
-
-     #custom-search-input-responsive{
-     width:  100%;
-     height: 35px;
-     border: 1px solid #c9c9c9;
-     border-radius: 4px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     margin: auto;
-     }
-
-
-     #controls-responsive .sin-borde-responsive{
-     width: 80%;
-     height: 32px;
-     display: inline-flex;
-    }
-
-
-     #controls-responsive .boton-responsive{
-     width: 20%;
-     height: 32px;
-     background-color: #ffffff;
+      .menu-btn {
+      display: block;
+      position: relative;
+      float: right;
+      width: 20%;
+      max-width: 40px;
+      height: 38px;
       }
 
-       /*..............................*/
 
-        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-    .menu-btn  .menu-btn__burger {
+       /*..............................*/
+       .menu-btn .hamburguesa{
+        display: block;
+      position: relative;
+      float: right;
+      width: 20%;
+      max-width: 40px;
+      height: 38px;
+         }
+
+
+    /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+    .menu-btn .hamburguesa  .menu-btn__burger {
     display: block;
     position: relative;
     float: right;
@@ -1134,12 +1142,12 @@ border-radius:6px;
 
 
     .menu-btn__burger::before {
-    transform: translateY(-8px);
+    transform: translateY(-7px);
     z-index:3000;
     }
 
     .menu-btn__burger::after {
-    transform: translateY(8px);
+    transform: translateY(7px);
     z-index:3000;
     }
 
@@ -1155,18 +1163,18 @@ border-radius:6px;
     }
 
      /* ANIMATION */
-   .menu-btn.open .menu-btn__burger {
+   .hamburguesa.open .menu-btn__burger {
     transform: translateX(-50px);
     background: transparent;
     box-shadow: none;
      }
           
-    .menu-btn.open .menu-btn__burger::before {
+    .hamburguesa.open .menu-btn__burger::before {
     transform: rotate(45deg) translate(35px, -35px);
     background: #fff;
     }
 
-    .menu-btn.open .menu-btn__burger::after {
+    .hamburguesa.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
     background: #fff;
     }
@@ -1176,7 +1184,7 @@ border-radius:6px;
 
         nav  ul li a.active{
           text-decoration:line-through;
-          color: #568632;
+          color: #7aac41;
           }
 
     nav{
@@ -1356,31 +1364,31 @@ border-radius:6px;
   color: #2D2D2D;
   }
 
-  /*PRIMER ARTICULO TITULO*/
-  .primer-articulo h1{
-   font-size: 1.9rem;
-  color:#000000;
-  font-weight: 800;
-  font-family: 'Times New Roman', Times, serif;
-  letter-spacing: -0.3px;
-  word-spacing: -0.1px;
-  }
- 
 
+   /*PRIMER ARTICULO TITULO*/
+   .primer-articulo h1{
+   font-size: 1.9rem;
+   color:#000000;
+   font-weight: 800;
+   font-family: 'Times New Roman', Times, serif;
+   letter-spacing: -0.3px;
+   word-spacing: -0.1px;
+   }
+ 
 
     .primer-articulo p {
       font-size: 1.4rem;    
     }
      
-  /*FECHA*/
-  .fecha{
+   /*FECHA*/
+   .fecha{
     width: 92%;
     margin-left: 15px;
-  }
+    }
 
-  .fecha p{
+    .fecha p{
     font-size: 1rem;
-  }
+    }
 
      
   .imagen-central{
@@ -1397,12 +1405,12 @@ border-radius:6px;
     width: 100%;
     height: 100%;
     }
+
     .imagen-principal img{
       width: 100%;
     }
    
-   
-
+  
     .redes{
     display: flex;
     flex-direction: row;
@@ -1754,7 +1762,7 @@ border-radius:6px;
       display: block;
       position: relative;
       width: 100%;
-      height: 300px;
+      height: 400px;
     }
 
        /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
@@ -1775,40 +1783,60 @@ border-radius:6px;
     float:left;
     width: 100%;
     overflow:hidden;
-    height: 280px;
+    height: 380px;
     position:relative;
     margin: auto;
     margin-bottom: 10px;
     }
     
     
-    
-
-    .product {
-     
-      box-shadow: #f3f3f3 0px 13px 27px -5px, #f3f3f3 0px 8px 16px -8px;
-    }
- 
-    
     /*ESCONDE IMAGGENES*/
     /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
      .carrusel{
-     width:4000px;
-     height: 210px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+     width: 5000px;
+     height: 380px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
      left: 0px;
      position:absolute;
      z-index:0;
     }
 
+    .carrusel .product {
+      width: 100%;
+      max-width: 400px;
+      height: 380px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+      margin: auto;
+       box-shadow: #f3f3f3 0px 13px 27px -5px, #f3f3f3 0px 8px 16px -8px;
+     }
+
+       /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+ .carrusel  .product img {
+  cursor:pointer;
+  width: 100%;
+  height: 180px;
+  border: 2px solid #DDD ;
+  padding: 3px ;
+  border-radius:6px;
+  width: 100%;
+       max-width: 360px;
+     margin-left: -15px;
+  }
+ 
+  .carrusel p{
+    font-size: 1rem;
+  }
+  
+    /*..CAJA DNDE ESTA LA IMAGEN..*/ 
  
    /*CIRCULO   IZQUIERDO*/
     #carrusel li.left-arrow{
     margin-right: 3.8%;
+   
     }
 
      /*CIRCULO  DERECHO NO PONERLO TAN ANCHO PORQUE PIERDE LA FORMA EL CIRCULO PONERLO DEBAJO DE 90*/
     #carrusel li.right-arrow{
     margin-left:75%;
+    background-color: #7aac41;
     }
 
     /**MUY IMPORTANTE..*/
@@ -1817,7 +1845,7 @@ border-radius:6px;
     width: 100%;
     display: flex;
     position: absolute;
-    margin-top: 30%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+    margin-top: 40%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
     margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
     }
 
@@ -1832,6 +1860,9 @@ border-radius:6px;
     border-bottom: none;
     }
 
+    .container-total-carrusell .carusel ul li:hover{
+      background-color: #7aac41;
+      }
     
    /*MUY IMPORTNATE*/  
    /* ARROW RIGHT.....ARROW RIGHT SIN PALO......... */
@@ -1845,7 +1876,7 @@ border-radius:6px;
  
     /*PARA QUE LAS FLECHAS DESPAREZCAN */
    #carrusel:hover  li.left-arrow{
-   background-color: #fff;
+    background-color: #7aac41;
    opacity: .4;
    top: 54px;
    transition:all .5s ease-in-out;
@@ -1866,89 +1897,86 @@ border-radius:6px;
   text-align:center;
   }
 
-  /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
- .carrusel img {
-  cursor:pointer;
-  width: 100%;
-  height: 180px;
-  border: 2px solid #DDD ;
-  padding: 3px ;
-  border-radius:6px;
-  }
- 
+
      /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
 
     #footer-articulo{
-    clear: both;
-    position: relative;
-    display: block;
-    height: 230px;
-    border-top: solid 1.5px #DCDCDC;
-    width: 100%;
-    z-index: 10;
-    padding-top: 0;
+      width: 100%;
+  bottom: 0;  
+  left: 0;
+  right: 0;
+  top: 0; 
+  margin: auto;
+  clear: both;
+   height: 270px;
+  -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+  -moz-box-shadow: 0px -3px 6px #DCDCDC;
+  box-shadow: 0px -3px 6px  #DCDCDC;
+  z-index: 10;
+  background-color: #f4f4f4;
     }
     
     
       /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
       #footer-articulo .footer-primero-articulo{
-      width: 100%;
-      height: 200px;
-     display: flex;
-     flex-direction: column;
-    padding-top: 0;
-    margin-bottom: 10px;
-    z-index: 10;
+        width: 100%;
+        height: 195px;
+       display: flex;
+       flex-direction: column;
+       margin-top: -4px;
+      padding-top: 0;
+      z-index: 10;
     }
 
 
      /*CAJA DE SOCIALES Y LETRA*/
      #footer-articulo .icon-social1{
-      width: 90%;
-      height: 40px;
-      display: flex;
-      flex-direction: column;
-     margin: auto;
-     padding-top: 0;
+      width: 100%;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+       margin-bottom: 3px;
       }
 
 
       #footer-articulo .footer-primero-articulo .icon-social1 p{
-        margin: auto;
-      font-size: 1.2rem;
-      letter-spacing: 0.1px;
+        font-size: 1.2rem;
+        text-align: center;
+        letter-spacing: 0.1px;
         word-spacing: 0.2px;
+        margin-bottom: 3px;
       }
 
        /* UL */
-      #footer-articulo .social2{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 60%;
-      height: 40px;
-      padding-top: 0;
-      margin: auto;
+       .footer-primero-articulo .social2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        height: 60px;
+        margin: auto;
      }
 
 
      #footer-articulo .social2  ul li .fa-envelope{
   background-color: oldlace;
   color: #2d2d2d;
-  width: 8px;
-  height: 8px;
-  padding: 0.5px 0.5px 0.5px 0.5px;
-  border-radius: 2px;
+  width: 7px;
+  height: 7px;
+  padding: 0.3px 0.3px 0.3px 0.3px;
+  border-radius: 1px;
   border: solid #E9E9E9;
   }
   
     #footer-articulo .social2  ul li .fa-facebook-f{
   background-color: oldlace;
   color:  #2d2d2d;
-  width: 8px;
-  height: 8px;
-  padding: 0.5px 0.5px 0.5px 0.5px;
-  border-radius: 2px;
+  width: 7px;
+  height: 7px;
+  padding: 0.3px 0.3px 0.3px 0.3px;
+  border-radius: 1px;
   border: solid #E9E9E9;
   }
   
@@ -1956,10 +1984,11 @@ border-radius:6px;
     #footer-articulo .social2  ul li .fa-twitter{
     background-color: oldlace;
     color:   #2d2d2d;
-    width: 8px;
+    width: 7px;
+    height: 7px;
     height: 8px;
-    padding: 0.5px 0.5px 0.5px 0.5px;
-    border-radius: 2px;
+    padding: 0.3px 0.3px 0.3px 0.3px;
+    border-radius: 1px;
     border: solid #E9E9E9;
      }
   
@@ -1967,17 +1996,20 @@ border-radius:6px;
     #footer-articulo .social2 ul li .fa-instagram{
     background-color: oldlace;
     color: #2d2d2d;
-    width: 8px;
-    height: 8px;
-    padding: 0.5px 0.5px 0.5px 0.5px;
-    border-radius: 2px;
+    width: 7px;
+    height: 7px;;
+    padding: 0.3px 0.3px 0.3px 0.3px;
+    border-radius: 1px;
     border: solid #E9E9E9;
     }
 
   
     #footer-articulo  .box{
-     width: 100%;
-    height: 50px;
+      display: flex;
+      flex-direction: column;
+       width: 100%;
+      height: 80px;
+     margin-top: 10px;
    }
 
    /*LETRA ENCIMA DEL BOX*/   
@@ -1988,10 +2020,10 @@ border-radius:6px;
 
      #footer-articulo .box form{
       width: 90%;
-     display: flex;
-     flex-direction: row;
-     margin: auto;
-    margin-top: -3px;
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+     margin-top: 8px;
     }
 
     #footer-articulo .box input[type="text"]
@@ -2744,6 +2776,13 @@ nav li a p{
     /*BUSCADOR EN HORIZONTAL*/
   /*IPAD..........................IPAD*/
     @media only screen and (min-width: 700px) and (max-width: 768px){
+      html, body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+         }
+    
+
 
       #wrapper-articulo {
         box-sizing: border-box;
@@ -2752,6 +2791,13 @@ nav li a p{
         min-height: 100vh;
       }
             
+      #wrapper-articulo img {
+        width: 100%;
+        height: auto;
+        border: 0;
+         }
+
+         
       #wrapper-articulo > * {
       padding: 30px;
       }
@@ -2769,20 +2815,21 @@ nav li a p{
   
 
     header{
-    width: 100%;
-    z-index: 999;
-    position: fixed;
-    margin: auto;
-    height:  90px;
-    box-shadow: 0 8px 6px -6px #c9c9c9;
-    background-color:#fff;
-    }
-        
-      header.black{
-      background-color:#fff;
-      width: 100%;
-      height:  90px;
+      width:100%;
+      height: 80px;
+      top:0;
+      left: 0;
+      position: fixed;
+      z-index: 2000;   /*IMPORTANTE  */
+      margin: auto;
+      box-shadow: 0 8px 6px -6px #DCDCDC;
       }
+    
+      header.black{
+        width: 100%;
+      background-color: #fff;
+      height: 80px;
+        }
 
              /*BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
     
@@ -2824,76 +2871,74 @@ nav li a p{
 
           
     .cabecera{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-    height: 55px;
-    margin-top: -10px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 50px;
     }
            
           
     /*caja */
     .logo{
-    display:inline-flex;
-    width: 60%;
-    max-width: 450px;
-    height: 55px;
+      width: 30%;
+      max-width: 300px;
+      height: 50px;
     }
                 
     .logo img {
-    width: 100%;
-    height: 55px;
-    margin: auto;
+      display: block;
+      width: 100%;
+      max-width: 190px;
+      height: 50px;
     }
            
           
-           .menu-btn {
-            width:40%;
-            max-width: 300px;
-            height: 55px;
-            display: flex;
-            flex-direction: row;
-            margin: auto;
-            cursor: pointer;
-            transition: all .5s ease-in-out;
-          }
-
+    
 
              /*CONTENEDOR  REVISTA Y SOCIALES*/
-             .menu-btn .boletin{
-            width: 35%;
-            max-width: 250px;
-            display: block;
-            position: relative;
-            float: right;
-            height: 55px;
-            margin-right: 5px;
+           .suscribe{
+            display: inline-flex;
+            width: 30%;
+            max-width: 240px;
+            height: 50px;
             }
 
           /*LETRA FOOD EMOTIONS*/
           
           /*LETRA INSCRIBETE*/
-           .menu-btn .boletin a h4{
+           .suscribe a h4{
             font-size: 1.1rem;
-            letter-spacing: 0.4px;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: 800;
-            color:#2d2d2d;
-            margin-top: 33px;
+              letter-spacing: 0.4px;
+              font-family: 'Times New Roman', Times, serif;
+              font-weight: 800;
+              color:#2d2d2d;
+              margin-top: 15px;
             }
           
        
-            .boletin a h4:hover{
-              color: #639a3a;
+            .suscribe a h4:hover{
+              color: #7aac41;
               text-decoration: none;
              }
             
            /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
           
        
-         
+           .menu-btn {
+            display: block;
+            position: relative;
+            float: right;
+            width: 10%;
+            max-width: 40px;
+            height: 50px;
+          }
+
+          .hamburguesa{
+            width: 100%;
+            height: 50px;
+          }
+    
 
         /*--MUEVE EL MENU............ESTE ES EL BURGER*/
         .menu-btn  .menu-btn__burger {
@@ -2936,27 +2981,27 @@ nav li a p{
         }
 
        .menu-btn__burger:hover{
-      background-color: #639a3a;
+      background-color: #7aac41;
       }
           
       .menu-btn__burger:hover::before,
       .menu-btn__burger:hover::after{
-      background-color: #639a3a;    
+      background-color: #7aac41;    
       }
   
       /* ANIMATION */
-      .menu-btn.open .menu-btn__burger {
+      .hamburguesa.open .menu-btn__burger {
       transform: translateX(-50px);
       background: transparent;
       box-shadow: none;
        }
 
-      .menu-btn.open .menu-btn__burger::before {
+      .hamburguesa.open .menu-btn__burger::before {
       transform: rotate(45deg) translate(35px, -35px);
       background: #fff;
       }
 
-      .menu-btn.open .menu-btn__burger::after {
+      .hamburguesa.open .menu-btn__burger::after {
       transform: rotate(-45deg) translate(35px, 35px);
       background: #fff;
       }
@@ -3315,7 +3360,6 @@ nav li a p{
      .container-total-carrusell{
       display: block;
       position: relative;
- 
       }
     
       /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
@@ -3323,7 +3367,7 @@ nav li a p{
         float:left;
         width:100%;
         overflow:hidden;
-       height: 300px;
+       height: 290px;
         position:relative;
         margin: auto;
         margin-bottom: 20px;
@@ -3334,7 +3378,7 @@ nav li a p{
    /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
    .carrusel{
     width:4000px;
-    height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+    height: 290px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
     left: 0px;
     position:absolute;
     z-index:0;
@@ -3346,7 +3390,7 @@ nav li a p{
     float: left;
     width: 100%;
     max-width: 221px;
-    height: 200px;
+    height: 230px;
     margin-right:  0.4%;   /*ESPACIO */
     text-align:center;
     }

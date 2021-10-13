@@ -108,10 +108,9 @@ a {
    /*caja */
    .logo{
     display: inline-flex;
-    width: 19%;
-    max-width: 235px;
-    height: 40px; 
-  
+    width: 19.8%;
+    max-width: 350px;
+    height: 40px;
    }
     
    /*IMAGEN DEL LOGO*/
@@ -120,31 +119,17 @@ a {
     height: 40px;  
     }
      
-   
-
-
-/*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
-   .menu-btn {
-    display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: flex-start;
-   width: 30%;
-   max-width: 160px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
-  height: 32px;
-  cursor: pointer;
-   }
-
  
      /*CONTENEDOR  REVISTA Y SOCIALES*/
-      .boletin{
-      width: 95%;
-      max-width: 140px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
-      display: inline-flex;
+      .suscribe{
+      width: 30%;
+      max-width: 350px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
+      position: relative;
+      float: right;
       height: 32px;
       }
 
-    .boletin  a h4{
+    .suscribe  a h4{
      width: 100%;
      max-width: 90px;
       font-size: 1rem;
@@ -159,22 +144,37 @@ a {
   
 
    /*LETRA INSCRIBETE*/
-   .boletin a h4:hover{
+   .suscribe a h4:hover{
     color: #639a3a;
     text-decoration: none;
    }
    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
 
+  /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
+   .menu-btn {
+    display: inline-flex;
+    width: 10%;
+    max-width: 39px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+      height: 32px;
+    cursor: pointer;
+     }
 
+     .menu-btn  .hamburguesa{
+        width: 100%;
+        max-width: 39px;
+        display: block;
+        position: relative;
+        float: left;
+      }
 
       /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-   .menu-btn__burger {
+      .menu-btn .hamburguesa .menu-btn__burger {
   display: block;
   position: relative;
   float: left;
    margin: auto;
    margin-top: 18px;
-    width: 5%;
+    width: 100%;
     max-width: 38px;
     height: 4.2px;
   background: #2d2d2d;
@@ -211,20 +211,30 @@ a {
 
 
   /* ANIMATION */
-  .menu-btn.open .menu-btn__burger {
+  /* ANIMATION */
+  .hamburguesa.open .menu-btn__burger {
     transform: translateX(-50px);
     background: transparent;
     box-shadow: none;
-  }
-  .menu-btn.open .menu-btn__burger::before {
+    }
+
+
+     /* background: #fff;  */
+    .hamburguesa.open .menu-btn__burger::before {
     transform: rotate(45deg) translate(35px, -35px);
-    background: #fff;
-  }
-  .menu-btn.open .menu-btn__burger::after {
+   
+    }
+
+
+    /* background: #fff;  */
+    .hamburguesa.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
-    background: #fff;
-  }
-  
+
+    }
+
+
+
+
   .menu-btn__burger:hover{
     background-color: #639a3a;
   }
@@ -1286,17 +1296,6 @@ a {
     border-radius:6px;
     }
      
-    #carrusel i{
-    border: 3px solid  #635f5f;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 6px;
-    margin-top: 10%;
-    margin-left: 97%;
-    position: absolute;
-    z-index: 1;
-    background-color: #666;
-    }
 
 
     .carrusel p{
@@ -1348,7 +1347,7 @@ a {
   }
   
   .container-total-carrusell ul li:hover{
-  background-color: #639a63;
+    background-color: #7aac41;
   }
 
     /*PALO*/

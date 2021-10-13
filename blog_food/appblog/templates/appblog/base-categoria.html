@@ -175,16 +175,17 @@
        <div id="wrapper-categorias">
                             <header>
                              <div id="cabecera-categorias">
+                              
                                  <!------ caja logo --------->
                                  <div class="logo">
                                    <a  href="{% url 'appfood:index' %}">
-                                 <img src="{% static 'appfood/img/logo/logo-articulo.png' %}" alt="Food Emotions">
+                                   <img src="{% static 'appfood/img/logo/logo-articulo.png' %}" alt="Fooding Emotion">
                                  </a>
                                  </div>
                                 <!------- final caja logo------->
 
 
-            <div class="controls">
+           <div class="controls">
               <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
                   <div id="custom-search-input">
 	                <input type="text"  class="sin-borde" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
@@ -199,20 +200,25 @@
 
                              
                           <!-- BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
-                          <div class="menu-btn">
+                         
                                     <!------  caja boletin--------------------------->
-                                    <div class="boletin">
+                                     <div class="suscribe">
                                             <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
                                            <h4>SUSCRIBETE</h4>  
                                            </a>
-                                    </div>
+                                   </div>
                                    <!---------- final caja boletin------------------->
 
-                                  <div class="menu-btn__burger"></div>
-                        </div>
+                      <div class="menu-btn"> 
+                   
+                     <!---------------MENU RESPONSIVE -------------->
+                     <div class="hamburguesa">
+                     <div class="menu-btn__burger">  </div>
+                     </div>
+                        <!----FIN  MENU RESPONSIVE ------->        
+                   </div>
                         <!-- final caja MENU ASPA--------------------------------------------------------->
-                                                            
- 
+       
                         <!-- NAV MENU QUE VA CON EL BOTON MENU-->
                         
        <!-- NAV MENU QUE VA CON EL BOTON MENU-->
@@ -273,9 +279,12 @@
                 </li>
                  </ul>
                 </nav>
-                        </div> <!-- FINAL CABECERA ----------------------------------------------------------->
-                        </header>
 
+                <!---FINAL NAV------------------------------>
+          </div> 
+          <!-- FINAL CABECERA ----------------------------------------------------------->
+      </header>
+      <!---FINAL HEADER--------------------------->
 
 
               <!-- CONTENEDOR DEL CUERPO DEL BODY------------------------------------------------------------------------->

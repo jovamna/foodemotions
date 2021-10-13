@@ -5,6 +5,35 @@
     box-sizing: border-box;
   }
 
+  body{
+    padding:0;
+    margin: 0;
+    background-color: #fff;
+    color: rgba(0,0,0,.95);
+    font-family: "Argos",serif;
+     }
+  
+  html, body {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  
+  }
+
+
+   
+
+    a {
+  color: #524c56;
+  text-decoration: none;
+  font-weight: lighter;
+   }
+
+
+   a, a:hover,a:visited, a:focus {
+  text-decoration:none;
+   }
+
     
     #wrapper-recetas {
       margin:0;
@@ -22,13 +51,17 @@
        
     
      #container-recetas{
+      display: flex;
+      flex-direction: column;
       width:100%;
     max-width: 1200px;
     margin-left:auto;
     margin-right:auto;
      padding-left: 0;
      padding-right: 0;
-     margin-top: 80px;
+     margin-top: 72px;
+   
+  
          }
 
 
@@ -58,14 +91,6 @@
   /*.........*/
 
 
-  a {
-    color: #524c56;
-    text-decoration: none;
-    font-weight: lighter;
-  }
-     a, a:hover,a:visited, a:focus {
-    text-decoration:none;
-   }
 
    
    header{
@@ -85,13 +110,12 @@
   
   
     .cabecera-recetas{
-      width: 100%;
+     width: 100%;
     max-width: 1200px;
     height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
     margin: auto;
     margin-top: -2px;
     }
@@ -101,7 +125,7 @@
    .logo{
     display: inline-flex;
     width: 19.8%;
-    max-width: 450px;
+    max-width: 350px;
     height: 40px; 
     }
     
@@ -118,14 +142,21 @@
     }
 
 
-  /*CONTAINER DEL BUSCADOR................. */
-   .cabecera-recetas .controls{
-   display: inline-flex;
-   width: 30%;
-   max-width: 390px;
-   height: 38px;  
-   margin: auto;
-   }
+       /*CONTAINER DEL BUSCADOR................. */
+       .cabecera-recetas .controls{
+        display: block;
+        position: relative;
+        float: left;
+        width: 35%;
+        max-width: 550px;
+        height: 38px;  
+        }
+
+
+        .controls form{
+          width: 100%;
+          max-width: 390px;
+        }
 
  
   /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
@@ -169,9 +200,10 @@
 
 
   input::placeholder {
-   width: 250px;
-
-  }
+    width: 250px;
+    font-size: 1rem;
+    color: #2d2d2d;
+    }
 
 
     /*BOTOM BUSCADOR */
@@ -183,7 +215,7 @@
      width: 15%;
      max-width: 55px;
      height: 30px;
-      background-color: #fff;
+    background-color: #fff;
      }
 
     .controls .icon .fa-search{
@@ -191,114 +223,134 @@
     }
 
 
-   /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
-   .menu-btn {
-    display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: flex-start;
-   width: 30%;
-   max-width: 190px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
-  height: 32px;
-  cursor: pointer;
-   }
-
+  
  
+    /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
     /*CONTENEDOR  REVISTA Y SOCIALES*/
-    .boletin{
-      width: 100%;
-      max-width: 150px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
+     .suscribe{
+      width: 20%;
+      max-width: 110px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
       display: inline-flex;
       height: 32px;
-    }
+      }
 
-    .boletin  a h4{
-      width: 100%;
-      max-width: 90px;
-       font-size: 0.9rem;
-       letter-spacing: 0.3px;
-       font-family: 'Times New Roman', Times, serif;
-       font-weight: 700;
-       color:#2d2d2d;
-       margin-top:  18px;
+    .suscribe  a h4{
+      font-size: 1rem;
+      word-spacing: -3px;
+      letter-spacing: -0.7%;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 700;
+      color:#2d2d2d;
+      margin-top:  16px;
       }
   
   
 
    /*LETRA INSCRIBETE*/
-   .boletin a h4:hover{
-    color: #639a3a;
+   .suscribe a h4:hover{
+    color: #7aac41;
     text-decoration: none;
    }
+   /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+
 /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
 
 
 
 /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-.menu-btn__burger {
-  display: block;
-  position: relative;
-  float: left;
-  margin: auto;
-  margin-top: 18px;
-  width: 38px;
+ /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
+   .menu-btn {
+   display: inline-flex;
+   width: 10%;
+   max-width: 39px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+    height: 32px;
+   cursor: pointer;
+   }
+
+   .menu-btn  .hamburguesa{
+      width: 100%;
+      max-width: 39px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+      height: 32px;
+      display: block;
+      position: relative;
+      float: left;
+   
+    }
+
+    /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+    .menu-btn .hamburguesa .menu-btn__burger {
+   display: block;
+   position: relative;
+   float: left;
+   margin: auto;
+   margin-top: 17px ;
+
+   width: 38px;
   height: 4.2px;
-  background: #2d2d2d;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2);
-  transition: all .5s ease-in-out;
-  z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/ 
- }
+   background: #2d2d2d;
+   border-radius: 2px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2);
+   transition: all .5s ease-in-out;
+   z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
+   }
 
 
- /*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
- .menu-btn__burger::before,
- .menu-btn__burger::after {
-  content: '';
-  position: absolute;
-  width: 38px;
-  height: 4.2px;
-  background:#2d2d2d;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-  transition: all .5s ease-in-out;
-   z-index: 800;
- }
+/*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+content: '';
+position: absolute;
+width: 38px;
+height: 4.2px;
+background:#2d2d2d;
+border-radius: 2px;
+box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+transition: all .5s ease-in-out;
+z-index: 800;
 
 
- .menu-btn__burger::before {
-   transform: translateY(-10px);
- }
- .menu-btn__burger::after {
-   transform: translateY(10px);
-  
- }
+}
+.menu-btn__burger::before {
+ transform: translateY(-10px);
+}
+.menu-btn__burger::after {
+ transform: translateY(10px);
 
-.menu-btn__burger:hover{
-  background-color: #fff;
 }
 
- .menu-btn__burger:hover::before,
- .menu-btn__burger:hover::after{
-  background-color: #fff;
-}
 
 
 
 /* ANIMATION */
-.menu-btn.open .menu-btn__burger {
+/* ANIMATION */
+.hamburguesa.open .menu-btn__burger {
   transform: translateX(-50px);
   background: transparent;
   box-shadow: none;
-}
-.menu-btn.open .menu-btn__burger::before {
+  }
+
+
+   /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::before {
   transform: rotate(45deg) translate(35px, -35px);
-}
-.menu-btn.open .menu-btn__burger::after {
+ 
+  }
+
+
+  /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
-}
 
+  }
 
+  .menu-btn__burger:hover{
+    background-color: #7aac41;
+  }
+
+   .menu-btn__burger:hover::before,
+   .menu-btn__burger:hover::after{
+    background-color: #7aac41;
+  }
 
 
 /*margin-left: 5.4%;/*IMPORTANTE */
@@ -352,7 +404,7 @@
   nav li a p{
   background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
   display: block;
-  border-radius: 8px solid #639a3a;
+  border-radius: 8px solid #7aac41;
    margin-top:9px;
   position: absolute;
   padding: 2px 2px ;
@@ -446,7 +498,6 @@ nav a {
     display: flex;
     flex-direction: row;
      margin-bottom: 35px;
-
    }
   
     /* PRIMERA SECCION MENU ARROW*/
@@ -488,7 +539,7 @@ nav a {
     }
   
     #menu-simple li p i {
-    border: 3px solid #568632;
+    border: 3px solid #7aac41;
     border-width: 0 1px 1px 0;
     display: inline-block;
     padding: 4px;
@@ -498,7 +549,7 @@ nav a {
      #menu-simple .right {
      transform: rotate(-45deg);
      -webkit-transform: rotate(-45deg);
-     border: 2px solid #568632;
+     border: 2px solid #7aac41;
      border-width: 0 2px 2px 0;
     }
   
@@ -519,7 +570,7 @@ nav a {
       width: 100%;
       width: 85%;   /*IMPORTANTE PARA EL ANCHO DE LA RAYA*/
       margin-left: -2px;   /*IMPORTANTE PARA SITUAR LA RAYA*/
-      background: #639a3a;
+      background: #7aac41;
       }
       
       #menu-simple a:hover{
@@ -553,33 +604,33 @@ nav a {
       width: 100%;
      }
   
-   /* CAJA QUE CONTIENE ARTICULO Y VISTA................... */
+   /* CAJA -ARTICULO ENGLOBA............... */
+    /*-ARTICULO FLEX COLUMN, ARTICULO VACIO Y VISTA.......... */
     .articulo{
       width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin-top: 5px;
     margin-bottom: 5px;
-   }
+    }
     
-     .articulo-flex-colum{
+
+    /*...BLOQUE DE DESCRICPCION Y AUTOR...*/
+    .articulo .articulo-flex-colum{
      display: flex;
      flex-direction: column;
      width: 40.5%;
      margin-bottom: 10px;
-   }
+    }
 
-    /*PARA DAR ESPACIO ENTRE LA DESCRIPCION DEL PLATO Y LA IMAGEN*/
-   .articulo-vacio{
-    width: 2.5%;
-  }
+ 
     /*CAJA QUE CONTIENE DESCRIPCION FOTO AUTOR width: 100%;
     max-width: 1000px; */
     .recetas{
      display: flex;
      flex-direction: column;
     width: 100%;
-    /*SEPARA DE AUTOR A LA PRIMERA FOTO PRINCIPAL    margin-bottom: ; */
     }
 
    /*TITULO DE LA RECETA*/
@@ -657,9 +708,15 @@ nav a {
 
    }
 
+      /*PARA DAR ESPACIO ENTRE LA DESCRIPCION DEL PLATO Y LA IMAGEN*/
+      .articulo .articulo-vacio{
+        width: 2.5%;
+        display: inline-flex;
+      }
+
 
    /*CONTAINER DE LA IMAGGEN Y LAS REDES SOCIALES TWITTET FACE..*/
-    .vista{
+    .articulo .vista{
      display: flex;
      flex-direction: column;
      width: 57%;
@@ -1443,16 +1500,19 @@ nav a {
 /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
 
   #footer-recetas{
-  clear: both;
-    position: relative;
-    height: 10px;
-    margin-top: -10px;
-    border-top: solid 1.5px #DCDCDC;
+    width: 100%;
+    bottom: 0;  
+    left: 0;
+    right: 0;
+    top: 0; 
+    margin: auto;
+    clear: both;
     display: flex;
     flex-direction: column;
-    width: 100%;
+     -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+    -moz-box-shadow: 0px -3px 6px #DCDCDC;
+    box-shadow: 0px -3px 6px  #DCDCDC;
     z-index: 10;
-    bottom: 0;
     background-color: #f4f4f4;
     }
   
@@ -1460,7 +1520,7 @@ nav a {
   .footer-primero-recetas{
   width: 80%;
   max-width: 900px;
-  height: 90px;
+  height: 92px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1469,33 +1529,41 @@ nav a {
   
   /*SUB-caja ICONOS SOCIALES*/
   #icon-social1{
+    display: flex;
+    flex-direction: column;
   width: 49.5%;
   max-width: 250px;
   height: 90px;
   }
   
+  #icon-social1  p{
+    font-size: 1.2rem;
+    word-spacing: -3px;
+    letter-spacing: -1px;
+    font-family: 'Archivo Black', sans-serif;
+   margin-top: -5px;
+    color: #2d2d2d;
+   
+    }
   
-  #icon-social1 li{
+
+    #icon-social1 .social2{
+      width: 80%;
+     display: block;
+     position: relative;
+      margin-top: -10px;
+      }
+      
+   .social2  li{
   list-style: none;
   display: inline-flex;
    }
   
-  #icon-social1 p{
-  font-size: 1.1rem;
-  word-spacing: -3px;
-  letter-spacing: -2px;
-  font-family: 'Archivo Black', sans-serif;
-  padding-bottom: 10px;
-  color: #2d2d2d;
-  }
+
   
-  #icon-social1 .social2{
-  display: inline-flex;
-  list-style: none;
-  }
+
   
-  
-  #icon-social1   li .fa-envelope{
+   .social2   li .fa-envelope{
   background-color: oldlace;
   color: #2d2d2d;
   width:40px;
@@ -1503,43 +1571,39 @@ nav a {
   padding: 5px 5px 5px 5px;
   border-radius: 25px;
   border: solid #E9E9E9;
-  margin-top: -15px;
   }
   
-  #icon-social1   li .fa-facebook-f{
+  .social2    li .fa-facebook-f{
   background-color: oldlace;
   color:  #2d2d2d;
   width:40px;
   height: 40px;
   padding: 5px 5px 5px 5px;
   border-radius: 25px;
-  margin-top: -15px;
   border: solid #E9E9E9;
   }
   
   
-  #icon-social1   li .fa-twitter{
+  .social2    li .fa-twitter{
   background-color: oldlace;
   color:   #2d2d2d;
   width:40px;
   height: 40px;
   padding: 5px 5px 5px 5px;
   border-radius: 25px;
-  margin-top: -15px;
   border: solid #E9E9E9;
   }
   
   
   
   
-  #icon-social1  li .fa-instagram{
+  .social2   li .fa-instagram{
   background-color: oldlace;
   color: #2d2d2d;
   width:40px;
   height: 40px;
   padding: 5px 5px 5px 5px;
   border-radius: 25px;
-  margin-top: -15px;  /*SUBE ICONO*/
   border: solid #E9E9E9;
   }
   
@@ -1547,11 +1611,13 @@ nav a {
    .box{
     width: 45%;
     margin-left: 5% ;
-    margin-top: 8px; /*SUBE CAJA A MENOS TOP*/
+    margin-top: 6px; /*SUBE CAJA A MENOS TOP*/
     transform: translate(-5%, -5%);
     height: 90px;
      }
   
+
+
   .box h3{
   letter-spacing: -0.1px;
   font-family: 'Archivo Black', sans-serif;
@@ -1559,12 +1625,14 @@ nav a {
   font-weight: 400;
   line-height: -0.4px;
   margin-left: 16%;
+  padding-top: 0;
   color: #2d2d2d;
   }
    /*cajita del correo */
   .box form{
     display: flex;
     margin-left: 4%;
+    margin-top: 8px;
   }
   
   .box input[type="text"]
@@ -1603,21 +1671,25 @@ nav a {
   
   
   /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
-        #footer-recetas  .footer-second-recetas{
+          .footer-second-recetas{
           width: 100%;
-        display: block;
-      height: 20px;
+        display: flex;
+        flex-direction: column;
+      height: 30px;
+      margin-top: 10px;
         }
   
         .final-food-recetas{
-          height: 15px;
+          height: 20px;
           display: block;
           width: 100%;
-         
         }
+
+
     .final-food-recetas p{
+      display: block;
+      position: relative;
     text-align: center;
- 
     color: #2d2d2d;
     font-size: 0.8rem;
    }
