@@ -158,10 +158,9 @@ flex-direction: row;
 align-items: flex-end;
 padding: 0 0 0 0;
 margin-top: -3px;
-
  }
  
- 
+
 
  
     /*caja   margin-bottom: -30px;*/
@@ -306,207 +305,183 @@ margin-top: -3px;
    
   
   
-  
 
  /*................................*/
 
-
-  /*--NAV---------------BARRA NAVEGACION-*/
-     .menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-     margin: auto;
-     flex-wrap: wrap;
-     align-items: center;
-     }
-     
-     /*ESTE BUSCADOR SALDRA EN LOS MOVILES*/
-    .buscador-responsive{
-      display: none;
-    }
-
-     /*--SEGUNDACAJA DEL MENU QUE NO SE QUE PONDRE---*/
-     .caja{
-       width: 20%;
-       max-width: 200px;
-       display: inline-flex;
-     }
-
-    /*---UL--*/
-   .menu .nav{
-   width: 80%;
-   position: relative;
-   display: block;
-   float: right;
-   margin-top: 6px;
-   }
-
-    /*---LI---*/
-  .menu .nav li{
-  display:block;
-  float:left;
-  padding:  0px 9px ;
-  }
-
+ /*--NAV---------------BARRA NAVEGACION-*/
  
-  .menu .nav li a {
-  padding: .2em;
-  display: block;
-  text-decoration: none;
-  color: #242424;
-  margin-top: 5px;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
- font-weight: 790;
- letter-spacing: 0.2px;
- }
 
-   /* enlaces de los items del menu desplegable */
-   .menu .nav ul a {
-    line-height:120%;
-     padding:10px 15px;
-     background-color: #000000;
-     color: #fff;
-     font-size: 0.7rem;
-     width: 100%;
-     }
-    
-
-    /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
-    .menu ul li a.active{
-    text-decoration:line-through;
-    color: #7aac41;
-    }
-    /*----fFIN -MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
-    
-    nav{
-    display: none;
-    }
-
-  
-  
-    nav{
+   nav{
     width:100%;
     max-width: 1250px;
     height: 40px;
     display: flex;
     align-items: center;
     margin: auto;
-    margin-top: 8px;
-   }
-     
-  
-    /* ESTE ES EL UL  IMPORTANTE PARA EL MENU EN FILA Y QUE ESTE CENTRADO*/
-    nav .nav{
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
-    width:100%;
-    max-width: 1260px;
-    z-index: 30;
-    position: fixed;   /*IMPORTANTE PARA QUE EL SUBMENU NO SE MUEVA*/
-    margin:0;
-    padding:0;
-    }
+    justify-content: space-between;
+     flex-wrap: wrap;
+   }
+
+ 
+   
+   /*ESTE BUSCADOR SALDRA EN LOS MOVILES*/
+  .buscador-responsive{
+    display: none;
+  }
+
+   /*--SEGUNDACAJA DEL MENU QUE NO SE QUE PONDRE---*/
+
+
+  /*---UL--*/
+  nav .nav{
+ width: 86%;
+ display: flex;
+ flex-direction: row;
+ margin-left: 90px;
+ z-index: 30;
+ position: fixed;   /*IMPORTANTE PARA QUE EL SUBMENU NO SE MUEVA*/
+ padding:0;
+ }
+ 
+   /* ESTE ES EL UL  IMPORTANTE PARA EL MENU EN FILA Y QUE ESTE CENTRADO*/
+   
+
+
+  /*---LI---*/
+  nav .nav li{
+  display:block;
+  float:left;
+  padding:  0px 9px ;
+  }
+
+
+nav .nav li a {
+padding: .2em;
+display: block;
+text-decoration: none;
+color: #242424;
+margin-top: 5px;
+font-size: 0.78rem;
+text-transform: uppercase;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 790;
+letter-spacing: 0.2px;
+}
+
+ /* enlaces de los items del menu desplegable */
+ nav .nav ul a {
+  line-height:120%;
+   padding:10px 15px;
+   background-color: #000000;
+   color: #fff;
+   font-size: 0.7rem;
+   width: 100%;
+   }
+
   
-  
-    nav .nav li{
+
+
+   nav .nav li{
     list-style: none;
     padding: 2px 6px 2px 2px;
     margin: auto;
     }
        
-        
-    nav .nav li a{
-    color: #4b4b4b;
-    letter-spacing: -0.2px;
-    word-spacing: -0.5px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.2rem;
-    font-weight: 900;
-    text-transform: lowercase;
-    display: block;
-    position: relative;
-    text-decoration: none;
-    padding: 10px;
-    }
-   
-   li .current {
+    
+
+  /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
+  .menu ul li a.active{
+  text-decoration:line-through;
   color: #7aac41;
-   }
-       
-  /* efecto al pasar el ratón por los items del menu */
-  /*IMPORTANTE PARA QUE NO SALGAN DOBLE RAYA AL HACER HOVER*/
-  .nav a:hover{
-  text-decoration: none;
-  cursor: pointer;
   }
-    
-   /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
-  .nav ul {
-  display:none;
-  position:absolute;
-  top:100%; 
-  }
+  /*----fFIN -MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
   
-  /* items del menu desplegable */
-  /*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS   float:none*/
-  .nav ul li {
-  width: 200px;
-  float: none;
-  margin-left: -10px; /*IMPORTANTE MUEVE */   
-  }
+ 
 
-  /* enlaces de los items del menu desplegable */
-  nav .nav ul a {
-  line-height:120%;
-  padding:10px 15px;
-  background-color: #000000;
-  color: #fff;
-  font-size: 0.7rem;
+
+  
+
+ 
+
+
+ 
+ li .current {
+color: #7aac41;
+ }
+     
+/* efecto al pasar el ratón por los items del menu */
+/*IMPORTANTE PARA QUE NO SALGAN DOBLE RAYA AL HACER HOVER*/
+.nav a:hover{
+text-decoration: none;
+cursor: pointer;
+}
+  
+ /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
+.nav ul {
+display:none;
+position:absolute;
+top:100%; 
+}
+
+/* items del menu desplegable */
+/*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS   float:none*/
+.nav ul li {
+width: 200px;
+float: none;
+margin-left: -10px; /*IMPORTANTE MUEVE */   
+}
+
+/* enlaces de los items del menu desplegable */
+nav .nav ul a {
+line-height:120%;
+padding:10px 15px;
+background-color: #000000;
+color: #fff;
+font-size: 0.7rem;
+width: 100%;
+}
+    
+/* items del menu desplegable al pasar el ratón     display:block;
+width: 100%;*/
+  nav .nav li:hover > ul {
+display:block; 
+position:absolute;  
+width:60%; 
+}
+
+
+
+
+
+     /* ANIMA CON RAYA AL HACE HOVER */
+ /*HOVER SALE RAYA.............HOVER */
+  nav .nav a:after {
+ content: "";
+ display: block;
+ margin: auto;
+ height: 2px;
+ width: 0px;
+ transition: all .4s;
+ }
+ /* .................... */
+
+
+
+
+  nav a:hover:after {
   width: 100%;
-  }
-      
-  /* items del menu desplegable al pasar el ratón     display:block;
-  width: 100%;*/
-    nav .nav li:hover > ul {
-  display:block; 
-  position:absolute;  
-  width:60%; 
+  background: #7aac41;
   }
   
-  
-
- 
-
-       /* ANIMA CON RAYA AL HACE HOVER */
-   /*HOVER SALE RAYA.............HOVER */
-    .menu .nav a:after {
-   content: "";
-   display: block;
-   margin: auto;
-   height: 2px;
-   width: 0px;
-   transition: all .4s;
-   }
-   /* .................... */
- 
- 
+  /* FINAL MENU ANIMADO */
 
 
-    .menu  a:hover:after {
-    width: 100%;
-    background: #7aac41;
-    }
-    
-    /* FINAL MENU ANIMADO */
+/* --FIN NAV--------------------------------------------------------*/
 
-    nav .nav{
-      display: none;
-    }
-  /* --FIN NAV--------------------------------------------------------*/
+
 
 
    /*PORTADA...*/

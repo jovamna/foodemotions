@@ -1657,7 +1657,7 @@
         background-color: #fff;
        }
   
-
+     
        .cabecera{
         width: 100%;
         display: flex;
@@ -1713,6 +1713,9 @@
       display: none;
       visibility: hidden;
       }
+
+      /*DIV DEL MENU GRANDE*/
+
   
     /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
      .cabecera .menu-btn {
@@ -1867,209 +1870,128 @@
         }
         
          
-    #controls-responsive input#search{
-      width: 85%;
-      height: 30px;
-      border: none;
-      font-size: 0.8rem;
-      float: left;
-      color: #262626;
-      padding-left: 4px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-        -webkit-transition: background .55s ease;
-      -moz-transition: background .55s ease;
-      -ms-transition: background .55s ease;
-      -o-transition: background .55s ease;
-      transition: background .55s ease;
-      }
-
-      #controls-responsive button#boton{
-      width: 15%;
-      height: 30px;
-      }
-
-
-      #custom-search-input-responsive input#search:hover,
-      #custom-search-input-responsive input#search:focus, 
-      #custom-search-input-responsive input#search:active{
-      outline:none;
-      background: #ffffff;
-      }
-
-
-
-      
-      .input, button {
-        width: 100%;
-        box-sizing: border-box; /* add this */
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-      }
-
-  
-      input[type=text]{
-        box-sizing:border-box;
-       }
-
-
-        input {
-        font-style: Roboto;
-        font-variant-ligatures:normal ;
-        font-variant-caps: normal;
-        font-variant-numeric:normal ;
-        font-variant-east-asian: normal;
-        font-stretch: normal;
-        }
-
-
-       form{
-      display: block;
-      }
-
    
-
-     
-          #controls-responsive #custom-search-input-responsive  input#text::-webkit-input-placeholder {
-          color: #2d2d2d;
-          z-index: 6;
-           }
-            
-
-
-          #controls-responsive #custom-search-input-responsive  input#text:-moz-placeholder { /* Firefox 18- */
-          color: #2d2d2d;
-            z-index: 6; 
-           }
-            
-        #controls-responsive #custom-search-input-responsive  input#text::-moz-placeholder {  /* Firefox 19+ */
-              color: #65737e; 
-              z-index: 6; 
-           }
-            
-         #controls-responsive #custom-search-input-responsive  input#text:-ms-input-placeholder {  
-              color: #65737e;  
-              z-index: 6;
-           }
-
-
-
-    /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+   /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
   /*margin-left: 5.4%;/*IMPORTANTE */
   nav{
-  position: fixed;
-  width: 100%;
-  max-width: 420px;
-  height: 100%;
-   top:-8px;  /*IMPORTANTE para que arriba no tenga espacios */
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  opacity: 0.97;
-   background-color: #000000;
-   z-index: 200;
-  }
-
-  nav .nav li a.active{
-    text-decoration:line-through;
-    color: #7aac41;
-    }
-
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-    nav .nav{
-    width:100%; 
-    max-width: 340px;
-    display: flex;
-    flex-direction: column;
-    height: 90%;  
-     margin-left: 6px;
-    top : 40px;
-     z-index: 99; 
-  
-    }
-
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav .nav li{
-      margin-top: 5px;/*IMPORTANTE */
-    list-style: none;
-    height: 40px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-left: 10px;
-    margin-bottom: 20px;
-    cursor:pointer;
-    }
-    
-    nav .nav li a {
-    z-index: 100;
-    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-    display: flex;
+    position: fixed;
     width: 100%;
-    height: 55px;
-    color: #fff;
-    font-weight: lighter;
-    font-size: 1.24rem;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-    font-family:  sans-serif;
+    max-width: 420px;
+    height: 100%;
+     top:-8px;  /*IMPORTANTE para que arriba no tenga espacios */
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+    opacity: 0.97;
+     background-color: #000000;
+     z-index: 200;
+     background-position:72% 50%;
+     background-repeat:no-repeat;
+     background-image: url('/static/appfood/img/logo/202-47-logomenu.png') 50% 0 no-repeat fixed;
     }
   
-     /*IMPORTANTE*/
 
-     
-    
- 
-      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
-       display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
+      nav .nav li a.active{
+      text-decoration:line-through;
+      color: #7aac41;
       }
-
-    nav .nav li ul li a{
-    font-size: 1rem;
-    display: block;
-    position: absolute;
-    max-width: 200px;
-    width: 100%;
-    margin-left: -2px;
-    padding-bottom: -2px;
-    margin-left: -76px;
-    }
-
-     nav .nav ul {
-    visibility: hidden;
-    }
-
-      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
   
- /*ANIMACION SUBRAYADO */
- nav a {
- display: inline-block;
- position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
 
-  nav  a:after {
- content: "";
- display: block;
- margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
- height: 2px;
- width: 0px;
- transition: all .8s;
- z-index: 10;
- }
+     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      nav .nav{
+      width:100%; 
+      max-width: 340px;
+      display: flex;
+      flex-direction: column;
+      height: 90%;  
+       margin-left: 6px;
+      top : 40px;
+       z-index: 99; 
+      }
+  
 
+       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+      nav .nav li{
+        margin-top: 5px;/*IMPORTANTE */
+      list-style: none;
+      height: 40px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+      margin-left: 10px;
+      margin-bottom: 20px;
+      cursor:pointer;
+      }
+      
 
-  /* width: 100%;*/
-  nav  a:hover:after {
-  padding-left: 40px;
-  padding-right: -150px;
-  height: 2px;
-  background: white;
-  }
+      nav .nav li a {
+      z-index: 100;
+      background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+      display: flex;
+      width: 100%;
+      height: 55px;
+      color: #fff;
+      font-weight: lighter;
+      font-size: 1.24rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  sans-serif;
+      }
+    
+       /*IMPORTANTE*/
+  
+       
+      
+   
+        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+        nav .nav li:hover > ul {
+         display: block;
+        margin-left: -200px;
+        height: 200px;
+        visibility: visible; 
+        z-index: 598;
+        }
+  
+      nav .nav li ul li a{
+      font-size: 1rem;
+      display: block;
+      position: absolute;
+      max-width: 200px;
+      width: 100%;
+      margin-left: -2px;
+      padding-bottom: -2px;
+      margin-left: -76px;
+      }
+  
+       nav .nav ul {
+      visibility: hidden;
+      }
+  
+        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+    
+   /*ANIMACION SUBRAYADO */
+   nav a {
+   display: inline-block;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   z-index: 40;
+   }
+  
+    nav  a:after {
+   content: "";
+   display: block;
+   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+   height: 2px;
+   width: 0px;
+   transition: all .8s;
+   z-index: 10;
+   }
+  
+  
+    /* width: 100%;*/
+    nav  a:hover:after {
+    padding-left: 40px;
+    padding-right: -150px;
+    height: 2px;
+    background: white;
+    }
 
        /*FIN ANIMACION SUBRAYADO position: relative;  /*ESTO ARREGLO LA CABECERA    */
        .portada{
