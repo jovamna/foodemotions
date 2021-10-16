@@ -1715,7 +1715,10 @@
       z-index: 5;
      
       }
-     
+    
+       .food{background-color: chartreuse;}
+
+
       .cabecera .buscador{
       display: none;
       visibility: hidden;
