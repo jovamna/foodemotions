@@ -1718,6 +1718,19 @@
       visibility: hidden;
       }
 
+      .cabecera .buscador .controls{
+        display: none;
+        visibility: hidden;
+      }
+      .cabecera .buscador .controls #custom-search-input-header{
+        display: none;
+        visibility: hidden;
+      }
+
+      .buscador #controls   #custom-search-input-header .sin-borde{
+          display: none;
+          visibility: hidden;
+        }
       /*DIV DEL MENU GRANDE*/
 
   
@@ -1829,7 +1842,6 @@
         width: 91.6%;
         height: 45px;
        margin: auto;
-       margin-top: 2px;
        margin-bottom: 8px;
         }
   
