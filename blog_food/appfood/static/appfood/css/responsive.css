@@ -2025,7 +2025,7 @@
 
       nav .nav li a {
       z-index: 100;
-      background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+      background-color:  red;  /*IMPORTANTE  DAR COLOR NEGRO*/
       display: flex;
       width: 100%;
       height: 55px;

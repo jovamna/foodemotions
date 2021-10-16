@@ -369,13 +369,14 @@ text-transform: uppercase;
 font-family: Arial, Helvetica, sans-serif;
 font-weight: 790;
 letter-spacing: 0.2px;
+background-color: #0672d0;
 }
 
- /* enlaces de los items del menu desplegable */
+ /* enlaces de los items del menu desplegable  background-color: #000000;*/
  nav .nav ul a {
   line-height:120%;
    padding:10px 15px;
-   background-color: #000000;
+   background-color: blue;
    color: #fff;
    font-size: 0.7rem;
    width: 100%;
