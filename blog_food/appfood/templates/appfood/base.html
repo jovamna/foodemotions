@@ -198,8 +198,10 @@
       <div id="wrapper">
          <header>
               <div class="cabecera">
+
+
                      <div class="logo">
-                     <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
+                     <a href="{% url 'appfood:index' %}">
                      <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
                      </a>
                      </div>
@@ -225,13 +227,13 @@
    <!---------------------------------------------------------------------------------------------------------------->
                 
                     <div class="suscribe">
-                    <div class="suscripcion">              
+                              
                     <button type="button" class="food">
                    <a href="{% url 'appcontact:contacto' %}">  
                    <h4>suscribete</h4>  
                   </a>
                    </button>
-                  </div>
+               
                   </div>
 
 
@@ -245,15 +247,11 @@
                   <!----FIN  MENU BTN------>
                   <!-----FIN  BOLETIN -------------->
 
+    <!-- Navbar -->
+      </div>  
+      <!-----FIN  CABECERA------------------------------------------------------------------------------------->
 
-
-
-
-                   
-<!-- Navbar -->
-      </div>  <!-----FIN  CABECERA------------------------------------------------------------------------------------->
-
-         <!---<nav class="nav"> ---->
+     
 
 
     
@@ -389,17 +387,6 @@
 
 
 
- 
-
-
-
-
-    <!-- add menu -->
-    
-    <!-- Left elements -->
-
-
-
        </header>
             <!---------------FIN HEADER----------------------------------------->
 
@@ -412,9 +399,11 @@
 
     <form  class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
           <input class="form-control me-2" type="search"  name="q" 
-                             value= "{{ request.GET.q }}" class="sin-borde"  id="search"
+                             value= "{{ request.GET.q }}"  id="search"
                              placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off"  aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="boton btn-outline-success" type="submit">
+         <i class="fas fa-search h4 text-body"></i>
+        </button>
       </form>
 </div>
          {% endblock buscador-responsive %}
