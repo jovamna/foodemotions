@@ -153,11 +153,16 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+<!------------------------------------------------------->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
         <!-------------FIN BOOSTRARP------------------------>
   
@@ -229,7 +234,7 @@
                   </div>
                   </div>
 
-                  
+
                      <!---------------MENU RESPONSIVE -------------->
                        <div class="menu-btn"> 
                      <div class="hamburguesa">
@@ -389,6 +394,9 @@
 
 
 
+    <!-- add menu -->
+    
+    <!-- Left elements -->
 
 
 
@@ -397,30 +405,18 @@
 
  
 
-
-
-
     <div id ="container"> 
          <!------------------------------------------------------------------------------------------------------>
         {% block buscador-responsive %}
         <div id="controls-responsive">
-              <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
-                        <!---------------------------------------->
-                        <div id="custom-search-input-responsive">
-                             <!--------------------------->
-	                           <input type="text"  name="q" 
+
+    <form  class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+          <input class="form-control me-2" type="search"  name="q" 
                              value= "{{ request.GET.q }}" class="sin-borde"  id="search"
-                             placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off" >
-                            <!---------------------------------------------------------------->
-                            <!------------------------------------------------------------------------>
-                            <button type="submit" name="submit" class="boton btn-succes" value="Search" id="boton">
-                            <span class="icon"><i class="fa fa-search"></i></span> 
-                           </button>
-                           <!-------------------------------------------------------------------------->
-                      </div>
-                      <!------------------------------------------------------------------------------>
-            </form>                 
-       </div>
+                             placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off"  aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+</div>
          {% endblock buscador-responsive %}
     <!------------------------------------------------------------------------------------------------->
 
@@ -961,6 +957,10 @@
 
 <!--ESTE DIV ES DEL CONTAINER, LO SAQUE AL FOOTER PARA QUE COGIERA TODO EL ACNCHO DE LA PAGINA--->
  
+
+   <!---SEARCH----------------->
+   
+
 
 <!-- FINAL CONTAINER GENERAL DEL BODY WRAPPER------------------------------------------------------------------------->
             
