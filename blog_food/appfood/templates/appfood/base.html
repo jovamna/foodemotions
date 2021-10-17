@@ -838,43 +838,16 @@
         </div>
    <!--------------DIV DEL WRAPPER-------------------------------->   
 
-            <script src="{% static 'appfood/js/menuResponsive.js' %}"></script>
+          
             
             <!-- PARA CONVERTIR EL MENU A ASPA-->
             <script src="{% static 'appfood/js/menuAspaArticulo.js' %}"></script>
 
-            <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->
-            <script src="{% static 'appfood/js/menuDeslizaArticulo.js' %}"></script>
+         
 
 
 
-            <!-- SCRIPT PARA ICONO QUE SUBA RAPIDO LA PAGINA-->
-            <script> jQuery('document').ready(function ($) {
-
-                    var subir = $('.back-to-top');
-
-                    subir.click(function (e) {
-                        e.preventDefault();
-                        $('html, body').animate({ scrollTop: 0 }, 100);
-                    });
-
-                    subir.hide();
-
-                    $(window).scroll(function () {
-
-                        if ($(this).scrollTop() > 100) {
-                            subir.fadeIn();
-                        } else {
-                            subir.fadeOut();
-
-                        }
-
-                    });
-
-                });
-            </script>
-
-
+          
 
             <!-- SCRIPT PARA LA CABECERA FIJA-->
             <script type="text/javascript">
