@@ -394,7 +394,12 @@
 
     <div id ="container"> 
          <!------------------------------------------------------------------------------------------------------>
-        {% block buscador-responsive %}
+    
+    <!------------------------------------------------------------------------------------------------->
+
+   {% block content %}    
+     <!-- CONTAINER PRINCIPAL DE TODO EL CONTENIDO-->
+         {% block buscador-responsive %}
         <div id="controls-responsive">
 
     <form  class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
@@ -407,10 +412,6 @@
       </form>
 </div>
          {% endblock buscador-responsive %}
-    <!------------------------------------------------------------------------------------------------->
-
-   {% block content %}    
-     <!-- CONTAINER PRINCIPAL DE TODO EL CONTENIDO-->
 
         <!-- ----------------------------------------PORTADA------------------------------->
         {% block portada %} 
