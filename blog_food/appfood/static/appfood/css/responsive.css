@@ -77,19 +77,20 @@
      /*.. #DCDCDC ..*/
     .cabecera{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+   display: block;
+   position: relative;
+   float: left;
     height: 33px;
     }
      
    
     /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
     .logo{
-    display: inline-flex;
+    display: block;
+    position: relative;
+    float: left;
     width: 25%;
     height: 33px;
-    margin-right: 20px;
     }
            
        
