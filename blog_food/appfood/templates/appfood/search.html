@@ -176,3 +176,18 @@
    <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->
             <script src="{% static 'appfood/js/menuDeslizaArticulo.js' %}"></script>
               <script src="{% static 'appfood/js/menuResponsive.js' %}"></script>
+                  <!-- PARA CONVERTIR EL MENU A ASPA-->
+            <script src="{% static 'appfood/js/menuAspaArticulo.js' %}"></script>
+
+
+              const menuBtn = document.querySelector('.hamburguesa');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+    if (!menuOpen) {
+        menuBtn.classList.add('open');
+        menuOpen = true;
+    } else {
+        menuBtn.classList.remove('open');
+        menuOpen = false;
+    }
+});
