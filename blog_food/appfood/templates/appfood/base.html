@@ -189,6 +189,16 @@
          <header>
               <div class="cabecera">
 
+                <!---------------MENU RESPONSIVE -------------->
+                       <div class="menu-btn"> 
+                     <div class="hamburguesa">
+                     <div class="menu-btn__burger">  </div>
+                     </div>
+                        <!----FIN  MENU RESPONSIVE ------->        
+                   </div>
+                  <!----FIN  MENU BTN------>
+                  <!-----FIN  BOLETIN -------------->
+
 
                      <div class="logo">
                      <a href="{% url 'appfood:index' %}">
@@ -227,15 +237,7 @@
                   </div>
 
 
-                     <!---------------MENU RESPONSIVE -------------->
-                       <div class="menu-btn"> 
-                     <div class="hamburguesa">
-                     <div class="menu-btn__burger">  </div>
-                     </div>
-                        <!----FIN  MENU RESPONSIVE ------->        
-                   </div>
-                  <!----FIN  MENU BTN------>
-                  <!-----FIN  BOLETIN -------------->
+                   
 
     <!-- Navbar -->
       </div>  
@@ -388,22 +390,30 @@
     
     <!------------------------------------------------------------------------------------------------->
 
-   {% block content %}    
-     <!-- CONTAINER PRINCIPAL DE TODO EL CONTENIDO-->
-         {% block buscador-responsive %}
+
+     
+ {% block content %}    
+  {% block buscador-responsive %}
         <div id="controls-responsive">
-
-    <form  class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
-          <input class="form-control me-2" type="search"  name="q" 
-                             value= "{{ request.GET.q }}"  id="search"
-                             placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off"  aria-label="Search">
-        <button class="boton btn-outline-success" type="submit">
-         <i class="fas fa-search h4 text-body"></i>
-        </button>
-      </form>
-</div>
-         {% endblock buscador-responsive %}
-
+              <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                        <!---------------------------------------->
+                        <div id="custom-search-input-responsive">
+                             <!--------------------------->
+	                           <input type="text"  name="q" 
+                             value= "{{ request.GET.q }}" class="sin-borde"  id="search"
+                             placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off" >
+                            <!---------------------------------------------------------------->
+                            <!------------------------------------------------------------------------>
+                            <button type="submit" name="submit" class="boton btn-succes" value="Search" id="boton">
+                            <span class="icon"><i class="fa fa-search"></i></span> 
+                           </button>
+                           <!-------------------------------------------------------------------------->
+                      </div>
+                      <!------------------------------------------------------------------------------>
+            </form>                 
+       </div>
+       {% endblock buscador-responsive %}
+ 
         <!-- ----------------------------------------PORTADA------------------------------->
         {% block portada %} 
             <div class="portada">
@@ -419,8 +429,13 @@
 
     
     
-              
- 
+              <!-- CONTAINER PRINCIPAL DE TODO EL CONTENIDO-->
+
+
+           
+      
+                      <!------------------------------------------------------------------------------>
+        
      <!---BUSCADOR ------------------------------------------------------------ -->
               {% block buscador-search %} 
              <div id="controls-uno"> 
@@ -466,7 +481,7 @@
 
 
             <!-- SEGUNDO SEGMENTO DE TRES --------------------------------------------->
-            <div class="segundo-segmento">
+           <div class="primer-segmento">
                 <div class="tres">
                          <img src>
                           <div class="segundo-segmento-write-interno">

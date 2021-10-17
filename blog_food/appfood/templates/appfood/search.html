@@ -120,6 +120,39 @@
 
 
 
+
+
+
+
+
+
+
+       {% block buscador-responsive %}
+        <div id="controls-responsive">
+
+    <form  class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+          <input class="form-control me-2" type="search"  name="q" 
+                             value= "{{ request.GET.q }}"  id="search"
+                             placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off"  aria-label="Search">
+        <button class="boton btn-outline-success" type="submit">
+         <i class="fas fa-search h4 text-body"></i>
+        </button>
+      </form>
+</div>
+      {% endblock buscador-responsive %}
+
+
+
+
+
+
+
+
+
+
+
+
+
            <div id="controls-responsive">
     <div class="col-12 col-md-10 col-lg-8">
                         
