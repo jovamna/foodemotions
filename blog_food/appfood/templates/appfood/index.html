@@ -6,7 +6,67 @@
   
    {% block content %}
    
+  <!-------------------------PORTADA-------------------------------------------------------------->
+ {% block portada %} 
+          <div class="portada">
+
+                 <!------------------------------------------------------->
+                         <section class="portada-img">
+                        <img src="{% block imagen %}{% static 'appfood/img/slider/1300-600-index.jpg' %}{% endblock imagen %}"
+                        width="100%" >
+                       
+                        <div class="portada-titulo">
+                        <h2>exquisiteces en <i>Fooding Emotion</i> con la elaboraciòn
+                        </h2>
+                        </div>
+
+                         <div class="portada-titulo1">
+                         <h6>de productos y  <i>recetas</i>  a disfrutar ! </h6>
+                        </div>
+                        </section>
+
+
+    <!------------------------------------------------------------------------------------------------->
+    <section class="portada-img-responsive">
+               <div class="imagen-responsive-movil">
+              <img src="{% block img %}{% static 'appfood/img/slider/640-450index.jpg' %}{% endblock  %}"
+              class="slider__img">
+               <div class="portada-titulo">
+               <h2>exquisiteces <i>Fooding Emotion</i> elaboración</h2>
+              </div> 
+              <div class="portada-titulo1">
+              <h6>artesanal de <i>recetas sanas</i>   </h6>
+               </div>
+
+              </div>
+              <!------------------------------------->
+              <div class="imagen-responsive-ipod">
+              <img src="{% block imag %}{% static 'appfood/img/slider/760-380indexipod.jpg' %}{% endblock  %}"
+              class="slider__img">
+
+                     <div class="portada-titulo">
+               <h2>exquisiteces <i>Fooding Emotion</i> elaboración</h2>
+              </div> 
+              <div class="portada-titulo1">
+              <h6>artesanal de <i>recetas sanas</i>   </h6>
+               </div>
+
+
+              </div>
+              <!-- FIN IMAGEN-->
+              <!-- LETRAS-->
+              <!-- FIN IMAGEN-->
+              <!-- LETRAS-->
+         
   
+      </section>
+
+     </div>
+              
+    {% endblock portada %} 
+
+
+
      
      
 
