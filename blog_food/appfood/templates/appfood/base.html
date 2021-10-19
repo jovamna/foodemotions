@@ -219,7 +219,7 @@
         <header>
               <div class="cabecera">
                      <div class="logo">
-                     <a class="estilo-logo" href="{% url 'appfood:index' %}">
+                     <a  href="{% url 'appfood:index' %}">
                      <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
                      </a>
                      </div>
@@ -319,7 +319,7 @@
                     <div id="custom-search-input-header">
 	                  <input type="text"  name="q" 
                     value= "{{ request.GET.q }}" class="sin-borde" 
-                    placeholder=  "   Buscar en Foodingemotion.com  " autocomplete="off" >
+                    placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off" >
                     <!---------------------------------------------------------------->             
                     <button type="submit" name="submit" class="boton btn-succes" value="Search" >
                     <span class="icon"><i class="fa fa-search"></i></span> 
@@ -339,9 +339,9 @@
       <!------------------------------------------------------------------------->
       <!---------------------------------------------------------------------------------------------------------------->
                       <div class="suscribe">
-                      <a href="{% url 'appcontact:contacto' %}">   
+                   
                       <h4>suscribete</h4>  
-                      </a>
+                   
                       </div>
 
       <!---------------------------------------------------------------------------->
@@ -385,7 +385,7 @@
 
 
      
- {% block content %}    
+  
   {% block buscador-responsive %}
                   <div id="controls-responsive">
                 <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
@@ -401,7 +401,7 @@
 	        </div>
 
        {% endblock buscador-responsive %}
- 
+ {% block content %}   
         <!-- ----------------------------------------PORTADA------------------------------->
         {% block portada %} 
             <div class="portada">

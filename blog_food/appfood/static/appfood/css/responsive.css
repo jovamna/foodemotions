@@ -1887,7 +1887,8 @@
        /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
        #controls-responsive{
         display: block;
-        visibility: visible;
+        position: relative;
+        float: left;
         width: 92%;
         height: 35px;
         margin-top: 58px;  
@@ -1903,18 +1904,25 @@
          flex-direction: row;
          justify-content: space-between;
          margin: auto;
+         background-color: darksalmon;
          }
     
     
-         #controls-responsive .sin-borde-responsive{
-         width: 80%;
+     #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+         display: block;
+         position: relative;
+         float: left;
+          width: 90%;
+          max-width: 400px;
          height: 32px;
-         display: inline-flex;
         }
     
     
          #controls-responsive .boton-responsive{
-         width: 20%;
+           display: block;
+           position: relative;
+           float: right;
+         width: 10%;
          height: 32px;
          background-color: #ffffff;
           }
@@ -2034,16 +2042,16 @@
       }
   
      /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-      nav .nav{
+      .cabecera nav .nav{
       width:100%; 
+      height: 100%;
       max-width: 340px;
       display: flex;
       flex-direction: column;
-      height: 80%;  
+      max-height:800px;  
        margin-left: 6px;
-    
+            margin-top: 10px;
        z-index: 99; 
-    
       }
   
        /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
@@ -2052,7 +2060,7 @@
       list-style: none;
       height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
       margin-left: 10px;
-      margin-bottom: 5px;
+      margin-bottom: 15px;
       cursor:pointer;
       }
       
@@ -2066,6 +2074,8 @@
       text-transform: lowercase;
       letter-spacing: 1px;
       font-family:  sans-serif;
+      padding-top: 0;
+      margin-top: 0;
       }
     
        /*IMPORTANTE*/
@@ -2355,7 +2365,7 @@
       display: block;
       position: absolute;
       overflow: hidden;
-      top: 180px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
+      top: 70px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
       left: 30px;
       width: 48%;
  
@@ -2390,7 +2400,7 @@
   display: block;
   position: absolute;
   overflow: hidden;
-  top: 220px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+  top: 110px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
   left: 30px ;
   width: 50%;
   height: 30px;
@@ -2413,7 +2423,7 @@
    display: block;
   position: absolute;
   overflow: hidden;
-  top: 190px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
+  top: 80px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
   left: 25px ;
   width: 48%;
  }
@@ -2535,23 +2545,31 @@ width: 100%;
   }
 
   /*CAJA DEL FORMLARIO------------------------------------PAGINA CONTACTO*/
-    .row{
+    .row-formulario{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-top: 30px;
+    width: 90%;
+    margin-top: 40px;
+    margin-left: 15px;
+    
+    }
+
+    .bg-faded{
+   width: 80%;
+   
     }
 
   /*SUBCAJA DEL FORUMMLARIO DE CORREO*/
     .input-group{
-    width: 80%;
-    margin: auto;
+    width: 100%;
+   
+
     }
 
     /*BOTON ENVIAR SUBMIT*/
     .text-center{
     width: 90%;
-    margin-left: -15px;
+ 
     }
 
     
