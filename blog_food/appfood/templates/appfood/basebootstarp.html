@@ -142,27 +142,41 @@
      
          <!-- LO PUSE PARA RESOLVER EL ERROR QUE ME SALIA EN LA CONSOLA -->
 
-        <!-- LO PUSE PARA RESOLVER EL ERROR QUE ME SALIA EN LA CONSOLA -->
-
-       <!-- STILOS --------------------------------------------------------->
+        <!-- STILOS --------------------------------------------------------->
         <link rel="stylesheet" href="{% static 'appfood/css/style.css' %}">
         <link rel="stylesheet" href="{% static 'appfood/css/responsive.css' %}">
+
+        <!------------------------BOOSTRATP--------------->
+           <!-- Bootstrap CSS -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<!------------------------------------------------------------------------>
+
   
-     <!-- ICONOS -------------------------------------------------------------->
+
+        <!-------------FIN BOOSTRARP------------------------>
+  
+       <!-- ICONOS -------------------------------------------------------------->
         <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
         integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
         crossorigin="anonymous"></script>
 
-       <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+       <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-      <!-- COOKIES-----------------COOKIES-------------- -->
+       <!-- COOKIES-----------------COOKIES-------------- -->
       
-    <!--------SCROLL MENU------------------------------------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+       <!--------SCROLL MENU------------------------------------->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 
 
-      <!-- SCRIPT PARA CABECERA FIJA-------------------------------- -->
-              <script src="http://code.jquery.com/jquery-latest.js"></script>
+              <!-- SCRIPT PARA CABECERA FIJA-------------------------------- -->
+              <script src="https://code.jquery.com/jquery-latest.js"></script>
+           
 
 
        <!-- GOOGLE FONTS-->
@@ -171,140 +185,66 @@
         rel="stylesheet">
 
   
-    {% block extracss %}
+     {% block extracss %}
     {% endblock extracss %}
     </head>
 
    
+      <!-- CONTAINER GENERAL DEL BODY-->
+      <div id="wrapper">
+         <header >
+            
 
-    <!-- CONTAINER GENERAL DEL BODY-->
-    <div id="wrapper">
-        <header>
-              <div class="cabecera">
-                     <div class="logo">
-                     <a class="estilo-logo" href="{% url 'appfood:index' %}">
-                     <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
-                     </a>
-                     </div>
 
-            <!---------------------------------------------------------------------------->
-       
-   
-             
-              
-           
+ <!-----------------------------<nav class="navbar navbar-light bg-light fixed-top">--->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Offcanvas navbar</a>
+        <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
- <!----------------NAVEGACION------RESPONSIVE----------------------NAV-RESPONSIVE------------------------------->
-        <nav>
-           <ul class="nav">
-                <li> 
-                <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}" >Inicio </a>      
+
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
                 </li>
-                
-                <li> 
-                <a class="{% active 'appfood:recetas-saludables' %}"  href="{% url 'appfood:recetas-saludables' %}" >
-                   Recetas 
-                  <i class ="fa fa-caret-down"></i>
-                 </a>
-                        <ul>  
-                        {% load mptt_tags %} 
-                        <!-- LAS CATEGORIAS------->
-                        {% for kategory in kategories %}
-                        <li>
-                        <a href="/recetas-saludables/categoria/{{kategory.slug }} "style="text-decoration: none">
-                        {{ kategory.name }}</a>
-                       </li>
-                       {% endfor %}
-                      </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Notifications</a>
                 </li>
-
-                
-                <li >
-                <a class="{% active 'appfood:recetas-dieteticas' %}" href="{% url 'appfood:recetas-dieteticas' %}">Recetas dieteticas</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
                 </li>
-
-                  <li> 
-                <a class="{% active 'appfood:plan-comidas-saludables' %}" href="{% url 'appfood:plan-comidas-saludables' %}">Plan Comidas Sanas</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Switch account</a>
                 </li>
-
-
-                <li > 
-                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"> Dietas y Alimentacion Sana  </a> 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
                 </li>
-
-                
-
-                <li> 
-                <a class="{% active 'appfood:noticias-turismo-gastronomico' %} esconder"  href="{% url 'appfood:noticias-turismo-gastronomico' %}">Turismo</a>
-                       
-                </li>
-              
-                <li> 
-                <a class="{% active 'appfood:nosotros' %} esconder" href="{% url 'appfood:nosotros' %}">Nosotros </a> 
-                   </li>
-
-                   <li> 
-                <a class="{% active 'appcontact:contacto' %} esconder" href="{% url 'appcontact:contacto' %}">Contacto</a>    
-                </li>
-           
-   </ul>
-            <!-------------------------------------------------------->
-             <div id="controls">
-                 <form class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
-                  <!------------------------------------------------------------------>
-                    <div id="custom-search-input-header">
-	                  <input type="text"  name="q" 
-                    value= "{{ request.GET.q }}" class="sin-borde" 
-                    placeholder=  "   Buscar en Foodingemotion.com  " autocomplete="off" >
-                    <!---------------------------------------------------------------->             
-                    <button type="submit" name="submit" class="boton btn-succes" value="Search" >
-                    <span class="icon"><i class="fa fa-search"></i></span> 
-                  </button>
-                  </div>
-                <!--------------------------------------------------------------------->
-               </form>                 
-             </div>
-           <!---------------------------------------------------------------->
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+     
 
 
-             </nav> 
-            <!-----FIN  NAVEGATION------------>
-
-
-
-      <!------------------------------------------------------------------------->
-      <!---------------------------------------------------------------------------------------------------------------->
-                      <div class="suscribe">
-                      <a href="{% url 'appcontact:contacto' %}">   
-                      <h4>suscribete</h4>  
-                      </a>
-                      </div>
-
-      <!---------------------------------------------------------------------------->
-         
-
-         <!---<nav class="nav"> ---->
-
-     <!------------------------------------------------------------------------------------------------>
-        
-              
- 
-
-          <div class="menu-btn"> 
-                     <!---------------MENU RESPONSIVE -------------->
-                     <div class="hamburguesa">
-                     <div class="menu-btn__burger">  </div>
-                     </div>
-                        <!----FIN  MENU RESPONSIVE ------->        
-                   </div>
-                  <!----FIN  MENU BTN------>
-
-     <!---------------------------------------------------------------------------------------------->
-    </div>  <!-----FIN  CABECERA------------------------------------------------------------------------------------->
+    
 
 
   
-       
+    <!---------------------------------------------------------------------------------------------------------->
+
+
        </header>
             <!---------------FIN HEADER----------------------------------------->
 
@@ -777,7 +717,7 @@
                   <!-- PARA CONVERTIR EL MENU A ASPA-->
             <script src="{% static 'appfood/js/menuAspaArticulo.js' %}"></script>
 
-            
+             <script src="{% static 'appfood/js/menu-index.js' %}"></script>
     <!----------------------------------------------------------------------------------->
     <!----SCROLL MENU---DE LAS CATEGORIAS DE LAS OTRAS PAGINAS----------------------------------------------->
              <script type="text/javascript">

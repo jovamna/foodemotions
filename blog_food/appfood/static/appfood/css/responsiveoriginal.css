@@ -1743,16 +1743,16 @@
         display: block;
         position: relative;
         float: left;
-        width: 20%;
-        max-width: 140px;
-        height: 35px;
+        width: 50%;
+        max-width: 270px;
+        height: 38px;
       }
                 
       .cabecera .logo img {
         display: block;
         width: 100%;
-     
-        height: 35px;
+        max-width: 140px;
+        height: 38px;
         z-index: 40;
        }
            
@@ -1781,7 +1781,29 @@
     
 
 
-      
+      .cabecera .buscador{
+      display: none;
+      visibility: hidden;
+      }
+
+      .cabecera .buscador .controls{
+        display: none;
+        visibility: hidden;
+      }
+      .cabecera .buscador .controls #custom-search-input-header{
+        display: none;
+        visibility: hidden;
+      }
+
+      .buscador #controls   #custom-search-input-header .sin-borde{
+          display: none;
+          visibility: hidden;
+        }
+      /*DIV DEL MENU GRANDE*/
+
+      #controls-responsive .boton{
+        width: 8%;
+      }
   
     /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
      .cabecera .menu-btn {
@@ -2023,52 +2045,21 @@
                }
       
       
-      /*BUSCADOR EN EL NAV*/
-              
-      nav  #controls {
-        width: 100%;
-        max-width: 300px;
-        height: 10%;
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-        margin-left: 20px;
-        background-color: #000000;
-        }
-  
-       nav  #controls #custom-search-input-header{
-                width: 100%;
-                max-width: 300px;
-                }
-          
-                .buscador #controls   #custom-search-input-header .sin-borde{
-                    display: none;
-                    visibility: hidden;
-                  }
-                /*DIV DEL MENU GRANDE*/
-          
-                #controls-responsive .boton{
-                  width: 8%;
-                }
+      
+   
    /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
   /*margin-left: 5.4%;/*IMPORTANTE */
   nav{
-    display: flex;
-    flex-direction: column;
     position: fixed;
     width: 100%;
     max-width: 420px;
     height: 100%;
-     top:-6px;  /*IMPORTANTE para que arriba no tenga espacios */
+     top:-8px;  /*IMPORTANTE para que arriba no tenga espacios */
     left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
     opacity: 0.97;
      background-color: #000000;
      z-index: 200;
     }
-
-   nav .nav .esconder{
-     visibility: visible;
-   }
   
     nav .nav li a.active{
       text-decoration:line-through;
@@ -2081,27 +2072,27 @@
       max-width: 340px;
       display: flex;
       flex-direction: column;
-      height: 80%;  
+      height: 90%;  
        margin-left: 6px;
-      top : 5px;
+      top : 40px;
        z-index: 99; 
     
       }
   
        /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
       nav .nav li{
-       
+        margin-top: 5px;/*IMPORTANTE */
       list-style: none;
-      height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+      height: 40px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
       margin-left: 10px;
-      margin-bottom: 5px;
+      margin-bottom: 20px;
       cursor:pointer;
       }
       
       nav .nav li a {
       z-index: 100;
       background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-      height: 30px;
+      height: 55px;
       color: #fff;
       font-weight: lighter;
       font-size: 1.24rem;
