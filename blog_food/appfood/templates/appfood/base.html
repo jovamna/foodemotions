@@ -147,6 +147,43 @@
        <!-- STILOS --------------------------------------------------------->
         <link rel="stylesheet" href="{% static 'appfood/css/style.css' %}">
         <link rel="stylesheet" href="{% static 'appfood/css/responsive.css' %}">
+
+ <!--------------------------------ESTO ES DE BASE ARTICULO------>
+       <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+      <STYLE>
+      .children form {
+      margin-left: -48px;
+      /* will touch very left side */
+       }
+
+       .children .children form {
+      margin-left: -96px;
+      /* will touch very left side */
+      }
+  
+        a {
+            text-decoration: none;
+        }
+      </STYLE>
+
+   
+
+    
+
+     <!-- SCRIPT PARA ANIMAR AL HACER SCROLL parece no sirve-->
+     <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+  
+
+<!--------------------------------ESTO ES DE BASE ARTICULO------>
+
+
+
+
   
      <!-- ICONOS -------------------------------------------------------------->
         <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
@@ -275,9 +312,9 @@
             
            
    </ul>
-            <!-------------------------------------------------------->
-             <div id="controls">
-                 <form class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+          
+  <div id="controls">
+                 <form class="buscador" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
                   <!------------------------------------------------------------------>
                     <div id="custom-search-input-header">
 	                  <input type="text"  name="q" 
@@ -291,13 +328,13 @@
                 <!--------------------------------------------------------------------->
                </form>                 
              </div>
-           <!---------------------------------------------------------------->
-
 
              </nav> 
             <!-----FIN  NAVEGATION------------>
 
-
+  <!-------------------------------------------------------->
+           
+           <!---------------------------------------------------------------->
 
       <!------------------------------------------------------------------------->
       <!---------------------------------------------------------------------------------------------------------------->
@@ -350,24 +387,19 @@
      
  {% block content %}    
   {% block buscador-responsive %}
-        <div id="controls-responsive">
-              <form  method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
-                        <!---------------------------------------->
-                        <div id="custom-search-input-responsive">
-                             <!--------------------------->
-	                           <input type="text"  name="q" 
-                             value= "{{ request.GET.q }}" class="sin-borde"  id="search"
-                             placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off" >
-                            <!---------------------------------------------------------------->
-                            <!------------------------------------------------------------------------>
-                            <button type="submit" name="submit" class="boton btn-succes" value="Search" id="boton">
-                            <span class="icon"><i class="fa fa-search"></i></span> 
-                           </button>
-                           <!-------------------------------------------------------------------------->
-                      </div>
-                      <!------------------------------------------------------------------------------>
-            </form>                 
-       </div>
+                  <div id="controls-responsive">
+                <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
+                    <div id="custom-search-input-responsive">
+	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder="   Buscar .." >
+                                 
+                          <button type="submit" name="submit" class="boton-responsive btn-succes" value="Search"> 
+                          <span class="icon"><i class="fa fa-search"></i></span>   
+                          </button>
+                          <!--</span>-->
+                    </div>
+                </form>
+	        </div>
+
        {% endblock buscador-responsive %}
  
         <!-- ----------------------------------------PORTADA------------------------------->
@@ -707,13 +739,7 @@
                                     </ul>
                                 </div>
                                 <!-------------------------------------------------------------------------------------->
-                                <div class="box">
-                                        <h3>Date de alta para conseguir nuestras noticias.</h3>
-                                        <form>
-                                        <input type="text" name="" placeholder="Inscribirse...">
-                                        <input type="submit" name="" value="SIGN UP">
-                                        </form>
-                                </div>
+                               
                                 <!--------------------------------------------------------------------------->
                     </section>
                     <!---------------------FINAL SECTION ICON EMAIL---REDES Y BOX--------------------------------------------->

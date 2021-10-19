@@ -1884,144 +1884,41 @@
   
 
       /*..BUSCADOR PARA EL MOVIL..........................*/
+       /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
        #controls-responsive{
-      display: flex;
-       flex-direction: column;
-        width: 91.6%;
-        height: 45px;
-       margin: auto;
-       margin-top: 2px;
-       margin-bottom: 8px;
-        }
-  
-  
-   
-         /*..f4f4f4..     border: 1.3px solid #e7e7e7;*/
-       #custom-search-input-responsive{
-      width: 100%;
-      height: 38px;
-      padding-top: 3px;
-      padding-bottom: 2px;
-      padding-left: 3px;
-      padding-right: 3px;
-      border-radius: 5px 5px 5px 5px;
-      z-index: 6;
-      vertical-align: middle;
-      white-space: nowrap;
-      position: relative;
-      border: 1px solid #e7e7e7;
-      }
-  
-  
+        display: block;
+        visibility: visible;
+        width: 92%;
+        height: 35px;
+        margin-top: 58px;  
+        margin: auto;
+         }
     
-       #custom-search-input-responsive .sin-borde{
-       width: 85%;
-      height: 28px;
-      border-radius: 8px;
-      font-size: 0.7rem; 
-      }
-  
-  
-  
-     #custom-search-input-responsive .boton{
-      height: 28px;
-      width: 15%;
-      border-radius: 8px;
-      background-color: #fff;
-      z-index: 6;
-      }
-  
-      #controls-responsive #custom-search-input-responsive .icon .fa-search{
-        color: #000000;
-        font-size: 1rem;
+         #custom-search-input-responsive{
+         width:  100%;
+         height: 35px;
+         border: 1px solid #c9c9c9;
+         border-radius: 4px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         margin: auto;
+         }
+    
+    
+         #controls-responsive .sin-borde-responsive{
+         width: 80%;
+         height: 32px;
+         display: inline-flex;
         }
-        
-        #controls-responsive input#search{
-          width: 85%;
-          height: 30px;
-          border: none;
-          font-size: 0.8rem;
-          float: left;
-          color: #262626;
-          padding-left: 4px;
-          -webkit-border-radius: 5px;
-          -moz-border-radius: 5px;
-          border-radius: 5px;
-            -webkit-transition: background .55s ease;
-          -moz-transition: background .55s ease;
-          -ms-transition: background .55s ease;
-          -o-transition: background .55s ease;
-          transition: background .55s ease;
+    
+    
+         #controls-responsive .boton-responsive{
+         width: 20%;
+         height: 32px;
+         background-color: #ffffff;
           }
-      
-          #controls-responsive button#boton{
-          width: 15%;
-          height: 30px;
-          }
-      
-      
-          #custom-search-input-responsive input#search:hover,
-          #custom-search-input-responsive input#search:focus, 
-          #custom-search-input-responsive input#search:active{
-          outline:none;
-          background: #ffffff;
-          }
-      
-      
-      
-          
-          .input, button {
-            width: 100%;
-            box-sizing: border-box; /* add this */
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-          }
-      
-      
-          input[type=text]{
-            box-sizing:border-box;
-           }
-      
-      
-            input {
-            font-style: Roboto;
-            font-variant-ligatures:normal ;
-            font-variant-caps: normal;
-            font-variant-numeric:normal ;
-            font-variant-east-asian: normal;
-            font-stretch: normal;
-            }
-      
-      
-           form{
-          display: block;
-          }
-      
-       
-      
-         
-              #controls-responsive #custom-search-input-responsive  input#text::-webkit-input-placeholder {
-              color: #2d2d2d;
-              z-index: 6;
-               }
-                
-      
-      
-              #controls-responsive #custom-search-input-responsive  input#text:-moz-placeholder { /* Firefox 18- */
-              color: #2d2d2d;
-                z-index: 6; 
-               }
-                
-            #controls-responsive #custom-search-input-responsive  input#text::-moz-placeholder {  /* Firefox 19+ */
-                  color: #65737e; 
-                  z-index: 6; 
-               }
-                
-             #controls-responsive #custom-search-input-responsive  input#text:-ms-input-placeholder {  
-                  color: #65737e;  
-                  z-index: 6;
-               }
-      
+       /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
       
       /*BUSCADOR EN EL NAV*/
               
@@ -2065,10 +1962,12 @@
     max-width: 420px;
     height: 100%;
     max-height: 1200px;
-     top:-0.4px;  /*IMPORTANTE para que arriba no tenga espacios */
+    top:0;
+    bottom: 0;
     left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
     opacity: 0.97;
      background-color: #000000;
+     overflow-y: scroll;
      z-index: 200;
     }
 
@@ -3388,14 +3287,14 @@ width: 100%;
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 520px;
+      
       background-color: #f4f4f4;
       }
       
        /*CAJA DE FOOD EMOTIONS E ICONOS SOCALES Y BOX */
      .icon-email{
       width: 100%;
-      height: 200px;
+      height: 120px;
       display: flex;
       flex-direction: column;
       margin: auto;
@@ -3474,50 +3373,14 @@ width: 100%;
           border: solid #E9E9E9;
         }
         
-   /*SUBCAJA BOC */
-    .box{
-    width: 100%;
-    display: block;
-    position: relative;
-    float: left;
-    height: 80px;
-   margin: auto;
-    }
   
-    .box form{
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      margin: auto;
-      }
-  
-      .box h3{
-        font-size: 1rem;
-        text-align: center;
-        letter-spacing: -1px;
-        word-spacing: -1px;
-        font-family: 'Fira Sans', sans-serif;
-    
-         }
-       
-         /*CAJA ENVIO BLANCO DONDE SE ESCROBE*/
-        .box input[type="text"]{
-          width: 70%;
-         
-         }
-    
-        /*CAJA OSUCRA DONDE SE ENVIA*/
-        .box input[type="submit"]{
-          width: 25%;
-         
-         }
         
         
       
        /*caja */
   .menu-footer{
   width:100%;
-  height: 140px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   }
@@ -3530,7 +3393,7 @@ width: 100%;
    /*TITULO DEL MENU*/
    .menu-footer .footer-text h1{
    text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
    word-spacing: -2px;
    letter-spacing: -1.5px;
    }
@@ -3551,7 +3414,7 @@ width: 100%;
     flex-direction: column;
    line-height: 17px;
    font-weight: bold;
-   font-size: 1rem;
+   font-size: 0.9rem;
    color: #2d2d2d;
    letter-spacing: -0.5px;
    align-items: center;     /*IMPORTANTE*/
