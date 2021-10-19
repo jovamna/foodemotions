@@ -196,7 +196,32 @@
 
  <!----------------NAVEGACION------RESPONSIVE----------------------NAV-RESPONSIVE------------------------------->
         <nav>
+                <div class="logo-esconder"> 
+                 <a class="estilo-logo" href="{% url 'appfood:index' %}">
+                     <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
+                     </a>
+                </a>    
+                </div>
+
+             <div class="buscador-esconder"> 
+              <form class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                  <!------------------------------------------------------------------>
+                    <div id="custom-search">
+	                  <input type="text"  name="q" 
+                    value= "{{ request.GET.q }}" class="sin-borde" 
+                    placeholder=  "   Buscar en Foodingemotion.com  " autocomplete="off" >
+                    <!---------------------------------------------------------------->             
+                    <button type="submit" name="submit" class="boton btn-succes" value="Search" >
+                    <span class="icon"><i class="fa fa-search"></i></span> 
+                  </button>
+                  </div>
+                <!--------------------------------------------------------------------->
+               </form>                 
+           
+           </div>
+
            <ul class="nav">
+               
                 <li> 
                 <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}" >Inicio </a>      
                 </li>
@@ -246,6 +271,8 @@
                    <li> 
                 <a class="{% active 'appcontact:contacto' %} esconder" href="{% url 'appcontact:contacto' %}">Contacto</a>    
                 </li>
+
+            
            
    </ul>
             <!-------------------------------------------------------->

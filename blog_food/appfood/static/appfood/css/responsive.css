@@ -2052,6 +2052,11 @@
                 }
    /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
   /*margin-left: 5.4%;/*IMPORTANTE */
+
+  #controls{
+    display: none;
+   visibility: hidden;
+  }
   nav{
     display: flex;
     flex-direction: column;
@@ -2059,13 +2064,67 @@
     width: 100%;
     max-width: 420px;
     height: 100%;
-     top:-6px;  /*IMPORTANTE para que arriba no tenga espacios */
+    max-height: 1200px;
+     top:-0.4px;  /*IMPORTANTE para que arriba no tenga espacios */
     left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
     opacity: 0.97;
      background-color: #000000;
      z-index: 200;
     }
 
+  nav .logo-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    visibility: visible;
+    margin-top: 30px;
+    height: 30px;
+    border-bottom: 1px solid #aaaaaa;
+
+  }
+
+  nav .logo-esconder img{
+    width: 100%;
+    max-width: 120px;
+    margin-left: 20px;
+  }
+
+  nav .buscador-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    visibility: visible;
+    margin-top: 20px;
+    height: 50px;
+
+  }
+
+    .d-flex{
+      width: 100%;
+      max-width: 350px;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      margin-left: 18px;
+    }
+
+    #custom-search{
+      width: 100%;
+      max-width: 330px;
+      height: 50px;
+    }
+
+    #custom-search .sin-borde{
+      width: 90%;
+      max-width: 310px;
+      height: 40px;
+    }
+
+    #custom-search .boton{
+      width: 10%;
+      max-width: 20px;
+      height: 40px;
+    }
    nav .nav .esconder{
      visibility: visible;
    }
@@ -2083,7 +2142,7 @@
       flex-direction: column;
       height: 80%;  
        margin-left: 6px;
-      top : 5px;
+    
        z-index: 99; 
     
       }
@@ -2169,6 +2228,7 @@
     background: white;
     }
 
+   
        /*FIN ANIMACION SUBRAYADO position: relative;  /*ESTO ARREGLO LA CABECERA    */
        .portada{
      display: block;

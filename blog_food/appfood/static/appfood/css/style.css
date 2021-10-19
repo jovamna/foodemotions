@@ -295,6 +295,15 @@ cursor: pointer;
     display: none;
     visibility: hidden;
   }
+  nav .logo-esconder{
+    display: none;
+    visibility: hidden;
+  }
+
+  nav .buscador-esconder{
+    display: none;
+    visibility: hidden;
+  }
    
     nav{
       display: flex;
