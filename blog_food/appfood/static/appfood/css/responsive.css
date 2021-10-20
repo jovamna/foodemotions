@@ -27,6 +27,7 @@
       margin: 0 auto;
       margin-left: auto;
       margin-right: auto;
+      background-color: rosybrown;
      }
   
     
@@ -40,394 +41,468 @@
     #wrapper > * {
     padding: 10px;
     }  
-     
-   .navbar-expand-lg{
-     width: 100%;
-     visibility: visible;
-     background-color: magenta;
-   }
 
-   .navbar-nav {
-    flex-direction: row;
-    visibility: visible;
-    overflow: visible;
-   }
-   .navbar-expand {
-     background-color: magenta;
-   }
-    .container-fluid{
-      display: block;
-      visibility: visible;
-      width: 100%;
-      background-color: lime;
-    }
-    .navbar{
-      display: block;
-      background-color: red;
-   
-  }
-  
-    header{
-    position: fixed;
-    top:0;
-    width: 100%;
-    max-width: 350px;
-    height: 50px;
-    margin: auto;   
-    z-index: 2000;   /*IMPORTANTE  */
-    box-shadow: 0 8px 6px -6px #DCDCDC; 
-    }
-      
-      
-    header.black{
-    width: 100%;
-    max-width: 350px;
-    height:  50px;
 
-      }
-    
-  
-         
+
     #container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    margin-top: 50px;
-    padding-left: 0;
-    padding-right: 0;
-    }
-
-
-     /*.. #DCDCDC ..*/
-    .cabecera{
-    width: 100%;
-   display: block;
-   position: relative;
-   float: left;
-    height: 33px;
-    }
-     
-   
-    /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
-    .logo{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      margin-top: 50px;
+      padding-left: 0;
+      padding-right: 0;
+      }
+  
+   /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+   header{
     display: block;
-    position: relative;
-    float: left;
-    width: 25%;
-    height: 33px;
-    }
-           
-       
-   .logo img{
-    width: 100%;
-    }
-     
-    
-       /*caja hay 2. A */
-    .menu-btn {
-    display: block;
-    position: relative;
-    float: right;
-    width: 35%;
-    max-width: 200px;
-    height: 33px;
-    }
-       
-    .suscribe {
-    display: block;
-    position: relative;
-    float: left;
-    width: 85%;
-    max-width: 85px;
-    height: 16px;
-    margin-top: 16px;
-    }
-       
-         
-    .suscribe a h4{
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.2px;
+    width:100%;
+    height: 55px;
+    top:0;
+    left: 0;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
     margin: auto;
-    font-family: 'Times New Roman', Times, serif;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
     }
-        
-    .cabecera .buscador{
-    display: none;
-    }
-    
-    /*..BUSCADOR PARA EL MOVIL..........................*/
   
-       
-     #container  #controls-responsive{
-       display: block;
-        width: 93.5%;
-        height: 40px;
-        margin-left: 9.5px;
-       margin-bottom: 6px;
-        z-index: 10;
-        }
+
+      header.black{
+      height: 55px;
+      background-color: #fff;
+     }
+
   
-  
-   #controls-responsive   #custom-search-input-responsive{
-      width: 99%;
-      height: 28px;
+     
+     .cabecera{
+      width: 100%;
       display: flex;
       flex-direction: row;
-      padding: 0.4px 0.4px;
-      border-radius: 3px;
-      border: 1px solid #f4f4f4;
-      }
-  
-  
-  
-     #controls-responsive   #custom-search-input-responsive .sin-borde{
-      height: 25px;
-      width: 90%;
-      border-radius: 6px;
-      font-size: 0.7em;
-      font-weight: lighter;
-      padding-left: 10px; /*MUEVE LA LETRA*/
-      }
-  
-  
-  
-    #controls-responsive   #custom-search-input-responsive .boton{
-    height: 25px;
-    width: 10%;
-    border-radius: 6px;
-    background-color: #fff;
+      justify-content: space-between;
+      height: 38px;
+      background-color: indigo;
+     }
+         
+
+    /*caja */
+    .cabecera .logo{
+      display: block;
+      position: relative;
+      float: left;
+      width: 20%;
+   
+      height: 35px;
+    }
+              
+    .cabecera .logo img {
+      display: block;
+      width: 100%;
+      max-width: 140px;
+      min-width: 140px;
+   
+      height: 35px;
+      z-index: 40;
+     }
+         
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+   
+   
+    .suscribe{
+    display: block;
+    position: relative;
+    float: left;
+    width: 20%;
+    max-width: 120px;
+    height: 38px;
+    background-color: lightcoral;
     }
   
+ 
+   .suscribe a  h4{
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 5;
+   
+    }
   
-     
-    /* CUANDO SE ESCRIBE EN EL PLACEHOLDER..*/
-    #controls-responsive #custom-search-input-responsive input[type=text]:focus {
-    outline: none;
-    border: 0;
+
+
+    
+
+  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+   .cabecera .menu-btn {
+    display: block;
+    position: relative;
+    float: left;
+    width: 10%;
+    max-width: 50px;
+    height: 38px;
+    margin: auto;
+    background-color: lightslategrey;
     }
 
-      
- 
   
-         /*---------------------------------------------------------------------*/
-       /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-      .menu-btn .menu-btn__burger {
+  .menu-btn .hamburguesa{
+  display: block;
+  position: relative;
+  float:left;
+  width: 100%;
+  height: 30px;
+  max-width: 40px;
+   }
+
+     /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+   .menu-btn .hamburguesa .menu-btn__burger {
       display: block;
       position: relative;
       float: right;
-      margin-top: 20px;
-     width: 34px;
+      margin-top: 14.5px;
+      width: 37px;
       height: 4px;
       background: #2d2d2d;
       border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(255,101,47,.2);
       transition: all .5s ease-in-out;
       z-index: 1000;
       }
-      
   
-  
-      .menu-btn__burger::before,
-      .menu-btn__burger::after {
-      content: '';
-      position: absolute;
-      height: 4px;
-      width: 34px;  /*IMPORTANTE*/
-      background:#2d2d2d;
-      border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-      transition: all .5s ease-in-out;
-      z-index: 800;  
-      }
-  
-        
-      .menu-btn__burger::before {
-      transform: translateY(-8px);
-      z-index:3000;
-      }
-  
-  
-      .menu-btn__burger::after {
-      transform: translateY(8px);
-      z-index:3000;
-      }
-  
-  
-      /* ANIMATION */
-      .menu-btn.open .menu-btn__burger {
-      transform: translateX(-50px);
-      background: transparent;
-      box-shadow: none;
-      }
-  
-  
-  
-      .menu-btn.open .menu-btn__burger::before {
-      transform: rotate(45deg) translate(35px, -35px);
-      background: #fff;
-      }
-  
-      .menu-btn.open .menu-btn__burger::after {
-      transform: rotate(-45deg) translate(35px, 35px);
-      background: #fff;
-      }
-  
-  
-  
-  
-      .menu-btn__burger:hover{
-      background-color: #639a3a;
-      }
-      
-  
-      .menu-btn__burger:hover::before,
-      .menu-btn__burger:hover::after{
-      background-color: #639a3a;
-      }
-  
-  
-    /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+
+
+       /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 36px;
+  background:#2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+  z-index: 800;  
+  }
+
     
-    nav .nav li a.active{
-      text-decoration:line-through;
-      color: #568632;
-      }
-      /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
-    /*margin-left: 5.4%;/*IMPORTANTE */
-    nav{
-    position: fixed;
-    width: 100%;
-    max-width: 319px;
-    height: 100%;
-     top:-8px;  /*IMPORTANTE para que arriba no tenga espacios */
-    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-    opacity: 0.97;
-   background-color: #000000;
-   z-index: 200;
-   visibility: visible;
-    }
+  .menu-btn__burger::before {
+  transform: translateY(-7px);
+  z-index:3000;
+  }
+
+
+  .menu-btn__burger::after {
+  transform: translateY(7px);
+  z-index:3000;
+  }
+
+
+  /* ANIMATION */
+  .hamburguesa.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  }
+
+
+   /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+ 
+  }
+
+
+  /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+
+  }
+
+
+
+
+  .menu-btn__burger:hover{
+  background-color: #7aac41;
+  }
   
-    .responsive{
-      position: fixed;
-      width: 100%;
-      max-width: 319px;
-      height: 100%;
-       top:-8px;  /*IMPORTANTE para que arriba no tenga espacios */
-      left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-      opacity: 0.97;
-     background-color: #000000;
-     z-index: 200;
-      visibility: visible;
-    }
- /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL*/
-  nav ul{
-    margin-left: 10%;/*IMPORTANTE */
-    margin-top: 3%;/*IMPORTANTE */
-    width: 48%;/*IMPORTANTE */
-    height: 90%;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    z-index:30;
-    background-color: aqua;
-    }
-     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-      nav .nav{
-     width:100%; 
-     max-width: 290px;
-     height: 100%;
-     display: flex;
-     flex-direction: column;
-     margin-left: 2px;
-     margin-top: 30px;
-     z-index: 60;
-      }
-  
-       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-      nav .nav li{
-      list-style: none;
-      height: 40px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-      margin-left: 10px;
-      margin-bottom: 10px;
-      margin-top: 12px;
-      cursor:pointer;
-      }
-      
-      nav .nav li a {
-      z-index: 100;
-      background-color: #000000;  /*IMPORTANTE  DAR COLOR NEGRO por sale borroso la letra*/
+
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #7aac41;
+  }
+
+
+     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+
+
+    /*..BUSCADOR PARA EL MOVIL..........................*/
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+     #controls-responsive{
       display: block;
-      width: 100%;
-      height: 40px;
-      color: #fff;
-      font-weight: lighter;
-      font-size: 1rem;
-      text-transform: lowercase;
-      letter-spacing: 1px;
-      font-family:  sans-serif;
-      }
-    
-       /*IMPORTANTE*/
+      position: relative;
+      float: left;
+      width: 92%;
+      height: 50px;
+      margin-top: 58px;  
+      margin: auto;
+       }
   
-       
-      
-   
-        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-        nav .nav li:hover > ul {
+       #custom-search-input-responsive{
+       width:  100%;
+       height: 50px;
+       border: 1px solid #c9c9c9;
+       border-radius: 4px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin: auto;
+       background-color: darksalmon;
+       }
+  
+  
+   #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+       display: block;
+       position: relative;
+       float: left;
+       width: 100%;
+     
+      }
+  
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+       #controls-responsive .boton-responsive{
          display: block;
-        margin-left: -200px;
-        height: 200px;
-        visibility: visible; 
-        z-index: 598;
+         position: relative;
+         float: right;
+       width: 10%;
+       padding: 12px 20px;
+       background-color: #ffffff;
         }
-  
-      nav .nav li ul li a{
-      font-size: 1rem;
-      display: block;
-      position: absolute;
-      max-width: 200px;
-      width: 100%;
-      margin-left: -2px;
-      padding-bottom: -2px;
-      margin-left: -76px;
-      }
-  
-       nav .nav ul {
-      visibility: hidden;
-      }
-  
-        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+     /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
     
-   /*ANIMACION SUBRAYADO */
-   nav a {
-   display: inline-block;
-   position: relative;
-   color: white;
-   text-decoration: none;
-   z-index: 40;
-   }
-  
-    nav  a:after {
-   content: "";
-   display: block;
-   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-   height: 2px;
-   width: 0px;
-   transition: all .8s;
-   z-index: 10;
-   }
-  
-  
-    /* width: 100%;*/
-    nav  a:hover:after {
-    padding-left: 40px;
-    padding-right: -150px;
-    height: 2px;
-    background: white;
+    /*BUSCADOR EN EL NAV*/
+            
+    nav  #controls {
+      width: 100%;
+      max-width: 300px;
+      height: 10%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-left: 20px;
+      background-color: #000000;
+      }
+
+     nav  #controls #custom-search-input-header{
+              width: 100%;
+              max-width: 300px;
+              }
+        
+              .buscador #controls   #custom-search-input-header .sin-borde{
+                  display: none;
+                  visibility: hidden;
+                }
+              /*DIV DEL MENU GRANDE*/
+        
+              #controls-responsive .boton{
+                width: 8%;
+              }
+ /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+/*margin-left: 5.4%;/*IMPORTANTE */
+
+#controls{
+  display: none;
+ visibility: hidden;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  max-height: 1200px;
+  top:0;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+  opacity: 0.97;
+   background-color: #000000;
+   overflow-y: scroll;
+   z-index: 200;
+  }
+
+nav .logo-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 30px;
+  height: 30px;
+  border-bottom: 1px solid #aaaaaa;
+
+}
+
+nav .logo-esconder img{
+  width: 100%;
+  max-width: 120px;
+  margin-left: 20px;
+}
+
+nav .buscador-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 20px;
+  height: 50px;
+
+}
+
+  .d-flex{
+    width: 100%;
+    max-width: 350px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 18px;
+  }
+
+  #custom-search{
+    width: 100%;
+    max-width: 330px;
+    height: 50px;
+  }
+
+  #custom-search .sin-borde{
+    width: 90%;
+    max-width: 310px;
+    height: 40px;
+  }
+
+  #custom-search .boton{
+    width: 10%;
+    max-width: 20px;
+    height: 40px;
+  }
+ nav .nav .esconder{
+   visibility: visible;
+ }
+
+  nav .nav li a.active{
+    text-decoration:line-through;
+    color: #568632;
     }
 
+   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+    .cabecera nav .nav{
+    width:100%; 
+    height: 100%;
+    max-height: 950px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
   
+     margin-left: 6px;
+          margin-top: 10px;
+          overflow-y: scroll;
+     z-index: 99; 
+     background-color: darkslateblue;
+    }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+     
+    list-style: none;
+    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 15px;
+    cursor:pointer;
+    }
+    
+    nav .nav li a {
+    z-index: 100;
+    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+    height: 30px;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.24rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family:  sans-serif;
+    padding-top: 0;
+    margin-top: 0;
+    }
   
+     /*IMPORTANTE*/
+
+     
+    
+ 
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover > ul {
+       display: block;
+      margin-left: -200px;
+      height: 200px;
+      visibility: visible; 
+      z-index: 598;
+      }
+
+    nav .nav li ul li a{
+    font-size: 1rem;
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    margin-left: -2px;
+    padding-bottom: -2px;
+    margin-left: -76px;
+    }
+
+     nav .nav ul {
+    visibility: hidden;
+    }
+
+      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+  
+ /*ANIMACION SUBRAYADO */
+ nav a {
+ display: inline-block;
+ position: relative;
+ color: white;
+ text-decoration: none;
+ z-index: 40;
+ }
+
+  nav  a:after {
+ content: "";
+ display: block;
+ margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+ height: 2px;
+ width: 0px;
+ transition: all .8s;
+ z-index: 10;
+ }
+
+
+  /* width: 100%;*/
+  nav  a:hover:after {
+  padding-left: 40px;
+  padding-right: -150px;
+  height: 2px;
+  background: white;
+  }
+
+ 
+  
+         
+
+
+   
     /*FIN ANIMACION SUBRAYADO position: relative;  /*ESTO ARREGLO LA CABECERA*/
     .portada{
     display: block;
@@ -1402,17 +1477,7 @@
     margin-left: 10px;
   }
 
-  /*..FIN PORTADA GRADIENTE..*/
   
-   .texto-animado{
-     width: 100%;
-     margin: auto;
-     margin-bottom: 40px;
-   }
-  
-   .texto-animado h1{
-    font-size: 1rem;
-  }
   
   
      /*FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN...............................................................................*/
@@ -1524,54 +1589,7 @@
             border: solid #E9E9E9;
           }
           
-       /*SUBCAJA BOC */
-      .box{
-      width: 100%;
-      display: block;
-      position: relative;
-      float: left;
-      height: 80px;
-      margin: auto;
-      }
-    
-      .box form{
-      display: flex;
-      flex-direction: row;
-      width: 90%;
-      margin: auto;
-      }
-  
-       .box h3{
-      font-size: 1rem;
-      text-align: center;
-      letter-spacing: -1px;
-      word-spacing: -1px;
-      font-family: 'Fira Sans', sans-serif;
-       }
      
-         /*CAJA ENVIO BLANCO DONDE SE ESCROBE*/
-        .box input[type="text"]{
-        width: 70%;
-        height: 39px;
-        font-size: 0.9rem;
-        border-radius: 3px 2px 2px 3px;
-        padding: 0 25px;
-        border: 2px solid 	#DCDCDC;
-       }
-  
-        /*CAJA OSUCRA DONDE SE ENVIA*/
-         .box input[type="submit"]{
-        width: 25%;
-        height: 39px;
-        border-radius: 3px 6 6 3px;
-        font-size: 0.6rem;
-        left: -1px;
-        top: 0px;
-        border: 2px solid 	#2d2d2d;
-       }
-      
-      
-    
          /*caja */
     .menu-footer{
     width:100%;
@@ -1637,30 +1655,11 @@
   
 
 
-  /*.........................*/
+ 
 
-  @media (max-width: 991.98px) {
-    .offcanvas-collapse {
-        position: fixed;
-        top: 56px;
-        /* Height of navbar */
-        bottom: 0;
-        right: 100%;
-        width: 100%;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        overflow-y: auto;
-        visibility: hidden;
-        background-color: #343a40;
-        transition: transform .3s ease-in-out, visibility .3s ease-in-out;
-    }
 
-    .offcanvas-collapse.open {
-        visibility: visible;
-        transform: translateX(100%);
-    }
-}
-/*...................................*/
+
+
 
    /*.....................MOVIL MEDIO.............*/
   @media only screen and (min-width: 360px) and (max-width: 640px){
@@ -1682,6 +1681,7 @@
     margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
+    background-color: lawngreen;
    }
 
   
@@ -1735,6 +1735,7 @@
         flex-direction: row;
         justify-content: space-between;
         height: 38px;
+        background-color: indigo;
        }
            
 
@@ -1744,13 +1745,15 @@
         position: relative;
         float: left;
         width: 20%;
-        max-width: 140px;
+     
         height: 35px;
       }
                 
       .cabecera .logo img {
         display: block;
         width: 100%;
+        max-width: 140px;
+        min-width: 140px;
      
         height: 35px;
         z-index: 40;
@@ -1760,12 +1763,13 @@
      
      
       .suscribe{
-        display: block;
-        position: relative;
-        float: right;
+      display: block;
+      position: relative;
+      float: left;
       width: 20%;
       max-width: 120px;
       height: 38px;
+      background-color: lightcoral;
       }
     
    
@@ -1791,6 +1795,8 @@
       width: 10%;
       max-width: 50px;
       height: 38px;
+      margin: auto;
+      background-color: lightslategrey;
       }
 
     
@@ -1809,7 +1815,7 @@
         position: relative;
         float: right;
         margin-top: 14.5px;
-        width: 37px;
+        width: 28px;
         height: 4px;
         background: #2d2d2d;
         border-radius: 2px;
@@ -1825,7 +1831,7 @@
     content: '';
     position: absolute;
     height: 4px;
-    width: 36px;
+    width: 28px;
     background:#2d2d2d;
     border-radius: 2px;
     transition: all .5s ease-in-out;
@@ -1866,24 +1872,228 @@
 
     }
 
-
-
-
     .menu-btn__burger:hover{
-    background-color: #7aac41;
-    }
+      background-color: #2d2d2d;
+      }
+      
+    /*#7aac41*/
+      .menu-btn__burger:hover::before
+     {
+      background-color: #2d2d2d;
+      }
+  
     
+      .menu-btn__burger:hover::after{
+      background-color: #2d2d2d;
+      }
+  
 
-    .menu-btn__burger:hover::before,
-    .menu-btn__burger:hover::after{
-    background-color: #7aac41;
-    }
 
+   
 
        /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
   
 
-      /*..BUSCADOR PARA EL MOVIL..........................*/
+     /*BUSCADOR EN EL NAV GRANDE HAY QUE OLCUTARLO*/
+  #controls{
+    display: none;
+   visibility: hidden;
+  }
+
+
+
+  nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    max-height: 1200px;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+    opacity: 0.97;
+     background-color: #000000;
+     overflow-y: scroll;
+     z-index: 200;
+    }
+
+  nav .logo-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    visibility: visible;
+    margin-top: 30px;
+    height: 30px;
+    border-bottom: 1px solid #aaaaaa;
+
+  }
+
+  nav .logo-esconder img{
+    width: 100%;
+    max-width: 120px;
+    margin-left: 20px;
+  }
+
+     /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+     nav .buscador-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    visibility: visible;
+    margin-top: 20px;
+    height: 50px;
+    background-color: orangered;
+  }
+
+    .d-flex{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      margin-left: 18px;
+      background-color: blue;
+    }
+
+    #custom-search{
+      width: 100%;
+    
+      height: 50px;
+      background-color: orange;
+    }
+
+    #custom-search .sin-borde{
+      width: 90%;
+      height: 40px;
+    }
+
+    #custom-search .boton{
+      width: 8%;
+      margin-left: -5px;
+      height: 40px;
+    }
+     /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+      nav .nav .esconder{
+     visibility: visible;
+     }
+  
+       nav .nav li a.active{
+      text-decoration:line-through;
+      color: #568632;
+      }
+  
+     /* UL  */
+      .cabecera nav .nav{
+      width: 90%; 
+      height: 100%;
+      max-height: 950px;
+      display: flex;
+      flex-direction: column;
+       margin-left: 6px;
+      margin-top: 10px;
+      overflow-y: scroll;
+       z-index: 99; 
+       background-color: darkslateblue;
+      }
+  
+       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+      nav .nav li{
+       
+      list-style: none;
+      height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+      margin-left: 10px;
+      margin-bottom: 15px;
+      cursor:pointer;
+      }
+      
+      nav .nav li a {
+      z-index: 100;
+      background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+      height: 30px;
+      color: #fff;
+      font-weight: lighter;
+      font-size: 1.24rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  sans-serif;
+      padding-top: 0;
+      margin-top: 0;
+      }
+    
+   
+        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+        nav .nav li:hover > ul {
+         display: block;
+        margin-left: -200px;
+        height: 200px;
+        visibility: visible; 
+        z-index: 598;
+        }
+  
+      nav .nav li ul li a{
+      font-size: 1rem;
+      display: block;
+      max-width: 200px;
+      width: 100%;
+      margin-left: -2px;
+      padding-bottom: -2px;
+      margin-left: -76px;
+      }
+  
+       nav .nav ul {
+      visibility: hidden;
+      }
+  
+        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+    
+   /*ANIMACION SUBRAYADO */
+   nav a {
+   display: inline-block;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   z-index: 40;
+   }
+  
+   nav  a:after {
+    content: "";
+    display: block;
+    margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+    height: 2px;
+    width: 0px;
+    transition: all .8s;
+    z-index: 10;
+    }
+
+ 
+  
+  /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+   nav  .estilo-logo:after{
+     text-decoration: none;
+     height: 0px;
+     content: "";
+     display: none;
+     margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+     height: 0px;
+     width: 0px;
+     transition: all .0s;
+     z-index: 10;
+   }
+
+  
+   
+    /* width: 100%;*/
+    nav  a:hover:after {
+    padding-left: 40px;
+    padding-right: -150px;
+    height: 2px;
+    background: white;
+    }
+
+
+     /*..BUSCADOR PARA EL MOVIL..........................*/
        /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
        #controls-responsive{
         display: block;
@@ -1930,7 +2140,7 @@
          padding: 12px 20px;
          background-color: #ffffff;
           }
-       /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
+       /*FIN BUSCADOR RESPONSIVE QU ESTA DEBAJO DE LA CABECERA  EN LA PAGINA*/
       
       /*BUSCADOR EN EL NAV*/
               
@@ -1961,188 +2171,6 @@
                 }
    /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
   /*margin-left: 5.4%;/*IMPORTANTE */
-
-  #controls{
-    display: none;
-   visibility: hidden;
-  }
-  nav{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    max-width: 420px;
-    height: 100%;
-    max-height: 1200px;
-    top:0;
-    bottom: 0;
-    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-    opacity: 0.97;
-     background-color: #000000;
-     overflow-y: scroll;
-     z-index: 200;
-    }
-
-  nav .logo-esconder{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    visibility: visible;
-    margin-top: 30px;
-    height: 30px;
-    border-bottom: 1px solid #aaaaaa;
-
-  }
-
-  nav .logo-esconder img{
-    width: 100%;
-    max-width: 120px;
-    margin-left: 20px;
-  }
-
-  nav .buscador-esconder{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    visibility: visible;
-    margin-top: 20px;
-    height: 50px;
-
-  }
-
-    .d-flex{
-      width: 100%;
-      max-width: 350px;
-      height: 50px;
-      display: flex;
-      flex-direction: row;
-      margin-left: 18px;
-    }
-
-    #custom-search{
-      width: 100%;
-      max-width: 330px;
-      height: 50px;
-    }
-
-    #custom-search .sin-borde{
-      width: 90%;
-      max-width: 310px;
-      height: 40px;
-    }
-
-    #custom-search .boton{
-      width: 10%;
-      max-width: 20px;
-      height: 40px;
-    }
-   nav .nav .esconder{
-     visibility: visible;
-   }
-  
-    nav .nav li a.active{
-      text-decoration:line-through;
-      color: #568632;
-      }
-  
-     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-      .cabecera nav .nav{
-      width:100%; 
-      height: 100%;
-      max-height: 950px;
-      max-width: 340px;
-      display: flex;
-      flex-direction: column;
-    
-       margin-left: 6px;
-            margin-top: 10px;
-            overflow-y: scroll;
-       z-index: 99; 
-       background-color: darkslateblue;
-      }
-  
-       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-      nav .nav li{
-       
-      list-style: none;
-      height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-      margin-left: 10px;
-      margin-bottom: 15px;
-      cursor:pointer;
-      }
-      
-      nav .nav li a {
-      z-index: 100;
-      background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-      height: 30px;
-      color: #fff;
-      font-weight: lighter;
-      font-size: 1.24rem;
-      text-transform: lowercase;
-      letter-spacing: 1px;
-      font-family:  sans-serif;
-      padding-top: 0;
-      margin-top: 0;
-      }
-    
-       /*IMPORTANTE*/
-  
-       
-      
-   
-        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-        nav .nav li:hover > ul {
-         display: block;
-        margin-left: -200px;
-        height: 200px;
-        visibility: visible; 
-        z-index: 598;
-        }
-  
-      nav .nav li ul li a{
-      font-size: 1rem;
-      display: block;
-      max-width: 200px;
-      width: 100%;
-      margin-left: -2px;
-      padding-bottom: -2px;
-      margin-left: -76px;
-      }
-  
-       nav .nav ul {
-      visibility: hidden;
-      }
-  
-        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
-    
-   /*ANIMACION SUBRAYADO */
-   nav a {
-   display: inline-block;
-   position: relative;
-   color: white;
-   text-decoration: none;
-   z-index: 40;
-   }
-  
-    nav  a:after {
-   content: "";
-   display: block;
-   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-   height: 2px;
-   width: 0px;
-   transition: all .8s;
-   z-index: 10;
-   }
-  
-  
-    /* width: 100%;*/
-    nav  a:hover:after {
-    padding-left: 40px;
-    padding-right: -150px;
-    height: 2px;
-    background: white;
-    }
 
    
        /*FIN ANIMACION SUBRAYADO position: relative;  /*ESTO ARREGLO LA CABECERA    */
@@ -2856,19 +2884,7 @@ width: 100%;
   
    }
   
-    /*FIN ULTIMOS......................................................................*/
-
-
-    hr {
-      height: 1px;
-      border-width:0;
-      color:#d3d3d3;
-      background-color: #cecece;
-     width: 100%;
-     padding-left: 0;
-     padding-right: 0 ;
-  
-    }
+   
   
   
   /*RECETAS  DEL INDEX--------------RECETAS -------------------------------*/
@@ -3192,6 +3208,8 @@ width: 100%;
 .quinto-segmento h1 i{
   font-size: 1.8rem;
 }
+
+
 /*Portada.......................................................................................................................................*/
   .container-portada{
   width: 100%;
@@ -3237,23 +3255,7 @@ width: 100%;
    -webkit-text-stroke: 1.5px #7aac41;
    }
 
-   /*FIN PORTADA GRADIENTE*/
-   .texto-animado{
-   width: 100%;
-   margin: auto;
-   margin-bottom: 40px;
-   }
-
- .texto-animado h1{
-  font-size: 1rem;
-   }
-
-   .texto-animado h1 span{
-    top:  0.2px;
-    border-left: solid 1px #000;
-   }
-
-
+   
    /*FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN...............................................................................*/
    #footer{
     width: 100%;
@@ -3491,8 +3493,12 @@ width: 100%;
       border: 0;
       border: 1px solid #777;
       pointer-events: none;
+      -webkit-box-align: start;
     }
 
+    input[type=text]:focus {
+      width: 100%;
+    }
     .input-group input[type="text"]
     {
     background-color: rgb(141, 12, 62);
@@ -3647,6 +3653,7 @@ z-index: 300;
     min-width:250px;
     height: auto;
     flex-wrap: wrap;
+    background-color: yellow;
   }
 
   #wrapper > * {
@@ -3658,325 +3665,467 @@ z-index: 300;
       flex-direction: column;
       width: 100%;
       margin: auto;
-      margin-top: 83px;
+      margin-top: 43px;
       bottom:  4px;
     height: auto;
     }
 
 
-  header{
-  width:100%;
-  height: 99px;
-  top:0;
-  position: fixed;
-  z-index: 2000;   /*IMPORTANTE  */
-  margin: auto;
-  box-shadow: 0 8px 6px -6px #DCDCDC; 
-
-  }
-  
-  
-  header.black{
-  background-color: #fff;
-  height:  99px;
-  }
-
-  .cabecera{
-  width: 100%;
-  max-width: 640px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 38px;
-  margin-top: -5px;
-    }
-   
-     
-     /*caja */
-   .icon-social{
-   display: none;
-   visibility: hidden;
-   }
- 
-  
-  /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
-    .cabecera .logo{
-    display: inline-flex;
-    width: 100%;
-    max-width: 290px;
-    height: 38px; 
-    }
-     
- 
-    .cabecera .logo img{
-     display: block;
-    width: 100%;
-    max-width: 190px;
-    height: 38px;
-    }
- 
- 
-           /*caja hay 2. A */
-     .menu-btn {
-     display: block;
-     position: relative;
-     float: right;
-     width: 40%;
-     max-width: 310px;
-     height: 38px;
+   /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+   header{
+    display: block;
+    width:100%;
+    height: 56px;
+    top:0;
+    left: 0;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
     margin: auto;
-    
-     }
- 
-     .suscribe {
-     display: block;
-     position: relative;
-     float: left;
-    width: 100%;
-    max-width: 170px;
-    height: 38px;
-     }
- 
-   
-     .suscribe a h4{
-      font-size: 1rem;
-      margin-top: 20px;
-      margin-left: 8px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-     }
-  
-     .cabecera .buscador{
-      display: none;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
     }
+  
 
+      header.black{
+      height: 56px;
+      background-color: #fff;
+     }
 
-    .buscador-responsive{
+  
+     
+     .cabecera{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 38px;
+      background-color: indigo;
+     }
+         
+
+    /*caja */
+    .cabecera .logo{
+      display: block;
+      position: relative;
+      float: left;
+      width: 20%;
+      max-width: 290px;
+     background-color: cornflowerblue;
+      height: 35px;
+    }
+              
+    .cabecera .logo img {
+      display: block;
+      width: 100%;
+      max-width: 150px;
+      min-width: 140px;
+   
+      height: 35px;
+      z-index: 40;
+     }
+         
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+   
+   
+    .suscribe{
     display: block;
     position: relative;
     float: left;
-    width: 99.9%;
-    height: 32px;
-    margin-top: 8px; 
-   }
- 
-    .buscador-responsive #controls-responsive{
-     width: 100%;
-     height: 30px;
-     z-index: 10;
+    width: 40%;
+    max-width: 250px;
+    height: 38px;
+    background-color: lightcoral;
     }
-
-    .buscador-responsive #controls-responsive   #custom-search-input-responsive{
-     width: 99%;
-     height: 30px;
-     display: flex;
-     flex-direction: row;
-    font-size: 0.9em;
-    padding: 1px 1px;
-    border-radius: 8px;
-    border: 2px solid #f4f4f4;
-   }
-
-    .buscador-responsive #controls-responsive   #custom-search-input-responsive .sin-borde{
-     height: 25px;
-     width: 90%;
-     border-radius: 15px;
-     font-size: 0.7em;
-     font-weight: lighter;
-     padding-left: 10px; /*MUEVE LA LETRA*/
-    }
-
-   .buscador-responsive #controls-responsive   #custom-search-input-responsive .boton{
-     height: 25px;
-     width: 10%;
-     border-radius: 10px;
-     background-color: #fff;
-   }
-
-   .buscador-responsive #controls-responsive #custom-search-input-responsive input[type=text]:focus {
-    outline: none;
-    border: 0;
-    background-color: #fff;
-   }
   
-   /*---------------------------------------------------------------------*/
- /*--MUEVE EL MENU............ESTE ES EL BURGER*/
- .menu-btn .menu-btn__burger {
+ 
+   .suscribe a  h4{
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 5;
+    
+    }
+  
+
+
+    
+
+  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+   .cabecera .menu-btn {
+    display: block;
+    position: relative;
+    float: left;
+    width: 10%;
+    max-width: 50px;
+    height: 38px;
+    margin: auto;
+    background-color: lightslategrey;
+    }
+
+  
+  .menu-btn .hamburguesa{
   display: block;
   position: relative;
-  float: right;
-  margin-top: 24px;
+  float:left;
   width: 100%;
-    max-width: 36px;
-   height: 4px;
-   background: #2d2d2d;
-   border-radius: 2px;
-   box-shadow: 0 2px 5px rgba(255,101,47,.2);
-   transition: all .5s ease-in-out;
-   z-index: 1000;
- 
-    }
+  height: 30px;
+  max-width: 40px;
+   }
 
-
-    .menu-btn__burger::before,
-    .menu-btn__burger::after {
-      content: '';
-      position: absolute;
+     /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+   .menu-btn .hamburguesa .menu-btn__burger {
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 14.5px;
+      width: 29px;
       height: 4px;
-      width: 36px;  /*IMPORTANTE*/
-      background:#2d2d2d;
+      background: #2d2d2d;
       border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
       transition: all .5s ease-in-out;
-     z-index: 800;  
-    }
-
+      z-index: 1000;
+      }
   
+
+
+       /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 29px;
+  background:#2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+  z-index: 800;  
+  }
+
+    
   .menu-btn__burger::before {
-  transform: translateY(-8px);
+  transform: translateY(-7px);
   z-index:3000;
   }
 
 
-   .menu-btn__burger::after {
-    transform: translateY(8px);
-    z-index:3000;
+  .menu-btn__burger::after {
+  transform: translateY(7px);
+  z-index:3000;
   }
+
 
   /* ANIMATION */
-   .menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-  }
-  .menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-    background: #fff;
-  }
-   .menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-    background: #fff;
+  .hamburguesa.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
   }
 
- .menu-btn__burger:hover{
-    background-color: #7aac41;
-  }
 
-   .menu-btn__burger:hover::before,
-   .menu-btn__burger:hover::after{
-    background-color: #7aac41;
-  }
-
-/* ESTE ES EL MENU NAV*/
-
-/*margin-left: 5.4%;/*IMPORTANTE */
-nav{
-width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
-height: 100%;/*IMPORTANTE */
-position: fixed;
-top:0px;  /*IMPORTANTE para que arriba no tenga espacios */
-min-height: 100vh;
-left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-background-color:#000000; /*FONDO DEL MENU*/
-background-position:72% 50%;
-background-repeat:no-repeat;
-opacity: 1;
-z-index:40;
-}
-
-/*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL*/
-nav .nav{
- display: flex;
- flex-direction: column;
-margin-left: -38%;/*IMPORTANTE */
-margin-top: 80px;/*IMPORTANTE */
-width: 100%;/*IMPORTANTE */
-z-index:30;
-
-}
-
- /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-nav .nav li{
-margin-top: 1.5%;/*IMPORTANTE */
-list-style: none;
-height: 70px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-cursor:pointer;
-}
-
-nav .nav li a {
-z-index: 100;
-background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-display: block;
-position: absolute;
-color: #fff;
-font-weight: lighter;
-font-size: 1rem;
-text-transform: lowercase;
-letter-spacing: 1px;
-font-family:  sans-serif;
-}
-
- /*IMPORTANTE*/
-
+   /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
  
-
-
-  /* NAV ESCONDIDO  NAV ESCONDIDO*/
-/*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-  nav .nav li:hover > ul {
-   display: block;
-  margin-left: -200px;
-   margin-top:-40px;
-  height: 200px;
-  visibility: visible; 
-  z-index: 598;
   }
 
-nav .nav li ul li a{
-font-size: 1rem;
-display: block;
-position: absolute;
-max-width: 200px;
-width: 100%;
-margin-left: -2px;
-padding-bottom: -2px;
-margin-left: -76px;
+
+  /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+
+  }
+
+
+
+
+  .menu-btn__burger:hover{
+  background-color: #7aac41;
+  }
+  
+
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #7aac41;
+  }
+
+
+     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+
+
+    /*..BUSCADOR PARA EL MOVIL..........................*/
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+     #controls-responsive{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 50px;
+     margin-bottom: 10px;
+    margin-top: 5px;
+     background-color: crimson;
+       }
+  
+       #custom-search-input-responsive{
+       width:  100%;
+       height: 50px;
+       border: 1px solid #c9c9c9;
+       border-radius: 4px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin: auto;
+       background-color: darksalmon;
+       }
+  
+  
+   #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+       display: block;
+       position: relative;
+       float: left;
+       width: 100%;
+     
+      }
+  
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+       #controls-responsive .boton-responsive{
+         display: block;
+         position: relative;
+         float: right;
+       width: 10%;
+       padding: 12px 20px;
+       background-color: #ffffff;
+        }
+     /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
+    
+    /*BUSCADOR EN EL NAV*/
+            
+    nav  #controls {
+      width: 100%;
+      max-width: 300px;
+      height: 10%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-left: 20px;
+      background-color: #000000;
+      }
+
+     nav  #controls #custom-search-input-header{
+    width: 100%;
+    max-width: 300px;
+    }
+        
+
+  .buscador #controls   #custom-search-input-header .sin-borde{
+  display: none;
+  visibility: hidden;
+  }
+  /*DIV DEL MENU GRANDE*/
+        
+
+    #controls-responsive .boton{
+    width: 8%;
+    }
+ /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+/*margin-left: 5.4%;/*IMPORTANTE */
+
+#controls{
+  display: none;
+ visibility: hidden;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  max-height: 1200px;
+  top:0;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+  opacity: 0.97;
+   background-color: #000000;
+   overflow-y: scroll;
+   z-index: 200;
+  }
+
+nav .logo-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 30px;
+  height: 30px;
+  border-bottom: 1px solid #aaaaaa;
+
 }
 
- nav .nav ul {
-visibility: hidden;
+
+  nav  .estilo-logo:after {
+    content: "";
+    display:none;
+  
+    }
+  
+
+nav .logo-esconder img{
+  width: 100%;
+  max-width: 120px;
+  margin-left: 20px;
 }
 
-  /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+/*BUSCADOR DEL NAV ESCONDIDO*/
+nav .buscador-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 20px;
+  height: 50px;
 
-/*ANIMACION SUBRAYADO */
-nav a {
-display: inline-block;
-position: relative;
-color: white;
-text-decoration: none;
-z-index: 40;
 }
 
-nav  a:after {
-content: "";
-display: block;
-margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-height: 2px;
-width: 0px;
-transition: all .8s;
-z-index: 10;
-}
+  .d-flex{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 18px;
+  }
+
+  #custom-search{
+    width: 80%;
+    height: 50px;
+  }
+
+  #custom-search .sin-borde{
+    width: 80%;
+    height: 40px;
+  }
+
+  #custom-search .boton{
+    width: 10%;
+    height: 40px;
+    margin-left: -5px;
+   
+  }
+
+   /*FIN BUSCADOR EN EL NAV ESCONDIDO*/
+
+ nav .nav .esconder{
+   visibility: visible;
+ }
+
+  nav .nav li a.active{
+    text-decoration:line-through;
+    color: #568632;
+    }
+
+   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+    .cabecera nav .nav{
+    width:90%; 
+    height: 100%;
+    max-height: 1000px;
+    display: flex;
+    flex-direction: column;
+     margin-left: 6px;
+    margin-top: 10px;
+    overflow-y: scroll;
+     z-index: 99; 
+     background-color: darkslateblue;
+    }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+     
+    list-style: none;
+    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 15px;
+    cursor:pointer;
+    }
+    
+    nav .nav li a {
+    z-index: 100;
+    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+    height: 30px;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.24rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family:  sans-serif;
+    padding-top: 0;
+    margin-top: 0;
+    }
+  
+     /*IMPORTANTE*/
+
+     
+    
+ 
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover > ul {
+       display: block;
+      margin-left: -200px;
+      height: 200px;
+      visibility: visible; 
+      z-index: 598;
+      }
+
+    nav .nav li ul li a{
+    font-size: 1rem;
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    margin-left: -2px;
+    padding-bottom: -2px;
+    margin-left: -76px;
+    }
+
+     nav .nav ul {
+    visibility: hidden;
+    }
+
+      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+  
+ /*ANIMACION SUBRAYADO */
+ nav a {
+ display: inline-block;
+ position: relative;
+ color: white;
+ text-decoration: none;
+ z-index: 40;
+ }
+
+  nav  a:after {
+ content: "";
+ display: block;
+ margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+ height: 2px;
+ width: 0px;
+ transition: all .8s;
+ z-index: 10;
+ }
 
 
+  /* width: 100%;*/
+  nav  a:hover:after {
+  padding-left: 40px;
+  padding-right: -150px;
+  height: 2px;
+  background: white;
+  }
 
-nav  a:hover:after {
-width: 100%;
-padding-left: 40px;
-padding-right: -150px;
-height: 2px;
-background: white;
-}
+
 
 /*FIN ANIMACION SUBRAYADO */
  .portada{
@@ -4024,7 +4173,7 @@ margin: auto;
   width: 100%;
   display: block;
   position: absolute;
-  margin-top:  120px;
+  margin-top:  -260px;
   z-index: 80;
  }
 
@@ -4032,7 +4181,7 @@ margin: auto;
   width: 100%;
   display: block;
   position: absolute;
-  margin-top:  -200px;
+  margin-top:  520px;
   }
 
 
@@ -4692,212 +4841,379 @@ hr {
 
 
   
-    
-       /*FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN...............................................................................*/
-   #footer{
-  display: block;
-   width: 100%;
-   height: 400px;
-   margin-top:-400px;
-   clear: both;
-  -webkit-box-shadow: 0px -3px 6px #DCDCDC;
-   -moz-box-shadow: 0px -3px 6px #DCDCDC;
-    box-shadow: 0px -3px 6px  #DCDCDC;
-    z-index: 10;
-    bottom: 0;  
-    background-color: #f4f4f4;
+   /*QUINTO SEGMENTO .........................................................................  */
+   .quinto-segmento{
+    width: 100%;
+    border-bottom: 1.5px solid	#DCDCDC;
+    margin-top: 30px;
+    margin-bottom: 30px;
     }
  
-    .footer-primero{
-   display: flex;
-   flex-direction: column;
-   width: 100%;
-   height: 400px;
-   background-color: #f4f4f4;
-   margin-bottom: 2%;  
-   }
-     
-      /*CAJA DE FOOD EMOTIONS E ICONOS SOCALES Y BOX */
-    .icon-email{
+    .resumen{
+     width: 48%;
+     margin-right: 2%;
+     }
+ 
+     .resumen1{
+       width: 1%;
+     }
+ 
+     .resumen3{
+       width: 3%;
+     }
+     /*DONDE ESTNA LAS LETRAS..*/
+     .resumen2{
+       width: 96%;
+     }
+    .quinto{
+     width: 45%;
+      }
+ 
+   .quinto-segmento h1{
+    font-size: 140%;
+    }
+ 
+    .quinto img{
      width: 100%;
-     height:   80px;
+    }
+ 
+ .quinto-segmento h1 i{
+   font-size: 1.8rem;
+ }
+ 
+ 
+ /*Portada.......................................................................................................................................*/
+   .container-portada{
+   width: 100%;
+   height: 300px;
+   position: relative;
+   margin-top: 30px;
+   margin-bottom: 20px;
+   background-image: url(../img/slider/700-400containerportadaindex.jpg);
+   background-size: 200%;
+   animation: movimiento 15s infinite linear alternate;  
+   }
+ 
+   .details h1{
+     font-size: 1.6rem;
+     font-weight: lighter;
+     margin-left: 10px;
+     word-spacing: -3px;
+     letter-spacing: -1.5px;
+     font-family: 'Archivo Black', sans-serif;
+    
+     }
+   
+   .details p{
+     margin-top: 10px;
+     font-size: 1.2rem;
+     font-weight: 100;
+     margin-left: 10px;
+     font-family: 'Archivo Black', sans-serif;
+     -webkit-text-fill-color: #fff;
+     -webkit-text-stroke: 1.2px #7aac41;
+   }
+ 
+     .details button{
+     width: 50%;
+     padding: 5px 10px;
+     }
+ 
+ 
+    .details button a{
+    font-size: 1.1rem;
+    font-weight: 900;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1.5px #7aac41;
+    }
+ 
+    
+    /*FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN...............................................................................*/
+    #footer{
+     width: 100%;
+     clear: both;
+     display: flex;
+     flex-direction: column;
+      -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+     -moz-box-shadow: 0px -3px 6px #DCDCDC;
+     box-shadow: 0px -3px 6px  #DCDCDC;
+     z-index: 10;
+     bottom: 0;  
+     left: 0;
+     right: 0;
+     margin-bottom: 0;
+     background-color: #f4f4f4;
+      }
+   
+      #footer .footer-primero{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       
+       background-color: #f4f4f4;
+       }
+       
+        /*CAJA DE FOOD EMOTIONS E ICONOS SOCALES Y BOX */
+      .icon-email{
+       width: 100%;
+       height: 120px;
+       display: flex;
+       flex-direction: column;
+       margin: auto;
+       }
+ 
+      /*SUB-caja  DE FOOD Y REDES */
+    .icon-email .icon-social1{
+     width: 100%;
+     height: 60px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+     margin-bottom: 10px;
+     }
+ 
+      /*CAJA DE REDES*/
+     .social2{
+     width: 50%;
      display: flex;
      flex-direction: row;
-     justify-content: space-around;
      margin: auto;
      }
-
-    /*SUB-caja  DE FOOD Y REDES */
-  .icon-social1{
-   width: 40%;
-   height: 60px;
-   margin-bottom: 0.8%;
-   display: flex;
-   flex-direction: column;
-   }
-  .social2{
-    margin-top: 8px;
-  }
-    /*FOOD EMOTIONS*/
-   .icon-email .icon-social1 p{
-     font-size: 1.1rem;
-     word-spacing: -3px;
-     letter-spacing: -2px;
-     padding-bottom: 0px;
-
-     }
- 
-     .icon-email  ul li .fa-envelope{
-       background-color: oldlace;
-       color: #2d2d2d;
-       width:24px;
-       height: 24px;
-       padding: 2px 2px 2px 2px;
-       border-radius: 25px;
-       border: solid #E9E9E9;
-       margin-right: 3px;
+    
+      /*FOOD EMOTIONS*/
+      .icon-email .icon-social1 p{
+       font-size: 1.6rem;
+       word-spacing: -4px;
+       letter-spacing: -2px;
+       text-align: center;
        }
-       
-       .icon-email  ul li .fa-facebook-f{
-         background-color: oldlace;
-         color:  #2d2d2d;
-         width:24px;
-         height: 24px;
-         padding: 2px 2px 2px 2px;
-         border-radius: 25px;
-         margin-right: 3px;
-         border: solid #E9E9E9;
-       }
-       
-       
-       .icon-email  ul li .fa-twitter{
-         background-color: oldlace;
-         color:   #2d2d2d;
-         width:24px;
-         height: 24px;
-        padding: 2px 2px 2px 2px;
-         border-radius: 25px;
-         margin-right: 3px;
-         border: solid #E9E9E9;
-       }
-       
-       .icon-email ul li .fa-instagram{
+   
+       .icon-email  ul li .fa-envelope{
          background-color: oldlace;
          color: #2d2d2d;
-         width:24px;
-         height: 24px;
+         width: 38px;
+         height: 38px;
          padding: 2px 2px 2px 2px;
          border-radius: 25px;
          border: solid #E9E9E9;
-       }
+         margin-right: 5px;
+         }
+         
+         .icon-email  ul li .fa-facebook-f{
+           background-color: oldlace;
+           color:  #2d2d2d;
+           width: 38px;
+         height: 38px;
+         padding: 2px 2px 2px 2px;
+           border-radius: 25px;
+           border: solid #E9E9E9;
+           margin-right: 5px;
+         }
+         
+         
+         .icon-email  ul li .fa-twitter{
+           background-color: oldlace;
+           color:   #2d2d2d;
+           width: 38px;
+           height: 38px;
+          padding: 2px 2px 2px 2px;
+           border-radius: 25px;
+           border: solid #E9E9E9;
+           margin-right: 5px;
+         }
+         
+         
+         
+         
+         .icon-email ul li .fa-instagram{
+           background-color: oldlace;
+           color: #2d2d2d;
+           width: 38px;
+           height: 38px;
+           padding: 2px 2px 2px 2px;
+           border-radius: 25px;
+           border: solid #E9E9E9;
+         }
+         
+   
+         
+         
        
-  /*SUBCAJA BOC */
-   .box{
-   width: 55%;
-   height: 60px;
-   display: block;
-   }
- 
-   .box form{
-   display: flex;
-   flex-direction: row;
-   width: 100%;
-   }
-
-  .box h3{
- 
-   margin-top: -5px;
-   font-size: 0.9rem;
-   letter-spacing: -1px;
-   word-spacing: -1px;
-   font-family: 'Fira Sans', sans-serif;
-   width: 100%;
-    }
-  
-    /*CAJA ENVIO BLANCO DONDE SE ESCROBE*/
-   .box input[type="text"]{
-     width: 70%;
-     height: 38px;
-     font-size: 0.9rem;
-     border-radius: 3px 2px 2px 3px;
-     padding: 0 25px;
-     border: 2px solid 	#DCDCDC;
-    }
-
-   /*CAJA OSUCRA DONDE SE ENVIA*/
-   .box input[type="submit"]{
-     width: 25%;
-     height: 38px;
-     border-radius: 3px 6 6 3px;
-     font-size: 0.6rem;
-     left: -1px;
-     top: 0px;
-     border: 2px solid 	#2d2d2d;
-    }
-   
-   
- 
-      /*caja */
-  .menu-footer{
+        /*caja */
+   .menu-footer{
    width:100%;
+   height: 180px;
    display: flex;
    flex-direction: column;
-  }
- 
-  .menu-footer .footer-text{
-   height: 100%;
-   max-height: 25px;
-  }
-
-   /*TITULO DEL MENU*/
-   .menu-footer .footer-text h1{
-   text-align: center;
-   font-size: 1.2rem;
-   word-spacing: -2px;
-   letter-spacing: -1.5px;
-  }
-
-   .menu-footer .footer-lista {
-   height: 100%;
-   max-height: 120px;
    }
-
+   
+   .menu-footer .footer-text{
+     height: 100%;
+     max-height: 25px;
+   
+   }
+    /*TITULO DEL MENU*/
+    .menu-footer .footer-text h1{
+    text-align: center;
+     font-size: 1rem;
+    word-spacing: -2px;
+    letter-spacing: -1.5px;
+    }
+ 
+     .menu-footer .footer-lista {
+     height: 100%;
+     max-height: 100px;
+     margin-left: auto;
+     margin-right: auto;
+     width: 15em;
+     display: flex;
+     flex-direction: column;
+     }
+ 
    /*OPCIONES DEL MENU*/
-  .menu-footer .footer-lista p{
-  line-height: 17px;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #2d2d2d;
-  letter-spacing: -0.5px;
-  text-align: center;
-  }
+   .menu-footer .footer-lista  p{
+     display: flex;
+     flex-direction: column;
+    line-height: 17px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #2d2d2d;
+    letter-spacing: -0.5px;
+    align-items: center;     /*IMPORTANTE*/
+   }
+   
+   
+        /*caja */
+     .espacio{
+     display: none;
+     }
+ 
+   
+    /*CAJA PRINCIPAL DEL SEGUNDO FOOTER */
+     #footer-second{
+     display: block;
+     width: 100%;
+     height: 30px;
+     margin-bottom: 25px;
+     }
+   
  
  
-      /*caja */
-   .espacio{
-   width: 2%;
-   height: 80%;
-   margin-top: 0.5%;
-   margin-bottom: 1%;
+   .final-food p{
+     font-size: 0.7rem;
    }
  
-  /*CAJA PRINCIPAL DEL SEGUNDO FOOTER */
-  #footer-second{
-  width: 100%;
-  height: 15px;
-  margin-top:3px;
-  }
+    /*FORMULARIO DE LA PAGINA DE CONTACTOS.............PAGINA CONTACTO ........*/
+   .section-heading-upper{
+     font-size: 1rem;
+   }
  
- .final-food{
-   height: 15px;
- }
-
-
- .final-food p{
-   font-size: 0.5rem;
- }
-
-
+   .section-heading-lower{
+     font-size: 1rem;
+   }
+ 
+   /*CAJA DEL FORMLARIO------------------------------------PAGINA CONTACTO*/
+     .row-formulario{
+     display: flex;
+     flex-direction: column;
+     width: 90%;
+     margin-top: 40px;
+     margin-left: 15px;
+     
+     }
+ 
+ 
+ 
+   
+     
+ 
+    .bg-faded{
+      width: 100%;
+      display: block;
+      background-color: red;
+    }
+    /*FORMULARIO CONTACTO*/
+    .section-heading-lower{
+     display: block;
+     font-size: 0.7rem;
+     font-weight: lighter;
+    letter-spacing: -0.8px;
+   }
+ 
+ 
+ 
+    .form-group{
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      background-color: darkslategray;
+    }
+ 
+    .form-control{
+      display: block;
+      background-color: mediumspringgreen;
+    }
+     .input-group{
+       display: block;
+      margin-left: -1px;
+       background-color: darkviolet;
+     }
+ 
+     #mobile {
+       background: #ccc;
+       outline: none;
+       border: 0;
+       border: 1px solid #777;
+       pointer-events: none;
+       -webkit-box-align: start;
+     }
+ 
+     input[type=text]:focus {
+       width: 100%;
+     }
+     .input-group input[type="text"]
+     {
+     background-color: rgb(141, 12, 62);
+     width: 70%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  
+      resize: none;
+      }
+ 
+      .input-group input[type="email"]
+      {
+      background-color: rgb(141, 12, 62);
+      width: 70%;
+     height: 150px;
+     padding: 12px 20px;
+     box-sizing: border-box;
+   
+       resize: none;
+       }
+  
+ 
+ 
+     .input-group textarea[name="content"]
+     {
+     background-color: rgb(141, 12, 62);
+     width: 70%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  
+      resize: none;
+      }
+ 
+ 
+      .text-center .btn{
+        margin-left: 1px;
+      }
+ 
+ 
+ 
+ 
   }
 
 
@@ -4922,6 +5238,7 @@ hr {
     overflow: hidden;
     border-spacing: 0;
     border-collapse: collapse;
+    background-color: blue;
    }
 
   
@@ -4937,325 +5254,462 @@ hr {
   padding: 25px;
   }  
 
+   #container{
+     margin-top: 45px;
+   }
 
-  header{
-  width:100%;
-  height: 80px;
-  top:0;
-  left: 0;
-  position: fixed;
-  z-index: 2000;   /*IMPORTANTE  */
-  margin: auto;
-  box-shadow: 0 8px 6px -6px #DCDCDC;
-  }
-
-
-     header.black{
-    width: 100%;
+   /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+   header{
+    display: block;
+    width:100%;
+    height: 58px;
+    top:0;
+    left: 0;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
+    margin: auto;
     background-color: #fff;
-    height: 80px;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
     }
+  
 
-     #container{
-     display: flex;
-     flex-direction: column;
-     width: 100%;
-     margin-top:   57px;
-    
-     padding-left: 0;
-     padding-right: 0;
+      header.black{
+      height: 58px;
+      background-color: #fff;
      }
- 
 
   
-      .cabecera{
-       width: 100%;
+     
+     .cabecera{
+      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      height: 50px;
-      }
-  
-
-       /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
-    .cabecera .logo{
-      width: 30%;
-      max-width: 300px;
-      height: 50px;
-       }
-        
-       .cabecera .logo img{
-        display: block;
-        width: 100%;
-        max-width: 190px;
-        height: 50px;
-    
-        }
-
-
-      #container   #controls-responsive{
-          display: block;
-          width: 94%;
-          height: 52px;
-          border-radius: 8px;
-          margin: auto;
-          margin-top: 8px;
-          margin-bottom: 8px;
-        
-          }
-      
-          #controls-responsive form{
-            display: block;
-            width: 100%;
-            height: 50px;
+      height: 35px;
+      background-color: indigo;
+     }
          
-          }
-      
-          #controls-responsive   #custom-search-input-responsive{
-           width: 100%;
-           height: 50px;
-           border: 1px solid #c9c9c9;
-           border-radius: 8px;
-           display: flex;
-           flex-direction: row;
-           margin-top: 1.5px;
-          }
-      
-      
-          #controls-responsive #custom-search-input-responsive .sin-borde{
-           width: 85%;
-           height: 40px;
-           border-radius: 4px;
-           display: inline-flex;
-           margin-top: 2px;
-           }
-      
-      
-           #controls-responsive .boton{
-           width: 15%;
-           height: 40px;
-           margin-top: 2px;
-           }
-      
-                
-    
-        /*PARA QUE EL BOTON ENTRE EN EL CAJON DE SEARCH
-   /*BUSCADOR  VA EN LA CABECERA DEL IPAD */
-   .cabecera .buscador{
-  display: none;
-   }
 
+    /*caja */
+    .cabecera .logo{
+      display: block;
+      position: relative;
+      float: left;
+      width: 35%;
+     max-width: 400px;
+      height: 35px;
+    }
+              
+    .cabecera .logo img {
+      display: block;
+      width: 100%;
+      max-width: 120px;
+      min-width: 120px;
+      height: 35px;
+      z-index: 40;
+     }
+         
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
    
-
-    .cabecera .suscribe {
+   
+   .cabecera .suscribe{
     display: block;
     position: relative;
     float: left;
-    width: 30%;
-    max-width: 260px;
-    height: 50px;
+    width: 20%;
+    max-width: 250px;
+    height: 35px;
+    background-color: lightcoral;
     }
-    
-      
-      .cabecera   .suscribe a h4{
-         font-size: 1rem;
-         margin-top: 18px;
-         margin-left: 19px;
-         font-weight: 700;
-         letter-spacing: 0.5px;
-         font-family: 'Times New Roman', Times, serif;
-        }
-     
-        .cabecera .menu-btn {
-          display: block;
-          position: relative;
-          float: right;
-          width: 10%;
-          max-width: 40px;
-          height: 50px;
-      
-          }
-          
-      .hamburguesa{
-        width: 100%;
-      }
+  
+ 
+   .suscribe a  h4{
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 5;
+    }
+  
 
-  /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-  .menu-btn .menu-btn__burger {
+
+  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+   .cabecera .menu-btn {
+    display: block;
+    position: relative;
+    float: left;
+    width: 10%;
+    max-width: 38px;
+    height: 35px;
+    margin: auto;
+    background-color: lightslategrey;
+    }
+
+  
+  .menu-btn .hamburguesa{
   display: block;
   position: relative;
-  float: right;
-  width: 40px;
-  height: 5px;
-  margin-top: 18px;
-  background: #2d2d2d;
+  float:left;
+  width: 100%;
+  height: 30px;
+  max-width: 35px;
+   }
+
+     /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+   .menu-btn .hamburguesa .menu-btn__burger {
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 14.5px;
+      width: 100%;
+      max-width: 34px;
+      min-width: 34px;
+      height: 4px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      transition: all .5s ease-in-out;
+      z-index: 1000;
+      }
+  
+
+
+       /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 34px;
+  background:#2d2d2d;
   border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out;
-  z-index: 1000;
-   }
-  
+  z-index: 800;  
+  }
 
-
-   .menu-btn__burger::before,
-   .menu-btn__burger::after {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 5px;
-    background:#2d2d2d;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-    transition: all .5s ease-in-out;
-    }
-
-    .boletin .menu-btn__burger:hover{
-    background-color: #7aac41;
-   }
-
-   .boletin .menu-btn__burger:hover::before,
-   .menu-btn__burger:hover::after{
-    background-color: #7aac41;
-    }
-
-
-
-  .menu-btn__burger::before {
-    transform: translateY(-10px);
-    z-index:3000;
-   }
-
-
-   .menu-btn__burger::after {
-    transform: translateY(10px);
-    z-index:3000;
-   }
-
-    /* ANIMATION */
-   .hamburguesa.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-    }
-
-    .hamburguesa.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-    background: #fff;
-   }
-
-    .hamburguesa.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-    background: #fff;
-     }
     
+  .menu-btn__burger::before {
+  transform: translateY(-7px);
+  z-index:3000;
+  }
 
-    /*margin-left: 5.4%;/*IMPORTANTE */
-    nav{
-    width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
-    height: 100%;/*IMPORTANTE */
-    position: fixed;
-     top: -8px;  /*IMPORTANTE para que arriba no tenga espacios */
-    min-height: 100vh;
-    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-    background-color:#000000; /*FONDO DEL MENU*/
-    background-position:72% 50%;
-    background-repeat:no-repeat;
-    opacity: 1;
-    z-index:40;
-    }
+
+  .menu-btn__burger::after {
+  transform: translateY(7px);
+  z-index:3000;
+  }
+
+
+  /* ANIMATION */
+  .hamburguesa.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  }
+
+
+   /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+ 
+  }
+
+
+  /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+
+  }
+
+
+
+
+  .menu-btn__burger:hover{
+  background-color: #7aac41;
+  }
   
-     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL*/
-      nav .nav{
-      width: 80%;/*IMPORTANTE */
-      height: 90%;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-      z-index: 60;
+
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #7aac41;
+  }
+
+
+     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+
+
+    /*..BUSCADOR PARA EL MOVIL..........................*/
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+     #controls-responsive{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 50px;
+      margin-top: 5px;  
+      margin-bottom: 8px;
+
+       }
+  
+       #custom-search-input-responsive{
+       width:  100%;
+       height: 50px;
+       border: 1px solid #c9c9c9;
+       border-radius: 4px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin: auto;
+       background-color: darksalmon;
+       }
+  
+  
+   #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+       display: block;
+       position: relative;
+       float: left;
+       width: 100%;
+     
+      }
+  
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+       #controls-responsive .boton-responsive{
+         display: block;
+         position: relative;
+         float: right;
+       width: 10%;
+       padding: 12px 20px;
+       background-color: #ffffff;
+        }
+     /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
+    
+    /*BUSCADOR EN EL NAV*/
+            
+    nav  #controls {
+      width: 100%;
+      max-width: 300px;
+      height: 10%;
       display: flex;
       flex-direction: column;
-      margin-top: 40px;
-      margin-left: 50px;
-      }
-  
-       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-      nav .nav li{
-      display: flex;
-      width: 100%;
-      height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
-      list-style: none;
-      cursor:pointer;  
+      margin-top: 20px;
+      margin-left: 20px;
+      background-color: #000000;
       }
 
+     nav  #controls #custom-search-input-header{
+              width: 100%;
+              max-width: 300px;
+              }
+        
+              .buscador #controls   #custom-search-input-header .sin-borde{
+                  display: none;
+                  visibility: hidden;
+                }
+              /*DIV DEL MENU GRANDE*/
+        
+              #controls-responsive .boton{
+                width: 8%;
+              }
+ /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+/*margin-left: 5.4%;/*IMPORTANTE */
 
-      /*LETRAS*/
-      nav .nav li a {
-      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-      height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
-      z-index: 100;
-      background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-      display: block;
-      color: #fff;
-      font-weight: lighter;
-      font-size: 1.6rem;
-      text-transform: lowercase;
-      letter-spacing: 1px;
-      font-family: 'Times New Roman', Times, serif;
-      }
-    
-    
-   
-        /* NAV ESCONDIDO  NAV ESCONDIDO*/
-     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-       nav .nav li:hover > ul {
-         display: block;
-        margin-left: -200px;
-         margin-top:-40px;
-        height: 200px;
-        visibility: visible; 
-       z-index: 598;
-       }
+#controls{
+  display: none;
+ visibility: hidden;
+}
 
-   /*PERMITE CONTROLA A LOS SUNMENS Y SU DISTANCIA*/
-     nav .nav li ul li a {
-      font-size: 1rem;
-      display: block;
-      position: absolute;
-      width: 100%;
-     padding-bottom: -2px;
-     margin-left: 500px;
+
+nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+
+  height: 100%;
+  max-height: 1200px;
+  top:0;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+  opacity: 0.97;
+   background-color: #000000;
+   overflow-y: scroll;
+   z-index: 200;
+  }
+
+nav .logo-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 30px;
+  height: 30px;
+  border-bottom: 1px solid #aaaaaa;
+
+}
+
+nav .logo-esconder img{
+  width: 100%;
+  max-width: 120px;
+  margin-left: 20px;
+}
+
+  nav .estilo-logo:after{
+    display: none;
+  }
+
+
+/*BUSCADOR DEL MENU ESCONDIDO*/
+nav .buscador-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  visibility: visible;
+  margin-top: 20px;
+  height: 70px;
+
+}
+
+  .d-flex{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 18px;
+  }
+
+  #custom-search{
+    width: 100%;
+    height: 60px;
+  }
+
+  #custom-search .sin-borde{
+    width: 90%;
+    height: 40px;
+    outline: none;
+  }
+
+  #custom-search .boton{
+    width: 10%;
+    height: 40px;
+    margin-left: -5px;
+  }
+
+  /*FIN DEL BUSADOR DEL MENU ESCONDIDO*/
+
+
+   nav .nav .esconder{
+   visibility: visible;
+   }
+
+  nav .nav li a.active{
+    text-decoration:line-through;
+    color: #568632;
+    }
+
+   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+    .cabecera nav .nav{
+    width:100%; 
+    height: 100%;
+    max-height: 950px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+    margin-top: 10px;
+    overflow-y: scroll;
+     z-index: 99; 
+     background-color: darkslateblue;
+    }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+    list-style: none;
+    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 15px;
+    cursor:pointer;
     }
     
-     nav .nav ul {
-      visibility: hidden;
+    nav .nav li a {
+    z-index: 100;
+    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+    height: 30px;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.24rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family:  sans-serif;
+    padding-top: 0;
+    margin-top: 0;
+    }
+  
+     /*IMPORTANTE*/
+
+     
+    
+ 
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover > ul {
+       display: block;
+      margin-left: -200px;
+      height: 200px;
+      visibility: visible; 
+      z-index: 598;
       }
+
+    nav .nav li ul li a{
+    font-size: 1rem;
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    margin-left: -2px;
+    padding-bottom: -2px;
+    margin-left: -76px;
+    }
+
+     nav .nav ul {
+    visibility: hidden;
+    }
+
+      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
   
-        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
-     /*ANIMACION SUBRAYADO */
-   nav a {
-   display: inline-block;
-   position: relative;
-   color: white;
-   text-decoration: none;
-   z-index: 40;
-   }
+ /*ANIMACION SUBRAYADO */
+ nav a {
+ display: inline-block;
+ position: relative;
+ color: white;
+ text-decoration: none;
+ z-index: 40;
+ }
 
-    nav  a:after {
-   content: "";
-   display: block;
-   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-   height: 2px;
-   width: 0px;
-   transition: all .8s;
-   z-index: 10;
-   }
+  nav  a:after {
+ content: "";
+ display: block;
+ margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+ height: 2px;
+ width: 0px;
+ transition: all .8s;
+ z-index: 10;
+ }
 
 
-   nav  a:hover:after {
-   width: 100%;
-   padding-left: 40px;
-   padding-right: -150px;
-   height: 2px;
-   background: white;
-   }
-  
+  /* width: 100%;*/
+  nav  a:hover:after {
+  padding-left: 40px;
+  padding-right: -150px;
+  height: 2px;
+  background: white;
+  }
+
+
+
+
      /*FIN ANIMACION SUBRAYADO */
     /*.portada*/
    .portada{
@@ -6043,232 +6497,388 @@ width: 100%;
    margin-top: 30px;
  }
 
-   .texto-animado{
-     width: 100%;
-   }
-
+ 
     /*FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN......................*/
-    #footer{
-      width: 100%;
-      bottom: 0;  
-      left: 0;
-      right: 0;
-      top: 0; 
-      margin: auto;
-      clear: both;
-      display: flex;
-      flex-direction: column;
-    
-       -webkit-box-shadow: 0px -3px 6px #DCDCDC;
-      -moz-box-shadow: 0px -3px 6px #DCDCDC;
-      box-shadow: 0px -3px 6px  #DCDCDC;
-      z-index: 10;
-      background-color: #f4f4f4;
-     
-    }
-  
-     /*background-color: #f4f4f4; */
-    .footer-primero{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+  /*QUINTO SEGMENTO .........................................................................  */
+  .quinto-segmento{
     width: 100%;
-   height: 220px;
-    padding-top: 0;
+    border-bottom: 1.5px solid	#DCDCDC;
+    margin-top: 30px;
+    margin-bottom: 30px;
     }
-      
-       /*CAJA DE FOOD EMOTIONS E ICONOS SOCALES Y BOX */
-    .icon-email{
-      display: flex;
-      flex-direction: column;
-    width: 42%;
-    height: 180px;
-    margin: auto;
+ 
+    .resumen{
+     width: 48%;
+     margin-right: 2%;
+     }
+ 
+     .resumen1{
+       width: 1%;
+     }
+ 
+     .resumen3{
+       width: 3%;
+     }
+     /*DONDE ESTNA LAS LETRAS..*/
+     .resumen2{
+       width: 96%;
+     }
+    .quinto{
+     width: 45%;
+      }
+ 
+   .quinto-segmento h1{
+    font-size: 140%;
     }
-
-     /*CAJA DE FOOD Y REDES*/
-    .icon-email .icon-social1{
-    width: 100%;
-    height: 40px;
-    flex-direction: column;
-
+ 
+    .quinto img{
+     width: 100%;
     }
-    .social2{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 40%;
-    }
-
-
-  /*LETRA FOOD EMOTIONS*/
-    .icon-email .icon-social1 p{
-    font-size: 1rem;
-    word-spacing: -1px;
-    letter-spacing: -1px
-    }
-  
-    .icon-email  ul li .fa-envelope{
-    background-color: oldlace;
-    color: #2d2d2d;
-    width:30px;
-    height: 30px;
-    padding: 3px 3px 3px 3px;
-    border-radius: 25px;
-    border: solid #E9E9E9;
-    }
-        
-    .icon-email  ul li .fa-facebook-f{
-    background-color: oldlace;
-    color:  #2d2d2d;
-    width:30px;
-    height: 30px;
-    padding: 3px 3px 3px 3px;
-    border-radius: 25px;
-    border: solid #E9E9E9;
-    }
-        
-        
-    .icon-email  ul li .fa-twitter{
-    background-color: oldlace;
-    color:   #2d2d2d;
-     width:30px;
-    height: 30px;
-    padding: 3px 3px 3px 3px;
-    border-radius: 25px;
-    border: solid #E9E9E9;
-    }
-        
-           
-    .icon-email ul li .fa-instagram{
-    background-color: oldlace;
-    color: #2d2d2d;
-    width:30px;
-    height: 30px;
-    padding: 3px 3px 3px 3px;
-    border-radius: 25px;
-    border: solid #E9E9E9;
-        }
-
-        
-   /*SUBCAJA BOC */
-  .box{
-    display: block;
-    position: relative;
-  width: 100%;
-  height: 80px;
-
+ 
+ .quinto-segmento h1 i{
+   font-size: 1.8rem;
+ }
+ 
+ 
+ /*Portada.......................................................................................................................................*/
+   .container-portada{
+   width: 100%;
+   height: 300px;
+   position: relative;
+   margin-top: 30px;
+   margin-bottom: 20px;
+   background-image: url(../img/slider/700-400containerportadaindex.jpg);
+   background-size: 200%;
+   animation: movimiento 15s infinite linear alternate;  
    }
-
-  
- .box form{
-   width: 90%;
-  display: flex;
-  flex-direction: row;
-  }
-
-    .box h3{
-      font-size: 0.6rem;
-      letter-spacing: -0.5px;
-      word-spacing: -1px;
-      font-family: 'Fira Sans', sans-serif;
+ 
+   .details h1{
+     font-size: 1.6rem;
+     font-weight: lighter;
+     margin-left: 10px;
+     word-spacing: -3px;
+     letter-spacing: -1.5px;
+     font-family: 'Archivo Black', sans-serif;
+    
      }
    
-     /*CAJA ENVIO BLANCO DONDE SE ESCROBE*/
-      .box input[type="text"]{
-      width: 75%;
-      height: 50px;
-      font-size: 0.5rem;
-      border-radius: 3px 0 0 3px;
-      padding: 0 25px;
-      border:  1.5px solid	#DCDCDC;
+   .details p{
+     margin-top: 10px;
+     font-size: 1.2rem;
+     font-weight: 100;
+     margin-left: 10px;
+     font-family: 'Archivo Black', sans-serif;
+     -webkit-text-fill-color: #fff;
+     -webkit-text-stroke: 1.2px #7aac41;
+   }
+ 
+     .details button{
+     width: 50%;
+     padding: 5px 10px;
      }
-    /*CAJA OSUCRA DONDE SE ENVIA*/
-    .box input[type="submit"]{
-      width: 25%;
-      height: 50px;
-      border-radius: 3px 6 6 3px;
-      font-size: 0.6rem;
-      left: -1px;
-      top: 0px;
-      border: 2px solid 	#2d2d2d;
-     }
-    
-    
-  
-       /*caja */
-   .menu-footer{
-    width: 27%;
-    height: 170px;
-    margin-top: 0.2px;
+ 
+ 
+    .details button a{
+    font-size: 1.1rem;
+    font-weight: 900;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1.5px #7aac41;
     }
+ 
+    
+    /*FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN...............................................................................*/
+    #footer{
+     width: 100%;
+     clear: both;
+     display: flex;
+     flex-direction: column;
+      -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+     -moz-box-shadow: 0px -3px 6px #DCDCDC;
+     box-shadow: 0px -3px 6px  #DCDCDC;
+     z-index: 10;
+     bottom: 0;  
+     left: 0;
+     right: 0;
+     margin-bottom: 0;
+     background-color: #f4f4f4;
+      }
+   
+      #footer .footer-primero{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       
+       background-color: #f4f4f4;
+       }
+       
+        /*CAJA DE FOOD EMOTIONS E ICONOS SOCALES Y BOX */
+      .icon-email{
+       width: 100%;
+       height: 120px;
+       display: flex;
+       flex-direction: column;
+       margin: auto;
+       }
+ 
+      /*SUB-caja  DE FOOD Y REDES */
+    .icon-email .icon-social1{
+     width: 100%;
+     height: 60px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+     margin-bottom: 10px;
+     }
 
-
-   /*TITULO DEL MENU*/
-   .menu-footer .footer-text h1{
-    padding-bottom: 2px;
-    font-size: 1rem;
+  
+ 
+      /*CAJA DE REDES*/
+     .social2{
+     width: 50%;
+     display: flex;
+     flex-direction: row;
+     margin: auto;
+     }
+    
+      /*FOOD EMOTIONS*/
+      .icon-email .icon-social1 p{
+       font-size: 1.8rem;
+       word-spacing: -4px;
+       letter-spacing: -2px;
+       text-align: center;
+       }
+   
+       .icon-email  ul li .fa-envelope{
+         background-color: oldlace;
+         color: #2d2d2d;
+         width: 38px;
+         height: 38px;
+         padding: 2px 2px 2px 2px;
+         border-radius: 25px;
+         border: solid #E9E9E9;
+         margin-right: 5px;
+         }
+         
+         .icon-email  ul li .fa-facebook-f{
+           background-color: oldlace;
+           color:  #2d2d2d;
+           width: 38px;
+         height: 38px;
+         padding: 2px 2px 2px 2px;
+           border-radius: 25px;
+           border: solid #E9E9E9;
+           margin-right: 5px;
+         }
+         
+         
+         .icon-email  ul li .fa-twitter{
+           background-color: oldlace;
+           color:   #2d2d2d;
+           width: 38px;
+           height: 38px;
+          padding: 2px 2px 2px 2px;
+           border-radius: 25px;
+           border: solid #E9E9E9;
+           margin-right: 5px;
+         }
+         
+         
+         
+         
+         .icon-email ul li .fa-instagram{
+           background-color: oldlace;
+           color: #2d2d2d;
+           width: 38px;
+           height: 38px;
+           padding: 2px 2px 2px 2px;
+           border-radius: 25px;
+           border: solid #E9E9E9;
+         }
+         
+   
+      /*--CONTAINER TOTAL DEL MENU FOOTER */
+         .menudelfooter{
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           width: 100%;
+         }
+       
+        /*caja */
+   .menu-footer{
+   width:100%;
+   height: 180px;
+   display: flex;
+   flex-direction: column;
+   }
+   
+   .menu-footer .footer-text{
+     height: 100%;
+     max-height: 25px;
+   
+   }
+    /*TITULO DEL MENU*/
+    .menu-footer .footer-text h1{
+    text-align: center;
+     font-size: 1rem;
     word-spacing: -2px;
     letter-spacing: -1.5px;
-    height: 100%;
-    max-height: 10px;
-    margin: auto;
     }
-
-
-   .menu-footer .footer-text{
-    height: 25px;
+ 
+     .menu-footer .footer-lista {
+     height: 100%;
+     max-height: 100px;
+     margin-left: auto;
+     margin-right: auto;
+     width: 15em;
+     display: flex;
+     flex-direction: column;
+     }
+ 
+   /*OPCIONES DEL MENU*/
+   .menu-footer .footer-lista  p{
+     display: flex;
+     flex-direction: column;
+    line-height: 17px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #2d2d2d;
+    letter-spacing: -0.5px;
+    align-items: center;     /*IMPORTANTE*/
+   }
+   
+   
+        /*caja */
+     .espacio{
+     display: none;
+     }
+ 
+   
+    /*CAJA PRINCIPAL DEL SEGUNDO FOOTER */
+     #footer-second{
+     display: block;
+     width: 100%;
+     height: 30px;
+     margin-bottom: 25px;
+     }
+   
+ 
+ 
+   .final-food p{
+     font-size: 0.7rem;
+   }
+ 
+    /*FORMULARIO DE LA PAGINA DE CONTACTOS.............PAGINA CONTACTO ........*/
+   .section-heading-upper{
+     font-size: 1rem;
+   }
+ 
+   .section-heading-lower{
+     font-size: 1rem;
+   }
+ 
+   /*CAJA DEL FORMLARIO------------------------------------PAGINA CONTACTO*/
+     .row-formulario{
+     display: flex;
+     flex-direction: column;
+     width: 90%;
+     margin-top: 40px;
+     margin-left: 15px;
+     
+     }
+ 
+ 
+ 
+   
+     
+ 
+    .bg-faded{
+      width: 100%;
+      display: block;
+      background-color: red;
     }
-
-    .footer-lista{
-    height: 90px;
+    /*FORMULARIO CONTACTO*/
+    .section-heading-lower{
+     display: block;
+     font-size: 0.7rem;
+     font-weight: lighter;
+    letter-spacing: -0.8px;
+   }
+ 
+ 
+ 
+    .form-group{
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      background-color: darkslategray;
     }
-
-  /*OPCIONES DEL MENU*/
-  .menu-footer .footer-lista p{
-  line-height: 20px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  color: #2d2d2d;
-  letter-spacing: -0.5px;
-  }
+ 
+    .form-control{
+      display: block;
+      background-color: mediumspringgreen;
+    }
+     .input-group{
+       display: block;
+      margin-left: -1px;
+       background-color: darkviolet;
+     }
+ 
+     #mobile {
+       background: #ccc;
+       outline: none;
+       border: 0;
+       border: 1px solid #777;
+       pointer-events: none;
+       -webkit-box-align: start;
+     }
+ 
+     input[type=text]:focus {
+       width: 100%;
+     }
+     .input-group input[type="text"]
+     {
+     background-color: rgb(141, 12, 62);
+     width: 70%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
   
-       /*caja */
-    .espacio{
-    width: 2%;
-    height: 170px;
-    margin-top: 0.5%;
-    }
+      resize: none;
+      }
+ 
+      .input-group input[type="email"]
+      {
+      background-color: rgb(141, 12, 62);
+      width: 70%;
+     height: 150px;
+     padding: 12px 20px;
+     box-sizing: border-box;
+   
+       resize: none;
+       }
   
-  /*CAJA PRINCIPAL DEL SEGUNDO FOOTER */
-  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
-
- #footer #footer-second{
-  height: 25px;  /*IMPORTANTE*/
-  display: block;
-  position: relative;
-  float: left;
-    margin-top: 10px;
-  }
-
-
-  /*..SUBCAJA DE DIV FOOTERSENIDN...*/
-  .final-food{
-  display: block;
-  position: relative;
-  float: left;   
-  width:100%;
-  height: 25px;
- margin: auto;
-}
-
-.final-food p{
-  text-align: center;
-  color: #2d2d2d;
-  font-size: 0.7rem;
-}
-
-
+ 
+ 
+     .input-group textarea[name="content"]
+     {
+     background-color: rgb(141, 12, 62);
+     width: 70%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  
+      resize: none;
+      }
+ 
+ 
+      .text-center .btn{
+        margin-left: 1px;
+      }
+ 
+ 
+ 
+ 
  }
 
 
@@ -6287,6 +6897,7 @@ width: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: red;
    }
       
    #wrapper > * {
@@ -6304,232 +6915,450 @@ width: 100%;
   margin-top: 90px;
   }
 
+  /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
   header{
-  width:100%;
-  position: fixed;
-  z-index: 2000;   /*IMPORTANTE  */
-  top:0;
-  margin: auto;
-  height: 85px;
-  box-shadow: 0 8px 6px -6px #DCDCDC;
-
-  }
-
-
-  header.black{
-  background-color: #fff;
-  height: 85px;
-  }
-
-      /*min-width: 641px;
-    max-width: 710px;*/
-    .cabecera{
-      width: 100%;
-      max-width: 740px;
-      display: block;
-      position: relative;
-      float: left;
-     height: 50px;
-     margin-left: 11px;
-     }
-  
-  
-   
-  
-
-      /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
-     .cabecera .logo{
-      display: block;
-      position: relative;
-      float: left;
-      width: 100%;
-      max-width: 190px;
-       height: 50px;
-       }
-        
-       .logo img{
-        width: 100%;
-        height: 50px;
-        margin-left: -14px;
-        }
-      
-    
-        /*PARA QUE EL BOTON ENTRE EN EL CAJON DE SEARCH
-   /*BUSCADOR*/
-    .cabecera #controls{
     display: block;
-    width: 99.5%;
-    margin-top: 4px;
-    }
-
-    
-              /*caja hay 2. A */
-    .menu-btn {
-    display: block;
-    position: relative;
-    float: right;
-    width: 38%;
-    max-width: 140px;
-    height: 50px;
+    width:100%;
+    height: 55px;
+    top:0;
+    left: 0;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
     margin: auto;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
     }
-    
+  
 
+      header.black{
+      height: 55px;
+      background-color: #fff;
+     }
 
-    .suscribe {
+  
+     
+     .cabecera{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 38px;
+      background-color: indigo;
+     }
+         
+
+    /*caja */
+    .cabecera .logo{
+      display: block;
+      position: relative;
+      float: left;
+      width: 20%;
+   
+      height: 35px;
+    }
+              
+    .cabecera .logo img {
+      display: block;
+      width: 100%;
+      max-width: 140px;
+      min-width: 140px;
+   
+      height: 35px;
+      z-index: 40;
+     }
+         
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+   
+   
+    .suscribe{
     display: block;
     position: relative;
     float: left;
-    width: 100%;
-    max-width: 90px;
-    height: 50px;
-        }
-    
-      
-        .suscribe a h4{
-         font-size: 0.7rem;
-         margin-top: 34px;
-         margin-left: 6px;
-         font-weight: 700;
-         letter-spacing: 0.5px;
-        }
-     
+    width: 20%;
+    max-width: 120px;
+    height: 38px;
+    background-color: lightcoral;
+    }
+  
+ 
+   .suscribe a  h4{
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 5;
+   
+    }
+  
+
+
     
 
-  /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-  .menu-btn .menu-btn__burger {
+  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+   .cabecera .menu-btn {
+    display: block;
+    position: relative;
+    float: left;
+    width: 10%;
+    max-width: 50px;
+    height: 38px;
+    margin: auto;
+    background-color: lightslategrey;
+    }
+
+  
+  .menu-btn .hamburguesa{
   display: block;
   position: relative;
-  float: right;
-  width: 40px;
-  height: 5px;
-  margin-top: 33px;
-  background: #2d2d2d;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2);
-  transition: all .5s ease-in-out;
-  z-index: 1000;
+  float:left;
+  width: 100%;
+  height: 30px;
+  max-width: 40px;
    }
-  
-    .menu-btn__burger::before,
-    .menu-btn__burger::after {
-      content: '';
-      position: absolute;
-      width: 40px;
-      height: 5px;
-      background:#2d2d2d;
+
+     /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+   .menu-btn .hamburguesa .menu-btn__burger {
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 14.5px;
+      width: 37px;
+      height: 4px;
+      background: #2d2d2d;
       border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
       transition: all .5s ease-in-out;
-     z-index: 800;
-    }
+      z-index: 1000;
+      }
   
- .menu-btn__burger:hover::before,
-  .menu-btn__burger:hover::after{
-    background-color: #7aac41;
-     }  
 
-   
-   .menu-btn__burger::before {
-    transform: translateY(-10px);
-    z-index:3000;
-    }
 
-   .menu-btn__burger::after {
-    transform: translateY(10px);
-    z-index:3000;
-    }
-
-    /* ANIMATION */
-   .menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-    }
-
-   .menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-    background: #fff;
-    }
-
-   .menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-    background: #fff;
-    }
-  
-  /* ESTE ES EL MENU NAV*/
-
-  /*margin-left: 5.4%;/*IMPORTANTE */
-  nav{
-  width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
-  height: 100%;/*IMPORTANTE */
-  position: fixed;
-   top:0px;  /*IMPORTANTE para que arriba no tenga espacios */
-  min-height: 100vh;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  background-color:#000000; /*FONDO DEL MENU*/
-  background-position:72% 50%;
-  background-repeat:no-repeat;
-  opacity: 1;
-  z-index:40;
+       /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 36px;
+  background:#2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+  z-index: 800;  
   }
 
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL*/
-    nav .nav{
+    
+  .menu-btn__burger::before {
+  transform: translateY(-7px);
+  z-index:3000;
+  }
+
+
+  .menu-btn__burger::after {
+  transform: translateY(7px);
+  z-index:3000;
+  }
+
+
+  /* ANIMATION */
+  .hamburguesa.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  }
+
+
+   /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+ 
+  }
+
+
+  /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+
+  }
+
+
+
+
+  .menu-btn__burger:hover{
+  background-color: #7aac41;
+  }
+  
+
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #7aac41;
+  }
+
+
+     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+
+
+    /*..BUSCADOR PARA EL MOVIL..........................*/
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+     #controls-responsive{
+      display: block;
+      position: relative;
+      float: left;
+      width: 92%;
+      height: 50px;
+      margin-top: 58px;  
+      margin: auto;
+       }
+  
+       #custom-search-input-responsive{
+       width:  100%;
+       height: 50px;
+       border: 1px solid #c9c9c9;
+       border-radius: 4px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin: auto;
+       background-color: darksalmon;
+       }
+  
+  
+   #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+       display: block;
+       position: relative;
+       float: left;
+       width: 100%;
+     
+      }
+  
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+       #controls-responsive .boton-responsive{
+         display: block;
+         position: relative;
+         float: right;
+       width: 10%;
+       padding: 12px 20px;
+       background-color: #ffffff;
+        }
+     /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
+    
+    /*BUSCADOR EN EL NAV*/
+            
+    nav  #controls {
+      width: 100%;
+      max-width: 300px;
+      height: 10%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-left: 20px;
+      background-color: #000000;
+      }
+
+     nav  #controls #custom-search-input-header{
+              width: 100%;
+              max-width: 300px;
+              }
+        
+              .buscador #controls   #custom-search-input-header .sin-borde{
+                  display: none;
+                  visibility: hidden;
+                }
+              /*DIV DEL MENU GRANDE*/
+        
+              #controls-responsive .boton{
+                width: 8%;
+              }
+ /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+/*margin-left: 5.4%;/*IMPORTANTE */
+
+#controls{
+  display: none;
+ visibility: hidden;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  max-height: 1200px;
+  top:0;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+  opacity: 0.97;
+   background-color: #000000;
+   overflow-y: scroll;
+   z-index: 200;
+  }
+
+nav .logo-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 30px;
+  height: 30px;
+  border-bottom: 1px solid #aaaaaa;
+
+}
+
+nav .logo-esconder img{
+  width: 100%;
+  max-width: 120px;
+  margin-left: 20px;
+}
+
+nav .buscador-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 20px;
+  height: 50px;
+
+}
+
+  .d-flex{
     width: 100%;
-    z-index:30;
-    display: block;
-    position: relative;
-    float: left;
+    max-width: 350px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 18px;
+  }
+
+  #custom-search{
+    width: 100%;
+    max-width: 330px;
+    height: 50px;
+  }
+
+  #custom-search .sin-borde{
+    width: 90%;
+    max-width: 310px;
+    height: 40px;
+  }
+
+  #custom-search .boton{
+    width: 10%;
+    max-width: 20px;
+    height: 40px;
+  }
+ nav .nav .esconder{
+   visibility: visible;
+ }
+
+  nav .nav li a.active{
+    text-decoration:line-through;
+    color: #568632;
+    }
+
+   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+    .cabecera nav .nav{
+    width:100%; 
+    height: 100%;
+    max-height: 950px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+  
+     margin-left: 6px;
+          margin-top: 10px;
+          overflow-y: scroll;
+     z-index: 99; 
+     background-color: darkslateblue;
     }
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
     nav .nav li{
-    filter: alpha(opacity=80);
+     
     list-style: none;
+    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 15px;
     cursor:pointer;
-    margin-left: 14% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
     }
     
-    /*LETRAS DEL MENU HAMBURGUER*/
     nav .nav li a {
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     z-index: 100;
     background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-    border-radius: 8px solid #fff;
-    padding: 2px 2px ;
+    height: 30px;
     color: #fff;
     font-weight: lighter;
-    font-size: 2rem;
+    font-size: 1.24rem;
     text-transform: lowercase;
-     letter-spacing: 1px;
+    letter-spacing: 1px;
     font-family:  sans-serif;
-    margin-bottom: 50px;
+    padding-top: 0;
+    margin-top: 0;
     }
   
+     /*IMPORTANTE*/
 
-      /* NAV ESCONDIDO  NAV ESCONDIDO*/
-      /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-       nav .nav li:hover > ul {
+     
+    
+ 
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover > ul {
        display: block;
-       margin-left: 230px; /*separa al submenu*/
-       margin-top:-40px;  /*pone la distanncia en altura del submenu*/
-       visibility: visible; 
-       z-index: 598;
-       }
+      margin-left: -200px;
+      height: 200px;
+      visibility: visible; 
+      z-index: 598;
+      }
 
-     nav .nav li ul li a{
+    nav .nav li ul li a{
     font-size: 1rem;
     display: block;
-    margin-left: -76px;
-    width: 50%;
+    max-width: 200px;
+    width: 100%;
     margin-left: -2px;
     padding-bottom: -2px;
+    margin-left: -76px;
     }
-  
+
      nav .nav ul {
     visibility: hidden;
     }
+
+      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+  
+ /*ANIMACION SUBRAYADO */
+ nav a {
+ display: inline-block;
+ position: relative;
+ color: white;
+ text-decoration: none;
+ z-index: 40;
+ }
+
+  nav  a:after {
+ content: "";
+ display: block;
+ margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+ height: 2px;
+ width: 0px;
+ transition: all .8s;
+ z-index: 10;
+ }
+
+
+  /* width: 100%;*/
+  nav  a:hover:after {
+  padding-left: 40px;
+  padding-right: -150px;
+  height: 2px;
+  background: white;
+  }
+
+
 
     /*.FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV........MENU ESCONIDDO DEL NAV ARROW.....*/
    /*FIN ANIMACION SUBRAYADO */
@@ -7094,11 +7923,8 @@ width: 100%;
   .quinto-segmento .resumen2 h1 i{
     font-size: 2rem;
   }
-  
-    .texto-animado{
-      margin-bottom: 2%;
-    }
 
+ 
     /*Portada..............................................*/
     
    /*......PORTADA AL PIE DE PAGINA....................*/
@@ -7192,41 +8018,9 @@ width: 100%;
       border: solid #E9E9E9;
     }
     
-    
-    #footer .box{
-      height: 65px;
-      margin-top: -2%;
-      }
+  
 
-    #footer  .box form{
-     display: flex;
-     flex-direction: row;
-      margin-top: -2.2%;
-      height: 60px;
-    }
-
-    /*LETRA DEL BOX*/
-    #footer .box h3{
-     font-size: 0.8rem;
-   margin-bottom: 5px;
-     letter-spacing: 0.2px;
-     }
-
-    #footer .box input[type="text"]
-    {
-    height:40px;
-    width: 60%;
-    max-width: 200px;
-    height: 50px;
-     }
-
- #footer .box input[type="submit"]{
-  height: 50px;
-  width: 40%;
-  max-width: 95px;
-
-}
-
+   
        /*LOS MENUS DEL FOOTER caja 2 cajas del mimso tamaño*/
    .menu-footer{
      display: block;
@@ -7302,6 +8096,7 @@ width: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: indigo;
    }
 
 
@@ -7319,248 +8114,451 @@ width: 100%;
   }
 
 
-  header{
-  width:100%;
-  position: fixed;
-  z-index: 2000;   /*IMPORTANTE  */
-  margin: auto;
-  height: 95px;
-  box-shadow: 0 8px 6px -6px #DCDCDC;
-  }
-    
-    
-  header.black{
-  background-color: #fff;
-  height: 95px;
-  }
-    
-    
-    .cabecera{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    }
-         
-         
-    .cabecera .logo{
-    width:  30%;
-    height: 50px;
-    }
-    
-    .cabecera .logo img{
-    height: 50px;
-    width:  100%;
-    margin-left: -9px;
-    }
-     /* FIN IMPORTANTE PARA QUE EL MENU SE ADAPTE*/
-    
-    
-    /*PARA QUE EL BOTON ENTRE EN EL CAJON DE SEARCH
-     /*BUSCADOR*/
-    .cabecera .buscador{
+   /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+   header{
     display: block;
-    width: 45%;
-    height: 48px;
-     
-    }
-
-      /*BUSCADOR*/
-   /*CONTAINER DEL BUSCADOR */
-   .buscador #controls{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    height: 48px;
+    width:100%;
+    height: 55px;
+    top:0;
+    left: 0;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
     margin: auto;
- 
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
     }
   
-    #custom-search-input-header{
+
+      header.black{
+      height: 55px;
+      background-color: #fff;
+     }
+
+  
+     
+     .cabecera{
+      width: 100%;
       display: flex;
       flex-direction: row;
-      width: 100%;
-      padding-top: 1px;
-      margin-top: 3px;
-    }
-   
-    .sin-borde{
-    width: 80%;
-    }
-
-
-    .btn-succes{
-    background-color: #639a3a;
-    width: 20%;
-    max-width: 180px;
-    }
-    
-              /*caja hay 2. A */
-    .menu-btn {
-    display: block;
-    position: relative;
-    float: right;
-    width: 39%;
-    max-width: 158px;
-    height: 50px;
-    margin: auto;
+      justify-content: space-between;
+      height: 38px;
+      background-color: indigo;
      }
-    
-    .suscribe {
+         
+
+    /*caja */
+    .cabecera .logo{
+      display: block;
+      position: relative;
+      float: left;
+      width: 20%;
+   
+      height: 35px;
+    }
+              
+    .cabecera .logo img {
+      display: block;
+      width: 100%;
+      max-width: 140px;
+      min-width: 140px;
+   
+      height: 35px;
+      z-index: 40;
+     }
+         
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+   
+   
+    .suscribe{
     display: block;
     position: relative;
     float: left;
-    width: 100%;
-    max-width: 90px;
-    height: 50px;
-        }
-    
-      
-    .suscribe a h4{
-    font-size: 0.9rem;
-    margin-top: 34px;
-    margin-left: 8px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    width: 20%;
+    max-width: 120px;
+    height: 38px;
+    background-color: lightcoral;
     }
-     
+  
+ 
+   .suscribe a  h4{
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 5;
+   
+    }
+  
+
+
     
 
-  /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-  .menu-btn .menu-btn__burger {
+  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+   .cabecera .menu-btn {
+    display: block;
+    position: relative;
+    float: left;
+    width: 10%;
+    max-width: 50px;
+    height: 38px;
+    margin: auto;
+    background-color: lightslategrey;
+    }
+
+  
+  .menu-btn .hamburguesa{
   display: block;
   position: relative;
-  float: right;
-  width: 38px;
-  height: 5px;
-  margin-top: 33px;
-  background: #2d2d2d;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2);
-  transition: all .5s ease-in-out;
-  z-index: 1000;
+  float:left;
+  width: 100%;
+  height: 30px;
+  max-width: 40px;
    }
-  
-     
-  
-    .menu-btn__burger::before,
-    .menu-btn__burger::after {
-      content: '';
-      position: absolute;
-      width: 38px;
-      height: 5.3px;
-      background:#2d2d2d;
+
+     /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+   .menu-btn .hamburguesa .menu-btn__burger {
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 14.5px;
+      width: 37px;
+      height: 4px;
+      background: #2d2d2d;
       border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
       transition: all .5s ease-in-out;
-     z-index: 800;
-     
-    }
+      z-index: 1000;
+      }
   
-   .menu-btn__burger::before {
-    transform: translateY(-10px);
-    z-index:3000;   
-    }
 
 
-   .menu-btn__burger::after {
-    transform: translateY(10px);
-    z-index:3000;
-    }
+       /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 36px;
+  background:#2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+  z-index: 800;  
+  }
+
+    
+  .menu-btn__burger::before {
+  transform: translateY(-7px);
+  z-index:3000;
+  }
 
 
-   .menu-btn__burger:hover::before,
-   .menu-btn__burger:hover::after{
-    background-color: #639a3a;
-    }
+  .menu-btn__burger::after {
+  transform: translateY(7px);
+  z-index:3000;
+  }
 
 
   /* ANIMATION */
-  .menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
+  .hamburguesa.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
   }
 
-  .menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-    background: #fff;
+
+   /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+ 
   }
 
-  .menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-    background: #fff;
+
+  /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+
+  }
+
+
+
+
+  .menu-btn__burger:hover{
+  background-color: #7aac41;
   }
   
-  /* ESTE ES EL MENU NAV*/
 
-  /*margin-left: 5.4%;/*IMPORTANTE */
-
-   /*margin-left: 5.4%;/*IMPORTANTE */
-  nav{
-  width:100%;   /*IMPORTANTE MODIFIQUE EL ANCHO DEL NAV*/
-  height: 100%;/*IMPORTANTE */
-  position: fixed;
-   top:0px;  /*IMPORTANTE para que arriba no tenga espacios */
-  min-height: 100vh;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  background-color:#000000; /*FONDO DEL MENU*/
-  background-position:72% 50%;
-  background-repeat:no-repeat;
-  opacity: 1;
-  z-index:40;
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #7aac41;
   }
+
+
+     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+
+
+    /*..BUSCADOR PARA EL MOVIL..........................*/
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+     #controls-responsive{
+      display: block;
+      position: relative;
+      float: left;
+      width: 92%;
+      height: 50px;
+      margin-top: 58px;  
+      margin: auto;
+       }
+  
+       #custom-search-input-responsive{
+       width:  100%;
+       height: 50px;
+       border: 1px solid #c9c9c9;
+       border-radius: 4px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin: auto;
+       background-color: darksalmon;
+       }
+  
+  
+   #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+       display: block;
+       position: relative;
+       float: left;
+       width: 100%;
+     
+      }
+  
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+       #controls-responsive .boton-responsive{
+         display: block;
+         position: relative;
+         float: right;
+       width: 10%;
+       padding: 12px 20px;
+       background-color: #ffffff;
+        }
+     /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
     
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL*/
-    nav .nav{
-    margin-left: 2%;/*IMPORTANTE */
-    margin-top: 1%;/*IMPORTANTE */
-    width: 48%;/*IMPORTANTE */
-    height: 90%;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    z-index:30;
+    /*BUSCADOR EN EL NAV*/
+            
+    nav  #controls {
+      width: 100%;
+      max-width: 300px;
+      height: 10%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-left: 20px;
+      background-color: #000000;
+      }
+
+     nav  #controls #custom-search-input-header{
+              width: 100%;
+              max-width: 300px;
+              }
+        
+              .buscador #controls   #custom-search-input-header .sin-borde{
+                  display: none;
+                  visibility: hidden;
+                }
+              /*DIV DEL MENU GRANDE*/
+        
+              #controls-responsive .boton{
+                width: 8%;
+              }
+ /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+/*margin-left: 5.4%;/*IMPORTANTE */
+
+#controls{
+  display: none;
+ visibility: hidden;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  max-height: 1200px;
+  top:0;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+  opacity: 0.97;
+   background-color: #000000;
+   overflow-y: scroll;
+   z-index: 200;
+  }
+
+nav .logo-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 30px;
+  height: 30px;
+  border-bottom: 1px solid #aaaaaa;
+
+}
+
+nav .logo-esconder img{
+  width: 100%;
+  max-width: 120px;
+  margin-left: 20px;
+}
+
+nav .buscador-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 20px;
+  height: 50px;
+
+}
+
+  .d-flex{
+    width: 100%;
+    max-width: 350px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 18px;
+  }
+
+  #custom-search{
+    width: 100%;
+    max-width: 330px;
+    height: 50px;
+  }
+
+  #custom-search .sin-borde{
+    width: 90%;
+    max-width: 310px;
+    height: 40px;
+  }
+
+  #custom-search .boton{
+    width: 10%;
+    max-width: 20px;
+    height: 40px;
+  }
+ nav .nav .esconder{
+   visibility: visible;
+ }
+
+  nav .nav li a.active{
+    text-decoration:line-through;
+    color: #568632;
+    }
+
+   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+    .cabecera nav .nav{
+    width:100%; 
+    height: 100%;
+    max-height: 950px;
+    max-width: 340px;
     display: flex;
     flex-direction: column;
+  
+     margin-left: 6px;
+          margin-top: 10px;
+          overflow-y: scroll;
+     z-index: 99; 
+     background-color: darkslateblue;
     }
 
-    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
     nav .nav li{
-    display: flex;
-    width: 50%;
-    margin-top: 1.5%;/*IMPORTANTE */
-    filter: alpha(opacity=80);
-    height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
+     
     list-style: none;
+    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 15px;
     cursor:pointer;
-    margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
     }
-
-    /*AQUI SE MODIFICA PARA QUE SE VEA FUERA*/
+    
     nav .nav li a {
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    width: 50%;
-    height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
     z-index: 100;
-    background-color: #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-    display: block;
-    border-radius: 8px solid #639a3a;
-     margin-top:9px;
-    position: absolute;
-    padding: 2px 2px ;
-    z-index: 200;
-    margin-left: 30px;
+    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+    height: 30px;
     color: #fff;
     font-weight: lighter;
-    font-size: 1.3rem;
+    font-size: 1.24rem;
     text-transform: lowercase;
     letter-spacing: 1px;
     font-family:  sans-serif;
+    padding-top: 0;
+    margin-top: 0;
     }
   
-         /*IMPORTANTE*/
+     /*IMPORTANTE*/
 
-  nav .nav ul {
-  visibility: hidden;
+     
+    
+ 
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover > ul {
+       display: block;
+      margin-left: -200px;
+      height: 200px;
+      visibility: visible; 
+      z-index: 598;
+      }
+
+    nav .nav li ul li a{
+    font-size: 1rem;
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    margin-left: -2px;
+    padding-bottom: -2px;
+    margin-left: -76px;
+    }
+
+     nav .nav ul {
+    visibility: hidden;
+    }
+
+      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+  
+ /*ANIMACION SUBRAYADO */
+ nav a {
+ display: inline-block;
+ position: relative;
+ color: white;
+ text-decoration: none;
+ z-index: 40;
+ }
+
+  nav  a:after {
+ content: "";
+ display: block;
+ margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+ height: 2px;
+ width: 0px;
+ transition: all .8s;
+ z-index: 10;
+ }
+
+
+  /* width: 100%;*/
+  nav  a:hover:after {
+  padding-left: 40px;
+  padding-right: -150px;
+  height: 2px;
+  background: white;
   }
+
+
+
 
  /*PORTADA*/
     .portada{
@@ -8195,58 +9193,9 @@ width: 100%;
       border: solid #E9E9E9;
       }
 
-      .box{
-      display: block;
-      position: relative;
+  
 
-      height: 65px;
-      width: 100%;
-      }
-
-     .box form{
-      margin-top: 1%;
-      height: 50px;
-      display: flex;
-      flex-direction: row;
-      }
-
-    /*LETRA DEL BOX*/
-    .box h3{
-     font-size: 0.8rem;
-     padding-top: 2%;
-     letter-spacing: 0.1px;
-    }
-   
-   .box input[type="text"]
-   {
-   background-color: #FFF;
-   display: inline-block;
-   width:50%;
-   height: 50px;
-   border: 1.5px solid 	#DCDCDC;
-   padding: 0 25px;
-   border-radius: 5px 0 0 5px;
-   }
-
-  .box input[type="submit"]{
-  position: relative;
-  left: -2px;  /*EL TRUCO IMPORTANTE*/
-  border-radius: 0 5px 5px 0;
-  width: 30%;
-  height: 53px;
-  border: none ;
-  outline: none;
-  cursor: pointer;
-  background: #2d2d2d;
-  color: #fff;
-  font-size: 12px;
-  font-family: 'Archivo Black', sans-serif;
-   }
-
-  .box input[type="submit"]:hover{
-  background: #639a3a;
-   }
-
+ 
 
        
     /*CAJA DE LOS MENUS FOOTER S*/
@@ -8326,6 +9275,7 @@ width: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: brown;
   }
       
   #wrapper > * {
@@ -8342,209 +9292,447 @@ width: 100%;
    }
    
 
-  header{
-  width:100%;
-  position: fixed;
-  height: 140px;
-  z-index: 2000;   /*IMPORTANTE  */
-  margin: auto;
-  box-shadow: 0 8px 6px -6px #DCDCDC;
-  }
-
-
-  header.black{
-  background-color: #fff;
-  height: 140px;
-  }
-
-
-  .cabecera{
-  width: 100%;
-  height: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  }
-     
-     
-    .cabecera .logo{
-    width: 30%;
-    max-width: 200px;
-    height: 60px;
-    display: inline-flex;
-    }
-
-    .cabecera .logo img{
-    height: 60px;
-    width: 100%;
-    }
-
-               /*BUSCADOR*/
-   /*CONTAINER DEL BUSCADOR */
-   /*CONTAINER DEL BUSCADOR */
-
-   .cabecera .buscador{
-     display: block;
-    width: 45%;
-    max-width: 480px;
-    height: 50px;
-    margin-top: 11px;
-   }
-
-    .buscador #controls{
-    display: flex;
-    width: 99.9%;
-    height: 48px;
-    margin: auto;
-
-    }
-    
-    #controls #custom-search-input-header{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding-top: 1px;
-    margin: auto;
-    }
-     
-  /*------------------------*/
-    .menu-btn {
+   /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+   header{
     display: block;
-    width: 25%;
-    max-width: 95px;
-    height: 60px;
+    width:100%;
+    height: 55px;
+    top:0;
+    left: 0;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
     }
+  
+
+      header.black{
+      height: 55px;
+      background-color: #fff;
+     }
+
+  
      
-    .menu-btn .suscribe{
-    display: inline-flex;
-    width: 100%;
-    max-width: 95px;
-    height: 18px;
-    margin-top: 42px;
+     .cabecera{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 38px;
+      background-color: indigo;
+     }
+         
+
+    /*caja */
+    .cabecera .logo{
+      display: block;
+      position: relative;
+      float: left;
+      width: 20%;
+   
+      height: 35px;
+    }
+              
+    .cabecera .logo img {
+      display: block;
+      width: 100%;
+      max-width: 140px;
+      min-width: 140px;
+   
+      height: 35px;
+      z-index: 40;
+     }
+         
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+   
+   
+    .suscribe{
+    display: block;
+    position: relative;
+    float: left;
+    width: 20%;
+    max-width: 120px;
+    height: 38px;
+    background-color: lightcoral;
+    }
+  
+ 
+   .suscribe a  h4{
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 5;
+   
+    }
+  
+
+
+    
+
+  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+   .cabecera .menu-btn {
+    display: block;
+    position: relative;
+    float: left;
+    width: 10%;
+    max-width: 50px;
+    height: 38px;
+    margin: auto;
+    background-color: lightslategrey;
     }
 
-    .menu-btn .suscribe a h4 {
-    font-size: 1rem;
-    }
-    
-      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-    .menu-btn .menu-btn__burger {
-    display: none;
-    }
-    /*-------------------------------*/
-      
-   /* FIN IMPORTANTE PARA QUE EL MENU SE ADAPTE*/
-   .menu{
-   display: 100%;
+  
+  .menu-btn .hamburguesa{
+  display: block;
+  position: relative;
+  float:left;
+  width: 100%;
+  height: 30px;
+  max-width: 40px;
    }
 
-   .menu .caja{
-    display: none;
-    }
-
-    .menu  .nav{
-    width: 100%;
-    }
-   
-
-    
-    .menu  .nav li  a{
-     font-size: 0.8rem;
+     /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+   .menu-btn .hamburguesa .menu-btn__burger {
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 14.5px;
+      width: 37px;
+      height: 4px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      transition: all .5s ease-in-out;
+      z-index: 1000;
       }
-   
+  
+
+
+       /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 36px;
+  background:#2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+  z-index: 800;  
+  }
+
     
-   /* ESTE ES EL MENU NAV*/
+  .menu-btn__burger::before {
+  transform: translateY(-7px);
+  z-index:3000;
+  }
 
-  /*margin-left: 5.4%;/*IMPORTANTE */
-    nav{
-  width:100%;
-  height: 45px;
+
+  .menu-btn__burger::after {
+  transform: translateY(7px);
+  z-index:3000;
+  }
+
+
+  /* ANIMATION */
+  .hamburguesa.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  }
+
+
+   /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+ 
+  }
+
+
+  /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+
+  }
+
+
+
+
+  .menu-btn__burger:hover{
+  background-color: #7aac41;
+  }
+  
+
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #7aac41;
+  }
+
+
+     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+
+
+    /*..BUSCADOR PARA EL MOVIL..........................*/
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+     #controls-responsive{
+      display: block;
+      position: relative;
+      float: left;
+      width: 92%;
+      height: 50px;
+      margin-top: 58px;  
+      margin: auto;
+       }
+  
+       #custom-search-input-responsive{
+       width:  100%;
+       height: 50px;
+       border: 1px solid #c9c9c9;
+       border-radius: 4px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin: auto;
+       background-color: darksalmon;
+       }
+  
+  
+   #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+       display: block;
+       position: relative;
+       float: left;
+       width: 100%;
+     
+      }
+  
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+       #controls-responsive .boton-responsive{
+         display: block;
+         position: relative;
+         float: right;
+       width: 10%;
+       padding: 12px 20px;
+       background-color: #ffffff;
+        }
+     /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
+    
+    /*BUSCADOR EN EL NAV*/
+            
+    nav  #controls {
+      width: 100%;
+      max-width: 300px;
+      height: 10%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-left: 20px;
+      background-color: #000000;
+      }
+
+     nav  #controls #custom-search-input-header{
+              width: 100%;
+              max-width: 300px;
+              }
+        
+              .buscador #controls   #custom-search-input-header .sin-borde{
+                  display: none;
+                  visibility: hidden;
+                }
+              /*DIV DEL MENU GRANDE*/
+        
+              #controls-responsive .boton{
+                width: 8%;
+              }
+ /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+/*margin-left: 5.4%;/*IMPORTANTE */
+
+#controls{
+  display: none;
+ visibility: hidden;
+}
+nav{
   display: flex;
-  align-items: center;
-  margin: auto;
-   }
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  max-height: 1200px;
+  top:0;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+  opacity: 0.97;
+   background-color: #000000;
+   overflow-y: scroll;
+   z-index: 200;
+  }
 
+nav .logo-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 30px;
+  height: 30px;
+  border-bottom: 1px solid #aaaaaa;
 
-     /* ESTE ES EL UL  IMPORTANTE PARA EL MENU EN FILA Y QUE ESTE CENTRADO*/
-    .nav{
+}
+
+nav .logo-esconder img{
+  width: 100%;
+  max-width: 120px;
+  margin-left: 20px;
+}
+
+nav .buscador-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 20px;
+  height: 50px;
+
+}
+
+  .d-flex{
+    width: 100%;
+    max-width: 350px;
+    height: 50px;
     display: flex;
     flex-direction: row;
-    width:100%;
-    max-width: 937px;
-     }
-    
+    margin-left: 18px;
+  }
 
-    .nav li{
-    list-style: none;
-    padding: 2px 6px 2px 2px;
-    margin: auto;
-    }
- 
-    .nav li a{
-    color: #2d2d2d;
-    letter-spacing: -0.2px;
-    word-spacing: -0.5px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1rem;
-    font-weight: 900;
-    text-transform: lowercase;
-         }
-    
-    
-    nav li .current {
+  #custom-search{
+    width: 100%;
+    max-width: 330px;
+    height: 50px;
+  }
+
+  #custom-search .sin-borde{
+    width: 90%;
+    max-width: 310px;
+    height: 40px;
+  }
+
+  #custom-search .boton{
+    width: 10%;
+    max-width: 20px;
+    height: 40px;
+  }
+ nav .nav .esconder{
+   visibility: visible;
+ }
+
+  nav .nav li a.active{
+    text-decoration:line-through;
     color: #568632;
     }
-    
-    /*IMPORTANTE PARA QUE EL SUBMENU NO SE MUEVA*/
-    .nav{
-     z-index: 30;
-    position: fixed;
-    }
-      
-    /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
-    nav .nav ul {
-    display:none;
-    position:absolute;
-    top:100%;
-    left: 0;
-    background:#fff;
-    padding:0;
-    width: 100%;
-     }
-    
-    /* items del menu desplegable */
-    /*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS*/
-    nav .nav ul li {
-    float:none;
-    width:450px; 
+
+   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+    .cabecera nav .nav{
+    width:100%; 
+    height: 100%;
+    max-height: 950px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+  
+     margin-left: 6px;
+          margin-top: 10px;
+          overflow-y: scroll;
+     z-index: 99; 
+     background-color: darkslateblue;
     }
 
-
-    /* enlaces de los items del menu desplegable */
-    nav .nav ul a {
-    line-height:100%;
-    padding:10px 15px;
-    margin-left: -300px; /*MUEVE LTRAS*/   
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+     
+    list-style: none;
+    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 15px;
+    cursor:pointer;
     }
+    
+    nav .nav li a {
+    z-index: 100;
+    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+    height: 30px;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.24rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family:  sans-serif;
+    padding-top: 0;
+    margin-top: 0;
+    }
+  
+     /*IMPORTANTE*/
 
      
-    /* items del menu desplegable al pasar el ratón */
-    nav  .nav li:hover > ul {
-    display:block;
+    
+ 
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover > ul {
+       display: block;
+      margin-left: -200px;
+      height: 200px;
+      visibility: visible; 
+      z-index: 598;
+      }
+
+    nav .nav li ul li a{
+    font-size: 1rem;
+    display: block;
+    max-width: 200px;
     width: 100%;
+    margin-left: -2px;
+    padding-bottom: -2px;
+    margin-left: -76px;
     }
-    
-    
-    /* efecto al pasar el ratón por los items del menu */
-    nav .nav li:hover {
-   cursor: pointer;
-   }
-    
-      
-  /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
-   nav ul li a.active{
-  text-decoration:line-through;
-  color: #568632;
+
+     nav .nav ul {
+    visibility: hidden;
+    }
+
+      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+  
+ /*ANIMACION SUBRAYADO */
+ nav a {
+ display: inline-block;
+ position: relative;
+ color: white;
+ text-decoration: none;
+ z-index: 40;
+ }
+
+  nav  a:after {
+ content: "";
+ display: block;
+ margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+ height: 2px;
+ width: 0px;
+ transition: all .8s;
+ z-index: 10;
+ }
+
+
+  /* width: 100%;*/
+  nav  a:hover:after {
+  padding-left: 40px;
+  padding-right: -150px;
+  height: 2px;
+  background: white;
   }
   /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
       
@@ -9128,6 +10316,7 @@ width: 100%;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      background-color: aqua;
     
      }
           
@@ -9143,240 +10332,450 @@ width: 100%;
       margin-bottom: 210px;
      }
      
-     header{
+    /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+    header{
+      display: block;
       width:100%;
+      height: 55px;
+      top:0;
+      left: 0;
       position: fixed;
-      height: 140px;
       z-index: 2000;   /*IMPORTANTE  */
       margin: auto;
-      box-shadow: 0 8px 6px -6px #DCDCDC;
-      }
-    
-    
-      header.black{
       background-color: #fff;
-      height: 140px;
+      box-shadow: 0 8px 6px -6px #c6c6c6;
       }
     
-    
-    .cabecera{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-   
-    }
-         
-         
-         
-    .logo{
-    width: 40%;
-    max-width: 210px;
-    height: 60px;
-    display: inline-flex;
-    }
-    
-    .logo img{
-    height: 60px;
-    width: 100%;
-    margin-left: -5px;
-    }
 
-
-
-           
-   .cabecera .buscador{
-    display: block;
-   width: 45%;
-   max-width: 480px;
-   height: 52px;
-   margin-top: 11px;
-  }
-
-   .buscador #controls{
-   display: flex;
-   width: 99.9%;
-   height: 50px;
-   margin: auto;
-
-   }
-   
-   #controls #custom-search-input-header{
-   display: flex;
-   flex-direction: row;
-   width: 100%;
-   height: 50px;
-   padding-top: 1px;
-   margin: auto;
-   margin-top: 3.5px;
-   }
-    .sin-borde{
-      height: 48px;
-      border-radius: 6px;
-    }
-
-    .boton{
-      height: 48px;
-      border-radius: 6px;
-    }
-
-
-    /*------------------------*/
-   .menu-btn {
-   display: block;
-   width: 25%;
-   max-width: 95px;
-   height: 60px;
-   }
-    
-   .menu-btn .suscribe{
-   display: inline-flex;
-   width: 100%;
-   max-width: 95px;
-   height: 18px;
-   margin-top: 42px;
- 
-   }
-
-   .menu-btn .suscribe a h4 {
-   font-size: 1rem;
-   }
-   
-     /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-   .menu-btn .menu-btn__burger {
-   display: none;
-   }
-   /*-------------------------------*/
-     
-  /* FIN IMPORTANTE PARA QUE EL MENU SE ADAPTE*/
-  .menu{
-  width: 100%;
-  flex-direction: row;
-  
-  }
-
-  .menu .caja{
-   width: 8%;
-   }
-
-   .menu  .nav{
-   width: 92%;
-   }
-  
-
-   
-   .menu  .nav li  a{
-    font-size: 0.8rem;
-     }
-  
-   
-  /* ESTE ES EL MENU NAV*/
-
-
-
-
-        
-      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-      .menu-btn .menu-btn__burger {
-      display: none;
-      }
-      
-        
-    /* ESTE ES EL MENU NAV*/
-    
-    /*margin-left: 5.4%;/*IMPORTANTE */
-       nav{
-      width:100%; 
-      height: 45px;
-      display: flex;
-      align-items: center;
-      margin: auto;
+        header.black{
+        height: 55px;
+        background-color: #fff;
        }
+  
     
-    
-    /* ESTE ES EL UL  IMPORTANTE PARA EL MENU EN FILA Y QUE ESTE CENTRADO*/
-    .nav{
-    display: flex;
-    flex-direction: row;
-    width:100%;
-    max-width: 1025px;
-    }
-        
-    .nav li{
-    list-style: none;
-    padding: 2px 6px 2px 2px;
-    margin: auto;
-      }
+       
+       .cabecera{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 38px;
+        background-color: indigo;
+       }
+           
+
+      /*caja */
+      .cabecera .logo{
+        display: block;
+        position: relative;
+        float: left;
+        width: 20%;
      
-      .nav li a{
-      color: #2d2d2d;
-      letter-spacing: -0.2px;
-      word-spacing: -0.5px;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 1.1rem;
-      font-weight: 900;
-      text-transform: lowercase;
+        height: 35px;
       }
-        
-        
-       nav li .current {
+                
+      .cabecera .logo img {
+        display: block;
+        width: 100%;
+        max-width: 140px;
+        min-width: 140px;
+     
+        height: 35px;
+        z-index: 40;
+       }
+           
+      /*CONTENEDOR  REVISTA Y SOCIALES*/
+     
+     
+      .suscribe{
+      display: block;
+      position: relative;
+      float: left;
+      width: 20%;
+      max-width: 120px;
+      height: 38px;
+      background-color: lightcoral;
+      }
+    
+   
+     .suscribe a  h4{
+      font-size: 0.8rem;
+      margin-top: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      font-family: 'Times New Roman', Times, serif;
+      z-index: 5;
+     
+      }
+    
+
+
+      
+  
+    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+     .cabecera .menu-btn {
+      display: block;
+      position: relative;
+      float: left;
+      width: 10%;
+      max-width: 50px;
+      height: 38px;
+      margin: auto;
+      background-color: lightslategrey;
+      }
+
+    
+    .menu-btn .hamburguesa{
+    display: block;
+    position: relative;
+    float:left;
+    width: 100%;
+    height: 30px;
+    max-width: 40px;
+     }
+
+       /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+     .menu-btn .hamburguesa .menu-btn__burger {
+        display: block;
+        position: relative;
+        float: right;
+        margin-top: 14.5px;
+        width: 37px;
+        height: 4px;
+        background: #2d2d2d;
+        border-radius: 2px;
+        transition: all .5s ease-in-out;
+        z-index: 1000;
+        }
+    
+
+
+         /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 36px;
+    background:#2d2d2d;
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+    z-index: 800;  
+    }
+
+      
+    .menu-btn__burger::before {
+    transform: translateY(-7px);
+    z-index:3000;
+    }
+
+
+    .menu-btn__burger::after {
+    transform: translateY(7px);
+    z-index:3000;
+    }
+
+
+    /* ANIMATION */
+    .hamburguesa.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    }
+
+
+     /* background: #fff;  */
+    .hamburguesa.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+   
+    }
+
+
+    /* background: #fff;  */
+    .hamburguesa.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+
+    }
+
+
+
+
+    .menu-btn__burger:hover{
+    background-color: #7aac41;
+    }
+    
+
+    .menu-btn__burger:hover::before,
+    .menu-btn__burger:hover::after{
+    background-color: #7aac41;
+    }
+
+
+       /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+  
+
+      /*..BUSCADOR PARA EL MOVIL..........................*/
+       /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+       #controls-responsive{
+        display: block;
+        position: relative;
+        float: left;
+        width: 92%;
+        height: 50px;
+        margin-top: 58px;  
+        margin: auto;
+         }
+    
+         #custom-search-input-responsive{
+         width:  100%;
+         height: 50px;
+         border: 1px solid #c9c9c9;
+         border-radius: 4px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         margin: auto;
+         background-color: darksalmon;
+         }
+    
+    
+     #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+         display: block;
+         position: relative;
+         float: left;
+         width: 100%;
+       
+        }
+    
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+        }
+         #controls-responsive .boton-responsive{
+           display: block;
+           position: relative;
+           float: right;
+         width: 10%;
+         padding: 12px 20px;
+         background-color: #ffffff;
+          }
+       /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
+      
+      /*BUSCADOR EN EL NAV*/
+              
+      nav  #controls {
+        width: 100%;
+        max-width: 300px;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: 20px;
+        background-color: #000000;
+        }
+  
+       nav  #controls #custom-search-input-header{
+                width: 100%;
+                max-width: 300px;
+                }
+          
+                .buscador #controls   #custom-search-input-header .sin-borde{
+                    display: none;
+                    visibility: hidden;
+                  }
+                /*DIV DEL MENU GRANDE*/
+          
+                #controls-responsive .boton{
+                  width: 8%;
+                }
+   /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+  /*margin-left: 5.4%;/*IMPORTANTE */
+
+  #controls{
+    display: none;
+   visibility: hidden;
+  }
+  nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+    max-height: 1200px;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+    opacity: 0.97;
+     background-color: #000000;
+     overflow-y: scroll;
+     z-index: 200;
+    }
+
+  nav .logo-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    visibility: visible;
+    margin-top: 30px;
+    height: 30px;
+    border-bottom: 1px solid #aaaaaa;
+
+  }
+
+  nav .logo-esconder img{
+    width: 100%;
+    max-width: 120px;
+    margin-left: 20px;
+  }
+
+  nav .buscador-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    visibility: visible;
+    margin-top: 20px;
+    height: 50px;
+
+  }
+
+    .d-flex{
+      width: 100%;
+      max-width: 350px;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      margin-left: 18px;
+    }
+
+    #custom-search{
+      width: 100%;
+      max-width: 330px;
+      height: 50px;
+    }
+
+    #custom-search .sin-borde{
+      width: 90%;
+      max-width: 310px;
+      height: 40px;
+    }
+
+    #custom-search .boton{
+      width: 10%;
+      max-width: 20px;
+      height: 40px;
+    }
+   nav .nav .esconder{
+     visibility: visible;
+   }
+  
+    nav .nav li a.active{
+      text-decoration:line-through;
       color: #568632;
       }
-        
-      /*IMPORTANTE PARA QUE EL SUBMENU NO SE MUEVA*/
-      .nav{
-      z-index: 30;
-      position: fixed;
-      }
-          
-      /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
-      nav .nav ul {
-      display:none;
-      position:absolute;
-      top:100%;
-      left: 0;
-      background:#fff;
-      padding:0;
-      width: 100%;
-      }
-        
-      /* items del menu desplegable */
-      /*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS*/
-      nav .nav ul li {
-      float:none;
-      width:450px;    
-      }
-        
-
-      /* enlaces de los items del menu desplegable */
-      nav .nav ul a {
-      line-height:100%;
-      padding:10px 15px;
-      margin-left: -300px; /*MUEVE LTRAS*/   
-      }
-         
-      /* items del menu desplegable al pasar el ratón */
-     nav  .nav li:hover > ul {
-    display:block;
-     width: 100%;
-      }
-        
-        
-    /* efecto al pasar el ratón por los items del menu */
-    nav .nav li:hover {
-    cursor: pointer;
-    }
-        
-        
-        
-   /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
-   nav ul li a.active{
-    text-decoration:line-through;
-    color: #568632;
-    }
-    /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
   
+     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      .cabecera nav .nav{
+      width:100%; 
+      height: 100%;
+      max-height: 950px;
+      max-width: 340px;
+      display: flex;
+      flex-direction: column;
+    
+       margin-left: 6px;
+            margin-top: 10px;
+            overflow-y: scroll;
+       z-index: 99; 
+       background-color: darkslateblue;
+      }
+  
+       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+      nav .nav li{
+       
+      list-style: none;
+      height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+      margin-left: 10px;
+      margin-bottom: 15px;
+      cursor:pointer;
+      }
+      
+      nav .nav li a {
+      z-index: 100;
+      background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+      height: 30px;
+      color: #fff;
+      font-weight: lighter;
+      font-size: 1.24rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  sans-serif;
+      padding-top: 0;
+      margin-top: 0;
+      }
+    
+       /*IMPORTANTE*/
+  
+       
+      
+   
+        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+        nav .nav li:hover > ul {
+         display: block;
+        margin-left: -200px;
+        height: 200px;
+        visibility: visible; 
+        z-index: 598;
+        }
+  
+      nav .nav li ul li a{
+      font-size: 1rem;
+      display: block;
+      max-width: 200px;
+      width: 100%;
+      margin-left: -2px;
+      padding-bottom: -2px;
+      margin-left: -76px;
+      }
+  
+       nav .nav ul {
+      visibility: hidden;
+      }
+  
+        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+    
+   /*ANIMACION SUBRAYADO */
+   nav a {
+   display: inline-block;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   z-index: 40;
+   }
+  
+    nav  a:after {
+   content: "";
+   display: block;
+   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+   height: 2px;
+   width: 0px;
+   transition: all .8s;
+   z-index: 10;
+   }
+  
+  
+    /* width: 100%;*/
+    nav  a:hover:after {
+    padding-left: 40px;
+    padding-right: -150px;
+    height: 2px;
+    background: white;
+    }
+
+
       /*PORTADA*/
        
 /*ES PARA SEPARAR EL BUSCADOR DE LA PORTADA*/
@@ -9861,57 +11260,7 @@ width: 600px;
          
         
     
-  .box input[type="text"]
-  {
-  background-color: #FFF;
-  display: inline-block;
-  width:42%;
-  height: 50px;
-  border: 1.5px solid 	#DCDCDC;
-  padding: 0 25px;
-  border-radius: 5px 0 0 5px;
-  }
-
-  #footer .box input[type="submit"]{
-  position: relative;
-  left: -5px;  /*EL TRUCO IMPORTANTE*/
-  border-radius: 0 5px 5px 0;
-  width: 20%;
-  height: 50px;
-  border: none ;
-  outline: none;
-  cursor: pointer;
-  top:-1px;
-  background: #2d2d2d;
-  color: #fff;
-  font-size: 12px;
-  font-family: 'Archivo Black', sans-serif;
-}
-
-#footer .box input[type="submit"]:hover{
-  background: #639a3a;
-}
-
-     
-.box h3{
-  padding-bottom: 10px;
-  font-size: 1rem;
-  letter-spacing: -1px;
-  word-spacing: -1px;
-  font-family: 'Fira Sans', sans-serif;
- }
  
-    #footer .menu-footer{
-     height:120px
-    }
-    
-    #footer.menu-text{
-     height:20px;
-    }
-
-     #footer .menu-lista{
-     height:70px;
-    }
       .menu-footer h1{
       padding-bottom: 30px;
       font-size: 1.1rem;
@@ -9947,6 +11296,7 @@ width: 600px;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      background-color: #2d2d2d;
     }
           
     #wrapper > * {
@@ -9963,144 +11313,448 @@ width: 600px;
     }
 
 
+       /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
        header{
-      width:100%;
-      position: fixed;
-      z-index: 2000;   /*IMPORTANTE  */
-      margin: auto;
-       height: 145px;
-      box-shadow: 0 8px 6px -6px #DCDCDC;
-      background-color: #fff;
-     }
-    
-    
-      header.black{
-      height: 145px;
-      background-color: #fff;
-     }
-   
-     .cabecera{
-     width: 100%;
-     height: 65px;
-     margin: auto;
-     display: flex;
-     flex-direction: row;
-     margin-top: -12px;
-     }
-   
-   
-   
-     .cabecera .logo{
-     width: 100%;
-     height: 100%;
-     max-height: 70px; 
-     }
-
-      .cabecera .logo img{
-        width: 100%;
-      height:70px; 
-      }
-   
-      .cabecera  .buscador{
         display: block;
-        width: 47%;
-        max-width: 520px;
-        height: 48px;
-        margin-top: 18px;
-      }
-
-    .buscador #controls{
-     width: 100%;
-     height: 50px;
-    }
-
-    #controls #custom-search-input-header{
-      width: 100%;
-      height: 50px;
-    }
-
-    #custom-search-input-header  .sin-borde{
-     border-radius: 5px;
-    }
-
-    #custom-search-input-header   .boton{
-     border-radius: 5px;
-    }
-      .cabecera .menu-btn{
-      width: 20%;
-      max-width: 95px;
-      height: 65px;
-      display: inline-flex;
-     
-      }
-
-   
-    .menu-btn .suscribe{
-    width: 20%;
-    display: block;
-    height: 70px;
-    }
+        width:100%;
+        height: 55px;
+        top:0;
+        left: 0;
+        position: fixed;
+        z-index: 2000;   /*IMPORTANTE  */
+        margin: auto;
+        background-color: #fff;
+        box-shadow: 0 8px 6px -6px #c6c6c6;
+        }
+      
+  
+          header.black{
+          height: 55px;
+          background-color: #fff;
+         }
     
-     .cabecera .suscribe h4 {
-    font-size:  1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    color:#2d2d2d;
-    letter-spacing: 0.2px;
-    height: 19px;
-    margin-top: 46px;
-    }
-
-    .menu-btn .menu-btn__burger{
-    display: none;
-    }
-
-   
-   /*-------------------------------*/
+      
+         
+         .cabecera{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          height: 38px;
+          background-color: indigo;
+         }
+             
+  
+        /*caja */
+        .cabecera .logo{
+          display: block;
+          position: relative;
+          float: left;
+          width: 20%;
+       
+          height: 35px;
+        }
+                  
+        .cabecera .logo img {
+          display: block;
+          width: 100%;
+          max-width: 140px;
+          min-width: 140px;
+       
+          height: 35px;
+          z-index: 40;
+         }
+             
+        /*CONTENEDOR  REVISTA Y SOCIALES*/
+       
+       
+        .suscribe{
+        display: block;
+        position: relative;
+        float: left;
+        width: 20%;
+        max-width: 120px;
+        height: 38px;
+        background-color: lightcoral;
+        }
+      
      
-  /* FIN IMPORTANTE PARA QUE EL MENU SE ADAPTE*/
-  .menu{
-  width: 100%;
-  flex-direction: row;
-  margin-top: 15px;
-  }
-
-  .menu .caja{
-   width: 15%;
-   }
-
-   .menu  .nav{
-   width: 85%;
-   }
+       .suscribe a  h4{
+        font-size: 0.8rem;
+        margin-top: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        font-family: 'Times New Roman', Times, serif;
+        z-index: 5;
+       
+        }
+      
   
-
-   
-   .menu  .nav li  a{
-    font-size: 0.76rem;
-     }
   
-   
-  /* ESTE ES EL MENU NAV*/
-
-
-
-
         
-      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-      .menu-btn .menu-btn__burger {
-      display: none;
+    
+      /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+       .cabecera .menu-btn {
+        display: block;
+        position: relative;
+        float: left;
+        width: 10%;
+        max-width: 50px;
+        height: 38px;
+        margin: auto;
+        background-color: lightslategrey;
+        }
+  
+      
+      .menu-btn .hamburguesa{
+      display: block;
+      position: relative;
+      float:left;
+      width: 100%;
+      height: 30px;
+      max-width: 40px;
+       }
+  
+         /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+       .menu-btn .hamburguesa .menu-btn__burger {
+          display: block;
+          position: relative;
+          float: right;
+          margin-top: 14.5px;
+          width: 37px;
+          height: 4px;
+          background: #2d2d2d;
+          border-radius: 2px;
+          transition: all .5s ease-in-out;
+          z-index: 1000;
+          }
+      
+  
+  
+           /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+      .menu-btn__burger::before,
+      .menu-btn__burger::after {
+      content: '';
+      position: absolute;
+      height: 4px;
+      width: 36px;
+      background:#2d2d2d;
+      border-radius: 2px;
+      transition: all .5s ease-in-out;
+      z-index: 800;  
+      }
+  
+        
+      .menu-btn__burger::before {
+      transform: translateY(-7px);
+      z-index:3000;
+      }
+  
+  
+      .menu-btn__burger::after {
+      transform: translateY(7px);
+      z-index:3000;
+      }
+  
+  
+      /* ANIMATION */
+      .hamburguesa.open .menu-btn__burger {
+      transform: translateX(-50px);
+      background: transparent;
+      box-shadow: none;
+      }
+  
+  
+       /* background: #fff;  */
+      .hamburguesa.open .menu-btn__burger::before {
+      transform: rotate(45deg) translate(35px, -35px);
+     
+      }
+  
+  
+      /* background: #fff;  */
+      .hamburguesa.open .menu-btn__burger::after {
+      transform: rotate(-45deg) translate(35px, 35px);
+  
+      }
+  
+  
+  
+  
+      .menu-btn__burger:hover{
+      background-color: #7aac41;
       }
       
+  
+      .menu-btn__burger:hover::before,
+      .menu-btn__burger:hover::after{
+      background-color: #7aac41;
+      }
+  
+  
+         /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+    
+  
+        /*..BUSCADOR PARA EL MOVIL..........................*/
+         /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+         #controls-responsive{
+          display: block;
+          position: relative;
+          float: left;
+          width: 92%;
+          height: 50px;
+          margin-top: 58px;  
+          margin: auto;
+           }
+      
+           #custom-search-input-responsive{
+           width:  100%;
+           height: 50px;
+           border: 1px solid #c9c9c9;
+           border-radius: 4px;
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           margin: auto;
+           background-color: darksalmon;
+           }
+      
+      
+       #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+           display: block;
+           position: relative;
+           float: left;
+           width: 100%;
+         
+          }
+      
+          input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+          }
+           #controls-responsive .boton-responsive{
+             display: block;
+             position: relative;
+             float: right;
+           width: 10%;
+           padding: 12px 20px;
+           background-color: #ffffff;
+            }
+         /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
         
-    /* ESTE ES EL MENU NAV*/
+        /*BUSCADOR EN EL NAV*/
+                
+        nav  #controls {
+          width: 100%;
+          max-width: 300px;
+          height: 10%;
+          display: flex;
+          flex-direction: column;
+          margin-top: 20px;
+          margin-left: 20px;
+          background-color: #000000;
+          }
+    
+         nav  #controls #custom-search-input-header{
+                  width: 100%;
+                  max-width: 300px;
+                  }
+            
+                  .buscador #controls   #custom-search-input-header .sin-borde{
+                      display: none;
+                      visibility: hidden;
+                    }
+                  /*DIV DEL MENU GRANDE*/
+            
+                  #controls-responsive .boton{
+                    width: 8%;
+                  }
+     /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+    /*margin-left: 5.4%;/*IMPORTANTE */
   
-   /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
-   nav ul li a.active{
-    text-decoration:line-through;
-    color: #568632;
+    #controls{
+      display: none;
+     visibility: hidden;
     }
-    /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
+    nav{
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      max-width: 420px;
+      height: 100%;
+      max-height: 1200px;
+      top:0;
+      bottom: 0;
+      left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+      opacity: 0.97;
+       background-color: #000000;
+       overflow-y: scroll;
+       z-index: 200;
+      }
   
+    nav .logo-esconder{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      visibility: visible;
+      margin-top: 30px;
+      height: 30px;
+      border-bottom: 1px solid #aaaaaa;
+  
+    }
+  
+    nav .logo-esconder img{
+      width: 100%;
+      max-width: 120px;
+      margin-left: 20px;
+    }
+  
+    nav .buscador-esconder{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      visibility: visible;
+      margin-top: 20px;
+      height: 50px;
+  
+    }
+  
+      .d-flex{
+        width: 100%;
+        max-width: 350px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        margin-left: 18px;
+      }
+  
+      #custom-search{
+        width: 100%;
+        max-width: 330px;
+        height: 50px;
+      }
+  
+      #custom-search .sin-borde{
+        width: 90%;
+        max-width: 310px;
+        height: 40px;
+      }
+  
+      #custom-search .boton{
+        width: 10%;
+        max-width: 20px;
+        height: 40px;
+      }
+     nav .nav .esconder{
+       visibility: visible;
+     }
+    
+      nav .nav li a.active{
+        text-decoration:line-through;
+        color: #568632;
+        }
+    
+       /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+        .cabecera nav .nav{
+        width:100%; 
+        height: 100%;
+        max-height: 950px;
+        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+      
+         margin-left: 6px;
+              margin-top: 10px;
+              overflow-y: scroll;
+         z-index: 99; 
+         background-color: darkslateblue;
+        }
+    
+         /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+        nav .nav li{
+         
+        list-style: none;
+        height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+        margin-left: 10px;
+        margin-bottom: 15px;
+        cursor:pointer;
+        }
+        
+        nav .nav li a {
+        z-index: 100;
+        background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+        height: 30px;
+        color: #fff;
+        font-weight: lighter;
+        font-size: 1.24rem;
+        text-transform: lowercase;
+        letter-spacing: 1px;
+        font-family:  sans-serif;
+        padding-top: 0;
+        margin-top: 0;
+        }
+      
+         /*IMPORTANTE*/
+    
+         
+        
+     
+          /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+       /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+          nav .nav li:hover > ul {
+           display: block;
+          margin-left: -200px;
+          height: 200px;
+          visibility: visible; 
+          z-index: 598;
+          }
+    
+        nav .nav li ul li a{
+        font-size: 1rem;
+        display: block;
+        max-width: 200px;
+        width: 100%;
+        margin-left: -2px;
+        padding-bottom: -2px;
+        margin-left: -76px;
+        }
+    
+         nav .nav ul {
+        visibility: hidden;
+        }
+    
+          /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+      
+     /*ANIMACION SUBRAYADO */
+     nav a {
+     display: inline-block;
+     position: relative;
+     color: white;
+     text-decoration: none;
+     z-index: 40;
+     }
+    
+      nav  a:after {
+     content: "";
+     display: block;
+     margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+     height: 2px;
+     width: 0px;
+     transition: all .8s;
+     z-index: 10;
+     }
+    
+    
+      /* width: 100%;*/
+      nav  a:hover:after {
+      padding-left: 40px;
+      padding-right: -150px;
+      height: 2px;
+      background: white;
+      }
       /*PORTADA*/
        
 
@@ -10628,6 +12282,7 @@ width: 600px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: orangered;
   }
         
   #wrapper > * {
@@ -10643,126 +12298,448 @@ width: 600px;
     }
 
 
-    header{
-    width:100%;
-    position: fixed;
-    z-index: 2000;   /*IMPORTANTE  */
-    box-shadow: 0 8px 6px -6px #DCDCDC;
-    height: 150px;
-    }
-  
-  
-    header.black{
-      height: 150px;
-    background-color: #fff;
-    }
-  
-
-    .cabecera{
-    width: 100%;
-    height: 65px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    margin-top: -8px;
-    }
-  
-  
-  
-   .cabecera .logo{
-   width: 30%;
-   height: 65px; 
-   }
-
-   .cabecera .logo img{
-   width: 100%;
-   height:65px; 
-   }
-  
-   .cabecera  .buscador{
-    display: block;
-    width: 47%;
-    max-width: 600px;
-    height: 65px;
-    margin-top: 18px;
-     }
-
-   .buscador #controls{
-    width: 100%;
-    height: 60px;
-   }
-
-   #controls #custom-search-input-header{
-     width: 100%;
-     height: 60px;
-   }
-
-   #custom-search-input-header  .sin-borde{
-    border-radius: 5px;
-   }
-
-   #custom-search-input-header   .boton{
-    border-radius: 5px;
-   }
-     .cabecera .menu-btn{
-     width: 20%;
-     max-width: 95px;
-     height: 65px;
-     display: inline-flex;
+     /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+     header{
+      display: block;
+      width:100%;
+      height: 55px;
+      top:0;
+      left: 0;
+      position: fixed;
+      z-index: 2000;   /*IMPORTANTE  */
+      margin: auto;
+      background-color: #fff;
+      box-shadow: 0 8px 6px -6px #c6c6c6;
+      }
     
-     }
 
+        header.black{
+        height: 55px;
+        background-color: #fff;
+       }
   
-   .menu-btn .suscribe{
-   width: 20%;
-   display: block;
-   height: 65px;
-   }
+    
+       
+       .cabecera{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 38px;
+        background-color: indigo;
+       }
+           
+
+      /*caja */
+      .cabecera .logo{
+        display: block;
+        position: relative;
+        float: left;
+        width: 20%;
+     
+        height: 35px;
+      }
+                
+      .cabecera .logo img {
+        display: block;
+        width: 100%;
+        max-width: 140px;
+        min-width: 140px;
+     
+        height: 35px;
+        z-index: 40;
+       }
+           
+      /*CONTENEDOR  REVISTA Y SOCIALES*/
+     
+     
+      .suscribe{
+      display: block;
+      position: relative;
+      float: left;
+      width: 20%;
+      max-width: 120px;
+      height: 38px;
+      background-color: lightcoral;
+      }
+    
    
-    .cabecera .suscribe h4 {
-   font-size:  1rem;
-   text-transform: uppercase;
-   font-weight: 700;
-   color:#2d2d2d;
-   letter-spacing: 0.2px;
-   height: 19px;
-   margin-top: 46px;
-   }
-
-   .menu-btn .menu-btn__burger{
-   display: none;
-   }
-
- 
-   /*------------------------*/
-  
-  /*-------------------------------*/
+     .suscribe a  h4{
+      font-size: 0.8rem;
+      margin-top: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      font-family: 'Times New Roman', Times, serif;
+      z-index: 5;
+     
+      }
     
- /* FIN IMPORTANTE PARA QUE EL MENU SE ADAPTE*/
- .menu{
- width: 100%;
- flex-direction: row;
- margin-top: 12px;
- }
 
- .menu .caja{
-  width: 15%;
-  }
 
-  .menu  .nav{
-  width: 85%;
-  }
- 
-
+      
   
-  .menu  .nav li  a{
-   font-size: 0.76rem;
+    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+     .cabecera .menu-btn {
+      display: block;
+      position: relative;
+      float: left;
+      width: 10%;
+      max-width: 50px;
+      height: 38px;
+      margin: auto;
+      background-color: lightslategrey;
+      }
+
+    
+    .menu-btn .hamburguesa{
+    display: block;
+    position: relative;
+    float:left;
+    width: 100%;
+    height: 30px;
+    max-width: 40px;
+     }
+
+       /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+     .menu-btn .hamburguesa .menu-btn__burger {
+        display: block;
+        position: relative;
+        float: right;
+        margin-top: 14.5px;
+        width: 37px;
+        height: 4px;
+        background: #2d2d2d;
+        border-radius: 2px;
+        transition: all .5s ease-in-out;
+        z-index: 1000;
+        }
+    
+
+
+         /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 36px;
+    background:#2d2d2d;
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+    z-index: 800;  
     }
- 
+
+      
+    .menu-btn__burger::before {
+    transform: translateY(-7px);
+    z-index:3000;
+    }
+
+
+    .menu-btn__burger::after {
+    transform: translateY(7px);
+    z-index:3000;
+    }
+
+
+    /* ANIMATION */
+    .hamburguesa.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    }
+
+
+     /* background: #fff;  */
+    .hamburguesa.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+   
+    }
+
+
+    /* background: #fff;  */
+    .hamburguesa.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+
+    }
+
+
+
+
+    .menu-btn__burger:hover{
+    background-color: #7aac41;
+    }
+    
+
+    .menu-btn__burger:hover::before,
+    .menu-btn__burger:hover::after{
+    background-color: #7aac41;
+    }
+
+
+       /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
   
- /* ESTE ES EL MENU NAV*/
 
+      /*..BUSCADOR PARA EL MOVIL..........................*/
+       /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+       #controls-responsive{
+        display: block;
+        position: relative;
+        float: left;
+        width: 92%;
+        height: 50px;
+        margin-top: 58px;  
+        margin: auto;
+         }
+    
+         #custom-search-input-responsive{
+         width:  100%;
+         height: 50px;
+         border: 1px solid #c9c9c9;
+         border-radius: 4px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         margin: auto;
+         background-color: darksalmon;
+         }
+    
+    
+     #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+         display: block;
+         position: relative;
+         float: left;
+         width: 100%;
+       
+        }
+    
+        input[type=text] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+        }
+         #controls-responsive .boton-responsive{
+           display: block;
+           position: relative;
+           float: right;
+         width: 10%;
+         padding: 12px 20px;
+         background-color: #ffffff;
+          }
+       /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
+      
+      /*BUSCADOR EN EL NAV*/
+              
+      nav  #controls {
+        width: 100%;
+        max-width: 300px;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: 20px;
+        background-color: #000000;
+        }
+  
+       nav  #controls #custom-search-input-header{
+                width: 100%;
+                max-width: 300px;
+                }
+          
+                .buscador #controls   #custom-search-input-header .sin-borde{
+                    display: none;
+                    visibility: hidden;
+                  }
+                /*DIV DEL MENU GRANDE*/
+          
+                #controls-responsive .boton{
+                  width: 8%;
+                }
+   /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+  /*margin-left: 5.4%;/*IMPORTANTE */
 
+  #controls{
+    display: none;
+   visibility: hidden;
+  }
+  nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+    max-height: 1200px;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+    opacity: 0.97;
+     background-color: #000000;
+     overflow-y: scroll;
+     z-index: 200;
+    }
+
+  nav .logo-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    visibility: visible;
+    margin-top: 30px;
+    height: 30px;
+    border-bottom: 1px solid #aaaaaa;
+
+  }
+
+  nav .logo-esconder img{
+    width: 100%;
+    max-width: 120px;
+    margin-left: 20px;
+  }
+
+  nav .buscador-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    visibility: visible;
+    margin-top: 20px;
+    height: 50px;
+
+  }
+
+    .d-flex{
+      width: 100%;
+      max-width: 350px;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      margin-left: 18px;
+    }
+
+    #custom-search{
+      width: 100%;
+      max-width: 330px;
+      height: 50px;
+    }
+
+    #custom-search .sin-borde{
+      width: 90%;
+      max-width: 310px;
+      height: 40px;
+    }
+
+    #custom-search .boton{
+      width: 10%;
+      max-width: 20px;
+      height: 40px;
+    }
+   nav .nav .esconder{
+     visibility: visible;
+   }
+  
+    nav .nav li a.active{
+      text-decoration:line-through;
+      color: #568632;
+      }
+  
+     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      .cabecera nav .nav{
+      width:100%; 
+      height: 100%;
+      max-height: 950px;
+      max-width: 340px;
+      display: flex;
+      flex-direction: column;
+    
+       margin-left: 6px;
+            margin-top: 10px;
+            overflow-y: scroll;
+       z-index: 99; 
+       background-color: darkslateblue;
+      }
+  
+       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+      nav .nav li{
+       
+      list-style: none;
+      height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+      margin-left: 10px;
+      margin-bottom: 15px;
+      cursor:pointer;
+      }
+      
+      nav .nav li a {
+      z-index: 100;
+      background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+      height: 30px;
+      color: #fff;
+      font-weight: lighter;
+      font-size: 1.24rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  sans-serif;
+      padding-top: 0;
+      margin-top: 0;
+      }
+    
+       /*IMPORTANTE*/
+  
+       
+      
+   
+        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+        nav .nav li:hover > ul {
+         display: block;
+        margin-left: -200px;
+        height: 200px;
+        visibility: visible; 
+        z-index: 598;
+        }
+  
+      nav .nav li ul li a{
+      font-size: 1rem;
+      display: block;
+      max-width: 200px;
+      width: 100%;
+      margin-left: -2px;
+      padding-bottom: -2px;
+      margin-left: -76px;
+      }
+  
+       nav .nav ul {
+      visibility: hidden;
+      }
+  
+        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+    
+   /*ANIMACION SUBRAYADO */
+   nav a {
+   display: inline-block;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   z-index: 40;
+   }
+  
+    nav  a:after {
+   content: "";
+   display: block;
+   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+   height: 2px;
+   width: 0px;
+   transition: all .8s;
+   z-index: 10;
+   }
+  
+  
+    /* width: 100%;*/
+    nav  a:hover:after {
+    padding-left: 40px;
+    padding-right: -150px;
+    height: 2px;
+    background: white;
+    }
 
 
     /*CONTENEDORES DE LOS TITULOS AISLADOS .......DE MEDIA QUERY 500 MAIXMO........*/
@@ -10971,50 +12948,6 @@ width: 600px;
     }
   
 
-   .box form{
-     display: flex;
-     flex-direction: row;
-   }
-    
-   .box h3{
-    padding-bottom: 10px;
-    font-size: 1rem;
-    letter-spacing: -1px;
-    word-spacing: -1px;
-    font-family: 'Fira Sans', sans-serif;
-   }
-   
-   
-    #footer .box input[type="text"]
-   {
-   background-color: #FFF;
-   display: inline-block;
-   width:  40%;
-   height: 50px;
-   border: 1.5px solid 	#DCDCDC;
-   padding: 0 25px;
-   border-radius: 5px 0 0 5px;
-   }
-   
-     #footer .box input[type="submit"]{
-     position: relative;
-     left: -3px;  /*EL TRUCO IMPORTANTE*/
-     border-radius: 0 5px 5px 0;
-     width: 20%;
-     height: 50px;
-     border: none ;
-     outline: none;
-     cursor: pointer;
-     top:  -0.1px;
-     background: #2d2d2d;
-     color: #fff;
-     font-size: 12px;
-     font-family: 'Archivo Black', sans-serif;
-   }
-   
-   .box input[type="submit"]:hover{
-     background: #639a3a;
-   }
    
      #footer .menu-footer{
     width :21%;
@@ -11059,6 +12992,7 @@ width: 600px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: olivedrab;
   }
       
 #wrapper > * {
@@ -11076,155 +13010,448 @@ padding: 28px;
  
 
 
-  header{
+   /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+   header{
+    display: block;
     width:100%;
+    height: 55px;
+    top:0;
+    left: 0;
     position: fixed;
     z-index: 2000;   /*IMPORTANTE  */
-    top:0;
     margin: auto;
-    height: 158px;
-    box-shadow: 0 8px 6px -6px #DCDCDC;
-  
-  }
-  
-  
-  header.black{
     background-color: #fff;
-    height: 158px;
-  }
- 
- 
-  .cabecera{
-    width: 100%;
-    height: 65px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    margin-top: -8px;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
     }
   
-  
-  
-   .cabecera .logo{
-   width: 30%;
-   height: 65px; 
-   }
 
-   .cabecera .logo img{
-   width: 100%;
-   height:65px; 
-   }
-  
-   .cabecera  .buscador{
-    display: block;
-    width: 47%;
-    max-width: 600px;
-    height: 65px;
-    margin-top: 18px;
-     }
-
-   .buscador #controls{
-    width: 100%;
-    height: 60px;
-   }
-
-   #controls #custom-search-input-header{
-     width: 100%;
-     height: 60px;
-   }
-
-   #custom-search-input-header  .sin-borde{
-    border-radius: 5px;
-   }
-
-   #custom-search-input-header   .boton{
-    border-radius: 5px;
-   }
-     .cabecera .menu-btn{
-     width: 20%;
-     max-width: 95px;
-     height: 65px;
-     display: inline-flex;
-    
+      header.black{
+      height: 55px;
+      background-color: #fff;
      }
 
   
-   .menu-btn .suscribe{
-   width: 20%;
-   display: block;
-   height: 65px;
-   }
+     
+     .cabecera{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 38px;
+      background-color: indigo;
+     }
+         
+
+    /*caja */
+    .cabecera .logo{
+      display: block;
+      position: relative;
+      float: left;
+      width: 20%;
    
-    .cabecera .suscribe h4 {
-   font-size:  1rem;
-   text-transform: uppercase;
-   font-weight: 700;
-   color:#2d2d2d;
-   letter-spacing: 0.2px;
-   height: 19px;
-   margin-top: 46px;
-   }
-
-   .menu-btn .menu-btn__burger{
-   display: none;
-   }
-
- 
-   /*------------------------*/
+      height: 35px;
+    }
+              
+    .cabecera .logo img {
+      display: block;
+      width: 100%;
+      max-width: 140px;
+      min-width: 140px;
+   
+      height: 35px;
+      z-index: 40;
+     }
+         
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+   
+   
+    .suscribe{
+    display: block;
+    position: relative;
+    float: left;
+    width: 20%;
+    max-width: 120px;
+    height: 38px;
+    background-color: lightcoral;
+    }
   
-  /*-------------------------------*/
+ 
+   .suscribe a  h4{
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 5;
+   
+    }
+  
+
+
     
- /* FIN IMPORTANTE PARA QUE EL MENU SE ADAPTE*/
- .menu{
- width: 100%;
- flex-direction: row;
- margin-top: 20px;
- }
 
- .menu .caja{
-  width: 20%;
-  }
-
-  .menu  .nav{
-  width: 80%;
-  }
- 
+  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+   .cabecera .menu-btn {
+    display: block;
+    position: relative;
+    float: left;
+    width: 10%;
+    max-width: 50px;
+    height: 38px;
+    margin: auto;
+    background-color: lightslategrey;
+    }
 
   
-  .menu  .nav li  a{
-   font-size: 0.76rem;
-    }
- 
+  .menu-btn .hamburguesa{
+  display: block;
+  position: relative;
+  float:left;
+  width: 100%;
+  height: 30px;
+  max-width: 40px;
+   }
+
+     /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+   .menu-btn .hamburguesa .menu-btn__burger {
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 14.5px;
+      width: 37px;
+      height: 4px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      transition: all .5s ease-in-out;
+      z-index: 1000;
+      }
   
- /* ESTE ES EL MENU NAV*/
 
 
-    nav{
-      width:100%;
-      margin-top: 5px;
-      height: 40px;
-    }
+       /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 36px;
+  background:#2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+  z-index: 800;  
+  }
 
-    .nav{
-      width: 97%;
-    }
+    
+  .menu-btn__burger::before {
+  transform: translateY(-7px);
+  z-index:3000;
+  }
 
 
-     /*EN EL LI NO SE PONEN TAMAÑO DE ANCJOS*/
-      nav .nav li  {
-      padding: 8px 20px 8px 24px;   /*MUY IMPORTANTE */
+  .menu-btn__burger::after {
+  transform: translateY(7px);
+  z-index:3000;
+  }
+
+
+  /* ANIMATION */
+  .hamburguesa.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  }
+
+
+   /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+ 
+  }
+
+
+  /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+
+  }
+
+
+
+
+  .menu-btn__burger:hover{
+  background-color: #7aac41;
+  }
+  
+
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #7aac41;
+  }
+
+
+     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+
+
+    /*..BUSCADOR PARA EL MOVIL..........................*/
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+     #controls-responsive{
+      display: block;
+      position: relative;
+      float: left;
+      width: 92%;
+      height: 50px;
+      margin-top: 58px;  
       margin: auto;
        }
-
-
-   .nav li a{
-   font-size: 0.9rem;
-   font-family: Arial, Helvetica, sans-serif;
-   margin: auto;
-   color: #2d2d2d;
-   }
+  
+       #custom-search-input-responsive{
+       width:  100%;
+       height: 50px;
+       border: 1px solid #c9c9c9;
+       border-radius: 4px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin: auto;
+       background-color: darksalmon;
+       }
   
   
+   #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+       display: block;
+       position: relative;
+       float: left;
+       width: 100%;
+     
+      }
+  
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+       #controls-responsive .boton-responsive{
+         display: block;
+         position: relative;
+         float: right;
+       width: 10%;
+       padding: 12px 20px;
+       background-color: #ffffff;
+        }
+     /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
+    
+    /*BUSCADOR EN EL NAV*/
+            
+    nav  #controls {
+      width: 100%;
+      max-width: 300px;
+      height: 10%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-left: 20px;
+      background-color: #000000;
+      }
+
+     nav  #controls #custom-search-input-header{
+              width: 100%;
+              max-width: 300px;
+              }
+        
+              .buscador #controls   #custom-search-input-header .sin-borde{
+                  display: none;
+                  visibility: hidden;
+                }
+              /*DIV DEL MENU GRANDE*/
+        
+              #controls-responsive .boton{
+                width: 8%;
+              }
+ /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+/*margin-left: 5.4%;/*IMPORTANTE */
+
+#controls{
+  display: none;
+ visibility: hidden;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  max-height: 1200px;
+  top:0;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+  opacity: 0.97;
+   background-color: #000000;
+   overflow-y: scroll;
+   z-index: 200;
+  }
+
+nav .logo-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 30px;
+  height: 30px;
+  border-bottom: 1px solid #aaaaaa;
+
+}
+
+nav .logo-esconder img{
+  width: 100%;
+  max-width: 120px;
+  margin-left: 20px;
+}
+
+nav .buscador-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 20px;
+  height: 50px;
+
+}
+
+  .d-flex{
+    width: 100%;
+    max-width: 350px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 18px;
+  }
+
+  #custom-search{
+    width: 100%;
+    max-width: 330px;
+    height: 50px;
+  }
+
+  #custom-search .sin-borde{
+    width: 90%;
+    max-width: 310px;
+    height: 40px;
+  }
+
+  #custom-search .boton{
+    width: 10%;
+    max-width: 20px;
+    height: 40px;
+  }
+ nav .nav .esconder{
+   visibility: visible;
+ }
+
+  nav .nav li a.active{
+    text-decoration:line-through;
+    color: #568632;
+    }
+
+   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+    .cabecera nav .nav{
+    width:100%; 
+    height: 100%;
+    max-height: 950px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+  
+     margin-left: 6px;
+          margin-top: 10px;
+          overflow-y: scroll;
+     z-index: 99; 
+     background-color: darkslateblue;
+    }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+     
+    list-style: none;
+    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 15px;
+    cursor:pointer;
+    }
+    
+    nav .nav li a {
+    z-index: 100;
+    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+    height: 30px;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.24rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family:  sans-serif;
+    padding-top: 0;
+    margin-top: 0;
+    }
+  
+     /*IMPORTANTE*/
+
+     
+    
+ 
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover > ul {
+       display: block;
+      margin-left: -200px;
+      height: 200px;
+      visibility: visible; 
+      z-index: 598;
+      }
+
+    nav .nav li ul li a{
+    font-size: 1rem;
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    margin-left: -2px;
+    padding-bottom: -2px;
+    margin-left: -76px;
+    }
+
+     nav .nav ul {
+    visibility: hidden;
+    }
+
+      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+  
+ /*ANIMACION SUBRAYADO */
+ nav a {
+ display: inline-block;
+ position: relative;
+ color: white;
+ text-decoration: none;
+ z-index: 40;
+ }
+
+  nav  a:after {
+ content: "";
+ display: block;
+ margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+ height: 2px;
+ width: 0px;
+ transition: all .8s;
+ z-index: 10;
+ }
+
+
+  /* width: 100%;*/
+  nav  a:hover:after {
+  padding-left: 40px;
+  padding-right: -150px;
+  height: 2px;
+  background: white;
+  }
    .portada{
     width: 100%;
     margin: auto;
