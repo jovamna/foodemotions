@@ -302,18 +302,18 @@
                 </li>
               
                 <li> 
-                <a class="{% active 'appfood:nosotros' %} esconder" href="{% url 'appfood:nosotros' %}">Nosotros   </a> 
+                <a class="{% active 'appfood:nosotros' %} esconder" href="{% url 'appfood:nosotros' %}">Nosotros</a> 
 
-                <ul>
+               </li>
                  <li> 
-                <a href="{% url 'appcontact:contacto' %}">
+                <a class="{% active 'appfood:nosotros' %}  esconder" href="{% url 'appcontact:contacto' %}">
                 <p>Contacto</p>
                 </a> 
                 
                 </li>
-                </ul>
+             
               
-                   </li>
+                 
 
                 
             
@@ -324,7 +324,7 @@
                  <form class="buscador" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
                   <!------------------------------------------------------------------>
                     <div id="custom-search-input-header">
-	                  <input type="text"  name="q" 
+	                  <input id="ducks" type="text"  name="q" 
                     value= "{{ request.GET.q }}" class="sin-borde" 
                     placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off" >
                     <!---------------------------------------------------------------->             
@@ -820,7 +820,8 @@
      
   <!---------------------------------------------------------------------------->
        <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->
-              <script src="{% static 'appfood/js/menuResponsive.js' %}"></script>
+              <script src="{% static 'appfood/js/menuResponsive.js' %}"></script>4
+                   <script src="{% static 'appfood/js/menuAspaArticulo.js' %}"></script>
          
 
             

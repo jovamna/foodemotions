@@ -2542,44 +2542,7 @@ width: 100%;
 /*..FIN LETRAS DE MOVIL RESPONSIVE...*/
 
 
-  /*FORMULARIO DE LA PAGINA DE CONTACTOS.............PAGINA CONTACTO ........*/
-  .section-heading-upper{
-    font-size: 1rem;
-  }
-
-  .section-heading-lower{
-    font-size: 1rem;
-  }
-
-  /*CAJA DEL FORMLARIO------------------------------------PAGINA CONTACTO*/
-    .row-formulario{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin-top: 40px;
-    margin-left: 15px;
-    
-    }
-
-    .bg-faded{
-   width: 80%;
-   
-    }
-
-  /*SUBCAJA DEL FORUMMLARIO DE CORREO*/
-    .input-group{
-    width: 100%;
-   
-
-    }
-
-    /*BOTON ENVIAR SUBMIT*/
-    .text-center{
-    width: 90%;
- 
-    }
-
-    
+  
       /*------------------------------------*/
       .titulo-principal{
         display: flex;
@@ -3466,8 +3429,117 @@ width: 100%;
     font-size: 0.7rem;
   }
 
+   /*FORMULARIO DE LA PAGINA DE CONTACTOS.............PAGINA CONTACTO ........*/
+  .section-heading-upper{
+    font-size: 1rem;
+  }
+
+  .section-heading-lower{
+    font-size: 1rem;
+  }
+
+  /*CAJA DEL FORMLARIO------------------------------------PAGINA CONTACTO*/
+    .row-formulario{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 40px;
+    margin-left: 15px;
+    
+    }
+
+
+
+  
+    
+
+   .bg-faded{
+     width: 100%;
+     display: block;
+     background-color: red;
+   }
+   /*FORMULARIO CONTACTO*/
+   .section-heading-lower{
+    display: block;
+    font-size: 0.7rem;
+    font-weight: lighter;
+   letter-spacing: -0.8px;
+  }
+
+
+
+   .form-group{
+     display: block;
+     width: 100%;
+     max-width: 500px;
+     background-color: darkslategray;
+   }
+
+   .form-control{
+     display: block;
+     background-color: mediumspringgreen;
+   }
+    .input-group{
+      display: block;
+     margin-left: -1px;
+      background-color: darkviolet;
+    }
+
+    #mobile {
+      background: #ccc;
+      outline: none;
+      border: 0;
+      border: 1px solid #777;
+      pointer-events: none;
+    }
+
+    .input-group input[type="text"]
+    {
+    background-color: rgb(141, 12, 62);
+    width: 70%;
+   height: 150px;
+   padding: 12px 20px;
+   box-sizing: border-box;
+ 
+     resize: none;
+     }
+
+     .input-group input[type="email"]
+     {
+     background-color: rgb(141, 12, 62);
+     width: 70%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  
+      resize: none;
+      }
+ 
+
+
+    .input-group textarea[name="content"]
+    {
+    background-color: rgb(141, 12, 62);
+    width: 70%;
+   height: 150px;
+   padding: 12px 20px;
+   box-sizing: border-box;
+ 
+     resize: none;
+     }
+
+
+     .text-center .btn{
+       margin-left: 1px;
+     }
+
+
+
 
   }
+
+
+  
 
 
   /*.....................HORIZONTAL*/
