@@ -417,11 +417,11 @@ nav .logo-esconder img{
 
 nav .buscador-esconder{
 display: block;
-  width: 90%;
+  width: 80%;
   visibility: visible;
   margin-top: 20px;
   height: 50px;
-
+  margin-left: 10px;
 }
 
   .d-flex{
@@ -484,7 +484,7 @@ display: block;
     height: 30px;
     color: #fff;
     font-weight: lighter;
-    font-size: 1.24rem;
+    font-size: 0.8rem;
     text-transform: lowercase;
     letter-spacing: 1px;
     font-family:  sans-serif;
@@ -1880,7 +1880,7 @@ display: block;
       padding-left: 0;
       padding-right: 0;
       margin: auto;
-      margin-top: 40px;
+      margin-top: 38px;
       bottom:  4px;
     height: auto;
     }
@@ -1890,7 +1890,7 @@ display: block;
       header{
       display: block;
       width:100%;
-      height: 55px;
+      height: 51px;
       top:0;
       left: 0;
       position: fixed;
@@ -1902,7 +1902,7 @@ display: block;
     
 
         header.black{
-        height: 55px;
+        height: 51px;
         background-color: #fff;
        }
   
@@ -1948,12 +1948,14 @@ display: block;
       float: right;
       width: 21%;
       max-width: 200px;
+      padding-right: 12px;
       height: 35px;
       background-color: lightcoral;
       }
     
    
      .suscribe a  h4{
+     
       font-size: 0.8rem;
       margin-top: 10px;
       font-weight: 700;
@@ -1970,9 +1972,9 @@ display: block;
       display: block;
       position: relative;
       float: right;
-      width: 12%;
-      max-width: 42px;
-      min-width: 42px;
+      width: 13%;
+      max-width: 44px;
+      min-width: 44px;
       height: 35px;
       margin: auto;
       margin-top: 0.2px;
@@ -1996,7 +1998,7 @@ display: block;
         display: block;
         position: relative;
         float: right;
-        margin-top: 14.5px;
+        margin-top: 12px;
         width: 28px;
         height: 4px;
         background: #2d2d2d;
@@ -2113,6 +2115,7 @@ display: block;
     width: 80%;
     visibility: visible;
     margin-top: 20px;
+    margin-left: 10px;
     height: 50px;
     background-color: orangered;
   }
@@ -2122,7 +2125,7 @@ display: block;
       height: 50px;
       display: flex;
       flex-direction: row;
-      margin-left: 18px;
+     
       background-color: blue;
     }
 
@@ -2134,7 +2137,7 @@ display: block;
     }
 
     #custom-search .sin-borde{
-      width: 90%;
+      width: 92%;
       height: 40px;
       outline: none;
     }
@@ -2159,11 +2162,10 @@ display: block;
      /* UL  */
   header  nav .nav{
       width: 90%; 
-      height: 100%;
+      height: 90%;
       max-height: 950px;
       display: flex;
       flex-direction: column;
-    
       margin-top: 30px;
       overflow-y: scroll;
        z-index: 99; 
@@ -2173,9 +2175,9 @@ display: block;
        /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
       nav .nav li{
       list-style: none;
-      height: 35px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+      height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
       margin-left: 10px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       background-color: greenyellow;
       cursor:pointer;
       border-bottom: 1px solid #fff;
@@ -2184,14 +2186,14 @@ display: block;
       nav .nav li a {
       z-index: 100;
       background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-      height: 30px;
+      height: 24px;
       color: #fff;
       font-weight: lighter;
-      font-size: 1.2rem;
-      text-transform: lowercase;
+      font-size: 0.9rem;
+      text-transform: uppercase;
       letter-spacing: 1px;
       font-family:  sans-serif;
-      margin: auto;
+   
       }
     
    
@@ -3929,69 +3931,6 @@ width: 100%;
      /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
 
 
-    /*..BUSCADOR PARA EL MOVIL..........................*/
-     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-     #controls-responsive{
-      display: block;
-      position: relative;
-      float: left;
-      width: 93%;
-      height: 50px;
-     margin-bottom: 6px;
-    margin-top: 5px;
-    margin-left: 22px;
-     background-color: crimson;
-       }
-  
-       #custom-search-input-responsive{
-       width:  100%;
-       height: 50px;
-       border: 1px solid #c9c9c9;
-       border-radius: 4px;
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between;
-       margin: auto;
-       background-color: darksalmon;
-       }
-  
-  
-   #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
-       display: block;
-       position: relative;
-       float: left;
-       width: 100%;
-     outline: none;
-      }
-  
-      input[type=text] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-      }
-       #controls-responsive .boton-responsive{
-         display: block;
-         position: relative;
-         float: right;
-       width: 10%;
-       padding: 12px 20px;
-       background-color: #ffffff;
-        }
-     /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
-    
-    /*BUSCADOR EN EL NAV*/
-            
-   
-
-  /*DIV DEL MENU GRANDE*/
-        
-
-    #controls-responsive .boton{
-    width: 8%;
-    }
-
-
     /*BUSCADOR DEL NAV DE LA PANTALLA GRANDE*/
 
     #controls {
@@ -4000,7 +3939,7 @@ width: 100%;
    }
 
 
-    nav{
+   header nav{
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -4091,13 +4030,14 @@ nav .buscador-esconder{
     }
 
    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-    nav .nav{
-    width:98%; 
-    height: 100%;
+   header nav .nav{
+    width:90%; 
+    height: 90%;
     max-height: 1000px;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-left: 10px;
+    margin-top: 15px;
     overflow-y: scroll;
      z-index: 99; 
      background-color: darkslateblue;
@@ -4106,9 +4046,9 @@ nav .buscador-esconder{
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
     nav .nav li{
     list-style: none;
-    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    height: 29px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
     margin-left: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border-bottom: 1px solid #fff;
     cursor:pointer;
     }
@@ -4116,11 +4056,11 @@ nav .buscador-esconder{
     nav .nav li a {
     z-index: 100;
     background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-    height: 30px;
+    height: 22px;
     color: #fff;
     font-weight: lighter;
-    font-size: 1.24rem;
-    text-transform: lowercase;
+    font-size: 1rem;
+    text-transform: uppercase;
     letter-spacing: 1px;
     font-family:  sans-serif;
     padding-top: 0;
@@ -4185,6 +4125,69 @@ nav .buscador-esconder{
   height: 2px;
   background: white;
   }
+
+   
+    /*..BUSCADOR PARA EL MOVIL..........................*/
+     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+     #controls-responsive{
+      display: block;
+      position: relative;
+      float: left;
+      width: 93%;
+      height: 50px;
+     margin-bottom: 6px;
+    margin-top: 5px;
+    margin-left: 22px;
+     background-color: crimson;
+       }
+  
+       #custom-search-input-responsive{
+       width:  100%;
+       height: 50px;
+       border: 1px solid #c9c9c9;
+       border-radius: 4px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin: auto;
+       background-color: darksalmon;
+       }
+  
+  
+   #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+       display: block;
+       position: relative;
+       float: left;
+       width: 100%;
+     outline: none;
+      }
+  
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+       #controls-responsive .boton-responsive{
+         display: block;
+         position: relative;
+         float: right;
+       width: 10%;
+       padding: 12px 20px;
+       background-color: #ffffff;
+        }
+     /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
+    
+    /*BUSCADOR EN EL NAV*/
+            
+   
+
+  /*DIV DEL MENU GRANDE*/
+        
+
+    #controls-responsive .boton{
+    width: 8%;
+    }
 
 
 
