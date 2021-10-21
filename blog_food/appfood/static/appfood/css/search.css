@@ -1,3 +1,61 @@
+
+ html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+   }
+
+
+   #wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lawngreen;
+   }
+
+
+
+
+#wrapper img {
+width: 100%;
+height: auto;
+border: 0;
+ }
+
+ #wrapper > * {
+  padding: 15px;
+  }  
+
+
+  #container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ 
+   padding-left: 0;
+  padding-right: 0; 
+  }
+
+
+/*...........*/
+#wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width:250px;
+  height: auto;
+  flex-wrap: wrap;
+  background-color: yellow;
+}
+
+
+
 --------------*/
 
 

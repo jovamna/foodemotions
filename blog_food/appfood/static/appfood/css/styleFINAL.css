@@ -124,7 +124,7 @@ flex: 1;
   margin-bottom: 90px;
   padding: 0 0 0 0 ;   /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
   height: auto;
-  margin-top: 106px;
+  margin-top:68px;
    }
 
 
@@ -137,19 +137,17 @@ z-index: 2000;   /*IMPORTANTE  */
 top:0;
 left: 0;
 margin: auto;
-height: 100px;
+height: 62px;
 box-shadow: 0 8px 6px -6px #DCDCDC;
 background-color: #fff;
  }
 
  header.black{
-  height: 100px;
+  height: 62px;
   }
 
 
   
-
-   
  .cabecera{
   width: 100%;
  max-width: 1250px;
@@ -177,75 +175,7 @@ background-color: #fff;
  height: 35px;  
  }
   
- /*CONTAINER DEL BUSCADOR................. */
-  /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
-  .cabecera  #controls{
-    display: inline-flex;
-    width: 55%;
-    max-width: 700px;
-    height: 38px;  
-    }
-    
-   .cabecera  #controls #custom-search-input-header{
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-    }
-  
-  
-  /*IMPORTANTE*/
-  .cabecera  #controls .buscador{
-    display: block;
-        width: 100%;
-      
-  
-      }
-  
-  
-  
-  #controls  #INPUT input[type=text]:focus {
-  outline: none;
-  border: 0;
-  background-color: #fff;
-  padding-left: 8px; /*MUEVE LA LETRA*/
-   }
-  
-  
-  /*CAMPO SEARCH BUSCADOR */
-  .cabecera #controls  .sin-borde{
-  display: inline-flex;
-  width: 85%;
-   max-width: 500px;
-   height: 35px;
-   outline: none;
-  padding-left: 3px; /*MUEVE LA LETRA*/
-  background-color: #f8f8f8;
-  }
-  
-  /*BOTOM BUSCADOR */
-    .cabecera #controls .boton{
-    padding-left:2px; /*MUEVE LA LETRA*/
-    width: 15%;
-    max-width: 30px;
-    height: 35px;
-    margin-left: -8px;
-    background-color: #fff;
-    }
-  
-   #controls .icon .fa-search{
-   color: #000000;
-   }
-  
-  
-  input::placeholder {
-  width: 250px;
-  font-size: 0.9rem;
-  color: #2d2d2d;
-  }
-  
-  
-  
-  
+ 
  .suscribe{
   width: 10%;
   max-width: 90px;
@@ -303,20 +233,70 @@ margin-top: 18px;
     visibility: hidden;
   }
    
+    nav{
+     display: inline-flex;
+    width: 64%;
+    max-width: 695px;
+    height: 40px;
+   }
+     
+  
+    /* ESTE ES EL UL  IMPORTANTE PARA EL MENU EN FILA Y QUE ESTE CENTRADO */
+    /*    position: fixed;   /*IMPORTANTE PARA QUE EL SUBMENU NO SE MUEVA*/
+    .cabecera nav .nav{
+   display: block;
+   position: relative;
+   float: left;
+    width: 100%;
+  
+    height: 40px;
+    z-index: 30;
+    margin:0;
+    padding:0;
+    padding-top: 6px;
  
-   nav{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 92%;
-    margin-top: 3px;
-    margin-left: 50px;
-    height: 34px;
-  }
+    }
+  
+  
+    nav .nav li{
+    list-style: none;
+    padding: 2px 6px 2px 2px;
 
-       /*---UL--*/
+    }
+       
+    /*ESTO SEPARAR MAS LAS LETRAS ...  padding: .2em; */
+    nav .nav li a{
+    display: block;
+    text-decoration: none;
+    color: #242424;
+    margin-top: 5px;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+   font-weight: 790;
+   letter-spacing: 0.2px;
+    }
+
+     
+  
+  
+     /* enlaces de los items del menu desplegable*/
+     nav .nav ul a {
+      line-height:120%;
+      padding:10px 15px;
+       background-color: #000000;
+       color: #fff;
+       font-size: 0.7rem;
+       width: 100%;
+       }
+
+        
+   li .current {
+  color: #568632;
+   }
+        /*---UL--*/
    nav .nav{
-    width: 90%;
+    width: 80%;
     position: relative;
     display: block;
     float: right;
@@ -327,49 +307,22 @@ margin-top: 18px;
    nav .nav li{
    display:block;
    float:left;
-   list-style: none;
-   padding: 2px 16px 22px 2px;
+   padding:  0px 9px ;
    }
-   
-  
-       
-
-  /*ESTO SEPARAR MAS LAS LETRAS ...  padding: .2em; */
- nav .nav li a{
-   display: block;
-   text-decoration: none;
-   color: #242424;
-   margin-top: 5px;
-   font-size: 0.78rem;
-   text-transform: uppercase;
-   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 790;
-  letter-spacing: 0.2px;
-  line-height:120%;
-   width: 100%;
-
-   }
-
-   nav li .current {
-    color: #7aac41;
+ 
+ 
+     
+ 
+     /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
+     nav ul li a.active{
+     text-decoration:line-through;
+     color: #568632;
      }
-      
-   /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
-   nav ul li a.active{
-    text-decoration:line-through;
-    color: #7aac41;
-    }
-    
-
-  /* items del menu desplegable al pasar el ratón     display:block;
- width: 100%;*/
- nav .nav li:hover > ul {
-   display:block; 
-   position:absolute;  
-   width:60%; 
-   }
+     /*----fFIN -MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
+     
+     
    
-
+   
   /* efecto al pasar el ratón por los items del menu */
   /*IMPORTANTE PARA QUE NO SALGAN DOBLE RAYA AL HACER HOVER*/
   .nav a:hover{
@@ -378,31 +331,20 @@ margin-top: 18px;
   }
     
    /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
-  nav .nav ul {
+  .nav ul {
   display:none;
   position:absolute;
-  top: 100%; 
+  top:100%; 
   }
   
   /* items del menu desplegable */
   /*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS   float:none*/
-  nav .nav ul li {
+  .nav ul li {
   width: 200px;
   float: none;
   margin-left: -10px; /*IMPORTANTE MUEVE */   
-  height: 100%;
   }
 
-       /* enlaces de los items del menu desplegable*/
-       nav .nav ul a {
-        line-height:120%;
-        padding:10px 15px;
-         background-color: #000000;
-         color: #fff;
-         font-size: 0.7rem;
-         width: 100%;
-         }
-  
 
   /* items del menu desplegable al pasar el ratón     display:block;
   width: 100%;*/
@@ -412,6 +354,10 @@ margin-top: 18px;
   width:60%; 
   }
   
+  
+
+ 
+
        /* ANIMA CON RAYA AL HACE HOVER */
    /*HOVER SALE RAYA.............HOVER */
     nav .nav a:after {
@@ -424,20 +370,92 @@ margin-top: 18px;
    }
    /* .................... */
  
+ 
+
 
     nav  a:hover:after {
     width: 100%;
-    background: #7aac41;
+    background: #568632;
     }
     
-     /* FINAL MENU ANIMADO */
-     /* BUSCADOR INTERNO RESPONSIVE*/
-     #controls-responsive{
-     display: none;
+    /* FINAL MENU ANIMADO */
+   /* BUSCADOR INTERNO RESPONSIVE*/
+   #controls-responsive{
+  display: none;
     }
 
 
+   /*CONTAINER DEL BUSCADOR................. */
    
+  /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
+   .cabecera  #controls{
+  display: inline-flex;
+  width: 30%;
+  max-width: 350px;
+  height: 38px;  
+
+  }
+  
+ .cabecera  #controls #custom-search-input-header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+
+/*IMPORTANTE*/
+.cabecera  #controls .buscador{
+  display: block;
+      width: 100%;
+    
+
+    }
+
+
+
+#controls  #INPUT input[type=text]:focus {
+outline: none;
+border: 0;
+background-color: #fff;
+padding-left: 8px; /*MUEVE LA LETRA*/
+ }
+
+
+/*CAMPO SEARCH BUSCADOR */
+.cabecera #controls  .sin-borde{
+display: inline-flex;
+width: 85%;
+ max-width: 500px;
+ height: 35px;
+ outline: none;
+padding-left: 3px; /*MUEVE LA LETRA*/
+background-color: #f8f8f8;
+}
+
+/*BOTOM BUSCADOR */
+  .cabecera #controls .boton{
+  padding-left:2px; /*MUEVE LA LETRA*/
+  width: 15%;
+  max-width: 30px;
+  height: 35px;
+  margin-left: -8px;
+  background-color: #fff;
+  }
+
+ #controls .icon .fa-search{
+ color: #000000;
+ }
+
+
+input::placeholder {
+width: 250px;
+font-size: 0.9rem;
+color: #2d2d2d;
+}
+
+
+
+
 
   
   /* --FIN NAV--------------------------------------------------------*/
