@@ -287,7 +287,17 @@ margin-top: 18px;
     display: none;
     }
 
-     /*ESTE BUSCADOR SALDRA EN LOS MOVILES*/
+     /*NAV   SEMENTO QUE CONTIENE LOGO BUSCADOR Y NAVEGACION ESCONDIDA */
+     nav{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 92%;
+      margin-top: 3px;
+
+      height: 34px;
+    }
+  
   
   nav .esconder{
     display: none;
@@ -304,16 +314,7 @@ margin-top: 18px;
   }
    
  
-   nav{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 92%;
-    margin-top: 3px;
-    margin-left: 50px;
-    height: 34px;
-  }
-
+  
        /*---UL--*/
    nav .nav{
     width: 90%;
@@ -2190,19 +2191,29 @@ height: 300px;
 /*  FORMULARIO----.PAGINA CONTACTO------------------------....................*/
 
 /*   TABLA PRINCIPAL DEL FORMULARIO........................*/
-  .row{
-  display: block;
+  .row-formulario{
+  display: flex;
+  flex-direction: column;
   width: 80%;
   height: 600px;
-  margin: auto;
+  margin-top: -200px;
+  margin-left: 10%;
+margin-right: 10%;
  margin-bottom: 150px;  
  background: #ebebeb;
   }
 
 /*  igual MISMA TABLA............................*/
+.bg-faded{
+  width: 100%;
+}
 
 .bg-faded p{
-  margin-left: 50px;
+  margin-left: 5px;
+}
+
+.form-group label{
+  margin-left: 1px;
 }
 
 /*  DIV PRINCIPAL DE ENVIANOS Y CONTACTO.......................*/
@@ -2248,10 +2259,11 @@ flex-direction: column;
 /*  CASILLA DONDE VA NOMBRE EMAIL Y MENSAJE.....................*/
 /*  IMPORTATE PARA SEPARAR LOS BLOQUES ENTRE NOMBRE EMAIL Y MENSAJE..........................*/
 .form-group{
-   width: 100%;
+   width: 90%;
    margin-bottom: 1%;
    display: flex;
   flex-direction: column;
+  margin: auto;
  }
  
  
@@ -2266,18 +2278,18 @@ label{
   }
 
   /*  ANCHO QUE CONYTIENE EL PLACEHOLDER IMPORTANTE............*/
-  .input-group{
-    width:  88%;
+ .row .input-group{
+    width:  80%;
     display: block;
     border-radius: 2px;
-    margin-left: 50px;
+    margin-left: 5px;
     }
 
 
 .input-group input[type="text"]
 {
 background-color: #FFF;
-width:100%;
+width:80%;
 height: 50px;
 border: 1.5px solid 	#DCDCDC;
 padding: 0 16px;
@@ -2302,7 +2314,6 @@ width:100%;
 border: 1.5px solid 	#DCDCDC;
 padding: 0 16px;
 border-radius: 5px 0 0 5px;
-
 }
 
 
@@ -2311,7 +2322,6 @@ border-radius: 5px 0 0 5px;
 /*  FINAL FORM ACTION.................*/
 
 .text-center .btn{
-  margin-left: 50px;
  width: 88%;
  padding-top: 15px;
  padding-bottom: 15px ;

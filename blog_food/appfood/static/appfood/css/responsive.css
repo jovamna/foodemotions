@@ -5,7 +5,82 @@
 		.secundario {visibility: hidden; display:none;}
 		}
 
-  
+  /*.....................HORIZONTAL*/
+  @media only screen   and (min-width: 320px) and (max-width: 736px) and (orientation: landscape){
+
+    #wrapper {
+   margin:0;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+
+   }
+
+ body{
+ margin: 0;
+ margin-bottom: 90px;
+ }
+
+ #container{
+   width: 100%;
+   margin: auto;
+   margin-top: 16%;
+ }
+
+ .cabecera{
+   width: 100%;
+   max-width: 640px;
+   height: 40px; 
+   display: flex;
+   flex-direction: row;
+   }
+
+ /*caja  B*/
+.menu-btn {
+ display:flex;
+ width: 25%;
+ position: relative;
+ margin-left: 70%;
+ cursor: pointer;
+ transition: all .5s ease-in-out;
+ }
+
+  /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+ .menu-btn__burger {
+ display: block;
+ margin-left: 20%;
+ margin-top: 25%;
+ width: 38px;
+ height: 5px;
+ background: #2d2d2d;
+ border-radius: 2px;
+ box-shadow: 0 2px 5px rgba(255,101,47,.2);
+ transition: all .5s ease-in-out;
+ z-index: 1000;
+  }
+
+
+ /*CAJA DEL BUSCADOR */
+#custom-search-input{
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+font-size: 1em;
+font-weight: 3rem;
+padding: 2px;
+width: 100%;
+height: 48px;
+background-color: #7aac41;
+z-index: 300;
+}
+
+}
+
+
+
    
   /*............................EN CONFLICTO*/
    @media only screen and (max-device-width: 359px)  {
@@ -3435,14 +3510,7 @@ width: 100%;
     font-size: 0.7rem;
   }
 
-   /*FORMULARIO DE LA PAGINA DE CONTACTOS.............PAGINA CONTACTO ........*/
-  .section-heading-upper{
-    font-size: 1rem;
-  }
-
-  .section-heading-lower{
-    font-size: 1rem;
-  }
+ 
 
   /*CAJA DEL FORMLARIO------------------------------------PAGINA CONTACTO*/
     .row-formulario{
@@ -3451,77 +3519,75 @@ width: 100%;
     width: 90%;
     margin-top: 40px;
     margin-left: 15px;
-    
     }
 
 
-
-  
-    
-
    .bg-faded{
-     width: 100%;
+     width: 90%;
      display: block;
-     background-color: red;
+     margin: auto;
    }
    /*FORMULARIO CONTACTO*/
-   .section-heading-lower{
-    display: block;
-    font-size: 0.7rem;
-    font-weight: lighter;
-   letter-spacing: -0.8px;
+
+
+  /*FORMULARIO DE LA PAGINA DE CONTACTOS.............PAGINA CONTACTO ........*/
+  .section-heading{
+  width: 100%;
   }
 
+
+  .section-heading .section-heading-upper span{
+    font-size: 1.2rem;
+  
+  }
+
+  .section-heading-lower u{
+    font-size: 2.5rem;
+    display: block;
+    font-weight: lighter;
+   letter-spacing: -0.8px;
+
+  }
 
 
    .form-group{
      display: block;
      width: 100%;
      max-width: 500px;
-     background-color: darkslategray;
    }
 
    .form-control{
      display: block;
-     background-color: mediumspringgreen;
    }
     .input-group{
       display: block;
      margin-left: -1px;
-      background-color: darkviolet;
     }
 
     #mobile {
-      background: #ccc;
       outline: none;
       border: 0;
       border: 1px solid #777;
-      pointer-events: none;
       -webkit-box-align: start;
     }
 
     input[type=text]:focus {
       width: 100%;
     }
+
     .input-group input[type="text"]
     {
-    background-color: rgb(141, 12, 62);
     width: 70%;
-   height: 150px;
    padding: 12px 20px;
    box-sizing: border-box;
- 
      resize: none;
      }
 
      .input-group input[type="email"]
      {
-     background-color: rgb(141, 12, 62);
      width: 70%;
-    height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
-  
       resize: none;
       }
  
@@ -3529,12 +3595,9 @@ width: 100%;
 
     .input-group textarea[name="content"]
     {
-    background-color: rgb(141, 12, 62);
     width: 70%;
-   height: 150px;
-   padding: 12px 20px;
-   box-sizing: border-box;
- 
+    padding: 12px 20px;
+    box-sizing: border-box;
      resize: none;
      }
 
@@ -3552,82 +3615,7 @@ width: 100%;
   
 
 
-  /*.....................HORIZONTAL*/
-  @media only screen   and (min-width: 320px) and (max-width: 736px) and (orientation: landscape){
-
-    #wrapper {
-   margin:0;
-   box-sizing: border-box;
-   display: flex;
-   flex-direction: column;
-   min-height: 100vh;
-
-   }
-
- body{
- margin: 0;
- margin-bottom: 90px;
- }
-
- #container{
-   width: 100%;
-   margin: auto;
-   margin-top: 16%;
- }
-
- .cabecera{
-   width: 100%;
-   max-width: 640px;
-   height: 40px; 
-   display: flex;
-   flex-direction: row;
-   }
-
- /*caja  B*/
-.menu-btn {
- display:flex;
- width: 25%;
- position: relative;
- margin-left: 70%;
- cursor: pointer;
- transition: all .5s ease-in-out;
- }
-
-  /*--MUEVE EL MENU............ESTE ES EL BURGER*/
- .menu-btn__burger {
- display: block;
- margin-left: 20%;
- margin-top: 25%;
- width: 38px;
- height: 5px;
- background: #2d2d2d;
- border-radius: 2px;
- box-shadow: 0 2px 5px rgba(255,101,47,.2);
- transition: all .5s ease-in-out;
- z-index: 1000;
-  }
-
-
- /*CAJA DEL BUSCADOR */
-#custom-search-input{
-border-radius: 5px;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-box-sizing: border-box;
--moz-box-sizing: border-box;
-font-size: 1em;
-font-weight: 3rem;
-padding: 2px;
-width: 100%;
-height: 48px;
-background-color: #7aac41;
-z-index: 300;
-}
-
-}
-
-
-
+  
   /*MEDIDA DESPUES DEL MOVIL*/
 
   @media only screen and (min-width: 641px) and (max-width: 700px){
@@ -3916,7 +3904,7 @@ z-index: 300;
 
     /*BUSCADOR DEL NAV DE LA PANTALLA GRANDE*/
 
-    nav  #controls {
+    #controls {
   display: none;
   visibility: hidden;
    }
@@ -3929,7 +3917,6 @@ z-index: 300;
   width: 100%;
   height: 100%;
   max-height: 1200px;
-  margin: auto;
   top:0;
   bottom: 0;
   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
@@ -5102,20 +5089,14 @@ hr {
      display: flex;
      flex-direction: column;
      width: 90%;
-     margin-top: 40px;
-     margin-left: 15px;
+   
      
      }
  
  
- 
-   
-     
- 
     .bg-faded{
       width: 100%;
       display: block;
-      background-color: red;
     }
     /*FORMULARIO CONTACTO*/
     .section-heading-lower{
@@ -5149,7 +5130,6 @@ hr {
        outline: none;
        border: 0;
        border: 1px solid #777;
-       pointer-events: none;
        -webkit-box-align: start;
      }
  
@@ -5160,10 +5140,8 @@ hr {
      {
      background-color: rgb(141, 12, 62);
      width: 70%;
-    height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
-  
       resize: none;
       }
  
@@ -5171,10 +5149,8 @@ hr {
       {
       background-color: rgb(141, 12, 62);
       width: 70%;
-     height: 150px;
      padding: 12px 20px;
      box-sizing: border-box;
-   
        resize: none;
        }
   
@@ -5184,10 +5160,8 @@ hr {
      {
      background-color: rgb(141, 12, 62);
      width: 70%;
-    height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
-  
       resize: none;
       }
  
@@ -5287,7 +5261,7 @@ hr {
       position: relative;
       float: left;
       width: 20%;
-     max-width: 220px;
+     max-width: 200px;
       height: 35px;
       background-color: darkgoldenrod;
     }
@@ -5303,7 +5277,55 @@ hr {
          
     /*CONTENEDOR  REVISTA Y SOCIALES*/
    
+   /*BUSCADOR EN PRIMERA FILA*/
+  header .cabecera  #controls {
+    width: 30%;
+    max-width: 280px;
+    height: 35px;
+    display: inline-flex;
+    margin: auto;
    
+    visibility: visible;
+    background-color: #000000;
+    }
+  
+    .cabecera #controls .buscador{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+
+      #controls #custom-search-input-header{
+    width: 100%;
+     height: 29px;
+     border: 1px solid #c9c9c9;
+     border-radius: 4px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     background-color: darksalmon;
+     }
+  
+  
+        .cabecera #controls   #custom-search-input-header .sin-borde{
+      width: 91%;
+   
+      }
+        
+      
+        #controls   #custom-search-input-header .boton{
+      width: 10%;
+  
+      background-color: #ffffff;
+       }
+    
+       input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+     
+        box-sizing: border-box;
+      }
+  
    .cabecera .suscribe{
     display: block;
     position: relative;
@@ -5434,7 +5456,6 @@ nav{
   flex-direction: column;
   position: fixed;
   width: 100%;
-
   height: 100%;
   max-height: 1200px;
   top:0;
@@ -5517,7 +5538,7 @@ nav .buscador-esconder{
     }
 
    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-    .cabecera nav .nav{
+      nav .nav{
     width:100%; 
     height: 100%;
     max-height: 950px;
@@ -5613,57 +5634,9 @@ nav .buscador-esconder{
   }
 
     
-  input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
+  
   
  /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
-
-/*BUSCADOR EN EL NAV*/
-        
-.cabecera nav  #controls {
-  width: 30%;
-  max-width: 280px;
-  height: 10%;
-  display: inline-flex;
-  margin-top: 20px;
-  margin-left: 9px;
-  visibility: visible;
-  background-color: #000000;
-  }
-
- nav  #controls #custom-search-input-header{
-  width: 100%;
-   height: 50px;
-   border: 1px solid #c9c9c9;
-   border-radius: 4px;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   background-color: darksalmon;
-   }
-
-
-    nav #controls   #custom-search-input-header .sin-borde{
-    width: 90%;
-    display: block;
-    position: relative;
-    float: left;
-    }
-      
-    
-     nav #controls   #custom-search-input-header.boton{
-    width: 8%;
-    display: block;
-    position: relative;
-    float: right;
-    width: 10%;
-    padding: 12px 20px;
-    background-color: #ffffff;
-     }
 
 
    /*..BUSCADOR PARA EL MOVIL..........................*/
