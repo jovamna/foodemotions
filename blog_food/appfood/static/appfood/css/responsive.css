@@ -151,7 +151,7 @@ z-index: 300;
 
   
      
-     .cabecera{
+    header .cabecera{
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -166,14 +166,14 @@ z-index: 300;
       display: block;
       position: relative;
       float: left;
-      width: 40%;
+      width: 35%;
      max-width: 130px;
       height: 32px;
       background-color: deeppink;
     }
               
     .cabecera .logo img {
-      display: inline-flex;
+      display: block;
       width: 100%;
       max-width: 100px;
       min-width: 100px;
@@ -185,24 +185,28 @@ z-index: 300;
    
    
     .suscribe{
-    display: block;
-    position: relative;
-    float: left;
+   display: block;
+   position: relative;
+   float: left;
     width: 20%;
-    max-width: 130px;
+    max-width: 100px;
     height: 32px;
-    background-color: lightcoral;
     }
   
  
-   .suscribe a  h4{
-    font-size: 0.75rem;
+  .cabecera  .suscribe a  h4{
+    display: block;
+    position: relative;
+    float: right;
+     width: 100%;
+    max-width: 80px;
+    min-width: 80px;
+    font-size: 0.7rem;
     margin-top: 10px;
     font-weight: 700;
     letter-spacing: 0.2px;
     font-family: 'Times New Roman', Times, serif;
     z-index: 5;
-   
     }
   
 
@@ -215,7 +219,7 @@ z-index: 300;
     position: relative;
     float: right;
     width: 10%;
-    max-width: 35px;
+    max-width: 40px;
     height: 32px;
     margin: auto;
     background-color: lightslategrey;
@@ -238,8 +242,8 @@ z-index: 300;
       float: right;
       margin-top: 14.5px;
       width: 100%;
-      max-width: 27px;
-      max-width: 27px;
+      max-width: 26px;
+      max-width: 26px;
       height: 4px;
       background: #2d2d2d;
       border-radius: 2px;
@@ -256,8 +260,8 @@ z-index: 300;
   position: absolute;
   height: 4px;
   width: 100%;
-  max-width: 27px;
-  min-width: 27px;
+  max-width: 26px;
+  min-width: 26px;
   background:#2d2d2d;
   border-radius: 2px;
   transition: all .5s ease-in-out;
@@ -266,13 +270,13 @@ z-index: 300;
 
     
   .menu-btn__burger::before {
-  transform: translateY(-7px);
+  transform: translateY(-6px);
   z-index:3000;
   }
 
 
   .menu-btn__burger::after {
-  transform: translateY(7px);
+  transform: translateY(6px);
   z-index:3000;
   }
 
@@ -315,7 +319,177 @@ z-index: 300;
      /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
 
 
-    /*..BUSCADOR PARA EL MOVIL..........................*/
+   
+
+   header nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -3px;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+  opacity: 0.97;
+   background-color: #000000;
+   overflow-y: scroll;
+   z-index: 200;
+  }
+
+nav .logo-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  visibility: visible;
+  margin-top: 30px;
+  height: 30px;
+  border-bottom: 1px solid #aaaaaa;
+
+}
+
+nav .logo-esconder img{
+  width: 100%;
+  max-width: 120px;
+  margin-left: 20px;
+}
+
+nav .buscador-esconder{
+display: block;
+  width: 80%;
+  visibility: visible;
+  margin-top: 20px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+  .d-flex{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav .buscador-esconder  #custom-search{
+    width: 100%;
+    height: 50px;
+  }
+
+  nav .buscador-esconder #custom-search .sin-borde{
+    width: 89%;
+    height: 40px;
+    outline: none;
+    padding-left: 2px;
+  }
+
+  nav .buscador-esconder #custom-search .boton{
+    width: 10%;
+    height: 40px;
+    margin-left: -8px;
+  }
+
+
+    nav .nav .esconder{
+   visibility: visible;
+   }
+
+  nav .nav li a.active{
+    text-decoration:line-through;
+    color: #568632;
+    }
+
+   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+     header nav .nav{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+   width: 85%;
+    margin-top: 25px; 
+     z-index: 99; 
+    }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+    list-style: none;
+    height: 25px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 8px;
+    cursor:pointer;
+    }
+    
+    nav .nav li a {
+    z-index: 100;
+    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+    height: 20px;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family:  sans-serif;
+    margin: auto;
+    width: 100%;
+    }
+     /*IMPORTANTE*/
+
+     
+    
+ 
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover > ul {
+       display: block;
+    
+      height: 200px;
+      visibility: visible; 
+      z-index: 598;
+      }
+
+    nav .nav li ul li a{
+    font-size: 1rem;
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    margin-left: -2px;
+    padding-bottom: -2px;
+    margin-left: -76px;
+    }
+
+     nav .nav ul {
+    visibility: hidden;
+    }
+
+      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+  
+ /*ANIMACION SUBRAYADO */
+ nav a {
+ display: inline-block;
+ position: relative;
+ color: white;
+ text-decoration: none;
+ z-index: 40;
+ }
+
+  nav  a:after {
+ content: "";
+ display: block;
+ margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+ height: 2px;
+ width: 0px;
+ transition: all .8s;
+ z-index: 10;
+ }
+
+
+  /* width: 100%;*/
+  nav  a:hover:after {
+  padding-left: 40px;
+  padding-right: -150px;
+  height: 2px;
+  background: white;
+  }
+
+ 
+      /*..BUSCADOR PARA EL MOVIL..........................*/
      /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
      #controls-responsive{
       display: block;
@@ -370,189 +544,17 @@ z-index: 300;
     }
     /*BUSCADOR EN EL NAV*/
             
- #controls {
+   #controls {
      visibility: hidden;
       }
 
- #controls #custom-search-input-header{
+     #controls #custom-search-input-header{
              visibility: hidden;
               }
         
              
  /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
 /*margin-left: 5.4%;/*IMPORTANTE */
-
-   header nav{
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  max-height: 1200px;
-  top: -5px;
-  bottom: 0;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  opacity: 0.97;
-   background-color: #000000;
-   overflow-y: scroll;
-   z-index: 200;
-  }
-
-nav .logo-esconder{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  visibility: visible;
-  margin-top: 30px;
-  height: 30px;
-  border-bottom: 1px solid #aaaaaa;
-
-}
-
-nav .logo-esconder img{
-  width: 100%;
-  max-width: 120px;
-  margin-left: 20px;
-}
-
-nav .buscador-esconder{
-display: block;
-  width: 80%;
-  visibility: visible;
-  margin-top: 20px;
-  height: 50px;
-  margin-left: 10px;
-}
-
-  .d-flex{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    background-color: deeppink;
-  }
-
-  nav .buscador-esconder  #custom-search{
-    width: 100%;
-    height: 50px;
-  }
-
-  nav .buscador-esconder #custom-search .sin-borde{
-    width: 85%;
-    height: 40px;
-  }
-
-  nav .buscador-esconder #custom-search .boton{
-    width: 10%;
-    height: 40px;
-  }
-
-
-    nav .nav .esconder{
-   visibility: visible;
-   }
-
-  nav .nav li a.active{
-    text-decoration:line-through;
-    color: #568632;
-    }
-
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-     nav .nav{
-      display: flex;
-    flex-direction: column;
-    height: 90%;
-    max-height: 950px;
-    margin-top: 30px;
-    overflow-y: scroll;
-     z-index: 99; 
-     background-color: darkslateblue;
-    }
-
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav .nav li{
-    list-style: none;
-    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-left: 10px;
-    margin-bottom: 15px;
-    cursor:pointer;
-    }
-    
-    nav .nav li a {
-    z-index: 100;
-    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-    height: 30px;
-    color: #fff;
-    font-weight: lighter;
-    font-size: 0.8rem;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-    font-family:  sans-serif;
-    padding-top: 0;
-    margin-top: 0;
-    }
-  
-     /*IMPORTANTE*/
-
-     
-    
- 
-      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
-       display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
-      }
-
-    nav .nav li ul li a{
-    font-size: 1rem;
-    display: block;
-    max-width: 200px;
-    width: 100%;
-    margin-left: -2px;
-    padding-bottom: -2px;
-    margin-left: -76px;
-    }
-
-     nav .nav ul {
-    visibility: hidden;
-    }
-
-      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
-  
- /*ANIMACION SUBRAYADO */
- nav a {
- display: inline-block;
- position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
-
-  nav  a:after {
- content: "";
- display: block;
- margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
- height: 2px;
- width: 0px;
- transition: all .8s;
- z-index: 10;
- }
-
-
-  /* width: 100%;*/
-  nav  a:hover:after {
-  padding-left: 40px;
-  padding-right: -150px;
-  height: 2px;
-  background: white;
-  }
-
- 
-  
          
 
 
@@ -1942,30 +1944,35 @@ display: block;
       /*CONTENEDOR  REVISTA Y SOCIALES*/
      
      
-      .cabecera .suscribe{
-      display: block;
-      position: relative;
-      float: right;
-      width: 21%;
-      max-width: 200px;
-      padding-right: 12px;
-      height: 35px;
-      background-color: lightcoral;
-      }
-    
-   
-     .suscribe a  h4{
      
-      font-size: 0.8rem;
-      margin-top: 10px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      font-family: 'Times New Roman', Times, serif;
-      z-index: 5;
-      background-color: deeppink;
-      }
     
+     .cabecera .suscribe{
+        display: block;
+        position: relative;
+        float: left;
+         width: 20%;
+         max-width: 110px;
+         height: 35px;
+         background-color: lightcoral;
+         }
+       
       
+       .cabecera  .suscribe a  h4{
+         display: block;
+         position: relative;
+         float: right;
+          width: 100%;
+         max-width: 82px;
+         min-width: 82px;
+         font-size: 0.78rem;
+         margin-top: 10px;
+       
+         font-weight: 700;
+         letter-spacing: 0.2px;
+         font-family: 'Times New Roman', Times, serif;
+         z-index: 5;
+         background-color: greenyellow;
+         }
   
     /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
      .cabecera .menu-btn {
@@ -2162,12 +2169,10 @@ display: block;
      /* UL  */
   header  nav .nav{
       width: 90%; 
-      height: 90%;
-      max-height: 950px;
+      height: 99%;
       display: flex;
       flex-direction: column;
       margin-top: 30px;
-      overflow-y: scroll;
        z-index: 99; 
        background-color: darkslateblue;
       }
