@@ -280,7 +280,7 @@
      <!---------------------------------------------------------------------------------------------->
     </div>  <!-----FIN  CABECERA------------------------------------------------------------------------------------->
 
-    <!----------------NAVEGACION------RESPONSIVE----------------------NAV-RESPONSIVE------------------------------->
+    <!----------------NAVEGACION---EN PAGINA ORDENADOR Y---RESPONSIVE---------------------------------------------------->
         <nav>
                 <div class="logo-esconder"> 
                  <a class="estilo-logo" href="{% url 'appfood:index' %}">
@@ -391,7 +391,7 @@
                   <div id="controls-responsive">
                 <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
                     <div id="custom-search-input-responsive">
-	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder="   Buscar .." >
+	                      <input type="text"  class="sin-borde-responsive" name="q" value="{{ request.GET.q }}"  placeholder=" Buscar en Foodingemotion.com" >
                                  
                           <button type="submit" name="submit" class="boton-responsive btn-succes" value="Search"> 
                           <span class="icon"><i class="fa fa-search"></i></span>   
@@ -662,11 +662,10 @@
                         <div class="container-details">
                             <div class="details">
                               <h1>Fooding Emotion</h1>
-                              <p> para los amantes del buen comer, y la vida sana”, 
-                              secciones de actualidad y tendencias con las mejores recetas 
-                              nacionales e internacionales, noticias y artículos sobre el mundo gourmet, 
-                              y 
-                              consejos para llevar una vida más saludable.!</p>
+                              <p> para los amantes del buen comer y la vida sana, 
+                      consejos alimenticios para una vida saludable!  Actualidad y tendencias 
+                        del mundo gourmet nacional e internacional. 
+                             </p>
                               <button>
                               <a href="{% url 'appfood:recetas-saludables' %}">
                               Ver mas detalles

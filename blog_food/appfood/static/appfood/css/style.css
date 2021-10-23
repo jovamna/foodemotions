@@ -159,25 +159,24 @@ background-color: #fff;
  justify-content: space-between;
  margin: auto;
  margin-top: -3px;
-
  }
 
 
-/*caja */
-.cabecera .logo{
- display: inline-flex;
- width: 20%;
- max-width: 190px;
- height: 40px; 
- }
+  /*caja */
+  .cabecera .logo{
+  display: inline-flex;
+  width: 20%;
+  max-width: 190px;
+  height: 40px; 
+   }
  
-/*IMAGEN DEL LOGO*/
- .logo img{
- width: 100%;
- height: 35px;  
- }
+  /*IMAGEN DEL LOGO*/
+  .logo img{
+  width: 100%;
+  height: 35px;  
+  }
   
- /*CONTAINER DEL BUSCADOR................. */
+  /*CONTAINER DEL BUSCADOR................. */
   /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
   .cabecera  #controls{
     display: inline-flex;
@@ -255,7 +254,6 @@ background-color: #fff;
 
 .suscribe a h4 {
 font-size: 0.8rem;
-font-family: 'Times New Roman', Times, serif;
 color: #2d2d2d;
 font-weight: 700;
 display: inline-flex;
@@ -933,7 +931,6 @@ margin-top: 18px;
   font-size: 2.3rem;
   color: black;
   text-shadow: 0px 0.7px 0.7px white; 
-  font-family: 'Times New Roman', Times, serif;
   font-weight: 900;
   letter-spacing: -0.5px;
   word-spacing: 2px;
@@ -970,7 +967,6 @@ margin-top: 18px;
   font-size: 2.3rem;
   color: black;
   text-shadow: 0px 0.7px 0.7px white; 
-  font-family: 'Times New Roman', Times, serif;
   font-weight: 900;
   letter-spacing: -0.5px;
   word-spacing: 2px;
@@ -985,12 +981,10 @@ margin-top: 18px;
   text-align: center;
   letter-spacing: -0.5px;
   word-spacing: 2px;
-  font-family: 'Times New Roman', Times, serif;
   font-weight: 900;
   }
 
      .escrito p{
-    font-family: 'Open sans';
     letter-spacing:   -0.3px;
     word-spacing: 0.9px;
     font-size: 1.9rem;
@@ -1029,19 +1023,16 @@ margin-top: 18px;
    .primer-segmento .tres  h1{
    font-size: 1.5rem;
    color:#000000;
-   font-family: 'Times New Roman', Times, serif;
    margin-top: 15px;
    }
 
      .tres p{
-     font-family: 'Times New Roman', Times, serif;
     font-size: 1.3rem;
     color:#2d2d2d;
     margin-top: 10px;
     }
 
     .tres a p{
-      font-family: 'Times New Roman', Times, serif;
      font-size: 1.3rem;
      color:#2d2d2d;
     }
@@ -1134,7 +1125,6 @@ margin-top: 18px;
       font-size: 1.5rem;
       margin-top: 15px;
       color: #000000;
-      font-family: 'Times New Roman', Times, serif;
     }
   
      
@@ -1142,10 +1132,9 @@ margin-top: 18px;
     font-size: 1.3rem;
     color:  #2d2d2d;
     margin-top: 5px;
-    font-family: 'Times New Roman', Times, serif;
     }
 
-    /*..EL ASIDE.................*/
+    /*..EL ASIDE.....EXPLORAR CATEGORIAS RECETAS DIETETICAS............*/
   .columna-right{
     display: block;
     position: absolute;
@@ -1173,9 +1162,8 @@ margin-top: 18px;
   }
 
     /*EXPLORAR*/
-    .explora h3{
+    .explora h1{
       font-size: 1.6rem;
-      font-family: 'Times New Roman', Times, serif;
       color: #000000;
      text-align: center;
      text-decoration: underline;
@@ -1219,7 +1207,6 @@ margin-top: 18px;
   .titulo-right h1{
    font-size: 1.2rem;
    color: #000000;
-   font-family: 'Times New Roman', Times, serif;
   margin-top: 7px;
 
   }
