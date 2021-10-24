@@ -14,8 +14,19 @@
    display: flex;
    flex-direction: column;
    min-height: 100vh;
-   background-color: rgb(141, 12, 62);
+
    }
+
+   #wrapper img {
+    width: 100%;
+    height: auto;
+    border: 0;
+     }
+  
+      
+    #wrapper > * {
+    padding: 20px;
+    }  
 
  body{
  margin: 0;
@@ -26,11 +37,13 @@
    width: 100%;
    margin: auto;
    margin-top: 16%;
+   margin-left: 0;
+   margin-right: 0;
  }
 
  .cabecera{
    width: 100%;
-   max-width: 640px;
+ 
    height: 40px; 
    display: flex;
    flex-direction: row;
@@ -55,7 +68,6 @@
  height: 5px;
  background: #2d2d2d;
  border-radius: 2px;
- box-shadow: 0 2px 5px rgba(255,101,47,.2);
  transition: all .5s ease-in-out;
  z-index: 1000;
   }
@@ -76,6 +88,9 @@ height: 48px;
 background-color: #7aac41;
 z-index: 300;
 }
+  .primer-segmento{
+    width: 100%;
+  }
 
 }
 
@@ -907,17 +922,23 @@ display: block;
         .titulo-principal .escrito  h1 a{
           display: flex;
           width: 100%;
-          max-width: 300px;
+          max-width: 310px;
           align-items: center;
           align-content: center;
           padding: 0 0 0 0;
-          font-size:  1.4rem;
+          font-size:  1.6rem;
           color: #000000;
           text-shadow: 0px 0.9px 0.9px white; 
-          font-weight: 550;
+          font-weight: 700;
           letter-spacing: -0.5px;
          }
-    
+     
+         .titulo-principal .escrito  h1 {
+         font-size: 1.6em;
+         font-weight: 700;
+         color: #000000;
+         max-width: 310px;
+         }
       
    
       /*TITULO-------------------------------------------------------*/
@@ -945,26 +966,26 @@ display: block;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 300px;
-        font-size:  1.7rem;
+        width: 310px;
+        font-size:  1.6rem;
         margin: auto;
         color: #000000;
         text-shadow: 0px 0.9px 0.9px white; 
-        font-weight: 550;
-        letter-spacing: -0.5px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
        }
   
     .titulo a h1{
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 300px;
-      font-size:  1.7rem;
+      width: 310px;
+      font-size:  1.6rem;
       margin: auto;
     color: #000000;
     text-shadow: 0px 0.9px 0.9px white; 
-    font-weight: 550;
-    letter-spacing: -0.5px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
      }
    
      .titulo h2{
@@ -1128,10 +1149,11 @@ display: block;
        }
   
   
-       /*EXPLORAR*/
-       .explora h3{
-       font-size: 1.1rem;
+       /*TITULO EXPLORAR*/
+       .explora h1{
+       font-size: 1.2rem;
        color: #000000;
+       font-weight: 900;
       text-align: center;
       text-decoration: underline;
       margin-bottom: 15px;
@@ -1211,12 +1233,13 @@ display: block;
         margin-left: 11px;
       }
       
+      /*TITULO DE LA FOTO GRANDE DE RECTAS, PLAM COMIDA, DIETAS TURISMO*/
     .plan-total-alimentacion .plan-imagen-responsive a h1{
       margin-left: 11px;
-      font-size: 1.4rem;
+      font-size: 1.4em;
+      font-weight: 900;
       word-spacing: 0.5px;
       line-height: 24px;
-
     }
 
 
@@ -1865,7 +1888,7 @@ display: block;
       padding-right: 0;
       margin: auto;
       margin-top: 36px;
-      bottom:  4px;
+      margin-bottom: 70px;
     height: auto;
     }
 
@@ -1931,8 +1954,8 @@ display: block;
         position: relative;
         float: left;
          width: 20%;
-         max-width: 90px;
-         min-width: 90px;
+         max-width: 92px;
+         min-width: 92px;
          height: 35px;
          }
        
@@ -1947,7 +1970,7 @@ display: block;
          font-size: 0.78rem;
          margin-top: 10px;
          font-weight: 700;
-         letter-spacing: 0.2px;
+         letter-spacing: 0.5px;
          z-index: 5;
          }
   
@@ -2094,7 +2117,7 @@ display: block;
      nav .buscador-esconder{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 85%;
     visibility: visible;
     margin-top: 20px;
     margin-left: 10px;
@@ -2112,22 +2135,34 @@ display: block;
     #custom-search{
       width: 100%;
       height: 50px;
+  
     }
 
    .buscador-esconder #custom-search input[type=text]{
      box-sizing: border-box;
    }
 
-    #custom-search .sin-borde{
-      width: 92%;
+   .buscador-esconder .d-flex #custom-search .sin-borde{
+      width: 90%;
       height: 40px;
       outline: none;
+      border-radius: 3px;
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      float: left;
     }
 
    .buscador-esconder .d-flex #custom-search .boton{
-      width: 8%;
-      margin-left: -5px;
-      height: 42px;
+    width: 10%;
+    height: 40px;
+    border-radius: 1px;
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
     }
 
 
@@ -2776,7 +2811,6 @@ width: 100%;
   font-weight: 800;
   color: #000000;
   text-shadow: 0px 0.9px 0.9px white; 
-
   letter-spacing: -0.5px;
    }
  
@@ -3391,34 +3425,35 @@ width: 100%;
    /*FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN...............................................................................*/
    #footer{
     width: 100%;
-    clear: both;
-    display: flex;
-    flex-direction: column;
-     -webkit-box-shadow: 0px -3px 6px #DCDCDC;
-    -moz-box-shadow: 0px -3px 6px #DCDCDC;
-    box-shadow: 0px -3px 6px  #DCDCDC;
-    z-index: 10;
-    bottom: 0;  
-    left: 0;
-    right: 0;
-    margin-bottom: 0;
-    background-color: #f4f4f4;
+  bottom: 0;  
+  left: 0;
+  right: 0;
+  top: 0; 
+  margin: auto;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+   -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+  -moz-box-shadow: 0px -3px 6px #DCDCDC;
+  box-shadow: 0px -3px 6px  #DCDCDC;
+  z-index: 10;
+  background-color: #f4f4f4;
      }
   
      #footer .footer-primero{
       display: flex;
       flex-direction: column;
       width: 100%;
+     height: 580px;
       background-color: #f4f4f4;
       }
       
        /*CAJA DE FOOD EMOTIONS E ICONOS SOCALES Y BOX */
-     .icon-email{
+    .footer-primero  .icon-email{
       width: 100%;
-      height: 120px;
+     height: 120px;
       display: flex;
       flex-direction: column;
-      margin: auto;
       }
 
      /*SUB-caja  DE FOOD Y REDES */
@@ -3434,11 +3469,11 @@ width: 100%;
    
      /*FOOD EMOTIONS*/
      .icon-email .icon-social1 p{
-      font-size: 1.8rem;
-      word-spacing: -4px;
+      font-size: 2.5em;
+      word-spacing: -5px;
       letter-spacing: -2px;
       text-align: center;
-      
+      font-weight: 600;
       }
   
 
@@ -3448,8 +3483,10 @@ width: 100%;
       display: flex;
       flex-direction: row;
       margin: auto;
-      margin-top: -10px;
+      margin-top: -5px;
       }
+
+
       .icon-email  ul li .fa-envelope{
         background-color: oldlace;
         color: #2d2d2d;
@@ -3497,11 +3534,14 @@ width: 100%;
         
   
         
-      .footer-primero  .menudelfooter{
+       .footer-primero .menudelfooter{
       width: 100%;
+     height: 400px ;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
       margin: auto;
+      margin-top: 20px;
       }
 
       
@@ -3523,9 +3563,11 @@ width: 100%;
    /*TITULO DEL MENU*/
    .menu-footer .footer-text h1{
    text-align: center;
-   font-size: 1rem;
+   font-size: 1.1rem;
+   font-weight: 700;
    word-spacing: -2px;
    letter-spacing: -1.5px;
+   color: #000000;
    }
 
    .menudelfooter .menu-footer .footer-lista {
@@ -3682,6 +3724,7 @@ width: 100%;
       width: 100%;
       height: 100%;
       margin: 0;
+      box-sizing: border-box;
        }
   
   
@@ -3692,7 +3735,6 @@ width: 100%;
       overflow: hidden;
       border-spacing: 0;
       border-collapse: collapse;
-      background-color: yellow;
      }
   
     
@@ -3727,7 +3769,7 @@ width: 100%;
     left: 0;
     position: fixed;
     z-index: 2000;   /*IMPORTANTE  */
-    margin: auto;
+ 
     background-color: #fff;
     box-shadow: 0 8px 6px -6px #c6c6c6;
     }
@@ -3740,13 +3782,12 @@ width: 100%;
 
   
      
-     .cabecera{
+      .cabecera{
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       height: 35px;
-      background-color: indigo;
      }
          
 
@@ -3757,7 +3798,6 @@ width: 100%;
       float: left;
       width: 20%;
       max-width: 340px;
-     background-color: rgb(187, 3, 89);
       height: 35px;
     }
               
@@ -3780,18 +3820,19 @@ width: 100%;
     width: 40%;
     max-width: 250px;
     height: 35px;
-    background-color: lightcoral;
+    background-color: yellow;
     }
   
  
    .suscribe a  h4{
-    font-size: 0.8rem;
+     width: 100%;
+     max-width: 92px;
+     max-width: 92px;
+    font-size: 0.9rem;
     margin-top: 10px;
     font-weight: 700;
-    letter-spacing: 0.2px;
-    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.5px;
     z-index: 5;
-    
     }
   
 
@@ -3804,7 +3845,6 @@ width: 100%;
     max-width: 38px;
     height: 35px;
     margin: auto;
-    background-color: lightslategrey;
     }
 
   
@@ -3823,8 +3863,10 @@ width: 100%;
       position: relative;
       float: right;
       margin-top: 14.5px;
-      width: 29px;
+      width: 100%;
       height: 4px;
+      max-width: 26px;
+      min-width: 26px;
       background: #2d2d2d;
       border-radius: 2px;
       transition: all .5s ease-in-out;
@@ -3839,7 +3881,7 @@ width: 100%;
   content: '';
   position: absolute;
   height: 4px;
-  width: 29px;
+  width: 26px;
   background:#2d2d2d;
   border-radius: 2px;
   transition: all .5s ease-in-out;
@@ -3877,10 +3919,7 @@ width: 100%;
   /* background: #fff;  */
   .hamburguesa.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
-
   }
-
-
 
 
   .menu-btn__burger:hover{
@@ -3894,15 +3933,12 @@ width: 100%;
   }
 
 
-     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
-
-
+  
     /*BUSCADOR DEL NAV DE LA PANTALLA GRANDE*/
-
     #controls {
-  display: none;
-  visibility: hidden;
-   }
+    display: none;
+    visibility: hidden;
+    }
 
 
    header nav{
@@ -3921,19 +3957,17 @@ width: 100%;
    z-index: 200;
   }
 
-nav .logo-esconder{
+  nav .logo-esconder{
   display: flex;
   flex-direction: column;
   width: 100%;
   visibility: visible;
   margin-top: 20px;
-  height: 30px;
   border-bottom: 1px solid #aaaaaa;
+   }
 
-}
 
-
-  nav  .estilo-logo:after {
+    nav  .estilo-logo:after {
     content: "";
     display:none;
   
@@ -3948,40 +3982,50 @@ nav .logo-esconder img{
 
 /*BUSCADOR DEL NAV ESCONDIDO*/
 nav .buscador-esconder{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  visibility: visible;
+ display: block;
+ position: relative;
+ float: left;
+  width: 89%;
   margin-top: 20px;
   margin-bottom: 20px;
-  height: 60px;
-
+  margin-left: 18px;
+  visibility: visible;
+  box-sizing: border-box;
 }
 
-  .d-flex{
+  .buscador-esconder .d-flex{
     width: 100%;
-    height: 50px;
+    height: 45px;
     display: flex;
     flex-direction: row;
-    margin-left: 18px;
+   box-sizing: border-box;
   }
 
-  #custom-search{
+  .buscador-esconder .d-flex #custom-search{
+    display: block;
     width: 80%;
-    height: 50px;
+    height: 45px;
+    box-sizing: border-box;
   }
 
-  #custom-search .sin-borde{
-    width: 80%;
+  .buscador-esconder .d-flex #custom-search .sin-borde{
+    display: block;
+    position: relative;
+    float: left;
+    width: 90%;
     height: 40px;
     outline: none;
+    border-radius: 2px;
+   margin-top: -0.5px;
   }
 
-  #custom-search .boton{
+  .buscador-esconder .d-flex #custom-search .boton{
     width: 10%;
     height: 40px;
-    margin-left: -5px;
-   
+    display: block;
+    position: relative;
+    float: right;
+   background-color: #fff;
   }
 
    /*FIN BUSCADOR EN EL NAV ESCONDIDO*/
@@ -3992,7 +4036,7 @@ nav .buscador-esconder{
 
   nav .nav li a.active{
     text-decoration:line-through;
-    color: #568632;
+    color: #7aac41;
     }
 
    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
@@ -4004,9 +4048,7 @@ nav .buscador-esconder{
     flex-direction: column;
     margin-left: 10px;
     margin-top: 15px;
-    overflow-y: scroll;
      z-index: 99; 
-     background-color: darkslateblue;
     }
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
@@ -4021,14 +4063,12 @@ nav .buscador-esconder{
     
     nav .nav li a {
     z-index: 100;
-    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
     height: 22px;
     color: #fff;
     font-weight: lighter;
-    font-size: 1rem;
+    font-size: 0.9em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family:  sans-serif;
     padding-top: 0;
     margin-top: 0;
     }
@@ -4100,23 +4140,22 @@ nav .buscador-esconder{
       position: relative;
       float: left;
       width: 93%;
-      height: 50px;
-     margin-bottom: 6px;
-    margin-top: 5px;
-    margin-left: 22px;
-     background-color: crimson;
+      height: 46px;
+      margin-top: 4px;
+      margin-bottom: 3px;
+      margin-left: 22px;
+   
        }
   
-       #custom-search-input-responsive{
+       #controls-responsive #custom-search-input-responsive{
        width:  100%;
-       height: 50px;
+       height: 46px;
        border: 1px solid #c9c9c9;
-       border-radius: 4px;
        display: flex;
        flex-direction: row;
        justify-content: space-between;
        margin: auto;
-       background-color: darksalmon;
+       border-radius: 15px;
        }
   
   
@@ -4125,13 +4164,16 @@ nav .buscador-esconder{
        position: relative;
        float: left;
        width: 100%;
+       height: 41px;
      outline: none;
+     box-sizing: border-box;
       }
   
-      input[type=text] {
+      #controls-responsive input[type=text] {
         width: 100%;
         padding: 12px 20px;
-        margin: 8px 0;
+        margin: 1.2px 0;
+        height: 41px;
         box-sizing: border-box;
       }
        #controls-responsive .boton-responsive{
@@ -4140,30 +4182,27 @@ nav .buscador-esconder{
          float: right;
        width: 10%;
        padding: 12px 20px;
+       margin: 1.2px 0;
+       height: 41px;
        background-color: #ffffff;
+     
+        }
+
+        #controls-responsive .boton-responsive .fa{
+          margin: auto;
         }
      /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
     
     /*BUSCADOR EN EL NAV*/
             
-   
 
-  /*DIV DEL MENU GRANDE*/
-        
-
-    #controls-responsive .boton{
-    width: 8%;
-    }
-
-
-
-/*FIN ANIMACION SUBRAYADO */
+  /*FIN ANIMACION SUBRAYADO */
  .portada{
    width: 100%;
  position: relative;  /*ESTO ARREGLO LA CABECERA*/
-margin: auto;
+   margin: auto;
   z-index: 30;
- }
+    }
 
  .portada .portada-img{
   display: none;
@@ -4258,8 +4297,8 @@ position: absolute;
 margin-top: 170px;
 margin-left:  27px;
 background-color: #fff;
-border-bottom: 3px solid #568632;
-border-right: 3px solid #568632;
+border-bottom: 3px solid #7aac41;
+border-right: 3px solid #7aac41;
 z-index: 120;
 }
 
@@ -4268,23 +4307,23 @@ z-index: 120;
 
 /*EL MENU*/
 .portada-img-responsive #menu-simple-responsive{
-width: 100%;
-height: 30px;
-display: block;
+  width: 100%;
+  height: 30px;
+  display: block;
  }
 
 
- #menu-simple-responsive ul{
-display: flex;
-flex-direction: row;
-margin-top: 10px;
-margin-bottom: 20px;
- }
+  #menu-simple-responsive ul{
+   display: flex;
+   flex-direction: row;
+   margin-top: 10px;
+   margin-bottom: 20px;
+    }
 
    
-#menu-simple-responsive ul li{
-list-style: none;
-}
+  #menu-simple-responsive ul li{
+   list-style: none;
+   }
 
           
 #menu-simple-responsive ul li  p{
@@ -4460,61 +4499,63 @@ margin-left: -15px;
   width: 5%;
   }
 
-  .titulo-principal  h1{
-    width: 310px;
+   /*.. text-shadow: 0px 0.9px 0.9px white; */
+  .titulo-principal .escrito h1{
+    width: 450px;
     font-size:  1.9rem;
     color: #000000;
-    text-shadow: 0px 0.9px 0.9px white; 
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 550;
-    letter-spacing: -0.5px;
+    font-weight: 900;
+    letter-spacing: 0.2px;
    }
 
+  /*.. text-shadow: 0px 0.9px 0.9px white; */
+   .titulo-principal .escrito h1 a{
+    width: 450px;
+    font-size:  1.9rem;
+    color: #000000;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+   }
 
+   /*TITULO-------------------------------------------------------*/
+  .titulo{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   margin: auto;
+   margin-top: 24px;
+   margin-bottom: 10px; /*REALCIONADO CON EL PLAN TOTAL DE ALIMENTACION EL MARGIN*/
+   }
 
-/*TITULO-------------------------------------------------------*/
-.titulo{
-display: flex;
-flex-direction: row;
-width: 100%;
-margin: auto;
-margin-top: 24px;
-margin-bottom: 10px; /*REALCIONADO CON EL PLAN TOTAL DE ALIMENTACION EL MARGIN*/
-}
+  .titulo .escrito{
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   }
 
-.titulo .escrito{
-width: 90%;
-display: flex;
-flex-direction: column;
-}
+   .vacio{
+   width: 5%;
+    }
 
-.vacio{
-width: 5%;
-}
-
-
-.titulo  h1{
-  width: 310px;
+ /*text-shadow: 0px 0.9px 0.9px white; */
+  .titulo  .escrito h1{
+  width: 450px;
   font-size:  1.9rem;
   color: #000000;
-  text-shadow: 0px 0.9px 0.9px white; 
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 550;
-  letter-spacing: -0.5px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
  }
 
-.titulo a h1{
-width: 310px;
-font-size: 1.9rem;
-color: #000000;
-text-shadow: 0px 0.9px 0.9px white; 
-font-weight: 550;
-letter-spacing: -0.5px;
-}
+  .titulo .escrito a h1{
+   width: 450px;
+   font-size: 1.9rem;
+   color: #000000;
+   font-weight: 900;
+   letter-spacing: 0.3px;
+    }
 
 .titulo h2{
 font-size:  1.4rem;
-font-family: 'Times New Roman', Times, serif;
 color: #2d2d2d;
 }
 
@@ -4545,9 +4586,9 @@ max-width: 640px;
 
 .primer-segmento .tres img{
   width: 100%;
-  max-width: 640px;
+  max-width: 625px;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
  }
 
 /*TITUO Y DESCRIPCION*/
@@ -4556,38 +4597,37 @@ max-width: 640px;
 /*TITULO NOTICIA TURISMO*/
 .primer-segmento .tres a h1{
  width: 100%;
- max-width: 640px;
+ max-width: 625px;
 font-size: 1.7rem;
+font-weight: 900;
 color: #000000;
 word-spacing: -0.7px;
-letter-spacing: -0.5px;
-font-family: 'Times New Roman', Times, serif;
-margin-bottom: 3px;
-
-
+letter-spacing: -0.1px;
+margin-bottom: 1px;
+margin-left: 5px;
 }
 
 /*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
 .primer-segmento .tres  p{
  width: 100%;
- max-width: 640px;
+ max-width: 625px;
 font-size: 1.1rem;
 color: #2d2d2d;
-letter-spacing: 0.2px;
-font-family: 'Cabin', sans-serif;
-margin-bottom: 4px;
-
+letter-spacing: 0.5px;
+line-height: 15px;
+margin-bottom: 10px;
+margin-left: 5px;
 }
 
 .primer-segmento .tres a p{
 width: 100%;
-max-width: 640px;
+max-width: 625px;
 font-size: 1.1rem;
 color: #2d2d2d;
-letter-spacing: 0.2px;
-font-family: 'Cabin', sans-serif;
-margin-bottom: 40px;
-
+letter-spacing: 0.5px;
+margin-bottom: 10px;
+line-height: 15px;
+margin-left: 5px;
 }
 
 
@@ -4608,52 +4648,76 @@ margin-top: 15px;
   flex-direction: column;
  }
 
-
-.bloque-ultimo{
-width: 100%;
-display: flex;
-flex-direction: column;
-
-}
-
-.dos-columnas .posts-ultimos{
+ /*CONTAINER COLUMNA DE LAS CAJAS DE POSTS ULTIMOS*/
+ .columna-left .bloque-ultimo{
   width: 100%;
- display: flex;
- flex-direction: column;
- border-top: 0.8px solid #c9c9c9;
-}
+   display: flex;
+   flex-direction: column;
+    }
 
-.dos-columnas-segunda .posts-ultimos-imagen{
-display: block;
-position: relative;
-float: left;
-width: 45%;
-max-width: 165px;
-}
+  .columna-left .bloque-ultimo .posts-ultimos{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   border-top: 0.8px solid #c9c9c9;
+   }
 
-.posts-ultimos-imagen img{
-width: 100%;
-max-width: 155px;
-height: 100%;
-max-height: 98px;
-}
-
-.posts-ultimos-titulo{
-display: block;
-position: relative;
-float: right;
-width: 40%;
-}
+   /*CONTAINER DE IMAGENE Y TITULO*/
+   .post-ultimo{
+    width: 100%;
+  }  
 
 
-.posts-ultimos-titulo h1{
-font-size: 1.2rem;
+  .post-ultimo .posts-ultimos-imagen{
+  display: block;
+  position: relative;
+  float: left;
+  width: 45%;
+  max-width: 250px;
+  }
+
+
+  .posts-ultimos-imagen img{
+  width: 100%;
+  height: 100%;
+  }
+
+  .post-ultimo .posts-ultimos-titulo{
+  display: block;
+  position: relative;
+  float: right;
+  width: 50%;
+   }
+
+   /*TITULO DE  POST ULTIMOS Y DE RECETAS DIETETICAS*/
+   .posts-ultimos-titulo h1{
+   font-size: 1.2rem;
   word-spacing: -0.5px;
-}
+  padding-right: 40px;
+   }
 
+   /*TITULO DE  POST ULTIMOS Y DE RECETAS DIETETICAS*/
+   .posts-ultimos-titulo a h1{
+   font-size: 1.2rem;
+    word-spacing: -0.5px;
+    padding-right: 40px;
+    margin-bottom: 2px;
+    }
+  
 .posts-ultimos-titulo p{
 font-size: 1rem;
+padding-right: 40px;
+line-height: 15px;
+
  }
+
+ .posts-ultimos-titulo p a{
+  font-size: 1rem;
+  padding-right: 40px;
+  line-height: 10px;
+  margin-top: 2px;
+   }
+  
 
  .dos-columnas .columna-right{
   display: block;
@@ -4774,31 +4838,7 @@ hr {
         justify-content: space-between;
         }
          
-        /*CAJA DE IMAGEN..*/
-       .plan-post-imagen{
-        width: 45%;
-       }
-  
-       .plan-post-imagen img{
-        width: 100%;
-       }
-  
-        /*CAJA DEL TITULO Y DESCRIPCION*/
-      .plan-post-letra{
-       width: 45%;
-        }
-
-        .plan-post-letra h1{
-         font-size: 1.4rem;
-           }
-     
-  
-  
-     /*ESTE ES DEL TAMAÑO NORMAL*/
-      .plan-imagen{
-       display: none;
-      }
-  
+      
     /*...IMAGEN GRANDE....*/
       .plan-imagen-responsive{
         display: flex;
@@ -4810,14 +4850,57 @@ hr {
         width: 100%;
       }
      
-  
+    /*TITULO DE LA IMAGEN GRANDE DE RECETAS, DIETA ETC*/
      .plan-imagen-responsive h1{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+      font-weight: 900;
         margin-top: 8px;
         word-spacing: -0.7px;
         margin-bottom: 25px;
+        margin-left: 26px;
+      }
+
+       /*TITULO DELA FOTO GRANDE*/
+      .plan-imagen-responsive a h1{
+        font-size: 1.6rem;
+      font-weight: 900;
+        margin-top: 8px;
+        word-spacing: -0.7px;
+        margin-bottom: 25px;
+        margin-left: 26px;
       }
   
+  /*CONTAINER DE LAS 4 IMAGENES PEQUEÑAS*/
+      .plan-alimentacion{
+        margin: auto;
+      }
+
+
+        /*CAJA DE IMAGEN..*/
+      .plan-alimentacion .plan-post-alimentacion  .plan-post-imagen{
+          width: 50%;
+         }
+    
+         .plan-post-imagen img{
+          width: 100%;
+         }
+    
+          /*CAJA DEL TITULO Y DESCRIPCION*/
+        .plan-post-letra{
+         width: 42%;
+          }
+  
+          .plan-post-letra h1{
+           font-size: 1.4rem;
+             }
+       
+    
+    
+       /*ESTE ES DEL TAMAÑO NORMAL*/
+        .plan-imagen{
+         display: none;
+        }
+    
     /*FIN DE LAS 4 FOTOS Y UNA GRANDE*/
   
      /* LAS PAGINAS FRONTALES RECETAS  DIETA-PLAN Y TURISMO */
@@ -4893,22 +4976,24 @@ hr {
        width: 3%;
      }
      /*DONDE ESTNA LAS LETRAS..*/
-     .resumen2{
+     .resumen .resumen2{
        width: 96%;
      }
+
+
     .quinto{
      width: 45%;
       }
  
-   .quinto-segmento h1{
-    font-size: 140%;
+   .quinto-segmento .resumen .resumen2 h1{
+    font-size: 1.9em;
     }
  
     .quinto img{
      width: 100%;
     }
  
- .quinto-segmento h1 i{
+ .quinto-segmento .resumen2 h1 i{
    font-size: 1.8rem;
  }
  
@@ -4980,7 +5065,7 @@ hr {
        display: flex;
        flex-direction: column;
        width: 100%;
-       
+       height: 340px;
        background-color: #f4f4f4;
        }
        
@@ -4991,6 +5076,7 @@ hr {
        display: flex;
        flex-direction: column;
        margin: auto;
+  
        }
  
       /*SUB-caja  DE FOOD Y REDES */
@@ -5013,9 +5099,10 @@ hr {
     
       /*FOOD EMOTIONS*/
       .icon-email .icon-social1 p{
-       font-size: 1.6rem;
-       word-spacing: -4px;
-       letter-spacing: -2px;
+       font-size: 2.4rem;
+       word-spacing: -4.2px;
+       letter-spacing: -2.6px;
+       font-weight: 600;
        text-align: center;
        }
    
@@ -5068,12 +5155,21 @@ hr {
          
    
          
-         
+         .menudelfooter{
+           width: 100%;
+           height: 100%;
+           max-height: 200px;
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           margin-top: 20px;
+         }
        
         /*caja */
    .menu-footer{
-   width:100%;
-   height: 180px;
+   width: 45%;
+   height: 100%;
+   max-height: 200px;
    display: flex;
    flex-direction: column;
    }
@@ -5086,30 +5182,32 @@ hr {
     /*TITULO DEL MENU*/
     .menu-footer .footer-text h1{
     text-align: center;
-     font-size: 1rem;
+     font-size: 1.2em;
     word-spacing: -2px;
-    letter-spacing: -1.5px;
+    letter-spacing: -0.1px;
+    font-weight: 700;
+    color: #000000;
     }
  
      .menu-footer .footer-lista {
      height: 100%;
-     max-height: 100px;
-     margin-left: auto;
-     margin-right: auto;
-     width: 15em;
+     max-height: 170px;
+     margin-left:30px;
+     width: 100%;
      display: flex;
      flex-direction: column;
+     margin: auto;
      }
  
    /*OPCIONES DEL MENU*/
-   .menu-footer .footer-lista  p{
+   .menu-footer .footer-lista a p{
      display: flex;
      flex-direction: column;
     line-height: 17px;
     font-weight: bold;
     font-size: 0.9rem;
     color: #2d2d2d;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.5px;
     align-items: center;     /*IMPORTANTE*/
    }
    

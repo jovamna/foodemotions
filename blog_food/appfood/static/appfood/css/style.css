@@ -1992,7 +1992,6 @@ animation: textomaq 5s infinite alternate;
 font-size: 2rem;
 word-spacing: -3px;
 letter-spacing: -0.8px;
-font-family: 'Archivo Black', sans-serif;
 color: #7aac41;
 }
 
@@ -2083,7 +2082,6 @@ border: solid #E9E9E9;
   font-size: 1.4rem;
   word-spacing: -3px;
   letter-spacing: -0.3px;
-  font-family: 'Archivo Black', sans-serif;
   color: #2d2d2d;
  line-height: 8px;
   }
@@ -2094,7 +2092,6 @@ line-height: 20px;
 font-weight: bold;
 font-size: 1.2rem;
 color: #2d2d2d;
-font-family: 'Cabin', sans-serif;
 }
 
 
