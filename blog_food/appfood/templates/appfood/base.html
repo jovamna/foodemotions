@@ -283,10 +283,20 @@
     <!----------------NAVEGACION---EN PAGINA ORDENADOR Y---RESPONSIVE---------------------------------------------------->
         <nav>
                 <div class="logo-esconder"> 
-                 <a class="estilo-logo" href="{% url 'appfood:index' %}">
-                     <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
-                     </a>
-                </a>    
+                    <div class="logo-en-menu-responsive">
+                       <a class="estilo-logo" href="{% url 'appfood:index' %}">
+                       <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
+                       </a>
+                     </div>
+                     <div class="emoticon">
+                     </div>
+
+                      <div class="suscriptor">
+                       <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
+                       <h4>SUSCRIBETE</h4>  
+                      </a>
+                     </div>
+                    
                 </div>
 
              <div class="buscador-esconder"> 
@@ -713,7 +723,7 @@
                         <section class="icon-email">
                         <!-------------------------------------------------------------->
                                 <div class="icon-social1">
-                                    <p>fooding emotion</p>
+                                    <p>FoodingEmotion</p>
                                      <ul class="social2">
                                      <li> 
                                      <a href="malito:contacto@foodingemotion.com" target="_blank"> <i class="far fa-envelope"></i> </a>

@@ -1971,29 +1971,30 @@ animation: textomaq 5s infinite alternate;
 
 
      /*CAJA DE FOOD REDES Y BOX*/
-  .icon-email{
+   .icon-email{
     display: block;
     position: relative;
     float: left;
     width: 30%;
     height: 290px;
-  }
+    }
 
 
     /*CAJA DE FOOD Y REDES */
-.icon-email .icon-social1{
+  .icon-email .icon-social1{
   width: 100%;
   height: 70px;
   margin-bottom: 20px;
+  }
 
-}
-
-.icon-email .icon-social1 p{
-font-size: 2rem;
-word-spacing: -3px;
-letter-spacing: -0.8px;
-color: #7aac41;
-}
+  .icon-email .icon-social1 p{
+   font-size: 2.3em;
+   word-spacing: -6px;
+   letter-spacing: -2px;
+   color: #7aac41;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 900;
+   }
 
    .icon-email .icon-social1 ul{
   width: 40%;
@@ -2052,26 +2053,26 @@ border: solid #E9E9E9;
 
  
 
- .menudelfooter{
+  .menudelfooter{
    width: 70%;
    height: 290px;
    display: inline-flex;
- }
+  }
 
   .menudelfooter .menu-footer{
- width : 45%;
- height: 250px;
- margin: auto;
-}
+   width : 45%;
+   height: 250px;
+   margin: auto;
+   }
 
- #footer .footer-text{
- width :100%;
- height: 25px;
-}
+    #footer .footer-text{
+   width :100%;
+   height: 25px;
+   }
 
   #footer .footer-lista{
- width :100;
- height: 25px;
+  width :100;
+  height: 25px;
  }
 
 
@@ -2083,23 +2084,24 @@ border: solid #E9E9E9;
   word-spacing: -3px;
   letter-spacing: -0.3px;
   color: #2d2d2d;
- line-height: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 8px;
+  font-weight: 900;
   }
 
 
-.menu-footer p{
-line-height: 20px;
-font-weight: bold;
-font-size: 1.2rem;
-color: #2d2d2d;
-}
+  .menu-footer p{
+  line-height: 20px;
+   font-size: 1.1rem;
+   color: #2d2d2d;
+  }
 
 
       /*caja */
-.espacio{
-width:4%;
-height: 300px;
-}
+   .espacio{
+   width:4%;
+   height: 300px;
+   }
 
 
  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
@@ -2109,10 +2111,11 @@ height: 300px;
    display: block;
    position: relative;
    float: left;
- margin-top: 25px;
- }
-/*..SUBCAJA DE DIV FOOTERSENIDN...*/
- .final-food{
+   margin-top: 25px;
+   }
+
+   /*..SUBCAJA DE DIV FOOTERSENIDN...*/
+   .final-food{
    display: block;
    position: relative;
    float: left;   

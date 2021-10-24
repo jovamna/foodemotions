@@ -1843,7 +1843,7 @@ display: block;
        }
   
  
-    html, body{
+      html, body{
       width: 100%;
       height: 100%;
       line-height: 1.15;
@@ -1865,10 +1865,10 @@ display: block;
 
   
     
-    #controls{
+     #controls{
       display: none;
       visibility: hidden;
-    }
+     }
 
   #wrapper img {
   width: 100%;
@@ -1876,11 +1876,11 @@ display: block;
   border: 0;
    }
 
-   #wrapper > * {
+     #wrapper > * {
     padding: 15px;
     }  
   
-    #container{
+      #container{
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -1889,7 +1889,7 @@ display: block;
       margin: auto;
       margin-top: 36px;
       margin-bottom: 70px;
-    height: auto;
+     height: auto;
     }
 
   
@@ -2091,27 +2091,61 @@ display: block;
     bottom: 0;
     left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
     opacity: 0.97;
-     background-color: #000000;
+     background-color: #fff;
      overflow-y: scroll;
      z-index: 200;
      visibility: visible;
+     box-sizing: border-box;
     }
 
+
+    /* #aaaaaa */
     nav .logo-esconder{
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 98%;
     visibility: visible;
-    margin-top: 30px;
-    height: 30px;
-    border-bottom: 1px solid #aaaaaa;
+    height: 80px;
+     border-bottom: 1px solid #2d2d2d;
+  
     }
 
-  nav .logo-esconder img{
+    nav .logo-esconder .logo-en-menu-responsive{
+      width: 30%;
+      max-width: 150px;
+      display: inline-flex;
+      height: 80px;
+      margin-left: 10px;
+    }
+
+   
+
+  nav .logo-esconder .logo-en-menu-responsive img{
     width: 100%;
     max-width: 120px;
-    margin-left: 20px;
+    min-width: 120px;
+    margin-top: 45px;
   }
+
+  nav .logo-esconder .emoticon{
+    width: 8%;
+    height: 80px;
+  }
+
+   nav .logo-esconder .suscriptor{
+     width: 30%;
+     height: 80px;
+     display: block;
+     position: relative;
+     float: right;
+
+   }
+    nav .logo-esconder .suscriptor a h4{
+    font-size: 0.8em;
+    margin-top: 50px;
+  
+    }
 
      /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
      nav .buscador-esconder{
@@ -2177,7 +2211,7 @@ display: block;
       }
   
      /* UL  */
-  header  nav .nav{
+      header  nav .nav{
       width: 90%; 
       height: 99%;
       display: flex;
@@ -2193,14 +2227,13 @@ display: block;
       margin-left: 10px;
       margin-bottom: 10px;
       cursor:pointer;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid #2d2d2d;
       }
       
       nav .nav li a {
       z-index: 100;
-    
       height: 24px;
-      color: #fff;
+      color: #000000;
       font-weight: lighter;
       font-size: 0.9rem;
       text-transform: uppercase;
@@ -2218,6 +2251,7 @@ display: block;
         z-index: 598;
         }
   
+
       nav .nav li ul li a{
       font-size: 1rem;
       display: block;
@@ -2255,8 +2289,8 @@ display: block;
 
  
   
-  /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
-   nav  .estilo-logo:after{
+    /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+     nav  .estilo-logo:after{
      text-decoration: none;
      height: 0px;
      content: "";
@@ -2266,7 +2300,7 @@ display: block;
      width: 0px;
      transition: all .0s;
      z-index: 10;
-   }
+     }
 
   
    
@@ -2337,8 +2371,7 @@ display: block;
    /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
   /*margin-left: 5.4%;/*IMPORTANTE */
 
-    /*BUSCADOR EN EL NAV DEL DISEÑO EN PANATLLA GRANDE HAY QUE ANULARLO*/
-        /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+  
   
 
      /*BUSCADOR EN EL NAV GRANDE HAY QUE OLCUTARLO*/
@@ -2366,7 +2399,7 @@ display: block;
    .imagen-responsive-ipod{
     display: none;
     visibility: hidden;
-  }
+    }
 
     /*CONTAINER PRINCIPAL DE LA IMAGEN Y DE LA CAJA DE TITULO Y MENU*/
    .portada .portada-img-responsive{
@@ -2374,17 +2407,18 @@ display: block;
     flex-direction: column;
     z-index: 80;
     margin: auto;
-
     }
     
-     /*.............MOVIL..........---MOVIL....MOVI.............*/
-    .portada  .portada-img-responsive .imagen-responsive-movil {
+
+      /*.............MOVIL..........---MOVIL....MOVI.............*/
+     .portada  .portada-img-responsive .imagen-responsive-movil {
       display: flex;
       flex-direction: column;
       width: 100%;
       max-width: 640px;
       z-index: 85;
-     }
+      }
+
 
     /*.............MOVIL...................*/
     .portada  .portada-img-responsive .imagen-responsive-movil img{
@@ -2392,7 +2426,6 @@ display: block;
       padding: 0 0;
       z-index: 90;
       margin: auto;
-
     }
      
 
@@ -2477,9 +2510,7 @@ display: block;
     }
 
     
-
-
-   /*EL MENU*/
+      /*EL MENU*/
     .portada-img3-responsive #menu-simple-responsive{
     width: 90%;
     height: 30px;
@@ -3358,10 +3389,12 @@ width: 100%;
     .resumen3{
       width: 3%;
     }
+
     /*DONDE ESTNA LAS LETRAS..*/
     .resumen2{
       width: 96%;
     }
+
    .quinto{
     width: 45%;
      }
@@ -3374,9 +3407,9 @@ width: 100%;
     width: 100%;
    }
 
-.quinto-segmento h1 i{
+  .quinto-segmento h1 i{
   font-size: 1.8rem;
-}
+   }
 
 
 /*Portada.......................................................................................................................................*/
@@ -3391,7 +3424,7 @@ width: 100%;
   animation: movimiento 15s infinite linear alternate;  
   }
 
-  .details h1{
+    .details h1{
     font-size: 1.6rem;
     font-weight: lighter;
     margin-left: 10px;
@@ -3399,14 +3432,14 @@ width: 100%;
     letter-spacing: -1.5px;
     }
   
-  .details p{
+   .details p{
     margin-top: 10px;
     font-size: 1.2rem;
     font-weight: 100;
     margin-left: 10px;
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke: 1.2px #7aac41;
-  }
+    }
 
     .details button{
     width: 50%;
@@ -3423,35 +3456,35 @@ width: 100%;
 
    
    /*FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN...............................................................................*/
-   #footer{
+    #footer{
     width: 100%;
-  bottom: 0;  
-  left: 0;
-  right: 0;
-  top: 0; 
-  margin: auto;
-  clear: both;
-  display: flex;
-  flex-direction: column;
+    bottom: 0;  
+   left: 0;
+   right: 0;
+   top: 0; 
+   margin: auto;
+   clear: both;
+   display: flex;
+   flex-direction: column;
    -webkit-box-shadow: 0px -3px 6px #DCDCDC;
   -moz-box-shadow: 0px -3px 6px #DCDCDC;
   box-shadow: 0px -3px 6px  #DCDCDC;
   z-index: 10;
-  background-color: #f4f4f4;
+   background-color: #f4f4f4;
      }
   
-     #footer .footer-primero{
+      #footer .footer-primero{
       display: flex;
       flex-direction: column;
       width: 100%;
-     height: 580px;
+      height: 580px;
       background-color: #f4f4f4;
       }
       
        /*CAJA DE FOOD EMOTIONS E ICONOS SOCALES Y BOX */
-    .footer-primero  .icon-email{
+      .footer-primero  .icon-email{
       width: 100%;
-     height: 120px;
+      height: 120px;
       display: flex;
       flex-direction: column;
       }
@@ -3460,9 +3493,9 @@ width: 100%;
    .icon-email .icon-social1{
     width: 100%;
     height: 60px;
-   display: flex;
-   flex-direction: column;
-   margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
     }
 
  
@@ -3478,7 +3511,7 @@ width: 100%;
   
 
           /* UL CAJA DE REDES*/
-    .social2{
+      .social2{
       width: 50%;
       display: flex;
       flex-direction: row;
@@ -3487,7 +3520,7 @@ width: 100%;
       }
 
 
-      .icon-email  ul li .fa-envelope{
+       .icon-email  ul li .fa-envelope{
         background-color: oldlace;
         color: #2d2d2d;
         width: 38px;
@@ -3498,24 +3531,24 @@ width: 100%;
         margin-right: 5px;
         }
         
-        .icon-email  ul li .fa-facebook-f{
+         .icon-email  ul li .fa-facebook-f{
           background-color: oldlace;
           color:  #2d2d2d;
           width: 38px;
-        height: 38px;
-        padding: 2px 2px 2px 2px;
+          height: 38px;
+          padding: 2px 2px 2px 2px;
           border-radius: 25px;
           border: solid #E9E9E9;
           margin-right: 5px;
-        }
+          }
         
         
-        .icon-email  ul li .fa-twitter{
+         .icon-email  ul li .fa-twitter{
           background-color: oldlace;
           color:   #2d2d2d;
           width: 38px;
           height: 38px;
-         padding: 2px 2px 2px 2px;
+          padding: 2px 2px 2px 2px;
           border-radius: 25px;
           border: solid #E9E9E9;
           margin-right: 5px;
@@ -3538,8 +3571,7 @@ width: 100%;
       width: 100%;
      height: 400px ;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      flex-direction: column;
       margin: auto;
       margin-top: 20px;
       }
@@ -3578,7 +3610,7 @@ width: 100%;
     }
 
 
-  /*OPCIONES DEL MENU*/
+     /*OPCIONES DEL MENU*/
     .menu-footer .footer-lista  p{
     display: flex;
     flex-direction: column;
@@ -3606,9 +3638,9 @@ width: 100%;
     }
   
 
-  .final-food p{
+    .final-food p{
     font-size: 0.7rem;
-  }
+    }
 
  
 
@@ -3659,6 +3691,8 @@ width: 100%;
    .form-control{
      display: block;
    }
+
+
     .input-group{
       display: block;
      margin-left: -1px;
@@ -3671,33 +3705,32 @@ width: 100%;
       -webkit-box-align: start;
     }
 
+
     input[type=text]:focus {
       width: 100%;
     }
 
-    .input-group input[type="text"]
-    {
-    width: 70%;
-   padding: 12px 20px;
-   box-sizing: border-box;
+
+    .input-group input[type="text"]{
+     width: 70%;
+     padding: 12px 20px;
+     box-sizing: border-box;
      resize: none;
      }
 
-     .input-group input[type="email"]
-     {
-     width: 70%;
-    padding: 12px 20px;
-    box-sizing: border-box;
+      .input-group input[type="email"]{
+       width: 70%;
+      padding: 12px 20px;
+       box-sizing: border-box;
       resize: none;
       }
  
 
 
-    .input-group textarea[name="content"]
-    {
-    width: 70%;
-    padding: 12px 20px;
-    box-sizing: border-box;
+     .input-group textarea[name="content"]{
+     width: 70%;
+     padding: 12px 20px;
+     box-sizing: border-box;
      resize: none;
      }
 
@@ -4017,7 +4050,7 @@ nav .buscador-esconder{
     outline: none;
     border-radius: 2px;
    margin-top: -0.5px;
-  }
+    }
 
   .buscador-esconder .d-flex #custom-search .boton{
     width: 10%;
@@ -4026,15 +4059,15 @@ nav .buscador-esconder{
     position: relative;
     float: right;
    background-color: #fff;
-  }
+   }
 
    /*FIN BUSCADOR EN EL NAV ESCONDIDO*/
 
- nav .nav .esconder{
+    nav .nav .esconder{
    visibility: visible;
- }
+    }
 
-  nav .nav li a.active{
+    nav .nav li a.active{
     text-decoration:line-through;
     color: #7aac41;
     }
@@ -4076,8 +4109,6 @@ nav .buscador-esconder{
      /*IMPORTANTE*/
 
      
-    
- 
       /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
       nav .nav li:hover > ul {
@@ -4102,8 +4133,8 @@ nav .buscador-esconder{
     visibility: hidden;
     }
 
-      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
-  
+  /*.FIN MENU ESCONDIDO ...MENU ESCONIDDO DEL NAV ARROW.........*/
+
  /*ANIMACION SUBRAYADO */
  nav a {
  display: inline-block;
@@ -4160,11 +4191,11 @@ nav .buscador-esconder{
   
   
    #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
-       display: block;
-       position: relative;
-       float: left;
-       width: 100%;
-       height: 41px;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 41px;
      outline: none;
      box-sizing: border-box;
       }
@@ -4176,10 +4207,12 @@ nav .buscador-esconder{
         height: 41px;
         box-sizing: border-box;
       }
+
+
        #controls-responsive .boton-responsive{
-         display: block;
-         position: relative;
-         float: right;
+      display: block;
+      position: relative;
+      float: right;
        width: 10%;
        padding: 12px 20px;
        margin: 1.2px 0;
@@ -4197,17 +4230,16 @@ nav .buscador-esconder{
             
 
   /*FIN ANIMACION SUBRAYADO */
- .portada{
+  .portada{
    width: 100%;
- position: relative;  /*ESTO ARREGLO LA CABECERA*/
+   position: relative;  /*ESTO ARREGLO LA CABECERA*/
    margin: auto;
-  z-index: 30;
+    z-index: 30;
     }
 
- .portada .portada-img{
-  display: none;
-  visibility: hidden;
- 
+   .portada .portada-img{
+    display: none;
+    visibility: hidden;
      }
 
 
@@ -5179,6 +5211,7 @@ hr {
      max-height: 25px;
    
    }
+
     /*TITULO DEL MENU*/
     .menu-footer .footer-text h1{
     text-align: center;
@@ -5246,8 +5279,6 @@ hr {
      display: flex;
      flex-direction: column;
      width: 90%;
-   
-     
      }
  
  
@@ -5255,60 +5286,67 @@ hr {
       width: 100%;
       display: block;
     }
+
+
     /*FORMULARIO CONTACTO*/
     .section-heading-lower{
      display: block;
      font-size: 0.7rem;
      font-weight: lighter;
     letter-spacing: -0.8px;
-   }
+     }
  
  
  
-    .form-group{
+      .form-group{
       display: block;
       width: 100%;
       max-width: 500px;
       background-color: darkslategray;
-    }
+      }
  
-    .form-control{
+
+      .form-control{
       display: block;
       background-color: mediumspringgreen;
-    }
-     .input-group{
+      }
+
+
+       .input-group{
        display: block;
-      margin-left: -1px;
+       margin-left: -1px;
        background-color: darkviolet;
-     }
+       }
  
-     #mobile {
+       #mobile {
        background: #ccc;
        outline: none;
        border: 0;
        border: 1px solid #777;
        -webkit-box-align: start;
-     }
+       }
  
      input[type=text]:focus {
        width: 100%;
      }
+
+
      .input-group input[type="text"]
      {
      background-color: rgb(141, 12, 62);
      width: 70%;
-    padding: 12px 20px;
-    box-sizing: border-box;
-      resize: none;
-      }
- 
-      .input-group input[type="email"]
-      {
-      background-color: rgb(141, 12, 62);
-      width: 70%;
      padding: 12px 20px;
      box-sizing: border-box;
-       resize: none;
+    resize: none;
+      }
+ 
+
+    .input-group input[type="email"]{
+    background-color: rgb(141, 12, 62);
+    width: 70%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    resize: none;
        }
   
  
