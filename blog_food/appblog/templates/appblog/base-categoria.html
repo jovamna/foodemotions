@@ -222,16 +222,54 @@
                         <!-- NAV MENU QUE VA CON EL BOTON MENU-->
                         
        <!-- NAV MENU QUE VA CON EL BOTON MENU-->
-            <nav style="background-image: url({% static 'appfood/img/logo/202-47-logomenu.png' %})">
-                 <ul>
-                 <li> 
-                 <a href="{% url 'appfood:index' %}"  class="current">
-                 <p>Inicio</p> 
-                 </a>  
-                </li>
-        
+          <!-- NAV MENU QUE VA CON EL BOTON MENU-->
+      <!----------------NAVEGACION---EN PAGINA ORDENADOR Y---RESPONSIVE---------------------------------------------------->
+        <nav>
+                <div class="logo-esconder"> 
+                    <div class="logo-en-menu-responsive">
+                       <a class="estilo-logo" href="{% url 'appfood:index' %}">
+                       <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
+                       </a>
+                     </div>
+                     <div class="emoticon">
+                     </div>
+
+                      <div class="suscriptor">
+                        <a class="estilo-logo" href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
+                       <h4>SUSCRIBETE</h4>  
+                      </a>
+                     </div>
+                    
+                </div>
+
+             <div class="buscador-esconder"> 
+              <form class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                  <!------------------------------------------------------------------>
+                    <div id="custom-search">
+	                  <input type="text"  name="q" 
+                    value= "{{ request.GET.q }}" class="sin-borde" 
+                    placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off" >
+                    <!---------------------------------------------------------------->             
+                    <button type="submit" name="submit" class="boton btn-succes" value="Search" >
+                    <span class="icon"><i class="fa fa-search"></i></span> 
+                  </button>
+                  </div>
+                <!--------------------------------------------------------------------->
+               </form>                 
+           
+           </div>
+
+           <ul class="nav">
+               
                 <li> 
-                <a class="{% active 'appfood:recetas-saludables' %}" href="{% url 'appfood:recetas-saludables' %}"><p>Recetas Saludables</p></a>
+                <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}" >Inicio </a>      
+                </li>
+                
+                <li> 
+                <a class="{% active 'appfood:recetas-saludables' %}"  href="{% url 'appfood:recetas-saludables' %}" >
+                   Recetas 
+                  <i class ="fa fa-caret-down"></i>
+                 </a>
                         <ul>  
                         {% load mptt_tags %} 
                         <!-- LAS CATEGORIAS------->
@@ -243,43 +281,70 @@
                        {% endfor %}
                       </ul>
                 </li>
-              
-                <li>
-                <a href="{% url 'appfood:recetas-dieteticas' %}">
-                <p>Recetas Dieteticas</p>
-                </a>
-                                                      <ul>
-                                                       <li><a href="#menu">batidos</a></li>
-                                                       <li><a href="#menu">ensaladas</a></li>
-                                                      </ul>
+
+                
+                <li >
+                <a class="{% active 'appfood:recetas-dieteticas' %}" href="{% url 'appfood:recetas-dieteticas' %}">Recetas dieteticas</a>
                 </li>
 
-                    <li> 
-                <a class="{% active 'appfood:plan-comidas-saludables' %}" href="{% url 'appfood:plan-comidas-saludables' %}"><p>Plan de Alimentacion Saludable</p> </a>
+                  <li> 
+                <a class="{% active 'appfood:plan-comidas-saludables' %}" href="{% url 'appfood:plan-comidas-saludables' %}">Plan Comidas Sanas</a>
                 </li>
 
-               <li > 
-                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"><p> Dietas y Alimentacion Saludable </p>  </a> 
+
+                <li > 
+                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"> Dietas y Alimentacion Sana  </a> 
                 </li>
+
+                
 
                 <li> 
-                <a class="{% active 'appfood:noticias-turismo-gastronomico' %}" href="{% url 'appfood:noticias-turismo-gastronomico' %}"><p> Turismo</p>  </a>
-                    
+                <a class="{% active 'appfood:noticias-turismo-gastronomico' %}"  href="{% url 'appfood:noticias-turismo-gastronomico' %}">Turismo</a>    
                 </li>
               
                 <li> 
-                <a href="{% url 'appcontact:contacto' %}">
-                <p>Contacto</p>
-                </a> 
-                </li>
-                <li> 
-                <a href="{% url 'appfood:nosotros' %}">
-                <p> Nosotros</p> 
-                </a> 
-                </li>
-                 </ul>
-                </nav>
+                <a class="{% active 'appfood:nosotros' %} " href="{% url 'appfood:nosotros' %}">Nosotros</a> 
+               </li>
 
+                 <li> 
+                <a class="{% active 'appfood:contacto' %} " href="{% url 'appcontact:contacto' %}">
+                Contacto
+                </a> 
+                
+                </li>  
+           </ul>
+          
+           <!------------------------------------------------------------------->
+             <div class="siguenos">
+
+             
+                                     <ul class="red-social">
+                                     <h1> Siguenos</h1>
+                                     <li> 
+                                     <a href="malito:contacto@foodingemotion.com" target="_blank"> <i class="far fa-envelope"></i> </a>
+                                     </li>
+                                     {% if LINK_FACEBOOK %}
+                                     <li> 
+                                     <a href="{{LINK_FACEBOOK}}" target="_blank"><i class="icon fab fa-facebook-f"></i> </a>
+                                     </li>
+                                     {% endif %}
+                                     {% if LINK_PINTEREST %}
+                                     <li> 
+                                     <a href="{{LINK_PINTEREST}}" target="_blank"> <i class="fab fa-pinterest"></i> </a>
+                                     </li>
+                                     {% endif %}
+                                     {% if LINK_INSTAGRAM %}
+                                    <li> 
+                                    <a href="{{LINK_INSTAGRAM}}" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                                    </li>
+                                    {% endif %}
+                                    </ul>
+                                
+                        </div>
+                        <!------------------------------------------------------>
+
+             </nav> 
+            <!-----FIN  NAVEGATION-------------------------------------------------->
                 <!---FINAL NAV------------------------------>
           </div> 
           <!-- FINAL CABECERA ----------------------------------------------------------->
@@ -535,7 +600,7 @@
                   <div class="footer-primero-categorias">
                            <!-- PRIMER FOOTER--------------->
                            <div class="icon-social1">
-                           <p>fooding emotion</p>
+                           <p>FoodingEmotion</p>
                            <ul class="social2">
                             <li> <a href="malito:contacto@foodingemotion.com" target="_blank">
                                 <i class="far fa-envelope"></i> </a></li>
@@ -550,7 +615,7 @@
 
 
                             <div class="box">
-                             <h3>Suscribete a nuestro Newsletter.</h3>
+                             <h3>Suscribete a nuestro Newsletter</h3>
                              <form action="." method="POST">
                             <input type="text" name="email" id="email" placeholder="Type your email address">
                             <button type="submit" class="submit">Suscribete</button>

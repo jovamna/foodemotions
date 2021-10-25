@@ -285,6 +285,7 @@ margin-top: 18px;
     display: none;
     }
 
+      
      /*NAV   SEMENTO QUE CONTIENE LOGO BUSCADOR Y NAVEGACION ESCONDIDA */
      nav{
       display:flex;
@@ -292,7 +293,6 @@ margin-top: 18px;
       justify-content: space-between;
       width: 92%;
       margin-top: 3px;
-
       height: 34px;
     }
   
@@ -311,7 +311,10 @@ margin-top: 18px;
     visibility: hidden;
   }
    
- 
+ nav .siguenos{
+  display: none;
+  visibility: hidden;
+ }
   
        /*---UL--*/
    nav .nav{
@@ -1992,7 +1995,7 @@ animation: textomaq 5s infinite alternate;
    word-spacing: -6px;
    letter-spacing: -2px;
    color: #7aac41;
-   font-family: 'Times New Roman', Times, serif;
+
    font-weight: 900;
    }
 

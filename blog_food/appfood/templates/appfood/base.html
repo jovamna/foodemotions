@@ -11,7 +11,7 @@
         <title>{% block titulo %} {% endblock titulo %}</title>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="Encuentre recetas saludables y deliciosas e ideas para menús  en la revista FoodingEmotion. Aprenda a elegir alimentos más saludables todos los días..">
-        <meta name="keywords" content="Recetas Saludables, Recetas, Alimentacio Saludable, Plande comidas dieteticas">
+        <meta name="keywords" content="Recetas Saludables, Recetas, Alimentacio Saludable, Plan de comidas dieteticas">
         <link rel="canonical" href="https://www.foodingemotion.com/">
 
 
@@ -220,7 +220,7 @@
               <div class="cabecera">
                      <div class="logo">
                      <a  href="{% url 'appfood:index' %}">
-                     <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
+                     <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Fooding Emotion"> 
                      </a>
                      </div>
 
@@ -368,15 +368,40 @@
                 Contacto
                 </a> 
                 
-                </li>
-                 
-           
-       </ul>
+                </li>  
+           </ul>
           
-      
+           <!------------------------------------------------------------------->
+             <div class="siguenos">
+
+             
+                                     <ul class="red-social">
+                                     <h1> Siguenos</h1>
+                                     <li> 
+                                     <a href="malito:contacto@foodingemotion.com" target="_blank"> <i class="far fa-envelope"></i> </a>
+                                     </li>
+                                     {% if LINK_FACEBOOK %}
+                                     <li> 
+                                     <a href="{{LINK_FACEBOOK}}" target="_blank"><i class="icon fab fa-facebook-f"></i> </a>
+                                     </li>
+                                     {% endif %}
+                                     {% if LINK_PINTEREST %}
+                                     <li> 
+                                     <a href="{{LINK_PINTEREST}}" target="_blank"> <i class="fab fa-pinterest"></i> </a>
+                                     </li>
+                                     {% endif %}
+                                     {% if LINK_INSTAGRAM %}
+                                    <li> 
+                                    <a href="{{LINK_INSTAGRAM}}" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                                    </li>
+                                    {% endif %}
+                                    </ul>
+                                
+                        </div>
+                        <!------------------------------------------------------>
 
              </nav> 
-            <!-----FIN  NAVEGATION------------>
+            <!-----FIN  NAVEGATION-------------------------------------------------->
 
   
        

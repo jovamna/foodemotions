@@ -828,7 +828,9 @@
     position: relative;
     float: right;
     margin-top: 10px;
-    width: 37px;
+    width: 100%;
+    max-width: 28px;
+    min-width: 28px;
     height: 4px;
     background: #2d2d2d;
     border-radius: 2px;
@@ -841,7 +843,9 @@
      .menu-btn__burger::after {
       content: '';
       position: absolute;
-      width: 37px;
+      width: 100%;
+      max-width: 28px;
+      min-width: 28px;
       height: 4px;
       background:#2d2d2d;
       border-radius: 2px;
@@ -920,57 +924,140 @@
           }
           
 
-    nav{
-    width: 100%;
-    background-position:  80% 90%;
-    }
+     /*FIN ANIMACION IMPORTANTE*/
+     header  #cabecera-categorias nav{
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      max-width: 640px;
+      height: 100%;
+      margin: auto;
+      top:0;
+      bottom: 0;
+      left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+       overflow-y: scroll;
+       z-index: 200;
+       visibility: visible;
+       box-sizing: border-box;
+        background-color: #000000;
+      }
 
-
-      nav ul{
-      display: block;
-      width: 85%;
-      margin-top: 55px;
-      margin-left: 5px;
+      header #cabecera-categorias  nav  .estilo-logo:after{
+        text-decoration: none;
+        display: none;
+      }
+      header #cabecera-categorias  nav ul li {
+        height: 38px;
       }
 
 
-    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-     nav ul li{
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;/*IMPORTANTE */
-    margin-left: -0.5px;
-    height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
-    list-style: none;
-    }
+      header #cabecera-categorias  nav ul li a {
+        color: #fff;
+        font-size: 0.8em;
+        font-family: 'Times New Roman', Times, serif ;
+       padding: 8px 8px;
+      }
+     header #cabecera-categorias  nav .logo-esconder{
+        width: 90%;
+        margin-left: 20px;
+        visibility: visible;
+        height: 80px;
+         border-bottom: 1px solid #2d2d2d;
+        }
+
+        header #cabecera-categorias  nav .logo-esconder .suscriptor{
+        display: block;
+        }
+        header #cabecera-categorias  nav .logo-esconder .suscriptor a h4{
+          color: #fff;
+          
+        }
 
 
-     nav ul li a {
-    width: 100%;
-    display: block;
-   background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-   margin-top:8px;
-   z-index: 200;
-   }
+
+        header #cabecera-categorias  nav .nav{
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          margin: auto;
+          margin-top: 40px;
+        }
+
+        header #cabecera-categorias  nav .nav li{
+          width: 100%;
+          margin: auto;
+        }
+
+         nav .buscador-esconder{
+          margin-left: 20px;
+         }
+
+         .buscador-esconder .d-flex #custom-search .sin-borde{
+           width: 87%;
+          margin-left: 5px;
+         }
+
+         .buscador-esconder .d-flex #custom-search .boton{
+           width: 10%;
+        margin-left: -3px;
+         }
+         nav .siguenos{
+          margin-left: 20px;
+         }
+
+       nav .siguenos h1{
+         color: #fff;
+       }
 
 
-    nav ul li a p{
-      width: 95%;
-      margin-left: 30px;
-      color: #fff;
-      font-weight: lighter;
-      font-size: 1.2rem;
-      text-transform: lowercase;
-      letter-spacing: 1px;
-      font-family:  'Times New Roman', Times, serif;
-    }
+       nav .siguenos ul li .fa-envelope{
+        color:oldlace;
+        background-color: #000000;
+      }
+    
+      nav .siguenos ul li .fa-facebook-f{
+        color:oldlace;
+        background-color: #000000;
+      }
+    
+      nav .siguenos ul li .fa-pinterest{
+        color:oldlace;
+        background-color: #000000;
+      }
+      nav .siguenos ul li .fa-instagram{
+        color:oldlace;
+        background-color: #000000;
+      }
+     
+      nav .suscriptor .estilo-logo:after {
+        display: none;
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+      }
+      nav .suscriptor .estilo-logo:hover:after {
+         display: none;
+         visibility: hidden;
+      }
+    
 
-    nav ul li ul li a{
-    text-transform: lowercase;
-    margin-left: 5%;
-    }
+      nav  a:after {
+        content: "";
+        display: block;
+        margin-top: 15px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+        height: 2px;
+        width: 0px;
+        transition: all .8s;
+        z-index: 10;
+        
+        }
 
- 
+        nav  a:hover:after {
+          padding-left: 10px;
+          padding-right: -15px;
+          height: 1px;
+        }
      /*CIERRE NAV*/
     /*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
     #container-categorias-subcategorias{
@@ -1408,7 +1495,7 @@
   top: 0; 
   margin: auto;
   clear: both;
-   height: 260px;
+  
   -webkit-box-shadow: 0px -3px 6px #DCDCDC;
   -moz-box-shadow: 0px -3px 6px #DCDCDC;
   box-shadow: 0px -3px 6px  #DCDCDC;
@@ -1418,35 +1505,33 @@
   
   
     /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
-    #footer-categorias .footer-primero-categorias{
+  .footer-primero-categorias{
       width: 100%;
-      height: 190px;
+      height: 250px;
      display: flex;
      flex-direction: column;
-     margin-top: -4px;
-    padding-top: 0;
     z-index: 10;
      }
 
 
     /*CAJA DE SOCIALES Y LETRA*/
-     #footer-categorias .icon-social1{
+     #footer-categorias .footer-primero-categorias .icon-social1{
       width: 100%;
-      height: 70px;
+      height: 90px;
       display: flex;
       flex-direction: column;
      margin-left: auto;
      margin-right: auto;
-     margin-bottom: 3px;
     }
 
 
     #footer-categorias .footer-primero-categorias  .icon-social1 p{
-      font-size: 1.2rem;
+      font-size: 1.6em;
         text-align: center;
         letter-spacing: 0.1px;
         word-spacing: 0.2px;
-        margin-bottom: 4px;
+        margin-bottom: 10px;
+        color: #7aac41;
     }
 
      /* UL */
@@ -1503,44 +1588,50 @@ border: solid #E9E9E9;
   }
 
 
-     .box{
+   .footer-primero-categorias .box{
     display: flex;
     flex-direction: column;
-     width: 100%;
+     width: 80%;
     height: 80px;
     margin: auto;
-    margin-left: 17px;
+  
   }
 
  /*LETRA ENCIMA DEL BOX*/   
  .footer-primero-categorias .box h3{
-  font-size: 1rem;
+  font-size: 0.8em;
   margin: auto;
    }
 
    .footer-primero-categorias .box form{
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    margin: auto;
+    width: 85%;
+    height: 45px;
+   display: flex;
+   flex-direction: row;
+    
+    margin-left: 70px;
+    margin-right: 60px
   }
 
   .footer-primero-categorias .box input[type="text"]
   {
   background-color: #fff;
   width:70%;
-   height: 38px;
+   height: 40px;
   border: 1.5px solid 	#DCDCDC;
   padding: 0 5px;
   border-radius: 5px 0 0 5px;
   font-size: 0.7rem;
+  display: block;
+    position: relative;
+    float: left;
   }
    
   .footer-primero-categorias .box button[type="submit"]{
-  left: 6px;  /*EL TRUCO IMPORTANTE*/
+  left: -6px;  /*EL TRUCO IMPORTANTE*/
   border-radius: 0 5px 5px 0;
-  width: 30%;
-  height: 38px;
+  width: 20%;
+  height: 40px;
   border: none ;
   outline: none;
   cursor: pointer;
@@ -1549,6 +1640,9 @@ border: solid #E9E9E9;
   font-size: 0.6rem;
   font-family: 'Archivo Black', sans-serif;
   padding: 0 5px 1px 1px;
+  display: block;
+    position: relative;
+    float: right;
   }
 
 

@@ -1180,57 +1180,90 @@ border-radius:6px;
     }
           
         /*FIN ANIMACION IMPORTANTE*/
-        
+      header  .cabecera nav{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        max-width: 640px;
+        height: 100%;
+        margin: auto;
+        top:0;
+        bottom: 0;
+        left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+         overflow-y: scroll;
+         z-index: 200;
+         visibility: visible;
+         box-sizing: border-box;
+          background-color: #000000;
+        }
 
-        nav  ul li a.active{
-          text-decoration:line-through;
-          color: #7aac41;
+        nav .nav li a {
+          color: #fff;
+         
+        }
+       header .cabecera  nav .logo-esconder{
+          width: 90%;
+          margin-left: 20px;
+          visibility: visible;
+          height: 80px;
+           border-bottom: 1px solid #2d2d2d;
           }
 
-    nav{
-    background-position:  80% 90%;
-      }
+
+          header .cabecera  nav .nav{
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+          }
+
+          header .cabecera  nav .nav li{
+            width: 100%;
+            margin: auto;
+          }
+
+           nav .buscador-esconder{
+            margin-left: 20px;
+           }
+
+           .buscador-esconder .d-flex #custom-search .sin-borde{
+             width: 87%;
+            margin-left: 5px;
+           }
+
+           .buscador-esconder .d-flex #custom-search .boton{
+             width: 10%;
+            margin-right: 5px;
+           }
+           nav .siguenos{
+            margin-left: 20px;
+           }
+
+         nav .siguenos h1{
+           color: #fff;
+         }
 
 
-      nav ul{
-        display: block;
-        width: 80%;
-        margin-top: 60px;
-      }
-
-          /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-     nav ul li{
-      display: flex;
-      margin-top: 5px;/*IMPORTANTE */
-      filter: alpha(opacity=80);
-      height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
-      list-style: none;
-      cursor:pointer;
-      margin-left: 2% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
-      }
-
-   nav li a p{
-   background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-   display: block;
-   margin-top:8px;
-   z-index: 200;
-   margin-left: -5px;
-   color: #fff;
-   font-weight: lighter;
-   font-size: 1.1rem;
-   text-transform: lowercase;
-   letter-spacing: 1px;
-   font-family:  sans-serif;
-    }
-
-
-
-    nav ul li ul li a{
-      text-transform: lowercase;
-      margin-left: 5%;
-    }
-  /*..FINAL MENU HAMBURGUESA*/
-
+         nav .siguenos ul li .fa-envelope{
+          color:oldlace;
+          background-color: #000000;
+        }
+      
+        nav .siguenos ul li .fa-facebook-f{
+          color:oldlace;
+          background-color: #000000;
+        }
+      
+        nav .siguenos ul li .fa-pinterest{
+          color:oldlace;
+          background-color: #000000;
+        }
+        nav .siguenos ul li .fa-instagram{
+          color:oldlace;
+          background-color: #000000;
+        }
 
   /*  EMPIEZA EL CONTENIDO*/
    /*..PAGINA DEL SEARCH CAJA BUSCADO ..............CAJA BUSCADOR*/

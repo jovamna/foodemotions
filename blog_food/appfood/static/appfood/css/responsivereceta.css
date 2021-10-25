@@ -1126,51 +1126,91 @@
   
   
   
+  /*FIN ANIMACION IMPORTANTE*/
+  header  .cabecera-recetas nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+     overflow-y: scroll;
+     z-index: 200;
+     visibility: visible;
+     box-sizing: border-box;
+      background-color: #000000;
+    }
 
-   /*NAV*/
-
-   /*MUEVE LA IMAGNE DEL NAV*/
-     nav {
-      background-position:  90% 90%;
-      background-repeat:no-repeat;
-     }
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-     nav ul li{
-      display: flex;
- 
-    margin-top: 1.5%;/*IMPORTANTE */
-    height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
-    margin-left: -8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+    nav .nav li a {
+      color: #fff;
+     
+    }
+   header .cabecera-recetas  nav .logo-esconder{
+      width: 90%;
+      margin-left: 20px;
+      visibility: visible;
+      height: 80px;
+       border-bottom: 1px solid #2d2d2d;
       }
-      
-   nav ul li a {
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 
-    height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
-    z-index: 100;
-  }  
-  
 
-      /*IMPORTANTE*/
-   nav li a p{
-   margin-top:9px;
-   width: 100%;
-   padding: 2px 2px ;
-   z-index: 1000;
-   margin-left: 30px;
-   font-size: 1rem;
-   }
-  
-   /* NAV ESCONDIDO  NAV ESCONDIDO*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-    nav ul li:hover > ul {
-    display: block;
-    margin-left: 200px;
-    margin-top:-40px; 
-     z-index: 598;
+      header .cabecera-recetas  nav .nav{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        margin-top: 40px;
+      }
+
+      header .cabecera-recetas  nav .nav li{
+        width: 100%;
+        margin: auto;
+      }
+
+       nav .buscador-esconder{
+        margin-left: 20px;
+       }
+
+       .buscador-esconder .d-flex #custom-search .sin-borde{
+         width: 87%;
+        margin-left: 5px;
+       }
+
+       .buscador-esconder .d-flex #custom-search .boton{
+         width: 10%;
+        margin-right: 5px;
+       }
+       nav .siguenos{
+        margin-left: 20px;
+       }
+
+     nav .siguenos h1{
+       color: #fff;
      }
-   /*CIERRE NAV*/
 
+
+     nav .siguenos ul li .fa-envelope{
+      color:oldlace;
+      background-color: #000000;
+    }
+  
+    nav .siguenos ul li .fa-facebook-f{
+      color:oldlace;
+      background-color: #000000;
+    }
+  
+    nav .siguenos ul li .fa-pinterest{
+      color:oldlace;
+      background-color: #000000;
+    }
+    nav .siguenos ul li .fa-instagram{
+      color:oldlace;
+      background-color: #000000;
+    }
 
     /* PRIMERA SECCION MENU ARROW*/
 
