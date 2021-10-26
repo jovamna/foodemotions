@@ -83,16 +83,18 @@
         integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
         crossorigin="anonymous"></script>
 
-      <!-- SCRIPT PARA CABECERA FIJA----------------------------------------->
-              <script src="http://code.jquery.com/jquery-latest.js"></script>
+     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-      <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-     <!--------SCROLL MENU------------------------------------->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
-
+      <!-- COOKIES-----------------COOKIES-------------- -->
       
+    <!--------SCROLL MENU------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 
+
+      <!-- SCRIPT PARA CABECERA FIJA---ROBAR A BORRAR ----------------------------- -->
+              <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+  
       <!-- GOOGLE FONTS----------------------------------------------->
 
          <link
@@ -122,14 +124,14 @@
                     </a>
                   </div>
 
-                   <div class="menu-btn"> 
+              
                                 <div class="suscribe">
                                 <a href="{% url 'appcontact:contacto' %}">   
                                 <h4>suscribete</h4>  
                                 </a>
                                 </div>
                                 <!---------------MENU RESPONSIVE -------------------->              
-                  </div>
+                 
                                                 <!----FIN  MENU RESPONSIVE ------->
                                      <!-----FIN  BOLETIN -------------->
 
@@ -139,50 +141,112 @@
   <!---CABECERA RESPONSIVE------------------CABECERA--RESPONSIVE---CABECERA--RESPONSIVE------->
 
      <div class="cabecera-responsive">
-                     <div class="logo">
-                     <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
-                     <img src="{% static 'appfood/img/logo/fooding11.png' %}" width="100%" alt="Food Emotions"> 
-                    </a>
-                    </div>
+                          <div class="logo">
+                     <a  href="{% url 'appfood:index' %}">
+                     <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Fooding Emotion"> 
+                     </a>
+                     </div>
 
+            <!---------------------------------------------------------------------------->
+       
+  
+
+  <!-------------------------------------------------------->
+             <div id="controls">
+                 <form class="buscador" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                  <!------------------------------------------------------------------>
+                    <div id="custom-search-input-header">
+	                  <input id="ducks" type="text"  name="q" 
+                    value= "{{ request.GET.q }}" class="sin-borde" 
+                    placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off" >
+                    <!---------------------------------------------------------------->             
+                    <button type="submit" name="submit" class="boton btn-succes" value="Search" >
+                    <span class="icon"><i class="fa fa-search"></i></span> 
+                  </button>
+                  </div>
+                <!--------------------------------------------------------------------->
+               </form>                 
+             </div>
+           <!---------------------------------------------------------------->
+
+      <!------------------------------------------------------------------------->
       <!---------------------------------------------------------------------------------------------------------------->
+                      <div class="suscribe">
+                   
+                         <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
+                    <h4>SUSCRIBETE</h4>  
+                    </a>
+                   
+                      </div>
 
-                  <div class="menu-btn"> 
-                         <!------------------------------------>
-                        <div class="suscribe">
-                        <a href="{% url 'appcontact:contacto' %}">   
-                        <h4>suscribete</h4>  
-                        </a>
-                        </div>
-                        <!--------------------------------->
-                        <!---------------MENU RESPONSIVE -------------->
-                      <div class="menu-btn__burger"> </div>
-                       <!----FIN  MENU RESPONSIVE ------->                
-                 </div>
-                 <!----FIN  MENU BTN------->
-                                    
-      </div> 
+      <!---------------------------------------------------------------------------->
+         
 
+     <!------------------------------------------------------------------------------------------------>
+        
+              
  
-    
 
+                    <div class="menu-btn"> 
+                     <!---------------MENU RESPONSIVE -------------->
+                     <div class="hamburguesa">
+                     <div class="menu-btn__burger">  </div>
+                     </div>
+                        <!----FIN  MENU RESPONSIVE ------->        
+                   </div>
+                  <!----FIN  MENU BTN------>
+
+      </div> 
 
    <!---FIN CABECERA RESPONSIVE FIN CABECERA RESPONSIVE ------------------------------>
 
 
 
-    <nav >
+    <!----------------NAVEGACION---EN PAGINA ORDENADOR Y---RESPONSIVE---------------------------------------------------->
+        <nav>
+                <div class="logo-esconder"> 
+                    <div class="logo-en-menu-responsive">
+                       <a class="estilo-logo" href="{% url 'appfood:index' %}">
+                       <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
+                       </a>
+                     </div>
+                     <div class="emoticon">
+                     </div>
+
+                      <div class="suscriptor">
+                        <a class="estilo-logo" href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
+                       <h4>SUSCRIBETE</h4>  
+                      </a>
+                     </div>
+                    
+                </div>
+
+             <div class="buscador-esconder"> 
+              <form class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                  <!------------------------------------------------------------------>
+                    <div id="custom-search">
+	                  <input type="text"  name="q" 
+                    value= "{{ request.GET.q }}" class="sin-borde" 
+                    placeholder=  " Buscar en Foodingemotion.com  " autocomplete="off" >
+                    <!---------------------------------------------------------------->             
+                    <button type="submit" name="submit" class="boton btn-succes" value="Search" >
+                    <span class="icon"><i class="fa fa-search"></i></span> 
+                  </button>
+                  </div>
+                <!--------------------------------------------------------------------->
+               </form>                 
+           
+           </div>
+
            <ul class="nav">
+               
                 <li> 
                 <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}" >Inicio </a>      
                 </li>
-
                 
-                <li > 
-         
+                <li> 
                 <a class="{% active 'appfood:recetas-saludables' %}"  href="{% url 'appfood:recetas-saludables' %}" >
                    Recetas 
-             
                   <i class ="fa fa-caret-down"></i>
                  </a>
                         <ul>  
@@ -199,53 +263,68 @@
 
                 
                 <li >
-                <a class="{% active 'appfood:recetas-dieteticas' %}" href="{% url 'appfood:recetas-dieteticas' %}">Recetas dieteticas
-                 <i class ="fa fa-caret-down"></i></a>
-                    <ul>  
-                        {% load mptt_tags %} 
-                        <!-- LAS CATEGORIAS------->
-                        {% for category in categories %}
-                        <li>
-                        <a href="/recetas-dieteticas/categoria/{{category.slug }} "style="text-decoration: none">
-                        {{ category.name }}</a>
-                       </li>
-                       {% endfor %}
-                      </ul>
+                <a class="{% active 'appfood:recetas-dieteticas' %}" href="{% url 'appfood:recetas-dieteticas' %}">Recetas dieteticas</a>
                 </li>
 
                   <li> 
-                <a class="{% active 'appfood:plan-comidas-saludables' %}" href="{% url 'appfood:plan-comidas-saludables' %}">Plan Comidas Saludables</a>
+                <a class="{% active 'appfood:plan-comidas-saludables' %}" href="{% url 'appfood:plan-comidas-saludables' %}">Plan Comidas Sanas</a>
                 </li>
 
-               <li > 
-                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"> Dietas y Alimentacion  </a> 
+
+                <li > 
+                <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"> Dietas y Alimentacion Sana  </a> 
                 </li>
 
                 
 
                 <li> 
-                <a class="{% active 'appfood:noticias-turismo-gastronomico' %}" href="{% url 'appfood:noticias-turismo-gastronomico' %}">Turismo </a>
-                       
+                <a class="{% active 'appfood:noticias-turismo-gastronomico' %}"  href="{% url 'appfood:noticias-turismo-gastronomico' %}">Turismo</a>    
                 </li>
               
-                  <li> 
-                <a class="{% active 'appfood:nosotros' %}" href="{% url 'appfood:nosotros' %}"> Nosotros </a>
-              
-                     </li>
-                        <!-- LAS CATEGORIAS------->
-                   
-                        <li>
-                         <a class="{% active 'appcontact:contacto' %}" href="{% url 'appcontact:contacto' %}">Contacto
-                     </a>
-                       </li>
-                  
-               
+                <li> 
+                <a class="{% active 'appfood:nosotros' %} " href="{% url 'appfood:nosotros' %}">Nosotros</a> 
+               </li>
 
-                </li>
-             </ul>
+                 <li> 
+                <a class="{% active 'appfood:contacto' %} " href="{% url 'appcontact:contacto' %}">
+                Contacto
+                </a> 
+                
+                </li>  
+           </ul>
+          
+           <!------------------------------------------------------------------->
+             <div class="siguenos">
 
-         </nav>
+             
+                                     <ul class="red-social">
+                                     <h1> Siguenos</h1>
+                                     <li> 
+                                     <a href="malito:contacto@foodingemotion.com" target="_blank"> <i class="far fa-envelope"></i> </a>
+                                     </li>
+                                     {% if LINK_FACEBOOK %}
+                                     <li> 
+                                     <a href="{{LINK_FACEBOOK}}" target="_blank"><i class="icon fab fa-facebook-f"></i> </a>
+                                     </li>
+                                     {% endif %}
+                                     {% if LINK_PINTEREST %}
+                                     <li> 
+                                     <a href="{{LINK_PINTEREST}}" target="_blank"> <i class="fab fa-pinterest"></i> </a>
+                                     </li>
+                                     {% endif %}
+                                     {% if LINK_INSTAGRAM %}
+                                    <li> 
+                                    <a href="{{LINK_INSTAGRAM}}" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                                    </li>
+                                    {% endif %}
+                                    </ul>
+                                
+                        </div>
+                        <!------------------------------------------------------>
 
+             </nav> 
+            <!-----FIN  NAVEGATION-------------------------------------------------->
+                <!---FINAL NAV------------------------------>
       </header>
 
 
@@ -438,11 +517,9 @@ Por eso, estaremos encantadas de que os pongáis
         <!-- FINAL CONTAINER-------------------------------->
 
 
-              <!-- PARA CONVERTIR EL MENU A ASPA-->
-            <script src="{% static 'appfood/js/menuAspaArticulo.js' %}"></script>
-
-            <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->
-            <script src="{% static 'appfood/js/menuDeslizaArticulo.js' %}"></script>
+           <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->
+              <script src="{% static 'appfood/js/menuResponsive.js' %}"></script>
+                   <script src="{% static 'appfood/js/menuAspaArticulo.js' %}"></script>
 
 
         <!-- FINAL WRAPPER-->

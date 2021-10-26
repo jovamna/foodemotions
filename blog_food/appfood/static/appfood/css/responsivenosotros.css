@@ -602,7 +602,7 @@
    }  
 
 
-    .cabecera{
+    header .cabecera{
     display: none;
     visibility: hidden;
     }
@@ -628,57 +628,50 @@
    }
  
    /*.. max-with:640px;...*/
-   .cabecera-responsive{
+   header  .cabecera-responsive{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 38px;
+    height: 35px;
      }
     
   
+      #controls{
+        display: none;
+        visibility: hidden;
+      }
    
    /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
-    .logo{
+   header  .cabecera-responsive .logo{
       display: block;
       width: 20%;
       max-width: 190px;
-      height: 38px;
+      height: 35px;
      }
       
   
-      .logo img{
+     .cabecera-responsive .logo img{
         display: block;
         width: 100%;
         max-width: 140px;
-
+        height: 35px;
      }
   
   
-            /*caja hay 2. A */
-      .cabecera-responsive .menu-btn {
-        display: block;
-        position: relative;
-        float: right;
-        width: 40%;
-        max-width: 210px;
-        height: 38px;
-        margin: auto;
-      }
-  
-      .cabecera-responsive  .menu-btn  .suscribe {
+ 
+    header   .cabecera-responsive  .suscribe {
        display: inline-block;
         width: 85%;
         max-width: 100px;
-        height: 38px;
+        height: 35px;
         margin: auto;
        }
   
     
-       .cabecera-responsive .menu-btn  .suscribe a h4{
+       .cabecera-responsive  .suscribe a h4{
         font-size: 0.8;
-        margin-top:  14px;
-      
+        margin-top:  10px;
         font-weight: 700;
         letter-spacing: 0.2px;
          font-family: 'Times New Roman', Times, serif;
@@ -686,66 +679,84 @@
    
 
      
-
-  
-
-      /*---------------------------------------------------------------------*/
-    /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-     .menu-btn .menu-btn__burger {
-     display: block;
-     position: relative;
-     float: right;
-     margin-top: 14px;
-      width: 37px;
-      height: 4px;
-      background: #2d2d2d;
-      border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(255,101,47,.2);
-      transition: all .5s ease-in-out;
-      z-index: 1000;
-       }
-   
-
-
-       .cabecera-responsive  .menu-btn__burger::before,
-       .cabecera-responsive .menu-btn__burger::after {
-         content: '';
-         position: absolute;
-         height: 4px;
-         width: 37px;  /*IMPORTANTE*/
-         background:#2d2d2d;
-         border-radius: 2px;
-         box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-         transition: all .5s ease-in-out;
-        z-index: 800;  
-       }
-
+        .cabecera-responsive   .menu-btn {
+          display: block;
+          position: relative;
+          float: right;
+          width: 8%;
+          max-width: 40px;
+          height: 35px;
+          }
+    
+    
+           /*..............................*/
+           .cabecera-responsive     .menu-btn .hamburguesa{
+            display: block;
+          position: relative;
+          float: right;
+          width: 100%;
+          max-width: 40px;
+          height: 35px;
+             }
+    
+    
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+        .menu-btn .hamburguesa  .menu-btn__burger {
+        display: block;
+        position: relative;
+        float: right;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 28px;
+        min-width: 28px;
+        height: 4px;
+        background: #2d2d2d;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2);
+        transition: all .5s ease-in-out;
+        z-index: 1000;
+        }
+            
+        .menu-btn .hamburguesa  .menu-btn__burger::before,
+        .menu-btn .hamburguesa   .menu-btn__burger::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          max-width: 28px;
+          min-width: 28px;
+          height: 4px;
+          background:#2d2d2d;
+          border-radius: 2px;
+          box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+          transition: all .5s ease-in-out;
+          z-index: 800;   
+          }
      
-       .cabecera-responsive  .menu-btn .menu-btn__burger::before {
-     transform: translateY(-8px);
+       .menu-btn .hamburguesa .menu-btn__burger::before {
+     transform: translateY(-7px);
 
      }
 
 
-     .cabecera-responsive .menu-btn .menu-btn__burger::after {
-   transform: translateY(8px);
+   .menu-btn .hamburguesa .menu-btn__burger::after {
+     transform: translateY(7px);
 
    }
 
 
-   /* ANIMATION */
-   .cabecera-responsive  .menu-btn.open .menu-btn__burger {
+      /* ANIMATION */
+     .hamburguesa.open .menu-btn__burger {
    transform: translateX(-50px);
    background: transparent;
    box-shadow: none;
    }
 
-   .cabecera-responsive .menu-btn.open .menu-btn__burger::before {
-   transform: rotate(45deg) translate(35px, -35px);
+    .hamburguesa.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
    background: #fff;
    }
 
-   .cabecera-responsive  .menu-btn.open .menu-btn__burger::after {
+    .hamburguesa.open .menu-btn__burger::after {
        transform: rotate(-45deg) translate(35px, 35px);
        background: #fff;
      }
@@ -755,17 +766,17 @@
 
 
 
-     .cabecera-responsive .nenu-btn .menu-btn__burger:hover{
+     .cabecera-responsive .nenu-btn .hamburguesa .menu-btn__burger:hover{
        background-color: #639a3a;
      }
    
 
-     .cabecera-responsive  .menu-btn .menu-btn__burger:hover::before{
+     .cabecera-responsive  .menu-btn .hamburguesa .menu-btn__burger:hover::before{
       background-color: #639a3a;
     }
 
 
-     .cabecera-responsive   .menu-btn .menu-btn__burger:hover::after{
+     .cabecera-responsive   .menu-btn .hamburguesa .menu-btn__burger:hover::after{
        background-color: #639a3a;
      }
 
@@ -775,81 +786,221 @@
 
 
 /*..FIN CABECERA RESPONSIVE.................*/
-/*margin-left: 5.4%;/*IMPORTANTE */
-nav{
+header nav{
+  display: flex;
+  flex-direction: column;
   position: fixed;
   width: 100%;
-  max-width: 420px;
+  max-width: 640px;
   height: 100%;
-   top: 0px;  /*IMPORTANTE para que arriba no tenga espacios */
+  margin: auto;
+  top:0;
+  bottom: 0;
   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  opacity: 0.99;
-   background-color: #000000;
+   background-color: #fff;
+   overflow-y: scroll;
    z-index: 200;
+   visibility: visible;
+   box-sizing: border-box;
+  
   }
 
-  nav  .nav li a.active{
+  nav::-webkit-scrollbar {
+    display: none;
+   }
+   
+
+  /* #aaaaaa */
+  nav .logo-esconder{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width: 98%;
+  visibility: visible;
+  height: 80px;
+   border-bottom: 1px solid #2d2d2d;
+
+  }
+
+  nav .logo-esconder .logo-en-menu-responsive{
+    width: 30%;
+    max-width: 150px;
+    display: inline-flex;
+    height: 80px;
+    margin-left: 10px;
+  }
+
+ 
+
+nav .logo-esconder .logo-en-menu-responsive img{
+  width: 100%;
+  max-width: 120px;
+  min-width: 120px;
+  margin-top: 48px;
+  margin-left: 10px;
+}
+
+nav .logo-esconder .emoticon{
+  width: 8%;
+  height: 80px;
+  margin-top: 48px;
+}
+
+ nav .logo-esconder .suscriptor{
+   width: 30%;
+   height: 80px;
+   display: block;
+   position: relative;
+   float: right;
+
+ }
+  nav .logo-esconder .suscriptor a h4{
+  font-size: 0.8em;
+  margin-top: 56px;
+  }
+
+  nav .siguenos{
+    display: block;
+    width: 95%;
+    margin-top: 40px;
+    visibility: visible;
+  }
+
+  nav .siguenos ul{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin-left: 10px;
+  }
+
+   nav .siguenos h1{
+     font-size: 0.9em;
+     display: inline-flex;
+     margin: 10px 0;
+     padding: 5px 9px 5px 4px;
+   }
+  nav .siguenos ul li{
+    margin: 10px 0;
+    list-style: none;
+    padding: 5px 9px 5px 4px;
+  }
+
+   /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+   nav .buscador-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  visibility: visible;
+  margin-top: 40px;
+  margin-left: 10px;
+  height: 50px;
+  }
+
+  .d-flex{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+   box-sizing: border-box;
+  }
+
+  #custom-search{
+    width: 100%;
+    height: 50px;
+   border: 1px solid #2d2d2d;
+   border-radius: 8px;
+  }
+
+ .buscador-esconder #custom-search input[type=text]{
+   box-sizing: border-box;
+ }
+
+ .buscador-esconder .d-flex #custom-search .sin-borde{
+    width: 90%;
+    height: 40px;
+    outline: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    float: left;
+  }
+
+ .buscador-esconder .d-flex #custom-search .boton{
+  width: 10%;
+  height: 40px;
+  border-radius: 1px;
+  display: block;
+  position: relative;
+  float: right;
+  margin-top: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+  }
+
+
+   /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+    nav .nav .esconder{
+   visibility: visible;
+   }
+
+     nav .nav li a.active{
     text-decoration:line-through;
     color: #568632;
     }
 
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-   nav .nav{
-    width:100%; 
-    max-width: 340px;
+   /* UL  */
+    header  nav .nav{
+    width: 90%; 
+    height: 99%;
     display: flex;
     flex-direction: column;
-    height: 90%;  
-     margin-left: 6px;
-    top : 40px;
-     z-index: 60; 
-  
-    }
-      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-      nav .nav li{
-        margin-top: 5px;/*IMPORTANTE */
-      list-style: none;
-      height: 40px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-      margin-left: 10px;
-      margin-bottom: 20px;
-      cursor:pointer;
-      }
-      
-      nav .nav li a {
-      z-index: 100;
-      background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-      display: flex;
-      width: 100%;
-      height: 55px;
-      color: #fff;
-      font-weight: lighter;
-      font-size: 1.24rem;
-      text-transform: lowercase;
-      letter-spacing: 1px;
-      font-family:  sans-serif;
-      }
-    
-       /*IMPORTANTE*/
+    margin-top: 30px;
+     z-index: 99; 
 
-     
+    }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+    display: block;
+    width: 90%;
+    list-style: none;
+    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    cursor:pointer;
+    box-sizing: border-box;
+    border-bottom: 1px solid #2d2d2d;
+    }
     
+   header nav .nav li a {
+    z-index: 100;
+    display: block;
+    height: 22px;
+    color: #2d2d2d;
+    font-weight: 520;
+    font-size: 0.9rem;
+    margin-top: -2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    }
+  
  
       /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   
-      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-   nav .nav li:hover > ul {
-    display: block;
-   margin-left: -200px;
-   height: 200px;
-   visibility: visible; 
-   z-index: 598;
-   }
+      nav .nav li:hover > ul {
+       display: block;
+      margin-left: -200px;
+      height: 200px;
+      visibility: visible; 
+      z-index: 598;
+      }
+
 
     nav .nav li ul li a{
     font-size: 1rem;
     display: block;
-    position: absolute;
     max-width: 200px;
     width: 100%;
     margin-left: -2px;
@@ -861,7 +1012,7 @@ nav{
     visibility: hidden;
     }
 
-      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+   /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
   
  /*ANIMACION SUBRAYADO */
  nav a {
@@ -872,24 +1023,45 @@ nav{
  z-index: 40;
  }
 
-  nav  a:after {
- content: "";
- display: block;
- margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
- height: 2px;
- width: 0px;
- transition: all .8s;
- z-index: 10;
- }
+ nav  a:after {
+  content: "";
+  display: block;
+  margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+  height: 2px;
+  width: 0px;
+  transition: all .8s;
+  z-index: 10;
+  }
 
+
+
+  /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+   nav  .estilo-logo:after{
+   text-decoration: none;
+   height: 0px;
+   content: "";
+   display: none;
+   margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+   height: 0px;
+   width: 0px;
+   transition: all .0s;
+   z-index: 10;
+   }
+
+
+ 
+  /* width: 100%;*/
   nav  a:hover:after {
-  width: 100%;
   padding-left: 40px;
   padding-right: -150px;
   height: 2px;
   background: white;
   }
 
+  /*..FIN NAV ESCONDIDO...........................*/
+
+
+  
 
   /*.......................................*/
    #container-nosotros{

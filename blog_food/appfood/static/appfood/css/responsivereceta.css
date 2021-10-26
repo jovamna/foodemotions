@@ -1037,7 +1037,9 @@
   position: relative;
   float: right;
   margin-top: 9.5px;
-  width: 37px;
+  width: 100%;
+    max-width: 28px;
+    min-width: 28px;
   height: 4px;
   background: #2d2d2d;
   border-radius: 2px;
@@ -1051,7 +1053,9 @@
  .menu-btn__burger::after {
   content: '';
   position: absolute;
-  width: 37px;
+  width: 100%;
+    max-width: 28px;
+    min-width: 28px;
           height: 4px;
   background: #2d2d2d;
   border-radius: 2px;
@@ -1171,32 +1175,37 @@
         margin: auto;
       }
 
-       nav .buscador-esconder{
-        margin-left: 20px;
-       }
 
-       .buscador-esconder .d-flex #custom-search .sin-borde{
-         width: 87%;
-        margin-left: 5px;
-       }
+      /*BUSCADOR DEL NAV ESCONDIDO */
+         /* BUSCADOR DEL NAV ESCONDIDO*/
+         nav .buscador-esconder{
+          margin-left: 20px;
+         }
 
-       .buscador-esconder .d-flex #custom-search .boton{
-         width: 10%;
-        margin-right: 5px;
-       }
+         .buscador-esconder .d-flex #custom-search .sin-borde{
+           width: 87%;
+          margin-left: 5px;
+         }
+
+         .buscador-esconder .d-flex #custom-search .boton{
+           width: 10%;
+          margin-left: -3px;
+         }
+
+
        nav .siguenos{
         margin-left: 20px;
        }
 
-     nav .siguenos h1{
+      nav .siguenos h1{
        color: #fff;
-     }
+       }
 
 
-     nav .siguenos ul li .fa-envelope{
+      nav .siguenos ul li .fa-envelope{
       color:oldlace;
       background-color: #000000;
-    }
+      }
   
     nav .siguenos ul li .fa-facebook-f{
       color:oldlace;
