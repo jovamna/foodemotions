@@ -74,7 +74,9 @@ class Receta(models.Model):
     )
     title = models.TextField(max_length=400, verbose_name="Título")
     slug = models.SlugField(max_length=255, null=True, unique=True)
-    description = RichTextField(null=True, blank=True, verbose_name="Descripción")
+    description = RichTextField(null=True,
+                                blank=True,
+                                verbose_name="Descripción")
     imageauthor = models.ImageField(verbose_name="Imagen-autor",
                                     upload_to="apprecetas",
                                     null=True,
@@ -82,7 +84,10 @@ class Receta(models.Model):
     author = models.ForeignKey(User,
                                verbose_name="Autor",
                                on_delete=models.CASCADE)
-    image = models.ImageField(verbose_name="Imagen", upload_to="apprecetas", null=True, blank=True)
+    image = models.ImageField(verbose_name="Imagen",
+                              upload_to="apprecetas",
+                              null=True,
+                              blank=True)
     imagefront = models.ImageField(verbose_name="Image-front",
                                    upload_to="apprecetas",
                                    null=True,
@@ -365,8 +370,6 @@ class Receta(models.Model):
         # To display all items from all subcategories
         return Receta.objects.filter(kategory__in=self.get_descendants(
             include_self=True))
-
-
 
 
 class Comment(MPTTModel):
