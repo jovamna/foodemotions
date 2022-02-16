@@ -630,9 +630,10 @@ margin-top: 18px;
      z-index: 40;
     }
   
-   .portada-img2{
-    width: 53%;
-    height: 30%;
+    /*CUADRO ENLA PORTADA...*/
+  .portada-img  .portada-img2{
+    width: 55%;
+    height: 195px;
     display: block;
     position: absolute;
      margin-top: 194px;
@@ -1135,7 +1136,7 @@ margin-top: 18px;
   
      
   .posts-ultimos .post-ultimo  .posts-ultimos-titulo .post-ultimo-titulo p{
-    font-size: 1.rem;
+    font-size: 1rem;
     color:  #2d2d2d;
   margin-top: 0px;
   padding-top: 0;
@@ -1434,6 +1435,7 @@ margin-top: 18px;
  
     /*--FIN SUBCATEGORIAS DE RECETAS ----------------------------------*/
 
+    /*ARRIBA DE TODO ESTE EL MENU SIMPLE...*/
 
 /*SEGMENTO DE LAS SUBCATEGORIAS----DE PLAN DE COMIDAS DIETAS Y TURISMO----------------------*/
  /*..CONTAINER DE LAS FLECHAS Y CIRCULO ...*/ 
@@ -1470,7 +1472,7 @@ margin-top: 18px;
 .scrollmenu  li{
   margin-right: 15px;
   list-style: none;
-  border: 4px solid #7aac41;
+  border: 2px solid #7aac41;
   border-radius: 4%;
   padding: 4px 4px 4px 4px;
  }
@@ -1478,6 +1480,7 @@ margin-top: 18px;
 
 .caja-texto-slider a h3{
   color: #000000;
+  font-size: 1.1rem;
 }
 
 
@@ -1654,7 +1657,15 @@ margin-top: 18px;
         flex-direction: column;
       }
 
-     .elemento-descripcion p{
+      .elemento-descripcion-columna h1{
+        font-size: 1.3rem;
+        color:#000;
+        letter-spacing: 0.7px;
+        }
+       
+
+     .elemento-descripcion-columna p{
+       font-size: 1rem;
       color:#4b4b4b;
       letter-spacing: 0.7px;
       }

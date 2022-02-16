@@ -161,7 +161,7 @@
 
                 <div class="elemento-descripcion">
                 <div class ="elemento-descripcion-columna">
-                <h2>{{ receta.title }}</h2>
+                <h1>{{ receta.title }}</h1>
                 <p>{{ receta.description|truncatechars:110|safe }}</p>
        
                 <a href="{% url 'apprecetas:receta' receta.slug %}" class="arrow1">LEER MAS <span class="arrow-right"></span>

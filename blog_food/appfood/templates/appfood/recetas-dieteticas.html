@@ -178,7 +178,8 @@
                         <!----------------------------------->
                         <div class="elemento-descripcion">
                            <div class ="elemento-descripcion-columna">
-                           <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}"><h1>{{recipe.title}}</h1>  </a>
+                           <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                           <h1>{{recipe.title}}</h1></a>
                            <p>{{recipe.description|truncatechars:60|safe}}</p> 
                            </div>
                            <div class="elemento-leer">
