@@ -100,11 +100,11 @@
                         <h1>{{ posturismo.title }}</h1>
                          </a> 
 
-                        <p>{{ posturismo.description|linebreaksbr|truncatechars_html:70 }}</p>
+                          <span>{{ posturismo.description|linebreaksbr|truncatechars_html:70 }} </span>
 
                         <a href ="{% url 'appturismo:post' posturismo.slug %}">
-                       <p>Leer mas...<p>
-                        </a>                
+                     <span> Leer mas...  </a> </span>
+                                     
               </div>
               {% endfor %}
       </div>
@@ -130,13 +130,14 @@
     <div class ="dos-columnas">        
 
 
-        <!--  CONTENEDOR COLUMNA DE POSTS ULTIMOS--------->
-        <div class="columna-left">
-             <div class="bloque-ultimo">
+    <!--  CONTENEDOR COLUMNA DE POSTS ULTIMOS--------->
+    <div class="columna-left">
+        <div class="bloque-ultimo">
 
-
-                {% for receta in recetaultimo %}
-                <div class="posts-ultimos">
+            <!--------------------------------------------------->
+            
+              <div class="posts-ultimos">
+               {% for receta in recetaultimo %}
                    <div class="post-ultimo">
                      
                       <div class="posts-ultimos-imagen">
@@ -149,24 +150,33 @@
                     <div class="posts-ultimos-titulo">
                         <!------------------------------------->
                        <div class="post-ultimo-titulo">
-                       <a href ="{% url 'apprecetas:receta' receta.slug %}">
-                       <h1> {{receta.title}}</h1></a> 
-                       <p>{{receta.description|safe|linebreaksbr|truncatechars:200}}.</p>       
-                       <p> <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                        <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                        <h1> {{receta.title}}</h1>
+                        </a> 
+                        <p>{{receta.description|safe|linebreaksbr|truncatechars:200}}.</p>   
+                        <span class="lee"> 
+                        <a href ="{% url 'apprecetas:receta' receta.slug %}">
                         Leer mas...
-                        </a></p>
+                        </a>
+                        </span> 
                       </div>
                       <!------------------------------------->
                   </div>
                   <!-------FIN CONTAINER POSTS ULTIMOS-TITULO----------------------------->
 
               </div>
+                {% endfor %}
               </div>
-        {% endfor %}
+      
      <!-------------------------------------------------------------------->
+
+
+
+
      <!------------------------------------------------------------------------->
-           {% for recipe in recipedietaultimo %}
+       
          <div class="posts-ultimos">
+          {% for recipe in recipedietaultimo %}
                <div class="post-ultimo">
                      <!--------------------------------->
                       <div class="posts-ultimos-imagen">
@@ -176,69 +186,74 @@
                       </div>
                       <!--------------------------------->
 
-                        <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                      <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
                       <div class="posts-ultimos-titulo">
                         <!------------------------------------->
                          <div class="post-ultimo-titulo">
                             <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
                             <h1>{{recipe.title}}</h1>
                             </a>
-
                             <p>{{recipe.description|safe|linebreaksbr|truncatechars:120}}.</p>
-
+                            <span class="lee">
                             <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
-                            <p>Leer mas...</p>
+                            Leer mas...SILENCIO
                             </a>
+                            </span>
                         </div>
                     <!-------------------------------------------->
                      </div>
                     <!---------FIN POSTS ULTIMOS TITULO------------------------------------>
+                    
               </div>
+             {% endfor %}
             </div>
-         {% endfor %}
+        
         <!------------------------------------------------------------------------------------->
 
 
 
 
       <!------------------------------------------------------------------>
-           
-              {% for perderpeso in perderultimo %}
-              <div class="posts-ultimos">
-               <div class="post-ultimo">
+      
+        <div class="posts-ultimos">
+           {% for perderpeso in perderultimo %}
+          <div class="post-ultimo">
               
+              <div class="posts-ultimos-imagen">
+              {% if perderpeso.imagefront %}
+              <img src ="{{perderpeso.imagefront.url}}" >
+              {% endif %}
+              </div>
 
-                      <div class="posts-ultimos-imagen">
-                      {% if perderpeso.imagefront %}
-                      <img src ="{{perderpeso.imagefront.url}}" >
-                      {% endif %}
-                      </div>
-
-                        <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
-                      <div class="posts-ultimos-titulo">
-                      <!--------------------------------->
-                      <div class="post-ultimo-titulo">
-                      <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
-                      <h1>{{perderpeso.title}}</h1>
-                      </a>
-                      <p>{{perderpeso.description|safe|truncatechars:120}}.</p>
-                      <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
-                      <p>Leer mas...</p>
-                      </a>
-                     </div>
-                    <!----------------------------------------->
-                     </div>
-                    <!--------------------------------------------------------------------->
+              <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+              <div class="posts-ultimos-titulo">
+                <!--------------------------------->
+                <div class="post-ultimo-titulo">
+                <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                <h1>{{perderpeso.title}}</h1>
+                </a>
+                <p>{{perderpeso.description|safe|truncatechars:120}}.</p>
+                <span class="lee"> 
+                <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                Leer mas...CAMBIADO
+                </a> 
+                </span>
+                </div>
+                <!----------------------------------------->
+                </div>
+                <!--------------------------------------------------------------------->
                 
-              </div>           
+              </div>   
+              {% endfor %}
             </div>
-             {% endfor %}
+           
         <!------------------------------------------------------------------------------------->
 
 
         <!------------------------------------------------------------------------->
-      {% for post in postultimo %}
+     
         <div class="posts-ultimos">
+           {% for post in postultimo %}
             <div class="post-ultimo">
 
                   <div class="posts-ultimos-imagen">
@@ -253,24 +268,28 @@
                   <div class="post-ultimo-titulo">
                   <a href ="{% url 'appblog:post' post.slug %}">
                   <h1>{{post.title}}</h1>
-                   </a>
-                  <p>{{post.description|safe|linebreaksbr|truncatechars:65}}.</p>
-                  <a href ="{% url 'appblog:post' post.slug %}">
-                  <p>Leer mas...</p>
                   </a>
+                  <p>{{post.description|safe|linebreaksbr|truncatechars:65}}.</p>
+                  <span class="lee">
+                  <a href ="{% url 'appblog:post' post.slug %}">
+                  Leer mas...
+                  </a> 
+                  </span>
                   </div>
                   <!------------------------------------------->
                  </div>
                 <!------------------------------------->
 
-              </div>         
+              </div> 
+            {% endfor %}
           </div>            
-          {% endfor %}
+        
         <!----------------------------------------------------------------------------->
 
          <!------------------------------------------------------------------------->
-      {% for posturismo in posturisultimo %}
+   
         <div class="posts-ultimos">
+             {% for posturismo in posturisultimo %}
             <div class="post-ultimo">
 
                   <div class="posts-ultimos-imagen">
@@ -285,19 +304,20 @@
                   <div class="post-ultimo-titulo">
                   <a href ="{% url 'appturismo:post' posturismo.slug %}">
                   <h1>{{posturismo.title}}</h1>
-                   </a>
-                  <p>{{posturismo.description|safe|linebreaksbr|truncatechars:65}}.</p>
-                  <a href ="{% url 'appturismo:post' posturismo.slug %}">
-                  <p>Leer mas...</p>
                   </a>
+                  <p>{{posturismo.description|safe|linebreaksbr|truncatechars:65}}.</p>
+                  <span class="lee"> 
+                  <a href ="{% url 'appturismo:post' posturismo.slug %}">
+                  Leer mas...
+                  </a> 
+                  </span>
                   </div>
                   <!------------------------------------------->
                  </div>
                 <!------------------------------------->
-
-              </div>         
+              </div> 
+            {% endfor %}
           </div>            
-          {% endfor %}
         <!----------------------------------------------------------------------------->
 
 
@@ -317,10 +337,9 @@
 
 
 
-        <!---------ASIDE-----------EXPLORA CATEGORIAS DIETETICAS------------------------------------------->
-        <div class="columna-right">
-            <div class ="columna-right-column">
-
+      <!---------ASIDE-----------EXPLORA CATEGORIAS DIETETICAS------------------------------------------->
+      <div class="columna-right">
+          <div class ="columna-right-column">
 
               <div class ="explora">
               <h1> Explorar</h1>

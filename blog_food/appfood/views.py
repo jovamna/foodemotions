@@ -13,12 +13,11 @@ import random
 
 # Create your views here.
 def home(request):  #nombre de la vista
-    recetaultimo = Receta.objects.all().order_by('-publish')[:1]
+    recetaultimo = Receta.objects.all().order_by('-publish')[:2]
     perderultimo = Perderpeso.objects.all().order_by('-publish')[:1]
     recipedietaultimo = Recipe.objects.all().order_by('-publish')[1:3]
     postultimo = Post.objects.all().order_by('-publish')[:1]
     posturisultimo = Posturismo.objects.all().order_by('-publish')[:1]
-
 
     receta = Receta.objects.all().order_by('-updated')[:1]
     recetas = Receta.objects.all().order_by('created')[:4]  #RECETAS SALUDABLES

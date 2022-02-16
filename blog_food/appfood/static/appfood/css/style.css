@@ -1023,20 +1023,21 @@ margin-top: 18px;
   border-radius: 3px;
   }
 
-   .primer-segmento .tres  h1{
-   font-size: 1.5rem;
-   color:#000000;
-   margin-top: 15px;
+   .primer-segmento .tres a h1{
+   font-size: 1.4rem;
+   color:#000;
+   font-weight: 700;
+   margin-top: 12px;
    }
 
      .tres p{
-    font-size: 1.3rem;
+    font-size: 1rem;
     color:#2d2d2d;
-    margin-top: 10px;
+
     }
 
     .tres a p{
-     font-size: 1.3rem;
+     font-size: 1rem;
      color:#2d2d2d;
     }
 
@@ -1109,6 +1110,7 @@ margin-top: 18px;
      }
    
       /*610px*/
+      /*CONTAINER DE POST ULTIMO......*/
      .posts-ultimos-titulo{
       display:block;
       position: relative;
@@ -1119,24 +1121,33 @@ margin-top: 18px;
 
      .posts-ultimos-titulo .post-ultimo-titulo{
       width: 100%;
-     display: flex;
-     flex-direction: column;
+      display: flex;
+      flex-direction: column;
 
      }
 
-    .post-ultimo-titulo h1{
-      font-size: 1.5rem;
-      margin-top: 15px;
+     .posts-ultimos .post-ultimo  .posts-ultimos-titulo .post-ultimo-titulo  a h1{
+      font-size: 1.4rem;
+      margin-top: 10px;
+      margin-bottom: 0px;
       color: #000000;
     }
   
      
-    .post-ultimo-titulo p{
-    font-size: 1.3rem;
+  .posts-ultimos .post-ultimo  .posts-ultimos-titulo .post-ultimo-titulo p{
+    font-size: 1.rem;
     color:  #2d2d2d;
-    margin-top: 5px;
+  margin-top: 0px;
+  padding-top: 0;
+ 
     }
 
+    .posts-ultimos-titulo .post-ultimo-titulo .lee{
+      font-size: 1rem;
+      color:  #2d2d2d;
+
+      }
+  
     /*..EL ASIDE.....EXPLORAR CATEGORIAS RECETAS DIETETICAS............*/
   .columna-right{
     display: block;
@@ -1991,11 +2002,11 @@ animation: textomaq 5s infinite alternate;
   }
 
   .icon-email .icon-social1 p{
-   font-size: 2.3em;
+   font-size: 2em;
    word-spacing: -6px;
    letter-spacing: -2px;
    color: #7aac41;
-
+ font-family: 'Times New Roman', Times, serif;
    font-weight: 900;
    }
 
