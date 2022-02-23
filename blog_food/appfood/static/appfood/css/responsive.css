@@ -2982,8 +2982,8 @@ width: 100%;
 
 
  
-   /*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS*/
-   /*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS..Y TAMBIEN SEGMENTO DE RECTAS DIETETICAS..................................................*/
+    /*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS*/
+     /*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS..Y TAMBIEN SEGMENTO DE RECTAS DIETETICAS..................................................*/
     .dos-columnas{
     width: 100%;
     display: flex;
@@ -2993,9 +2993,7 @@ width: 100%;
 
       .dos-columnas .columna-left{
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 40px;
+      display: block;
      }
   
    
@@ -3003,6 +3001,7 @@ width: 100%;
     width: 100%;
    display: flex;
    flex-direction: column;
+   margin-bottom: 40px;
    }
 
      .dos-columnas .posts-ultimos{
@@ -3014,6 +3013,15 @@ width: 100%;
      border-top: 0.8px solid #c9c9c9;
      }
 
+
+     .posts-ultimos .post-ultimo{
+      width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+     }
+ 
   .post-ultimo .posts-ultimos-imagen{
     display: block;
     position: relative;
@@ -3034,20 +3042,38 @@ width: 100%;
    position: relative;
    float: right;
    width: 40%;
+
+   }
+
+
+   .posts-ultimos-titulo .post-ultimo-titulo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
    }
 
      /*.TITULO DE POSTS ULTIMOS Y DEL SEMENTO DE RECTEAS DIETETICAS...*/
-    .posts-ultimos-titulo h1{
-     font-size: 1.1rem;
+     .posts-ultimos .post-ultimo .posts-ultimos-titulo .post-ultimo-titulo a h1{
+     font-size: 0.95rem;
       word-spacing: -0.5px;
       margin-top: 4px;
       padding-right: 11px;  /*para que las letras no sobresalgan*/
      }
   
-    .posts-ultimos-titulo p{
+     .posts-ultimos .post-ultimo  .posts-ultimos-titulo .post-ultimo-titulo p{
      visibility: hidden;
      display: none;
      }
+
+   
+
+     .posts-ultimos-titulo .post-ultimo-titulo .lee{
+      font-size: 0.95rem;
+      color:  #2d2d2d;
+
+      }
+  
    
      .dos-columnas .columna-right{
       display: block;
@@ -3891,7 +3917,6 @@ width: 100%;
     width: 40%;
     max-width: 250px;
     height: 35px;
-    background-color: yellow;
     }
   
  
@@ -5340,20 +5365,20 @@ hr {
       display: block;
       width: 100%;
       max-width: 500px;
-      background-color: darkslategray;
+    
       }
  
 
       .form-control{
       display: block;
-      background-color: mediumspringgreen;
+    
       }
 
 
        .input-group{
        display: block;
        margin-left: -1px;
-       background-color: darkviolet;
+      
        }
  
        #mobile {
@@ -5430,7 +5455,7 @@ hr {
     overflow: hidden;
     border-spacing: 0;
     border-collapse: collapse;
-    background-color: blue;
+ 
    }
 
   
@@ -5452,7 +5477,7 @@ hr {
     width: 100%;
      padding-left: 0;
     padding-right: 0; 
-    margin-top: 45px;
+    margin-top:  39px;
     }
   
 
@@ -5475,102 +5500,92 @@ hr {
       height: 58px;
       background-color: #fff;
      }
+ 
 
-  
-     
      .cabecera{
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      height: 35px;
-      background-color: indigo;
+      height: 38px;
      }
          
 
-    /*caja */
-    .cabecera .logo{
-      display: block;
-      position: relative;
-      float: left;
+     /*caja */
+     .cabecera .logo{
+      display: inline-flex;
       width: 20%;
-     max-width: 200px;
-      height: 35px;
-      background-color: darkgoldenrod;
-    }
+      height: 38px;
+     }
               
-    .cabecera .logo img {
+     .cabecera .logo img {
       display: block;
       width: 100%;
-      max-width: 120px;
-      min-width: 120px;
+      max-width: 140px;
+      min-width: 140px;
       height: 35px;
       z-index: 40;
      }
-         
-    /*CONTENEDOR  REVISTA Y SOCIALES*/
    
-   /*BUSCADOR EN PRIMERA FILA*/
-  header .cabecera  #controls {
+
+     
+   /*BUSCADOR EN EL NAV*/   
+  .cabecera  #controls {
     width: 30%;
-    max-width: 280px;
-    height: 35px;
+    max-width: 350px;
     display: inline-flex;
-    margin: auto;
-   
-    visibility: visible;
-    background-color: #000000;
+    height: 38px;
     }
   
-    .cabecera #controls .buscador{
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-    }
-
-      #controls #custom-search-input-header{
+  
+  
+   .cabecera  #controls #custom-search-input-header{
     width: 100%;
-     height: 29px;
-     border: 1px solid #c9c9c9;
+    height: 35px;
+     border: 1px solid #fafafa;
      border-radius: 4px;
      display: flex;
      flex-direction: row;
-     justify-content: space-between;
-     background-color: darksalmon;
+ 
      }
   
   
-        .cabecera #controls   #custom-search-input-header .sin-borde{
-      width: 91%;
-   
+     .cabecera   #controls   #custom-search-input-header .sin-borde{
+      width: 90%;
+      height: 35px;
+      background-color: #fafafa;
       }
         
       
-        #controls   #custom-search-input-header .boton{
-      width: 10%;
-  
+       .cabecera  #controls   #custom-search-input-header .boton{
+      width: 8%;
       background-color: #ffffff;
        }
-    
-       input[type=text] {
-        width: 100%;
-        padding: 12px 20px;
-     
-        box-sizing: border-box;
-      }
   
-   .cabecera .suscribe{
-    display: block;
-    position: relative;
-    float: left;
-    width: 15%;
-    max-width: 140px;
-    height: 35px;
-    background-color: lightcoral;
+        input[type=text] {
+          width: 100%;
+         
+        }
+        
+       /*..BUSCADOR PARA EL MOVIL..........................*/
+      /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+      #controls-responsive{
+      display: none;
+      visibility: hidden;
+       }
+     
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+   
+    .cabecera .suscribe{
+   display: inline-flex;
+    width: 10%;
+ 
+    height: 38px;
+    margin-left: 60px;
     }
   
  
-   .suscribe a  h4{
+    .suscribe a  h4{
     font-size: 0.8rem;
     margin-top: 10px;
     font-weight: 700;
@@ -5580,27 +5595,25 @@ hr {
     }
   
 
-
   /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
    .cabecera .menu-btn {
     display: block;
     position: relative;
     float: left;
     width: 10%;
-    max-width: 38px;
-    height: 35px;
-    margin: auto;
-    background-color: lightslategrey;
+    max-width: 50px;
+    height: 38px;
+  
     }
 
   
-  .menu-btn .hamburguesa{
+  .cabecera .menu-btn .hamburguesa{
   display: block;
   position: relative;
   float:left;
   width: 100%;
   height: 30px;
-  max-width: 35px;
+  max-width: 40px;
    }
 
      /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
@@ -5609,9 +5622,7 @@ hr {
       position: relative;
       float: right;
       margin-top: 14.5px;
-      width: 100%;
-      max-width: 34px;
-      min-width: 34px;
+      width: 37px;
       height: 4px;
       background: #2d2d2d;
       border-radius: 2px;
@@ -5627,7 +5638,7 @@ hr {
   content: '';
   position: absolute;
   height: 4px;
-  width: 34px;
+  width: 36px;
   background:#2d2d2d;
   border-radius: 2px;
   transition: all .5s ease-in-out;
@@ -5658,17 +5669,13 @@ hr {
    /* background: #fff;  */
   .hamburguesa.open .menu-btn__burger::before {
   transform: rotate(45deg) translate(35px, -35px);
- 
   }
 
 
   /* background: #fff;  */
   .hamburguesa.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
-
   }
-
-
 
 
   .menu-btn__burger:hover{
@@ -5682,9 +5689,10 @@ hr {
   }
 
 
-     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
 
-nav{
+
+   /*MENU ESCONDIDO..........................................*/
+    nav{
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -5695,94 +5703,90 @@ nav{
   bottom: 0;
   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
   opacity: 0.97;
-   background-color: #000000;
+   background-color: #fff;
    overflow-y: scroll;
    z-index: 200;
   }
 
-nav .logo-esconder{
+   nav .logo-esconder{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   visibility: visible;
   margin-top: 30px;
   height: 30px;
   border-bottom: 1px solid #aaaaaa;
+    }
 
-}
-
-nav .logo-esconder img{
+    nav .logo-esconder img{
   width: 100%;
   max-width: 120px;
   margin-left: 20px;
-}
-
-  nav .estilo-logo:after{
-    display: none;
   }
 
 
-/*BUSCADOR DEL MENU ESCONDIDO*/
-nav .buscador-esconder{
+  nav .logo-esconder .suscriptor h4{
+  font-size: 1rem;
+  color: #fff;
+  }
+   nav .buscador-esconder{
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   visibility: visible;
   margin-top: 20px;
-  height: 70px;
-
-}
+  height: 50px;
+ margin-bottom: 30px;
+  }
 
   .d-flex{
     width: 100%;
-    height: 70px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     margin-left: 18px;
+    
   }
 
-  #custom-search{
+  nav .buscador-esconder #custom-search{
     width: 100%;
-    height: 60px;
+    height: 50px;
   }
 
-  #custom-search .sin-borde{
-    width: 90%;
+  nav .buscador-esconder #custom-search .sin-borde{
+    width: 86%;
     height: 40px;
-    outline: none;
-  }
+    background-color: #f9f9f9;
+    }
 
-  #custom-search .boton{
-    width: 10%;
+    nav .buscador-esconder #custom-search .boton{
+    width: 8%;
     height: 40px;
-    margin-left: -5px;
-  }
-
-  /*FIN DEL BUSADOR DEL MENU ESCONDIDO*/
+    background-color: #f9f9f9;
+    }
 
 
-   nav .nav .esconder{
-   visibility: visible;
-   }
+     nav .nav .esconder{
+    visibility: visible;
+    }
 
-  nav .nav li a.active{
+     nav .nav li a.active{
     text-decoration:line-through;
     color: #568632;
     }
 
    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-      nav .nav{
+    nav .nav{
     width:100%; 
     height: 100%;
     max-height: 950px;
     display: flex;
     flex-direction: column;
-    margin-left: 6px;
+     margin-left: 10px;
     margin-top: 10px;
-    overflow-y: scroll;
-     z-index: 99; 
-     background-color: darkslateblue;
+    z-index: 99; 
     }
+
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
     nav .nav li{
@@ -5791,13 +5795,13 @@ nav .buscador-esconder{
     margin-left: 10px;
     margin-bottom: 15px;
     cursor:pointer;
+    border-bottom: 1px solid #aaaaaa;
     }
     
     nav .nav li a {
     z-index: 100;
-    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
     height: 30px;
-    color: #fff;
+    color: #2d2d2d;
     font-weight: lighter;
     font-size: 1.24rem;
     text-transform: lowercase;
@@ -5807,13 +5811,15 @@ nav .buscador-esconder{
     margin-top: 0;
     }
   
-     /*IMPORTANTE*/
 
-     
-    
- 
+
+     /*IMPORTANTE*/
+     nav .nav ul {
+      visibility: hidden;
+      }
+  
       /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
       nav .nav li:hover > ul {
        display: block;
       margin-left: -200px;
@@ -5821,6 +5827,7 @@ nav .buscador-esconder{
       visibility: visible; 
       z-index: 598;
       }
+
 
     nav .nav li ul li a{
     font-size: 1rem;
@@ -5832,10 +5839,7 @@ nav .buscador-esconder{
     margin-left: -76px;
     }
 
-     nav .nav ul {
-    visibility: hidden;
-    }
-
+    
       /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
   
  /*ANIMACION SUBRAYADO */
@@ -5866,20 +5870,11 @@ nav .buscador-esconder{
   background: white;
   }
 
+
+  
+  
+     
     
-  
-  
- /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
-
-
-   /*..BUSCADOR PARA EL MOVIL..........................*/
-    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-    #controls-responsive{
-    display: none;
-    visibility: hidden;
-   }
-
-
 
      /*FIN ANIMACION SUBRAYADO */
     /*.portada*/
@@ -6968,8 +6963,9 @@ width: 100%;
     .bg-faded{
       width: 100%;
       display: block;
-      background-color: red;
     }
+
+
     /*FORMULARIO CONTACTO*/
     .section-heading-lower{
      display: block;
@@ -6984,17 +6980,16 @@ width: 100%;
       display: block;
       width: 100%;
       max-width: 500px;
-      background-color: darkslategray;
     }
  
     .form-control{
       display: block;
-      background-color: mediumspringgreen;
     }
+
+
      .input-group{
        display: block;
       margin-left: -1px;
-       background-color: darkviolet;
      }
  
      #mobile {
@@ -7088,24 +7083,21 @@ width: 100%;
         margin: 0 auto;
         margin-left: auto;
         margin-right: auto;
-        background-color: red;
       }
       
 
+    #wrapper img {
+    width: 100%;
+    height: auto;
+    border: 0;
+    }
 
-  
 
-  #wrapper img {
-  width: 100%;
-  height: auto;
-  border: 0;
-   }
-
-   #wrapper > * {
+    #wrapper > * {
     padding: 15px;
     }  
   
-    #container{
+     #container{
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -7114,12 +7106,12 @@ width: 100%;
       margin: auto;
       margin-top: 50px;
       bottom:  4px;
-    height: auto;
-    }
+      height: auto;
+     }
 
 
-  /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
-  header{
+    /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+    header{
     display: block;
     width:100%;
     height: 55px;
@@ -7139,63 +7131,97 @@ width: 100%;
      }
 
   
-     
      .cabecera{
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       height: 38px;
-      background-color: indigo;
      }
          
 
-    /*caja */
-    .cabecera .logo{
-      display: block;
-      position: relative;
-      float: left;
+     /*caja */
+     .cabecera .logo{
+      display: inline-flex;
       width: 20%;
-      height: 35px;
-    }
+      height: 38px;
+     }
               
-    .cabecera .logo img {
+     .cabecera .logo img {
       display: block;
       width: 100%;
       max-width: 140px;
       min-width: 140px;
-   
       height: 35px;
       z-index: 40;
      }
+   
+
+     
+   /*BUSCADOR EN EL NAV*/   
+  .cabecera  #controls {
+    width: 30%;
+    max-width: 350px;
+    display: inline-flex;
+    height: 38px;
+    }
+  
+  
+  
+   .cabecera  #controls #custom-search-input-header{
+    width: 100%;
+    height: 38px;
+     border: 1px solid #fafafa;
+     border-radius: 4px;
+     display: flex;
+     flex-direction: row;
+ 
+     }
+  
+  
+     .cabecera   #controls   #custom-search-input-header .sin-borde{
+      width: 90%;
+      background-color: #fafafa;
+      }
+        
+      
+       .cabecera  #controls   #custom-search-input-header .boton{
+      width: 8%;
+      background-color: #ffffff;
+       }
+  
+        input[type=text] {
+          width: 100%;
          
+        }
+        
+       /*..BUSCADOR PARA EL MOVIL..........................*/
+      /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+      #controls-responsive{
+      display: none;
+      visibility: hidden;
+       }
+     
     /*CONTENEDOR  REVISTA Y SOCIALES*/
    
-   
-    .suscribe{
-    display: block;
-    position: relative;
-    float: left;
-    width: 20%;
-    max-width: 120px;
+    .cabecera .suscribe{
+   display: inline-flex;
+    width: 10%;
+ 
     height: 38px;
-    background-color: lightcoral;
+    margin-left: 60px;
     }
   
  
-   .suscribe a  h4{
+    .suscribe a  h4{
     font-size: 0.8rem;
     margin-top: 10px;
     font-weight: 700;
     letter-spacing: 0.2px;
     font-family: 'Times New Roman', Times, serif;
     z-index: 5;
-   
     }
   
-
-
-    
 
   /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
    .cabecera .menu-btn {
@@ -7205,8 +7231,7 @@ width: 100%;
     width: 10%;
     max-width: 50px;
     height: 38px;
-    margin: auto;
-    background-color: lightslategrey;
+  
     }
 
   
@@ -7292,27 +7317,28 @@ width: 100%;
   }
 
 
-   
+
+
+   /*MENU ESCONDIDO..........................................*/
     nav{
   display: flex;
   flex-direction: column;
   position: fixed;
   width: 100%;
-  max-width: 420px;
   height: 100%;
   max-height: 1200px;
   top:0;
   bottom: 0;
   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
   opacity: 0.97;
-   background-color: #000000;
+   background-color: #fff;
    overflow-y: scroll;
    z-index: 200;
   }
 
    nav .logo-esconder{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   visibility: visible;
   margin-top: 30px;
@@ -7327,6 +7353,10 @@ width: 100%;
   }
 
 
+  nav .logo-esconder .suscriptor h4{
+  font-size: 1rem;
+  color: #fff;
+  }
    nav .buscador-esconder{
   display: flex;
   flex-direction: column;
@@ -7334,33 +7364,33 @@ width: 100%;
   visibility: visible;
   margin-top: 20px;
   height: 50px;
+ margin-bottom: 30px;
   }
 
   .d-flex{
     width: 100%;
-    max-width: 350px;
     height: 50px;
     display: flex;
     flex-direction: row;
     margin-left: 18px;
+    
   }
 
-  #custom-search{
+  nav .buscador-esconder #custom-search{
     width: 100%;
-    max-width: 330px;
     height: 50px;
   }
 
-    #custom-search .sin-borde{
-    width: 90%;
-    max-width: 310px;
+  nav .buscador-esconder #custom-search .sin-borde{
+    width: 86%;
     height: 40px;
+    background-color: #f9f9f9;
     }
 
-     #custom-search .boton{
-    width: 10%;
-    max-width: 20px;
+    nav .buscador-esconder #custom-search .boton{
+    width: 8%;
     height: 40px;
+    background-color: #f9f9f9;
     }
 
 
@@ -7374,20 +7404,16 @@ width: 100%;
     }
 
    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-    .cabecera nav .nav{
+    nav .nav{
     width:100%; 
     height: 100%;
     max-height: 950px;
-    max-width: 340px;
     display: flex;
     flex-direction: column;
-     margin-left: 6px;
+     margin-left: 10px;
     margin-top: 10px;
-    overflow-y: scroll;
-     z-index: 99; 
-     background-color: darkslateblue;
+    z-index: 99; 
     }
-
 
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
@@ -7397,13 +7423,13 @@ width: 100%;
     margin-left: 10px;
     margin-bottom: 15px;
     cursor:pointer;
+    border-bottom: 1px solid #aaaaaa;
     }
     
     nav .nav li a {
     z-index: 100;
-    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
     height: 30px;
-    color: #fff;
+    color: #2d2d2d;
     font-weight: lighter;
     font-size: 1.24rem;
     text-transform: lowercase;
@@ -7413,16 +7439,15 @@ width: 100%;
     margin-top: 0;
     }
   
-     /*IMPORTANTE*/
 
-     
-    
+
+     /*IMPORTANTE*/
      nav .nav ul {
       visibility: hidden;
       }
   
       /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
       nav .nav li:hover > ul {
        display: block;
       margin-left: -200px;
@@ -7430,6 +7455,7 @@ width: 100%;
       visibility: visible; 
       z-index: 598;
       }
+
 
     nav .nav li ul li a{
     font-size: 1rem;
@@ -7473,87 +7499,9 @@ width: 100%;
   }
 
 
-  /*BUSCADOR EN EL NAV*/
-        
-.cabecera nav  #controls {
-  width: 30%;
-  max-width: 280px;
-  height: 10%;
-  display: inline-flex;
-  margin-top: 20px;
-  margin-left: 9px;
-  visibility: visible;
-  background-color: #000000;
-  }
-
-
-
- .cabecera nav  #controls #custom-search-input-header{
-  width: 100%;
-   height: 50px;
-   border: 1px solid #c9c9c9;
-   border-radius: 4px;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   visibility: visible;
-   background-color: darksalmon;
-   }
-
-
-   .cabecera  nav #controls   #custom-search-input-header .sin-borde{
-    width: 90%;
-    display: block;
-    position: relative;
-    float: left;
-    visibility: visible;
-    }
-      
-    
-     .cabecera nav #controls   #custom-search-input-header .boton{
-    width: 8%;
-    display: block;
-    position: relative;
-    float: right;
-    width: 10%;
-    padding: 12px 20px;
-    background-color: #ffffff;
-     }
-
-
   
- 
-  
-      input[type=text] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-      }
-      
-     /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
-    
-    /*BUSCADOR EN EL NAV*/
-            
-  
- 
-        
-      
-              
-
- /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
-
-
-   /*..BUSCADOR PARA EL MOVIL..........................*/
-    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-    #controls-responsive{
-      display: none;
-      visibility: hidden;
-     }
   
        /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
-  
-
     /*.FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV........MENU ESCONIDDO DEL NAV ARROW.....*/
    /*FIN ANIMACION SUBRAYADO */
      .portada{
@@ -7561,24 +7509,80 @@ width: 100%;
      padding: 0 0 0 0;
     }
 
-    .portada .imagen-responsive-ipod{
-     display: flex;
+    .portada .portada-img{
+      display: none;
+      visibility: hidden;
+    }
+
+    .portada .portada-img-responsive {
+     display: block;
      width: 100%;
       }
-      
 
-      .portada .imagen-responsive-ipod img{
-   width: 100%;
-   }
-  /*FIN  PORTADAS*/
-  .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo{
+
+       /*NEUS.. ESTE ES EL CUADRO QUE ESTA DENTRO DE LA FOTO DE LA PORTADA*/
+      .portada .portada-img-responsive .portada-img3-responsive{
+        width: 75%;
+        position: absolute;
+        display: block;
+        top: 300px;
+        margin-left: 200px;
+       background-color: #fff;
+       border-right: 2px solid #7aac41;
+       border-bottom: 2px solid #7aac41;
+      }
+
+
+      .portada .portada-img-responsive .portada-img3-responsive #menu-simple-responsive{
+      display: block;
+      width: 100%;
+      }
+
+
+
+      .portada .portada-img-responsive .portada-img3-responsive #menu-simple-responsive ul{
+        display: flex;
+        flex-direction: row;
+      }
+ 
+      .portada .portada-img-responsive .portada-img3-responsive #menu-simple-responsive ul li{
+        padding-left: 8px;
+        list-style: none;
+      }
+
+
+      .portada .portada-img-responsive .portada-img3-responsive #menu-simple-responsive ul li a p{
+        font-size: 1rem;
+      }
+
+
+      .portada .portada-img-responsive .portada-img3-responsive p{
+        font-size: 1.2rem;
+      }
+       /* FIN  ESTE ES EL CUADRO QUE ESTA DENTRO DE LA FOTO DE LA PORTADA*/
+
+
+
+      .portada .portada-img-responsive .imagen-responsive-movil{
+       display: none;
+       visibility: hidden;
+      }
+      .portada .portada-img-responsive .imagen-responsive-ipod{
+        display: block;
+      }
+
+      .portada .portada-img-responsive  .imagen-responsive-ipod img{
+      width: 100%;
+      }
+
+
+    /*FIN  PORTADAS*/
+    .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo{
     width: 100%;
     max-width: 800px;
     display: block;
     position: absolute;
-    z-index: 100;
-    top: 400px;
-    background-color: teal;
+    top: 120px;
      }
   
 
@@ -7589,26 +7593,30 @@ width: 100%;
     display: block;
     position: absolute;
     font-size: 0;
-    top: 270px;
+    top: 170px;
     margin: auto;
      z-index: 99;  
     }
 
 
     .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo h2{
-  font-size: 1.2rem;
-  color: white;
-  }
+    font-size: 1.8rem;
+    color: white;
+    }
 
-  .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo h2 i{
-  font-size: 1.1rem;
-  }
+    .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo h2 i{
+     font-size: 1.8rem;
+    }
 
-  .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo .portada-titulo1 h6{
-   font-size: 1.2rem;
-   color: white;
-   }
+    .portada .portada-img-responsive .imagen-responsive-ipod  .portada-titulo1 h6{
+    font-size: 1.4rem;
+    color: white;
+    }
 
+    .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo1 h6 i{
+      font-size: 1.8rem;
+      color: white;
+    }
 
     /*portadas  PORTADA PORTADAS SE PUEDE MODIFCAR SU CAMBIAMOS EL DIBUJO*/
    .portada-receta-img2{
@@ -7656,8 +7664,6 @@ width: 100%;
       }
      
 
-   
-
    /*CONTENEDOR DE LA PRIMERA FRASE DE LA LETRA E MOVIEMINTO PROUDLY*/
   .portada .portada-contacto-uno{
   position: absolute;
@@ -7667,15 +7673,15 @@ width: 100%;
   width: 45%;
   }
 
- /*---SEGUNDO PARRAFO----*/
-/*PROUDLY CRAFTED*/
-.portada .portada-contacto-dos{
+   /*---SEGUNDO PARRAFO----*/
+  /*PROUDLY CRAFTED*/
+   .portada .portada-contacto-dos{
   position: absolute;
   overflow: hidden;
   top: 47%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
   left: 50px ;
   width: 40%;
- }
+   }
 
  .portada .portada-contacto-tres{
   position: absolute;
@@ -7683,13 +7689,13 @@ width: 100%;
   top: 56%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
   left: 50px ;
   width: 40%;
- }
+  }
 
 
         /*PRIMER TITULO DE LA PORTADA CON LETRAS EN MOVIMIENOT*/
    .portada .portada-contacto-uno .azulplata{
-  line-height: 1.3;
-  font-size: 1.4rem;
+   line-height: 1.3;
+   font-size: 1.4rem;
    }
 
 
@@ -7712,8 +7718,6 @@ width: 100%;
   font-size: 0.8rem;
 }
      
-
-
   /*--------TITULO PRINCIPAL-----------------*/
    .titulo-principal{
     width: 100%;
@@ -7743,26 +7747,24 @@ width: 100%;
   .titulo-principal  .escrito a h1{
   font-size: 2.1rem;
   width: 600px;
-
   letter-spacing: -0.9px;
-  }
+   }
+   /*------------------------------------------------------------*/
 
-  /*------------------------------------------------------------*/
-
-  /*CONTENEDORES DE LOS TITULOS AISLADOS .......DE MEDIA QUERY 500 MAIXMO........*/
-   .titulo{
+   /*CONTENEDORES DE LOS TITULOS AISLADOS .......DE MEDIA QUERY 500 MAIXMO........*/
+    .titulo{
      display: flex;
      flex-direction: row;
-    margin: auto;
-    width: 100%;
-    margin-bottom: 6px;
-  }
+     margin: auto;
+     width: 100%;
+     margin-bottom: 6px;
+    }
 
-  .vacio{
+    .vacio{
     display: block;
     width: 5%;
     max-width: 90px;
-  }
+    }
 
     .titulo .escrito{
     display: block;
@@ -7771,27 +7773,27 @@ width: 100%;
     width: 90%;
     }
 
-   .escrito h1{
+     .escrito h1{
      width: 700px;
-   font-size: 2rem;
-   text-align: center;
-   }
+     font-size: 2rem;
+     text-align: center;
+     }
 
-   .escrito a h1{
+    .escrito a h1{
     width: 700px;
     font-size: 2rem;
     text-align: center;
      }
 
-    /*DE LA PAGINA PLAN DIETA TURISMO*/
-   .titulo .escrito h2{
-    width: 700px;
-  font-size: 1.5rem;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 30px;
 
-   }
+    /*DE LA PAGINA PLAN DIETA TURISMO*/
+    .titulo .escrito h2{
+    width: 700px;
+    font-size: 1.5rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 30px;
+    }
 
     .escrito a p{
     width: 700px;
@@ -7802,7 +7804,6 @@ width: 100%;
   
  
   /*PRIMER-SEGMENTO........DE MEDIA QUERY 500 MAIXMO........*/
- 
    /*NOTICIA APP TURISO*/
    /* SEGUNDO-SEGMENTO */
    .primer-segmento{
@@ -7829,7 +7830,6 @@ width: 100%;
      }
  
      
-     
      /*ESTO VA EN INDEX DENTRO DEL CONTENEDOR SEGUNDO SEGMENTP TITULO NUTRICION DEL SEGUNDO SEGMENTO*/
      .primer-segmento .tres h1{
      font-size: 1.1rem;
@@ -7845,13 +7845,13 @@ width: 100%;
      color: #2d2d2d;
      letter-spacing: -0.2px;
      font-family: 'Cabin', sans-serif;
- 
      }
+
+
    /*FIN DE LA LAS LETRAS DE NUTRICION QUE VA EN INDEX*/
- 
    /*CONTAINER DE POSTS ULIMOS */
-  /*CONTAINER DE POSTS ULIMOS */
-  .dos-columnas{
+   /*CONTAINER DE POSTS ULIMOS */
+   .dos-columnas{
     width: 100%;
     max-width: 750px;
     display: flex;
@@ -7966,14 +7966,10 @@ width: 100%;
        width: 70%;
        max-width: 400px;
       }
-  
-     
     /*..FIN ULTIMOS POSTS...*/
-  
-  /*..FIN ULTIMOS POSTS...*/
- 
- 
- /*  FIN NOTICIAS TURISMO GASTRONMICO LETRAS*/
+
+
+     /*FIN NOTICIAS TURISMO GASTRONMICO LETRAS*/
 
   
     /*..SEGMENTO DE RECTA PNA DIETA Y TUISMO */
@@ -8035,21 +8031,20 @@ width: 100%;
    .plan-post-letra{
     width: 55%;
     max-width: 220px;
-     display: block;
+    display: block;
     position: relative;
     float: right;
-   }
+    }
 
-   .plan-post-letra h1{
+    .plan-post-letra h1{
      font-size: 1.2rem;
-     letter-spacing: -0.3px;
-    
-   }
+     letter-spacing: -0.3px; 
+     }
 
-  /*IMAGEN GRANDE ANULADA*/
-   .plan-imagen{
+    /*IMAGEN GRANDE ANULADA*/
+    .plan-imagen{
      display: none;
-   }
+    }
     /*..........................................................*/
 
 
@@ -8061,7 +8056,7 @@ width: 100%;
     }
 
      .container-columna-posts{
-      width: 94%;
+     width: 94%;
      }
   
 
@@ -8125,8 +8120,8 @@ width: 100%;
     
    /*......PORTADA AL PIE DE PAGINA....................*/
    .container-portada{
-  width: 100%;
-  margin-top: 30px;
+   width: 100%;
+   margin-top: 30px;
    }
 
  
@@ -8138,7 +8133,6 @@ width: 100%;
     position: relative;
     float: left;
     height: 200px;
-   
    -webkit-box-shadow: 0px -3px 6px #DCDCDC;
    -moz-box-shadow: 0px -3px 6px #DCDCDC;
     box-shadow: 0px -3px 6px  #DCDCDC;
@@ -8157,18 +8151,18 @@ width: 100%;
     justify-content: space-around;
     }
    
-   /*CONTIENE REDES SOCIALES Y EL BOC*/
-    .icon-email{
+     /*CONTIENE REDES SOCIALES Y EL BOC*/
+     .icon-email{
       display: flex;
       flex-direction: column;
       margin: auto;
       height: 170px;
-    }
+      }
 
  
-   .icon-email .icon-social1 p{
+     .icon-email .icon-social1 p{
      font-size: 0.9rem;
-   }
+     }
 
    .icon-email  ul li .fa-envelope{
     background-color: oldlace;
@@ -8182,29 +8176,29 @@ width: 100%;
     }
     
     .icon-email  ul li .fa-facebook-f{
-      background-color: oldlace;
-      color:  #2d2d2d;
-      width:25px;
+    background-color: oldlace;
+    color:  #2d2d2d;
+    width:25px;
     height: 25px;
     padding: 2px 2px 2px 2px;
-      border-radius: 25px;
-      border: solid #E9E9E9;
-      margin-right: 5px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+    margin-right: 5px;
     }
     
     
     .icon-email  ul li .fa-twitter{
-      background-color: oldlace;
-      color:   #2d2d2d;
-      width:25px;
-      height: 25px;
-      padding: 2px 2px 2px 2px;
-      border-radius: 25px;
-      border: solid #E9E9E9;
-      margin-right: 5px;
+    background-color: oldlace;
+    color:   #2d2d2d;
+    width:25px;
+    height: 25px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 25px;
+    border: solid #E9E9E9;
+    margin-right: 5px;
     }
     
-    .icon-email ul li .fa-instagram{
+     .icon-email ul li .fa-instagram{
       background-color: oldlace;
       color: #2d2d2d;
       width:25px;
@@ -8212,18 +8206,15 @@ width: 100%;
       padding: 2px 2px 2px 2px;;
       border-radius: 25px;
       border: solid #E9E9E9;
-    }
+     }
     
-  
-
-   
-       /*LOS MENUS DEL FOOTER caja 2 cajas del mimso tamaño*/
-   .menu-footer{
+     /*LOS MENUS DEL FOOTER caja 2 cajas del mimso tamaño*/
+    .menu-footer{
      display: block;
      position: relative;
-    width :21%;
-    height: 160px;
-    }
+     width :21%;
+     height: 160px;
+     }
 
    /*TITULO FOO EMOTIONS*/
    .menu-footer .footer-text h1{
@@ -8237,17 +8228,17 @@ width: 100%;
    }
  
 
-   .menu-footer .footer-lista p{
+    .menu-footer .footer-lista p{
     line-height: 20px;
     font-weight: 600;
     font-size: 0.9rem;
     color: #2d2d2d;
-     font-family: 'Times New Roman', Times, serif;
-     }
+    font-family: 'Times New Roman', Times, serif;
+    }
 
 
 
-/*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
   #footer-second{
   display: block;
   width: 100%;
@@ -8255,20 +8246,19 @@ width: 100%;
   padding-bottom: 0;
    }
 
- #footer-second .final-food{
+   #footer-second .final-food{
    display: block;
    position: relative;
    float: left;
-  height: 20px;
-  padding-bottom: 0;
- }
-
- #footer .final-food p{
-  text-align: center;
-  color: #2d2d2d;
-  font-size: 0.9rem;
+   height: 20px;
+   padding-bottom: 0;
    }
 
+   #footer .final-food p{
+   text-align: center;
+   color: #2d2d2d;
+   font-size: 0.9rem;
+   }
 
 
 
@@ -8283,7 +8273,7 @@ width: 100%;
 
 
 
- /* 901 A 1000 .......DESPUES DE NEUS10........ANTES DEL IPOD PRO...6...................... */
+ /* 901 A 1000 ..SURFACE PRO 7.....DESPUES DE NEUS10........ANTES DEL IPOD PRO...6...................... */
   
   @media only screen and (min-width: 901px) and (max-width: 1000px){
   #wrapper{
@@ -8292,11 +8282,10 @@ width: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: indigo;
    }
 
 
-   #wrapper > * {
+    #wrapper > * {
     padding: 25px;
     }
        
@@ -8325,46 +8314,41 @@ width: 100%;
     }
   
 
-      header.black{
-      height: 55px;
-      background-color: #fff;
-     }
+    header.black{
+    height: 55px;
+    background-color: #fff;
+    }
 
-  
      
      .cabecera{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      height: 38px;
-      background-color: indigo;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 38px;
      }
          
 
     /*caja */
     .cabecera .logo{
-      display: block;
-      position: relative;
-      float: left;
-      width: 20%;
-   
-      height: 35px;
+    display: block;
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 35px;
     }
               
     .cabecera .logo img {
-      display: block;
-      width: 100%;
-      max-width: 140px;
-      min-width: 140px;
-   
-      height: 35px;
-      z-index: 40;
+    display: block;
+    width: 100%;
+    max-width: 140px;
+    min-width: 140px;
+    height: 35px;
+    z-index: 40;
      }
          
+
     /*CONTENEDOR  REVISTA Y SOCIALES*/
-   
-   
     .suscribe{
     display: block;
     position: relative;
@@ -8372,7 +8356,6 @@ width: 100%;
     width: 20%;
     max-width: 120px;
     height: 38px;
-    background-color: lightcoral;
     }
   
  
@@ -8383,14 +8366,10 @@ width: 100%;
     letter-spacing: 0.2px;
     font-family: 'Times New Roman', Times, serif;
     z-index: 5;
-   
     }
   
 
-
-    
-
-  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+   /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
    .cabecera .menu-btn {
     display: block;
     position: relative;
@@ -8399,36 +8378,34 @@ width: 100%;
     max-width: 50px;
     height: 38px;
     margin: auto;
-    background-color: lightslategrey;
     }
 
-  
-  .menu-btn .hamburguesa{
-  display: block;
-  position: relative;
-  float:left;
-  width: 100%;
-  height: 30px;
-  max-width: 40px;
+   .menu-btn .hamburguesa{
+   display: block;
+   position: relative;
+   float:left;
+   width: 100%;
+   height: 30px;
+   max-width: 40px;
    }
 
-     /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+
+   /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
    .menu-btn .hamburguesa .menu-btn__burger {
-      display: block;
-      position: relative;
-      float: right;
-      margin-top: 14.5px;
-      width: 37px;
-      height: 4px;
-      background: #2d2d2d;
-      border-radius: 2px;
-      transition: all .5s ease-in-out;
-      z-index: 1000;
-      }
+   display: block;
+   position: relative;
+   float: right;
+   margin-top: 14.5px;
+   width: 37px;
+   height: 4px;
+   background: #2d2d2d;
+   border-radius: 2px;
+   transition: all .5s ease-in-out;
+   z-index: 1000;
+    }
   
 
-
-       /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+  /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
   .menu-btn__burger::before,
   .menu-btn__burger::after {
   content: '';
@@ -8465,18 +8442,13 @@ width: 100%;
    /* background: #fff;  */
   .hamburguesa.open .menu-btn__burger::before {
   transform: rotate(45deg) translate(35px, -35px);
- 
   }
 
 
   /* background: #fff;  */
   .hamburguesa.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
-
   }
-
-
-
 
   .menu-btn__burger:hover{
   background-color: #7aac41;
@@ -8489,110 +8461,110 @@ width: 100%;
   }
 
 
-     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
-
-
+    /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
     /*..BUSCADOR PARA EL MOVIL..........................*/
-     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-     #controls-responsive{
-      display: block;
-      position: relative;
-      float: left;
-      width: 92%;
-      height: 50px;
-      margin-top: 58px;  
-      margin: auto;
-       }
+    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+    #controls-responsive{
+    display: block;
+    position: relative;
+    float: left;
+    width: 92%;
+    height: 50px;
+    margin-top: 58px;  
+    margin: auto;
+    }
   
-       #custom-search-input-responsive{
-       width:  100%;
-       height: 50px;
-       border: 1px solid #c9c9c9;
-       border-radius: 4px;
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between;
-       margin: auto;
-       background-color: darksalmon;
-       }
+    #custom-search-input-responsive{
+    width:  100%;
+    height: 50px;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    }
   
+    #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    }
   
-   #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
-       display: block;
-       position: relative;
-       float: left;
-       width: 100%;
-     
-      }
-  
-      input[type=text] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-      }
-       #controls-responsive .boton-responsive{
-         display: block;
-         position: relative;
-         float: right;
-       width: 10%;
-       padding: 12px 20px;
-       background-color: #ffffff;
-        }
+    input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    }
+
+
+    #controls-responsive .boton-responsive{
+    display: block;
+    position: relative;
+    float: right;
+    width: 10%;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    }
      /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
     
+
     /*BUSCADOR EN EL NAV*/
-            
     nav  #controls {
-      width: 100%;
-      max-width: 300px;
-      height: 10%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-      margin-left: 20px;
-      background-color: #000000;
-      }
+    width: 100%;
+    max-width: 300px;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #000000;
+    }
 
-     nav  #controls #custom-search-input-header{
-              width: 100%;
-              max-width: 300px;
-              }
+    nav  #controls #custom-search-input-header{
+    width: 100%;
+    max-width: 300px;
+    }
         
-              .buscador #controls   #custom-search-input-header .sin-borde{
-                  display: none;
-                  visibility: hidden;
-                }
-              /*DIV DEL MENU GRANDE*/
-        
-              #controls-responsive .boton{
-                width: 8%;
-              }
- /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
-/*margin-left: 5.4%;/*IMPORTANTE */
+    .buscador #controls   #custom-search-input-header .sin-borde{
+    display: none;
+    visibility: hidden;
+    }
 
-#controls{
-  display: none;
- visibility: hidden;
-}
-nav{
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-  max-width: 420px;
-  height: 100%;
-  max-height: 1200px;
-  top:0;
-  bottom: 0;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  opacity: 0.97;
+
+    /*DIV DEL MENU GRANDE*/
+    #controls-responsive .boton{
+    width: 8%;
+    }
+
+   /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+   /*margin-left: 5.4%;/*IMPORTANTE */
+   #controls{
+   display: none;
+   visibility: hidden;
+   }
+
+
+   nav{
+   display: flex;
+   flex-direction: column;
+   position: fixed;
+   width: 100%;
+   max-width: 420px;
+   height: 100%;
+   max-height: 1200px;
+   top:0;
+   bottom: 0;
+   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+   opacity: 0.97;
    background-color: #000000;
    overflow-y: scroll;
    z-index: 200;
-  }
+   }
 
-nav .logo-esconder{
+  nav .logo-esconder{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -8600,56 +8572,55 @@ nav .logo-esconder{
   margin-top: 30px;
   height: 30px;
   border-bottom: 1px solid #aaaaaa;
+  }
 
-}
-
-nav .logo-esconder img{
+  nav .logo-esconder img{
   width: 100%;
   max-width: 120px;
   margin-left: 20px;
-}
+  }
 
-nav .buscador-esconder{
+  nav .buscador-esconder{
   display: flex;
   flex-direction: column;
   width: 100%;
   visibility: visible;
   margin-top: 20px;
   height: 50px;
+  }
 
-}
-
-  .d-flex{
+   .d-flex{
     width: 100%;
     max-width: 350px;
     height: 50px;
     display: flex;
     flex-direction: row;
     margin-left: 18px;
-  }
+   }
 
-  #custom-search{
+    #custom-search{
     width: 100%;
     max-width: 330px;
     height: 50px;
-  }
+   }
 
-  #custom-search .sin-borde{
+    #custom-search .sin-borde{
     width: 90%;
     max-width: 310px;
     height: 40px;
-  }
+   }
 
-  #custom-search .boton{
+    #custom-search .boton{
     width: 10%;
     max-width: 20px;
     height: 40px;
-  }
- nav .nav .esconder{
-   visibility: visible;
- }
+   }
 
-  nav .nav li a.active{
+   nav .nav .esconder{
+   visibility: visible;
+   }
+
+    nav .nav li a.active{
     text-decoration:line-through;
     color: #568632;
     }
@@ -8662,17 +8633,14 @@ nav .buscador-esconder{
     max-width: 340px;
     display: flex;
     flex-direction: column;
-  
-     margin-left: 6px;
-          margin-top: 10px;
-          overflow-y: scroll;
-     z-index: 99; 
-     background-color: darkslateblue;
+    margin-left: 6px;
+    margin-top: 10px;
+    overflow-y: scroll;
+    z-index: 99; 
     }
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
     nav .nav li{
-     
     list-style: none;
     height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
     margin-left: 10px;
@@ -8695,19 +8663,15 @@ nav .buscador-esconder{
     }
   
      /*IMPORTANTE*/
-
-     
-    
- 
       /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
-       display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
-      }
+    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav .nav li:hover > ul {
+    display: block;
+    margin-left: -200px;
+    height: 200px;
+    visibility: visible; 
+    z-index: 598;
+    }
 
     nav .nav li ul li a{
     font-size: 1rem;
@@ -8719,88 +8683,105 @@ nav .buscador-esconder{
     margin-left: -76px;
     }
 
-     nav .nav ul {
+
+    nav .nav ul {
     visibility: hidden;
     }
 
-      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
-  
- /*ANIMACION SUBRAYADO */
- nav a {
- display: inline-block;
- position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
 
-  nav  a:after {
- content: "";
- display: block;
- margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
- height: 2px;
- width: 0px;
- transition: all .8s;
- z-index: 10;
- }
+    /* f...FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.....MENU ESCONIDDO DEL NAV ARROW......*/
+   /*ANIMACION SUBRAYADO */
+   nav a {
+   display: inline-block;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   z-index: 40;
+   }
 
-
-  /* width: 100%;*/
-  nav  a:hover:after {
-  padding-left: 40px;
-  padding-right: -150px;
-  height: 2px;
-  background: white;
-  }
+   nav  a:after {
+   content: "";
+   display: block;
+   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+   height: 2px;
+   width: 0px;
+   transition: all .8s;
+   z-index: 10;
+   }
 
 
+    /* width: 100%;*/
+    nav  a:hover:after {
+    padding-left: 40px;
+    padding-right: -150px;
+    height: 2px;
+    background: white;
+    }
 
 
- /*PORTADA*/
+    /*PORTADA*/
     .portada{
+    width: 100%;
+    height: 100%;
+    max-height: 420px;
+    margin-top: 0.7%;
+    }
+
+  .portada-img{
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  }
+
+  .portada-img img{
   width: 100%;
   height: 100%;
   max-height: 420px;
   margin-top: 0.7%;
- }
-
- .portada-img{
-  width: 100%;
-  height: 100%;
-  max-height: 420px;
- }
-
- .portada-img img{
-  width: 100%;
-  height: 100%;
-  max-height: 420px;
-  margin-top: 0.7%;
- }
+  }
    
-
-
- .portada-titulo{
-  position: absolute;
-  top: 265px;
-  margin:auto;
+.portada-img-responsive{
+  display: block;
+  visibility: hidden;
+}
+  .portada-img  .portada-titulo{
+   margin-top: 80px;
   width: 100%;
   }
 
 
-   .portada-titulo1{
+   .portada-img .portada-titulo1{
     position: absolute;
-    top: 330px;
+    top: 200px;
     margin:auto;
     width: 100%;
     }
   
 
+        /*LETRA DE LA PORTADA INDEX*/
+        .portada-img  .portada-titulo h2 {
+    display:block;
+    margin: 0;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1;
+    -webkit-transform: translateY(10rem);
+           transform: translateY(10rem);               /*DISTANCIA DE SUBIDA*/
+    -webkit-animation: up 650ms linear forwards;        /*TIEMPO QUE SUBE */
+           animation: up 650ms linear forwards;
+           z-index: 1;
+           text-shadow: 0px 2px 2px #2d2d2d;           
+   color: azure;
+   font-family: 'Cabin', sans-serif;
+   word-spacing: 5px; ;
+   }
+
     /*LETRA DE LA PORTADA INDEX*/
-   .portada-titulo1 h6 {
+    .portada-img   .portada-titulo1 h6 {
    display:block;
    margin: 0;
    text-align: center;
-   font-size: 3rem;
+   font-size: 1.6rem;
    line-height: 1;
    -webkit-transform: translateY(10rem);
           transform: translateY(10rem);               /*DISTANCIA DE SUBIDA*/
@@ -8858,9 +8839,9 @@ nav .buscador-esconder{
     margin-left:3%;
     margin-bottom: 40%;
     }
-     
-      /*FIN  PORTADAS*/
+    /*FIN  PORTADAS*/
   
+
    /*CONTENEDOR DE LA PRIMERA FRASE DE LA LETRA E MOVIEMINTO PROUDLY*/
   .portada .portada-contacto-uno{
   position: absolute;
@@ -8880,41 +8861,42 @@ nav .buscador-esconder{
   width: 40%;
   }
 
- .portada .portada-contacto-tres{
+  .portada .portada-contacto-tres{
   position: absolute;
   overflow: hidden;
   top: 56%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
   left: 50px ;
   width: 40%;
- }
+  }
 
 
         /*PRIMER TITULO DE LA PORTADA CON LETRAS EN MOVIMIENOT*/
   .portada .portada-contacto-uno .azulplata{
   line-height: 1.3;
   font-size: 1.4rem; 
-   }
+  }
+
 
    /*--FORMA PARTE DEL .AZULPLATA PORQUE CAMBIE ESTILO DENTRO DE UN PARRAFO-----------------------*/
-  .portada .portada-contacto-uno .otroestilo { 
+   .portada .portada-contacto-uno .otroestilo { 
    font-size:  1rem ;
-  }
+   }
 
-  .portada .portada-contacto-dos h6 {
+   .portada .portada-contacto-dos h6 {
     font-size: 1.3rem;
-  }
+   }
  
-   /*PORTADA DE CONTACTO NO BORRAR*/
-  .portada span h2{
-  color:#639a3a;
-  padding: 5px 6px 5px 7px;
-  word-spacing: -1px;
-  margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
-  font-family: 'Cabin', sans-serif;
-  font-size: 0.8rem;
-  }
+    /*PORTADA DE CONTACTO NO BORRAR*/
+   .portada span h2{
+   color:#639a3a;
+   padding: 5px 6px 5px 7px;
+   word-spacing: -1px;
+   margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
+   font-family: 'Cabin', sans-serif;
+   font-size: 0.8rem;
+   }
 
-     /*NO SE SI ROBAR*/
+    /*NO SE SI ROBAR*/
     .portada h2{
     font-size: 2rem;
     }
@@ -8955,25 +8937,23 @@ nav .buscador-esconder{
   .titulo-principal  .escrito a h1{
   font-size: 2.1rem;
   width: 600px;
-
   letter-spacing: -0.9px;
   }
-
   /*------------------------------------------------------------*/
 
-  /*CONTENEDORES DE LOS TITULOS AISLADOS .......DE MEDIA QUERY 500 MAIXMO........*/
+   /*CONTENEDORES DE LOS TITULOS AISLADOS .......DE MEDIA QUERY 500 MAIXMO........*/
    .titulo{
-     display: flex;
-     flex-direction: row;
-    margin: auto;
-    width: 100%;
-    margin-bottom: 6px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 100%;
+  margin-bottom: 6px;
   }
 
   .vacio{
-    display: block;
-    width: 5%;
-    max-width: 90px;
+  display: block;
+  width: 5%;
+  max-width: 90px;
   }
 
     .titulo .escrito{
@@ -8983,26 +8963,26 @@ nav .buscador-esconder{
     width: 90%;
     }
 
-   .escrito h1{
-     width: 700px;
-   font-size: 2rem;
-   text-align: center;
-   }
-
-   .escrito a h1{
+    .escrito h1{
     width: 700px;
     font-size: 2rem;
     text-align: center;
-     }
+    }
+
+    .escrito a h1{
+    width: 700px;
+    font-size: 2rem;
+    text-align: center;
+    }
+
 
     /*DE LA PAGINA PLAN DIETA TURISMO*/
    .titulo .escrito h2{
-    width: 700px;
-  font-size: 1.5rem;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 30px;
-
+   width: 700px;
+   font-size: 1.5rem;
+   color: #000000;
+   text-align: center;
+   margin-bottom: 30px;
    }
 
     .escrito a p{
@@ -9012,12 +8992,7 @@ nav .buscador-esconder{
      }
  
   /*PRIMER-SEGMENTO........DE MEDIA QUERY 500 MAIXMO........*/
- 
- /*NOTICIA APP TURISO*/
-  
-     
-   /* SEGUNDO-SEGMENTO */
-
+   /*NOTICIA APP TURISO*/
    .primer-segmento{
     width: 100%;
     margin: auto;
@@ -9025,8 +9000,9 @@ nav .buscador-esconder{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-     }
+    }
  
+
    .primer-segmento .tres{
    width:25%;
    max-width: 275px;
@@ -9034,14 +9010,14 @@ nav .buscador-esconder{
    margin-bottom: 20px;
    }
  
-   .primer-segmento .tres img{
+
+     .primer-segmento .tres img{
      width: 100%;
      max-width: 275px;
      height: 100%;
      max-height: 178px;
      }
  
-     
      
      /*ESTO VA EN INDEX DENTRO DEL CONTENEDOR SEGUNDO SEGMENTP TITULO NUTRICION DEL SEGUNDO SEGMENTO*/
      .primer-segmento .tres h1{
@@ -9050,7 +9026,6 @@ nav .buscador-esconder{
      word-spacing: -0.5px;
      letter-spacing: -0.5px;
      font-family: 'Archivo Black', sans-serif;
-  
     }
  
      /*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
@@ -9059,21 +9034,20 @@ nav .buscador-esconder{
      color: #2d2d2d;
      letter-spacing: -0.2px;
      font-family: 'Cabin', sans-serif;
- 
      }
    /*FIN DE LA LAS LETRAS DE NUTRICION QUE VA EN INDEX*/
  
-   /*CONTAINER DE POSTS ULIMOS */
-  .dos-columnas{
+    /*CONTAINER DE POSTS ULIMOS */
+   .dos-columnas{
     width: 100%;
     max-width: 750px;
     display: flex;
     flex-direction: column;
     margin-top: 35px;  /*RELACIONADO CON EL DIV TITULO*/
     margin-bottom: 50px;
-  
     }
   
+
     .columna-left{
     width:100%;
     display: flex;
@@ -9088,15 +9062,16 @@ nav .buscador-esconder{
     }
   
   
-     .post-ultimo{
-       width: 100%;
-       max-width: 700px;
-       height: 200px;
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between; 
-      }
+    .post-ultimo{
+    width: 100%;
+    max-width: 700px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    }
   
+
      .post-ultimo .posts-ultimos-imagen{
      width: 40%;
      max-width: 300px;
@@ -9105,7 +9080,7 @@ nav .buscador-esconder{
      position: relative;
      float: left;
      margin-right: 1px;
-      }
+    }
   
   
      .posts-ultimos-imagen img{
@@ -9131,7 +9106,7 @@ nav .buscador-esconder{
   
  
      /*-------------------#e9e9e9----------*/
-  .dos-columnas .columna-right{
+    .dos-columnas .columna-right{
     display: block;
     position: relative;
     float: left;
@@ -9140,20 +9115,21 @@ nav .buscador-esconder{
     margin-left: -0.01px;
     }
     
-     .columna-right-column{
-      width: 60%;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      margin: auto;
+
+    .columna-right-column{
+    width: 60%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
      }
   
   
      .columna-vertical{
-      width: 100%;
-      max-width: 500px;
-     display: flex;
-     flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
      }
   
      .columna-right .subcontainer-right{
@@ -9161,7 +9137,7 @@ nav .buscador-esconder{
      max-width: 750px;
      display: flex;
      flex-direction: row;
-      }
+    }
   
   
       .subcontainer-right .imagen-right{
@@ -9180,13 +9156,10 @@ nav .buscador-esconder{
        width: 70%;
        max-width: 400px;
       }
-  
-     
     /*..FIN ULTIMOS POSTS...*/
-  
-  /*..FIN ULTIMOS POSTS...*/
  
- /*..SEGMENTO DE RECTA PNA DIETA Y TUISMO */
+
+    /*..SEGMENTO DE RECTA PNA DIETA Y TUISMO */
     /*..UNA FOTO Y 4 PEQUEÑAS*/
     .plan-total-alimentacion{
       display: flexbox;
@@ -9195,40 +9168,43 @@ nav .buscador-esconder{
       margin-top: 24px;  /*RELACIONADO CON TITULO*/
       }
   
-      .plan-imagen-responsive{
+
+    .plan-imagen-responsive{
     display: block;
     width: 100%;
-      }
+    }
   
-      .plan-imagen-responsive  img{
-     width: 100%;
-      }
+
+    .plan-imagen-responsive  img{
+    width: 100%;
+    }
   
-      .plan-alimentacion{
-         display: block;
-         width: 100%;
-         max-width: 900px;
-         margin-top: 30px;
-      
-      }
+
+    .plan-alimentacion{
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 30px;
+    }
   
+
         /*CONTAINER DE IMAGEN Y TITULO DESCRIPCION*/
      .plan-post-alimentacion{
-       display: block;
-       position: relative;
-       float: left;
-       width: 46%;
-       height: 100px;
-       max-width: 420px;
-       margin-right: 20px;
+    display: block;
+    position: relative;
+    float: left;
+    width: 46%;
+    height: 100px;
+    max-width: 420px;
+    margin-right: 20px;
      }
   
      .plan-post-imagen{
-       width: 40%;
-       max-width: 180px;
-       display: block;
-       position: relative;
-       float: left;
+      width: 40%;
+      max-width: 180px;
+      display: block;
+      position: relative;
+      float: left;
      }
   
      .plant-post-imagen img{
@@ -9244,22 +9220,23 @@ nav .buscador-esconder{
       position: relative;
       float: right; 
      }
-  
+
+
      .plan-post-letra h1{
        font-size: 1.2rem;
        letter-spacing: -0.3px;
      }
   
+
     /*IMAGEN GRANDE ANULADA*/
-     .plan-imagen{
-       display: none;
+    .plan-imagen{
+    display: none;
      }
-     
       /*..........................................................*/
   
+
   
     /*FINAL TERCER SEGMENTO COMPLI .........................................................................  */
-       
     /*QUINTO SEGMENTO .........................................................................  */
     .quinto-segmento{
     width: 100%;
@@ -9296,17 +9273,17 @@ nav .buscador-esconder{
     }
     
 
-  .texto-animado{
-  display: table;
-  width: 40%;
+   .texto-animado{
+   display: table;
+   width: 40%;
    margin-top: 9%;
    margin-bottom: 7%;margin: auto;
    }
 
 
-   .texto-animado h1{
+    .texto-animado h1{
     text-align: center;
-   }
+    }
 
 
    /*..FOOTER*/
@@ -9319,6 +9296,8 @@ nav .buscador-esconder{
     margin-top: -10px;
     background-color: #f4f4f4;
    }
+
+
       /*CAJA PRINCIPAL DEL PRIMER FOOTER............................................................... */
      #footer .footer-primero{
       width: 100%;
@@ -9389,10 +9368,6 @@ nav .buscador-esconder{
       border: solid #E9E9E9;
       }
 
-  
-
- 
-
        
     /*CAJA DE LOS MENUS FOOTER S*/
      .menu-footer{
@@ -9400,10 +9375,12 @@ nav .buscador-esconder{
       width :  24%;
       height: 190px;
      }
+
     
      .footer-text{
-       height: 20px;
+     height: 20px;
      }
+
 
    /*TITULO FOO EMOTIONS*/
    .menu-footer .footer-text h1{
@@ -9429,26 +9406,24 @@ nav .buscador-esconder{
 
 
    
-    #footer-second{
+     #footer-second{
      display: flex;
      width: 100%;
-    
      margin-top: 19px;
      }
 
-     #footer-second .final-food{
-   width: 100%;
- display: flex ;
- flex-direction: column;
-   
-  }
 
-  #footer-secomd .final-food p{
-  text-align: center;
-  color: #2d2d2d;
-  font-size: 0.8rem;
-  
-  }
+    #footer-second .final-food{
+    width: 100%;
+    display: flex ;
+    flex-direction: column;   
+    }
+
+    #footer-secomd .final-food p{
+    text-align: center;
+    color: #2d2d2d;
+    font-size: 0.8rem; 
+    }
 
 
     }
@@ -9471,13 +9446,14 @@ nav .buscador-esconder{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: brown;
   }
       
+
   #wrapper > * {
   padding: 25px;
   }
     
+
    #container{
   display: flex;
   flex-direction: column;
@@ -9488,8 +9464,8 @@ nav .buscador-esconder{
    }
    
 
-   /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
-   header{
+    /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+    header{
     display: block;
     width:100%;
     height: 55px;
@@ -9503,46 +9479,41 @@ nav .buscador-esconder{
     }
   
 
-      header.black{
-      height: 55px;
-      background-color: #fff;
-     }
+    header.black{
+    height: 55px;
+    background-color: #fff;
+    }
 
   
-     
-     .cabecera{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      height: 38px;
-      background-color: indigo;
-     }
+    .cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 38px;
+    }
          
 
     /*caja */
     .cabecera .logo{
-      display: block;
-      position: relative;
-      float: left;
-      width: 20%;
-   
-      height: 35px;
+    display: block;
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 35px;
     }
               
     .cabecera .logo img {
-      display: block;
-      width: 100%;
-      max-width: 140px;
-      min-width: 140px;
-   
-      height: 35px;
-      z-index: 40;
+    display: block;
+    width: 100%;
+    max-width: 140px;
+    min-width: 140px;
+    height: 35px;
+    z-index: 40;
      }
          
+
     /*CONTENEDOR  REVISTA Y SOCIALES*/
-   
-   
     .suscribe{
     display: block;
     position: relative;
@@ -9550,26 +9521,22 @@ nav .buscador-esconder{
     width: 20%;
     max-width: 120px;
     height: 38px;
-    background-color: lightcoral;
     }
   
  
-   .suscribe a  h4{
+    .suscribe a  h4{
     font-size: 0.8rem;
     margin-top: 10px;
     font-weight: 700;
     letter-spacing: 0.2px;
     font-family: 'Times New Roman', Times, serif;
     z-index: 5;
-   
     }
   
 
 
-    
-
-  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-   .cabecera .menu-btn {
+    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+    .cabecera .menu-btn {
     display: block;
     position: relative;
     float: left;
@@ -9577,20 +9544,20 @@ nav .buscador-esconder{
     max-width: 50px;
     height: 38px;
     margin: auto;
-    background-color: lightslategrey;
     }
 
   
-  .menu-btn .hamburguesa{
-  display: block;
-  position: relative;
-  float:left;
-  width: 100%;
-  height: 30px;
-  max-width: 40px;
+   .menu-btn .hamburguesa{
+   display: block;
+   position: relative;
+   float:left;
+   width: 100%;
+   height: 30px;
+   max-width: 40px;
    }
 
-     /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+
+     /*------- box-shadow: 0 2px 5px rgba(255,101,47,.2);--------*/
    .menu-btn .hamburguesa .menu-btn__burger {
       display: block;
       position: relative;
@@ -9606,7 +9573,7 @@ nav .buscador-esconder{
   
 
 
-       /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+  /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
   .menu-btn__burger::before,
   .menu-btn__burger::after {
   content: '';
@@ -9643,17 +9610,13 @@ nav .buscador-esconder{
    /* background: #fff;  */
   .hamburguesa.open .menu-btn__burger::before {
   transform: rotate(45deg) translate(35px, -35px);
- 
   }
 
 
   /* background: #fff;  */
   .hamburguesa.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
-
   }
-
-
 
 
   .menu-btn__burger:hover{
@@ -9691,7 +9654,6 @@ nav .buscador-esconder{
        flex-direction: row;
        justify-content: space-between;
        margin: auto;
-       background-color: darksalmon;
        }
   
   
@@ -9722,55 +9684,62 @@ nav .buscador-esconder{
     /*BUSCADOR EN EL NAV*/
             
     nav  #controls {
-      width: 100%;
-      max-width: 300px;
-      height: 10%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-      margin-left: 20px;
-      background-color: #000000;
-      }
+    width: 100%;
+    max-width: 300px;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #000000;
+    }
 
-     nav  #controls #custom-search-input-header{
-              width: 100%;
-              max-width: 300px;
-              }
-        
-              .buscador #controls   #custom-search-input-header .sin-borde{
-                  display: none;
-                  visibility: hidden;
-                }
-              /*DIV DEL MENU GRANDE*/
-        
-              #controls-responsive .boton{
-                width: 8%;
-              }
- /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
-/*margin-left: 5.4%;/*IMPORTANTE */
 
-#controls{
-  display: none;
- visibility: hidden;
-}
-nav{
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-  max-width: 420px;
-  height: 100%;
-  max-height: 1200px;
-  top:0;
-  bottom: 0;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  opacity: 0.97;
+    nav  #controls #custom-search-input-header{
+    width: 100%;
+    max-width: 300px;
+    }
+        
+
+    .buscador #controls   #custom-search-input-header .sin-borde{
+    display: none;
+    visibility: hidden;
+    }
+
+
+    /*DIV DEL MENU GRANDE*/
+    #controls-responsive .boton{
+    width: 8%;
+    }
+
+    /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
+   /*margin-left: 5.4%;/*IMPORTANTE */
+
+   #controls{
+   display: none;
+   visibility: hidden;
+   }
+
+
+   nav{
+   display: flex;
+   flex-direction: column;
+   position: fixed;
+   width: 100%;
+   max-width: 420px;
+   height: 100%;
+   max-height: 1200px;
+   top:0;
+   bottom: 0;
+   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+   opacity: 0.97;
    background-color: #000000;
    overflow-y: scroll;
    z-index: 200;
-  }
+   }
 
-nav .logo-esconder{
+
+  nav .logo-esconder{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -9778,61 +9747,65 @@ nav .logo-esconder{
   margin-top: 30px;
   height: 30px;
   border-bottom: 1px solid #aaaaaa;
+  }
 
-}
-
-nav .logo-esconder img{
+   nav .logo-esconder img{
   width: 100%;
   max-width: 120px;
   margin-left: 20px;
-}
+   }
 
-nav .buscador-esconder{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  visibility: visible;
-  margin-top: 20px;
-  height: 50px;
 
-}
+   nav .buscador-esconder{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   visibility: visible;
+   margin-top: 20px;
+   height: 50px;
+   }
 
-  .d-flex{
+
+   .d-flex{
     width: 100%;
     max-width: 350px;
     height: 50px;
     display: flex;
     flex-direction: row;
     margin-left: 18px;
-  }
+    }
 
-  #custom-search{
+    #custom-search{
     width: 100%;
     max-width: 330px;
     height: 50px;
-  }
+    }
 
-  #custom-search .sin-borde{
+    #custom-search .sin-borde{
     width: 90%;
     max-width: 310px;
     height: 40px;
-  }
+    }
 
-  #custom-search .boton{
+    #custom-search .boton{
     width: 10%;
     max-width: 20px;
     height: 40px;
-  }
- nav .nav .esconder{
-   visibility: visible;
- }
+    }
 
-  nav .nav li a.active{
+
+   nav .nav .esconder{
+   visibility: visible;
+   }
+
+
+    nav .nav li a.active{
     text-decoration:line-through;
     color: #568632;
     }
 
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+
+    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
     .cabecera nav .nav{
     width:100%; 
     height: 100%;
@@ -9840,17 +9813,15 @@ nav .buscador-esconder{
     max-width: 340px;
     display: flex;
     flex-direction: column;
-  
-     margin-left: 6px;
-          margin-top: 10px;
-          overflow-y: scroll;
-     z-index: 99; 
-     background-color: darkslateblue;
+    margin-left: 6px;
+    margin-top: 10px;
+    overflow-y: scroll;
+    z-index: 99; 
     }
 
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+
+    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
     nav .nav li{
-     
     list-style: none;
     height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
     margin-left: 10px;
@@ -9858,6 +9829,7 @@ nav .buscador-esconder{
     cursor:pointer;
     }
     
+
     nav .nav li a {
     z-index: 100;
     background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
@@ -9872,20 +9844,18 @@ nav .buscador-esconder{
     margin-top: 0;
     }
   
-     /*IMPORTANTE*/
 
-     
-    
- 
-      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
-       display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
-      }
+    /*IMPORTANTE*/
+    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav .nav li:hover > ul {
+    display: block;
+    margin-left: -200px;
+    height: 200px;
+    visibility: visible; 
+    z-index: 598;
+    }
+
 
     nav .nav li ul li a{
     font-size: 1rem;
@@ -9897,44 +9867,43 @@ nav .buscador-esconder{
     margin-left: -76px;
     }
 
-     nav .nav ul {
+
+    nav .nav ul {
     visibility: hidden;
     }
 
-      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
-  
- /*ANIMACION SUBRAYADO */
- nav a {
- display: inline-block;
- position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
+
+    /* f..FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV....MENU ESCONIDDO DEL NAV ARROW...*/
+   /*ANIMACION SUBRAYADO */
+   nav a {
+   display: inline-block;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   z-index: 40;
+  }
+
 
   nav  a:after {
- content: "";
- display: block;
- margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
- height: 2px;
- width: 0px;
- transition: all .8s;
- z-index: 10;
- }
-
-
-  /* width: 100%;*/
-  nav  a:hover:after {
-  padding-left: 40px;
-  padding-right: -150px;
+  content: "";
+  display: block;
+  margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
   height: 2px;
-  background: white;
-  }
-  /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
-      
-  
+  width: 0px;
+  transition: all .8s;
+  z-index: 10;
+   }
 
-     /*.......................................*/
+
+   /* width: 100%;*/
+   nav  a:hover:after {
+   padding-left: 40px;
+   padding-right: -150px;
+   height: 2px;
+   background: white;
+   }
+   /*-----MENU SELECCIONADO.........,*/
+   /*.......................................*/
    
 
     /*PORTADA..............*/
@@ -9944,11 +9913,13 @@ nav .buscador-esconder{
     margin-bottom: 5%;
     }
 
+
     .portada-img img{
     width: 100%;
     }
 
-      /*BLOQUE DE LA PRIMER SEGMENTO DE LA LETRA QUE SE MUEVE*/
+
+    /*BLOQUE DE LA PRIMER SEGMENTO DE LA LETRA QUE SE MUEVE*/
     .portada-titulo{
     top: 270px;
     display: block;
@@ -9981,35 +9952,36 @@ nav .buscador-esconder{
      margin-left: 5%;
      }
     
-   .portada-img2{
+    .portada-img2{
      width: 80%;
      margin-left: 155px;
      height: 180px;
-   }
+    }
 
      
-   /*PORTADA DE LA PAGINA CONTACTO CONTENEDOR DE LA 
-   PRIMERA FRASE DE LA LETRA E MOVIEMINTO PROUDLY*/
-  .portada .portada-contacto-uno{
-  position: absolute;
-  overflow: hidden;
-  top: 34%; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
-  left: 50px ;
-  width: 45%;
-  }
+    /*PORTADA DE LA PAGINA CONTACTO CONTENEDOR DE LA 
+    PRIMERA FRASE DE LA LETRA E MOVIEMINTO PROUDLY*/
+   .portada .portada-contacto-uno{
+   position: absolute;
+   overflow: hidden;
+   top: 34%; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
+   left: 50px ;
+   width: 45%;
+    }
 
-  /*---PORTADA CONTACTO SEGUNDO PARRAFO----*/
+   /*---PORTADA CONTACTO SEGUNDO PARRAFO----*/
    /*PROUDLY CRAFTED*/
-  .portada .portada-contacto-dos{
-  position: absolute;
-  overflow: hidden;
-  top: 47%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
-  left: 50px ;
-  width: 40%;
-  }
+   .portada .portada-contacto-dos{
+   position: absolute;
+   overflow: hidden;
+   top: 47%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+   left: 50px ;
+   width: 40%;
+   }
 
- /*PORTADA CONTACTO*/
- .portada .portada-contacto-tres{
+
+  /*PORTADA CONTACTO*/
+  .portada .portada-contacto-tres{
   position: absolute;
   overflow: hidden;
   top: 56%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
@@ -10018,13 +9990,13 @@ nav .buscador-esconder{
   }
 
 
-        /*PRIMER TITULO DE LA PORTADA CON LETRAS EN MOVIMIENOT*/
-  .portada .portada-contacto-uno .azulplata{
-  line-height: 1.3;
-  font-size: 1.5rem;
-   }
+    /*PRIMER TITULO DE LA PORTADA CON LETRAS EN MOVIMIENOT*/
+    .portada .portada-contacto-uno .azulplata{
+    line-height: 1.3;
+    font-size: 1.5rem;
+    }
 
-   /*--FORMA PARTE DEL .AZULPLATA PORQUE CAMBIE ESTILO DENTRO DE UN PARRAFO-----------------------*/
+    /*--FORMA PARTE DEL .AZULPLATA PORQUE CAMBIE ESTILO DENTRO DE UN PARRAFO-----------------------*/
    .portada .portada-contacto-uno .otroestilo { 
    font-size:  1.3rem ;
     }
@@ -10070,19 +10042,20 @@ nav .buscador-esconder{
   font-size: 2rem;
    }
 
+
    .titulo-principal .escrito a h1{
     font-size: 2rem;
     width: 100%;
-     }
+    }
  
 
     /*......................*/
-      .titulo{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      margin-top: 30px;
+    .titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
      margin-bottom: 30px;
      }
 
@@ -10096,12 +10069,12 @@ nav .buscador-esconder{
     .titulo  .escrito{
     width: 90%;
     max-width: 900px;
-   }
+    }
  
 
    .titulo  .escrito h1{
    font-size: 2rem;
-  }
+   }
  
 
   .titulo  .escrito a h1{
@@ -10116,10 +10089,10 @@ nav .buscador-esconder{
     
   
     /*PRIMER SEGMENTO NOTICIAS Y TURISMO*/
-  .primer-segmento{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+   .primer-segmento{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
     }
 
 
@@ -10151,24 +10124,25 @@ nav .buscador-esconder{
   justify-content: space-between;
   margin: auto;
   margin-top: 40px;
-
   }
 
-   .dos-columnas .columna-left{
+
+    .dos-columnas .columna-left{
     width: 70%;
-   max-width: 700px;
+    max-width: 700px;
     display: block;
     position: relative;
     float: left;
+    }
 
-   }
 
-   .bloque-ultimo{
+    .bloque-ultimo{
     width: 100%;
     max-width: 680px;
     display: flex;
     flex-direction: column;
      }
+
 
     .posts-ultimos{
     width:100%;
@@ -10185,24 +10159,23 @@ nav .buscador-esconder{
     width: 45%;
     max-width: 260px;
     margin-right: 17px;
-  
-  }
+    }
 
-  .posts-ultimos-imagen img{
+   .posts-ultimos-imagen img{
     width: 100%;
     max-width: 250px;
     height: 100%;
     max-height: 160px;
-  }
+   }
  
-  .posts-ultimos-titulo{
+   .posts-ultimos-titulo{
     display:block;
     position: relative;
     float: right;
     width: 40%;
-   }
+    }
 
-  .posts-ultimos-titulo  h1{
+   .posts-ultimos-titulo  h1{
     font-size: 1.6rem;
    }
 
@@ -10220,23 +10193,25 @@ nav .buscador-esconder{
     margin-left: 704px;
     }
 
-   .columna-right  .columna-right-column{
+
+    .columna-right  .columna-right-column{
     width: 260px;
     display: flex;
     flex-direction: column;
     }
 
-  .columna-vertical{
+    .columna-vertical{
     width: 100%;
     max-width: 260px;
     display: flex;
     flex-direction: column;
-  }
+    }
 
-  .columna-vertical  .subcontainer-right{
+
+   .columna-vertical  .subcontainer-right{
    width: 260px;
-  display: flex;
-  flex-direction: row;
+   display: flex;
+   flex-direction: row;
    }
 
 
@@ -10247,6 +10222,7 @@ nav .buscador-esconder{
    width: 100%;
    max-width: 190px;
    }
+
 
     .columna-right  .titulo-right h1{
     font-size: 0.9rem;
@@ -10259,22 +10235,25 @@ nav .buscador-esconder{
     flex-direction: row;
     width: 100%;
     }
-     
-     .plan-alimentacion{
-      width: 40%;
-      max-width: 380px;
-      display: flex;
-      flex-direction: column; 
-      }
 
-     /*CONTAINER DE PLAN POST Y DE PLAN POST LETRA*/
-     .plan-post-alimentacion{
-      width: 100%;
-      max-width: 350px;
-      display: flex;
-      flex-direction:row;
-      justify-content: space-between;
-       }
+     
+    .plan-alimentacion{
+    width: 40%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column; 
+    }
+
+
+    /*CONTAINER DE PLAN POST Y DE PLAN POST LETRA*/
+    .plan-post-alimentacion{
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    }
+
 
     .plan-post-imagen{
     width: 100%;
@@ -10285,17 +10264,16 @@ nav .buscador-esconder{
     
 
     .plan-post-imagen img{
-     width: 100%;
+    width: 100%;
     max-width: 130px;
     height: 85px;
     }
   
        
-
-
     .plan-post-letra h1{
     font-size: 1.2rem;
     }
+
 
     /*IMAGEN GANE*/
     .plan-imagen{
@@ -10305,8 +10283,8 @@ nav .buscador-esconder{
     }
 
 
-  /*PAGINA DE RECETAS PLAN, DIETA Y TURISMO-----------*/
-  /*..CONATINER COLUMNA POSTS Y ASIDE...*/
+    /*PAGINA DE RECETAS PLAN, DIETA Y TURISMO-----------*/
+    /*..CONATINER COLUMNA POSTS Y ASIDE...*/
     #container-plan{
     display: 100%;
     max-width: 1000px;
@@ -10316,112 +10294,122 @@ nav .buscador-esconder{
     }
 
 
-  #container-plan .container-columna-posts{
-  display: block;
-  position: relative;
-  float: left;
-  width: 900px; 
-  }
+   #container-plan .container-columna-posts{
+   display: block;
+   position: relative;
+   float: left;
+   width: 900px; 
+   }
  
-  .recetas-bloque{
+
+   .recetas-bloque{
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 900px;
-  }
+    }
+
+
     /*ELEMENTO-IMAGEN Y ELEMENTO-DESCRIPCION...*/
-  .elemento-post{
+   .elemento-post{
    width: 900px; 
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-
-  }
+   }
 
 
    .elemento-imagen{
-     display: block;
-     position: relative;
-     float: left;
+    display: block;
+    position: relative;
+    float: left;
     width: 40%;
     max-width: 310px;
     height: 210px;
     margin-right: 30px;
-   
-   }
+    }
 
-   .elemento-imagen img{
+
+    .elemento-imagen img{
     width: 100%;
     max-width: 310px;
     height: 100%;
     max-height: 210px;
-  }
+    }
+
 
     .elemento-descripcion{
-      display: block;
-      position: relative;
-      float: right;
-     width: 100%;
-     max-width: 500px;
+    display: block;
+    position: relative;
+    float: right;
+    width: 100%;
+    max-width: 500px;
     }
+
 
     #container-plan  .aside-plan{
-     display: block;
-     position: relative;
-     float: right;
-     width: 80px;
-   }
+    display: block;
+    position: relative;
+    float: right;
+    width: 80px;
+    }
 
-.quinto-segmento{
-  width: 100%;
-}
+    .quinto-segmento{
+    width: 100%;
+    }
+
+
     /*FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN...............................................................................*/
-      #footer{
-      clear: both;
-      position: relative;
+    #footer{
+    clear: both;
+    position: relative;
      display: block;
-      -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+    -webkit-box-shadow: 0px -3px 6px #DCDCDC;
      -moz-box-shadow: 0px -3px 6px #DCDCDC;
-      box-shadow: 0px -3px 6px  #DCDCDC;
-     width: 100%;
-     z-index: 100;
-     bottom: 0;  
-     background-color: #f4f4f4;
-     }
+    box-shadow: 0px -3px 6px  #DCDCDC;
+    width: 100%;
+    z-index: 100;
+    bottom: 0;  
+    background-color: #f4f4f4;
+    }
 
-      /*CAJA PRINCIPAL DEL PRIMER FOOTER............................................................... */
-      .footer-primero{
-      width: 100%;
-      margin: auto;
-      height: 200px; /*IMPORTANTE*/
-      display: flex;
-      flex-direction: row;
-      }
 
-      /*CAJA DE FOOD EMOTIONS E ICONOS SOCIALES Y BOX*/
-     .icon-email{
-      height: 200px;
-      width: 50%;
-      margin: auto;
-      }
+    /*CAJA PRINCIPAL DEL PRIMER FOOTER............................................................... */
+    .footer-primero{
+    width: 100%;
+    margin: auto;
+    height: 200px; /*IMPORTANTE*/
+    display: flex;
+    flex-direction: row;
+    }
 
-      /*CAGA DE FOOD EMOTION E ICONOS SOCIALES*/
-      #footer .icon-social1{
-      width: 100%;
-      height: 100px;
-      margin-left:0.1%;
-       }
+    /*CAJA DE FOOD EMOTIONS E ICONOS SOCIALES Y BOX*/
+    .icon-email{
+    height: 200px;
+    width: 50%;
+    margin: auto;
+    }
 
-     /*UL DE LAS REDES SOACILES*/
-    
-      #footer .box{
-       height: 80px;
-       }
+
+    /*CAGA DE FOOD EMOTION E ICONOS SOCIALES*/
+    #footer .icon-social1{
+    width: 100%;
+    height: 100px;
+    margin-left:0.1%;
+    }
+
+
+    /*UL DE LAS REDES SOACILES*/
+    #footer .box{
+    height: 80px;
+    }
+
 
     #footer .box form{
-      display: flex;
-      flex-direction: row;
+    display: flex;
+    flex-direction: row;
     }
+
 
     #footer .box input[type="text"]
     {
@@ -10434,6 +10422,7 @@ nav .buscador-esconder{
     border-radius: 5px 0 0 5px;
     }
     
+
      #footer .box input[type="submit"]{
       position: relative;
       left: -5px;  /*EL TRUCO IMPORTANTE*/
@@ -10450,28 +10439,30 @@ nav .buscador-esconder{
       font-family: 'Archivo Black', sans-serif;
     }
     
+
     .box input[type="submit"]:hover{
-      background: #639a3a;
+    background: #639a3a;
     }
     
 
     .menu-footer{
-      height: 200px;
-      margin: auto;
+    height: 200px;
+    margin: auto;
     }
+
 
     .footer-text{
     height: 25px;
     }
 
    
-      .menu-footer .footer-text h1{
-      font-size: 1rem;
-      word-spacing: -3px;
-      letter-spacing: -0.3px;
-      font-family: 'Archivo Black', sans-serif;
-      color: #2d2d2d;
-      }
+    .menu-footer .footer-text h1{
+    font-size: 1rem;
+    word-spacing: -3px;
+    letter-spacing: -0.3px;
+    font-family: 'Archivo Black', sans-serif;
+    color: #2d2d2d;
+    }
     
     
     .menu-footer .footer-lista p{
@@ -10482,15 +10473,18 @@ nav .buscador-esconder{
     font-family: 'Cabin', sans-serif;
     }
 
-       #footer #footer-second{
-       display: block;
-       margin-top: 20px;
-       height: 20px;
-      }
+
+    #footer #footer-second{
+    display: block;
+    margin-top: 20px;
+    height: 20px;
+    }
+
 
     #footer-second .final-food{
-      height: 20px;
+    height: 20px;
     }
+
 
     .final-food p{
       font-size: 0.8rem;
@@ -10503,122 +10497,111 @@ nav .buscador-esconder{
 
     
   /* 1081 A 1149 .........4...DESPUES DEL IPOD PRO..... */
-  
   @media only screen and (min-width: 1080px) and (max-width: 1149px){
-
-      #wrapper {
-      margin:0;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      background-color: aqua;
-    
-     }
+    #wrapper {
+    margin:0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
           
+
     #wrapper > * {
     padding: 20px;
     }
-      /*CONTAINER DE TODO EL BODY............................  */
-    
-      #container{
-      width: 100%;
-      margin: auto;
-      margin-top: 120px;
-      margin-bottom: 210px;
-     }
+
+
+    /*CONTAINER DE TODO EL BODY............................  */
+    #container{
+    width: 100%;
+    margin: auto;
+    margin-top: 120px;
+    margin-bottom: 210px;
+    }
      
+
     /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
     header{
-      display: block;
-      width:100%;
-      height: 55px;
-      top:0;
-      left: 0;
-      position: fixed;
-      z-index: 2000;   /*IMPORTANTE  */
-      margin: auto;
-      background-color: #fff;
-      box-shadow: 0 8px 6px -6px #c6c6c6;
-      }
+    display: block;
+    width:100%;
+    height: 55px;
+    top:0;
+    left: 0;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
+    }
     
 
-        header.black{
-        height: 55px;
-        background-color: #fff;
-       }
+    header.black{
+    height: 55px;
+    background-color: #fff;
+    }
   
     
-       
-       .cabecera{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 38px;
-        background-color: indigo;
-       }
+    .cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 38px;
+    }
            
 
-      /*caja */
-      .cabecera .logo{
-        display: block;
-        position: relative;
-        float: left;
-        width: 20%;
-     
-        height: 35px;
-      }
-                
-      .cabecera .logo img {
-        display: block;
-        width: 100%;
-        max-width: 140px;
-        min-width: 140px;
-     
-        height: 35px;
-        z-index: 40;
-       }
+    /*caja */
+    .cabecera .logo{
+    display: block;
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 35px;
+    }
+       
+    
+    .cabecera .logo img {
+    display: block;
+    width: 100%;
+    max-width: 140px;
+    min-width: 140px;
+    height: 35px;
+    z-index: 40;
+    }
            
-      /*CONTENEDOR  REVISTA Y SOCIALES*/
-     
-     
-      .suscribe{
-      display: block;
-      position: relative;
-      float: left;
-      width: 20%;
-      max-width: 120px;
-      height: 38px;
-      background-color: lightcoral;
-      }
+
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+    .suscribe{
+    display: block;
+    position: relative;
+    float: left;
+    width: 20%;
+    max-width: 120px;
+    height: 38px;
+    }
     
    
-     .suscribe a  h4{
-      font-size: 0.8rem;
-      margin-top: 10px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      font-family: 'Times New Roman', Times, serif;
-      z-index: 5;
-     
-      }
+    .suscribe a  h4{
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 5;
+    }
     
 
-
-      
-  
     /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-     .cabecera .menu-btn {
-      display: block;
-      position: relative;
-      float: left;
-      width: 10%;
-      max-width: 50px;
-      height: 38px;
-      margin: auto;
-      background-color: lightslategrey;
-      }
+    .cabecera .menu-btn {
+    display: block;
+    position: relative;
+    float: left;
+    width: 10%;
+    max-width: 50px;
+    height: 38px;
+    margin: auto;
+    }
 
     
     .menu-btn .hamburguesa{
@@ -10630,23 +10613,23 @@ nav .buscador-esconder{
     max-width: 40px;
      }
 
-       /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+       /*--- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------*/
      .menu-btn .hamburguesa .menu-btn__burger {
-        display: block;
-        position: relative;
-        float: right;
-        margin-top: 14.5px;
-        width: 37px;
-        height: 4px;
-        background: #2d2d2d;
-        border-radius: 2px;
-        transition: all .5s ease-in-out;
-        z-index: 1000;
-        }
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 14.5px;
+    width: 37px;
+    height: 4px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+    z-index: 1000;
+    }
     
 
 
-         /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+    /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
     .menu-btn__burger::before,
     .menu-btn__burger::after {
     content: '';
@@ -10707,11 +10690,9 @@ nav .buscador-esconder{
     }
 
 
-       /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
-  
-
-      /*..BUSCADOR PARA EL MOVIL..........................*/
-       /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+    /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+    /*..BUSCADOR PARA EL MOVIL..........................*/
+    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
        #controls-responsive{
         display: block;
         position: relative;
@@ -10722,78 +10703,82 @@ nav .buscador-esconder{
         margin: auto;
          }
     
-         #custom-search-input-responsive{
-         width:  100%;
-         height: 50px;
-         border: 1px solid #c9c9c9;
-         border-radius: 4px;
-         display: flex;
-         flex-direction: row;
-         justify-content: space-between;
-         margin: auto;
-         background-color: darksalmon;
-         }
+
+      #custom-search-input-responsive{
+      width:  100%;
+      height: 50px;
+      border: 1px solid #c9c9c9;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: auto;
+      }
     
     
      #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
-         display: block;
-         position: relative;
-         float: left;
-         width: 100%;
-       
-        }
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    }
     
-        input[type=text] {
-          width: 100%;
-          padding: 12px 20px;
-          margin: 8px 0;
-          box-sizing: border-box;
-        }
-         #controls-responsive .boton-responsive{
-           display: block;
-           position: relative;
-           float: right;
-         width: 10%;
-         padding: 12px 20px;
-         background-color: #ffffff;
-          }
-       /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
+    input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    }
+
+
+      #controls-responsive .boton-responsive{
+      display: block;
+      position: relative;
+      float: right;
+      width: 10%;
+      padding: 12px 20px;
+      background-color: #ffffff;
+      }
+      /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
       
+
       /*BUSCADOR EN EL NAV*/
-              
       nav  #controls {
-        width: 100%;
-        max-width: 300px;
-        height: 10%;
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-        margin-left: 20px;
-        background-color: #000000;
-        }
+      width: 100%;
+      max-width: 300px;
+      height: 10%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-left: 20px;
+      background-color: #000000;
+      }
   
-       nav  #controls #custom-search-input-header{
-                width: 100%;
-                max-width: 300px;
-                }
+
+      nav  #controls #custom-search-input-header{
+      width: 100%;
+      max-width: 300px;
+      }
           
-                .buscador #controls   #custom-search-input-header .sin-borde{
-                    display: none;
-                    visibility: hidden;
-                  }
-                /*DIV DEL MENU GRANDE*/
+      .buscador #controls   #custom-search-input-header .sin-borde{
+      display: none;
+      visibility: hidden;
+      }
+      /*DIV DEL MENU GRANDE*/
           
-                #controls-responsive .boton{
-                  width: 8%;
-                }
+      #controls-responsive .boton{
+      width: 8%;
+      }
    /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
   /*margin-left: 5.4%;/*IMPORTANTE */
 
-  #controls{
+    #controls{
     display: none;
-   visibility: hidden;
-  }
-  nav{
+    visibility: hidden;
+    }
+
+
+    nav{
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -10810,7 +10795,8 @@ nav .buscador-esconder{
      z-index: 200;
     }
 
-  nav .logo-esconder{
+
+    nav .logo-esconder{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -10818,85 +10804,90 @@ nav .buscador-esconder{
     margin-top: 30px;
     height: 30px;
     border-bottom: 1px solid #aaaaaa;
+   }
 
-  }
 
-  nav .logo-esconder img{
+    nav .logo-esconder img{
     width: 100%;
     max-width: 120px;
     margin-left: 20px;
-  }
+   }
 
-  nav .buscador-esconder{
+
+    nav .buscador-esconder{
     display: flex;
     flex-direction: column;
     width: 100%;
     visibility: visible;
     margin-top: 20px;
     height: 50px;
+    }
 
-  }
 
     .d-flex{
-      width: 100%;
-      max-width: 350px;
-      height: 50px;
-      display: flex;
-      flex-direction: row;
-      margin-left: 18px;
+    width: 100%;
+    max-width: 350px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 18px;
     }
+
 
     #custom-search{
-      width: 100%;
-      max-width: 330px;
-      height: 50px;
+    width: 100%;
+    max-width: 330px;
+    height: 50px;
     }
+
 
     #custom-search .sin-borde{
-      width: 90%;
-      max-width: 310px;
-      height: 40px;
+    width: 90%;
+    max-width: 310px;
+    height: 40px;
     }
 
+
     #custom-search .boton{
-      width: 10%;
-      max-width: 20px;
-      height: 40px;
+    width: 10%;
+    max-width: 20px;
+    height: 40px;
     }
-   nav .nav .esconder{
-     visibility: visible;
-   }
+
+
+    nav .nav .esconder{
+    visibility: visible;
+    }
   
     nav .nav li a.active{
-      text-decoration:line-through;
-      color: #568632;
-      }
+    text-decoration:line-through;
+    color: #568632;
+    }
   
-     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-      .cabecera nav .nav{
-      width:100%; 
-      height: 100%;
-      max-height: 950px;
-      max-width: 340px;
-      display: flex;
-      flex-direction: column;
-    
-       margin-left: 6px;
-            margin-top: 10px;
-            overflow-y: scroll;
-       z-index: 99; 
-       background-color: darkslateblue;
-      }
+
+    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+    .cabecera nav .nav{
+    width:100%; 
+    height: 100%;
+    max-height: 950px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+    margin-top: 10px;
+    overflow-y: scroll;
+    z-index: 99; 
+    }
   
-       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-      nav .nav li{
-       
-      list-style: none;
-      height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-      margin-left: 10px;
-      margin-bottom: 15px;
-      cursor:pointer;
-      }
+
+    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+    list-style: none;
+    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 15px;
+    cursor:pointer;
+    }
       
       nav .nav li a {
       z-index: 100;
@@ -10917,16 +10908,17 @@ nav .buscador-esconder{
        
       
    
-        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
      /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-        nav .nav li:hover > ul {
-         display: block;
-        margin-left: -200px;
-        height: 200px;
-        visibility: visible; 
-        z-index: 598;
-        }
-  
+    nav .nav li:hover > ul {
+    display: block;
+    margin-left: -200px;
+    height: 200px;
+    visibility: visible; 
+    z-index: 598;
+    }
+
+    
       nav .nav li ul li a{
       font-size: 1rem;
       display: block;
@@ -10936,13 +10928,13 @@ nav .buscador-esconder{
       padding-bottom: -2px;
       margin-left: -76px;
       }
+
   
-       nav .nav ul {
-      visibility: hidden;
-      }
+    nav .nav ul {
+    visibility: hidden;
+    }
   
-        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
-    
+    /* f......FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.....MENU ESCONIDDO DEL NAV ARROW......*/
    /*ANIMACION SUBRAYADO */
    nav a {
    display: inline-block;
@@ -10970,26 +10962,30 @@ nav .buscador-esconder{
     height: 2px;
     background: white;
     }
-
-
       /*PORTADA*/
        
-/*ES PARA SEPARAR EL BUSCADOR DE LA PORTADA*/
-.portada-receta-img2 {
-  margin-bottom: 7.5%;
-  }
-  .portada-nutricion-img2 {
+   /*ES PARA SEPARAR EL BUSCADOR DE LA PORTADA*/
+   .portada-receta-img2 {
+    margin-bottom: 7.5%;
+   }
+
+
+   .portada-nutricion-img2 {
     margin-bottom: 7.5%;
     }
-  .portada-perder-img2 {
+
+
+    .portada-perder-img2 {
     margin-bottom: 7.5%;
     }
-    .portada-turismo-img2 {
+
+
+      .portada-turismo-img2 {
       margin-bottom: 7.5%;
       }
       
    /*FIN ES PARA SEPARAR EL BUSCADOR DE LA PORTADA*/
-           /** INDEX CONTAINER SEGUNDO TITULO DE LA PORTADA QUE SE MUEVE*/
+    /** INDEX CONTAINER SEGUNDO TITULO DE LA PORTADA QUE SE MUEVE*/
    .portada-titulo{
     display: flex;
     justify-content: center;
@@ -11046,17 +11042,17 @@ nav .buscador-esconder{
   width: 45%;
  }
 
- /*---PORTADA CONTACTO SEGUNDO PARRAFO----*/
-/*PROUDLY CRAFTED*/
-.portada .portada-contacto-dos{
+  /*---PORTADA CONTACTO SEGUNDO PARRAFO----*/
+  /*PROUDLY CRAFTED*/
+  .portada .portada-contacto-dos{
   position: absolute;
   overflow: hidden;
   top: 47%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
   left: 50px ;
   width: 40%;
- }
+   }
 
- /*PORTADA CONTACTO*/
+  /*PORTADA CONTACTO*/
  .portada .portada-contacto-tres{
   position: absolute;
   overflow: hidden;
@@ -11067,31 +11063,30 @@ nav .buscador-esconder{
 
 
         /*PRIMER TITULO DE LA PORTADA CON LETRAS EN MOVIMIENOT*/
-.portada .portada-contacto-uno .azulplata{
+  .portada .portada-contacto-uno .azulplata{
   line-height: 1.3;
   font-size: 1.5rem;
- 
-}
-/*--FORMA PARTE DEL .AZULPLATA PORQUE CAMBIE ESTILO DENTRO DE UN PARRAFO-----------------------*/
- .portada .portada-contacto-uno .otroestilo { 
+   }
 
+   /*--FORMA PARTE DEL .AZULPLATA PORQUE CAMBIE ESTILO DENTRO DE UN PARRAFO-----*/
+  .portada .portada-contacto-uno .otroestilo { 
    font-size:  1.3rem ;
-  
   }
 
-  .portada .portada-contacto-dos h6 {
+    .portada .portada-contacto-dos h6 {
     font-size: 1.4rem;
-  }
+    }
+
  
    /*PORTADA DE CONTACTO NO BORRAR*/
-.portada span h2{
+  .portada span h2{
   color:#639a3a;
   padding: 5px 6px 5px 7px;
   word-spacing: -1px;
   margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
   font-family: 'Cabin', sans-serif;
   font-size: 0.9rem;
-}
+  }
 
    
 
@@ -11099,10 +11094,10 @@ nav .buscador-esconder{
  .titulo-principal{
   width: 100%;
   max-width: 700px;
- display: flex;
- flex-direction: row;
- justify-content: space-between;
- margin-bottom: 2px; /*RELACIONANDO CON DOS COLUMNAS SEGUNDA*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2px; /*RELACIONANDO CON DOS COLUMNAS SEGUNDA*/
   }
 
 
@@ -11120,33 +11115,32 @@ nav .buscador-esconder{
 
 
 
-.titulo-principal  .escrito a h1{
-font-size: 2.1rem;
-width: 600px;
+  .titulo-principal  .escrito a h1{
+  font-size: 2.1rem;
+  width: 600px;
+  letter-spacing: -0.9px;
+    }
 
-letter-spacing: -0.9px;
-}
+    /*------------------------------------------------------------*/
 
-/*------------------------------------------------------------*/
-
- .titulo{
+   .titulo{
    width: 100%;
- display: flex;
- flex-direction: row;
- margin-bottom: 2px; /*RELACIONANDO CON DOS COLUMNAS SEGUNDA*/
-  }
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 2px; /*RELACIONANDO CON DOS COLUMNAS SEGUNDA*/
+   }
 
 
-  .titulo  .escrito{
-  display: block;
+   .titulo  .escrito{
+   display: block;
+   }
 
-  }
 
    .titulo  .vacio{
- display: block;
- width: 5%;
- max-width: 80px;
-  }
+   display: block;
+   width: 5%;
+   max-width: 80px;
+   }
 
 
  .titulo .escrito h1{
@@ -11156,32 +11150,30 @@ letter-spacing: -0.9px;
   letter-spacing: -0.9px;
   }
 
-.titulo .escrito a h1{
-font-size: 2.1rem;
-width: 900px;
-letter-spacing: -0.9px;
-}
-
-
-.titulo .escrito a p{
-font-size: 1.6rem;
-width: 600px;
-}
-
-.titulo .escrito  p{
- font-size: 1.6rem;
+ .titulo .escrito a h1{
+ font-size: 2.1rem;
  width: 900px;
+  letter-spacing: -0.9px;
+  }
+
+
+  .titulo .escrito a p{
+   font-size: 1.6rem;
+   width: 600px;
+    }
+
+  .titulo .escrito  p{
+  font-size: 1.6rem;
+  width: 900px;
  }
 
 
-  
-   /*..TITULO E LA RECETA DE PAGINA RECETAS SALUDABLES*/
-   
-   .primer-segmento{
+     /*..TITULO E LA RECETA DE PAGINA RECETAS SALUDABLES*/
+    .primer-segmento{
      width: 100%;
      display: flex;
      margin-top: 40px;
-   }
+     }
   
        /*caja */
      .primer-segmento .tres{
@@ -11206,25 +11198,24 @@ width: 600px;
     }
   
  
-      /*SEGMENTO DE LOS POSTS ULTIMOS............................................................................2  */
-  /*SEGMENTO DE LOS POSTS ULTIMOS............................................................................2  */
-  .dos-columnas{
+      /*SEGMENTO DE LOS POSTS ULTIMOS.............................2  */
+  /*SEGMENTO DE LOS POSTS ULTIMOS........................2  */
+     .dos-columnas{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: auto;
     margin-top: 40px;
-  
     }
+
   
-     .dos-columnas .columna-left{
+      .dos-columnas .columna-left{
       width: 70%;
-     max-width: 700px;
+      max-width: 700px;
       display: block;
       position: relative;
       float: left;
-  
      }
   
      .bloque-ultimo{
@@ -11241,7 +11232,8 @@ width: 600px;
       justify-content: space-between;
       margin-bottom: 20px;
       }
-  
+
+      
       .posts-ultimos-imagen{
       display:block;
       position: relative;
@@ -11249,15 +11241,14 @@ width: 600px;
       width: 45%;
       max-width: 260px;
       margin-right: 17px;
-    
-    }
+     }
   
     .posts-ultimos-imagen img{
       width: 100%;
       max-width: 250px;
       height: 100%;
       max-height: 160px;
-    }
+     }
    
     .posts-ultimos-titulo{
       display:block;
@@ -11409,7 +11400,7 @@ width: 600px;
   }
 
     /* FOOTER .......................*/
-     #footer{
+    #footer{
      display: block;
      position: relative;
      float: left;
@@ -11449,22 +11440,21 @@ width: 600px;
   #footer .icon-social1 p{
     font-size: 1.2rem;
   }
-        #footer .box{
-          height: 100px;
-    
-        }
-         
-        
-    
+
+
+  #footer .box{
+  height: 100px;
+  }
+        
  
-      .menu-footer h1{
-      padding-bottom: 30px;
-      font-size: 1.1rem;
-      word-spacing: -3px;
-      letter-spacing: -0.3px;
-      font-family: 'Archivo Black', sans-serif;
-      color: #2d2d2d;
-      }
+    .menu-footer h1{
+    padding-bottom: 30px;
+    font-size: 1.1rem;
+    word-spacing: -3px;
+    letter-spacing: -0.3px;
+    font-family: 'Archivo Black', sans-serif;
+    color: #2d2d2d;
+    }
     
     
     .menu-footer p{
@@ -11502,7 +11492,6 @@ width: 600px;
         margin: 0 auto;
         margin-left: auto;
         margin-right: auto;
-        background-color: gray;
        }
     
     
@@ -11559,7 +11548,6 @@ width: 600px;
           justify-content: space-between;
           height: 38px;
           margin-top: -10px;
-          background-color: indigo;
          }
              
   
@@ -11592,7 +11580,6 @@ width: 600px;
         width: 20%;
         max-width: 120px;
         height: 38px;
-        background-color: lightcoral;
         }
       
      
@@ -11619,7 +11606,6 @@ width: 600px;
         max-width: 50px;
         height: 38px;
         margin: auto;
-        background-color: lightslategrey;
         }
   
       
@@ -11790,64 +11776,70 @@ width: 600px;
       bottom: 0;
       left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
       opacity: 0.97;
-       background-color: #000000;
-       overflow-y: scroll;
-       z-index: 200;
+      background-color: #000000;
+      overflow-y: scroll;
+      z-index: 200;
       }
   
+
     nav .logo-esconder{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      visibility: visible;
-      margin-top: 30px;
-      height: 30px;
-      border-bottom: 1px solid #aaaaaa;
-  
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    visibility: visible;
+    margin-top: 30px;
+    height: 30px;
+    border-bottom: 1px solid #aaaaaa;
     }
   
     nav .logo-esconder img{
-      width: 100%;
-      max-width: 120px;
-      margin-left: 20px;
+    width: 100%;
+    max-width: 120px;
+    margin-left: 20px;
     }
   
+
     nav .buscador-esconder{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      visibility: visible;
-      margin-top: 20px;
-      height: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    visibility: visible;
+    margin-top: 20px;
+    height: 50px;
+     }
   
+
+    .d-flex{
+    width: 100%;
+    max-width: 350px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 18px;
     }
   
-      .d-flex{
-        width: 100%;
-        max-width: 350px;
-        height: 50px;
-        display: flex;
-        flex-direction: row;
-        margin-left: 18px;
-      }
-  
+
       #custom-search{
         width: 100%;
         max-width: 330px;
         height: 50px;
       }
   
+
       #custom-search .sin-borde{
         width: 90%;
         max-width: 310px;
         height: 40px;
       }
   
+
       #custom-search .boton{
         width: 10%;
         max-width: 20px;
         height: 40px;
       }
+
+
      nav .nav .esconder{
        visibility: visible;
      }
@@ -11869,7 +11861,6 @@ width: 600px;
         margin-top: 10px;
         overflow-y: scroll;
          z-index: 99; 
-         background-color: darkslateblue;
         }
     
          /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
@@ -11898,34 +11889,34 @@ width: 600px;
          /*IMPORTANTE*/
     
          
-        
-     
-          /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-       /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-          nav .nav li:hover > ul {
-           display: block;
-          margin-left: -200px;
-          height: 200px;
-          visibility: visible; 
-          z-index: 598;
-          }
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+      /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover > ul {
+      display: block;
+      margin-left: -200px;
+      height: 200px;
+      visibility: visible; 
+      z-index: 598;
+      }
+
     
-        nav .nav li ul li a{
-        font-size: 1rem;
-        display: block;
-        max-width: 200px;
-        width: 100%;
-        margin-left: -2px;
-        padding-bottom: -2px;
-        margin-left: -76px;
-        }
+      nav .nav li ul li a{
+      font-size: 1rem;
+      display: block;
+      max-width: 200px;
+      width: 100%;
+      margin-left: -2px;
+      padding-bottom: -2px;
+      margin-left: -76px;
+      }
     
-         nav .nav ul {
-        visibility: hidden;
-        }
+
+      nav .nav ul {
+      visibility: hidden;
+      }
     
-          /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
-      
+
+    /* f...FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.......MENU ESCONIDDO DEL NAV ARROW......*/
      /*ANIMACION SUBRAYADO */
      nav a {
      display: inline-block;
@@ -11935,6 +11926,7 @@ width: 600px;
      z-index: 40;
      }
     
+
       nav  a:after {
      content: "";
      display: block;
@@ -12337,7 +12329,6 @@ width: 600px;
     flex-direction: row;
     margin: auto;
     margin-bottom: 60px; /*ESPACIO UN BLOQU DEL OTRO */
-    background-color: green;
     }
      
 
@@ -12358,26 +12349,29 @@ width: 600px;
   justify-content: space-between;
    }
 
-   .plan-post-imagen{
+
+    .plan-post-imagen{
     width: 40%;
     max-width: 150px;
-   height: 95px;
-   }
-
-   .plan-post-imagen img{
-    width: 100%;
-    max-width: 150px;
-   height: 95px;
+    height: 95px;
     }
 
+
+    .plan-post-imagen img{
+    width: 100%;
+    max-width: 150px;
+    height: 95px;
+    }
+
+
     .plan-post-letra{
-      width: 60%;
-      max-width: 350px;
-      margin-right: 34px;
+    width: 60%;
+    max-width: 350px;
+    margin-right: 34px;
     }
 
     .plan-post-letra h1{
-      font-size: 1.1rem;
+    font-size: 1.1rem;
     }
 
    /*IMAGEN GRANDE*/
@@ -12395,14 +12389,16 @@ width: 600px;
 
     .quinto-segmento{
       width: 100%;
-
     }
+
+
    /*...FOOTER....*/
     /*CAJA DE FOOD REDES Y BOX*/
 
      #footer{
        background-color: #f4f4f4;
      }
+
 
      .footer-primero{
        width: 100%;
@@ -12470,7 +12466,6 @@ width: 600px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: orangered;
   }
         
   #wrapper > * {
@@ -12514,7 +12509,6 @@ width: 600px;
         flex-direction: row;
         justify-content: space-between;
         height: 38px;
-        background-color: indigo;
        }
            
 
@@ -12546,7 +12540,6 @@ width: 600px;
       width: 20%;
       max-width: 120px;
       height: 38px;
-      background-color: lightcoral;
       }
     
    
@@ -12560,9 +12553,6 @@ width: 600px;
      
       }
     
-
-
-      
   
     /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
      .cabecera .menu-btn {
@@ -12573,7 +12563,6 @@ width: 600px;
       max-width: 50px;
       height: 38px;
       margin: auto;
-      background-color: lightslategrey;
       }
 
     
@@ -12820,17 +12809,14 @@ width: 600px;
       max-width: 340px;
       display: flex;
       flex-direction: column;
-    
-       margin-left: 6px;
-            margin-top: 10px;
-            overflow-y: scroll;
-       z-index: 99; 
-       background-color: darkslateblue;
+      margin-left: 6px;
+      margin-top: 10px;
+      overflow-y: scroll;
+      z-index: 99; 
       }
   
        /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
       nav .nav li{
-       
       list-style: none;
       height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
       margin-left: 10px;
@@ -12838,6 +12824,7 @@ width: 600px;
       cursor:pointer;
       }
       
+
       nav .nav li a {
       z-index: 100;
       background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
@@ -12851,7 +12838,6 @@ width: 600px;
       padding-top: 0;
       margin-top: 0;
       }
-    
        /*IMPORTANTE*/
   
        
@@ -12859,14 +12845,15 @@ width: 600px;
    
         /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
      /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-        nav .nav li:hover > ul {
-         display: block;
-        margin-left: -200px;
-        height: 200px;
-        visibility: visible; 
-        z-index: 598;
-        }
+      nav .nav li:hover > ul {
+      display: block;
+      margin-left: -200px;
+      height: 200px;
+      visibility: visible; 
+      z-index: 598;
+      }
   
+
       nav .nav li ul li a{
       font-size: 1rem;
       display: block;
@@ -12881,8 +12868,8 @@ width: 600px;
       visibility: hidden;
       }
   
-        /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
-    
+
+    /* f...FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.....MENU ESCONIDDO DEL NAV ARROW......*/
    /*ANIMACION SUBRAYADO */
    nav a {
    display: inline-block;
@@ -12913,23 +12900,24 @@ width: 600px;
 
 
     /*CONTENEDORES DE LOS TITULOS AISLADOS .......DE MEDIA QUERY 500 MAIXMO........*/
-  .titulo .escrito h1{
-  font-size: 2.3rem;
-  }
+   .titulo .escrito h1{
+   font-size: 2.3rem;
+   }
   
-  .titulo .escrito a h1{
-  font-size:  2.3rem;
-  }
+   .titulo .escrito a h1{
+   font-size:  2.3rem;
+   }
 
-  .titulo .escrito h2{
-  font-size: 1.8rem;
-  }
+   .titulo .escrito h2{
+   font-size: 1.8rem;
+   }
     
-  /*..TITULO E LA RECETA DE PAGINA RECETAS SALUDABLES*/
+
+   /*..TITULO E LA RECETA DE PAGINA RECETAS SALUDABLES*/
   .primer-segmento{
-  width: 100%;
-  display: flex;
-  margin-top: 40px;
+   width: 100%;
+   display: flex;
+   margin-top: 40px;
    }
     
          /*caja */
@@ -12938,6 +12926,7 @@ width: 600px;
     max-width: 340px;
     }
     
+
     .primer-segmento img{
     width: 100%;
     max-width: 340px;
@@ -12945,6 +12934,7 @@ width: 600px;
     border-radius: 3px;
     }
   
+
     .primer-segmento .tres h1{
     font-size: 1.4rem ;
     }
@@ -13163,24 +13153,21 @@ width: 600px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: olivedrab;
   }
       
-#wrapper > * {
-padding: 28px;
-}
+   #wrapper > * {
+   padding: 28px;
+   }
   /*CONTAINER DE TODO EL BODY............................  */
 
-#container{
+  #container{
   width: 100%;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 300px;
-}
+   }
 
  
-
-
    /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
    header{
     display: block;
@@ -13202,14 +13189,12 @@ padding: 28px;
      }
 
   
-     
      .cabecera{
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       height: 38px;
-      background-color: indigo;
      }
          
 
@@ -13241,7 +13226,6 @@ padding: 28px;
     width: 20%;
     max-width: 120px;
     height: 38px;
-    background-color: lightcoral;
     }
   
  
@@ -13252,12 +13236,9 @@ padding: 28px;
     letter-spacing: 0.2px;
     font-family: 'Times New Roman', Times, serif;
     z-index: 5;
-   
     }
   
 
-
-    
 
   /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
    .cabecera .menu-btn {
@@ -13268,7 +13249,6 @@ padding: 28px;
     max-width: 50px;
     height: 38px;
     margin: auto;
-    background-color: lightslategrey;
     }
 
   
@@ -13281,7 +13261,7 @@ padding: 28px;
   max-width: 40px;
    }
 
-     /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+     /*---- box-shadow: 0 2px 5px rgba(255,101,47,.2);----------*/
    .menu-btn .hamburguesa .menu-btn__burger {
       display: block;
       position: relative;
@@ -13409,8 +13389,8 @@ padding-left: 3px; /*MUEVE LA LETRA*/
 background-color: #f8f8f8;
 }
 
-/*BOTOM BUSCADOR */
-#controls .boton{
+  /*BOTOM BUSCADOR */
+   #controls .boton{
   padding-left:2px; /*MUEVE LA LETRA*/
   width: 15%;
   max-width: 30px;
@@ -13423,39 +13403,34 @@ background-color: #f8f8f8;
  }
 
 
-input::placeholder {
-width: 250px;
-font-size: 0.9rem;
-color: #2d2d2d;
-}
-
-
-
-
-
-  
+   input::placeholder {
+   width: 250px;
+   font-size: 0.9rem;
+   color: #2d2d2d;
+   }
     /*BUSCADOR EN EL NAV*/
             
   
     
-nav{
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-  max-width: 420px;
-  height: 100%;
-  max-height: 1200px;
-  top:0;
-  bottom: 0;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  opacity: 0.97;
+  nav{
+   display: flex;
+   flex-direction: column;
+   position: fixed;
+   width: 100%;
+   max-width: 420px;
+   height: 100%;
+   max-height: 1200px;
+   top:0;
+   bottom: 0;
+   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+   opacity: 0.97;
    background-color: #000000;
    overflow-y: scroll;
    z-index: 200;
   }
 
-nav .logo-esconder{
+
+  nav .logo-esconder{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -13463,61 +13438,65 @@ nav .logo-esconder{
   margin-top: 30px;
   height: 30px;
   border-bottom: 1px solid #aaaaaa;
+  }
 
-}
-
-nav .logo-esconder img{
+  nav .logo-esconder img{
   width: 100%;
   max-width: 120px;
   margin-left: 20px;
-}
+   }
 
-nav .buscador-esconder{
+  nav .buscador-esconder{
   display: flex;
   flex-direction: column;
   width: 100%;
   visibility: visible;
   margin-top: 20px;
   height: 50px;
+   }
 
-}
 
-  .d-flex{
+   .d-flex{
     width: 100%;
     max-width: 350px;
     height: 50px;
     display: flex;
     flex-direction: row;
     margin-left: 18px;
-  }
+   }
 
-  #custom-search{
+   #custom-search{
     width: 100%;
     max-width: 330px;
     height: 50px;
-  }
+   }
 
-  #custom-search .sin-borde{
+
+   #custom-search .sin-borde{
     width: 90%;
     max-width: 310px;
     height: 40px;
-  }
+   }
 
-  #custom-search .boton{
+
+    #custom-search .boton{
     width: 10%;
     max-width: 20px;
     height: 40px;
-  }
- nav .nav .esconder{
-   visibility: visible;
- }
+    }
 
-  nav .nav li a.active{
+
+   nav .nav .esconder{
+   visibility: visible;
+   }
+
+    nav .nav li a.active{
     text-decoration:line-through;
     color: #568632;
     }
 
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+
+    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
     .cabecera nav .nav{
     width:100%; 
     height: 100%;
@@ -13525,17 +13504,15 @@ nav .buscador-esconder{
     max-width: 340px;
     display: flex;
     flex-direction: column;
-  
-     margin-left: 6px;
-          margin-top: 10px;
-          overflow-y: scroll;
+    margin-left: 6px;
+    margin-top: 10px;
+    overflow-y: scroll;
      z-index: 99; 
-     background-color: darkslateblue;
     }
+
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
     nav .nav li{
-     
     list-style: none;
     height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
     margin-left: 10px;
@@ -13543,6 +13520,7 @@ nav .buscador-esconder{
     cursor:pointer;
     }
     
+
     nav .nav li a {
     z-index: 100;
     background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
@@ -13562,15 +13540,16 @@ nav .buscador-esconder{
      
     
  
-      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
-       display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
-      }
+    nav .nav li:hover > ul {
+    display: block;
+    margin-left: -200px;
+    height: 200px;
+    visibility: visible; 
+    z-index: 598;
+    }
+
 
     nav .nav li ul li a{
     font-size: 1rem;
@@ -13582,30 +13561,32 @@ nav .buscador-esconder{
     margin-left: -76px;
     }
 
+
      nav .nav ul {
     visibility: hidden;
     }
 
-      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
-  
- /*ANIMACION SUBRAYADO */
- nav a {
- display: inline-block;
- position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
 
-  nav  a:after {
- content: "";
- display: block;
- margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
- height: 2px;
- width: 0px;
- transition: all .8s;
- z-index: 10;
- }
+    /* f...FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV......MENU ESCONIDDO DEL NAV ARROW....*/
+  
+   /*ANIMACION SUBRAYADO */
+   nav a {
+   display: inline-block;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   z-index: 40;
+   }
+
+   nav  a:after {
+  content: "";
+  display: block;
+  margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+  height: 2px;
+  width: 0px;
+  transition: all .8s;
+  z-index: 10;
+  }
 
 
   /* width: 100%;*/
@@ -13615,13 +13596,15 @@ nav .buscador-esconder{
   height: 2px;
   background: white;
   }
-   .portada{
+
+
+    .portada{
     width: 100%;
     margin: auto;
     max-height: 650px;
     padding-top: 3.7%;
     z-index: 100;
-  }
+    }
 
  
   
@@ -13717,7 +13700,7 @@ nav .buscador-esconder{
 
    .post-ultimo-titulo a p{
      font-size: 1.3rem;
-  }
+    }
     
       .posts-ultimos-imagen{
       display:block;
@@ -13725,10 +13708,10 @@ nav .buscador-esconder{
       float: left;
       width: 45%;
       max-width: 260px;
-      margin-right: 17px;
-    
-    }
+      margin-right: 17px; 
+     }
   
+
     .posts-ultimos-imagen img{
       width: 100%;
       max-width: 250px;
@@ -13736,13 +13719,15 @@ nav .buscador-esconder{
       max-height: 160px;
     }
    
+
     .posts-ultimos-titulo{
       display:block;
       position: relative;
       float: right;
       width: 40%;
      }
-  
+
+     
     .posts-ultimos-titulo  h1{
       font-size: 1.6rem;
      }
@@ -13753,6 +13738,7 @@ nav .buscador-esconder{
     flex-direction: column;
     }
   
+
     /*..........  background-color: #e9e9e9;...*/
     .dos-columnas .columna-right{
     display: block;
