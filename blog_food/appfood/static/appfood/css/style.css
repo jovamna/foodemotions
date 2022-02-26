@@ -323,14 +323,17 @@ margin-top: 18px;
     display: block;
     float: right;
     margin-top: 6px;
+ 
     }
  
      /*---LI---*/
    nav .nav li{
    display:block;
    float:left;
+   position: relative;
+   margin-left: 40px;
    list-style: none;
-   padding: 2px 16px 22px 2px;
+
    }
    
   
@@ -390,17 +393,18 @@ margin-top: 18px;
   /*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS   float:none*/
   nav .nav ul li {
   width: 200px;
-  float: none;
+ float: left;
   margin-left: -10px; /*IMPORTANTE MUEVE */   
   height: 100%;
+  background-color: rosybrown;
   }
 
        /* enlaces de los items del menu desplegable*/
        nav .nav ul a {
         line-height:120%;
         padding:10px 15px;
-         background-color: #000000;
-         color: #fff;
+        background-color: #fff;
+        color: #000000;
          font-size: 0.7rem;
          width: 100%;
          }

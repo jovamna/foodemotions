@@ -506,7 +506,7 @@ nav .logo-esconder .emoticon{
   }
 
  .buscador-esconder #custom-search input[type=text]{
-   box-sizing: border-box;
+   box-sizing: broder-box;
  }
 
  .buscador-esconder .d-flex #custom-search .sin-borde{

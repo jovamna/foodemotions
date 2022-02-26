@@ -291,7 +291,8 @@
                     </a>
                     </div>
                     
-                </div>
+            </div>
+            <!---FIN LOGO ESCONDER----------------------------->
 
              <div class="buscador-esconder"> 
               <form class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
@@ -309,6 +310,8 @@
                </form>                 
            
            </div>
+
+           <!-----------------------------UL------------------------------------------>
 
            <ul class="nav">
                
@@ -353,16 +356,27 @@
                 <a class="{% active 'appfood:noticias-turismo-gastronomico' %}"  href="{% url 'appfood:noticias-turismo-gastronomico' %}">Turismo</a>    
                 </li>
               
-                <li> 
-                <a class="{% active 'appfood:nosotros' %} " href="{% url 'appfood:nosotros' %}">Nosotros</a> 
-               </li>
+                
 
-                 <li> 
+                
+                <li> 
                 <a class="{% active 'appfood:contacto' %} " href="{% url 'appcontact:contacto' %}">
                 Contacto
+               <i class ="fa fa-caret-down"></i>
                 </a> 
                 
+                <ul>
+                <li> 
+                <a class="{% active 'appfood:nosotros' %} " href="{% url 'appfood:nosotros' %}">Nosotros
+                </a> 
+                </li>
+                </ul>
+
+                
                 </li>  
+
+
+
            </ul>
           
            <!------------------------------------------------------------------->

@@ -104,9 +104,11 @@
     <body>
     <!-- CONTAINER GENERAL  -->
     <div id="wrapper">
-            <header>
-                <div class="cabecera">
-                   <div class="icon-social">
+        <header>
+ 
+            <div class="cabecera">
+
+                <div class="icon-social">
                          <ul class="social2">
                          <li> <a href="malito:contacto@foodingemotion.com" target="_blank">
                                 <i class="far fa-envelope"></i> </a></li>
@@ -118,43 +120,41 @@
                                 <i class="fab fa-instagram"></i> </a></li>
                          </ul>
                   </div>
+
+
                   <div class="logo">
-                        <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
-                        <img src="{% static 'appfood/img/logo/981-219-logo-nosotros.png' %}" alt="Food Emotions">
-                    </a>
+                  <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">
+                  <img src="{% static 'appfood/img/logo/981-219-logo-nosotros.png' %}" alt="Food Emotions">
+                  </a>
                   </div>
 
               
-                                <div class="suscribe">
-                                <a href="{% url 'appcontact:contacto' %}">   
-                                <h4>suscribete</h4>  
-                                </a>
-                                </div>
-                                <!---------------MENU RESPONSIVE -------------------->              
-                 
-                                                <!----FIN  MENU RESPONSIVE ------->
-                                     <!-----FIN  BOLETIN -------------->
+                  <div class="suscribe">
+                  <a href="{% url 'appcontact:contacto' %}">   
+                  <h4>suscribete</h4>  
+                  </a>
+                  </div>
+                  <!-----FIN  BOLETIN -------------->
 
-                 </div>  <!-----FIN  CABECERA------------------------------------------------------------------------------------->
+
+             </div>  
+            <!-----FIN  CABECERA------------------------------------------------------------------------------------->
 
 
   <!---CABECERA RESPONSIVE------------------CABECERA--RESPONSIVE---CABECERA--RESPONSIVE------->
+<div class="cabecera-responsive">
 
-     <div class="cabecera-responsive">
-                          <div class="logo">
-                     <a  href="{% url 'appfood:index' %}">
-                     <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Fooding Emotion"> 
-                     </a>
-                     </div>
-
+            <div class="logo">
+            <a  href="{% url 'appfood:index' %}">
+            <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Fooding Emotion"> 
+            </a>
+            </div>
             <!---------------------------------------------------------------------------->
        
-  
-
-  <!-------------------------------------------------------->
-             <div id="controls">
-                 <form class="buscador" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
-                  <!------------------------------------------------------------------>
+           <!-------------------------------------------------------->
+          <div id="controls">
+          <form class="buscador" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+          <!------------------------------------------------------------------>
                     <div id="custom-search-input-header">
 	                  <input id="ducks" type="text"  name="q" 
                     value= "{{ request.GET.q }}" class="sin-borde" 
@@ -165,28 +165,17 @@
                   </button>
                   </div>
                 <!--------------------------------------------------------------------->
-               </form>                 
-             </div>
-           <!---------------------------------------------------------------->
-
+        </form>                 
+        </div>
+        <!---------------------------------------------------------------->
+            <div class="suscribe">
+            <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
+            <h4>SUSCRIBETE</h4>  
+            </a>
+            </div>
       <!------------------------------------------------------------------------->
-      <!---------------------------------------------------------------------------------------------------------------->
-                      <div class="suscribe">
-                   
-                         <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
-                    <h4>SUSCRIBETE</h4>  
-                    </a>
-                   
-                      </div>
-
-      <!---------------------------------------------------------------------------->
-         
-
-     <!------------------------------------------------------------------------------------------------>
-        
-              
- 
-
+      
+      <!------------------------------------------------------------------------->
                     <div class="menu-btn"> 
                      <!---------------MENU RESPONSIVE -------------->
                      <div class="hamburguesa">
@@ -196,31 +185,36 @@
                    </div>
                   <!----FIN  MENU BTN------>
 
+
       </div> 
 
    <!---FIN CABECERA RESPONSIVE FIN CABECERA RESPONSIVE ------------------------------>
-
-
-
+     
+<nav>
     <!----------------NAVEGACION---EN PAGINA ORDENADOR Y---RESPONSIVE---------------------------------------------------->
-        <nav>
+      
+               <!---------------------------------->
                 <div class="logo-esconder"> 
-                    <div class="logo-en-menu-responsive">
+
+                      <div class="logo-en-menu-responsive">
                        <a class="estilo-logo" href="{% url 'appfood:index' %}">
                        <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
                        </a>
-                     </div>
-                     <div class="emoticon">
+                      </div>
+
+                      <div class="emoticon">
                      </div>
 
                       <div class="suscriptor">
-                        <a class="estilo-logo" href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
-                       <h4>SUSCRIBETE</h4>  
+                      <a class="estilo-logo" href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
+                      <h4>SUSCRIBETE</h4>  
                       </a>
                      </div>
                     
                 </div>
+               <!------------------------------------------>
 
+             <!---------------------------------------->
              <div class="buscador-esconder"> 
               <form class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
                   <!------------------------------------------------------------------>
@@ -235,9 +229,13 @@
                   </div>
                 <!--------------------------------------------------------------------->
                </form>                 
-           
            </div>
+           <!--------------------------------------------------->
 
+
+
+
+ 
            <ul class="nav">
                
                 <li> 
@@ -245,10 +243,9 @@
                 </li>
                 
                 <li> 
-                <a class="{% active 'appfood:recetas-saludables' %}"  href="{% url 'appfood:recetas-saludables' %}" >
-                   Recetas 
-                  <i class ="fa fa-caret-down"></i>
-                 </a>
+                <a class="{% active 'appfood:recetas-saludables' %}"  href="{% url 'appfood:recetas-saludables' %}">
+                Recetas<i class ="fa fa-caret-down"></i>
+                </a>
                         <ul>  
                         {% load mptt_tags %} 
                         <!-- LAS CATEGORIAS------->
@@ -281,16 +278,25 @@
                 <a class="{% active 'appfood:noticias-turismo-gastronomico' %}"  href="{% url 'appfood:noticias-turismo-gastronomico' %}">Turismo</a>    
                 </li>
               
-                <li> 
-                <a class="{% active 'appfood:nosotros' %} " href="{% url 'appfood:nosotros' %}">Nosotros</a> 
-               </li>
+             
 
-                 <li> 
+              <li> 
                 <a class="{% active 'appfood:contacto' %} " href="{% url 'appcontact:contacto' %}">
                 Contacto
+                <i class ="fa fa-caret-down"></i>
                 </a> 
+
+                <ul>
+                <li> 
+                <a class="{% active 'appfood:nosotros' %} " href="{% url 'appfood:nosotros' %}">Nosotros
+                </a> 
+                </li>
+                </ul>
+
                 
                 </li>  
+
+
            </ul>
           
            <!------------------------------------------------------------------->
@@ -323,32 +329,22 @@
                         <!------------------------------------------------------>
 
              </nav> 
-            <!-----FIN  NAVEGATION-------------------------------------------------->
-                <!---FINAL NAV------------------------------>
+
+ 
       </header>
 
+                <!---FINAL NAV------------------------------>
 
+    <!-- CONTAINER GENERAL SEGUNDO  -->
+    <div id="container-nosotros">
 
+   
+            <!-----FIN  NAVEGATION-------------------------------------------------->
 
+          <div class="tres-columnas-nosotros">
+              <!-- PRIMERA COLUMNA DE LOS CONTENIDOS-->
+              <section class="nosotros">
 
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- CONTAINER GENERAL SEGUNDO  -->
-        <div id="container-nosotros">
-
-            <div class="tres-columnas-nosotros">
-                <!-- PRIMERA COLUMNA DE LOS CONTENIDOS-->
-                <section class="nosotros">
                     <!-- primera caja-->
                     <div class="articulo">
                         <h1><strong><u>nuestra historia</u></strong></h1>
@@ -360,30 +356,26 @@
                          crear esta revista gastronómica junto a un equipo de colaboradores, como parte de una 
                         memoria imborrable de la cocina fusionando lo mejor de la tierra 
                         con lo mejor del mar en platos sencillos pero muy sabrosos.
-
-                          <br>
-                          <br>
-                           En Fooding Emotion podeis ver todo de tipo de cocina, 
-                           aunque lo que más me gusta es la cocina tradicional, sobre todo la 
-                          la italiana, japonesa y peruana. 
+                        <br>
+                        <br>
+                        En Fooding Emotion podeis ver todo de tipo de cocina, 
+                        aunque lo que más me gusta es la cocina tradicional, sobre todo la 
+                        la italiana, japonesa y peruana. 
+                       <br>
+                       <br>
+                      Dentro de la web  también podeis encontrar 
+                      una sección dedicada sobre recetas propias y otras tradicionales, 
+                      recetas de todas partes del mundo,
+                      como tambièn recetas dieteticas, para bajar de peso , por intolerancias,
+                      recetas vegetarias o veganas, como también plan de comidas para perder peso, 
+                     o ganar masa muscular, o baja en calorias, etc
                      <br>
                      <br>
-             
-                   Dentro de la web  también podeis encontrar 
-                 una sección dedicada sobre recetas propias y otras tradicionales, 
-                   recetas de todas partes del mundo,
-                   como tambièn recetas dieteticas, para bajar de peso , por intolerancias,
-                    recetas vegetarias o veganas, como también plan de comidas para perder peso, 
-                  o ganar masa muscular, o baja en calorias, etc
-                  <br>
-                  <br>
-                   Quiero compartir con vosotros este viaje culinario, platos 
-                   exóticos y mediterraneos como una ceviche, una boloñesa tradicional, 
-                 un salmorejo, etc,
-             Espero os guste!
-
-                        </p>
-                    </div>
+                     Quiero compartir con vosotros este viaje culinario, platos 
+                    exóticos y mediterraneos como una ceviche, una boloñesa tradicional, 
+                    un salmorejo, etc, Espero os guste!
+                    </p>
+                  </div>
 
                     <!-- segunda caja-->
 
@@ -395,102 +387,88 @@
 
                     <!-- tercera caja-->
                     <div class="blockquote">
-                        <blockquote>
-                            <h3><em> Mi pasiòn por la cocina..
-
-Mi realizaciòn profesional, una forma de pasarlo bien, 
-riendo, aprendiendo, experimentando y también,
- claro, equivocándome.
-Sabiendo que siempre hay cosas que quedan
- por descubrir: sabores, productos, técnicas…
-Apoyándome en mi bagaje teórico y práctico e improvisando 
-con ingredientes que encuentro entre la nevera y la despensa.
-Buscando un equilibrio entre sabores. Por ejemplo, 
-compensando con sabores ácidos o frescos los más grasos,
- para lograr más niveles de sabor en el plato, 
- consiguiendo mayor equilibrio.</em> </h3>
-
-                           
-                           <p class="color:#000"> --Armando Autieri,<span class="otroestilo">Fooding Emotion, Fundador.</span></p>
-
+                         <blockquote>
+                         <h3><em> Mi pasiòn por la cocina..
+                         Mi realizaciòn profesional, una forma de pasarlo bien, 
+                         riendo, aprendiendo, experimentando y también,
+                         claro, equivocándome.
+                         Sabiendo que siempre hay cosas que quedan
+                         por descubrir: sabores, productos, técnicas…
+                         Apoyándome en mi bagaje teórico y práctico e improvisando 
+                         con ingredientes que encuentro entre la nevera y la despensa.
+                         Buscando un equilibrio entre sabores. Por ejemplo, 
+                         compensando con sabores ácidos o frescos los más grasos,
+                         para lograr más niveles de sabor en el plato, 
+                         consiguiendo mayor equilibrio.</em> </h3>
+                        <p class="color:#000"> --Armando Autieri,<span class="otroestilo">Fooding Emotion, Fundador.</span></p>
                         </blockquote>
                     </div>
 
-                       <!----width="495" height="320" ---------------->
-                    <!-- cuarta caja-->
-                    <div class="dibujo">
-                        <img src="{% static 'appfood/img/nosotros/495-320.jpg' %}" />
-                    </div>
+                       
+        <!----width="495" height="320" ---------------->
+        <!-- cuarta caja-->
+          <div class="dibujo">
+          <img src="{% static 'appfood/img/nosotros/495-320.jpg' %}" />
+          </div>
 
-                    <!-- quinta caja con dos columnas----------->
-                    <section class="articulo-dos">
+          <!-- quinta caja con dos columnas----------->
+          <section class="articulo-dos">
+               <div class="articulo-dos-uno">
+               <h1>En el aprendizaje</h1>
+               <p> 
+              Cocinar es un proceso de aprendizaje continuo que si te apasiona 
+              nos estimula a investigar permanentemente. Es como tirarse a 
+              un abismo que nunca se acaba.  Gran parte de mi tiempo
+              de los últimos años los he dedicado a investigar, leer, aprender y poner en práctica
+              técnicas de cocina – tanto clásicas como nuevas: ahumar, fermentar, 
+              cocinar al vacío… – revisando, cuestionando y repensando lo que hago
+              y por qué lo hago así. Además me interesa muchísimo la cocina asiática
+              y los ingredientes que usan. Aunque muchas veces los uso de distinta
+              forma: intento darles aplicación a una cocina que ni es sólo de 
+              aquí ni de allí. Y llevo desde 2011 dando clases en distintas
+              escuelas de cocina de Madrid.
+              </p>
+              </div>
 
-                        <div class="articulo-dos-uno">
-                            <h1>En el aprendizaje</h1>
-                            <p> 
-                            Cocinar es un proceso de aprendizaje continuo que si te apasiona 
-                              nos estimula a investigar permanentemente. Es como tirarse a 
-                              un abismo que nunca se acaba.  Gran parte de mi tiempo
-                               de los últimos
-                                años los he dedicado a investigar, leer, aprender y poner en práctica
-                                 técnicas de cocina – tanto clásicas como nuevas: ahumar, fermentar, 
-                                 cocinar al vacío… – revisando, cuestionando y repensando lo que hago
-                                  y por qué lo hago así. Además me interesa muchísimo la cocina asiática
-                                   y los ingredientes que usan. Aunque muchas veces los uso de distinta
-                                    forma: intento darles aplicación a una cocina que ni es sólo de 
-                                    aquí ni de allí. Y llevo desde 2011 dando clases en distintas
-                                     escuelas de cocina de Madrid.
+              <div class="articulo-dos-uno-vacio"> </div>
+              <div class="articulo-dos-uno">
+              <h1>Nunca se acaba de aprender</h1>
+              <p>
+              El juego es una parte importante en el proceso educativo. 
+              Jugar también es pasárselo bien, disfrutar. Y jugar con los sabores
+              es educar el paladar, el sentido del gusto, con recetas de siempre y
+              con algunas que intentamos renovar.
 
+             Este blog nació sin grandes pretensiones pero con mucha ilusión. 
+             Iremos actualizándolo  con recetas fáciles e imágenes atractivas
+             es para nosotros un reto que empezó, con mucha ilusión.
+             Aunque con el tiempo se ha ido haciendo más complicado, y nos gustaría que participaran en esta aventura con vuestras sugerencias.
 
-                             </p>
-                        </div>
-                        <div class="articulo-dos-uno-vacio"> </div>
-                        <div class="articulo-dos-uno">
-                            <h1>Nunca se acaba de aprender</h1>
-                            <p>
-                               El juego es una parte importante en el proceso educativo. 
-                            Jugar también es pasárselo bien, disfrutar. Y jugar con los sabores
-                             es educar el paladar, el sentido del gusto, con recetas de siempre y
-                              con algunas que intentamos renovar.
-
-Este blog nació sin grandes pretensiones pero con mucha ilusión. 
-Iremos actualizándolo  con recetas fáciles e imágenes atractivas
- es para nosotros un reto que empezó, con mucha ilusión.
-  Aunque con el tiempo se ha ido haciendo más complicado, y nos gustaría que participaran en esta aventura con vuestras sugerencias.
-
-Por eso, estaremos encantadas de que os pongáis
- en contacto con nosotras si creéis que podemos ayudaros en algo
-  o si queréis intercambiar algún tipo de idea o hacernos alguna
-   sugerencia, pero no responderemos a los mensajes anónimos
-    en los comentarios.
-
-
-
-
- 
-.</p>
-                        </div>
-                    </section> <!-- cierre de la quinta caja con dos columnas-->
-                </section> <!-- cierre de NOSOTROS primera columna de contenidos-->
-
-                <!-- FINAL PRIMERA COLUMNA SECTION ARTICULO Y FOTOS----------------------------------------------------------------------------------------->
-
- <!-- SEGUNDA COLUMNA --------------------------------------------------------------------->
-
-                <div class="fijo1">
-
-                </div>
-                <!-- FINAL  segunda columna......................-->
+            Por eso, estaremos encantadas de que os pongáis
+            en contacto con nosotras si creéis que podemos ayudaros en algo
+            o si queréis intercambiar algún tipo de idea o hacernos alguna
+            sugerencia, pero no responderemos a los mensajes anónimos
+            en los comentarios.
+            </p>
+            </div>
+            </section> <!-- cierre de la quinta caja con dos columnas-->
 
 
+            </section> 
+          <!-- cierre de NOSOTROS primera columna de contenidos-->
+          <!-- FINAL PRIMERA COLUMNA SECTION ARTICULO Y FOTOS----------------------------------------------------------------------------------------->
 
-  <!-- TERCERA COLUMNA FIJA  > -->
-                    
+          <!-- SEGUNDA COLUMNA ------------------>
+          <div class="fijo1">
+          </div>
+          <!-- FINAL  segunda columna......................-->
 
-                <div class="fija">
-                    <section class="imagen-estatica"><img src="{% static 'appfood/img/nosotros/1080-1080.jpg' %}" width="100%"  />
-                    </section>
-                </div>
+       <!-- TERCERA COLUMNA FIJA  > -->
+          <div class="fija">
+          <section class="imagen-estatica">
+          <img src="{% static 'appfood/img/nosotros/1080-1080.jpg' %}" width="100%"/>
+          </section>
+          </div>
 
 
 
@@ -507,10 +485,10 @@ Por eso, estaremos encantadas de que os pongáis
             <!-- horizontal debe de ser-->
             <div id="footer1">
                     <div class="footer-second1">
-                    <p> © <a href="https://www.foodingemotion.com" target="_blank">foodingemotion.com  
-                     &nbsp;  &nbsp; 2021 &nbsp; Fooding Emotion, Todos los derechos reservados.
-                    </a>
-                    </p>  
+                    <p> <a href="https://www.foodingemotion.com" target="_blank">© foodingemotion.com  </a> 
+                     &nbsp;  &nbsp; 2022 &nbsp;    Fooding Emotion, Todos los derechos reservados.
+                   </p> 
+                  
                    </div>
             </div>
 

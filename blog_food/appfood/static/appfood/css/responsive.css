@@ -2240,9 +2240,10 @@ display: block;
       text-decoration:line-through;
       color: #568632;
       }
-  
+ 
+     
      /* UL  */
-      header  nav .nav{
+     header  nav .nav{
       width: 90%; 
       height: 99%;
       display: flex;
@@ -2250,74 +2251,69 @@ display: block;
       margin-top: 30px;
        z-index: 99; 
       }
-  
-       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-      nav .nav li{
-      list-style: none;
-      height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-      margin-left: 10px;
-      margin-bottom: 10px;
-      cursor:pointer;
-      border-bottom: 1px solid #2d2d2d;
-      }
-      
-      nav .nav li a {
-      z-index: 100;
-      height: 24px;
-      color: #2d2d2d;
-      font-weight: 520;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 5px;
-      }
-    
-   
-        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-        nav .nav li:hover > ul {
-         display: block;
-        margin-left: -200px;
-        height: 200px;
-        visibility: visible; 
-        z-index: 598;
-        }
-  
 
-      nav .nav li ul li a{
-      font-size: 1rem;
-      display: block;
-      max-width: 200px;
-      width: 100%;
-      margin-left: -2px;
-      padding-bottom: -2px;
-      margin-left: -76px;
-      }
-  
-       nav .nav ul {
-      visibility: hidden;
-      }
-  
-     /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
-    
-   /*ANIMACION SUBRAYADO */
-   nav a {
-   display: inline-block;
-   position: relative;
-   color: white;
-   text-decoration: none;
-   z-index: 40;
-   }
-  
-   nav  a:after {
-    content: "";
-    display: block;
-    margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-    height: 2px;
-    width: 0px;
-    transition: all .8s;
-    z-index: 10;
+    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+   list-style: none;
+   height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+   margin-left: 10px;
+   margin-bottom: 10px;
+   cursor:pointer;
+   border-bottom: 1px solid #2d2d2d;
     }
+
+   nav .nav li a {
+   z-index: 100;
+   height: 24px;
+   color: #2d2d2d;
+   font-weight: 520;
+   font-size: 0.9rem;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin-top: 5px;
+   }
+
+
+   /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav .nav li:hover > ul {
+    display: flex;
+   flex-direction: column;
+    width: 100%;
+    visibility: visible; 
+   z-index: 800;
+    }
+
+
+    nav .nav ul {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5px;
+    visibility: hidden;
+    background-color: #fff;
+    }
+
+    nav .nav ul li{
+    display: block;
+    width: 100%;
+    max-width: 550px;
+     margin-left: 2px;
+    border-bottom: 1px solid #fefefe;
+    }
+
+
+   nav .nav li ul li a{
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    text-transform: lowercase;
+   margin-left: 6px;
+    }
+
+
+     /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
 
  
   
@@ -3832,6 +3828,7 @@ width: 100%;
       overflow: hidden;
       border-spacing: 0;
       border-collapse: collapse;
+     
      }
   
     
@@ -3866,7 +3863,6 @@ width: 100%;
     left: 0;
     position: fixed;
     z-index: 2000;   /*IMPORTANTE  */
- 
     background-color: #fff;
     box-shadow: 0 8px 6px -6px #c6c6c6;
     }
@@ -3917,6 +3913,7 @@ width: 100%;
     width: 40%;
     max-width: 250px;
     height: 35px;
+
     }
   
  
@@ -4036,196 +4033,271 @@ width: 100%;
     visibility: hidden;
     }
 
+  /*..INICIO NAV ESCONDIDO.....................*/
 
-   header nav{
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  max-height: 1200px;
-  top:0;
-  bottom: 0;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  opacity: 0.97;
-   background-color: #000000;
-   overflow-y: scroll;
-   z-index: 200;
+  header nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+     background-color: #fff;
+     overflow-y: scroll;
+     z-index: 200;
+     visibility: visible;
+     box-sizing: border-box;
+    
+    }
+
+    nav::-webkit-scrollbar {
+      display: none;
+     }
+     
+
+    /* #aaaaaa */
+    nav .logo-esconder{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 98%;
+    visibility: visible;
+    height: 80px;
+     border-bottom: 1px solid #2d2d2d;
+  
+    }
+
+    nav .logo-esconder .logo-en-menu-responsive{
+      width: 30%;
+      max-width: 150px;
+      display: inline-flex;
+      height: 80px;
+      margin-left: 10px;
+    }
+
+   
+
+  nav .logo-esconder .logo-en-menu-responsive img{
+    width: 100%;
+    max-width: 120px;
+    min-width: 120px;
+    margin-top: 45px;
   }
 
-  nav .logo-esconder{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  visibility: visible;
-  margin-top: 20px;
-  border-bottom: 1px solid #aaaaaa;
+  nav .logo-esconder .emoticon{
+    width: 8%;
+    height: 80px;
+  }
+
+   nav .logo-esconder .suscriptor{
+     width: 30%;
+     height: 80px;
+     display: block;
+     position: relative;
+     float: right;
+
+   }
+    nav .logo-esconder .suscriptor a h4{
+    font-size: 0.8em;
+    margin-top: 50px;
+  
+    }
+
+    nav .siguenos{
+      display: block;
+      width: 95%;
+      margin-top: 40px;
+      visibility: visible;
+    }
+
+    nav .siguenos ul{
+      display: flex;
+      flex-direction: row;
+      width: 95%;
+      margin-left: 10px;
+    }
+
+     nav .siguenos h1{
+       font-size: 0.9em;
+       display: inline-flex;
+       margin: 10px 0;
+       padding: 5px 9px 5px 4px;
+     }
+    nav .siguenos ul li{
+      margin: 10px 0;
+      list-style: none;
+      padding: 5px 9px 5px 4px;
+    }
+
+     /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+     nav .buscador-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    visibility: visible;
+    margin-top: 40px;
+    margin-left: 10px;
+    height: 50px;
+    }
+
+    .d-flex{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+     box-sizing: border-box;
+    }
+
+    #custom-search{
+      width: 100%;
+      height: 50px;
+     border: 1px solid #2d2d2d;
+     border-radius: 8px;
+    }
+
+   .buscador-esconder #custom-search input[type=text]{
+     box-sizing: border-box;
    }
 
-
-    nav  .estilo-logo:after {
-    content: "";
-    display:none;
-  
-    }
-  
-
-nav .logo-esconder img{
-  width: 100%;
-  max-width: 120px;
-  margin-left: 20px;
-}
-
-/*BUSCADOR DEL NAV ESCONDIDO*/
-nav .buscador-esconder{
- display: block;
- position: relative;
- float: left;
-  width: 89%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 18px;
-  visibility: visible;
-  box-sizing: border-box;
-}
-
-  .buscador-esconder .d-flex{
-    width: 100%;
-    height: 45px;
-    display: flex;
-    flex-direction: row;
-   box-sizing: border-box;
-  }
-
-  .buscador-esconder .d-flex #custom-search{
-    display: block;
-    width: 80%;
-    height: 45px;
-    box-sizing: border-box;
-  }
-
-  .buscador-esconder .d-flex #custom-search .sin-borde{
-    display: block;
-    position: relative;
-    float: left;
-    width: 90%;
-    height: 40px;
-    outline: none;
-    border-radius: 2px;
-   margin-top: -0.5px;
+   .buscador-esconder .d-flex #custom-search .sin-borde{
+      width: 90%;
+      height: 40px;
+      outline: none;
+      border-radius: 3px;
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      float: left;
     }
 
-  .buscador-esconder .d-flex #custom-search .boton{
+   .buscador-esconder .d-flex #custom-search .boton{
     width: 10%;
     height: 40px;
+    border-radius: 1px;
     display: block;
     position: relative;
     float: right;
-   background-color: #fff;
-   }
-
-   /*FIN BUSCADOR EN EL NAV ESCONDIDO*/
-
-    nav .nav .esconder{
-   visibility: visible;
+    margin-top: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
     }
 
-    nav .nav li a.active{
-    text-decoration:line-through;
-    color: #7aac41;
-    }
 
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-   header nav .nav{
-    width:90%; 
-    height: 90%;
-    max-height: 1000px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-top: 15px;
-     z-index: 99; 
-    }
-
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav .nav li{
-    list-style: none;
-    height: 29px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-left: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #fff;
-    cursor:pointer;
-    }
-    
-    nav .nav li a {
-    z-index: 100;
-    height: 22px;
-    color: #fff;
-    font-weight: lighter;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding-top: 0;
-    margin-top: 0;
-    }
+     /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+      nav .nav .esconder{
+     visibility: visible;
+     }
   
-     /*IMPORTANTE*/
-
-     
-      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
-       display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
+       nav .nav li a.active{
+      text-decoration:line-through;
+      color: #568632;
+      }
+  
+   
+     /* UL  */
+     header  nav .nav{
+      width: 90%; 
+      height: 99%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+       z-index: 99; 
       }
 
-    nav .nav li ul li a{
-    font-size: 1rem;
-    display: block;
-    max-width: 200px;
-    width: 100%;
-    margin-left: -2px;
-    padding-bottom: -2px;
-    margin-left: -76px;
+    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+    list-style: none;
+    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    cursor:pointer;
+     border-bottom: 1px solid #2d2d2d;
+      }
+
+    nav .nav li a {
+    z-index: 100;
+    height: 24px;
+    color: #2d2d2d;
+    font-weight: 520;
+    font-size: 0.9rem;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+    margin-top: 5px;
     }
+
+
+   /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav .nav li:hover > ul {
+    display: flex;
+   flex-direction: column;
+    width: 100%;
+    visibility: visible; 
+   z-index: 800;
+    }
+
 
      nav .nav ul {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5px;
     visibility: hidden;
+    background-color: #fff;
     }
 
-  /*.FIN MENU ESCONDIDO ...MENU ESCONIDDO DEL NAV ARROW.........*/
-
- /*ANIMACION SUBRAYADO */
- nav a {
- display: inline-block;
- position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
-
-  nav  a:after {
- content: "";
- display: block;
- margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
- height: 2px;
- width: 0px;
- transition: all .8s;
- z-index: 10;
- }
+    nav .nav ul li{
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin-left: 2px;
+   border-bottom: 1px solid #fefefe;
+    }
 
 
-  /* width: 100%;*/
-  nav  a:hover:after {
-  padding-left: 40px;
-  padding-right: -150px;
-  height: 2px;
-  background: white;
-  }
+    nav .nav li ul li a{
+     font-size: 1rem;
+    display: block;
+    width: 100%;
+    text-transform: lowercase;
+    margin-left: 6px;
+      }
 
+
+     /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
+  
+    /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+     nav  .estilo-logo:after{
+     text-decoration: none;
+     height: 0px;
+     content: "";
+     display: none;
+     margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+     height: 0px;
+     width: 0px;
+     transition: all .0s;
+     z-index: 10;
+     }
+
+  
+   
+    /* width: 100%;*/
+    nav  a:hover:after {
+    padding-left: 40px;
+    padding-right: -150px;
+    height: 2px;
+    background: white;
+    }
+
+    /*..FIN NAV ESCONDIDO...........................*/
+
+
+    
    
     /*..BUSCADOR PARA EL MOVIL..........................*/
      /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
@@ -4818,17 +4890,17 @@ line-height: 15px;
   display: block;
   position: relative;
   float: left;
- width: 100%;
- margin: auto;
- margin-top: 10px;
- margin-bottom: 30px;
- background-color: #e9e9e9;
-}
+  width: 100%;
+   margin: auto;
+   margin-top: 10px;
+   margin-bottom: 30px;
+  background-color: #e9e9e9;
+  }
 
-.columna-right .explora{
+  .columna-right .explora{
  width: 100%;
  margin: auto;
-}
+  }
 
  .columna-right .columna-vertical{
  width: 100%;
@@ -5447,15 +5519,12 @@ hr {
     margin: 0;
      }
 
-
-
      #wrapper {
     width: 100%;
     max-width: 100%;
     overflow: hidden;
     border-spacing: 0;
     border-collapse: collapse;
- 
    }
 
   
@@ -5477,7 +5546,7 @@ hr {
     width: 100%;
      padding-left: 0;
     padding-right: 0; 
-    margin-top:  39px;
+    margin-top:  35px;
     }
   
 
@@ -5493,6 +5562,7 @@ hr {
     margin: auto;
     background-color: #fff;
     box-shadow: 0 8px 6px -6px #c6c6c6;
+  
     }
   
 
@@ -5507,7 +5577,8 @@ hr {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      height: 38px;
+      height: 34px;
+      margin-top: -5px;
      }
          
 
@@ -5515,7 +5586,9 @@ hr {
      .cabecera .logo{
       display: inline-flex;
       width: 20%;
-      height: 38px;
+      max-width: 200px;
+      min-width: 140px;
+      height: 34px;
      }
               
      .cabecera .logo img {
@@ -5533,15 +5606,16 @@ hr {
   .cabecera  #controls {
     width: 30%;
     max-width: 350px;
+    min-width: 140px;
     display: inline-flex;
-    height: 38px;
+    height: 34px;
     }
   
   
   
    .cabecera  #controls #custom-search-input-header{
-    width: 100%;
-    height: 35px;
+    width: 90%;
+    height: 33px;
      border: 1px solid #fafafa;
      border-radius: 4px;
      display: flex;
@@ -5552,13 +5626,14 @@ hr {
   
      .cabecera   #controls   #custom-search-input-header .sin-borde{
       width: 90%;
-      height: 35px;
+      height: 30px;
       background-color: #fafafa;
       }
         
       
        .cabecera  #controls   #custom-search-input-header .boton{
-      width: 8%;
+      width: 10%;
+      height: 30px;
       background-color: #ffffff;
        }
   
@@ -5577,11 +5652,13 @@ hr {
     /*CONTENEDOR  REVISTA Y SOCIALES*/
    
     .cabecera .suscribe{
-   display: inline-flex;
+     display: block;
+     position: relative;
+     float: left;
     width: 10%;
- 
-    height: 38px;
-    margin-left: 60px;
+    max-width: 100px;
+    min-width: 80px;
+    height: 34px;
     }
   
  
@@ -5602,8 +5679,9 @@ hr {
     float: left;
     width: 10%;
     max-width: 50px;
-    height: 38px;
-  
+    min-width: 50px;
+    height: 34px;
+    margin: auto;
     }
 
   
@@ -5692,190 +5770,268 @@ hr {
 
 
    /*MENU ESCONDIDO..........................................*/
-    nav{
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  max-height: 1200px;
-  top:0;
-  bottom: 0;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  opacity: 0.97;
-   background-color: #fff;
-   overflow-y: scroll;
-   z-index: 200;
-  }
-
-   nav .logo-esconder{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  visibility: visible;
-  margin-top: 30px;
-  height: 30px;
-  border-bottom: 1px solid #aaaaaa;
-    }
-
-    nav .logo-esconder img{
-  width: 100%;
-  max-width: 120px;
-  margin-left: 20px;
-  }
-
-
-  nav .logo-esconder .suscriptor h4{
-  font-size: 1rem;
-  color: #fff;
-  }
-   nav .buscador-esconder{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  visibility: visible;
-  margin-top: 20px;
-  height: 50px;
- margin-bottom: 30px;
-  }
-
-  .d-flex{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    margin-left: 18px;
-    
-  }
-
-  nav .buscador-esconder #custom-search{
-    width: 100%;
-    height: 50px;
-  }
-
-  nav .buscador-esconder #custom-search .sin-borde{
-    width: 86%;
-    height: 40px;
-    background-color: #f9f9f9;
-    }
-
-    nav .buscador-esconder #custom-search .boton{
-    width: 8%;
-    height: 40px;
-    background-color: #f9f9f9;
-    }
-
-
-     nav .nav .esconder{
-    visibility: visible;
-    }
-
-     nav .nav li a.active{
-    text-decoration:line-through;
-    color: #568632;
-    }
-
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-    nav .nav{
-    width:100%; 
-    height: 100%;
-    max-height: 950px;
+ 
+   
+  /*..INICIO NAV ESCONDIDO.....................*/
+    header nav{
     display: flex;
     flex-direction: column;
-     margin-left: 10px;
-    margin-top: 10px;
-    z-index: 99; 
-    }
-
-
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav .nav li{
-    list-style: none;
-    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-left: 10px;
-    margin-bottom: 15px;
-    cursor:pointer;
-    border-bottom: 1px solid #aaaaaa;
-    }
-    
-    nav .nav li a {
-    z-index: 100;
-    height: 30px;
-    color: #2d2d2d;
-    font-weight: lighter;
-    font-size: 1.24rem;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-    font-family:  sans-serif;
-    padding-top: 0;
-    margin-top: 0;
-    }
-  
-
-
-     /*IMPORTANTE*/
-     nav .nav ul {
-      visibility: hidden;
-      }
-  
-      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
-       display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
-      }
-
-
-    nav .nav li ul li a{
-    font-size: 1rem;
-    display: block;
-    max-width: 200px;
+    position: fixed;
     width: 100%;
-    margin-left: -2px;
-    padding-bottom: -2px;
-    margin-left: -76px;
+    max-width: 700px;
+    height: 100%;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+     background-color: #fff;
+     overflow-y: scroll;
+     z-index: 200;
+     visibility: visible;
+     box-sizing: border-box;
+    
     }
 
-    
-      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+    nav::-webkit-scrollbar {
+      display: none;
+     }
+     
+
+    /* #aaaaaa */
+    nav .logo-esconder{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 98%;
+    visibility: visible;
+    height: 80px;
+     border-bottom: 1px solid #2d2d2d;
   
- /*ANIMACION SUBRAYADO */
- nav a {
- display: inline-block;
- position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
+    }
 
-  nav  a:after {
- content: "";
- display: block;
- margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
- height: 2px;
- width: 0px;
- transition: all .8s;
- z-index: 10;
- }
+    nav .logo-esconder .logo-en-menu-responsive{
+      width: 30%;
+      max-width: 150px;
+      display: inline-flex;
+      height: 80px;
+      margin-left: 10px;
+    }
+
+   
+
+  nav .logo-esconder .logo-en-menu-responsive img{
+    width: 100%;
+    max-width: 120px;
+    min-width: 120px;
+    margin-top: 45px;
+  }
+
+  nav .logo-esconder .emoticon{
+    width: 8%;
+    height: 80px;
+  }
+
+   nav .logo-esconder .suscriptor{
+     width: 30%;
+     height: 80px;
+     display: block;
+     position: relative;
+     float: right;
+
+   }
+    nav .logo-esconder .suscriptor a h4{
+    font-size: 0.8em;
+    margin-top: 50px;
+  
+    }
+
+    nav .siguenos{
+      display: block;
+      width: 95%;
+      margin-top: 40px;
+      visibility: visible;
+    }
+
+    nav .siguenos ul{
+      display: flex;
+      flex-direction: row;
+      width: 95%;
+      margin-left: 10px;
+    }
+
+     nav .siguenos h1{
+       font-size: 0.9em;
+       display: inline-flex;
+       margin: 10px 0;
+       padding: 5px 9px 5px 4px;
+     }
+    nav .siguenos ul li{
+      margin: 10px 0;
+      list-style: none;
+      padding: 5px 9px 5px 4px;
+    }
+
+     /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+     nav .buscador-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    visibility: visible;
+    margin-top: 40px;
+    margin-left: 10px;
+    height: 50px;
+    }
+
+    .d-flex{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+     box-sizing: border-box;
+    }
+
+    #custom-search{
+      width: 100%;
+      height: 50px;
+     border: 1px solid #2d2d2d;
+     border-radius: 8px;
+    }
+
+   .buscador-esconder #custom-search input[type=text]{
+     box-sizing: border-box;
+   }
+
+   .buscador-esconder .d-flex #custom-search .sin-borde{
+      width: 90%;
+      height: 40px;
+      outline: none;
+      border-radius: 3px;
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      float: left;
+    }
+
+   .buscador-esconder .d-flex #custom-search .boton{
+    width: 10%;
+    height: 40px;
+    border-radius: 1px;
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    }
 
 
-  /* width: 100%;*/
-  nav  a:hover:after {
-  padding-left: 40px;
-  padding-right: -150px;
-  height: 2px;
-  background: white;
+     /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+      nav .nav .esconder{
+     visibility: visible;
+     }
+  
+       nav .nav li a.active{
+      text-decoration:line-through;
+      color: #568632;
+      }
+  
+     /* UL  */
+     /* UL  */
+     header  nav .nav{
+      width: 90%; 
+      height: 99%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+       z-index: 99; 
+      }
+
+  /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+  nav .nav li{
+  list-style: none;
+  height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+  margin-left: 10px;
+  margin-bottom: 10px;
+  cursor:pointer;
+  border-bottom: 1px solid #2d2d2d;
+   }
+
+  nav .nav li a {
+  z-index: 100;
+  height: 24px;
+  color: #2d2d2d;
+  font-weight: 520;
+  font-size: 0.9rem;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin-top: 5px;
+   }
+
+
+  /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav .nav li:hover > ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   visibility: visible; 
+   z-index: 800;
   }
 
 
-  
-  
-     
-    
+    nav .nav ul {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5px;
+    visibility: hidden;
+     background-color: #fff;
+    }
 
+   nav .nav ul li{
+   display: block;
+   width: 100%;
+    max-width: 650px;
+    margin-left: 2px;
+  border-bottom: 1px solid #fefefe;
+   }
+
+
+   nav .nav li ul li a{
+   font-size: 1rem;
+   display: block;
+   width: 100%;
+   text-transform: lowercase;
+   margin-left: 6px;
+   }
+
+
+   /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
+    /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+     nav  .estilo-logo:after{
+     text-decoration: none;
+     height: 0px;
+     content: "";
+     display: none;
+     margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+     height: 0px;
+     width: 0px;
+     transition: all .0s;
+     z-index: 10;
+     }
+
+  
+   
+    /* width: 100%;*/
+    nav  a:hover:after {
+    padding-left: 40px;
+    padding-right: -150px;
+    height: 2px;
+    background: white;
+    }
+
+    /*..FIN NAV ESCONDIDO...........................*/
      /*FIN ANIMACION SUBRAYADO */
     /*.portada*/
    .portada{
@@ -5891,6 +6047,8 @@ hr {
     .portada-img img{
       width: 100%;
     }
+
+
   /*letras que desvaneces*/
   .portada .imagen-responsive-ipod .portada-titulo{
     width: 100%;
@@ -5911,35 +6069,37 @@ hr {
    font-size: 1.6rem;
    color: white;
     }
-   .portada  h2 i{
+
+
+    .portada  h2 i{
      font-size: 1.4rem;
     }
+
+
     .portada h6 i{
       font-size: 1.4rem;
      }
    
+
     .portada-titulo1 h6{
      font-size: 1.6rem;
      color: white;
       }
 
-       
-      /*...................................................*/
-
     
       /*....................................................*/
       .imagen-responsive-movil{
-        display: none;
-        visibility: hidden;
+      display: none;
+      visibility: hidden;
       }
     
+
    /*portadas  PORTADA PORTADAS SE PUEDE MODIFCAR SU CAMBIAMOS EL DIBUJO..................*/
    /*CONTAINER DE LA IMAGEN Y LA CAJA DEL MENU*/
    .portada .portada-img-responsive{
    width: 100%;
    display: block;
    visibility: visible;
- 
    }
 
 
@@ -5948,6 +6108,7 @@ hr {
      width: 100%;
      visibility: visible;
     }
+
 
    .portada-img-responsive .imagen-responsive-ipod  img{
     width: 100%;
@@ -6052,6 +6213,8 @@ hr {
   font-family: 'Cabin', sans-serif;
   color:black;
    }
+
+
   /*--LETRA CRAFTED----------------------*/
   .imagen-responsive-ipod .portada-contacto-uno .otroestilo { 
   font-weight: 300 ;
@@ -6062,70 +6225,72 @@ hr {
    font-style: italic;
   }
 
-  /*---CONTAINER DEL SEGUNDO PARRAFO-------------------------------------*/
+
+   /*---CONTAINER DEL SEGUNDO PARRAFO-------------------------------------*/
   /*PROUDLY CRAFTED*/
-.imagen-responsive-ipod .portada-contacto-dos{
-position: relative;
-overflow: hidden;
-top: -360px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
-left: 50px ;
-width: 48%;
-}
-/* SEGUNDO PARRAFO Proudly crafted in  münich since 1987*/
-.imagen-responsive-ipod .portada-contacto-dos h6 {
-display:inline-block;
-padding-top: 43px; /*IMPORTANTE PARA DISTANCIAR EL PARRAFO DEL SIGIENTE PARRAFAO*/
-margin: 0;
-font-size: 1.1rem;
-color: #000000;
-font-weight: 300;
-font-family: 'Cabin', sans-serif;
-}
-
-/*---CONTAINER DE SUSCRIBETE TERCER PARRAFO----*/
-.imagen-responsive-ipod .portada-contacto-tres{
-position: relative;
-overflow: hidden;
-top: -380px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
-width: 48%;
-left: 50px;
-
-}
-
-/*TERECER PARRAFO QUE SUBE*/
-.imagen-responsive-ipod .portada-contacto-tres span h2{
-color:#7aac41;
-width: 100%;
-display: block;
-position: relative;
-float: left;
-word-spacing: -1px;
-margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
-font-family: 'Cabin', sans-serif;
-font-size: 1rem;
-}
+  .imagen-responsive-ipod .portada-contacto-dos{
+  position: relative;
+  overflow: hidden;
+  top: -360px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+  left: 50px ;
+  width: 48%;
+  }
 
 
-/*SUSUCRIBETE*/
-.imagen-responsive-ipod .portada-contacto-tres span h4{
-color:#fff;
-padding: 4px 2px 2px 2px;
-margin-top: 20px; /*DISTANCIA DE SEPARARCION DEL OTRO PARRAFO*/
-border-radius: 4px;
-background-color: #7aac41;
-font-family: 'Cabin', sans-serif;
-font-weight: lighter;
-font-size: 0.9rem;
-width: 100%;
-}
+  /* SEGUNDO PARRAFO Proudly crafted in  münich since 1987*/
+  .imagen-responsive-ipod .portada-contacto-dos h6 {
+  display:inline-block;
+  padding-top: 43px; /*IMPORTANTE PARA DISTANCIAR EL PARRAFO DEL SIGIENTE PARRAFAO*/
+  margin: 0;
+  font-size: 1.1rem;
+  color: #000000;
+  font-weight: 300;
+  font-family: 'Cabin', sans-serif;
+  }
 
-/*..FIN LETRAS DE IPOD RESPONSIVE...*/
+  /*---CONTAINER DE SUSCRIBETE TERCER PARRAFO----*/
+   .imagen-responsive-ipod .portada-contacto-tres{
+   position: relative;
+   overflow: hidden;
+   top: -380px; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----3*/
+   width: 48%;
+   left: 50px;
+    }
 
+  /*TERECER PARRAFO QUE SUBE*/
+  .imagen-responsive-ipod .portada-contacto-tres span h2{
+  color:#7aac41;
+  width: 100%;
+  display: block;
+  position: relative;
+  float: left;
+  word-spacing: -1px;
+  margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
+  font-family: 'Cabin', sans-serif;
+  font-size: 1rem;
+   }
+
+
+  /*SUSUCRIBETE*/
+  .imagen-responsive-ipod .portada-contacto-tres span h4{
+  color:#fff;
+   padding: 4px 2px 2px 2px;
+  margin-top: 20px; /*DISTANCIA DE SEPARARCION DEL OTRO PARRAFO*/
+  border-radius: 4px;
+  background-color: #7aac41;
+  font-family: 'Cabin', sans-serif;
+  font-weight: lighter;
+  font-size: 0.9rem;
+  width: 100%;
+  }
+
+
+  /*..FIN LETRAS DE IPOD RESPONSIVE...*/
  /*FORMULARIO DE LA PAGINA CONTACTO IPOD RESPONSIVE*/
- .row{
+   .row{
    width: 90%;
    margin-top: -120px;
- }
+  }
 
 
    
@@ -6147,6 +6312,7 @@ width: 100%;
       max-width: 600px;
      }
 
+
      .titulo-principal  .vacio{
      display: inline-flex;
      width: 5%;
@@ -6161,8 +6327,8 @@ width: 100%;
    letter-spacing: -0.9px;
    }
 
-   /*------------------------------------------------------------*/
 
+   /*------------------------------------------------------------*/
     .titulo{
     display: flex;
     flex-direction: row;
@@ -6213,7 +6379,6 @@ width: 100%;
    /*OBLIGATORIO PONER POSCION ABSOLUTA SI NO SE MUEVEN DISTINTO*/
 
    /* SEGUNDO-SEGMENTO */
-
    .primer-segmento{
     width: 93%;
     margin: auto;
@@ -6224,12 +6389,12 @@ width: 100%;
     }
 
 
-  .primer-segmento .tres{
-  width: 25%;
-  max-width: 209px;
-  display: block;
-  margin-bottom: 20px;
-  }
+   .primer-segmento .tres{
+    width: 25%;
+    max-width: 209px;
+    display: block;
+    margin-bottom: 20px;
+   }
 
   .primer-segmento .tres img{
     width: 100%;
@@ -6247,7 +6412,6 @@ width: 100%;
     word-spacing: -0.5px;
     letter-spacing: -0.5px;
     font-family: 'Archivo Black', sans-serif;
- 
    }
 
     /*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
@@ -7104,7 +7268,7 @@ width: 100%;
       padding-left: 0;
       padding-right: 0;
       margin: auto;
-      margin-top: 50px;
+      margin-top: 46px;
       bottom:  4px;
       height: auto;
      }
@@ -7205,9 +7369,8 @@ width: 100%;
     /*CONTENEDOR  REVISTA Y SOCIALES*/
    
     .cabecera .suscribe{
-   display: inline-flex;
+    display: inline-flex;
     width: 10%;
- 
     height: 38px;
     margin-left: 60px;
     }
@@ -7319,187 +7482,274 @@ width: 100%;
 
 
 
-   /*MENU ESCONDIDO..........................................*/
-    nav{
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  max-height: 1200px;
-  top:0;
-  bottom: 0;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-  opacity: 0.97;
-   background-color: #fff;
-   overflow-y: scroll;
-   z-index: 200;
-  }
+  
+  /*..INICIO NAV ESCONDIDO.....................*/
 
-   nav .logo-esconder{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  visibility: visible;
-  margin-top: 30px;
-  height: 30px;
-  border-bottom: 1px solid #aaaaaa;
-    }
-
-    nav .logo-esconder img{
-  width: 100%;
-  max-width: 120px;
-  margin-left: 20px;
-  }
-
-
-  nav .logo-esconder .suscriptor h4{
-  font-size: 1rem;
-  color: #fff;
-  }
-   nav .buscador-esconder{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  visibility: visible;
-  margin-top: 20px;
-  height: 50px;
- margin-bottom: 30px;
-  }
-
-  .d-flex{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    margin-left: 18px;
-    
-  }
-
-  nav .buscador-esconder #custom-search{
-    width: 100%;
-    height: 50px;
-  }
-
-  nav .buscador-esconder #custom-search .sin-borde{
-    width: 86%;
-    height: 40px;
-    background-color: #f9f9f9;
-    }
-
-    nav .buscador-esconder #custom-search .boton{
-    width: 8%;
-    height: 40px;
-    background-color: #f9f9f9;
-    }
-
-
-     nav .nav .esconder{
-    visibility: visible;
-    }
-
-     nav .nav li a.active{
-    text-decoration:line-through;
-    color: #568632;
-    }
-
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-    nav .nav{
-    width:100%; 
-    height: 100%;
-    max-height: 950px;
+  header nav{
     display: flex;
     flex-direction: column;
-     margin-left: 10px;
-    margin-top: 10px;
-    z-index: 99; 
-    }
-
-
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav .nav li{
-    list-style: none;
-    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-left: 10px;
-    margin-bottom: 15px;
-    cursor:pointer;
-    border-bottom: 1px solid #aaaaaa;
-    }
-    
-    nav .nav li a {
-    z-index: 100;
-    height: 30px;
-    color: #2d2d2d;
-    font-weight: lighter;
-    font-size: 1.24rem;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-    font-family:  sans-serif;
-    padding-top: 0;
-    margin-top: 0;
-    }
-  
-
-
-     /*IMPORTANTE*/
-     nav .nav ul {
-      visibility: hidden;
-      }
-  
-      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
-       display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
-      }
-
-
-    nav .nav li ul li a{
-    font-size: 1rem;
-    display: block;
-    max-width: 200px;
+    position: fixed;
     width: 100%;
-    margin-left: -2px;
-    padding-bottom: -2px;
-    margin-left: -76px;
+    max-width: 800px;
+    height: 100%;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+     background-color: #fff;
+     overflow-y: scroll;
+     z-index: 200;
+     visibility: visible;
+     box-sizing: border-box;
+    
     }
 
-    
-      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+    nav::-webkit-scrollbar {
+      display: none;
+     }
+     
+
+    /* #aaaaaa */
+    nav .logo-esconder{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 98%;
+    visibility: visible;
+    height: 80px;
+     border-bottom: 1px solid #2d2d2d;
   
- /*ANIMACION SUBRAYADO */
- nav a {
- display: inline-block;
- position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
+    }
 
-  nav  a:after {
- content: "";
- display: block;
- margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
- height: 2px;
- width: 0px;
- transition: all .8s;
- z-index: 10;
- }
+    nav .logo-esconder .logo-en-menu-responsive{
+      width: 30%;
+      max-width: 150px;
+      display: inline-flex;
+      height: 80px;
+      margin-left: 10px;
+    }
+
+   
+
+  nav .logo-esconder .logo-en-menu-responsive img{
+    width: 100%;
+    max-width: 120px;
+    min-width: 120px;
+    margin-top: 45px;
+   }
+
+    nav .logo-esconder .emoticon{
+    width: 8%;
+    height: 80px;
+    }
+
+   nav .logo-esconder .suscriptor{
+     width: 30%;
+     height: 80px;
+     display: block;
+     position: relative;
+     float: right;
+
+   }
+    nav .logo-esconder .suscriptor a h4{
+    font-size: 0.8em;
+    margin-top: 50px;
+  
+    }
+
+    nav .siguenos{
+      display: block;
+      width: 95%;
+      margin-top: 40px;
+      visibility: visible;
+    }
+
+    nav .siguenos ul{
+      display: flex;
+      flex-direction: row;
+      width: 95%;
+      margin-left: 10px;
+    }
+
+     nav .siguenos h1{
+       font-size: 0.9em;
+       display: inline-flex;
+       margin: 10px 0;
+       padding: 5px 9px 5px 4px;
+     }
+    nav .siguenos ul li{
+      margin: 10px 0;
+      list-style: none;
+      padding: 5px 9px 5px 4px;
+    }
+
+     /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+     nav .buscador-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    visibility: visible;
+    margin-top: 40px;
+    margin-left: 10px;
+    height: 50px;
+    }
+
+    .d-flex{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+     box-sizing: border-box;
+    }
+
+    #custom-search{
+      width: 100%;
+      height: 50px;
+     border: 1px solid #2d2d2d;
+     border-radius: 8px;
+    }
+
+   .buscador-esconder #custom-search input[type=text]{
+     box-sizing: border-box;
+   }
+
+   .buscador-esconder .d-flex #custom-search .sin-borde{
+      width: 90%;
+      height: 40px;
+      outline: none;
+      border-radius: 3px;
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      float: left;
+    }
+
+   .buscador-esconder .d-flex #custom-search .boton{
+    width: 10%;
+    height: 40px;
+    border-radius: 1px;
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    }
 
 
-  /* width: 100%;*/
-  nav  a:hover:after {
-  padding-left: 40px;
-  padding-right: -150px;
-  height: 2px;
-  background: white;
+     /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+      nav .nav .esconder{
+     visibility: visible;
+     }
+  
+       nav .nav li a.active{
+      text-decoration:line-through;
+      color: #568632;
+      }
+  
+    
+       /* UL  */
+       header  nav .nav{
+        width: 90%; 
+        height: 99%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+         z-index: 99; 
+        }
+
+   /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+  nav .nav li{
+  list-style: none;
+  height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+  margin-left: 10px;
+  margin-bottom: 10px;
+  cursor:pointer;
+  border-bottom: 1px solid #2d2d2d;
+  }
+  
+  nav .nav li a {
+  z-index: 100;
+  height: 24px;
+  color: #2d2d2d;
+  font-weight: 520;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
   }
 
 
+    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+     nav .nav li:hover > ul {
+      display: flex;
+     flex-direction: column;
+     width: 100%;
+     visibility: visible; 
+    z-index: 800;
+    }
+
+
+      nav .nav ul {
+      width: 100%;
+      max-width: 650px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5px;
+      visibility: hidden;
+       background-color: #fff;
+      }
+
+      .nav ul li{
+      display: block;
+      width: 100%;
+      max-width: 650px;
+      margin-left: 2px;
+     border-bottom: 1px solid #fefefe;
+      }
+
+
+  nav .nav li ul li a{
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  text-transform: lowercase;
+  margin-left: 6px;
+  }
+
   
+ /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
+
+    /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+     nav  .estilo-logo:after{
+     text-decoration: none;
+     height: 0px;
+     content: "";
+     display: none;
+     margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+     height: 0px;
+     width: 0px;
+     transition: all .0s;
+     z-index: 10;
+     }
+
+  
+   
+    /* width: 100%;*/
+    nav  a:hover:after {
+    padding-left: 40px;
+    padding-right: -150px;
+    height: 2px;
+    background: white;
+    }
+
+    /*..FIN NAV ESCONDIDO...........................*/
+
+
+    
+     
+    
   
        /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
     /*.FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV........MENU ESCONIDDO DEL NAV ARROW.....*/
@@ -8282,6 +8532,7 @@ width: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
    }
 
 
@@ -8294,7 +8545,7 @@ width: 100%;
   #container{
   width: 100%;
   margin: auto;
-  margin-top: 66px;
+  margin-top: 22px;
   margin-bottom: 120px;
   }
 
@@ -8314,52 +8565,97 @@ width: 100%;
     }
   
 
-    header.black{
-    height: 55px;
-    background-color: #fff;
-    }
+      header.black{
+      height: 55px;
+      background-color: #fff;
+     }
+
+  
+     .cabecera{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 34px;
+     }
+         
+
+     /*caja */
+     .cabecera .logo{
+      display: block;
+      width: 20%;
+      height: 34px;
+     }
+              
+     .cabecera .logo img {
+      display: block;
+      width: 100%;
+      max-width: 140px;
+      min-width: 140px;
+      height: 34px;
+      z-index: 40;
+     }
+   
 
      
-     .cabecera{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 38px;
-     }
-         
-
-    /*caja */
-    .cabecera .logo{
+   /*BUSCADOR EN EL NAV*/   
+  .cabecera  #controls {
+    width: 30%;
+    max-width: 350px;
     display: block;
-    position: relative;
-    float: left;
-    width: 20%;
-    height: 35px;
+    height: 32px;
+
     }
-              
-    .cabecera .logo img {
-    display: block;
+  
+  
+  
+   .cabecera  #controls #custom-search-input-header{
     width: 100%;
-    max-width: 140px;
-    min-width: 140px;
-    height: 35px;
-    z-index: 40;
+    height: 32px;
+     border: 1px solid #fafafa;
+     border-radius: 4px;
+     display: flex;
+     flex-direction: row;
+ 
      }
+  
+  
+     .cabecera   #controls   #custom-search-input-header .sin-borde{
+      width: 90%;
+      height: 30px;
+      background-color: #ededed;
+      }
+        
+      
+       .cabecera  #controls   #custom-search-input-header .boton{
+      width: 10%;
+      height: 30px;
+      background-color: #ffffff;
+       }
+  
+        input[type=text] {
+          width: 100%;
          
-
+        }
+        
+       /*..BUSCADOR PARA EL MOVIL..........................*/
+      /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+      #controls-responsive{
+      display: none;
+      visibility: hidden;
+       }
+     
     /*CONTENEDOR  REVISTA Y SOCIALES*/
-    .suscribe{
-    display: block;
-    position: relative;
-    float: left;
-    width: 20%;
-    max-width: 120px;
-    height: 38px;
+   
+    .cabecera .suscribe{
+   display: inline-flex;
+    width: 10%;
+    height: 34px;
+    margin-left: 60px;
     }
   
  
-   .suscribe a  h4{
+    .suscribe a  h4{
     font-size: 0.8rem;
     margin-top: 10px;
     font-weight: 700;
@@ -8369,43 +8665,44 @@ width: 100%;
     }
   
 
-   /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
    .cabecera .menu-btn {
     display: block;
     position: relative;
     float: left;
     width: 10%;
     max-width: 50px;
-    height: 38px;
-    margin: auto;
+    height: 34px;
+  
     }
 
-   .menu-btn .hamburguesa{
-   display: block;
-   position: relative;
-   float:left;
-   width: 100%;
-   height: 30px;
-   max-width: 40px;
+  
+  .cabecera .menu-btn .hamburguesa{
+  display: block;
+  position: relative;
+  float:left;
+  width: 100%;
+  height: 30px;
+  max-width: 40px;
    }
 
-
-   /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+     /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
    .menu-btn .hamburguesa .menu-btn__burger {
-   display: block;
-   position: relative;
-   float: right;
-   margin-top: 14.5px;
-   width: 37px;
-   height: 4px;
-   background: #2d2d2d;
-   border-radius: 2px;
-   transition: all .5s ease-in-out;
-   z-index: 1000;
-    }
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 14.5px;
+      width: 37px;
+      height: 4px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      transition: all .5s ease-in-out;
+      z-index: 1000;
+      }
   
 
-  /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+
+       /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
   .menu-btn__burger::before,
   .menu-btn__burger::after {
   content: '';
@@ -8450,6 +8747,7 @@ width: 100%;
   transform: rotate(-45deg) translate(35px, 35px);
   }
 
+
   .menu-btn__burger:hover{
   background-color: #7aac41;
   }
@@ -8461,255 +8759,266 @@ width: 100%;
   }
 
 
-    /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
-    /*..BUSCADOR PARA EL MOVIL..........................*/
-    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-    #controls-responsive{
-    display: block;
-    position: relative;
-    float: left;
-    width: 92%;
-    height: 50px;
-    margin-top: 58px;  
-    margin: auto;
-    }
+
+
   
-    #custom-search-input-responsive{
-    width:  100%;
-    height: 50px;
-    border: 1px solid #c9c9c9;
-    border-radius: 4px;
+  /*..INICIO NAV ESCONDIDO.....................*/
+
+  header nav{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 850px;
+    height: 100%;
     margin: auto;
-    }
-  
-    #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
-    display: block;
-    position: relative;
-    float: left;
-    width: 100%;
-    }
-  
-    input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+     background-color: #fff;
+     overflow-y: scroll;
+     z-index: 200;
+     visibility: visible;
+     box-sizing: border-box;
+    
     }
 
+    nav::-webkit-scrollbar {
+      display: none;
+     }
+     
 
-    #controls-responsive .boton-responsive{
+    /* #aaaaaa */
+    nav .logo-esconder{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 98%;
+    visibility: visible;
+    height: 80px;
+     border-bottom: 1px solid #2d2d2d;
+  
+    }
+
+    nav .logo-esconder .logo-en-menu-responsive{
+      width: 30%;
+      max-width: 150px;
+      display: inline-flex;
+      height: 80px;
+      margin-left: 10px;
+    }
+
+   
+
+  nav .logo-esconder .logo-en-menu-responsive img{
+    width: 100%;
+    max-width: 120px;
+    min-width: 120px;
+    margin-top: 45px;
+  }
+
+  nav .logo-esconder .emoticon{
+    width: 8%;
+    height: 80px;
+  }
+
+   nav .logo-esconder .suscriptor{
+     width: 30%;
+     height: 80px;
+     display: block;
+     position: relative;
+     float: right;
+
+   }
+    nav .logo-esconder .suscriptor a h4{
+    font-size: 0.8em;
+    margin-top: 50px;
+  
+    }
+
+    nav .siguenos{
+      display: block;
+      width: 95%;
+      margin-top: 40px;
+      visibility: visible;
+    }
+
+    nav .siguenos ul{
+      display: flex;
+      flex-direction: row;
+      width: 95%;
+      margin-left: 10px;
+    }
+
+     nav .siguenos h1{
+       font-size: 0.9em;
+       display: inline-flex;
+       margin: 10px 0;
+       padding: 5px 9px 5px 4px;
+     }
+    nav .siguenos ul li{
+      margin: 10px 0;
+      list-style: none;
+      padding: 5px 9px 5px 4px;
+    }
+
+     /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+     nav .buscador-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    visibility: visible;
+    margin-top: 40px;
+    margin-left: 10px;
+    height: 50px;
+    }
+
+    .d-flex{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+     box-sizing: border-box;
+    }
+
+    #custom-search{
+      width: 100%;
+      height: 50px;
+     border: 1px solid #2d2d2d;
+     border-radius: 8px;
+    }
+
+   .buscador-esconder #custom-search input[type=text]{
+     box-sizing: border-box;
+   }
+
+   .buscador-esconder .d-flex #custom-search .sin-borde{
+      width: 90%;
+      height: 40px;
+      outline: none;
+      border-radius: 3px;
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      float: left;
+    }
+
+   .buscador-esconder .d-flex #custom-search .boton{
+    width: 10%;
+    height: 40px;
+    border-radius: 1px;
     display: block;
     position: relative;
     float: right;
-    width: 10%;
-    padding: 12px 20px;
-    background-color: #ffffff;
-    }
-     /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
-    
-
-    /*BUSCADOR EN EL NAV*/
-    nav  #controls {
-    width: 100%;
-    max-width: 300px;
-    height: 10%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-left: 20px;
-    background-color: #000000;
-    }
-
-    nav  #controls #custom-search-input-header{
-    width: 100%;
-    max-width: 300px;
-    }
-        
-    .buscador #controls   #custom-search-input-header .sin-borde{
-    display: none;
-    visibility: hidden;
+    margin-top: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
     }
 
 
-    /*DIV DEL MENU GRANDE*/
-    #controls-responsive .boton{
-    width: 8%;
-    }
-
-   /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
-   /*margin-left: 5.4%;/*IMPORTANTE */
-   #controls{
-   display: none;
-   visibility: hidden;
-   }
-
-
-   nav{
-   display: flex;
-   flex-direction: column;
-   position: fixed;
-   width: 100%;
-   max-width: 420px;
-   height: 100%;
-   max-height: 1200px;
-   top:0;
-   bottom: 0;
-   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-   opacity: 0.97;
-   background-color: #000000;
-   overflow-y: scroll;
-   z-index: 200;
-   }
-
-  nav .logo-esconder{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  visibility: visible;
-  margin-top: 30px;
-  height: 30px;
-  border-bottom: 1px solid #aaaaaa;
-  }
-
-  nav .logo-esconder img{
-  width: 100%;
-  max-width: 120px;
-  margin-left: 20px;
-  }
-
-  nav .buscador-esconder{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  visibility: visible;
-  margin-top: 20px;
-  height: 50px;
-  }
-
-   .d-flex{
-    width: 100%;
-    max-width: 350px;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    margin-left: 18px;
-   }
-
-    #custom-search{
-    width: 100%;
-    max-width: 330px;
-    height: 50px;
-   }
-
-    #custom-search .sin-borde{
-    width: 90%;
-    max-width: 310px;
-    height: 40px;
-   }
-
-    #custom-search .boton{
-    width: 10%;
-    max-width: 20px;
-    height: 40px;
-   }
-
-   nav .nav .esconder{
-   visibility: visible;
-   }
-
-    nav .nav li a.active{
-    text-decoration:line-through;
-    color: #568632;
-    }
-
-   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-    .cabecera nav .nav{
-    width:100%; 
-    height: 100%;
-    max-height: 950px;
-    max-width: 340px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 6px;
-    margin-top: 10px;
-    overflow-y: scroll;
-    z-index: 99; 
-    }
-
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav .nav li{
-    list-style: none;
-    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-left: 10px;
-    margin-bottom: 15px;
-    cursor:pointer;
-    }
-    
-    nav .nav li a {
-    z-index: 100;
-    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-    height: 30px;
-    color: #fff;
-    font-weight: lighter;
-    font-size: 1.24rem;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-    font-family:  sans-serif;
-    padding-top: 0;
-    margin-top: 0;
-    }
+     /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+      nav .nav .esconder{
+     visibility: visible;
+     }
   
-     /*IMPORTANTE*/
-      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-    nav .nav li:hover > ul {
-    display: block;
-    margin-left: -200px;
-    height: 200px;
-    visibility: visible; 
-    z-index: 598;
-    }
+       nav .nav li a.active{
+      text-decoration:line-through;
+      color: #568632;
+      }
+  
+     /* UL  */
+       /* UL  */
+       header  nav .nav{
+        width: 90%; 
+        height: 99%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+         z-index: 99; 
+        }
 
-    nav .nav li ul li a{
-    font-size: 1rem;
-    display: block;
-    max-width: 200px;
-    width: 100%;
-    margin-left: -2px;
-    padding-bottom: -2px;
-    margin-left: -76px;
+   /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+  nav .nav li{
+  list-style: none;
+  height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+  margin-left: 10px;
+  margin-bottom: 10px;
+  cursor:pointer;
+  border-bottom: 1px solid #2d2d2d;
+  }
+  
+  nav .nav li a {
+  z-index: 100;
+  height: 24px;
+  color: #2d2d2d;
+  font-weight: 520;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  }
+
+
+    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+ /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav .nav li:hover > ul {
+      display: flex;
+     flex-direction: column;
+   width: 100%;
+
+    visibility: visible; 
+    z-index: 800;
+  
     }
 
 
     nav .nav ul {
-    visibility: hidden;
-    }
-
-
-    /* f...FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.....MENU ESCONIDDO DEL NAV ARROW......*/
-   /*ANIMACION SUBRAYADO */
-   nav a {
-   display: inline-block;
-   position: relative;
-   color: white;
-   text-decoration: none;
-   z-index: 40;
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5px;
+   visibility: hidden;
+   background-color: #fff;
    }
 
-   nav  a:after {
-   content: "";
-   display: block;
-   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-   height: 2px;
-   width: 0px;
-   transition: all .8s;
-   z-index: 10;
-   }
+  nav .nav ul li{
+    display: block;
+    width: 100%;
+      max-width: 700px;
+  margin-left: 2px;
+    border-bottom: 1px solid #fefefe;
+  }
 
 
+  nav .nav li ul li a{
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  text-transform: lowercase;
+  margin-left: 6px;
+  }
+
+  
+ /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
+
+
+  
+    /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+     nav  .estilo-logo:after{
+     text-decoration: none;
+     height: 0px;
+     content: "";
+     display: none;
+     margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+     height: 0px;
+     width: 0px;
+     transition: all .0s;
+     z-index: 10;
+     }
+
+  
+   
     /* width: 100%;*/
     nav  a:hover:after {
     padding-left: 40px;
@@ -8718,7 +9027,11 @@ width: 100%;
     background: white;
     }
 
+    /*..FIN NAV ESCONDIDO...........................*/
 
+
+    
+     
     /*PORTADA*/
     .portada{
     width: 100%;
@@ -9300,12 +9613,12 @@ width: 100%;
 
       /*CAJA PRINCIPAL DEL PRIMER FOOTER............................................................... */
      #footer .footer-primero{
-      width: 100%;
-      height: 190px;
-      display: flex;
-      flex-direction: row; 
-     justify-content: space-between;
-     z-index: 10;
+    width: 100%;
+    height: 190px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    z-index: 10;
      padding-bottom: 0;
     }
    
@@ -9316,10 +9629,12 @@ width: 100%;
       margin: auto;   
       }
 
+
      .icon-social1{
        height: 100%;
        max-height: 70px;
       }
+
 
     /*LETRA FOO EMOTIONS*/
     .icon-email .icon-social1 p{
@@ -9446,6 +9761,7 @@ width: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
   }
       
 
@@ -9459,451 +9775,490 @@ width: 100%;
   flex-direction: column;
    width: 100%;
    margin: auto;
-   margin-top:  122px;
+   margin-top:    38px;
    margin-bottom: 280px;
    }
    
 
-    /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
-    header{
-    display: block;
-    width:100%;
-    height: 55px;
-    top:0;
-    left: 0;
-    position: fixed;
-    z-index: 2000;   /*IMPORTANTE  */
-    margin: auto;
-    background-color: #fff;
-    box-shadow: 0 8px 6px -6px #c6c6c6;
-    }
-  
-
-    header.black{
-    height: 55px;
-    background-color: #fff;
-    }
-
-  
-    .cabecera{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 38px;
-    }
-         
-
-    /*caja */
-    .cabecera .logo{
-    display: block;
-    position: relative;
-    float: left;
-    width: 20%;
-    height: 35px;
-    }
-              
-    .cabecera .logo img {
-    display: block;
-    width: 100%;
-    max-width: 140px;
-    min-width: 140px;
-    height: 35px;
-    z-index: 40;
-     }
-         
-
-    /*CONTENEDOR  REVISTA Y SOCIALES*/
-    .suscribe{
-    display: block;
-    position: relative;
-    float: left;
-    width: 20%;
-    max-width: 120px;
-    height: 38px;
-    }
-  
- 
-    .suscribe a  h4{
-    font-size: 0.8rem;
-    margin-top: 10px;
-    font-weight: 700;
-    letter-spacing: 0.2px;
-    font-family: 'Times New Roman', Times, serif;
-    z-index: 5;
-    }
-  
-
-
-    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-    .cabecera .menu-btn {
-    display: block;
-    position: relative;
-    float: left;
-    width: 10%;
-    max-width: 50px;
-    height: 38px;
-    margin: auto;
-    }
-
-  
-   .menu-btn .hamburguesa{
-   display: block;
-   position: relative;
-   float:left;
-   width: 100%;
-   height: 30px;
-   max-width: 40px;
-   }
-
-
-     /*------- box-shadow: 0 2px 5px rgba(255,101,47,.2);--------*/
-   .menu-btn .hamburguesa .menu-btn__burger {
+     /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+     header{
       display: block;
-      position: relative;
-      float: right;
-      margin-top: 14.5px;
-      width: 37px;
-      height: 4px;
-      background: #2d2d2d;
-      border-radius: 2px;
-      transition: all .5s ease-in-out;
-      z-index: 1000;
-      }
-  
-
-
-  /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
-  .menu-btn__burger::before,
-  .menu-btn__burger::after {
-  content: '';
-  position: absolute;
-  height: 4px;
-  width: 36px;
-  background:#2d2d2d;
-  border-radius: 2px;
-  transition: all .5s ease-in-out;
-  z-index: 800;  
-  }
-
-    
-  .menu-btn__burger::before {
-  transform: translateY(-7px);
-  z-index:3000;
-  }
-
-
-  .menu-btn__burger::after {
-  transform: translateY(7px);
-  z-index:3000;
-  }
-
-
-  /* ANIMATION */
-  .hamburguesa.open .menu-btn__burger {
-  transform: translateX(-50px);
-  background: transparent;
-  box-shadow: none;
-  }
-
-
-   /* background: #fff;  */
-  .hamburguesa.open .menu-btn__burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
-  }
-
-
-  /* background: #fff;  */
-  .hamburguesa.open .menu-btn__burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
-  }
-
-
-  .menu-btn__burger:hover{
-  background-color: #7aac41;
-  }
-  
-
-  .menu-btn__burger:hover::before,
-  .menu-btn__burger:hover::after{
-  background-color: #7aac41;
-  }
-
-
-     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
-
-
-    /*..BUSCADOR PARA EL MOVIL..........................*/
-     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-     #controls-responsive{
-      display: block;
-      position: relative;
-      float: left;
-      width: 92%;
-      height: 50px;
-      margin-top: 58px;  
+      width:100%;
+      height: 58px;
+      top:0;
+      left: 0;
+      position: fixed;
+      z-index: 2000;   /*IMPORTANTE  */
       margin: auto;
+      background-color: #fff;
+      box-shadow: 0 8px 6px -6px #c6c6c6;
+      }
+    
+  
+        header.black{
+        height: 58px;
+        background-color: #fff;
        }
   
-       #custom-search-input-responsive{
-       width:  100%;
-       height: 50px;
-       border: 1px solid #c9c9c9;
+    
+       .cabecera{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 35px;
+       }
+           
+  
+       /*caja */
+       .cabecera .logo{
+        display: inline-flex;
+        width: 20%;
+        height: 35px;
+       }
+                
+       .cabecera .logo img {
+        display: block;
+        width: 100%;
+        max-width: 140px;
+        min-width: 140px;
+        height: 35px;
+        z-index: 40;
+       }
+     
+  
+       
+     /*BUSCADOR EN EL NAV*/   
+    .cabecera  #controls {
+      width: 30%;
+      max-width: 350px;
+      display: inline-flex;
+      height: 35px;
+      }
+    
+    
+    
+     .cabecera  #controls #custom-search-input-header{
+      width: 100%;
+      height: 35px;
+       border: 1px solid #fafafa;
        border-radius: 4px;
        display: flex;
        flex-direction: row;
-       justify-content: space-between;
-       margin: auto;
+   
        }
+    
+    
+       .cabecera   #controls   #custom-search-input-header .sin-borde{
+        width: 90%;
+        background-color: #fafafa;
+        }
+          
+        
+         .cabecera  #controls   #custom-search-input-header .boton{
+        width: 8%;
+        background-color: #ffffff;
+         }
+    
+          input[type=text] {
+            width: 100%;
+           
+          }
+          
+         /*..BUSCADOR PARA EL MOVIL..........................*/
+        /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+        #controls-responsive{
+        display: none;
+        visibility: hidden;
+         }
+       
+      /*CONTENEDOR  REVISTA Y SOCIALES*/
+     
+      .cabecera .suscribe{
+     display: inline-flex;
+      width: 10%;
+      height: 35px;
+      margin-left: 60px;
+      }
+    
+   
+      .suscribe a  h4{
+      font-size: 0.8rem;
+      margin-top: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      font-family: 'Times New Roman', Times, serif;
+      z-index: 5;
+      }
+    
+  
+    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+     .cabecera .menu-btn {
+      display: block;
+      position: relative;
+      float: left;
+      width: 10%;
+      max-width: 50px;
+      height: 35px;
+    
+      }
+  
+    
+    .cabecera .menu-btn .hamburguesa{
+    display: block;
+    position: relative;
+    float:left;
+    width: 100%;
+    height: 30px;
+    max-width: 40px;
+     }
+  
+       /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+     .menu-btn .hamburguesa .menu-btn__burger {
+        display: block;
+        position: relative;
+        float: right;
+        margin-top: 14.5px;
+        width: 37px;
+        height: 4px;
+        background: #2d2d2d;
+        border-radius: 2px;
+        transition: all .5s ease-in-out;
+        z-index: 1000;
+        }
+    
   
   
-   #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
+         /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 36px;
+    background:#2d2d2d;
+    border-radius: 2px;
+    transition: all .5s ease-in-out;
+    z-index: 800;  
+    }
+  
+      
+    .menu-btn__burger::before {
+    transform: translateY(-7px);
+    z-index:3000;
+    }
+  
+  
+    .menu-btn__burger::after {
+    transform: translateY(7px);
+    z-index:3000;
+    }
+  
+  
+    /* ANIMATION */
+    .hamburguesa.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    }
+  
+  
+     /* background: #fff;  */
+    .hamburguesa.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    }
+  
+  
+    /* background: #fff;  */
+    .hamburguesa.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    }
+  
+  
+    .menu-btn__burger:hover{
+    background-color: #7aac41;
+    }
+    
+  
+    .menu-btn__burger:hover::before,
+    .menu-btn__burger:hover::after{
+    background-color: #7aac41;
+    }
+  
+  
+  
+  
+    
+    /*..INICIO NAV ESCONDIDO.....................*/
+  
+    header nav{
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      max-width: 900px;
+      height: 100%;
+      margin: auto;
+      top:0;
+      bottom: 0;
+      left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+       background-color: #fff;
+       overflow-y: scroll;
+       z-index: 200;
+       visibility: visible;
+       box-sizing: border-box;
+      
+      }
+  
+      nav::-webkit-scrollbar {
+        display: none;
+       }
+       
+  
+      /* #aaaaaa */
+      nav .logo-esconder{
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+      width: 98%;
+      visibility: visible;
+      height: 80px;
+       border-bottom: 1px solid #2d2d2d;
+    
+      }
+  
+      nav .logo-esconder .logo-en-menu-responsive{
+        width: 30%;
+        max-width: 150px;
+        display: inline-flex;
+        height: 80px;
+        margin-left: 10px;
+      }
+  
+     
+  
+    nav .logo-esconder .logo-en-menu-responsive img{
+      width: 100%;
+      max-width: 120px;
+      min-width: 120px;
+      margin-top: 45px;
+    }
+  
+    nav .logo-esconder .emoticon{
+      width: 8%;
+      height: 80px;
+    }
+  
+     nav .logo-esconder .suscriptor{
+       width: 30%;
+       height: 80px;
        display: block;
        position: relative;
-       float: left;
-       width: 100%;
-     
+       float: right;
+  
+     }
+      nav .logo-esconder .suscriptor a h4{
+      font-size: 0.8em;
+      margin-top: 50px;
+    
       }
   
-      input[type=text] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
+      nav .siguenos{
+        display: block;
+        width: 95%;
+        margin-top: 40px;
+        visibility: visible;
       }
-       #controls-responsive .boton-responsive{
-         display: block;
-         position: relative;
-         float: right;
-       width: 10%;
-       padding: 12px 20px;
-       background-color: #ffffff;
-        }
-     /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
+  
+      nav .siguenos ul{
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        margin-left: 10px;
+      }
+  
+       nav .siguenos h1{
+         font-size: 0.9em;
+         display: inline-flex;
+         margin: 10px 0;
+         padding: 5px 9px 5px 4px;
+       }
+      nav .siguenos ul li{
+        margin: 10px 0;
+        list-style: none;
+        padding: 5px 9px 5px 4px;
+      }
+  
+       /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+       nav .buscador-esconder{
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      visibility: visible;
+      margin-top: 40px;
+      margin-left: 10px;
+      height: 50px;
+      }
+  
+      .d-flex{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+       box-sizing: border-box;
+      }
+  
+      #custom-search{
+        width: 100%;
+        height: 50px;
+       border: 1px solid #2d2d2d;
+       border-radius: 8px;
+      }
+  
+     .buscador-esconder #custom-search input[type=text]{
+       box-sizing: border-box;
+     }
+  
+     .buscador-esconder .d-flex #custom-search .sin-borde{
+        width: 90%;
+        height: 40px;
+        outline: none;
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        float: left;
+      }
+  
+     .buscador-esconder .d-flex #custom-search .boton{
+      width: 10%;
+      height: 40px;
+      border-radius: 1px;
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 4px;
+      box-sizing: border-box;
+      background-color: #fff;
+      }
+  
+  
+       /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+        nav .nav .esconder{
+       visibility: visible;
+       }
     
-    /*BUSCADOR EN EL NAV*/
-            
-    nav  #controls {
-    width: 100%;
-    max-width: 300px;
-    height: 10%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-left: 20px;
-    background-color: #000000;
-    }
+         nav .nav li a.active{
+        text-decoration:line-through;
+        color: #7aac41;
+        }
+    
+       /* UL  */
+         /* UL  */
+         header  nav .nav{
+          width: 90%; 
+          height: 99%;
+          display: flex;
+          flex-direction: column;
+          margin-top: 30px;
+           z-index: 99; 
+          }
 
-
-    nav  #controls #custom-search-input-header{
-    width: 100%;
-    max-width: 300px;
-    }
-        
-
-    .buscador #controls   #custom-search-input-header .sin-borde{
-    display: none;
-    visibility: hidden;
-    }
-
-
-    /*DIV DEL MENU GRANDE*/
-    #controls-responsive .boton{
-    width: 8%;
-    }
-
-    /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
-   /*margin-left: 5.4%;/*IMPORTANTE */
-
-   #controls{
-   display: none;
-   visibility: hidden;
-   }
-
-
-   nav{
-   display: flex;
-   flex-direction: column;
-   position: fixed;
-   width: 100%;
-   max-width: 420px;
-   height: 100%;
-   max-height: 1200px;
-   top:0;
-   bottom: 0;
-   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-   opacity: 0.97;
-   background-color: #000000;
-   overflow-y: scroll;
-   z-index: 200;
-   }
-
-
-  nav .logo-esconder{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  visibility: visible;
-  margin-top: 30px;
-  height: 30px;
-  border-bottom: 1px solid #aaaaaa;
-  }
-
-   nav .logo-esconder img{
-  width: 100%;
-  max-width: 120px;
-  margin-left: 20px;
-   }
-
-
-   nav .buscador-esconder{
-   display: flex;
-   flex-direction: column;
-   width: 100%;
-   visibility: visible;
-   margin-top: 20px;
-   height: 50px;
-   }
-
-
-   .d-flex{
-    width: 100%;
-    max-width: 350px;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    margin-left: 18px;
-    }
-
-    #custom-search{
-    width: 100%;
-    max-width: 330px;
-    height: 50px;
-    }
-
-    #custom-search .sin-borde{
-    width: 90%;
-    max-width: 310px;
-    height: 40px;
-    }
-
-    #custom-search .boton{
-    width: 10%;
-    max-width: 20px;
-    height: 40px;
-    }
-
-
-   nav .nav .esconder{
-   visibility: visible;
-   }
-
-
-    nav .nav li a.active{
-    text-decoration:line-through;
-    color: #568632;
-    }
-
-
-    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-    .cabecera nav .nav{
-    width:100%; 
-    height: 100%;
-    max-height: 950px;
-    max-width: 340px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 6px;
-    margin-top: 10px;
-    overflow-y: scroll;
-    z-index: 99; 
-    }
-
-
-    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
     nav .nav li{
     list-style: none;
     height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
     margin-left: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     cursor:pointer;
+    border-bottom: 1px solid #2d2d2d;
     }
     
-
     nav .nav li a {
     z-index: 100;
-    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-    height: 30px;
-    color: #fff;
-    font-weight: lighter;
-    font-size: 1.24rem;
-    text-transform: lowercase;
+    height: 24px;
+    color: #2d2d2d;
+    font-weight: 520;
+    font-size: 0.9rem;
+    text-transform: uppercase;
     letter-spacing: 1px;
-    font-family:  sans-serif;
-    padding-top: 0;
-    margin-top: 0;
+    margin-top: 5px;
     }
   
+ 
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover > ul {
+        display: flex;
+       flex-direction: column;
+     width: 100%;
+  
+      visibility: visible; 
+      z-index: 800;
+    
+      }
+ 
 
-    /*IMPORTANTE*/
-    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-    nav .nav li:hover > ul {
-    display: block;
-    margin-left: -200px;
-    height: 200px;
-    visibility: visible; 
-    z-index: 598;
+      nav .nav ul {
+        width: 100%;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5px;
+     visibility: hidden;
+     background-color: #fff;
+     }
+ 
+    nav .nav ul li{
+      display: block;
+      width: 100%;
+        max-width: 700px;
+    margin-left: 2px;
+      border-bottom: 1px solid #fefefe;
     }
 
 
     nav .nav li ul li a{
     font-size: 1rem;
     display: block;
-    max-width: 200px;
     width: 100%;
-    margin-left: -2px;
-    padding-bottom: -2px;
-    margin-left: -76px;
+    text-transform: lowercase;
+    margin-left: 6px;
     }
 
+    
+   /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
+  
 
-    nav .nav ul {
-    visibility: hidden;
-    }
-
-
-    /* f..FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV....MENU ESCONIDDO DEL NAV ARROW...*/
-   /*ANIMACION SUBRAYADO */
-   nav a {
-   display: inline-block;
-   position: relative;
-   color: white;
-   text-decoration: none;
-   z-index: 40;
-  }
-
-
-  nav  a:after {
-  content: "";
-  display: block;
-  margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-  height: 2px;
-  width: 0px;
-  transition: all .8s;
-  z-index: 10;
-   }
-
-
-   /* width: 100%;*/
-   nav  a:hover:after {
-   padding-left: 40px;
-   padding-right: -150px;
-   height: 2px;
-   background: white;
-   }
-   /*-----MENU SELECCIONADO.........,*/
-   /*.......................................*/
+    
+      /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+       nav  .estilo-logo:after{
+       text-decoration: none;
+       height: 0px;
+       content: "";
+       display: none;
+       margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+       height: 0px;
+       width: 0px;
+       transition: all .0s;
+       z-index: 10;
+       }
+  
+    
+     
+      /* width: 100%;*/
+      nav  a:hover:after {
+      padding-left: 40px;
+      padding-right: -150px;
+      height: 2px;
+      background: white;
+      }
+  
+      /*..FIN NAV ESCONDIDO...........................*/
+  
+  
+      
+       
    
 
     /*PORTADA..............*/
@@ -10007,7 +10362,7 @@ width: 100%;
  
    /*PORTADA DE CONTACTO NO BORRAR*/
    .portada span h2{
-   color:#639a3a;
+   color:  #7aac41;
    padding: 5px 6px 5px 7px;
    word-spacing: -1px;
    margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
@@ -10498,123 +10853,208 @@ width: 100%;
     
   /* 1081 A 1149 .........4...DESPUES DEL IPOD PRO..... */
   @media only screen and (min-width: 1080px) and (max-width: 1149px){
-    #wrapper {
-    margin:0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    *{
+      margin:0;
+      padding:0;
+      border:0;
+      box-sizing: border-box;
     }
-          
-
-    #wrapper > * {
-    padding: 20px;
-    }
-
-
-    /*CONTAINER DE TODO EL BODY............................  */
-    #container{
-    width: 100%;
-    margin: auto;
-    margin-top: 120px;
-    margin-bottom: 210px;
-    }
+    /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
      
-
-    /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
-    header{
-    display: block;
-    width:100%;
-    height: 55px;
-    top:0;
-    left: 0;
-    position: fixed;
-    z-index: 2000;   /*IMPORTANTE  */
-    margin: auto;
-    background-color: #fff;
-    box-shadow: 0 8px 6px -6px #c6c6c6;
+    *, *:before, *:after {
+    box-sizing: border-box;
     }
     
+    a {
+      text-decoration: none;
+      float:left;
+      clear:both
+     }
+    
+    
+     /*--IMPORTANTE COLOR DEL LOGO #3d6024 */
+    
+      body{
+      padding:0;
+      margin: 0;
+      background-color: #fff;
+      color: rgba(0,0,0,.95);
+      font-family: "Argos",serif;
+       }
+    
+    html, body {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+    
+    }
+    
+
+ /*CONTENEDOR PRINCIPAL DE TODA LA CABECERA INCLUYENDO SLIDER*/
+
+ #wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+
+ }
+    
+ #wrapper > * {
+ padding: 20px;
+ }
+
+    /*CONTAINER DE TODO EL BODY.......margin-top 152px....  height: 520px;.................  */
+  #container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 90px;
+    height: auto;
+    margin-top: 40px;
+     }
+  
+     
+ /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+ header{
+  display: block;
+  width:100%;
+  height: 55px;
+  top:0;
+  left: 0;
+  position: fixed;
+  z-index: 2000;   /*IMPORTANTE  */
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0 8px 6px -6px #c6c6c6;
+  }
+
 
     header.black{
     height: 55px;
     background-color: #fff;
-    }
-  
-    
-    .cabecera{
+   }
+
+
+   .cabecera{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 38px;
-    }
-           
-
-    /*caja */
-    .cabecera .logo{
-    display: block;
-    position: relative;
-    float: left;
-    width: 20%;
-    height: 35px;
-    }
+   }
        
-    
-    .cabecera .logo img {
+
+   /*caja */
+   .cabecera .logo{
+    display: inline-flex;
+    width: 20%;
+    height: 38px;
+   }
+            
+   .cabecera .logo img {
     display: block;
     width: 100%;
     max-width: 140px;
     min-width: 140px;
     height: 35px;
     z-index: 40;
-    }
-           
+   }
+ 
 
-    /*CONTENEDOR  REVISTA Y SOCIALES*/
-    .suscribe{
-    display: block;
-    position: relative;
-    float: left;
-    width: 20%;
-    max-width: 120px;
-    height: 38px;
-    }
-    
    
-    .suscribe a  h4{
-    font-size: 0.8rem;
-    margin-top: 10px;
-    font-weight: 700;
-    letter-spacing: 0.2px;
-    font-family: 'Times New Roman', Times, serif;
-    z-index: 5;
-    }
-    
+   /*BUSCADOR EN EL NAV*/   
+   .cabecera  #controls {
+  width: 30%;
+  max-width: 350px;
+  display: inline-flex;
+  height: 38px;
+  }
 
-    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-    .cabecera .menu-btn {
-    display: block;
-    position: relative;
-    float: left;
-    width: 10%;
-    max-width: 50px;
-    height: 38px;
-    margin: auto;
-    }
 
+
+ .cabecera  #controls #custom-search-input-header{
+  width: 100%;
+  height: 38px;
+   border: 1px solid #fafafa;
+   border-radius: 4px;
+   display: flex;
+   flex-direction: row;
+
+   }
+
+
+   .cabecera   #controls   #custom-search-input-header .sin-borde{
+    width: 90%;
+    background-color: #fafafa;
+    }
+      
     
-    .menu-btn .hamburguesa{
-    display: block;
-    position: relative;
-    float:left;
-    width: 100%;
-    height: 30px;
-    max-width: 40px;
+     .cabecera  #controls   #custom-search-input-header .boton{
+    width: 8%;
+    background-color: #ffffff;
      }
 
-       /*--- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------*/
-     .menu-btn .hamburguesa .menu-btn__burger {
+      input[type=text] {
+        width: 100%;
+       
+      }
+      
+     /*..BUSCADOR PARA EL MOVIL..........................*/
+    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+    #controls-responsive{
+    display: none;
+    visibility: hidden;
+     }
+   
+  /*CONTENEDOR  REVISTA Y SOCIALES*/
+ 
+  .cabecera .suscribe{
+  display: inline-flex;
+  width: 10%;
+  height: 38px;
+  margin-left: 60px;
+  }
+
+
+  .suscribe a  h4{
+  font-size: 0.8rem;
+  margin-top: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-family: 'Times New Roman', Times, serif;
+  z-index: 5;
+  }
+
+
+  /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+  .cabecera .menu-btn {
+  display: block;
+  position: relative;
+  float: left;
+  width: 10%;
+  max-width: 50px;
+  height: 38px;
+
+  }
+
+
+.cabecera .menu-btn .hamburguesa{
+display: block;
+position: relative;
+float:left;
+width: 100%;
+height: 30px;
+max-width: 40px;
+ }
+
+    /*------- box-shadow: 0 2px 5px rgba(255,101,47,.2);---------*/
+    .menu-btn .hamburguesa .menu-btn__burger {
     display: block;
     position: relative;
     float: right;
@@ -10626,343 +11066,329 @@ width: 100%;
     transition: all .5s ease-in-out;
     z-index: 1000;
     }
-    
-
-
-    /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
-    .menu-btn__burger::before,
-    .menu-btn__burger::after {
-    content: '';
-    position: absolute;
-    height: 4px;
-    width: 36px;
-    background:#2d2d2d;
-    border-radius: 2px;
-    transition: all .5s ease-in-out;
-    z-index: 800;  
-    }
-
-      
-    .menu-btn__burger::before {
-    transform: translateY(-7px);
-    z-index:3000;
-    }
-
-
-    .menu-btn__burger::after {
-    transform: translateY(7px);
-    z-index:3000;
-    }
-
-
-    /* ANIMATION */
-    .hamburguesa.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-    }
-
-
-     /* background: #fff;  */
-    .hamburguesa.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-   
-    }
-
-
-    /* background: #fff;  */
-    .hamburguesa.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-
-    }
 
 
 
+     /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+content: '';
+position: absolute;
+height: 4px;
+width: 36px;
+background:#2d2d2d;
+border-radius: 2px;
+transition: all .5s ease-in-out;
+z-index: 800;  
+}
 
-    .menu-btn__burger:hover{
-    background-color: #7aac41;
-    }
-    
-
-    .menu-btn__burger:hover::before,
-    .menu-btn__burger:hover::after{
-    background-color: #7aac41;
-    }
-
-
-    /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
-    /*..BUSCADOR PARA EL MOVIL..........................*/
-    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-       #controls-responsive{
-        display: block;
-        position: relative;
-        float: left;
-        width: 92%;
-        height: 50px;
-        margin-top: 58px;  
-        margin: auto;
-         }
-    
-
-      #custom-search-input-responsive{
-      width:  100%;
-      height: 50px;
-      border: 1px solid #c9c9c9;
-      border-radius: 4px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin: auto;
-      }
-    
-    
-     #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
-    display: block;
-    position: relative;
-    float: left;
-    width: 100%;
-    }
-    
-    input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    }
-
-
-      #controls-responsive .boton-responsive{
-      display: block;
-      position: relative;
-      float: right;
-      width: 10%;
-      padding: 12px 20px;
-      background-color: #ffffff;
-      }
-      /*FIN BUSCADOR RESPONSIVE EN LA PAGINA*/
-      
-
-      /*BUSCADOR EN EL NAV*/
-      nav  #controls {
-      width: 100%;
-      max-width: 300px;
-      height: 10%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-      margin-left: 20px;
-      background-color: #000000;
-      }
   
+.menu-btn__burger::before {
+transform: translateY(-7px);
+z-index:3000;
+}
 
-      nav  #controls #custom-search-input-header{
-      width: 100%;
-      max-width: 300px;
-      }
-          
-      .buscador #controls   #custom-search-input-header .sin-borde{
-      display: none;
-      visibility: hidden;
-      }
-      /*DIV DEL MENU GRANDE*/
-          
-      #controls-responsive .boton{
-      width: 8%;
-      }
-   /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
-  /*margin-left: 5.4%;/*IMPORTANTE */
 
-    #controls{
+.menu-btn__burger::after {
+transform: translateY(7px);
+z-index:3000;
+}
+
+
+/* ANIMATION */
+.hamburguesa.open .menu-btn__burger {
+transform: translateX(-50px);
+background: transparent;
+box-shadow: none;
+}
+
+
+ /* background: #fff;  */
+.hamburguesa.open .menu-btn__burger::before {
+transform: rotate(45deg) translate(35px, -35px);
+}
+
+
+/* background: #fff;  */
+.hamburguesa.open .menu-btn__burger::after {
+transform: rotate(-45deg) translate(35px, 35px);
+}
+
+
+.menu-btn__burger:hover{
+background-color: #7aac41;
+}
+
+
+.menu-btn__burger:hover::before,
+.menu-btn__burger:hover::after{
+background-color: #7aac41;
+}
+
+
+
+
+
+/*..INICIO NAV ESCONDIDO.....................*/
+
+header nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  margin: auto;
+  top:0;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+   background-color: #fff;
+   overflow-y: scroll;
+   z-index: 200;
+   visibility: visible;
+   box-sizing: border-box;
+  
+  }
+
+  nav::-webkit-scrollbar {
     display: none;
-    visibility: hidden;
-    }
-
-
-    nav{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    max-width: 420px;
-    height: 100%;
-    max-height: 1200px;
-    top:0;
-    bottom: 0;
-    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-    opacity: 0.97;
-     background-color: #000000;
-     overflow-y: scroll;
-     z-index: 200;
-    }
-
-
-    nav .logo-esconder{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    visibility: visible;
-    margin-top: 30px;
-    height: 30px;
-    border-bottom: 1px solid #aaaaaa;
    }
+   
 
+  /* #aaaaaa */
+  nav .logo-esconder{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width: 98%;
+  visibility: visible;
+  height: 80px;
+   border-bottom: 1px solid #2d2d2d;
 
-    nav .logo-esconder img{
-    width: 100%;
-    max-width: 120px;
-    margin-left: 20px;
-   }
+  }
 
+  nav .logo-esconder .logo-en-menu-responsive{
+    width: 30%;
+    max-width: 150px;
+    display: inline-flex;
+    height: 80px;
+    margin-left: 10px;
+  }
 
-    nav .buscador-esconder{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+ 
+
+nav .logo-esconder .logo-en-menu-responsive img{
+  width: 100%;
+  max-width: 120px;
+  min-width: 120px;
+  margin-top: 45px;
+}
+
+nav .logo-esconder .emoticon{
+  width: 8%;
+  height: 80px;
+}
+
+ nav .logo-esconder .suscriptor{
+   width: 30%;
+   height: 80px;
+   display: block;
+   position: relative;
+   float: right;
+
+ }
+  nav .logo-esconder .suscriptor a h4{
+  font-size: 0.8em;
+  margin-top: 50px;
+
+  }
+
+  nav .siguenos{
+    display: block;
+    width: 95%;
+    margin-top: 40px;
     visibility: visible;
-    margin-top: 20px;
-    height: 50px;
-    }
+  }
 
+  nav .siguenos ul{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin-left: 10px;
+  }
 
-    .d-flex{
+   nav .siguenos h1{
+     font-size: 0.9em;
+     display: inline-flex;
+     margin: 10px 0;
+     padding: 5px 9px 5px 4px;
+   }
+  nav .siguenos ul li{
+    margin: 10px 0;
+    list-style: none;
+    padding: 5px 9px 5px 4px;
+  }
+
+   /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+   nav .buscador-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  visibility: visible;
+  margin-top: 40px;
+  margin-left: 10px;
+  height: 50px;
+  }
+
+  .d-flex{
     width: 100%;
-    max-width: 350px;
     height: 50px;
     display: flex;
     flex-direction: row;
-    margin-left: 18px;
-    }
+   box-sizing: border-box;
+  }
 
-
-    #custom-search{
+  #custom-search{
     width: 100%;
-    max-width: 330px;
     height: 50px;
-    }
+   border: 1px solid #2d2d2d;
+   border-radius: 8px;
+  }
 
+ .buscador-esconder #custom-search input[type=text]{
+   box-sizing: border-box;
+ }
 
-    #custom-search .sin-borde{
+ .buscador-esconder .d-flex #custom-search .sin-borde{
     width: 90%;
-    max-width: 310px;
     height: 40px;
-    }
+    outline: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    float: left;
+  }
+
+ .buscador-esconder .d-flex #custom-search .boton{
+  width: 10%;
+  height: 40px;
+  border-radius: 1px;
+  display: block;
+  position: relative;
+  float: right;
+  margin-top: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+  }
 
 
-    #custom-search .boton{
-    width: 10%;
-    max-width: 20px;
-    height: 40px;
-    }
-
-
+   /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
     nav .nav .esconder{
-    visibility: visible;
-    }
-  
-    nav .nav li a.active{
-    text-decoration:line-through;
-    color: #568632;
-    }
-  
+   visibility: visible;
+   }
 
-    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-    .cabecera nav .nav{
-    width:100%; 
-    height: 100%;
-    max-height: 950px;
-    max-width: 340px;
+     nav .nav li a.active{
+    text-decoration:line-through;
+    color: #7aac41;
+    }
+
+
+    /* UL  */
+    header  nav .nav{
+      width: 90%; 
+      height: 99%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+       z-index: 99; 
+      }
+
+ /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+nav .nav li{
+list-style: none;
+height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+margin-left: 10px;
+margin-bottom: 10px;
+cursor:pointer;
+border-bottom: 1px solid #2d2d2d;
+}
+
+nav .nav li a {
+z-index: 100;
+height: 24px;
+color: #2d2d2d;
+font-weight: 520;
+font-size: 0.9rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-top: 5px;
+}
+
+
+  /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav .nav li:hover > ul {
     display: flex;
     flex-direction: column;
-    margin-left: 6px;
-    margin-top: 10px;
-    overflow-y: scroll;
-    z-index: 99; 
-    }
-  
-
-    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav .nav li{
-    list-style: none;
-    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-left: 10px;
-    margin-bottom: 15px;
-    cursor:pointer;
-    }
-      
-      nav .nav li a {
-      z-index: 100;
-      background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-      height: 30px;
-      color: #fff;
-      font-weight: lighter;
-      font-size: 1.24rem;
-      text-transform: lowercase;
-      letter-spacing: 1px;
-      font-family:  sans-serif;
-      padding-top: 0;
-      margin-top: 0;
-      }
-    
-       /*IMPORTANTE*/
-  
-       
-      
-   
-    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-    nav .nav li:hover > ul {
-    display: block;
-    margin-left: -200px;
-    height: 200px;
+    width: 100%;
     visibility: visible; 
-    z-index: 598;
+     z-index: 800;
     }
 
-    
-      nav .nav li ul li a{
-      font-size: 1rem;
-      display: block;
-      max-width: 200px;
-      width: 100%;
-      margin-left: -2px;
-      padding-bottom: -2px;
-      margin-left: -76px;
-      }
 
-  
     nav .nav ul {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5px;
     visibility: hidden;
+    background-color: #fff;
     }
-  
-    /* f......FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.....MENU ESCONIDDO DEL NAV ARROW......*/
-   /*ANIMACION SUBRAYADO */
-   nav a {
-   display: inline-block;
-   position: relative;
-   color: white;
+
+
+    nav .nav ul li{
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin-left: 2px;
+    border-bottom: 1px solid #fefefe;
+    }
+
+
+    nav .nav li ul li a{
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    text-transform: lowercase;
+    margin-left: 6px;
+    }
+
+    /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
+  /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+   nav  .estilo-logo:after{
    text-decoration: none;
-   z-index: 40;
-   }
-  
-    nav  a:after {
+   height: 0px;
    content: "";
-   display: block;
-   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-   height: 2px;
+   display: none;
+   margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+   height: 0px;
    width: 0px;
-   transition: all .8s;
+   transition: all .0s;
    z-index: 10;
    }
-  
-  
-    /* width: 100%;*/
-    nav  a:hover:after {
-    padding-left: 40px;
-    padding-right: -150px;
-    height: 2px;
-    background: white;
-    }
-      /*PORTADA*/
+
+
+ 
+  /* width: 100%;*/
+  nav  a:hover:after {
+  padding-left: 40px;
+  padding-right: -150px;
+  height: 2px;
+  background: white;
+  }
+  /*..FIN NAV ESCONDIDO...........................*/
        
    /*ES PARA SEPARAR EL BUSCADOR DE LA PORTADA*/
    .portada-receta-img2 {
@@ -11080,7 +11506,7 @@ width: 100%;
  
    /*PORTADA DE CONTACTO NO BORRAR*/
   .portada span h2{
-  color:#639a3a;
+  color:#7aac41;
   padding: 5px 6px 5px 7px;
   word-spacing: -1px;
   margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
@@ -11501,6 +11927,7 @@ width: 100%;
     width: 100%;
     height: auto;
     border: 0;
+  
      }
     
      #wrapper > * {
@@ -11512,7 +11939,7 @@ width: 100%;
       display: flex;
       flex-direction: column;
       width: 100%;
-      margin-top: 55px;
+      margin-top: 48px;
        padding-left: 0;
       padding-right: 0; 
       }
@@ -11671,18 +12098,13 @@ width: 100%;
        /* background: #fff;  */
       .hamburguesa.open .menu-btn__burger::before {
       transform: rotate(45deg) translate(35px, -35px);
-     
       }
   
   
       /* background: #fff;  */
       .hamburguesa.open .menu-btn__burger::after {
       transform: rotate(-45deg) translate(35px, 35px);
-  
       }
-  
-  
-  
   
       .menu-btn__burger:hover{
       background-color: #7aac41;
@@ -11755,198 +12177,271 @@ width: 100%;
   color: #2d2d2d;
   }
   
-  
-  
-  
-    #controls-responsive{
-      display: none;
-     visibility: hidden;
-    }
 
 
-    nav{
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      width: 100%;
-      max-width: 420px;
-      height: 100%;
-      max-height: 1200px;
-      top:0;
-      bottom: 0;
-      left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-      opacity: 0.97;
-      background-color: #000000;
-      overflow-y: scroll;
-      z-index: 200;
-      }
-  
+  /*..INICIO NAV ESCONDIDO.....................*/
 
-    nav .logo-esconder{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+   header nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  max-width:  980px;
+  height: 100%;
+  margin: auto;
+  top:0;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+   background-color: #fff;
+   overflow-y: scroll;
+   z-index: 200;
+   visibility: visible;
+   box-sizing: border-box;
+  
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
+   }
+   
+
+  /* #aaaaaa */
+  nav .logo-esconder{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width: 98%;
+  visibility: visible;
+  height: 80px;
+   border-bottom: 1px solid #2d2d2d;
+
+  }
+
+  nav .logo-esconder .logo-en-menu-responsive{
+    width: 30%;
+    max-width: 150px;
+    display: inline-flex;
+    height: 80px;
+    margin-left: 10px;
+  }
+
+ 
+
+nav .logo-esconder .logo-en-menu-responsive img{
+  width: 100%;
+  max-width: 120px;
+  min-width: 120px;
+  margin-top: 45px;
+}
+
+nav .logo-esconder .emoticon{
+  width: 8%;
+  height: 80px;
+}
+
+ nav .logo-esconder .suscriptor{
+   width: 30%;
+   height: 80px;
+   display: block;
+   position: relative;
+   float: right;
+
+ }
+  nav .logo-esconder .suscriptor a h4{
+  font-size: 0.8em;
+  margin-top: 50px;
+
+  }
+
+  nav .siguenos{
+    display: block;
+    width: 95%;
+    margin-top: 40px;
     visibility: visible;
-    margin-top: 30px;
-    height: 30px;
-    border-bottom: 1px solid #aaaaaa;
-    }
-  
-    nav .logo-esconder img{
-    width: 100%;
-    max-width: 120px;
-    margin-left: 20px;
-    }
-  
+  }
 
-    nav .buscador-esconder{
+  nav .siguenos ul{
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    visibility: visible;
-    margin-top: 20px;
-    height: 50px;
-     }
-  
+    flex-direction: row;
+    width: 95%;
+    margin-left: 10px;
+  }
 
-    .d-flex{
+   nav .siguenos h1{
+     font-size: 0.9em;
+     display: inline-flex;
+     margin: 10px 0;
+     padding: 5px 9px 5px 4px;
+   }
+  nav .siguenos ul li{
+    margin: 10px 0;
+    list-style: none;
+    padding: 5px 9px 5px 4px;
+  }
+
+   /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+   nav .buscador-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  visibility: visible;
+  margin-top: 40px;
+  margin-left: 10px;
+  height: 50px;
+  }
+
+  .d-flex{
     width: 100%;
-    max-width: 350px;
     height: 50px;
     display: flex;
     flex-direction: row;
-    margin-left: 18px;
+   box-sizing: border-box;
+  }
+
+  #custom-search{
+    width: 100%;
+    height: 50px;
+   border: 1px solid #2d2d2d;
+   border-radius: 8px;
+  }
+
+ .buscador-esconder #custom-search input[type=text]{
+   box-sizing: border-box;
+ }
+
+ .buscador-esconder .d-flex #custom-search .sin-borde{
+    width: 90%;
+    height: 40px;
+    outline: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    float: left;
+  }
+
+ .buscador-esconder .d-flex #custom-search .boton{
+  width: 10%;
+  height: 40px;
+  border-radius: 1px;
+  display: block;
+  position: relative;
+  float: right;
+  margin-top: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+  }
+
+
+   /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+    nav .nav .esconder{
+   visibility: visible;
+   }
+
+     nav .nav li a.active{
+    text-decoration:line-through;
+    color: #7aac41;
+    }
+
+         /* UL  */
+         header  nav .nav{
+          width: 90%; 
+          height: 99%;
+          display: flex;
+          flex-direction: column;
+          margin-top: 30px;
+           z-index: 99; 
+          }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+    list-style: none;
+    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    cursor:pointer;
+    border-bottom: 1px solid #2d2d2d;
+    }
+    
+    nav .nav li a {
+    z-index: 100;
+    height: 24px;
+    color: #2d2d2d;
+    font-weight: 520;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
     }
   
-
-      #custom-search{
-        width: 100%;
-        max-width: 330px;
-        height: 50px;
-      }
-  
-
-      #custom-search .sin-borde{
-        width: 90%;
-        max-width: 310px;
-        height: 40px;
-      }
-  
-
-      #custom-search .boton{
-        width: 10%;
-        max-width: 20px;
-        height: 40px;
-      }
-
-
-     nav .nav .esconder{
-       visibility: visible;
-     }
-    
-      nav .nav li a.active{
-        text-decoration:line-through;
-        color: #568632;
-        }
-    
-       /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-        .cabecera nav .nav{
-        width:100%; 
-        height: 100%;
-        max-height: 950px;
-        max-width: 340px;
-        display: flex;
-        flex-direction: column;
-        margin-left: 6px;
-        margin-top: 10px;
-        overflow-y: scroll;
-         z-index: 99; 
-        }
-    
-         /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-        nav .nav li{
-        list-style: none;
-        height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-        margin-left: 10px;
-        margin-bottom: 15px;
-        cursor:pointer;
-        }
-        
-        nav .nav li a {
-        z-index: 100;
-        background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-        height: 30px;
-        color: #fff;
-        font-weight: lighter;
-        font-size: 1.24rem;
-        text-transform: lowercase;
-        letter-spacing: 1px;
-        font-family:  sans-serif;
-        padding-top: 0;
-        margin-top: 0;
-        }
-      
-         /*IMPORTANTE*/
-    
-         
+ 
       /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-      /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
       nav .nav li:hover > ul {
-      display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
-      }
-
-    
-      nav .nav li ul li a{
-      font-size: 1rem;
-      display: block;
-      max-width: 200px;
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      margin-left: -2px;
-      padding-bottom: -2px;
-      margin-left: -76px;
+      visibility: visible; 
+      z-index: 800;
       }
-    
+ 
 
       nav .nav ul {
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5px;
       visibility: hidden;
+      background-color: #fff;
       }
-    
-
-    /* f...FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.......MENU ESCONIDDO DEL NAV ARROW......*/
-     /*ANIMACION SUBRAYADO */
-     nav a {
-     display: inline-block;
-     position: relative;
-     color: white;
-     text-decoration: none;
-     z-index: 40;
-     }
-    
-
-      nav  a:after {
-     content: "";
-     display: block;
-     margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-     height: 2px;
-     width: 0px;
-     transition: all .8s;
-     z-index: 10;
-     }
-    
-    
-      /* width: 100%;*/
-      nav  a:hover:after {
-      padding-left: 40px;
-      padding-right: -150px;
-      height: 2px;
-      background: white;
+ 
+      nav .nav ul li{
+      display: block;
+      width: 100%;
+      max-width: 700px;
+      margin-left: 2px;
+      border-bottom: 1px solid #fefefe;
       }
-      /*PORTADA*/
-       
+
+
+    nav .nav li ul li a{
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    text-transform: lowercase;
+    margin-left: 6px;
+    }
+
+    
+    /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
+  
+    /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+   nav  .estilo-logo:after{
+   text-decoration: none;
+   height: 0px;
+   content: "";
+   display: none;
+   margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+   height: 0px;
+   width: 0px;
+   transition: all .0s;
+   z-index: 10;
+   }
+
+
+ 
+  /* width: 100%;*/
+  nav  a:hover:after {
+  padding-left: 40px;
+  padding-right: -150px;
+  height: 2px;
+  background: white;
+  }
+
+  /*..FIN NAV ESCONDIDO...........................*/
+
+
 
       
    /*FIN ES PARA SEPARAR EL BUSCADOR DE LA PORTADA*/
@@ -11966,11 +12461,11 @@ width: 100%;
 
      .portada-titulo h2 {
       font-size: 1.8rem;
-
      }
+
+
      .portada-titulo h2 i{
       font-size: 1.6rem;
-
      }
       
      
@@ -12005,7 +12500,7 @@ width: 100%;
   top: 34%; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
   left: 50px ;
   width: 45%;
- }
+   }
 
  /*---PORTADA CONTACTO SEGUNDO PARRAFO----*/
 /*PROUDLY CRAFTED*/
@@ -12044,7 +12539,7 @@ width: 100%;
  
    /*PORTADA DE CONTACTO NO BORRAR*/
   .portada span h2{
-  color:#639a3a;
+  color: #7aac41;
   padding: 5px 6px 5px 7px;
   word-spacing: -1px;
   margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
@@ -12460,14 +12955,17 @@ width: 100%;
   
 @media only screen and (min-width: 1200px) and (max-width: 1246px){
 
-    #wrapper {
-    margin:0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-        
+  #wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+   }
+
   #wrapper > * {
   padding: 28px;
   }
@@ -12628,17 +13126,13 @@ width: 100%;
      /* background: #fff;  */
     .hamburguesa.open .menu-btn__burger::before {
     transform: rotate(45deg) translate(35px, -35px);
-   
     }
 
 
     /* background: #fff;  */
     .hamburguesa.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
-
     }
-
-
 
 
     .menu-btn__burger:hover{
@@ -12681,19 +13175,19 @@ width: 100%;
   
   
   
-  /*CAMPO SEARCH BUSCADOR */
-  #controls  .sin-borde{
-  display: inline-flex;
-  width: 85%;
-   max-width: 230px;
-   height: 35px;
-   outline: none;
-  padding-left: 3px; /*MUEVE LA LETRA*/
-  background-color: #f8f8f8;
-  }
+    /*CAMPO SEARCH BUSCADOR */
+    #controls  .sin-borde{
+    display: inline-flex;
+    width: 85%;
+    max-width: 230px;
+    height: 35px;
+    outline: none;
+    padding-left: 3px; /*MUEVE LA LETRA*/
+    background-color: #f8f8f8;
+    }
   
-  /*BOTOM BUSCADOR */
-  #controls .boton{
+    /*BOTOM BUSCADOR */
+    #controls .boton{
     padding-left:2px; /*MUEVE LA LETRA*/
     width: 15%;
     max-width: 30px;
@@ -12712,9 +13206,6 @@ width: 100%;
   color: #2d2d2d;
   }
   
-  
-  
-  
 
     #controls-responsive{
     display: none;
@@ -12722,181 +13213,286 @@ width: 100%;
    }
 
 
-  nav{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    max-width: 420px;
-    height: 100%;
-    max-height: 1200px;
-    top:0;
-    bottom: 0;
-    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-    opacity: 0.97;
-     background-color: #000000;
-     overflow-y: scroll;
-     z-index: 200;
-    }
 
+/*..INICIO NAV ESCONDIDO.....................*/
+  header nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  margin: auto;
+  top:0;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+   background-color: #fff;
+   overflow-y: scroll;
+   z-index: 9;
+   visibility: visible;
+   box-sizing: border-box;
+  
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
+   }
+   
+
+  /* #aaaaaa */
   nav .logo-esconder{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    visibility: visible;
-    margin-top: 30px;
-    height: 30px;
-    border-bottom: 1px solid #aaaaaa;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width: 98%;
+  visibility: visible;
+  height: 80px;
+   border-bottom: 1px solid #2d2d2d;
 
   }
 
-  nav .logo-esconder img{
-    width: 100%;
-    max-width: 120px;
-    margin-left: 20px;
+  nav .logo-esconder .logo-en-menu-responsive{
+    width: 30%;
+    max-width: 150px;
+    display: inline-flex;
+    height: 80px;
+    margin-left: 10px;
   }
 
-  nav .buscador-esconder{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    visibility: visible;
-    margin-top: 20px;
-    height: 50px;
+ 
 
+nav .logo-esconder .logo-en-menu-responsive img{
+  width: 100%;
+  max-width: 120px;
+  min-width: 120px;
+  margin-top: 45px;
+}
+
+nav .logo-esconder .emoticon{
+  width: 8%;
+  height: 80px;
+}
+
+ nav .logo-esconder .suscriptor{
+   width: 30%;
+   height: 80px;
+   display: block;
+   position: relative;
+   float: right;
+
+ }
+  nav .logo-esconder .suscriptor a h4{
+  font-size: 0.8em;
+  margin-top: 50px;
+
+  }
+
+  nav .siguenos{
+    display: block;
+    width: 95%;
+    margin-top: 40px;
+    visibility: visible;
+  }
+
+  nav .siguenos ul{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin-left: 10px;
+  }
+
+   nav .siguenos h1{
+     font-size: 0.9em;
+     display: inline-flex;
+     margin: 10px 0;
+     padding: 5px 9px 5px 4px;
+   }
+
+
+  nav .siguenos ul li{
+    margin: 10px 0;
+    list-style: none;
+    padding: 5px 9px 5px 4px;
+  }
+
+   /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+   nav .buscador-esconder{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  visibility: visible;
+  margin-top: 40px;
+  margin-left: 10px;
+  height: 50px;
   }
 
     .d-flex{
-      width: 100%;
-      max-width: 350px;
-      height: 50px;
-      display: flex;
-      flex-direction: row;
-      margin-left: 18px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+     box-sizing: border-box;
     }
 
-    #custom-search{
-      width: 100%;
-      max-width: 330px;
-      height: 50px;
+     #custom-search{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #2d2d2d;
+    border-radius: 8px;
     }
 
-    #custom-search .sin-borde{
-      width: 90%;
-      max-width: 310px;
-      height: 40px;
+    .buscador-esconder #custom-search input[type=text]{
+    box-sizing: border-box;
     }
 
-    #custom-search .boton{
-      width: 10%;
-      max-width: 20px;
-      height: 40px;
-    }
-   nav .nav .esconder{
-     visibility: visible;
+    .buscador-esconder .d-flex #custom-search .sin-borde{
+    width: 90%;
+    height: 40px;
+    outline: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    float: left;
+     }
+
+   .buscador-esconder .d-flex #custom-search .boton{
+  width: 10%;
+  height: 40px;
+  border-radius: 1px;
+  display: block;
+  position: relative;
+  float: right;
+  margin-top: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+  }
+
+
+   /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+    nav .nav .esconder{
+   visibility: visible;
    }
-  
-    nav .nav li a.active{
-      text-decoration:line-through;
-      color: #568632;
-      }
-  
-     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-      .cabecera nav .nav{
-      width:100%; 
-      height: 100%;
-      max-height: 950px;
-      max-width: 340px;
-      display: flex;
-      flex-direction: column;
-      margin-left: 6px;
-      margin-top: 10px;
-      overflow-y: scroll;
-      z-index: 99; 
-      }
-  
-       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-      nav .nav li{
-      list-style: none;
-      height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-      margin-left: 10px;
-      margin-bottom: 15px;
-      cursor:pointer;
-      }
-      
 
-      nav .nav li a {
-      z-index: 100;
-      background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-      height: 30px;
-      color: #fff;
-      font-weight: lighter;
-      font-size: 1.24rem;
-      text-transform: lowercase;
-      letter-spacing: 1px;
-      font-family:  sans-serif;
-      padding-top: 0;
-      margin-top: 0;
-      }
-       /*IMPORTANTE*/
+     nav .nav li a.active{
+    text-decoration:line-through;
+    color: #568632;
+    }
+
+   /* UL  */
+  nav .nav{
+    width: 90%; 
+    height: 99%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+     z-index: 99; 
+    
+    }
+
+     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+    list-style: none;
+    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    cursor:pointer;
+    border-bottom: 1px solid #2d2d2d;
+    }
+    
+
+    nav .nav li a {
+    z-index: 100;
+    height: 24px;
+    color: #2d2d2d;
+    font-weight: 520;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    }
   
-       
-      
+ 
+    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav .nav li:hover > ul {
+    background-color:  #fff;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    visibility: visible;
+    z-index: 900;
+    }
    
-        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
-      display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
-      }
-  
+    
+    nav .nav ul {
+    display: none;
+    background-color: #fff;
+    margin-top: 0.5px;
+    width: 100%;
+    }
+    
 
-      nav .nav li ul li a{
-      font-size: 1rem;
-      display: block;
-      max-width: 200px;
-      width: 100%;
-      margin-left: -2px;
-      padding-bottom: -2px;
-      margin-left: -76px;
-      }
-  
-       nav .nav ul {
-      visibility: hidden;
-      }
-  
+    nav .nav  ul li {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 0px;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    }
 
-    /* f...FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.....MENU ESCONIDDO DEL NAV ARROW......*/
-   /*ANIMACION SUBRAYADO */
-   nav a {
-   display: inline-block;
-   position: relative;
-   color: white;
+
+        nav .nav li  ul li a{
+          font-size: 1rem;
+          color: #2d2d2d;
+          width: 100%;
+          margin-left: 60px;
+          text-transform: lowercase;
+          background-color: #fff;
+          }
+        
+   /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
+  
+ /*ANIMACION SUBRAYADO */
+ nav a {
+ display: inline-block;
+ position: relative;
+ color: white;
+ text-decoration: none;
+ z-index: 40;
+ }
+
+ nav  a:after {
+  content: "";
+  display: block;
+  margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+  height: 2px;
+  width: 0px;
+  transition: all .8s;
+  z-index: 10;
+  }
+
+
+
+  /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+   nav  .estilo-logo:after{
    text-decoration: none;
-   z-index: 40;
-   }
-  
-    nav  a:after {
+   height: 0px;
    content: "";
-   display: block;
-   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-   height: 2px;
+   display: none;
+   margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+   height: 0px;
    width: 0px;
-   transition: all .8s;
+   transition: all .0s;
    z-index: 10;
    }
-  
-  
-    /* width: 100%;*/
-    nav  a:hover:after {
-    padding-left: 40px;
-    padding-right: -150px;
-    height: 2px;
-    background: white;
-    }
+
+
+
+  /*..FIN NAV ESCONDIDO...........................*/
+  /*..FIN NAV ESCONDIDO...........................*/
+
 
 
     /*CONTENEDORES DE LOS TITULOS AISLADOS .......DE MEDIA QUERY 500 MAIXMO........*/
@@ -13135,8 +13731,6 @@ width: 100%;
    height: 25px;
    }
 
-
-  /*FINAL ..............................*/
   }
 
 
@@ -13144,22 +13738,28 @@ width: 100%;
 
 
 
-  /* 1200 A 1290 ......................1............... */
+      /* 1200 A 1290 ......................1............... */
   @media only screen and (min-width: 1247px) and (max-width: 1290px){
 
-  #wrapper {
-  margin:0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  }
-      
+    #wrapper {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      border-spacing: 0;
+      border-collapse: collapse;
+      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
+     }
+
+
+
    #wrapper > * {
    padding: 28px;
    }
-  /*CONTAINER DE TODO EL BODY............................  */
 
+
+    /*CONTAINER DE TODO EL BODY............................  */
   #container{
   width: 100%;
   margin: auto;
@@ -13216,10 +13816,9 @@ width: 100%;
       z-index: 40;
      }
          
-    /*CONTENEDOR  REVISTA Y SOCIALES*/
    
    
-    .suscribe{
+   .cabecera  .suscribe{
     display: block;
     position: relative;
     float: left;
@@ -13321,11 +13920,7 @@ width: 100%;
   /* background: #fff;  */
   .hamburguesa.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
-
   }
-
-
-
 
   .menu-btn__burger:hover{
   background-color: #7aac41;
@@ -13350,7 +13945,7 @@ width: 100%;
   
         
   /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
-  #controls{
+ .cabecera  #controls{
   display: block;
   position: relative;
   float: right;
@@ -13361,46 +13956,46 @@ width: 100%;
   }
   
 
-/*IMPORTANTE*/
- #controls .d-flex{
+    /*IMPORTANTE*/
+   .cabecera  #controls .d-flex{
   width: 100%;
   max-width: 340px;
   visibility:visible ;
     }
 
 
-#controls  #INPUT input[type=text]:focus {
-outline: none;
-border: 0;
-background-color: #fff;
-padding-left: 8px; /*MUEVE LA LETRA*/
- }
+     #controls  #INPUT input[type=text]:focus {
+     outline: none;
+     border: 0;
+     background-color: #fff;
+     padding-left: 8px; /*MUEVE LA LETRA*/
+     }
 
 
 
-/*CAMPO SEARCH BUSCADOR */
-#controls  .sin-borde{
-display: inline-flex;
-width: 85%;
- max-width: 230px;
- height: 35px;
- outline: none;
-padding-left: 3px; /*MUEVE LA LETRA*/
-background-color: #f8f8f8;
-}
+  /*CAMPO SEARCH BUSCADOR */
+  .cabecera  #controls  .sin-borde{
+   display: inline-flex;
+   width: 85%;
+   max-width: 230px;
+   height: 35px;
+   outline: none;
+   padding-left: 3px; /*MUEVE LA LETRA*/
+   background-color: #f8f8f8;
+   }
 
-  /*BOTOM BUSCADOR */
-   #controls .boton{
-  padding-left:2px; /*MUEVE LA LETRA*/
-  width: 15%;
-  max-width: 30px;
-  height: 35px;
-  margin-left: -8px;
-  }
+    /*BOTOM BUSCADOR */
+   .cabecera  #controls .boton{
+   padding-left:2px; /*MUEVE LA LETRA*/
+   width: 15%;
+   max-width: 30px;
+   height: 35px;
+   margin-left: -8px;
+   }
 
- #controls .icon .fa-search{
- color: #000000;
- }
+    .cabecera #controls .icon .fa-search{
+    color: #000000;
+    }
 
 
    input::placeholder {
@@ -13412,173 +14007,250 @@ background-color: #f8f8f8;
             
   
     
-  nav{
-   display: flex;
-   flex-direction: column;
-   position: fixed;
-   width: 100%;
-   max-width: 420px;
-   height: 100%;
-   max-height: 1200px;
-   top:0;
-   bottom: 0;
-   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-   opacity: 0.97;
-   background-color: #000000;
+  /*..INICIO NAV ESCONDIDO.....................*/
+   header nav{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  max-width: 640px;
+  height: 100%;
+  margin: auto;
+  top:0;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+   background-color: #fff;
    overflow-y: scroll;
    z-index: 200;
+   visibility: visible;
+   box-sizing: border-box;
+  
   }
 
+  nav::-webkit-scrollbar {
+    display: none;
+   }
+   
 
+  /* #aaaaaa */
   nav .logo-esconder{
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction:row;
+  justify-content: space-between;
+  width: 98%;
   visibility: visible;
-  margin-top: 30px;
-  height: 30px;
-  border-bottom: 1px solid #aaaaaa;
+  height: 80px;
+   border-bottom: 1px solid #2d2d2d;
+
   }
 
-  nav .logo-esconder img{
+    nav .logo-esconder .logo-en-menu-responsive{
+    width: 30%;
+    max-width: 150px;
+    display: inline-flex;
+    height: 80px;
+    margin-left: 10px;
+    }
+
+ 
+
+    nav .logo-esconder .logo-en-menu-responsive img{
   width: 100%;
   max-width: 120px;
-  margin-left: 20px;
+  min-width: 120px;
+  margin-top: 45px;
    }
 
-  nav .buscador-esconder{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  visibility: visible;
-  margin-top: 20px;
-  height: 50px;
+   nav .logo-esconder .emoticon{
+  width: 8%;
+  height: 80px;
+   }
+
+    nav .logo-esconder .suscriptor{
+   width: 30%;
+   height: 80px;
+   display: block;
+   position: relative;
+   float: right;
    }
 
 
-   .d-flex{
+  nav .logo-esconder .suscriptor a h4{
+  font-size: 0.8em;
+  margin-top: 50px;
+  }
+
+
+    nav .siguenos{
+    display: block;
+    width: 95%;
+    margin-top: 40px;
+    visibility: visible;
+    }
+
+    nav .siguenos ul{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin-left: 10px;
+    }
+
+     nav .siguenos h1{
+     font-size: 0.9em;
+     display: inline-flex;
+     margin: 10px 0;
+     padding: 5px 9px 5px 4px;
+      }
+
+
+     nav .siguenos ul li{
+    margin: 10px 0;
+    list-style: none;
+    padding: 5px 9px 5px 4px;
+     }
+
+    /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+    nav .buscador-esconder{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    visibility: visible;
+    margin-top: 40px;
+    margin-left: 10px;
+    height: 50px;
+    }
+
+    nav .buscador-esconder .d-flex{
     width: 100%;
-    max-width: 350px;
     height: 50px;
     display: flex;
     flex-direction: row;
-    margin-left: 18px;
-   }
-
-   #custom-search{
-    width: 100%;
-    max-width: 330px;
-    height: 50px;
-   }
-
-
-   #custom-search .sin-borde{
-    width: 90%;
-    max-width: 310px;
-    height: 40px;
-   }
-
-
-    #custom-search .boton{
-    width: 10%;
-    max-width: 20px;
-    height: 40px;
+     box-sizing: border-box;
     }
 
+    nav .buscador-esconder #custom-search{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #2d2d2d;
+    border-radius: 8px;
+    }
 
-   nav .nav .esconder{
+    .buscador-esconder #custom-search input[type=text]{
+    box-sizing: border-box;
+    }
+
+    .buscador-esconder .d-flex #custom-search .sin-borde{
+    width: 90%;
+    height: 40px;
+    outline: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    float: left;
+     }
+
+   .buscador-esconder .d-flex #custom-search .boton{
+  width: 10%;
+  height: 40px;
+  border-radius: 1px;
+  display: block;
+  position: relative;
+  float: right;
+  margin-top: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+  }
+
+
+   /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+    nav .nav .esconder{
    visibility: visible;
    }
 
-    nav .nav li a.active{
+     nav .nav li a.active{
     text-decoration:line-through;
     color: #568632;
     }
 
-
-    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
-    .cabecera nav .nav{
-    width:100%; 
-    height: 100%;
-    max-height: 950px;
-    max-width: 340px;
+   /* UL  */
+    header  nav .nav{
+    width: 90%; 
+    height: 99%;
     display: flex;
     flex-direction: column;
-    margin-left: 6px;
-    margin-top: 10px;
-    overflow-y: scroll;
+    margin-top: 30px;
      z-index: 99; 
     }
-
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
     nav .nav li{
     list-style: none;
     height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
     margin-left: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     cursor:pointer;
+    border-bottom: 1px solid #2d2d2d;
     }
     
-
+    
     nav .nav li a {
     z-index: 100;
-    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-    height: 30px;
-    color: #fff;
-    font-weight: lighter;
-    font-size: 1.24rem;
-    text-transform: lowercase;
+    height: 24px;
+    color: #2d2d2d;
+    font-weight: 520;
+    font-size: 0.9rem;
+    text-transform: uppercase;
     letter-spacing: 1px;
-    font-family:  sans-serif;
-    padding-top: 0;
-    margin-top: 0;
+    margin-top: 5px;
     }
   
-     /*IMPORTANTE*/
-
-     
-    
  
     /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
     nav .nav li:hover > ul {
-    display: block;
-    margin-left: -200px;
-    height: 200px;
-    visibility: visible; 
+    background-color:  #fff;
+    width: 100%;
+    max-width: 300px;
+    margin-left: 6px;
     z-index: 598;
     }
-
-
-    nav .nav li ul li a{
-    font-size: 1rem;
-    display: block;
-    max-width: 200px;
-    width: 100%;
-    margin-left: -2px;
-    padding-bottom: -2px;
-    margin-left: -76px;
+   
+    
+    nav .nav ul {
+    background-color: #fff;
+    margin-top: 0.5px;
     }
+    
+        nav .nav  ul li {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 0px;
+        background-color: #fff;
+        border-bottom: 1px solid #fff;
+        }
 
-
-     nav .nav ul {
-    visibility: hidden;
-    }
-
-
-    /* f...FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV......MENU ESCONIDDO DEL NAV ARROW....*/
+        nav .nav li  ul li a{
+          font-size: 1rem;
+          color: #2d2d2d;
+          width: 100%;
+          max-width: 300px;
+          margin-left: 60px;
+          background-color: #fff;
+          }
+        
+   /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
   
-   /*ANIMACION SUBRAYADO */
-   nav a {
-   display: inline-block;
-   position: relative;
-   color: white;
-   text-decoration: none;
-   z-index: 40;
-   }
+ /*ANIMACION SUBRAYADO */
+ nav a {
+ display: inline-block;
+ position: relative;
+ color: white;
+ text-decoration: none;
+ z-index: 40;
+ }
 
-   nav  a:after {
+ nav  a:after {
   content: "";
   display: block;
   margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
@@ -13589,6 +14261,22 @@ background-color: #f8f8f8;
   }
 
 
+
+  /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+   nav  .estilo-logo:after{
+   text-decoration: none;
+   height: 0px;
+   content: "";
+   display: none;
+   margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+   height: 0px;
+   width: 0px;
+   transition: all .0s;
+   z-index: 10;
+   }
+
+
+ 
   /* width: 100%;*/
   nav  a:hover:after {
   padding-left: 40px;
@@ -13596,6 +14284,9 @@ background-color: #f8f8f8;
   height: 2px;
   background: white;
   }
+
+  /*..FIN NAV ESCONDIDO...........................*/
+
 
 
     .portada{

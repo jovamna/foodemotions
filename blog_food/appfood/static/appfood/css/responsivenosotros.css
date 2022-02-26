@@ -201,22 +201,18 @@
   
   
        .cabecera-responsive .nenu-btn .menu-btn__burger:hover{
-         background-color: #639a3a;
+         background-color: #7aac41;
        }
      
   
        .cabecera-responsive  .menu-btn .menu-btn__burger:hover::before{
-        background-color: #639a3a;
+        background-color: #7aac41;
       }
   
   
        .cabecera-responsive   .menu-btn .menu-btn__burger:hover::after{
-         background-color: #639a3a;
+         background-color: #7aac41;
        }
-  
-  
-  
-  
   
   
   /*..FIN CABECERA RESPONSIVE.................*/
@@ -229,13 +225,13 @@
      top: 0px;  /*IMPORTANTE para que arriba no tenga espacios */
     left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
     opacity: 0.99;
-     background-color: #000000;
+     background-color: #fff;
      z-index: 200;
     }
   
     nav  .nav li a.active{
       text-decoration:line-through;
-      color: #568632;
+      color: #7aac41;
       }
   
      /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
@@ -261,11 +257,11 @@
         
         nav .nav li a {
         z-index: 100;
-        background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+        background-color:  #fff;  /*IMPORTANTE  DAR COLOR NEGRO*/
         display: flex;
         width: 100%;
         height: 55px;
-        color: #fff;
+        color: #2d2d2d;
         font-weight: lighter;
         font-size: 1.24rem;
         text-transform: lowercase;
@@ -627,80 +623,82 @@
     height:  58px;
    }
  
-   /*.. max-with:640px;...*/
-   header  .cabecera-responsive{
+
+    /*.. max-with:640px;...*/
+    .cabecera-responsive{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: block;
     height: 35px;
+   
      }
     
   
-      #controls{
-        display: none;
-        visibility: hidden;
-      }
+    .cabecera-responsive #controls{
+    display: none;
+    visibility: hidden;
+    }
    
-   /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
-   header  .cabecera-responsive .logo{
+
+     /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
+     header .cabecera-responsive .logo{
       display: block;
-      width: 20%;
-      max-width: 190px;
+      position: relative;
+      float: left;
+      width: 25%;
       height: 35px;
-     }
+
+      }
       
-  
-     .cabecera-responsive .logo img{
-        display: block;
-        width: 100%;
-        max-width: 140px;
-        height: 35px;
-     }
-  
+
+    header .cabecera-responsive .logo img{
+    width:  100%;
+    height: 35px;
+    }
   
  
-    header   .cabecera-responsive  .suscribe {
-       display: inline-block;
-        width: 85%;
-        max-width: 100px;
+        header .cabecera-responsive  .suscribe {
+        display: block;
+        position: relative;
+        float: left;
+        width: 30%;
         height: 35px;
-        margin: auto;
-       }
+        margin-left: 60px;
+        }
   
     
-       .cabecera-responsive  .suscribe a h4{
-        font-size: 0.8;
-        margin-top:  10px;
-        font-weight: 700;
-        letter-spacing: 0.2px;
-         font-family: 'Times New Roman', Times, serif;
-        }
+      header .cabecera-responsive  .suscribe a h4{
+      font-size: 0.7rem;
+      margin-top:  10px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      font-family: 'Times New Roman', Times, serif;
+      }
    
 
      
-        .cabecera-responsive   .menu-btn {
-          display: block;
-          position: relative;
-          float: right;
-          width: 8%;
-          max-width: 40px;
-          height: 35px;
-          }
+      .cabecera-responsive   .menu-btn {
+      display: block;
+      position: relative;
+      float: right;
+      width: 8%;
+      max-width: 40px;
+      height: 35px;
+      margin: auto;
+      }
     
     
-           /*..............................*/
-           .cabecera-responsive     .menu-btn .hamburguesa{
-            display: block;
-          position: relative;
-          float: right;
-          width: 100%;
-          max-width: 40px;
-          height: 35px;
-             }
+      /*..............................*/
+      .cabecera-responsive  .menu-btn .hamburguesa{
+      display: block;
+      position: relative;
+      float: right;
+      width: 100%;
+      max-width: 40px;
+      height: 35px;
+      }
     
     
-        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
         .menu-btn .hamburguesa  .menu-btn__burger {
         display: block;
         position: relative;
@@ -732,20 +730,18 @@
           z-index: 800;   
           }
      
-       .menu-btn .hamburguesa .menu-btn__burger::before {
+    .menu-btn .hamburguesa .menu-btn__burger::before {
      transform: translateY(-7px);
-
      }
 
 
    .menu-btn .hamburguesa .menu-btn__burger::after {
      transform: translateY(7px);
-
    }
 
 
-      /* ANIMATION */
-     .hamburguesa.open .menu-btn__burger {
+    /* ANIMATION */
+    .hamburguesa.open .menu-btn__burger {
    transform: translateX(-50px);
    background: transparent;
    box-shadow: none;
@@ -762,41 +758,33 @@
      }
 
 
-
-
-
-
      .cabecera-responsive .nenu-btn .hamburguesa .menu-btn__burger:hover{
-       background-color: #639a3a;
+       background-color: #7aac41;
      }
    
 
      .cabecera-responsive  .menu-btn .hamburguesa .menu-btn__burger:hover::before{
-      background-color: #639a3a;
+      background-color: #7aac41;
     }
 
 
      .cabecera-responsive   .menu-btn .hamburguesa .menu-btn__burger:hover::after{
-       background-color: #639a3a;
+       background-color: #7aac41;
      }
 
 
-
-
-
-
-/*..FIN CABECERA RESPONSIVE.................*/
-header nav{
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-  max-width: 640px;
-  height: 100%;
-  margin: auto;
-  top:0;
-  bottom: 0;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+   /*..FIN CABECERA RESPONSIVE.................*/
+   header nav{
+   display: flex;
+   flex-direction: column;
+   position: fixed;
+   width: 100%;
+   max-width: 640px;
+   height: 100%;
+   margin: auto;
+   top:0;
+   bottom: 0;
+   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
    background-color: #fff;
    overflow-y: scroll;
    z-index: 200;
@@ -832,28 +820,30 @@ header nav{
 
  
 
-nav .logo-esconder .logo-en-menu-responsive img{
+   nav .logo-esconder .logo-en-menu-responsive img{
   width: 100%;
   max-width: 120px;
   min-width: 120px;
   margin-top: 48px;
   margin-left: 10px;
-}
+  }
 
-nav .logo-esconder .emoticon{
+
+   nav .logo-esconder .emoticon{
   width: 8%;
   height: 80px;
   margin-top: 48px;
-}
+  }
 
- nav .logo-esconder .suscriptor{
+   nav .logo-esconder .suscriptor{
    width: 30%;
    height: 80px;
    display: block;
    position: relative;
    float: right;
+   }
 
- }
+
   nav .logo-esconder .suscriptor a h4{
   font-size: 0.8em;
   margin-top: 56px;
@@ -879,43 +869,46 @@ nav .logo-esconder .emoticon{
      margin: 10px 0;
      padding: 5px 9px 5px 4px;
    }
-  nav .siguenos ul li{
+
+
+     nav .siguenos ul li{
     margin: 10px 0;
     list-style: none;
     padding: 5px 9px 5px 4px;
-  }
+    }
 
    /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
    nav .buscador-esconder{
-  display: flex;
-  flex-direction: column;
-  width: 85%;
-  visibility: visible;
-  margin-top: 40px;
-  margin-left: 10px;
-  height: 50px;
+   display: flex;
+   flex-direction: column;
+   width: 85%;
+   visibility: visible;
+   margin-top: 40px;
+   margin-left: 10px;
+   height: 50px;
   }
 
-  .d-flex{
+    .d-flex{
     width: 100%;
     height: 50px;
     display: flex;
     flex-direction: row;
    box-sizing: border-box;
-  }
+    }
 
-  #custom-search{
+    #custom-search{
     width: 100%;
     height: 50px;
-   border: 1px solid #2d2d2d;
-   border-radius: 8px;
-  }
+    border: 1px solid #2d2d2d;
+    border-radius: 8px;
+   }
 
- .buscador-esconder #custom-search input[type=text]{
+
+   .buscador-esconder #custom-search input[type=text]{
    box-sizing: border-box;
- }
+   }
 
- .buscador-esconder .d-flex #custom-search .sin-borde{
+   .buscador-esconder .d-flex #custom-search .sin-borde{
     width: 90%;
     height: 40px;
     outline: none;
@@ -924,7 +917,7 @@ nav .logo-esconder .emoticon{
     display: block;
     position: relative;
     float: left;
-  }
+   }
 
  .buscador-esconder .d-flex #custom-search .boton{
   width: 10%;
@@ -940,8 +933,8 @@ nav .logo-esconder .emoticon{
 
 
    /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
-    nav .nav .esconder{
-   visibility: visible;
+  nav .nav .esconder{
+  visibility: visible;
    }
 
      nav .nav li a.active{
@@ -950,88 +943,81 @@ nav .logo-esconder .emoticon{
     }
 
    /* UL  */
-    header  nav .nav{
-    width: 90%; 
-    height: 99%;
+    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+    nav .nav{
+    width:100%; 
+    height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
-     z-index: 99; 
+    margin-top: 20px;
+    z-index: 9; 
+   background-color: #fff;
+    }
+      
+           /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+        nav .nav li{
+          width: 100%;
+          display: block;
+          list-style: none;
+          height: 35px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO*/
+          cursor:pointer;
+          border-bottom: 1px solid #aaaaaa;
+          }
+          
 
-    }
-
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav .nav li{
-    display: block;
-    width: 90%;
-    list-style: none;
-    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-left: 10px;
-    margin-bottom: 10px;
-    cursor:pointer;
-    box-sizing: border-box;
-    border-bottom: 1px solid #2d2d2d;
-    }
-    
-   header nav .nav li a {
-    z-index: 100;
-    display: block;
-    height: 22px;
-    color: #2d2d2d;
-    font-weight: 520;
-    font-size: 0.9rem;
-    margin-top: -2px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-sizing: border-box;
-    }
-  
- 
+      nav .nav li a {
+      z-index: 100;
+      height: 30px;
+      color: #2d2d2d;
+      font-weight: lighter;
+      font-size: 1rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  sans-serif;
+      padding-top: 0;
+      margin-top: 0;
+      background-color: #fff;
+      }
+        
+      /*IMPORTANTE*/
       /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
       nav .nav li:hover > ul {
-       display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
+      background-color:  #fff;
+      width: 100%;
+      max-width: 500px;
+      height: 100%;
+      margin-left: 6px;
       z-index: 598;
       }
-
-
-    nav .nav li ul li a{
-    font-size: 1rem;
-    display: block;
-    max-width: 200px;
+    
+      
+      nav .nav ul {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      background-color: #fff;
+      margin-top: 0.5px;
+      display: none;
+      }
+    
+    
+    nav .nav  ul li {
     width: 100%;
-    margin-left: -2px;
-    padding-bottom: -2px;
-    margin-left: -76px;
+    max-width: 600px;
+    margin-bottom: 0px;
+    background-color: #fff;
     }
-
-     nav .nav ul {
-    visibility: hidden;
+        
+      
+    nav .nav li  ul li a{
+    font-size: 1rem;
+    color: #2d2d2d;
+    width: 100%;
+    max-width: 600px;
+    margin-left: 60px;
+    background-color: #fff;
     }
-
-   /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
-  
- /*ANIMACION SUBRAYADO */
- nav a {
- display: inline-block;
- position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
-
- nav  a:after {
-  content: "";
-  display: block;
-  margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-  height: 2px;
-  width: 0px;
-  transition: all .8s;
-  z-index: 10;
-  }
 
 
 
@@ -1058,16 +1044,13 @@ nav .logo-esconder .emoticon{
   background: white;
   }
 
-  /*..FIN NAV ESCONDIDO...........................*/
+   /*..FIN NAV ESCONDIDO...........................*/
 
-
-  
-
-  /*.......................................*/
-   #container-nosotros{
-   display: flex;
-   flex-direction: column;
-   width: 100%;
+    /*.......................................*/
+    #container-nosotros{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     margin-top: 50px;
     padding-left: 0;
     padding-right: 0;
@@ -1091,10 +1074,12 @@ nav .logo-esconder .emoticon{
     }
 
 
-      .articulo{
-        width: 93%;
-        margin: auto;
-      }
+    .articulo{
+    width: 93%;
+    margin: auto;
+    }
+
+
     .nosotros .articulo h1{
     line-height: 22px;
     font-weight: bolder;
@@ -1117,46 +1102,51 @@ nav .logo-esconder .emoticon{
           
       
 
-     /*IMAGENES*/
-     .dos-imagenes{
-     width: 100%;
-     max-width: 800px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     margin-top: 30px;
+    /*IMAGENES*/
+    .dos-imagenes{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
     }
 
+
    .foto{
-  width: 49.9%;
+   width: 49.9%;
    }
 
-  .foto img{
-  width: 100%;
+
+   .foto img{
+    width: 100%;
    }
 
- blockquote{
-  width: 100%;
-  margin-top: 10%;
+
+   blockquote{
+   width: 100%;
+   margin-top: 10%;
    }
    
- blockquote h3{
-  margin-top: -30px;
-  margin-left: 38px;
-  margin-right: 30px;
- font-size: 0.8rem;
-color: #666;
-font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-}
+   blockquote h3{
+   margin-top: -30px;
+   margin-left: 38px;
+   margin-right: 30px;
+   font-size: 0.8rem;
+   color: #666;
+   font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+    }
 
-   blockquote p {
-  margin-top: 30px;
-  margin-left: 150px;
-  font-size: 0.6rem;
-  color: #000;
-  font-weight: 900;
+
+    blockquote p {
+   margin-top: 30px;
+   margin-left: 150px;
+   font-size: 0.6rem;
+   color: #000;
+   font-weight: 900;
    font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
    }
+
 
    blockquote .otroestilo{
   margin-top: 30px;
@@ -1165,40 +1155,40 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
   color:#666;
   font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
    }
- /*NOMBRE DEL FINDADOR*/
 
-     blockquote p{
-    font-size: 0.6rem;
+
+  /*NOMBRE DEL FINDADOR*/
+   blockquote p{
+   font-size: 0.6rem;
     margin-right: 8px;
-    }
+   }
 
 
     /* cuarta ..caja ............................. */
-  .dibujo{
-  width: 100%;
-  margin-top: 10%;
-  }
+   .dibujo{
+   width: 100%;
+   margin-top: 10%;
+   }
 
-  .dibujo img{
-  width: 100%;
- 
+
+    .dibujo img{
+    width: 100%;
+    }
+   
+   
+    /*quinta caja .................................... */
+    /*ARTICULO DOS */
+   .articulo-dos{
+    display: flex;
+    flex-direction:column;
+    width: 93%;
+    margin: auto;
+    margin-top: 6%;
+    margin-bottom: 1px;
    }
    
-   
-  /*quinta       caja ..................................... */
-  /*ARTICULO DOS */
- .articulo-dos{
-  display: flex;
-  flex-direction:column;
-  width: 93%;
-  margin: auto;
-  margin-top: 6%;
-  margin-bottom: 1px;
-  }
-   
  
-   
-  .articulo-dos .articulo-dos-uno{
+   .articulo-dos .articulo-dos-uno{
    width: 100%;
    max-width: 600px;
    display: flex;
@@ -1206,33 +1196,34 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
    margin-bottom: 4%;
    }
    
- .articulo-dos-uno h1{
- line-height: 15px;
- font-weight: bolder;
- font-size: 1.2rem;
- word-spacing: 2px;
- letter-spacing: -0.8px;
- font-family: 'Open sans';
- margin-bottom: 10px;
- }
+
+   .articulo-dos-uno h1{
+   line-height: 15px;
+   font-weight: bolder;
+   font-size: 1.2rem;
+   word-spacing: 2px;
+   letter-spacing: -0.8px;
+   font-family: 'Open sans';
+    margin-bottom: 10px;
+   }
  
  
- 
- 
- 
- .articulo-dos-uno p {
- font-family: "Open sans";
- font-size: 0.9rem;
- font-weight: 400;
- line-height: 1.45;
- color: #666;
- }
+   .articulo-dos-uno p {
+   font-family: "Open sans";
+   font-size: 0.9rem;
+   font-weight: 400;
+   line-height: 1.45;
+    color: #666;
+    }
   /*  FINAL SEGUNDA COLUMNA ......................................................................*/
    /*  SEGUNDA COLUMNA ......................................................................*/
-  .fijo1{
-  display: none;
+
+
+
+   .fijo1{
+   display: none;
    visibility: hidden;
-  }
+   }
 
    .fija{
    width: 100%;
@@ -1303,40 +1294,536 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
 
     @media only screen and (min-width: 641px) and (max-width: 768px){
 
-      #container-nosotros{
+      html, body{
         width: 100%;
-        margin: auto;
-        margin-top: 15%;
+        height: 100%;
+        margin: 0;
+         }
+    
+    
+    
+        #wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        border-spacing: 0;
+        border-collapse: collapse;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+       }
+    
+      
+    
+       #wrapper img {
+       width: 100%;
+       height: auto;
+       border: 0;
+       }
+    
+    
+       #wrapper > * {
+       padding: 17px;
+       }  
+    
+    
+        header .cabecera{
+        display: none;
+        visibility: hidden;
         }
-  
-  
-      .tres-columnas-nosotros{
+
+
+    
+          /*.. #DCDCDC ..*/
+           header{
+            display: block;
+            width:100%;
+           height: 58px;
+           top:0;
+           position: fixed;
+           z-index: 2000;   /*IMPORTANTE  */
+           margin: auto;
+           box-shadow: 0 8px 6px -6px #c6c6c6;
+           background-color: #fff;
+          }
+       
+    
+       
+       header.black{
+        height:  58px;
+       }
+     
+       /*.. max-with:640px;...*/
+       header  .cabecera-responsive{
+        width: 100%;
+      display: block;
+        height: 35px;
+         }
+        
+      
+    .cabecera-responsive #controls{
+    display: none;
+    visibility: hidden;
+    }
+
+
+       
+    /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
+    header  .cabecera-responsive .logo{
+    display: block;
+    position: relative;
+    float: left;
+    width: 20%;
+    max-width: 190px;
+    height: 35px;
+    }
+          
+      
+    .cabecera-responsive .logo img{
+    display: block;
+    width: 100%;
+    max-width: 140px;
+    height: 35px;
+    }
+      
+      
+     
+    header   .cabecera-responsive  .suscribe {
+    display: inline-block;
+    width: 20%;
+    max-width: 100px;
+    height: 35px;
+    margin-left: 60px;
+    }
+      
+        
+    .cabecera-responsive  .suscribe a h4{
+    font-size: 0.7rem;
+    margin-top:  10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-family: 'Times New Roman', Times, serif;
+    }
+       
+      
+    .cabecera-responsive   .menu-btn {
+    display: block;
+    position: relative;
+    float: right;
+    width: 8%;
+    max-width: 40px;
+    height: 35px;
+    margin: auto;
+      }
+        
+        
+    /*..............................*/
+    .cabecera-responsive     .menu-btn .hamburguesa{
+    display: block;
+    position: relative;
+    float: right;
+    width: 100%;
+    max-width: 40px;
+    height: 35px;
+    }
+        
+        
+    /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+    .menu-btn .hamburguesa  .menu-btn__burger {
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 28px;
+    min-width: 28px;
+    height: 4px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+    z-index: 1000;
+    }
+                
+    .menu-btn .hamburguesa  .menu-btn__burger::before,
+    .menu-btn .hamburguesa   .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    max-width: 28px;
+    min-width: 28px;
+    height: 4px;
+    background:#2d2d2d;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+    transition: all .5s ease-in-out;
+    z-index: 800;   
+    }
+
+         
+    .menu-btn .hamburguesa .menu-btn__burger::before {
+    transform: translateY(-7px);
+    }
+    
+    
+    .menu-btn .hamburguesa .menu-btn__burger::after {
+    transform: translateY(7px);
+    }
+    
+    
+    /* ANIMATION */
+    .hamburguesa.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    }
+    
+    .hamburguesa.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    background: #fff;
+    }
+    
+    .hamburguesa.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    background: #fff;
+    }
+    
+    
+    .cabecera-responsive .nenu-btn .hamburguesa .menu-btn__burger:hover{
+    background-color: #7aac41;
+    }
+       
+    
+    .cabecera-responsive  .menu-btn .hamburguesa .menu-btn__burger:hover::before{
+    background-color: #7aac41;
+    }
+    
+    
+    .cabecera-responsive   .menu-btn .hamburguesa .menu-btn__burger:hover::after{
+    background-color: #7aac41;
+    }
+    
+    
+    
+    /*..FIN CABECERA RESPONSIVE.................*/
+    header nav{
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      max-width: 640px;
+      height: 100%;
+      margin: auto;
+      top:0;
+      bottom: 0;
+      left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+       background-color: #fff;
+       overflow-y: scroll;
+       z-index: 200;
+       visibility: visible;
+       box-sizing: border-box;
+      
+      }
+    
+      nav::-webkit-scrollbar {
+        display: none;
+       }
+       
+    
+      /* #aaaaaa */
+      nav .logo-esconder{
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+      width: 98%;
+      visibility: visible;
+      height: 80px;
+       border-bottom: 1px solid #2d2d2d;
+    
+      }
+    
+      nav .logo-esconder .logo-en-menu-responsive{
+        width: 30%;
+        max-width: 150px;
+        display: inline-flex;
+        height: 80px;
+        margin-left: 10px;
+      }
+    
+     
+    
+    nav .logo-esconder .logo-en-menu-responsive img{
+      width: 100%;
+      max-width: 120px;
+      min-width: 120px;
+      margin-top: 48px;
+      margin-left: 10px;
+    }
+    
+    nav .logo-esconder .emoticon{
+      width: 8%;
+      height: 80px;
+      margin-top: 48px;
+    }
+    
+     nav .logo-esconder .suscriptor{
+       width: 30%;
+       height: 80px;
+       display: block;
+       position: relative;
+       float: right;
+    
+     }
+      nav .logo-esconder .suscriptor a h4{
+      font-size: 0.8em;
+      margin-top: 56px;
+      }
+    
+      nav .siguenos{
+        display: block;
+        width: 95%;
+        margin-top: 40px;
+        visibility: visible;
+      }
+    
+      nav .siguenos ul{
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        margin-left: 10px;
+      }
+    
+       nav .siguenos h1{
+         font-size: 0.9em;
+         display: inline-flex;
+         margin: 10px 0;
+         padding: 5px 9px 5px 4px;
+       }
+      nav .siguenos ul li{
+        margin: 10px 0;
+        list-style: none;
+        padding: 5px 9px 5px 4px;
+      }
+    
+       /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+       nav .buscador-esconder{
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      visibility: visible;
+      margin-top: 40px;
+      margin-left: 10px;
+      height: 50px;
+      }
+    
+      .d-flex{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+       box-sizing: border-box;
+      }
+    
+      #custom-search{
+        width: 100%;
+        height: 50px;
+       border: 1px solid #2d2d2d;
+       border-radius: 8px;
+      }
+    
+     .buscador-esconder #custom-search input[type=text]{
+       box-sizing: border-box;
+     }
+    
+     .buscador-esconder .d-flex #custom-search .sin-borde{
+        width: 90%;
+        height: 40px;
+        outline: none;
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        float: left;
+      }
+    
+     .buscador-esconder .d-flex #custom-search .boton{
+      width: 10%;
+      height: 40px;
+      border-radius: 1px;
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 4px;
+      box-sizing: border-box;
+      background-color: #fff;
+      }
+    
+    
+       /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+        nav .nav .esconder{
+       visibility: visible;
+       }
+    
+         nav .nav li a.active{
+        text-decoration:line-through;
+        color: #7aac41;
+        }
+    
+       /* UL  */
+        /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      nav .nav{
+        width:100%; 
+        height: 100%;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        margin-top: 20%;
-        margin-bottom: 10%;
-      margin: auto;
+        margin-top: 20px;
+        z-index: 9; 
+        background-color: #fff;
         }
-        
-  
-        .nosotros{
+      
+           /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+        nav .nav li{
           width: 100%;
-       max-width:  768px;
-         display: flex;
-         flex-direction: column;
-          margin:  auto;
-          z-index: 10;
+          display: block;
+          list-style: none;
+          height: 35px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO*/
+         
+          cursor:pointer;
+          border-bottom: 1px solid #aaaaaa;
           }
           
-          .nosotros .articulo h1{
-            line-height: 22px;
-            font-weight: bolder;
-            font-size: 1.3rem;
-            word-spacing: 2px;
-            letter-spacing: -0.2;
-            font-family: 'Archivo Black', sans-serif;
-            }
+          nav .nav li a {
+          z-index: 100;
+          height: 30px;
+          color: #2d2d2d;
+          font-weight: lighter;
+          font-size: 1rem;
+          text-transform: lowercase;
+          letter-spacing: 1px;
+          font-family:  sans-serif;
+          padding-top: 0;
+          margin-top: 0;
+          background-color: #fff;
+          }
+        
+           /*IMPORTANTE*/
+      
+           
+        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+        /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+        nav .nav li:hover > ul {
+        background-color:  #fff;
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        margin-left: 6px;
+        z-index: 598;
+        }
+    
+      
+    
+        nav .nav ul {
+          display: block;
+          width: 100%;
+          max-width: 600px;
+          background-color: #fff;
+          margin-top: 0.5px;
+          display: none;
+        }
+    
+    
+    
+        nav .nav  ul li {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 0px;
+        background-color: #fff;
+        }
+        
+      
+        nav .nav li  ul li a{
+        font-size: 1rem;
+        color: #2d2d2d;
+        width: 100%;
+        max-width: 600px;
+        margin-left: 60px;
+        background-color: #fff;
+        }
+    
+      /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+       nav  .estilo-logo:after{
+       text-decoration: none;
+       height: 0px;
+       content: "";
+       display: none;
+       margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+       height: 0px;
+       width: 0px;
+       transition: all .0s;
+       z-index: 10;
+       }
+    
+    
+     
+      /* width: 100%;*/
+      nav  a:hover:after {
+      padding-left: 40px;
+      padding-right: -150px;
+      height: 2px;
+      background: white;
+      }
+    
+      /*..FIN NAV ESCONDIDO...........................*/
+    
+    
+      
+    
+ /*.......................................*/
+ #container-nosotros{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+   margin-top: 50px;
+   padding-left: 0;
+   padding-right: 0;
+   }
+
+
+  .tres-columnas-nosotros{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   margin-top: 40px;
+   }
+   
+
+   .nosotros{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   margin:  auto;
+   z-index: 10;
+   }
+
+
+     .articulo{
+       width: 93%;
+       margin: auto;
+     }
+
+
+   .nosotros .articulo h1{
+   line-height: 22px;
+   font-weight: bolder;
+   font-size: 1.3rem;
+   word-spacing: 2px;
+   letter-spacing: -0.2;
+   font-family: 'Archivo Black', sans-serif;
+   margin-bottom: 20px;
+   }
+  
+      
   
             .nosotros .articulo p{
               line-height: 22px;
@@ -1451,34 +1938,34 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
       height: 400px;
     }
   
-  /*  FINAL SEGUNDA COLUMNA ......................................................................*/
-  /*  SEGUNDA COLUMNA ......................................................................*/
-     .fijo1{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-     }
-  
-  .fija{
-    width: 100%;
-    max-width: 790px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    /*  FINAL SEGUNDA COLUMNA ......................................................................*/
+    /*  SEGUNDA COLUMNA ......................................................................*/
+
+    .fijo1{
+    display: none;
+     visibility: hidden;
     }
   
-    .imagen-estatica{
-      width: 100%;
-      max-width: 790px;
-      height: 80%;
+     .fija{
+     width: 100%;
+     display: block;
+    margin: auto;
+     }
+  
+     .fija .imagen-estatica{
+     width: 100%;
+     margin-top: 2px;
+     display: block;
      position: relative;
-      }
-
-      .imagen-estatica img{
-        width: 100%;
-        bottom:0;
-        }
     
+    }
+  
+  
+     .imagen-estatica img{
+      width: 100%;
+      bottom:0;
+      }
+  
   
   
    /*  FOOTER NOSOTROS..........................................*/
@@ -1531,22 +2018,479 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
     @media only screen and (min-width: 769px) and (max-width: 900px){
     
       #wrapper {
-        margin:0;
-        box-sizing: border-box;
+      margin:0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      }
+        
+      
+    #wrapper > * {
+    padding: 10px;
+    }
+
+
+    header .cabecera{
+    display: none;
+    visibility: hidden;
+    }
+    
+    
+    /*.. #DCDCDC ..*/
+    header{
+    display: block;
+    width:100%;
+    height: 58px;
+    top:0;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
+    margin: auto;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
+    background-color: #fff;
+    }
+       
+       
+    header.black{
+    height:  58px;
+    }
+
+
+     
+    /*.. max-with:640px;...*/
+    header  .cabecera-responsive{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35px;
+    }
+        
+      
+    .cabecera-responsive  #controls{
+    display: none;
+    visibility: hidden;
+          }
+       
+    /*caja AL PONER MAX WIDTH NO SE VE BIEN EL MENU MEJOR SOLO PORCENTAJE*/
+    header  .cabecera-responsive .logo{
+    display: block;
+    width: 20%;
+    max-width: 190px;
+    height: 35px;
+    }
+          
+      
+    .cabecera-responsive .logo img{
+    display: block;
+    width: 100%;
+    max-width: 140px;
+    height: 35px;
+    }
+      
+      
+     
+    header   .cabecera-responsive  .suscribe {
+    display: inline-block;
+    width: 85%;
+    max-width: 100px;
+    height: 35px;
+    margin: auto;
+    }
+      
+        
+    .cabecera-responsive  .suscribe a h4{
+    font-size: 0.8;
+    margin-top:  10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-family: 'Times New Roman', Times, serif;
+    }
+       
+    
+         
+    .cabecera-responsive   .menu-btn {
+    display: block;
+    position: relative;
+    float: right;
+    width: 8%;
+    max-width: 40px;
+    height: 35px;
+    }
+        
+        
+    /*..............................*/
+    .cabecera-responsive     .menu-btn .hamburguesa{
+    display: block;
+    position: relative;
+    float: right;
+    width: 100%;
+    max-width: 40px;
+    height: 35px;
+    }
+        
+        
+    /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+    .menu-btn .hamburguesa  .menu-btn__burger {
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 28px;
+    min-width: 28px;
+    height: 4px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+    z-index: 1000;
+    }
+        
+    
+    .menu-btn .hamburguesa  .menu-btn__burger::before,
+    .menu-btn .hamburguesa   .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    max-width: 28px;
+    min-width: 28px;
+    height: 4px;
+    background:#2d2d2d;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+    transition: all .5s ease-in-out;
+    z-index: 800;   
+    }
+
+         
+    .menu-btn .hamburguesa .menu-btn__burger::before {
+    transform: translateY(-7px);
+     }
+    
+    
+    .menu-btn .hamburguesa .menu-btn__burger::after {
+    transform: translateY(7px);
+    }
+    
+    
+    /* ANIMATION */
+    .hamburguesa.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+    }
+    
+
+    .hamburguesa.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    background: #fff;
+    }
+    
+        
+    .hamburguesa.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    background: #fff;
+    }
+    
+    
+    .cabecera-responsive .nenu-btn .hamburguesa .menu-btn__burger:hover{
+     background-color: #7aac41;
+    }
+       
+    
+    .cabecera-responsive  .menu-btn .hamburguesa .menu-btn__burger:hover::before{
+    background-color: #7aac41;
+    }
+    
+    
+    .cabecera-responsive   .menu-btn .hamburguesa .menu-btn__burger:hover::after{
+    background-color: #7aac41;
+    }
+    
+    
+    /*..FIN CABECERA RESPONSIVE.................*/
+    header nav{
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      max-width: 640px;
+      height: 100%;
+      margin: auto;
+      top:0;
+      bottom: 0;
+      left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+       background-color: #fff;
+       overflow-y: scroll;
+       z-index: 200;
+       visibility: visible;
+       box-sizing: border-box;
+      
+      }
+    
+      nav::-webkit-scrollbar {
+        display: none;
+       }
+       
+    
+      /* #aaaaaa */
+      nav .logo-esconder{
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+      width: 98%;
+      visibility: visible;
+      height: 80px;
+       border-bottom: 1px solid #2d2d2d;
+    
+      }
+    
+      nav .logo-esconder .logo-en-menu-responsive{
+        width: 30%;
+        max-width: 150px;
+        display: inline-flex;
+        height: 80px;
+        margin-left: 10px;
+      }
+    
+     
+    
+    nav .logo-esconder .logo-en-menu-responsive img{
+      width: 100%;
+      max-width: 120px;
+      min-width: 120px;
+      margin-top: 48px;
+      margin-left: 10px;
+    }
+    
+    nav .logo-esconder .emoticon{
+      width: 8%;
+      height: 80px;
+      margin-top: 48px;
+    }
+    
+     nav .logo-esconder .suscriptor{
+       width: 30%;
+       height: 80px;
+       display: block;
+       position: relative;
+       float: right;
+    
+     }
+
+
+      nav .logo-esconder .suscriptor a h4{
+      font-size: 0.8em;
+      margin-top: 56px;
+      }
+    
+      nav .siguenos{
+        display: block;
+        width: 95%;
+        margin-top: 40px;
+        visibility: visible;
+      }
+
+    
+      nav .siguenos ul{
         display: flex;
-        flex-direction: column;
-        min-height: 100vh;
+        flex-direction: row;
+        width: 95%;
+        margin-left: 10px;
       }
-            
-      #wrapper > * {
-      padding: 10px;
+    
+       nav .siguenos h1{
+         font-size: 0.9em;
+         display: inline-flex;
+         margin: 10px 0;
+         padding: 5px 9px 5px 4px;
+       }
+
+
+      nav .siguenos ul li{
+        margin: 10px 0;
+        list-style: none;
+        padding: 5px 9px 5px 4px;
       }
+    
+       /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+       nav .buscador-esconder{
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      visibility: visible;
+      margin-top: 40px;
+      margin-left: 10px;
+      height: 50px;
+      }
+    
+      .d-flex{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+       box-sizing: border-box;
+      }
+    
+      #custom-search{
+        width: 100%;
+        height: 50px;
+       border: 1px solid #2d2d2d;
+       border-radius: 8px;
+      }
+    
+     .buscador-esconder #custom-search input[type=text]{
+       box-sizing: border-box;
+     }
+    
+     .buscador-esconder .d-flex #custom-search .sin-borde{
+        width: 90%;
+        height: 40px;
+        outline: none;
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        float: left;
+      }
+    
+     .buscador-esconder .d-flex #custom-search .boton{
+      width: 10%;
+      height: 40px;
+      border-radius: 1px;
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 4px;
+      box-sizing: border-box;
+      background-color: #fff;
+      }
+    
+    
+      /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+      nav .nav .esconder{
+      visibility: visible;
+      }
+    
+      nav .nav li a.active{
+      text-decoration:line-through;
+      color: #7aac41;
+      }
+    
+       /* UL  */
+       /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+    nav .nav{
+    width:100%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    z-index: 9; 
+    background-color: #fff;
+    }
+      
+           /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+    width: 100%;
+    display: block;
+    list-style: none;
+    height: 35px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO*/
+    cursor:pointer;
+    border-bottom: 1px solid #aaaaaa;
+    }
+          
+
+    nav .nav li a {
+    z-index: 100;
+    height: 30px;
+    color: #2d2d2d;
+    font-weight: lighter;
+    font-size: 1rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family:  sans-serif;
+    padding-top: 0;
+    margin-top: 0;
+    background-color: #fff;
+    }
+        
+    /*IMPORTANTE*/
+      
+           
+        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+        /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+        nav .nav li:hover > ul {
+        background-color:  #fff;
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        margin-left: 6px;
+        z-index: 598;
+        }
+    
+      
+    
+      nav .nav ul {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      background-color: #fff;
+      margin-top: 0.5px;
+      display: none;
+      }
+    
+    
+    
+        nav .nav  ul li {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 0px;
+        background-color: #fff;
+        }
+        
+      
+        nav .nav li  ul li a{
+        font-size: 1rem;
+        color: #2d2d2d;
+        width: 100%;
+        max-width: 600px;
+        margin-left: 60px;
+        background-color: #fff;
+        }
+    
+    
+      /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+       nav  .estilo-logo:after{
+       text-decoration: none;
+       height: 0px;
+       content: "";
+       display: none;
+       margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+       height: 0px;
+       width: 0px;
+       transition: all .0s;
+       z-index: 10;
+       }
+    
+    
+     
+      /* width: 100%;*/
+      nav  a:hover:after {
+      padding-left: 40px;
+      padding-right: -150px;
+      height: 2px;
+      background: white;
+      }
+    
+      /*..FIN NAV ESCONDIDO...........................*/
           
     #container-nosotros{
-      width: 100%;
-      margin: auto;
-      margin-top: 18%;
-      }
+    width: 100%;
+    margin: auto;
+    margin-top: 18%;
+    }
 
 
     .tres-columnas-nosotros{
@@ -1555,103 +2499,98 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
       width: 100%;
       margin-top: 20%;
       margin-bottom: 10%;
-    margin: auto;
+     margin: auto;
       }
       
 
-      .nosotros{
-        width: 45%;
-       display: flex;
-       flex-direction: column;
-        margin:  auto;
-        z-index: 10;
-        }
+    .nosotros{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin:  auto;
+    z-index: 10;
+    }
         
-        .nosotros .articulo h1{
-          line-height: 22px;
-          font-weight: bolder;
-          font-size: 1.7rem;
-          word-spacing: 2px;
-          letter-spacing: -0.2;
-          font-family: 'Archivo Black', sans-serif;
-          }
+    .nosotros .articulo h1{
+    line-height: 22px;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    word-spacing: 2px;
+    letter-spacing: -0.2;
+    font-family: 'Archivo Black', sans-serif;
+     }
 
-          .nosotros .articulo p{
-            line-height: 22px;
-            font-weight: bolder;
-            font-size: 0.9rem;
-            word-spacing: 1px;
-            letter-spacing: -0.02rem;
-            font-family: 'Open sans';
-            }
+      .nosotros .articulo p{
+      line-height: 22px;
+      font-weight: bolder;
+      font-size: 0.9rem;
+      word-spacing: 1px;
+      letter-spacing: -0.02rem;
+      font-family: 'Open sans';
+      }
             
-          
 
-
- /* cuarta          caja ..................................... */
- .dibujo{
-  width: 100%;
-  max-width: 390px;
-  margin-top: 10%;
-  }
-  
-  .dibujo img{
+      /* cuarta caja ..................................... */
+   .dibujo{
     width: 100%;
     max-width: 390px;
-  }
+    margin-top: 10%;
+   }
+  
+    .dibujo img{
+    width: 100%;
+    max-width: 390px;
+     }
 
 
     /*quinta       caja ..................................... */
- /*ARTICULO DOS */
-  .articulo-dos{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 390px;
-  margin-top: 20%;
-  margin-bottom: 20%;
-  }
+   /*ARTICULO DOS */
+   .articulo-dos{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   max-width: 390px;
+   margin-top: 20%;
+   margin-bottom: 20%;
+   }
     
 
-    
-  .articulo-dos-uno{
+   .articulo-dos-uno{
     width: 90%;
     max-width: 390px;
     }
-    
-  .articulo-dos-uno h1{
-  line-height: 22px;
-  font-weight: bolder;
-  font-size: 1rem;
-  word-spacing: 4px;
-  letter-spacing: -1.5px;
-  font-family: 'Archivo Black', sans-serif;
-  }
-  
-  
-  
-  
-  
-  .articulo-dos-uno p {
-  font-family: "Open sans";
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 1.45;
-  color: #666;
-  }
 
-   /*IMAGENES*/
-   .dos-imagenes{
+    
+   .articulo-dos-uno h1{
+   line-height: 22px;
+   font-weight: bolder;
+   font-size: 1rem;
+   word-spacing: 4px;
+   letter-spacing: -1.5px;
+   font-family: 'Archivo Black', sans-serif;
+   }
+  
+  
+   .articulo-dos-uno p {
+   font-family: "Open sans";
+   font-size: 0.9rem;
+   font-weight: 400;
+   line-height: 1.45;
+   color: #666;
+   }
+
+    /*IMAGENES*/
+    .dos-imagenes{
      width: 100%;
-   display: flex;
+     display: flex;
     flex-direction: row;
     justify-content: space-between;
-   }
+    }
 
-   .foto{
+    .foto{
     width: 45%;
     max-width: 450px;
-   }
+    }
 
    .foto  img{
     width: 100%;
@@ -1665,51 +2604,51 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
     margin-top: 15%;
      }
      
-   blockquote h3{
+    blockquote h3{
     margin-top: -2px;
     margin-left: 30px;
     margin-right: 60px;
-   font-size: 0.93rem;
-  color: #666;
-  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-  }
+    font-size: 0.93rem;
+    color: #666;
+    font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+   }
 
-  blockquote p {
+    blockquote p {
     margin-top: 30px;
     margin-left: 150px;
-   font-size: 0.6rem;
-  color: #000;
-  font-weight: 900;
-  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-  }
-
-  blockquote .otroestilo{
-    margin-top: 30px;
-    margin-left: 5px;
-   font-size: 0.5rem;
- color:#666;
-  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-  }
-   /*NOMBRE DEL FINDADOR*/
-
-    blockquote p{
-      font-size: 0.6rem;
-      margin-right: 8px;
+    font-size: 0.6rem;
+    color: #000;
+    font-weight: 900;
+    font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
     }
 
-/*  FINAL SEGUNDA COLUMNA ......................................................................*/
-/*  SEGUNDA COLUMNA ......................................................................*/
+     blockquote .otroestilo{
+    margin-top: 30px;
+    margin-left: 5px;
+    font-size: 0.5rem;
+    color:#666;
+    font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+     }
+   /*NOMBRE DEL FINDADOR*/
+
+     blockquote p{
+      font-size: 0.6rem;
+      margin-right: 8px;
+     }
+
+    /*  FINAL SEGUNDA COLUMNA ......................................................................*/
+      /*SEGUNDA COLUMNA ......................................................................*/
     .fijo1{
      width: 1%;
      max-width: 4px;
      }
 
    .fija{
-  width: 50%;
-  height: 100%;
-  }
+    width: 50%;
+    height: 100%;
+    }
 
-  .imagen-estatica{
+   .imagen-estatica{
     width: 100%;
     height: 80%;
     position: fixed ;
@@ -1720,6 +2659,7 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
       width: 100%;
       max-width: 468px;
       bottom:0;
+      margin-top: -47px;
       }
 
      }
@@ -1730,263 +2670,1189 @@ font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
 
 
 
- /* 901 A 1000 ..................................................................................................................................................................................................... */
-  
-
+ /* 901 A 1000 ....................................................... */
     @media only screen and (min-width: 901px) and (max-width: 1000px){
 
-
       #wrapper {
-        margin:0;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      
-      }
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        border-spacing: 0;
+        border-collapse: collapse;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+       }
+  
             
       #wrapper > * {
-      padding: 10px;
+      padding: 15px;
       }
 
 
-
-    #container-nosotros{
-      width:100%;
-      max-width: 920px;
-    margin: auto;
-    }
-
-
-  .tres-columnas-nosotros{
-    display: flex;
-    flex-direction: row;
-    width:100%;
-     justify-content: space-between;
-    margin-bottom: 10%;
-  margin: auto;
-    }
+      header .cabecera{
+        display: none;
+        visibility: hidden;
+        }
     
-  /*CONTAINER TOTAL DE LA PRIMERA COLUMNA*/
-    .nosotros{
-      width: 45%;
-     margin: auto;
-     display: flex;
-     flex-direction: column;
-      margin-top: 4%;
-      z-index: 10;
+    
+      header{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width:100%;
+      position: fixed;
+      z-index: 2000;   /*IMPORTANTE  */
+      top:0;
+      margin: auto;
+      height: 60px;
+      box-shadow: 0 8px 6px -6px #DCDCDC;
+      background-color: #fff;
+         }
+      
+      
+      header.black{
+      height: 60px;
+      background-color: #fff;
       }
       
-      /*TITULO NUESTRA HISTORIA*/
-      .nosotros .articulo h1{
-        line-height: 22px;
-        font-weight: bolder;
-        font-size: 2rem;
-        word-spacing: 2px;
-        letter-spacing: -0.2;
-        font-family: 'Archivo Black', sans-serif;
+       
+      
+      .cabecera{
+      display: none;
+      }
+       
+            
+      .cabecera-responsive{
+        width: 100%;
+        max-width: 1150px;
+        height: 38px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+   
+      }
+    
+     .cabecera-responsive .logo{
+       display: block;
+       position: relative;
+       float: left;
+       width: 20%;
+       max-width: 290px;
+       height: 38px;
+     }
+    
+
+     .cabecera-responsive .logo  img{
+       display: block;
+       width: 100%;
+     }
+      
+     .cabecera-responsive #controls{
+       width: 35%;
+       max-width: 390px;
+       display: block;
+       position: relative;
+       float: left;
+       height: 38px;
+     }
+    
+    
+     .cabecera-responsive #controls #custom-search-input-header{
+       display: flex;
+       flex-direction: row;
+       width: 100%;
+       max-width: 390px;
+       height: 35px;
+     
+     }
+    
+     .cabecera-responsive #controls #custom-search-input-header  .sin-borde{
+      width: 92%;
+      max-width: 340px;
+     }
+    
+     .cabecera-responsive #controls #custom-search-input-header  .boton{
+      width: 8%;
+      max-width: 50px;
+    }
+    
+     .cabecera-responsive .suscribe{
+      width: 20%;
+      display: block;
+      position: relative;
+      float: left;
+      height: 38px;
+    }
+
+
+       /*...BURGER ESCONDIDO........BURGER ESCONDIDO....................*/
+     .cabecera-responsive  .menu-btn {
+       width: 8%;
+       max-width: 40px;
+       display: block;
+       position: relative;
+       float: right;
+       height: 38px;
+       }
+      
+           
+            /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+            .menu-btn .hamburguesa  .menu-btn__burger {
+            display: block;
+            position: relative;
+            float: right;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 28px;
+            min-width: 28px;
+            height: 4px;
+            background: #2d2d2d;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2);
+            transition: all .5s ease-in-out;
+            z-index: 1000;
+            }
+                
+      .menu-btn .hamburguesa  .menu-btn__burger::before,
+      .menu-btn .hamburguesa   .menu-btn__burger::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      max-width: 28px;
+      min-width: 28px;
+      height: 4px;
+      background:#2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+      transition: all .5s ease-in-out;
+      z-index: 800;   
+      }
+       
+              
+        .menu-btn .hamburguesa .menu-btn__burger::before {
+         transform: translateY(-7px);
+    
+         }
+    
+    
+      .menu-btn .hamburguesa .menu-btn__burger::after {
+      transform: translateY(7px);
+      }
+    
+    
+      /* ANIMATION */
+      .hamburguesa.open .menu-btn__burger {
+      transform: translateX(-50px);
+      background: transparent;
+      box-shadow: none;
+      }
+    
+     .hamburguesa.open .menu-btn__burger::before {
+     transform: rotate(45deg) translate(35px, -35px);
+     background: #fff;
+      }
+    
+    .hamburguesa.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    background: #fff;
+    }
+    
+    
+    .cabecera-responsive .nenu-btn .hamburguesa .menu-btn__burger:hover{
+    background-color: #7aac41;
+    }
+       
+    
+      .cabecera-responsive  .menu-btn .hamburguesa .menu-btn__burger:hover::before{
+      background-color: #7aac41;
+      }
+    
+    
+      .cabecera-responsive   .menu-btn .hamburguesa .menu-btn__burger:hover::after{
+      background-color:  #7aac41;
+      }
+    
+    
+    /*..FIN CABECERA RESPONSIVE.................*/
+    header nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+    background-color: #fff;
+    overflow-y: scroll;
+    z-index: 200;
+    visibility: visible;
+    box-sizing: border-box; 
+      }
+    
+
+    nav::-webkit-scrollbar {
+    display: none;
+    }
+       
+    
+      /* #aaaaaa */
+      nav .logo-esconder{
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+      width: 98%;
+      visibility: visible;
+      height: 80px;
+       border-bottom: 1px solid #2d2d2d;
+      }
+    
+
+      nav .logo-esconder .logo-en-menu-responsive{
+      width: 30%;
+      max-width: 150px;
+      display: inline-flex;
+      height: 80px;
+      margin-left: 10px;
+      }
+    
+     
+    
+      nav .logo-esconder .logo-en-menu-responsive img{
+      width: 100%;
+      max-width: 120px;
+      min-width: 120px;
+      margin-top: 48px;
+      margin-left: 10px;
+      }
+    
+
+      nav .logo-esconder .emoticon{
+      width: 8%;
+      height: 80px;
+      margin-top: 48px;
+      }
+    
+      nav .logo-esconder .suscriptor{
+       width: 30%;
+       height: 80px;
+       display: block;
+       position: relative;
+       float: right;
+       }
+
+
+      nav .logo-esconder .suscriptor a h4{
+      font-size: 0.8em;
+      margin-top: 56px;
+      }
+    
+
+      nav .siguenos{
+      display: block;
+      width: 95%;
+      margin-top: 40px;
+      visibility: visible;
+      }
+    
+
+      nav .siguenos ul{
+      display: flex;
+      flex-direction: row;
+      width: 95%;
+      margin-left: 10px;
+      }
+    
+
+       nav .siguenos h1{
+      font-size: 0.9em;
+      display: inline-flex;
+      margin: 10px 0;
+      padding: 5px 9px 5px 4px;
+       }
+
+
+      nav .siguenos ul li{
+      margin: 10px 0;
+      list-style: none;
+      padding: 5px 9px 5px 4px;
+      }
+
+    
+       /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+       nav .buscador-esconder{
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      visibility: visible;
+      margin-top: 40px;
+      margin-left: 10px;
+      height: 50px;
+      }
+    
+
+      .buscador-esconder .d-flex{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+       box-sizing: border-box;
+      }
+    
+      .buscador-esconder .d-flex #custom-search{
+      width: 100%;
+      height: 50px;
+       border: 1px solid #2d2d2d;
+       border-radius: 8px;
+      }
+    
+     .buscador-esconder #custom-search input[type=text]{
+       box-sizing: border-box;
+     }
+    
+     .buscador-esconder .d-flex #custom-search .sin-borde{
+        width: 90%;
+        height: 40px;
+        outline: none;
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        float: left;
+      }
+    
+     .buscador-esconder .d-flex #custom-search .boton{
+      width: 10%;
+      height: 40px;
+      border-radius: 1px;
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 4px;
+      box-sizing: border-box;
+      background-color: #fff;
+      }
+    
+    
+       /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+      nav .nav .esconder{
+      visibility: visible;
+      }
+    
+
+      nav .nav li a.active{
+      text-decoration:line-through;
+      color: #7aac41;
+      }
+    
+          /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      nav .nav{
+      width:100%; 
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      z-index: 9; 
+      background-color: #fff;
+      }
+      
+
+      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+      nav .nav li{
+      width: 100%;
+      display: block;
+      list-style: none;
+      height: 35px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO*/
+      cursor:pointer;
+      border-bottom: 1px solid #aaaaaa;
+      }
+          
+      nav .nav li a {
+      z-index: 100;
+      height: 30px;
+      color: #2d2d2d;
+      font-weight: lighter;
+      font-size: 1rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  sans-serif;
+      padding-top: 0;
+      margin-top: 0;
+      background-color: #fff;
+      }
+      /*IMPORTANTE*/
+      
+           
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+      /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover > ul {
+      background-color:  #fff;
+      width: 100%;
+      max-width: 500px;
+      height: 100%;
+      margin-left: 6px;
+      z-index: 598;
+      }
+    
+      
+    
+      nav .nav ul {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      background-color: #fff;
+      margin-top: 0.5px;
+      display: none;
+      }
+    
+    
+      nav .nav  ul li {
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 0px;
+      background-color: #fff;
+      }
+        
+      
+        nav .nav li  ul li a{
+        font-size: 1rem;
+        color: #2d2d2d;
+        width: 100%;
+        max-width: 600px;
+        margin-left: 60px;
+        background-color: #fff;
+        }
+    
+
+      /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+       nav  .estilo-logo:after{
+       text-decoration: none;
+       height: 0px;
+       content: "";
+       display: none;
+       margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+       height: 0px;
+       width: 0px;
+       transition: all .0s;
+       z-index: 10;
+       }
+    
+     
+      /* width: 100%;*/
+      nav  a:hover:after {
+      padding-left: 40px;
+      padding-right: -150px;
+      height: 2px;
+      background: white;
+      }
+      /*..FIN NAV ESCONDIDO...........................*/
+    
+      #container-nosotros{
+        display: flex;
+        flex-direction: column;
+         margin: auto;
+        width: 100%;
+        bottom:  25px;
+        margin-top: 70px;
         }
 
-        .nosotros .articulo p{
-          line-height: 22px;
-          font-weight: bolder;
-          font-size: 0.95rem;
-          word-spacing: 1px;
-          letter-spacing: -0.02rem;
-          font-family: 'Open sans';
-          }
-          
-         /*DOS IMAGENES*/
- .dos-imagenes{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 450px;
-   }
-
-
-   .foto{
-    width: 45%;
-    max-width: 450px;
-   }
-    
-   .foto img{
-    width: 100%;
-    max-width: 450px;
-   }
-
-
-  /*quinta       caja ..................................... */
-/*ARTICULO DOS */
-.articulo-dos{
-display: flex;
-flex-direction: column;
-width: 100%;
-max-width: 450px;
-margin-top: 20%;
-margin-bottom: 20%;
-
-}
-  
-  
-.articulo-dos-uno{
-  width:  100%;
-  max-width: 450px;
-  }
-  
-.articulo-dos-uno h1{
-line-height: 22px;
-font-weight: bolder;
-font-size: 1rem;
-word-spacing: 4px;
-letter-spacing: -1.5px;
-font-family: 'Archivo Black', sans-serif;
-}
-
-
-
-.articulo-dos-uno p {
-font-family: "Open sans";
-font-size: 0.9rem;
-font-weight: 400;
-line-height: 1.45;
-}
-
-
-  blockquote{
-  width: 100%;
-  max-width: 450px;
-  margin-bottom: 5%;
-   }
-   
-
- blockquote h3{
-  margin-top: -30px;
-  margin-left: 60px;
-  margin-right: 60px;
- font-size: 0.9rem;
-color: #666;
-font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-}
-
-
-/*NOMBRE DEL FINDADOR*/
-blockquote p {
-  margin-top: 30px;
-  margin-left: 150px;
- font-size: 0.8rem;
-color: #000;
-font-weight: 900;
-font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-}
-
-blockquote .otroestilo{
-  margin-top: 30px;
-  margin-left: 5px;
- font-size: 0.5rem;
-color:#666;
-font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-}
- 
-
-
-  
-/* cuarta          caja ..................................... */
-.dibujo{
-  width: 100%;
-  max-width: 450px;
-  }
-  
-  .dibujo img{
-    width: 100%;
-    max-width: 450px;
-  }
-  
-  
-/*  FINAL SEGUNDA COLUMNA ......................................................................*/
-/*  SEGUNDA COLUMNA ......................................................................*/
- .fijo1{
-  width: 1%;
-  max-width: 4px;
- }
-
-.fija{
-width: 45%;
-height: 100%;
-}
-
-.imagen-estatica{
-  width: 100%;
-  max-width: 500px;
-  height: 80%;
-  position: fixed;
-  bottom:0;
-  }
-
-
-   
-  .imagen-estatica img{
-  width: 100%;
-  max-width: 490px;
-  height: 80%;
-  position: fixed ;
-  bottom:0;
-  }
-
-    }
-  
-
-
-
-
-
-  /* 1001 A 1080 ..................................................................................................................................................................................................... */
-  
-
-    @media only screen and (min-width: 1001px) and (max-width: 1080px){
-
-      #wrapper {
-        margin:0;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      
-      }
-            
-      #wrapper > * {
-      padding: 10px;
-      }
-
-    #container-nosotros{
-      width:100%;
-      max-width: 1090px;
-    margin: auto;
-    margin-top: 11%;
-    }
-
-
-  .tres-columnas-nosotros{
+     .tres-columnas-nosotros{
     display: flex;
     flex-direction: row;
     width:100%;
-      max-width: 1005px;
     margin-top: 5%;
     margin-bottom: 10%;
     }
     
 
-  /*CONTAINER TOTAL DE LA PRIMERA COLUMNA*/
+     /*CONTAINER TOTAL DE LA PRIMERA COLUMNA*/
     .nosotros{
-      width: 45%;
-      margin-top: 5%;
+    width: 46%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    z-index: 10;
+    }
+
+      
+      /*TITULO NUESTRA HISTORIA*/
+      .nosotros .articulo h1{
+      line-height: 22px;
+      font-weight: bolder;
+      font-size: 2rem;
+      word-spacing: 2px;
+      letter-spacing: -0.2;
+      font-family: 'Archivo Black', sans-serif;
+      }
+
+      .nosotros .articulo p{
+      line-height: 22px;
+      font-weight: bolder;
+      font-size: 0.95rem;
+      word-spacing: 1px;
+      letter-spacing: -0.02rem;
+      font-family: 'Open sans';
+      }
+          
+
+         /*DOS IMAGENES*/
+   .dos-imagenes{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 100%;
+   max-width: 495px;
+   }
+
+
+   .foto{
+    width: 49.5%;
     max-width: 495px;
+    height: 100%;
+    max-height: 400px;
+   }
+
+   
+   .foto img{
+    width: 100%;
+    max-width: 495px;
+   }
+
+
+   /*quinta       caja ..................................... */
+   /*ARTICULO DOS */
+  .articulo-dos{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   margin-top: 20%2;
+   margin-bottom: 0%;
+   }
+  
+  .articulo-dos .articulo-dos-uno{
+  display: block;
+  width: 99%;
+  }
+
+  
+   .articulo-dos-uno h1{
+   line-height: 22px;
+   font-weight: bolder;
+   font-size: 1rem;
+   word-spacing: 4px;
+   letter-spacing: -1.5px;
+   font-family: 'Archivo Black', sans-serif;
+   }
+
+
+   .articulo-dos-uno p {
+   font-family: "Open sans";
+   font-size: 0.96rem;
+   font-weight: 400;
+   line-height: 1.45;
+   color: #666;
+   }
+
+
+   blockquote{
+  width: 100%;
+  max-width: 495px;
+  margin-bottom: 5%;
+   }
+   
+
+  /*DESCRIPCION*/
+   blockquote h3{
+  margin-top: -10px;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-size: 0.97rem;
+  color: #666;
+   font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+   }
+
+
+  /*NOMBRE DEL FUNDADOR*/
+   blockquote p {
+  margin-top: 30px;
+  margin-left: 150px;
+  font-size: 0.8rem;
+  color: #000;
+  font-weight: 900;
+  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+   }
+
+
+  blockquote .otroestilo{
+  margin-top: 30px;
+  margin-left: 5px;
+  font-size: 0.5rem;
+  color:#666;
+   font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+   }
+ 
+  
+   /* cuarta caja ..................................... */
+   .dibujo{
+   width: 100%;
+   max-width: 495px;
+  }
+  
+   .dibujo img{
+    width: 100%;
+    max-width: 495px;
+    }
+  /*  FINAL PRIMERA COLUMNA ..........................*/
+
+
+   /*  SEGUNDA COLUMNA ...................................*/
+   .fijo1{
+    width: 4%;
+    max-width: 18px;
+   }
+
+    /*..TERCERA COLUMNA ...................................*/
+    .fija{
+    width: 50%;
+   height: 100%;
+   }
+
+   .imagen-estatica{
+    width: 100%;
+    height: 80%;
+    position: fixed;
+   bottom:0;
+    }
+
+
+    .imagen-estatica img{
+    width: 100%;
+    max-width: 544px;
+    margin-top: -48px;
+    }
+
+
+    }
+  
+
+
+
+
+
+  /* 1001 A 1080 ...................................... */
+    @media only screen and (min-width: 1001px) and (max-width: 1080px){
+      #wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        border-spacing: 0;
+        border-collapse: collapse;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+       }
+  
+            
+      #wrapper > * {
+      padding: 10px;
+      }
+
+      header .cabecera{
+        display: none;
+        visibility: hidden;
+        }
+    
+    
+        header{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          width:100%;
+          position: fixed;
+          z-index: 2000;   /*IMPORTANTE  */
+          top:0;
+          margin: auto;
+          height: 60px;
+          box-shadow: 0 8px 6px -6px #DCDCDC;
+          background-color: #fff;
+         }
+      
+      
+          header.black{
+          height: 60px;
+          background-color: #fff;
+          }
+      
+       
+      
+          .cabecera{
+          display: none;
+           }
+       
+            
+      .cabecera-responsive{
+        width: 100%;
+        max-width: 1150px;
+        height: 38px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+   
+      }
+    
+     .cabecera-responsive .logo{
+       display: block;
+       position: relative;
+       float: left;
+       width: 20%;
+       max-width: 290px;
+       height: 38px;
+
+    
+     }
+    
+     .cabecera-responsive .logo  img{
+       display: block;
+       width: 100%;
+     }
+      
+     .cabecera-responsive #controls{
+       width: 35%;
+       max-width: 390px;
+       display: block;
+       position: relative;
+       float: left;
+       height: 38px;
+     }
+    
+    
+     .cabecera-responsive #controls #custom-search-input-header{
+       display: flex;
+       flex-direction: row;
+       width: 100%;
+       max-width: 390px;
+       height: 35px;
+     
+     }
+    
+     .cabecera-responsive #controls #custom-search-input-header  .sin-borde{
+      width: 92%;
+      max-width: 340px;
+     }
+    
+     .cabecera-responsive #controls #custom-search-input-header  .boton{
+      width: 8%;
+      max-width: 50px;
+    }
+    
+     .cabecera-responsive .suscribe{
+      width: 20%;
+      display: block;
+      position: relative;
+      float: left;
+      height: 38px;
+    }
+       /*...BURGER ESCONDIDO........BURGER ESCONDIDO....................*/
+     .cabecera-responsive  .menu-btn {
+       width: 8%;
+       max-width: 40px;
+       display: block;
+       position: relative;
+       float: right;
+       height: 38px;
+       }
+      
+           
+        
+            /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+            .menu-btn .hamburguesa  .menu-btn__burger {
+            display: block;
+            position: relative;
+            float: right;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 28px;
+            min-width: 28px;
+            height: 4px;
+            background: #2d2d2d;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2);
+            transition: all .5s ease-in-out;
+            z-index: 1000;
+            }
+                
+            .menu-btn .hamburguesa  .menu-btn__burger::before,
+            .menu-btn .hamburguesa   .menu-btn__burger::after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              max-width: 28px;
+              min-width: 28px;
+              height: 4px;
+              background:#2d2d2d;
+              border-radius: 2px;
+              box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+              transition: all .5s ease-in-out;
+              z-index: 800;   
+              }
+         
+      .menu-btn .hamburguesa .menu-btn__burger::before {
+      transform: translateY(-7px);
+      }
+    
+    
+      .menu-btn .hamburguesa .menu-btn__burger::after {
+      transform: translateY(7px);
+      }
+    
+    
+      /* ANIMATION */
+      .hamburguesa.open .menu-btn__burger {
+       transform: translateX(-50px);
+       background: transparent;
+       box-shadow: none;
+       }
+    
+
+      .hamburguesa.open .menu-btn__burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+       background: #fff;
+       }
+    
+
+      .hamburguesa.open .menu-btn__burger::after {
+      transform: rotate(-45deg) translate(35px, 35px);
+      background: #fff;
+      }
+    
+    
+      .cabecera-responsive .nenu-btn .hamburguesa .menu-btn__burger:hover{
+      background-color: #7aac41;
+      }
+       
+    
+      .cabecera-responsive  .menu-btn .hamburguesa .menu-btn__burger:hover::before{
+      background-color: #7aac41;
+      }
+    
+    
+      .cabecera-responsive   .menu-btn .hamburguesa .menu-btn__burger:hover::after{
+      background-color: #7aac41;
+      }
+    
+    
+    /*..FIN CABECERA RESPONSIVE.................*/
+    header nav{
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      max-width: 640px;
+      height: 100%;
+      margin: auto;
+      top:0;
+      bottom: 0;
+      left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+       background-color: #fff;
+       overflow-y: scroll;
+       z-index: 200;
+       visibility: visible;
+       box-sizing: border-box;
+      }
+    
+
+      nav::-webkit-scrollbar {
+      display: none;
+       }
+       
+    
+      /* #aaaaaa */
+      nav .logo-esconder{
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+      width: 98%;
+      visibility: visible;
+      height: 80px;
+       border-bottom: 1px solid #2d2d2d;
+    
+      }
+    
+      nav .logo-esconder .logo-en-menu-responsive{
+        width: 30%;
+        max-width: 150px;
+        display: inline-flex;
+        height: 80px;
+        margin-left: 10px;
+      }
+    
+     
+      nav .logo-esconder .logo-en-menu-responsive img{
+      width: 100%;
+      max-width: 120px;
+      min-width: 120px;
+      margin-top: 48px;
+      margin-left: 10px;
+       }
+    
+      nav .logo-esconder .emoticon{
+      width: 8%;
+      height: 80px;
+      margin-top: 48px;
+      }
+    
+
+       nav .logo-esconder .suscriptor{
+       width: 30%;
+       height: 80px;
+       display: block;
+       position: relative;
+       float: right;
+       }
+
+
+      nav .logo-esconder .suscriptor a h4{
+      font-size: 0.8em;
+      margin-top: 56px;
+      }
+    
+
+      nav .siguenos{
+      display: block;
+      width: 95%;
+      margin-top: 40px;
+      visibility: visible;
+      }
+    
+
+      nav .siguenos ul{
+      display: flex;
+      flex-direction: row;
+      width: 95%;
+      margin-left: 10px;
+      }
+
+    
+      nav .siguenos h1{
+      font-size: 0.9em;
+      display: inline-flex;
+      margin: 10px 0;
+      padding: 5px 9px 5px 4px;
+       }
+
+
+      nav .siguenos ul li{
+      margin: 10px 0;
+      list-style: none;
+      padding: 5px 9px 5px 4px;
+      }
+    
+
+       /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+       nav .buscador-esconder{
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      visibility: visible;
+      margin-top: 40px;
+      margin-left: 10px;
+      height: 50px;
+      }
+    
+      .d-flex{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+       box-sizing: border-box;
+      }
+
+    
+      #custom-search{
+      width: 100%;
+       height: 50px;
+       border: 1px solid #2d2d2d;
+       border-radius: 8px;
+      }
+    
+
+     .buscador-esconder #custom-search input[type=text]{
+       box-sizing: border-box;
+     }
+    
+
+     .buscador-esconder .d-flex #custom-search .sin-borde{
+        width: 90%;
+        height: 40px;
+        outline: none;
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        float: left;
+      }
+    
+     .buscador-esconder .d-flex #custom-search .boton{
+      width: 10%;
+      height: 40px;
+      border-radius: 1px;
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 4px;
+      box-sizing: border-box;
+      background-color: #fff;
+      }
+    
+    
+       /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+        nav .nav .esconder{
+       visibility: visible;
+       }
+
+    
+         nav .nav li a.active{
+        text-decoration:line-through;
+        color: #7aac41;
+        }
+    
+          /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      nav .nav{
+        width:100%; 
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        z-index: 9; 
+        background-color: #fff;
+        }
+      
+
+        /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+      nav .nav li{
+      width: 100%;
+      display: block;
+      list-style: none;
+      height: 35px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO*/
+      cursor:pointer;
+      border-bottom: 1px solid #aaaaaa;
+      }
+          
+
+      nav .nav li a {
+      z-index: 100;
+      height: 30px;
+      color: #2d2d2d;
+      font-weight: lighter;
+      font-size: 1rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  sans-serif;
+      padding-top: 0;
+      margin-top: 0;
+      background-color: #fff;
+      }
+         
+       
+        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+        /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+        nav .nav li:hover > ul {
+        background-color:  #fff;
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        margin-left: 6px;
+        z-index: 598;
+        }
+    
+    
+        nav .nav ul {
+          display: block;
+          width: 100%;
+          max-width: 600px;
+          background-color: #fff;
+          margin-top: 0.5px;
+          display: none;
+        }
+    
+    
+        nav .nav  ul li {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 0px;
+        background-color: #fff;
+        }
+        
+      
+        nav .nav li  ul li a{
+        font-size: 1rem;
+        color: #2d2d2d;
+        width: 100%;
+        max-width: 600px;
+        margin-left: 60px;
+        background-color: #fff;
+        }
+
+    
+      /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+       nav  .estilo-logo:after{
+       text-decoration: none;
+       height: 0px;
+       content: "";
+       display: none;
+       margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
+       height: 0px;
+       width: 0px;
+       transition: all .0s;
+       z-index: 10;
+       }
+    
+    
+      /* width: 100%;*/
+      nav  a:hover:after {
+      padding-left: 40px;
+      padding-right: -150px;
+      height: 2px;
+      background: white;
+      }
+      /*..FIN NAV ESCONDIDO...........................*/
+    
+
+      #container-nosotros{
+      display: flex;
+      flex-direction: column;
+       margin: auto;
+      width: 100%;
+      bottom:  25px;
+      margin-top: 70px;
+        }
+
+   .tres-columnas-nosotros{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    }
+    
+
+    /*CONTAINER TOTAL DE LA PRIMERA COLUMNA*/
+    .nosotros{
+    width: 46%;
+    margin-top: 5%;
      display: flex;
      flex-direction: column;
      margin: auto;
-      z-index: 10;
+    z-index: 10;
       }
       
+
       /*TITULO NUESTRA HISTORIA*/
       .nosotros .articulo h1{
         line-height: 22px;
@@ -1996,6 +3862,7 @@ height: 100%;
         letter-spacing: -0.2;
         font-family: 'Archivo Black', sans-serif;
         }
+
 
         .nosotros .articulo p{
           line-height: 22px;
@@ -2007,13 +3874,13 @@ height: 100%;
           }
           
          /*DOS IMAGENES*/
- .dos-imagenes{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 495px;
-   }
+   .dos-imagenes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 495px;
+    }
 
 
    .foto{
@@ -2029,106 +3896,105 @@ height: 100%;
    }
 
 
-  /*quinta       caja ..................................... */
-/*ARTICULO DOS */
-.articulo-dos{
-display: flex;
-flex-direction: column;
-width: 100%;
-max-width: 495px;
-margin-top: 20%;
-margin-bottom: 20%;
-}
+   /*quinta       caja ..................................... */
+   /*ARTICULO DOS */
+   .articulo-dos{
+   display: flex;
+   flex-direction: column;
+    width: 100%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    }
   
-.articulo-dos-uno{
+  .articulo-dos .articulo-dos-uno{
+  display: block;
   width: 99%;
-  max-width: 495px;
   }
   
-.articulo-dos-uno h1{
-line-height: 22px;
-font-weight: bolder;
-font-size: 1rem;
-word-spacing: 4px;
-letter-spacing: -1.5px;
-font-family: 'Archivo Black', sans-serif;
-}
+  .articulo-dos-uno h1{
+   line-height: 22px;
+   font-weight: bolder;
+   font-size: 1rem;
+   word-spacing: 4px;
+   letter-spacing: -1.5px;
+   font-family: 'Archivo Black', sans-serif;
+   }
 
 
-.articulo-dos-uno p {
-font-family: "Open sans";
-font-size: 0.96rem;
-font-weight: 400;
-line-height: 1.45;
-color: #666;
-}
+   .articulo-dos-uno p {
+   font-family: "Open sans";
+   font-size: 0.96rem;
+   font-weight: 400;
+   line-height: 1.45;
+   color: #666;
+    }
 
 
-blockquote{
+  blockquote{
   width: 100%;
   max-width: 495px;
   margin-bottom: 5%;
    }
    
- /*DESCRIPCION*/
- blockquote h3{
+  /*DESCRIPCION*/
+  blockquote h3{
   margin-top: -10px;
   margin-left: 60px;
   margin-right: 60px;
- font-size: 0.97rem;
-color: #666;
-font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-}
+  font-size: 0.97rem;
+  color: #666;
+  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+   }
 
 
-/*NOMBRE DEL FUNDADOR*/
-blockquote p {
-  margin-top: 30px;
-  margin-left: 150px;
- font-size: 0.8rem;
-color: #000;
-font-weight: 900;
-font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-}
+  /*NOMBRE DEL FUNDADOR*/
+   blockquote p {
+   margin-top: 30px;
+   margin-left: 150px;
+   font-size: 0.8rem;
+   color: #000;
+   font-weight: 900;
+   font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+   }
 
 
 
-blockquote .otroestilo{
+  blockquote .otroestilo{
   margin-top: 30px;
   margin-left: 5px;
- font-size: 0.5rem;
-color:#666;
-font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-}
- 
-
+  font-size: 0.5rem;
+  color:#666;
+  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+   }
 
   
-/* cuarta          caja ..................................... */
-.dibujo{
+   /* cuarta caja ..................................... */
+   .dibujo{
   width: 100%;
   max-width: 495px;
   }
   
-  .dibujo img{
+   .dibujo img{
     width: 100%;
     max-width: 495px;
-  }
+    }
   
   
-/*  FINAL PRIMERA COLUMNA ......................................................................*/
-/*  SEGUNDA COLUMNA ...................................*/
- .fijo1{
-width: 2%;
-max-width: 8px;
- }
-/*..TERCERA COLUMNA ...................................*/
-.fija{
-width: 50%;
-height: 100%;
-}
+   /*  FINAL PRIMERA COLUMNA ..........................*/
+   /*  SEGUNDA COLUMNA ...................................*/
+   .fijo1{
+   width: 4%;
+   max-width: 18px;
+   }
 
-.imagen-estatica{
+
+  /*..TERCERA COLUMNA ...................................*/
+  .fija{
+   width: 50%;
+   height: 100%;
+   }
+
+   .imagen-estatica{
   width: 100%;
   height: 80%;
   position: fixed;
@@ -2139,6 +4005,7 @@ height: 100%;
   .imagen-estatica img{
     width: 100%;
     max-width: 544px;
+    margin-top: -48px;
     }
 
     }
@@ -2154,78 +4021,652 @@ height: 100%;
   
 
   @media only screen and (min-width: 1081px) and (max-width: 1149px){
+    *{
+      margin:0;
+      padding:0;
+      border:0;
+      box-sizing: border-box;
+      }
 
+
+       /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+       *,
+       *::before,
+       *::after {
+       box-sizing: border-box;
+       }
+    
+    
+       /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+       body{
+      padding:0;
+      margin: 0;
+      background-color: #fff;
+      color: rgba(0,0,0,.95);
+      font-family: "Argos",serif;
+       }
+    
+        html, body {
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        height: 100%;
+        }
+    
+       img{
+       max-width: 100%;
+       }
   
-    #container-nosotros{
-      width:100%;
-      max-width: 1100px;
+    #wrapper {
+      margin:0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    
+       }
+          
+     #wrapper > * {
+     padding: 10px;
+     }
+  
+      #container-nosotros{
+        width:100%;
+        margin-left: auto;
+       margin-right: auto;
+      }
+  
+      header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width:100%;
+        position: fixed;
+        z-index: 2000;   /*IMPORTANTE  */
+        top:0;
+        margin: auto;
+        height: 60px;
+        box-shadow: 0 8px 6px -6px #DCDCDC;
+        background-color: #fff;
+       }
+    
+    
+        header.black{
+        height: 60px;
+        background-color: #fff;
+        }
+    
+     
+    
+        .cabecera{
+        display: none;
+         }
+     
+          
+    .cabecera-responsive{
+      width: 100%;
+      max-width: 1150px;
+      height: 38px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+   
+    }
+  
+   .cabecera-responsive .logo{
+     display: block;
+     position: relative;
+     float: left;
+     width: 20%;
+     max-width: 290px;
+     height: 38px;
+  
+  
+   }
+  
+   .cabecera-responsive .logo  img{
+     display: block;
+     width: 100%;
+   }
+    
+   .cabecera-responsive #controls{
+     width: 35%;
+     max-width: 410px;
+     display: block;
+     position: relative;
+     float: left;
+     height: 38px;
+   }
+  
+  
+   .cabecera-responsive #controls #custom-search-input-header{
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     max-width: 410px;
+     height: 35px;
+   
+   }
+  
+   .cabecera-responsive #controls #custom-search-input-header  .sin-borde{
+    width: 92%;
+    max-width: 340px;
+   }
+  
+   .cabecera-responsive #controls #custom-search-input-header  .boton{
+    width: 8%;
+    max-width: 50px;
+  }
+  
+   .cabecera-responsive .suscribe{
+    width: 30%;
+    display: block;
+    position: relative;
+    float: left;
+    height: 38px;
+  }
+     /*...BURGER ESCONDIDO........BURGER ESCONDIDO....................*/
+   .cabecera-responsive  .menu-btn {
+     width: 8%;
+     max-width: 40px;
+     display: block;
+     position: relative;
+     float: right;
+     height: 38px;
+     }
+    
+   /*..FIN CABECERA RESPONSIVE.................*/
+   header nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
     margin: auto;
-    margin-top: 18.5%;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+     background-color: #fff;
+     overflow-y: scroll;
+     z-index: 200;
+     visibility: visible;
+     box-sizing: border-box;
+    
+    }
+  
+    nav::-webkit-scrollbar {
+      display: none;
+     }
+     
+  
+    /* #aaaaaa */
+    nav .logo-esconder{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 98%;
+    visibility: visible;
+    height: 80px;
+     border-bottom: 1px solid #2d2d2d;
+  
+    }
+  
+    nav .logo-esconder .logo-en-menu-responsive{
+      width: 30%;
+      max-width: 150px;
+      display: inline-flex;
+      height: 80px;
+      margin-left: 10px;
+    }
+  
+   
+  
+  nav .logo-esconder .logo-en-menu-responsive img{
+    width: 100%;
+    max-width: 120px;
+    min-width: 120px;
+    margin-top: 48px;
+    margin-left: 10px;
+  }
+  
+  nav .logo-esconder .emoticon{
+    width: 8%;
+    height: 80px;
+    margin-top: 48px;
+  }
+  
+   nav .logo-esconder .suscriptor{
+     width: 30%;
+     height: 80px;
+     display: block;
+     position: relative;
+     float: right;
+  
+   }
+    nav .logo-esconder .suscriptor a h4{
+    font-size: 0.8em;
+    margin-top: 56px;
+    }
+  
+    nav .siguenos{
+      display: block;
+      width: 95%;
+      margin-top: 40px;
+      visibility: visible;
+    }
+  
+    nav .siguenos ul{
+      display: flex;
+      flex-direction: row;
+      width: 95%;
+      margin-left: 10px;
+    }
+  
+     nav .siguenos h1{
+       font-size: 0.9em;
+       display: inline-flex;
+       margin: 10px 0;
+       padding: 5px 9px 5px 4px;
+     }
+
+     
+    nav .siguenos ul li{
+      margin: 10px 0;
+      list-style: none;
+      padding: 5px 9px 5px 4px;
     }
 
 
-  .tres-columnas-nosotros{
+
+    nav .buscador-esconder{
+    display: block;
+    width: 100%;
+    visibility: visible;
+    margin-top: 20px;
+    height: 50px;
+    }
+  
+  
+    nav  .buscador-esconder .d-flex{
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+    }
+  
+  
+    nav .buscador-esconder  .d-flex  #custom-search{
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    }
+  
+  
+    nav .buscador-esconder  .d-flex  #custom-search .sin-borde{
+    width: 90%;
+    max-width: 930px;
+    height: 40px;
+      }
+  
+  
+      nav .buscador-esconder  .d-flex  #custom-search .boton{
+    width: 10%;
+    max-width: 70px;
+    height: 40px;
+    background-color: #fff;
+      }
+  
+  
+    nav .nav .esconder{
+    visibility: visible;
+     }
+    
+    nav .nav li a.active{
+    text-decoration:line-through;
+    color: #7aac41;
+    }
+    
+  
+    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      nav .nav{
+        width:100%; 
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        z-index: 9; 
+        background-color: #fff;
+        }
+      
+           /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+        nav .nav li{
+          width: 100%;
+          display: block;
+          list-style: none;
+          height: 35px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO*/
+         
+          cursor:pointer;
+          border-bottom: 1px solid #aaaaaa;
+          }
+          
+          nav .nav li a {
+          z-index: 100;
+          height: 30px;
+          color: #2d2d2d;
+          font-weight: lighter;
+          font-size: 1rem;
+          text-transform: lowercase;
+          letter-spacing: 1px;
+          font-family:  sans-serif;
+          padding-top: 0;
+          margin-top: 0;
+          background-color: #fff;
+          }
+        
+           /*IMPORTANTE*/
+      
+           
+        /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+        /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+        nav .nav li:hover > ul {
+    
+        background-color:  #fff;
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        margin-left: 6px;
+        z-index: 598;
+        }
+    
+      
+    
+        nav .nav ul {
+          display: block;
+          width: 100%;
+          max-width: 600px;
+          background-color: #fff;
+          margin-top: 0.5px;
+          display: none;
+        }
+    
+    
+    
+        nav .nav  ul li {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 0px;
+        background-color: #fff;
+        }
+        
+      
+        nav .nav li  ul li a{
+        font-size: 1rem;
+        color: #2d2d2d;
+        width: 100%;
+        max-width: 600px;
+        margin-left: 60px;
+        background-color: #fff;
+        }
+    
+  
+      nav .siguenos{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      }
+  
+  
+      nav  .siguenos  .red-social{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      }
+  
+  
+      nav  .siguenos  .red-social h1{
+      font-size: 1rem;
+      color: #2d2d2d;
+      }
+  
+  
+  
+      #container-nosotros{
+        width:100%;
+        max-width: 1220px;
+      margin: auto;
+      margin-top: 17%;
+      }
+  
+  
+    .tres-columnas-nosotros{
     display: flex;
     flex-direction: row;
     width:100%;
-      max-width: 1082px;
+    max-width: 1220px;
     margin-top: 20%;
     margin-bottom: 10%;
-  margin: auto;
+    margin: auto;
     }
-    
-      /*CONTAINER TOTAL DE LA PRIMERA COLUMNA*/
-  .nosotros{
+      
+
+    /*PRIMERA COLUMNA ......................................................................................................*/
+    .nosotros{
     width: 45%;
-  max-width: 500px;
-   display: flex;
-    margin:  auto;
+    max-width: 550px;
     z-index: 10;
     }
-   
-
-    /*quinta       caja ..................................... */
- /*ARTICULO DOS */
-.articulo-dos{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  max-width: 500px;
-  width: 100%;
-  margin-top: 20%;
- 
-  }
-  
-  .articulo-dos-uno{
+    
+    
+    /*primera caja ..................................... */
+    .articulo{
     width: 100%;
-    max-width: 225px;
-    margin-left: 1.3%;
     }
-/*  FINAL PRIMERA COLUMNA ......................................................................*/
-/*  SEGUNDA COLUMNA ...................................*/
-   .fijo1{
-  width: 2%;
-  max-width: 18px;
-   }
+    
+      .nosotros h1{
+      line-height: 22px;
+      font-weight: bolder;
+      font-size: 3rem;
+      word-spacing: 4px;
+      letter-spacing: -1.5px;
+      font-family: 'Archivo Black', sans-serif;
+      margin-bottom: 50px;
+       }
 
-  /*..TERCERA COLUMNA ...................................*/
-  .fija{
-  width: 40%;
-  height: 100%;
+    
+    .nosotros .articulo p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #666;
+    text-align: start; 
+    }
+    
+    
+    
+    .nosotros .articulo p:first-letter{
+      font-size: 3.5em;
+      font-weight: bold;
+      line-height: .6em;
+      float: left;
+      margin: .1em;
+      font-family: 'Artifika', sans-serif;
+    }
+    
+    #avanzado p:first-line {
+      font-weight: bold;
+    }
+    
+    
+    
+     /*segunda caja ..................................... */
+    .dos-imagenes{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 550px;
+    justify-content: space-between;
+    margin-top: 20%;
+    }
+    
+      .foto{
+      width: 45%;
+      max-width: 290px;
+      margin-left: 1%;
+      }
+    
+       /*..width:"300" ;
+        height:"280" ;...*/
+       .foto img{
+       width: 100%;
+       }
+    
+    
+    
+     /*tercera caja ..................................... */
+    /*QUOTE ............................................ */
+    
+    blockquote{
+    height: 10%;
+    width: 100%;
+    max-width: 550px;
+    margin-top: 15%;
+     }
+     
+    
+      blockquote:before { 
+      content: "\201C"; /* inicio comilla */
+      font-family: Georgia;
+      font-size:60px; /* tamaño */
+      font-weight: bold; 
+      line-height:0px;
+      color:	#d4d4d4; /* Color  */
+      vertical-align:middle;
+      padding-top: 70%;
+      padding-left: 2%;
+      }
+     
+      /*DESCRPCION*/
+     blockquote h3{
+        margin-top: -30px;
+        margin-left: 60px;
+        margin-right: 60px;
+       font-size: 1.3rem;
+      color: #666;
+      font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+      }
+    
+        /*AUTOR FUNDADOR*/
+      blockquote p {
+        margin-top: 30px;
+        margin-left: 150px;
+       font-size: 1rem;
+      color: #000;
+      font-weight: 900;
+      font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+      }
+    
+    
+    
+      blockquote .otroestilo{
+        margin-top: 30px;
+        margin-left: 10px;
+       font-size: 1rem;
+     color:#666;
+      font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+      }
+    
+    
+    
+     /*FINAL QUOTE ...................................... */
+    
+ /* cuarta caja ..................................... */
+.dibujo{
+  width: 100%;
+  margin-top: 10%;
   }
   
-  .imagen-estatica{
-    width: 80%;
- 
+  .dibujo img{
+  width: 100%; 
+  }
+  
+     /*quinta       caja ..................................... */
+     /*ARTICULO DOS */
+     .articulo-dos{
+    display: flex;
+     flex-direction: row;
+     width: 100%;
+     margin-top: 20%;
+     margin-bottom: 20%;
+     padding-top: 0;
+     justify-content: space-between;
+     align-items: flex-start;
+     justify-content: flex-start;
+     }
+  
+      .articulo-dos .articulo-dos-uno{
+    width: 44%;
+    max-width: 270px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    }
+  
+  
+     .articulo-dos-uno-vacio{
+     width: 2%;
+     max-width: 20px;
+      }
+  
+  .articulo-dos-uno h1{
+  line-height: 18px;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  word-spacing: 4px;
+  letter-spacing: -1.5px;
+  font-family: 'Archivo Black', sans-serif;
+  margin-bottom: 12px;
+  }
+  
+  
+  .articulo-dos-uno p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #666;
+  }
+
+
+    .fija{
+    display: flex;
+    flex-direction: column;
+    width: 43%;
+    max-width:  600px;
+    height: 90%;
+    margin-bottom: 50%;
+    }
+
+  
+     .fija .imagen-estatica{
+    width: 100%;
+    max-width:  600px;
     height: 80%;
     position: fixed ;
     bottom:0;
     }
-
+   
     .imagen-estatica img{
-      width: 97%;
-      }
-  
+     width: 100%;
+     max-width: 600px;
+     margin-top: -48px;
+    }
+    
 
   }
 
@@ -2236,106 +4677,550 @@ height: 100%;
 
 
 
-  /* 1150 A 1199 ..................................................................................................................................................................................................... */
-  
-
+  /* 1150 A 1199 ................................................ */
   @media only screen and (min-width: 1150px) and (max-width: 1199px){
+    #wrapper {
+    margin:0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+          
 
+    #wrapper > * {
+    padding: 10px;
+    }
+  
 
     #container-nosotros{
-      width:100%;
-      max-width: 1200px;
-    margin: auto;
-    margin-top: 18.5%;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
     }
+  
 
+    header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:100%;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
+    top:0;
+    margin: auto;
+    height: 60px;
+    box-shadow: 0 8px 6px -6px #DCDCDC;
+    background-color: #fff;
+    }
+    
+    
+    header.black{
+    height: 60px;
+    background-color: #fff;
+    }
+    
 
-  .tres-columnas-nosotros{
+    .cabecera{
+    display: none;
+    }
+     
+          
+    .cabecera-responsive{
+    width: 100%;
+    max-width: 1150px;
+    height: 40px;
     display: flex;
     flex-direction: row;
-    width:100%;
-      max-width: 1150px;
-    margin-top: 20%;
-    margin-bottom: 10%;
-  margin: auto;
-    }
+    justify-content: space-between;
+     }
+
+  
+     .cabecera-responsive .logo{
+     display: block;
+     position: relative;
+     float: left;
+     width: 20%;
+     max-width: 290px;
+     }
+  
+
+    .cabecera-responsive .logo  img{
+     display: block;
+     width: 100%;
+     max-width: 170px;
+     }
     
-      /*CONTAINER TOTAL DE LA PRIMERA COLUMNA*/
-  .nosotros{
-    width: 45%;
-  max-width: 550px;
-   display: flex;
-    margin:  auto;
-    z-index: 10;
-    }
-   
 
-    /*quinta       caja ..................................... */
- /*ARTICULO DOS */
-.articulo-dos{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  max-width: 550px;
-  width: 100%;
-  margin-top: 20%;
- 
-  }
+    .cabecera-responsive #controls{
+     width: 35%;
+     max-width: 410px;
+     display: block;
+     position: relative;
+     float: left;
+     }
   
-  .articulo-dos-uno{
-    width: 100%;
-    max-width: 225px;
-    margin-left: 1.3%;
-    }
+  
+     .cabecera-responsive #controls #custom-search-input-header{
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     max-width: 410px;
+     }
 
-/*  FINAL PRIMERA COLUMNA ......................................................................*/
-/*  SEGUNDA COLUMNA ...................................*/
-.fijo1{
-  width: 2%;
-  max-width: 18px;
-   }
-  /*..TERCERA COLUMNA ...................................*/
-  .fija{
-  width: 40%;
-  height: 100%;
-  }
   
-  .imagen-estatica{
-    width: 100%;
-    max-width: 600px;
-    height: 80%;
+     .cabecera-responsive #controls #custom-search-input-header  .sin-borde{
+    width: 92%;
+    max-width: 340px;
+     }
+  
+   .cabecera-responsive #controls #custom-search-input-header  .boton{
+    width: 8%;
+    max-width: 50px;
+    }
+  
+   .cabecera-responsive .suscribe{
+    width: 30%;
+    display: block;
+    position: relative;
+    float: left;
+
+  }
+
+
+     /*...BURGER ESCONDIDO........BURGER ESCONDIDO....................*/
+   .cabecera-responsive  .menu-btn {
+     width: 8%;
+     max-width: 40px;
+     display: block;
+     position: relative;
+     float: right;
+     }
+    
+  
+      /*..FIN CABECERA RESPONSIVE.................*/
+   header nav{
+    display: flex;
+    flex-direction: column;
     position: fixed;
-    bottom:0;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+     background-color: #fff;
+     overflow-y: scroll;
+     z-index: 200;
+     visibility: visible;
+     box-sizing: border-box;
+    
     }
-
-    .imagen-estatica img{
-      width: 100%;
-       max-width: 600px;
+  
+    nav::-webkit-scrollbar {
+      display: none;
+     }
      
+  
+    /* #aaaaaa */
+    nav .logo-esconder{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 98%;
+    visibility: visible;
+    height: 80px;
+     border-bottom: 1px solid #2d2d2d;
+  
+    }
+  
+    nav .logo-esconder .logo-en-menu-responsive{
+      width: 30%;
+      max-width: 150px;
+      display: inline-flex;
+      height: 80px;
+      margin-left: 10px;
+    }
+  
+   
+  
+  nav .logo-esconder .logo-en-menu-responsive img{
+    width: 100%;
+    max-width: 120px;
+    min-width: 120px;
+    margin-top: 48px;
+    margin-left: 10px;
+  }
+  
+  nav .logo-esconder .emoticon{
+    width: 8%;
+    height: 80px;
+    margin-top: 48px;
+  }
+  
+   nav .logo-esconder .suscriptor{
+     width: 30%;
+     height: 80px;
+     display: block;
+     position: relative;
+     float: right;
+  
+   }
+    nav .logo-esconder .suscriptor a h4{
+    font-size: 0.8em;
+    margin-top: 56px;
+    }
+  
+    nav .siguenos{
+      display: block;
+      width: 95%;
+      margin-top: 40px;
+      visibility: visible;
+    }
+  
+    nav .siguenos ul{
+      display: flex;
+      flex-direction: row;
+      width: 95%;
+      margin-left: 10px;
+    }
+  
+     nav .siguenos h1{
+       font-size: 0.9em;
+       display: inline-flex;
+       margin: 10px 0;
+       padding: 5px 9px 5px 4px;
+     }
+    nav .siguenos ul li{
+      margin: 10px 0;
+      list-style: none;
+      padding: 5px 9px 5px 4px;
+    }
+  
+  
+    nav .buscador-esconder{
+   display: block;
+    width: 100%;
+    visibility: visible;
+    margin-top: 20px;
+    height: 50px;
+  
+     }
+  
+  
+     nav  .buscador-esconder .d-flex{
+       display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+    }
+  
+  
+    nav .buscador-esconder  .d-flex  #custom-search{
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    }
+  
+  
+    nav .buscador-esconder  .d-flex  #custom-search .sin-borde{
+    width: 90%;
+    max-width: 930px;
+    height: 40px;
       }
   
-      blockquote{
-        height: 10%;
-        width: 100%;
-        max-width: 550px;
-        margin-top: 15%;
-         }
-         
-         /*DESCRPCION*/
-   blockquote h3{
-  margin-top: -10px;
-  margin-left: 60px;
-  margin-right: 60px;
-  font-size: 1.3rem;
-  color: #666;
-   font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-
-   }
-
+  
+      nav .buscador-esconder  .d-flex  #custom-search .boton{
+    width: 10%;
+    max-width: 70px;
+    height: 40px;
+    background-color: #fff;
+    }
+  
+  
+    nav .nav .esconder{
+    visibility: visible;
+     }
     
-  }
+
+    nav .nav li a.active{
+    text-decoration:line-through;
+    color: #7aac41;
+    }
+    
+  
+    /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+      /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+   nav .nav{
+    width:100%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    z-index: 9; 
+    background-color: #fff;
+    }
+  
+       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+      width: 100%;
+      display: block;
+      list-style: none;
+      height: 35px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO*/
+     
+      cursor:pointer;
+      border-bottom: 1px solid #aaaaaa;
+      }
+      
+      nav .nav li a {
+      z-index: 100;
+      height: 30px;
+      color: #2d2d2d;
+      font-weight: lighter;
+      font-size: 1rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  sans-serif;
+      padding-top: 0;
+      margin-top: 0;
+      background-color: #fff;
+      }
+    
+       /*IMPORTANTE*/
+  
+       
+    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav .nav li:hover > ul {
+    background-color:  #fff;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    margin-left: 6px;
+    z-index: 598;
+    }
+
+    nav .nav ul {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      background-color: #fff;
+      margin-top: 0.5px;
+      display: none;
+    }
 
 
+
+    nav .nav  ul li {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 0px;
+    background-color: #fff;
+    }
+    
+  
+    nav .nav li  ul li a{
+    font-size: 1rem;
+    color: #2d2d2d;
+    width: 100%;
+    max-width: 600px;
+    margin-left: 60px;
+    background-color: #fff;
+    }
+    
+  
+      nav .siguenos{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      }
+  
+  
+      nav  .siguenos  .red-social{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      }
+  
+  
+      nav  .siguenos  .red-social h1{
+      font-size: 1rem;
+      color: #2d2d2d;
+      }
+  
+  
+  
+      #container-nosotros{
+        width:100%;
+        max-width: 1220px;
+      margin: auto;
+      margin-top: 17%;
+      }
+  
+  
+     .tres-columnas-nosotros{
+      display: flex;
+      flex-direction: row;
+      width:100%;
+      max-width: 1220px;
+      margin-top: 20%;
+      margin-bottom: 10%;
+      margin: auto;
+      }
+      
+       /*PRIMERA COLUMNA ......................................................................................................*/
+      .nosotros{
+      width: 45%;
+      max-width: 550px;
+      z-index: 10;
+      }
+    
+    
+     /*primera caja ..................................... */
+      .articulo{
+      width: 100%;
+      }
+    
+      .nosotros h1{
+      line-height: 22px;
+      font-weight: bolder;
+      font-size: 3rem;
+      word-spacing: 4px;
+      letter-spacing: -1.5px;
+      font-family: 'Archivo Black', sans-serif;
+      margin-bottom: 50px;
+       }
+    
+
+    .nosotros .articulo p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #666;
+    text-align: start; 
+    }
+    
+    
+    .nosotros .articulo p:first-letter{
+      font-size: 3.5em;
+      font-weight: bold;
+      line-height: .6em;
+      float: left;
+      margin: .1em;
+      font-family: 'Artifika', sans-serif;
+    }
+    
+
+    #avanzado p:first-line {
+      font-weight: bold;
+    }
+    
+    
+     /*segunda caja ..................................... */
+    .dos-imagenes{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 550px;
+    justify-content: space-between;
+    margin-top: 20%;
+    }
+    
+      .foto{
+      width: 45%;
+      max-width: 290px;
+      margin-left: 1%;
+      }
+    
+
+    /*..width:"300" ;height:"280" ;...*/
+    .foto img{
+    width: 100%;
+    }
+    
+    
+     /*tercera caja ..................................... */
+    /*QUOTE ............................................ */
+    blockquote{
+    height: 10%;
+    width: 100%;
+    max-width: 550px;
+    margin-top: 15%;
+     }
+     
+    
+      blockquote:before { 
+      content: "\201C"; /* inicio comilla */
+      font-family: Georgia;
+      font-size:60px; /* tamaño */
+      font-weight: bold; 
+      line-height:0px;
+      color:	#d4d4d4; /* Color  */
+      vertical-align:middle;
+      padding-top: 70%;
+      padding-left: 2%;
+      }
+     
+      /*DESCRPCION*/
+     blockquote h3{
+        margin-top: -30px;
+        margin-left: 60px;
+        margin-right: 60px;
+       font-size: 1.3rem;
+      color: #666;
+      font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+      }
+    
+        /*AUTOR FUNDADOR*/
+      blockquote p {
+        margin-top: 30px;
+        margin-left: 150px;
+       font-size: 1rem;
+      color: #000;
+      font-weight: 900;
+      font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+      }
+    
+    
+    
+      blockquote .otroestilo{
+        margin-top: 30px;
+        margin-left: 10px;
+       font-size: 1rem;
+     color:#666;
+      font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+      }
+    
+      .fija{
+        display: flex;
+        flex-direction: column;
+        width: 43%;
+        max-width:  600px;
+        height: 90%;
+        margin-bottom: 50%;
+        }
+      
+         .fija .imagen-estatica{
+        width: 100%;
+        max-width:  600px;
+        height: 80%;
+        position: fixed ;
+        bottom:0;
+        }
+       
+        .imagen-estatica img{
+         width: 100%;
+         max-width: 600px;
+         margin-top: -50px;
+        }
+    
+    }
+    
 
 
 
@@ -2345,204 +5230,18 @@ height: 100%;
   
 
 @media only screen and (min-width: 1200px) and (max-width: 1246px){
-
-    #container-nosotros{
-      width:100%;
-      max-width: 1220px;
-    margin: auto;
-    margin-top: 17%;
-    }
-
-
-  .tres-columnas-nosotros{
-    display: flex;
-    flex-direction: row;
-    width:100%;
-      max-width: 1220px;
-    margin-top: 20%;
-    margin-bottom: 10%;
-  margin: auto;
-    }
-    
-      /*CONTAINER TOTAL DE LA PRIMERA COLUMNA*/
-    .nosotros{
-    width: 47%;
-    max-width: 600px;
-    display: flex;
-    margin:  auto;
-    z-index: 10;
-    }
-   
-
-    /*quinta       caja ..................................... */
- /*ARTICULO DOS */
-  .articulo-dos{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  max-width: 550px;
-  width: 100%;
-  margin-top: 20%;
-  }
-  
-  .articulo-dos-uno{
-    width: 100%;
-    max-width: 225px;
-    margin-left: 1.3%;
-    }
-/*  FINAL PRIMERA COLUMNA ......................................................................*/
-/*  SEGUNDA COLUMNA ...................................*/
-.fijo1{
-  width: 1.5%;
-  max-width: 15px;
-   }
-  /*..TERCERA COLUMNA ...................................*/
-  .fija{
-  width: 40%;
-  height: 100%;
-  }
-  
-  .imagen-estatica{
-    width: 100%;
-    max-width: 595px;
-    height: 80%;
-    position: fixed;
-    bottom:0;
-    }
-
-  .imagen-estatica img{
-  width: 100%;
- max-width: 595px;
-  }
-  
-  blockquote{
-  height: 10%;
-  width: 100%;
-  max-width: 550px;
-  margin-top: 15%;
-  }
-         
-         /*DESCRPCION*/
-   blockquote h3{
-  margin-top: -10px;
-  margin-left: 60px;
-  margin-right: 60px;
-  font-size: 1.3rem;
-  color: #666;
-   font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-
-   }
-
-/* FOOTER ....................................... FOOTER...................................... */
-#footer1{
-  clear: both;
-  position: relative;
-  height: 5px;
-  margin-top: -5px;
- -webkit-box-shadow: 0px -3px 6px #DCDCDC;
--moz-box-shadow: 0px -3px 6px #DCDCDC;
-box-shadow: 0px -3px 6px  #DCDCDC;
-width: 100%;
-z-index: 1000;
-bottom: 0; 
-background-color: #000000;
-
-}
-
-.footer-second1{
-  width: 100%;
- max-width: 900px;
-  height: 5px;
-  margin-top: -5px;
-  background-color: black;
-  clear: both;
-  position: relative;
-  z-index: 1000; /*IMPORTANTE */
-margin: 0 auto;
-}
-
-.footer-second1 p{
-  text-align: center;
-  color: #fff;
-  display: block;
-
-
-  
-}
-
-.footer-second1 p a{
-  color: #fff;
-}
-
-
-
-
-
-
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-/* 1200 A 1290 ..................................................................................................................................................................................................... */
-  
-
-@media only screen and (min-width: 1247px) and (max-width: 1290px){
-
-
-  header{
-    width:100%;
-    background-color: #fff;
-    position: fixed;
-    z-index: 2000;
-    margin: auto;
-    top: 0;
-    height: 150px;
-    }
-    
-    
-    header.black{
-    background-color: #fff;
-    height: 150px;
-    }
-
-    .cabecera{
-      width:100%;
-      height: 90px;  
-      margin: auto;
-      margin-bottom: 2px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      }
-
-      .logo{
-        height: 90px;
-      }
-
-      .logo img{
-        height: 90px;
-      }
   #wrapper {
     margin:0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  
-  }
+
+     }
         
-  #wrapper > * {
-  padding: 10px;
-  }
+   #wrapper > * {
+   padding: 10px;
+   }
 
     #container-nosotros{
       width:100%;
@@ -2550,84 +5249,1192 @@ margin: 0 auto;
      margin-right: auto;
     }
 
-
-  .tres-columnas-nosotros{
+    header{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width:100%;
+      position: fixed;
+      z-index: 2000;   /*IMPORTANTE  */
+      top:0;
+      margin: auto;
+      height: 80px;
+      box-shadow: 0 8px 6px -6px #DCDCDC;
+      background-color: #fff;
+     }
+  
+  
+      header.black{
+      height: 80px;
+      background-color: #fff;
+      }
+  
+   
+  
+    .cabecera{
+    display: none;
+    }
+   
+        
+   .cabecera-responsive{
+    width: 100%;
+    max-width: 1150px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width:100%;
-    margin-bottom: 10%;
-    margin-left: auto;
-     margin-right: auto;
     }
-    
-      /*CONTAINER TOTAL DE LA PRIMERA COLUMNA*/
-     .nosotros{
-    width: 48%;
-    max-width: 600px;
-     margin-left: -5px;
-    z-index: 10;
-    }
-   
 
-    /*quinta       caja ..................................... */
-   /*ARTICULO DOS */
-   .articulo-dos{
+   .cabecera-responsive .logo{
+   display: block;
+   position: relative;
+   float: left;
+   width: 20%;
+   max-width: 290px;
+   }
+
+   .cabecera-responsive .logo  img{
+   display: block;
+   width: 100%;
+   }
+  
+  .cabecera-responsive #controls{
+   width: 35%;
+   max-width: 410px;
+   display: block;
+   position: relative;
+   float: left;
+   }
+
+
+ .cabecera-responsive #controls #custom-search-input-header{
    display: flex;
    flex-direction: row;
-   justify-content: space-between;
    width: 100%;
+   max-width: 410px;
+ }
+
+ .cabecera-responsive #controls #custom-search-input-header  .sin-borde{
+  width: 92%;
+  max-width: 340px;
+ }
+
+ .cabecera-responsive #controls #custom-search-input-header  .boton{
+  width: 8%;
+  max-width: 50px;
+}
+
+ .cabecera-responsive .suscribe{
+  width: 30%;
+  display: block;
+  position: relative;
+  float: left;
+}
+   /*...BURGER ESCONDIDO........BURGER ESCONDIDO....................*/
+ .cabecera-responsive  .menu-btn {
+   width: 8%;
+   max-width: 40px;
+   display: block;
+   position: relative;
+   float: right;
+   }
+  
+
+    /*..FIN CABECERA RESPONSIVE.................*/
+    header nav{
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      max-width: 640px;
+      height: 100%;
+      margin: auto;
+      top:0;
+      bottom: 0;
+      left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+       background-color: #fff;
+       overflow-y: scroll;
+       z-index: 200;
+       visibility: visible;
+       box-sizing: border-box;
+      
+      }
+    
+      nav::-webkit-scrollbar {
+        display: none;
+       }
+       
+    
+      /* #aaaaaa */
+      nav .logo-esconder{
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+      width: 98%;
+      visibility: visible;
+      height: 80px;
+       border-bottom: 1px solid #2d2d2d;
+    
+      }
+    
+      nav .logo-esconder .logo-en-menu-responsive{
+        width: 30%;
+        max-width: 150px;
+        display: inline-flex;
+        height: 80px;
+        margin-left: 10px;
+      }
+    
+     
+    
+    nav .logo-esconder .logo-en-menu-responsive img{
+      width: 100%;
+      max-width: 120px;
+      min-width: 120px;
+      margin-top: 48px;
+      margin-left: 10px;
+    }
+    
+    nav .logo-esconder .emoticon{
+      width: 8%;
+      height: 80px;
+      margin-top: 48px;
+    }
+    
+     nav .logo-esconder .suscriptor{
+       width: 30%;
+       height: 80px;
+       display: block;
+       position: relative;
+       float: right;
+    
+     }
+      nav .logo-esconder .suscriptor a h4{
+      font-size: 0.8em;
+      margin-top: 56px;
+      }
+    
+      nav .siguenos{
+        display: block;
+        width: 95%;
+        margin-top: 40px;
+        visibility: visible;
+      }
+    
+      nav .siguenos ul{
+      display: flex;
+      flex-direction: row;
+      width: 95%;
+      margin-left: 10px;
+      }
+    
+      nav .siguenos h1{
+      font-size: 0.9em;
+      display: inline-flex;
+      margin: 10px 0;
+      padding: 5px 9px 5px 4px;
+       }
+
+      nav .siguenos ul li{
+      margin: 10px 0;
+      list-style: none;
+      padding: 5px 9px 5px 4px;
+      }
+
+  nav .buscador-esconder{
+  display: block;
+  width: 100%;
+  visibility: visible;
+  margin-top: 20px;
+  height: 50px;
+   }
+
+
+    nav  .buscador-esconder .d-flex{
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+     }
+
+
+  nav .buscador-esconder  .d-flex  #custom-search{
+  width: 100%;
+  max-width: 1000px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  }
+
+
+  nav .buscador-esconder  .d-flex  #custom-search .sin-borde{
+  width: 90%;
+  max-width: 930px;
+  height: 40px;
+  }
+
+
+  nav .buscador-esconder  .d-flex  #custom-search .boton{
+  width: 10%;
+  max-width: 70px;
+  height: 40px;
+  background-color: #fff;
+    }
+
+
+   nav .nav .esconder{
+   visibility: visible;
+   }
+  
+   nav .nav li a.active{
+   text-decoration:line-through;
+   color: #7aac41;
+   }
+  
+
+
+    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+     /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+     nav .nav{
+      width:100%; 
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      z-index: 9; 
+      background-color: #fff;
+      }
+    
+
+      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+      nav .nav li{
+      width: 100%;
+      display: block;
+      list-style: none;
+      height: 35px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO*/
+      cursor:pointer;
+      border-bottom: 1px solid #aaaaaa;
+      }
+        
+        nav .nav li a {
+        z-index: 100;
+        height: 30px;
+        color: #2d2d2d;
+        font-weight: lighter;
+        font-size: 1rem;
+        text-transform: lowercase;
+        letter-spacing: 1px;
+        font-family:  sans-serif;
+        padding-top: 0;
+        margin-top: 0;
+        background-color: #fff;
+        }
+      
+     
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+      /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover > ul {
+      background-color:  #fff;
+      width: 100%;
+      max-width: 500px;
+      height: 100%;
+      margin-left: 6px;
+      z-index: 598;
+      }
+  
+    
+      nav .nav ul {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      background-color: #fff;
+      margin-top: 0.5px;
+      display: none;
+      }
+  
+  
+      nav .nav  ul li {
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 0px;
+      background-color: #fff;
+      }
+      
+    
+      nav .nav li  ul li a{
+      font-size: 1rem;
+      color: #2d2d2d;
+      width: 100%;
+      max-width: 600px;
+      margin-left: 60px;
+      background-color: #fff;
+      }
+  
+
+    nav .siguenos{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    }
+
+
+    nav  .siguenos  .red-social{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    }
+
+
+    nav  .siguenos  .red-social h1{
+    font-size: 1rem;
+    color: #2d2d2d;
+    }
+
+  
+    #container-nosotros{
+    width:100%;
+    max-width: 1220px;
+    margin: auto;
+    margin-top: 17%;
+    }
+
+
+   .tres-columnas-nosotros{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    max-width: 1220px;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    margin: auto;
+    }
+    
+     /*PRIMERA COLUMNA .................................*/
+    .nosotros{
+    width: 45%;
+    max-width: 550px;
+    z-index: 10;
+    }
+  
+  
+   /*primera caja ..................................... */
+    .articulo{
+    width: 100%;
+    }
+  
+    .nosotros h1{
+    line-height: 22px;
+    font-weight: bolder;
+    font-size: 3rem;
+    word-spacing: 4px;
+    letter-spacing: -1.5px;
+    font-family: 'Archivo Black', sans-serif;
+    margin-bottom: 50px;
+     }
+  
+   .nosotros .articulo p{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 1.1rem;
+   font-weight: 400;
+   line-height: 1.45;
+   color: #666;
+   text-align: start; 
+   }
+  
+    .nosotros .articulo p:first-letter{
+    font-size: 3.5em;
+    font-weight: bold;
+    line-height: .6em;
+    float: left;
+    margin: .1em;
+    font-family: 'Artifika', sans-serif;
+    }
+  
+    #avanzado p:first-line {
+    font-weight: bold;
+     }
+  
+  
+  
+    /*segunda caja ..................................... */
+   .dos-imagenes{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   max-width: 550px;
+   justify-content: space-between;
    margin-top: 20%;
    }
   
-  .articulo-dos-uno{
-    width: 100%;
-    margin-left: 1.3%;
+    .foto{
+    width: 45%;
+    max-width: 290px;
+    margin-left: 1%;
     }
-   /*  FINAL PRIMERA COLUMNA ......................................................................*/
-   /*  SEGUNDA COLUMNA ...................................*/
-    .fijo1{
-    width: 1.7%;
-    max-width: 50px;
+  
+     /*..width:"300" ;height:"280" ;...*/
+     .foto img{
+     width: 100%;
+     }
+  
+  
+  
+   /*tercera caja ..................................... */
+  /*QUOTE ............................................ */
+  
+  blockquote{
+  height: 10%;
+  width: 100%;
+  max-width: 550px;
+  margin-top: 15%;
    }
-    /*..TERCERA COLUMNA ...................................*/
-    .fija{
-    width: 50%;
+   
+  
+    blockquote:before { 
+    content: "\201C"; /* inicio comilla */
+    font-family: Georgia;
+    font-size:60px; /* tamaño */
+    font-weight: bold; 
+    line-height:0px;
+    color:	#d4d4d4; /* Color  */
+    vertical-align:middle;
+    padding-top: 70%;
+    padding-left: 2%;
+    }
+   
+    /*DESCRPCION*/
+    blockquote h3{
+    margin-top: -30px;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 1.3rem;
+    color: #666;
+    font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+    }
+  
+      /*AUTOR FUNDADOR*/
+    blockquote p {
+    margin-top: 30px;
+    margin-left: 150px;
+     font-size: 1rem;
+    color: #000;
+    font-weight: 900;
+    font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+    }
+  
+  
+  
+    blockquote .otroestilo{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 1rem;
+    color:#666;
+    font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+    }
+   /*FINAL QUOTE ................. */
+  
+  
+   /* FOOTER ....................................... FOOTER...................................... */
+   #footer1{
+  clear: both;
+  position: relative;
+  height: 5px;
+  margin-top: -5px;
+  -webkit-box-shadow: 0px -3px 6px #DCDCDC;
+  -moz-box-shadow: 0px -3px 6px #DCDCDC;
+  box-shadow: 0px -3px 6px  #DCDCDC;
+  width: 100%;
+  z-index: 1000;
+  bottom: 0; 
+  background-color: #000000;
+   }
+
+   
+  .footer-second1{
+  width: 100%;
+  max-width: 900px;
+  height: 5px;
+  margin-top: -5px;
+  background-color: black;
+  clear: both;
+  position: relative;
+  z-index: 1000; /*IMPORTANTE */
+  margin: 0 auto;
+  }
+
+
+  .footer-second1 p{
+  text-align: center;
+  color: #fff;
+  display: block;
+   }
+
+
+  .footer-second1 p a{
+  color: #fff;
+   }
+
+
+  }
+
+
+
+  /* 1200 A 1290 ................................................................. */
+  
+  @media only screen and (min-width: 1247px) and (max-width: 1290px){
+  *{
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+    }
+
+     /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+     *,
+     *::before,
+     *::after {
+     box-sizing: border-box;
+     }
+  
+  
+     /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+     body{
+    padding:0;
+    margin: 0;
+    background-color: #fff;
+    color: rgba(0,0,0,.95);
+    font-family: "Argos",serif;
+     }
+  
+
+    html, body {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
     height: 100%;
     }
   
-  .imagen-estatica{
+     img{
+     max-width: 100%;
+     }
+  
+     /*CONTENEDOR PRINCIPAL DE TODA LA CABECERA INCLUYENDO SLIDER*/
+     #wrapper {
+      min-height: 100vh;
+      min-width:250px;
+      width: 100%;
+      max-width: 1300px;
+      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
+      }
+      
+      #wrapper > * {
+      padding: 20px;
+      }
+       
+  
+     #container-nosotros{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
     width: 100%;
-    max-width: 600px;
-    height: 80%;
-    position: fixed;
-    bottom:0;
-    }
-
-    .imagen-estatica img{
-    width: 100%;
-    max-width: 600px;
+    max-width: 1250px;
+    bottom:  25px;
+    margin-top: 130px;
+    padding: 0 0 0 0;
     }
   
-    blockquote{
-    height: 10%;
-    width: 100%;
-    max-width: 550px;
-    margin-top: 15%;
-    }
-         
-         /*DESCRPCION*/
-   blockquote h3{
-  margin-top: -10px;
-  margin-left: 60px;
-  margin-right: 60px;
-  font-size: 1.3rem;
-  color: #666;
-   font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
 
+    header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:100%;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
+    top:0;
+    margin: auto;
+    height: 80px;
+    box-shadow: 0 8px 6px -6px #DCDCDC;
+    background-color: #fff;
+     }
+  
+  
+    header.black{
+    height: 80px;
+    background-color: #fff;
+    }
+  
+   
+    .cabecera{
+    display: none;
+    }
+   
+        
+   .cabecera-responsive{
+    width: 100%;
+    max-width: 1150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+   .cabecera-responsive .logo{
+   display: block;
+   position: relative;
+   float: left;
+   width: 20%;
+   max-width: 290px;
+    }
+
+   .cabecera-responsive .logo  img{
+   display: block;
+   width: 100%;
+   }
+  
+
+   .cabecera-responsive #controls{
+   width: 35%;
+   max-width: 410px;
+   display: block;
+   position: relative;
+   float: left;
+    }
+
+
+   .cabecera-responsive #controls #custom-search-input-header{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   max-width: 410px;
+    }
+
+ .cabecera-responsive #controls #custom-search-input-header  .sin-borde{
+  width: 92%;
+  max-width: 340px;
+ }
+
+ .cabecera-responsive #controls #custom-search-input-header  .boton{
+  width: 8%;
+  max-width: 50px;
+  }
+
+ .cabecera-responsive .suscribe{
+  width: 30%;
+  display: block;
+  position: relative;
+  float: left;
+  }
+
+   /*...BURGER ESCONDIDO........BURGER ESCONDIDO....................*/
+ .cabecera-responsive  .menu-btn {
+   width: 8%;
+   max-width: 40px;
+   display: block;
+   position: relative;
+   float: right;
+   }
+  
+
+    /*..FIN CABECERA RESPONSIVE.................*/
+    header nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+    background-color: #fff;
+    overflow-y: scroll;
+    z-index: 200;
+    visibility: visible;
+    box-sizing: border-box;
+    }
+    
+      nav::-webkit-scrollbar {
+        display: none;
+       }
+       
+    
+      /* #aaaaaa */
+      nav .logo-esconder{
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+      width: 98%;
+      visibility: visible;
+      height: 80px;
+       border-bottom: 1px solid #2d2d2d;
+    
+      }
+    
+      nav .logo-esconder .logo-en-menu-responsive{
+        width: 30%;
+        max-width: 150px;
+        display: inline-flex;
+        height: 80px;
+        margin-left: 10px;
+      }
+    
+     
+    
+    nav .logo-esconder .logo-en-menu-responsive img{
+      width: 100%;
+      max-width: 120px;
+      min-width: 120px;
+      margin-top: 48px;
+      margin-left: 10px;
+    }
+    
+    nav .logo-esconder .emoticon{
+      width: 8%;
+      height: 80px;
+      margin-top: 48px;
+    }
+    
+     nav .logo-esconder .suscriptor{
+       width: 30%;
+       height: 80px;
+       display: block;
+       position: relative;
+       float: right;
+     }
+
+
+      nav .logo-esconder .suscriptor a h4{
+      font-size: 0.8em;
+      margin-top: 56px;
+      }
+    
+      nav .siguenos{
+        display: block;
+        width: 95%;
+        margin-top: 40px;
+        visibility: visible;
+      }
+    
+      nav .siguenos ul{
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        margin-left: 10px;
+      }
+    
+       nav .siguenos h1{
+         font-size: 0.9em;
+         display: inline-flex;
+         margin: 10px 0;
+         padding: 5px 9px 5px 4px;
+       }
+      nav .siguenos ul li{
+        margin: 10px 0;
+        list-style: none;
+        padding: 5px 9px 5px 4px;
+      }
+
+
+  nav .buscador-esconder{
+  display: block;
+  width: 100%;
+  visibility: visible;
+  margin-top: 20px;
+  height: 50px;
    }
 
 
+    nav  .buscador-esconder .d-flex{
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+    }
 
 
-}
+   nav .buscador-esconder  .d-flex  #custom-search{
+   width: 100%;
+   max-width: 1000px;
+   height: 50px;
+   display: flex;
+   flex-direction: row;
+   }
+
+
+   nav .buscador-esconder  .d-flex  #custom-search .sin-borde{
+   width: 90%;
+   max-width: 930px;
+   height: 40px;
+    }
+
+
+    nav .buscador-esconder  .d-flex  #custom-search .boton{
+   width: 10%;
+   max-width: 70px;
+   height: 40px;
+   background-color: #fff;
+    }
+
+
+   nav .nav .esconder{
+   visibility: visible;
+   }
+  
+   nav .nav li a.active{
+   text-decoration:line-through;
+   color: #7aac41;
+   }
+  
+
+   /*MUY IMPORTANTE ESTO ES PARA EL ESPACIO DEL UL  */
+   nav .nav{
+    width:100%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    z-index: 9; 
+    background-color: #fff;
+    }
+  
+       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+      width: 100%;
+      display: block;
+      list-style: none;
+      height: 35px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO*/
+      cursor:pointer;
+      border-bottom: 1px solid #aaaaaa;
+      }
+      
+      nav .nav li a {
+      z-index: 100;
+      height: 30px;
+      color: #2d2d2d;
+      font-weight: lighter;
+      font-size: 1rem;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-family:  sans-serif;
+      padding-top: 0;
+      margin-top: 0;
+      background-color: #fff;
+      }
+    
+       /*IMPORTANTE*/
+  
+       
+    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav .nav li:hover > ul {
+    background-color:  #fff;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    margin-left: 6px;
+    z-index: 598;
+    }
+
+  
+
+    nav .nav ul {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      background-color: #fff;
+      margin-top: 0.5px;
+      display: none;
+    }
+
+
+
+    nav .nav  ul li {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 0px;
+    background-color: #fff;
+    }
+    
+  
+    nav .nav li  ul li a{
+    font-size: 1rem;
+    color: #2d2d2d;
+    width: 100%;
+    max-width: 600px;
+    margin-left: 60px;
+    background-color: #fff;
+    }
+  
+
+    nav .siguenos{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    }
+
+
+    nav  .siguenos  .red-social{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    }
+
+
+    nav  .siguenos  .red-social h1{
+    font-size: 1rem;
+    color: #2d2d2d;
+    }
+
+
+
+    .tres-columnas-nosotros{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1250px;
+     margin-top: 80px;
+    padding: 0 0 0 0;
+    }
+  
+     /*PRIMERA COLUMNA ......................................................................................................*/
+    .nosotros{
+    width: 45%;
+     max-width: 550px;
+     z-index: 10;
+     }
+  
+  
+   /*primera caja ..................................... */
+    .articulo{
+    width: 100%;
+    }
+  
+    .nosotros h1{
+    line-height: 22px;
+    font-weight: bolder;
+    font-size: 3rem;
+    word-spacing: 4px;
+    letter-spacing: -1.5px;
+    font-family: 'Archivo Black', sans-serif;
+    margin-bottom: 50px;
+     }
+  
+  .nosotros .articulo p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #666;
+  text-align: start; 
+  }
+  
+  
+  
+  .nosotros .articulo p:first-letter{
+    font-size: 3.5em;
+    font-weight: bold;
+    line-height: .6em;
+    float: left;
+    margin: .1em;
+    font-family: 'Artifika', sans-serif;
+  }
+  
+  #avanzado p:first-line {
+    font-weight: bold;
+  }
+  
+  
+  
+   /*segunda caja ..................................... */
+  .dos-imagenes{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 550px;
+  justify-content: space-between;
+  margin-top: 20%;
+  }
+  
+    .foto{
+    width: 45%;
+    max-width: 290px;
+    margin-left: 1%;
+    }
+  
+     /*..width:"300" ;
+      height:"280" ;...*/
+     .foto img{
+     width: 100%;
+     }
+  
+  
+  
+   /*tercera caja ..................................... */
+  /*QUOTE ............................................ */
+  
+  blockquote{
+  height: 10%;
+  width: 100%;
+  max-width: 550px;
+  margin-top: 15%;
+   }
+   
+  
+    blockquote:before { 
+    content: "\201C"; /* inicio comilla */
+    font-family: Georgia;
+    font-size:60px; /* tamaño */
+    font-weight: bold; 
+    line-height:0px;
+    color:	#d4d4d4; /* Color  */
+    vertical-align:middle;
+    padding-top: 70%;
+    padding-left: 2%;
+    }
+   
+    /*DESCRPCION*/
+   blockquote h3{
+      margin-top: -30px;
+      margin-left: 60px;
+      margin-right: 60px;
+     font-size: 1.3rem;
+    color: #666;
+    font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+    }
+  
+      /*AUTOR FUNDADOR*/
+    blockquote p {
+      margin-top: 30px;
+      margin-left: 150px;
+     font-size: 1rem;
+    color: #000;
+    font-weight: 900;
+    font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+    }
+  
+  
+  
+    blockquote .otroestilo{
+      margin-top: 30px;
+      margin-left: 10px;
+     font-size: 1rem;
+   color:#666;
+    font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
+    }
+  
+  
+  
+   /*FINAL QUOTE ...................................... */
+  
+  
+  
+  
+   /* cuarta caja ..................................... */
+  .dibujo{
+  width: 100%;
+  margin-top: 10%;
+  }
+  
+  .dibujo img{
+  width: 100%; 
+  }
+  
+     /*quinta       caja ..................................... */
+     /*ARTICULO DOS */
+     .articulo-dos{
+    display: flex;
+     flex-direction: row;
+     width: 100%;
+     margin-top: 20%;
+     margin-bottom: 20%;
+     padding-top: 0;
+     justify-content: space-between;
+     align-items: flex-start;
+     justify-content: flex-start;
+     }
+  
+      .articulo-dos .articulo-dos-uno{
+    width: 44%;
+    max-width: 270px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    }
+  
+  
+     .articulo-dos-uno-vacio{
+     width: 2%;
+     max-width: 20px;
+      }
+  
+  .articulo-dos-uno h1{
+  line-height: 18px;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  word-spacing: 4px;
+  letter-spacing: -1.5px;
+  font-family: 'Archivo Black', sans-serif;
+  margin-bottom: 12px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .articulo-dos-uno p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #666;
+  }
+    
+  
+  /*  FINAL PRIMERA COLUMNA ......................................................................*/
+  
+  
+  /*  SEGUNDA COLUMNA ......................................................................*/
+    .fijo1{
+    width: 8%;
+    max-width: 70px;
+    }
+  /*  FINAL SEGUNDA COLUMNA ......................................................................*/
+  
+  
+    .fija{
+    display: flex;
+    flex-direction: column;
+    width: 43%;
+    max-width:  600px;
+    height: 90%;
+    margin-bottom: 50%;
+    }
+  
+     .fija .imagen-estatica{
+    width: 100%;
+    max-width:  600px;
+    height: 80%;
+    position: fixed ;
+    bottom:0;
+    }
+   
+    .imagen-estatica img{
+     width: 100%;
+     max-width: 600px;
+    }
+
+  
+  }
+
+
+
+
+
+
+

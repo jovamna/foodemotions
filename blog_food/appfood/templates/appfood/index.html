@@ -135,9 +135,9 @@
         <div class="bloque-ultimo">
 
             <!--------------------------------------------------->
-            
+              {% for receta in recetaultimo %}
               <div class="posts-ultimos">
-               {% for receta in recetaultimo %}
+             
                    <div class="post-ultimo">
                      
                       <div class="posts-ultimos-imagen">
@@ -165,18 +165,18 @@
                   <!-------FIN CONTAINER POSTS ULTIMOS-TITULO----------------------------->
 
               </div>
-                {% endfor %}
+               
               </div>
-      
+       {% endfor %}
      <!-------------------------------------------------------------------->
 
 
 
 
      <!------------------------------------------------------------------------->
-       
+         {% for recipe in recipedietaultimo %}
          <div class="posts-ultimos">
-          {% for recipe in recipedietaultimo %}
+        
                <div class="post-ultimo">
                      <!--------------------------------->
                       <div class="posts-ultimos-imagen">
@@ -205,9 +205,9 @@
                     <!---------FIN POSTS ULTIMOS TITULO------------------------------------>
                     
               </div>
-             {% endfor %}
+          
             </div>
-        
+           {% endfor %}
         <!------------------------------------------------------------------------------------->
 
 
