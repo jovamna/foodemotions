@@ -1,0 +1,41 @@
+ {% extends 'appfood/base.html' %}
+{% load static %}
+{% block titulo %}Fooding Emotion: Recetas Saludables, Alimentacion Saludable{% endblock titulo %}
+ 
+  <!-- SLIDER ---------------------------------------------------------------------->
+  
+   {% block content %}
+ 
+
+
+
+  <div id ="container"> 
+
+
+
+
+   <div id="submenu">
+   {% for receta in recetas %}
+ <ul>  
+                      {{ kategory.name }}
+                       {{ receta.kategory }}
+                        {{ kategory.receta }}
+
+                        <!-- LAS CATEGORIAS------->
+                        {% for kategory in kategories %}
+                        <li>
+
+                        <a href="/recetas-saludables/categoria/{{kategory.slug }} "style="text-decoration: none">
+                        {{ kategory.name }}</a>
+                       </li>
+                       {% endfor %}
+                      </ul>
+   {% endfor %}
+
+
+  </div>
+  </div>
+  
+    {% endblock content %}
+
+

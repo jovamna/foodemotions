@@ -410,6 +410,12 @@ margin-top: 18px;
          }
   
 
+       #container  #submenu{
+         display: block;
+         width: 60%;
+        background-color: #fff;
+        opacity: 0.5;
+         }
   /* items del menu desplegable al pasar el ratón     display:block;
   width: 100%;*/
     nav .nav li:hover > ul {

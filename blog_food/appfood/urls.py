@@ -22,6 +22,7 @@ urlpatterns = [
          views.noticias_turismo,
          name="noticias-turismo-gastronomico"),
     path('nosotros', views.nosotros, name="nosotros"),
+    path('recetas', views.recetas, name="recetas"),
 
     #path('search/',views.search, name="search"),
 ]

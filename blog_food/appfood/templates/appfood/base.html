@@ -320,11 +320,19 @@
                 </li>
                 
                 <li> 
-                <a class="{% active 'appfood:recetas-saludables' %}"  href="{% url 'appfood:recetas-saludables' %}" >
+                <a class="{% active 'appfood:recetas-saludables' %}">
                    Recetas 
                   <i class ="fa fa-caret-down"></i>
                  </a>
                         <ul>  
+                     
+                        <li>
+                        
+                          <a href="{% url 'appfood:recetas-saludables' %}">Todas las recetas</a>
+                        
+                          </li>
+
+
                         {% load mptt_tags %} 
                         <!-- LAS CATEGORIAS------->
                         {% for kategory in kategories %}
@@ -357,17 +365,22 @@
                 </li>
               
                 
+              <li> 
+              <a class="{% active 'appfood:contacto' %}">
+              Contacto
+              <i class ="fa fa-caret-down"></i>
+              </a> 
+                
 
-                
-                <li> 
-                <a class="{% active 'appfood:contacto' %} " href="{% url 'appcontact:contacto' %}">
-                Contacto
-               <i class ="fa fa-caret-down"></i>
-                </a> 
-                
                 <ul>
+               
+               <li> 
+                <a class="{% active 'appcontact:contacto' %}"  href="{% url 'appcontact:contacto' %}">Contacto
+                </a> 
+                </li>
+
                 <li> 
-                <a class="{% active 'appfood:nosotros' %} " href="{% url 'appfood:nosotros' %}">Nosotros
+                <a class="{% active 'appfood:nosotros' %}"  href="{% url 'appfood:nosotros' %}">Nosotros
                 </a> 
                 </li>
                 </ul>

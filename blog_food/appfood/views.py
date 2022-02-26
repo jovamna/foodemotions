@@ -123,6 +123,21 @@ def recetas_saludables(request):
     return render(request, 'appfood/recetas-saludables.html', context)
 
 
+def recetas(request):
+    recetas = Receta.objects.all()
+    kategory = Kategory.objects.all()  #SALE TODO!
+
+    context = {
+        'recetas': recetas,
+        'kategory': kategory,
+    }
+
+    print(recetas)
+    print(kategory)
+
+    return render(request, 'appfood/recetas.html', context)
+
+
     #PAGINA PRINCIPAL DE BATIDOS
 def recetas_dieteticas(request):
     recipes = Recipe.objects.all().order_by('-slug')[1:6]
