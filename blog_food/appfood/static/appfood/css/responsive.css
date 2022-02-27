@@ -2110,7 +2110,8 @@ display: block;
     justify-content: space-between;
     width: 98%;
     visibility: visible;
-    height: 80px;
+    height: 100%;
+    max-height: 80px;
      border-bottom: 1px solid #2d2d2d;
   
     }
@@ -2156,6 +2157,7 @@ display: block;
       width: 95%;
       margin-top: 40px;
       visibility: visible;
+      z-index: 1;
     }
 
     nav .siguenos ul{
@@ -2245,11 +2247,11 @@ display: block;
      /* UL  */
      header  nav .nav{
       width: 90%; 
-      height: 99%;
+      height:  100%;
+      max-height: 350px;
       display: flex;
       flex-direction: column;
-      overflow-y: scroll;
-      margin-top: 30px;
+      margin-top: 1px;
        z-index: 99; 
       }
 
@@ -2296,36 +2298,36 @@ display: block;
       max-width: 200px;
       min-width: 160px;
       height: 100%;
-      max-height: 310px;
+      max-height:  310px;
       position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 600;
-    background-color: #fff;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 600;
+      background-color: #fff;
+     
+      }
   
-    }
-
-    nav .nav ul li{
+      nav .nav ul li{
       float: left;
       background-color: rosybrown;
       width: 100%;
-        max-width: 240px;
-        height: 36px;
-    border-bottom: 1px solid #fefefe;
-    }
-
-
-   nav .nav li ul li a{
-    font-size: 1rem;
-    display: block;
-    width: 100%;
-    text-transform: lowercase;
-   margin-left: 6px;
-   padding-top: 2px;
-   height: 36px;
-    }
-
-
+      max-width: 240px;
+      height: 32px;
+      border-bottom: 1px solid #fefefe;
+      margin-bottom: 0.5px;
+      }
+  
+  
+      nav .nav li ul li a{
+      font-size: 1rem;
+      display: block;
+      width: 100%;
+      text-transform: lowercase;
+      margin-left: 6px;
+      padding-top: 2px;
+      height: 32px;
+      }
+  
      /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
 
  
