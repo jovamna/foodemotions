@@ -227,26 +227,27 @@
    font-weight: 790;
    letter-spacing: 0.2px;
     width: 100%;
- 
+    z-index: 3;
     }
 
   
   nav .nav ul{
     display: none;
-    width: 160px;
+    width: 100%;
+    max-width: 600px;
     min-width: 160px;
     position: absolute;
-  background-color: #f1f1f1;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  background-color: #fff;
+  z-index: 300;
   }
 
   /* items del menu desplegable */
   /*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS   float:none*/
   nav .nav ul li {
   float: left;
-background-color: rosybrown;
-  width: 120px;
+  background-color: rosybrown;
+  width: 100%;
+  max-width: 600px;
   }
     
   /* enlaces de los items del menu desplegable */
@@ -255,10 +256,11 @@ background-color: rosybrown;
   font-size: 0.8rem;
   text-transform: lowercase;
   color: black;
-  padding: 12px 16px;
+  padding: 8px 8px;
   text-decoration: none;
   display: block;
-
+  width: 100%;
+  max-width: 600px;
   }
 
      /*ESTE ES EL ICONO QUE HACE ABRIR EL MENU ESCONDIDO*/
@@ -268,7 +270,9 @@ background-color: rosybrown;
     nav .nav li:hover > ul {
     display: flex;
     flex-direction: column;
-    width: 120px;
+    width: 100%;
+    max-width: 600px;
+    z-index: 350;
     }
 
     /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/

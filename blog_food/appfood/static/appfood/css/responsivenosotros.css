@@ -966,68 +966,66 @@
    border-bottom: 1px solid #2d2d2d;
     }
 
-   nav .nav li a {
-   z-index: 100;
-   height: 24px;
-   color: #2d2d2d;
-   font-weight: 520;
-   font-size: 0.9rem;
-   text-transform: uppercase;
-   letter-spacing: 1px;
-   margin-top: 3px;
-   }
-
-
-   /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-    nav .nav li:hover > ul {
-      background-color:  #fff;
-      width: 100%;
-      max-width: 500px;
-      height: 100%;
-      max-height: 300px;
-      margin-left: 6px;
-      z-index: 598;
-      display: flex;
-      flex-direction: column;
-    }
-
-
-    nav .nav ul {
-    display: none;
-    width: 100%;
-    max-width: 200px;
-    min-width: 160px;
-    height: 100%;
-    max-height:  310px;
-    position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 600;
-    background-color: #fff;
+    nav .nav li a {
+      height: 24px;
+      color: #2d2d2d;
+      font-weight: 520;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 3px;
+      z-index: 3;
+      }
    
-    }
-
-    nav .nav ul li{
-    float: left;
-    background-color: rosybrown;
-    width: 100%;
-    max-width: 240px;
-    height: 32px;
-    border-bottom: 1px solid #fefefe;
-    margin-bottom: 0.5px;
-    }
-
-
-    nav .nav li ul li a{
-    font-size: 1rem;
-    display: block;
-    width: 100%;
-    text-transform: lowercase;
-    margin-left: 6px;
-    padding-top: 2px;
-    height: 32px;
-    }
+   
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+      /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+       nav .nav li:hover > ul {
+         width: 100%;
+         max-width: 320px;
+         height: 100%;
+         margin-left: 5px;
+          z-index: 300;
+         display: flex;
+         flex-direction: column;
+       }
+   
+   
+       nav .nav ul {
+         display: none;
+         width: 100%;
+         max-width: 319px;
+         min-width: 160px;
+         height: 100%;
+         position: absolute;
+         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         background-color: #fff;
+        
+         }
+     
+         nav .nav ul li{
+         float: left;
+         background-color: rosybrown;
+         width: 100%;
+         max-width:320px;
+         height: 32px;
+         border-bottom: 1px solid #fefefe;
+         margin-bottom: 0.4px;
+       
+         }
+     
+     
+         nav .nav li ul li a{
+         font-size: 1rem;
+         display: block;
+         width: 100%;
+         text-transform: lowercase;
+         margin-left: 6px;
+         padding-top: 2px;
+         height: 31px;
+         background-color: #fff;
+         }
+     
 
 
 
