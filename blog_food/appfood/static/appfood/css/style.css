@@ -654,14 +654,14 @@ margin-top: 18px;
     z-index: 120;
    }
 
-   .portada-img #menu-simple{
+   .portada-img .portada-img2 #menu-simple{
     width: 100%;
     height: 30px;
     display: block;
     }
 
 
-   #menu-simple ul{
+    .portada-img .portada-img2 #menu-simple ul{
    display: flex;
    flex-direction: row;
    margin-top: 10px;
@@ -669,12 +669,13 @@ margin-top: 18px;
    }
 
     
-    #menu-simple ul li{
+   .portada-img .portada-img2  #menu-simple ul li{
    list-style: none;
+   border: 0;
       }
  
            
-    #menu-simple ul li  p{
+    .portada-img .portada-img2  #menu-simple ul li  p{
    font-size: 1rem;
    color: #000000;
    font-family: 'Times New Roman', Times, serif;
@@ -683,18 +684,18 @@ margin-top: 18px;
    }
 
 
-       #menu-simple li p i {
-         border: 1px solid #000000;
-         border-width: 0 0.8px 0.8px 0;
-         display: inline-block;
-         padding: 3px;
-         margin-right: 9px;  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
-        }
+   .portada-img .portada-img2  #menu-simple li p i {
+    border: 1px solid #000000;
+    border-width: 0 0.8px 0.8px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-right: 9px;  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
+    }
        
-          #menu-simple .right {
-          transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
-         }
+    .portada-img .portada-img2 #menu-simple .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    }
        
      /*......................................*/
 
@@ -1339,27 +1340,55 @@ margin-top: 18px;
       /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS..................................................*/
    /* NO PONER DISPLAY FLEX NI FLEX DIRECCION */
     .categorias-subcategorias{
-    width: 100%;
     display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
     margin-top: 98px;
+
     }
+  
+     /*ESTO ESCONDE LA BARRA QUE DESPLAZA*/
+      /* WebKit */
+      /*-- height: 10px;*/
+      .categorias-subcategorias .endfor .scrollmenu::-webkit-scrollbar { 
+     width: 0px;
+     background: transparent;
+     }  
 
+      .categorias-subcategorias   .endfor {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      max-height: 170px;
+      }
+  
 
-    .categorias-subcategorias .scrollmenu{
-      display: block;
-      position: relative;
-      float: left;
-      width:  6.1%;
-     overflow-x: auto;
-      overflow-y: hidden;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none;  /* Internet Explorer 10+ */
-      white-space: nowrap;
-      padding: 8px 2px;
-     margin-right: 15px ;
+    .categorias-subcategorias .endfor .scrollmenu{
+    display: flex;
+    flex-direction: row;
+    width:  100%;
+    height: 100%;
+    max-height: 170px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    white-space: nowrap;
+    padding: 8px 2px;
       }
    
-      .categorias-subcategorias .scrollmenu img{
+      .categorias-subcategorias .endfor .scrollmenu li{
+        display: block;
+        margin-bottom: 20px;
+        text-decoration: none;
+        list-style: none;
+        border: 0;
+      }
+
+      .categorias-subcategorias .endfor .scrollmenu img{
      width: 100%;
      max-width: 70px;
      height: 100%;
@@ -1368,12 +1397,13 @@ margin-top: 18px;
      margin-right: 10px;
      }
 
+
        /*..pre-line en whie-space..*/
-       .categorias-subcategorias .scrollmenu   h1{
+       .categorias-subcategorias .endfor .scrollmenu li a h1{
         width: 100%;
         max-width: 70px;
         white-space: initial;   
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       }
 
     /*CAJA DE LA FLECHA..*/
@@ -1408,9 +1438,6 @@ margin-top: 18px;
     visibility: hidden; 
   }
   
-  .categorias-subcategorias  .caja-texto-slider:hover  .leftNav {
-    visibility: visible;
-  }
 
 
   .categorias-subcategorias  .rightNav {
@@ -1491,6 +1518,9 @@ margin-top: 18px;
 .caja-texto-slider a h3{
   color: #000000;
   font-size: 1.1rem;
+}
+.caja-texto-slider:hover  .leftNav {
+  visibility: visible;
 }
 
 
@@ -1574,7 +1604,7 @@ margin-top: 18px;
     height:40px;
     display: block;
     margin-bottom: 40px;
-   margin-top: 50px;
+   margin-top: 15px;
   }
 
   .titulo-otras-paginas h1{

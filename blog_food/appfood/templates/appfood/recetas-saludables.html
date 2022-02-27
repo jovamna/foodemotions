@@ -62,6 +62,8 @@
 
               <!-- LETRAS-->
               <div class="portada-img3-responsive">
+
+
                   <div id="menu-simple-responsive">
                   <ul>
                   <li>
@@ -74,12 +76,13 @@
                   <p>Recetas Saludables <i class="right"></i></p>
                   </a>
                   </li>
-                  <li >
+                 
+                  </ul>
+                
                   {% for receta in post_receta %}
                   <p>{{ receta.kategory }}<i class="right"></i></p></em>
                   {% endfor %}
-                  </li>
-                  </ul>
+                 
                   </div>
 
 
@@ -101,40 +104,56 @@
           <!-- TITULO ----------------------------------------1 -->
         
 
-      <!-- TITULO ----------------------------------------1 -->
-      <div class="categorias-subcategorias">          
-               <!-- SUBCATEGORIAS ---->
-               <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
+      <!-- CAJA DE CATEGORIAS DE RECETAS----------------------->
+      <div class="categorias-subcategorias"> 
+
+        <!--caja-----------------------------------2--->
+        <div class= "endfor">  
+
+            <!--FLECHA--->
+            <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
             
-              {% for kategory in kategories %}
-              {% if not node.is_leaf_node %}       
-              <div class= "scrollmenu">
+                <!--caja--SCROLLMENU---------------------------------1--->
+                <ul class= "scrollmenu">
+                {% for kategory in kategories %}
+                {% if not node.is_leaf_node %}       
+              
 
                <!--------------------------------------------------->
                 {% if kategory.image %}
+                <li>
                 <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
-                <img src="{{kategory.image.url}}" ></a>
-                {% endif %}
-
+                <img src="{{kategory.image.url}}"  style="width:100%">
+                
 
                <!--<div class="nombredesubcategoria">-->
                 <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
-                <h1>{{ kategory.name }}</h1> 
+                <h1>{{ kategory.name }}</h1> </a>
                 <!------CATEGORIA RESPONSIVE--------------------->
+                 <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
                 <h2>{{ kategory.name}}</h2>
                 </a>
-              <!--  </div>--------------------------------------->
+                </li>
+              <!--</div>--------------------------------------->
+           
+                {% endif %}
 
-          
-          </div>
-          {% endif %}
+
+
+             {% endif %}
           {% endfor %}
-        <!--FIN SUBCATEGORIAS----------------> 
+          </ul>
+       
+        <!--FIN CAJA SCROLLMENU------------------------1----> 
 
              <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 
+             <!------FLECHA------------------------------------>
+
+             </div>
+             <!---------------endfor----------------------------2--->
    
        </div>
-       <!--fin subcategoria---------------------1 -->
+       <!--FIN CAJA DE CATEGORIAS DE RECETAS------ -->
 
 
 

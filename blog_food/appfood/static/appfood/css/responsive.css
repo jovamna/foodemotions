@@ -2282,50 +2282,45 @@ display: block;
 
    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-    nav .nav li:hover > ul {
-      width: 100%;
-      max-width: 320px;
-      height: 100%;
-      margin-left: 5px;
-       z-index: 300;
-      display: flex;
-      flex-direction: column;
+   /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+   nav .nav li:hover > ul {
+    display: flex;
+   flex-direction: column;
+    width: 100%;
+    visibility: visible; 
+   z-index: 800;
     }
 
 
-    nav .nav ul {
-      display: none;
-      width: 100%;
-      max-width: 319px;
-      min-width: 160px;
-      height: 100%;
+     nav .nav ul {
+    width: 100%;
+    max-width: 350px;
+    display: block;
       position: absolute;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      background-color: #fff;
-     
-      }
-  
-      nav .nav ul li{
-      float: left;
-      background-color: rosybrown;
-      width: 100%;
-      max-width:320px;
-      height: 32px;
-      border-bottom: 1px solid #fefefe;
-      margin-bottom: 0.4px;
-    
-      }
-  
-  
-      nav .nav li ul li a{
-      font-size: 1rem;
-      display: block;
-      width: 100%;
-      text-transform: lowercase;
-      margin-left: 6px;
-      padding-top: 2px;
-      height: 31px;
-      background-color: #fff;
+    margin-top: 0.5px;
+    visibility: hidden;
+    background-color:  #fff;
+    }
+
+    nav .nav ul li{
+    width: 100%;
+    max-width:  350px;
+    margin-left: 2px;
+    margin-bottom:  0.5px;
+    margin-top: -1px;
+   border-bottom: 1px solid #fefefe;
+    }
+
+
+    nav .nav li ul li a{
+     font-size: 0.9rem;
+     display: block;
+    width: 100%;
+    text-transform: lowercase;
+    margin-left: 6px;
+    padding-top: 1px;
+     margin: auto;
       }
   
      /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
@@ -2358,9 +2353,6 @@ display: block;
     /*..FIN NAV ESCONDIDO...........................*/
 
 
-    
-
-
        /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
      #container  #controls-responsive{
         display: block;
@@ -2386,35 +2378,35 @@ display: block;
     
     
      #container    #controls-responsive #custom-search-input-responsive .sin-borde-responsive{
-         display: block;
-         position: relative;
-         float: left;
-         width: 100%;
-       outline: none;
-        }
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    outline: none;
+    }
     
-        input[type=text] {
-          width: 100%;
-          padding: 12px 20px;
-          margin: 4px 0;
-          box-sizing: border-box;
-        }
+    input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    }
 
 
-      #controls-responsive .boton-responsive{
-      display: block;
-      position: relative;
-      float: right;
-      width: 10%;
-      padding: 12px 20px;
-      background-color: #ffffff;
-      }
-       /*FIN BUSCADOR RESPONSIVE QU ESTA DEBAJO DE LA CABECERA  EN LA PAGINA*/
+    #controls-responsive .boton-responsive{
+    display: block;
+    position: relative;
+    float: right;
+    width: 10%;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    }
+    /*FIN BUSCADOR RESPONSIVE QU ESTA DEBAJO DE LA CABECERA  EN LA PAGINA*/
       
           
-      #controls-responsive .boton{
-      width: 8%;
-      }
+    #controls-responsive .boton{
+    width: 8%;
+    }
    /* ESTE ES EL MENU NAV  NAV RESPONSIVE */
   /*margin-left: 5.4%;/*IMPORTANTE */
 
@@ -2435,10 +2427,10 @@ display: block;
     z-index: 80;
     }
 
-      .portada .portada-img{
-      display: none;
-      visibility: hidden;
-       }
+    .portada .portada-img{
+    display: none;
+    visibility: hidden;
+    }
 
           
     /*--PORTADA RECETAS SALUDABLE--Y DEMAS PAGINAS--------------------------*/
@@ -2545,48 +2537,48 @@ display: block;
     /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
     .portada .portada-img-responsive .portada-img3-responsive{
     width:90%;
-    height: 140px;
+    height: 100%;
+    max-height: 150px;
     display: block;
     position: absolute;
-    margin-top: 170px;
-    margin-left:  33px;
-    background-color: #fff;
+    margin-top: 280px;
+    margin-left:  35px;
     border-bottom: 3px solid #7aac41;
     border-right: 3px solid #7aac41;
     z-index: 120;
+    background-color: #fff;
     }
 
     
       /*EL MENU*/
     .portada-img3-responsive #menu-simple-responsive{
-    width: 90%;
-    height: 30px;
+    width: 100%;
     display: block;
+    position: relative;
+    float: left;
      }
 
 
-      #menu-simple-responsive  .scrollresponsive{
-      display: flex;
-      flex-direction: row;
-      width:  100%;
-      overflow-x: auto;
-      overflow-y: hidden;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none;  /* Internet Explorer 10+ */
-      white-space: nowrap;
-       padding: 8px 2px;
-       }
+       /*ESTO ESCONDE LA BARRA QUE DESPLAZA*/
+      /* WebKit */
+      /*-- height: 10px;*/
+      .portada-img3-responsive #menu-simple-responsive ul::-webkit-scrollbar { 
+        width: 0px;
+        background: transparent;
+        }  
 
-
-      .scrollresponsive::-webkit-scrollbar {
-      display: none;
-      }
-
-     #menu-simple-responsive ul{
+    /*...SCROLLL DEL UL DE RECETAS SALUDABLES...*/
+    .portada-img3-responsive #menu-simple-responsive ul{
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid #fff;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
      }
 
        
@@ -2599,7 +2591,7 @@ display: block;
   font-size: 1rem;
   color: #000000;
   font-weight: 900;
-  margin-left: 8px;
+  margin-left: 4px;
    }
 
 
@@ -2615,26 +2607,46 @@ display: block;
    transform: rotate(-45deg);
    -webkit-transform: rotate(-45deg);
   }
-          
+
+
+    /*PAGINA TURISMO, DIETAS, ALIMENTACION .SCROLL .*/
+   .portada-img3-responsive   #menu-simple-responsive  .scrollresponsive{
+    display: flex;
+    flex-direction: row;
+    width:  100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    white-space: nowrap;
+    padding: 8px 2px;
+      }
+
+
+    .portada-img3-responsive #menu-simple-responsive  .scrollresponsive li a p{
+      font-size: 1rem;
+
+    }
 
     /*-----imagen grande de contacto----------------*/
     .portada-img{
      display: none;
      visibility: hidden;
-   }
-  /*fin*/
+     }
+     /*fin*/
 
-   /*ESTO ES EL TITULO*/
-  .portada .portada-img3-responsive h1{
-  font-size: 1.1rem;
-   margin-left: 8px;
-  margin-bottom: 3px;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 900;
-  color:#000000
-   }
+     /*ESTO ES EL TITULO*/
+    .portada .portada-img3-responsive h1{
+    font-size: 1.1rem;
+    margin-left: 8px;
+    margin-bottom: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    color:#000000
+     }
 
-   /*ESTE ES EL PARRAFO*/
+
+    /*ESTE ES EL PARRAFO*/
    .portada-img3-responsive p{
     font-size: 1rem;
     margin-left: 8px;
@@ -2930,8 +2942,6 @@ width: 100%;
   
      }
  
-
-   
  
     /*TITULO NOTICIA TURISMO*/
     .primer-segmento .tres a h1{
@@ -3080,26 +3090,26 @@ width: 100%;
    
 
      .posts-ultimos-titulo .post-ultimo-titulo .lee{
-      font-size: 0.95rem;
-      color:  #2d2d2d;
-
-      }
+    font-size: 0.95rem;
+    color:  #2d2d2d;
+    }
   
    
      .dos-columnas .columna-right{
-      display: block;
-      position: relative;
-      float: left;
-     width: 92%;
-     margin: auto;
-     margin-bottom: 30px;
+    display: block;
+    position: relative;
+    float: left;
+    width: 92%;
+    margin: auto;
+    margin-bottom: 30px;
     }
 
+
      /*CONNTAINER EXPLORA*/
-    .columna-right .explora{
+     .columna-right .explora{
      width: 100%;
      margin: auto;
-    }
+     }
 
      .columna-right .columna-vertical{
      width: 100%;
@@ -3115,25 +3125,26 @@ width: 100%;
      font-size: 1.3rem;
      font-weight: 900;
      color: #000000;
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 15px;
+     text-align: center;
+     text-decoration: underline;
+     margin-bottom: 15px;
      }
 
-     .columna-right .columna-vertical .subcontainer-right{
+
+      .columna-right .columna-vertical .subcontainer-right{
        width: 100%;
        max-width: 460px;
        display: flex;
        flex-direction: row;
        margin: auto;
-     }
+      }
 
-     .columna-right .columna-vertical .subcontainer-right  .imagen-right{
-       display: block;
-       position: relative;
-       float: left;
+      .columna-right .columna-vertical .subcontainer-right  .imagen-right{
+      display: block;
+      position: relative;
+      float: left;
       width: 120px;
-    }
+      }
 
 
     .columna-right .columna-vertical .subcontainer-right  .titulo-right{
@@ -3265,65 +3276,97 @@ width: 100%;
      display: none;
      }
 
-  
-
-  /*FIN DE LAS 4 FOTOS Y UNA GRANDE*/
+    /*FIN DE LAS 4 FOTOS Y UNA GRANDE*/
 
 
-   /*----------------------------------------------------------------------*/
-   /*------------------------------------------------------------*/
+    /*------------------------------------------------------------*/
   
 
 
-  /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS..................................................*/
+  /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS......*/
   /* NO PONER DISPLAY FLEX NI FLEX DIRECCION */
   /*CATEGORIAS DE LA PAGINA RECETAS*/
-  /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS..................................................*/
-    /* NO PONER DISPLAY FLEX NI FLEX DIRECCION */
+  /*PAGINA RECETAS SALUDABLES.SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS....*/
     .categorias-subcategorias{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      margin-left: 17px;
-      }
-  
-      .categorias-subcategorias .scrollmenu{
-        display: block;
-        position: relative;
-        float: left;
-        width:  25%;
-        max-width: 100px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* Internet Explorer 10+ */
-        white-space: nowrap;
-        padding: 8px 2px;
-        margin-right: 10px ;
-        }
-     
-  
-        .categorias-subcategorias .scrollmenu img{
-         display: block;
-         width: 100%;
-         max-width: 100px;
-         height: 100%;
-         }
-  
-      /*..pre-line en whie-space..*/
-      .categorias-subcategorias .scrollmenu  h2{
-      width: 100%;
-      height: 30px;
-      white-space: initial;   
-      font-size: 0.9rem;
+    width: 100%;
+     height: 170px;
+     display: block;
+     position: relative;
+     float: left;
       }
 
+ /*ESTO ESCONDE LA BARRA QUE DESPLAZA*/
+      /* WebKit */
+      /*-- height: 10px;*/
+    .categorias-subcategorias .endfor .scrollmenu::-webkit-scrollbar { 
+    width: 0px;
+    background: transparent;
+    }  
+
+
+    .categorias-subcategorias  .endfor{
+    width: 100%;
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    }
+
+
+    /*..ELIMINANDO LAS FLECHAS PORQUE NO SE VISIBILIZAN BIEN EN EL MOVI..*/
+    .categorias-subcategorias  .endfor .leftNav{
+    display: none;
+    visibility: hidden;
+    }
+
   
-       .categorias-subcategorias .scrollmenu  a h1{
-       font-size: 0.6rem;
+    .categorias-subcategorias  .endfor  .rightNav{
+    display: none;
+    visibility: hidden;
+    }
+
+  
+    .categorias-subcategorias .endfor .scrollmenu{
+    display: flex;
+    flex-direction: row;
+    height:140px;
+    width: auto;
+    padding-top:9px ;
+    border: 2px solid #fff;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
       }
+     
+
+    .categorias-subcategorias .endfor .scrollmenu li {
+    display: block; 
+    height:100px;
+    margin-bottom: 4px;
+    }
+
+ 
   
+    .categorias-subcategorias .endfor .scrollmenu li a img{
+    display: block;
+    width: 100%;
+    max-width: 100px;
+    height: 100px;
+    }
+
   
+    /*..pre-line en whie-space..*/
+    .categorias-subcategorias .endfor .scrollmenu  a h1{
+    display: none;
+    }
+
+
+      /*..pre-line en whie-space..*/
+      .categorias-subcategorias .endfor .scrollmenu li a h2{
+      width: 100%;
+      white-space: initial;   
+      font-size: 0.6rem;
+      display: block;
+      }
 
 
       /*--SLIDER DE CATEGORIAS DE PLAN, DIETA Y TURISMO--CATEGORIAS-------------------------------------.*/
@@ -3334,25 +3377,25 @@ width: 100%;
       margin-left: 14px;
       }
     
-      .endfor {
+      .caja-texto-slider .endfor {
         margin-top: 20px;
       }
 
 
      /*..ELIMINANDO LAS FLECHAS PORQUE NO SE VISIBILIZAN BIEN EN EL MOVI..*/
-      .endfor .leftNav{
+     .caja-texto-slider .endfor .leftNav{
       display: none;
       visibility: hidden;
       }
 
-     .endfor  .rightNav{
+      .caja-texto-slider  .endfor  .rightNav{
       display: none;
       visibility: hidden;
       }
     /*..FIN DE LAS FLECHAS RESPONSIVE..*/
 
         /*---UL-----*/
-        .caja-texto-slider .scrollmenu{
+        .caja-texto-slider .endfor .scrollmenu{
           display: flex;
           flex-direction: row;
           width:  100%;
@@ -3371,14 +3414,13 @@ width: 100%;
       height:40px;
       display: block;
       margin-bottom: 20px;
-      margin-top: 5px;
       margin-left: 16px;
       }
   
     .titulo-otras-paginas h1{
      letter-spacing:   -0.3px;
      word-spacing: 0.9px;
-     font-size: 1.6rem;
+     font-size: 1.5rem;
      color: #000000;
      font-weight: 600;
      }
@@ -3869,8 +3911,8 @@ width: 100%;
       }
 
 
-   /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
-   header{
+    /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+    header{
     display: block;
     width:100%;
     height: 59px;
@@ -4239,8 +4281,8 @@ width: 100%;
     color: #2d2d2d;
     font-weight: 520;
     font-size: 0.9rem;
-     text-transform: uppercase;
-     letter-spacing: 1px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-top: 5px;
     }
 
@@ -4249,38 +4291,42 @@ width: 100%;
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
     nav .nav li:hover > ul {
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
     width: 100%;
     visibility: visible; 
-   z-index: 800;
+    z-index: 800;
     }
 
 
      nav .nav ul {
     width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
+    max-width: 500px;
+    display: block;
+    position: absolute;
     margin-top: 0.5px;
     visibility: hidden;
-    background-color: #fff;
+    background-color:  #fff;
     }
 
+
     nav .nav ul li{
-    display: block;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     margin-left: 2px;
+    margin-bottom:  0.5px;
+    margin-top: -1px;
    border-bottom: 1px solid #fefefe;
     }
 
 
     nav .nav li ul li a{
-     font-size: 1rem;
-    display: block;
+     font-size: 0.9rem;
+     display: block;
     width: 100%;
     text-transform: lowercase;
     margin-left: 6px;
+    padding-top: 1px;
+     margin: auto;
       }
 
 
@@ -4472,12 +4518,12 @@ margin: auto;
 
 /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
 .portada .portada-img-responsive .portada-img3-responsive{
-width:92%;
-height: 55%;
+width:90%;
+height: 40%;
 display: block;
 position: absolute;
-margin-top: 170px;
-margin-left:  27px;
+margin-top:  350px;
+margin-left:  52px;
 background-color: #fff;
 border-bottom: 3px solid #7aac41;
 border-right: 3px solid #7aac41;
@@ -4488,10 +4534,11 @@ z-index: 120;
 
 
 /*EL MENU*/
-.portada-img-responsive #menu-simple-responsive{
+.portada-img-responsive .portada-img3-responsive #menu-simple-responsive{
   width: 100%;
   height: 30px;
   display: block;
+  margin-bottom: 20px;
  }
 
 
@@ -4530,19 +4577,29 @@ transform: rotate(-45deg);
 -webkit-transform: rotate(-45deg);
 }
       
+
+/*ES EL LI*/
+.portada-img3-responsive #menu-simple-responsive p{
+  font-size: 1rem;
+  margin-left: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #000000;
+  }
+
+
 /*ESTO ES EL TITULO*/
 .portada .portada-img3-responsive h1{
 font-size: 1.1rem;
 margin-left: 8px;
-margin-bottom: 3px;
+margin-bottom: 10px;
 font-family: 'Times New Roman', Times, serif;
 font-weight: 900;
 color:#000000
 }
 
 /*ESTE ES EL PARRAFO*/
-.portada-img3-responsive p{
-font-size: 1rem;
+.portada-img3-responsive  p{
+font-size: 1.1rem;
 margin-left: 8px;
 font-family: 'Times New Roman', Times, serif;
 color: #2d2d2d;
@@ -4565,7 +4622,7 @@ color: #2d2d2d;
  }
 
    /*LETRA PROUDLY*/
-.portada .portada-contacto-uno .azulplata{
+  .portada .portada-contacto-uno .azulplata{
   display: block;
   width: 100%;
   font-weight: 900;
@@ -4573,9 +4630,11 @@ color: #2d2d2d;
   font-family: 'Cabin', sans-serif;
   color:black;
   line-height: 10px;
-}
-/*--LETRA CRAFTED----------------------*/
-.portada .portada-contacto-uno .otroestilo { 
+   }
+
+
+  /*--LETRA CRAFTED----------------------*/
+   .portada .portada-contacto-uno .otroestilo { 
   font-weight: 300 ;
    font-size:   0.8rem;
    color:black ;
@@ -4585,14 +4644,16 @@ color: #2d2d2d;
   }
 
   /*---SEGUNDO PARRAFO----*/
-/*PROUDLY CRAFTED*/
-.portada .portada-contacto-dos{
-position: relative;
-overflow: hidden;
-top: -200px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
-left: 30px ;
-width: 48%;
-}
+   /*PROUDLY CRAFTED*/
+  .portada .portada-contacto-dos{
+  position: relative;
+   overflow: hidden;
+   top: -200px;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+   left: 30px ;
+   width: 48%;
+    }
+
+
 /* SEGUNDO PARRAFO Proudly crafted in  münich since 1987*/
 .portada .portada-contacto-dos h6 {
 display:inline-block;
@@ -4736,16 +4797,16 @@ margin-left: -15px;
    letter-spacing: 0.3px;
     }
 
-.titulo h2{
-font-size:  1.4rem;
-color: #2d2d2d;
-}
+  .titulo h2{
+   font-size:  1.4rem;
+   color: #2d2d2d;
+   }
 
- .titulo p{
+  .titulo p{
    font-size: 1.3rem;
    color: #2d2d2d;
    text-align: center;
- }
+   }
 /*.................................*/
 
 
@@ -4789,65 +4850,66 @@ margin-bottom: 1px;
 margin-left: 5px;
 }
 
-/*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
-.primer-segmento .tres  p{
+
+ /*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
+ .primer-segmento .tres  p{
  width: 100%;
  max-width: 625px;
-font-size: 1.1rem;
-color: #2d2d2d;
-letter-spacing: 0.5px;
-line-height: 15px;
-margin-bottom: 10px;
-margin-left: 5px;
-}
+ font-size: 1.1rem;
+ color: #2d2d2d;
+ letter-spacing: 0.5px;
+ line-height: 15px;
+ margin-bottom: 10px;
+ margin-left: 5px;
+ }
 
-.primer-segmento .tres a p{
-width: 100%;
-max-width: 625px;
-font-size: 1.1rem;
-color: #2d2d2d;
-letter-spacing: 0.5px;
-margin-bottom: 10px;
-line-height: 15px;
-margin-left: 5px;
-}
-
-
+ .primer-segmento .tres a p{
+ width: 100%;
+ max-width: 625px;
+ font-size: 1.1rem;
+ color: #2d2d2d;
+ letter-spacing: 0.5px;
+ margin-bottom: 10px;
+ line-height: 15px;
+ margin-left: 5px;
+ }
 
 
-/*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS*/
-/*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS....................................................*/
-.dos-columnas{
-width: 100%;
-display: flex;
-flex-direction: column;
-margin-top: 15px;
-}
+  /*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS*/
+  /*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS...................*/
+ .dos-columnas{
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ margin-top: 15px;
+ }
 
-.dos-columnas .columna-left{
+  .dos-columnas .columna-left{
   width: 100%;
   display: flex;
   flex-direction: column;
- }
+  }
 
- /*CONTAINER COLUMNA DE LAS CAJAS DE POSTS ULTIMOS*/
- .columna-left .bloque-ultimo{
-  width: 100%;
+   /*CONTAINER COLUMNA DE LAS CAJAS DE POSTS ULTIMOS*/
+   .columna-left .bloque-ultimo{
+   width: 100%;
    display: flex;
    flex-direction: column;
     }
 
-  .columna-left .bloque-ultimo .posts-ultimos{
+
+   .columna-left .bloque-ultimo .posts-ultimos{
    width: 100%;
    display: flex;
    flex-direction: column;
    border-top: 0.8px solid #c9c9c9;
    }
 
+
    /*CONTAINER DE IMAGENE Y TITULO*/
    .post-ultimo{
     width: 100%;
-  }  
+    }  
 
 
   .post-ultimo .posts-ultimos-imagen{
@@ -4886,12 +4948,13 @@ margin-top: 15px;
     margin-bottom: 2px;
     }
   
-.posts-ultimos-titulo p{
-font-size: 1rem;
-padding-right: 40px;
-line-height: 15px;
 
- }
+  .posts-ultimos-titulo p{
+   font-size: 1rem;
+  padding-right: 40px;
+  line-height: 15px;
+  }
+
 
  .posts-ultimos-titulo p a{
   font-size: 1rem;
@@ -4901,100 +4964,94 @@ line-height: 15px;
    }
   
 
- .dos-columnas .columna-right{
-  display: block;
-  position: relative;
-  float: left;
-  width: 100%;
+  .dos-columnas .columna-right{
+   display: block;
+   position: relative;
+   float: left;
+   width: 100%;
    margin: auto;
    margin-top: 10px;
    margin-bottom: 30px;
-  background-color: #e9e9e9;
-  }
+   background-color: #e9e9e9;
+   }
 
   .columna-right .explora{
- width: 100%;
- margin: auto;
+   width: 100%;
+   margin: auto;
   }
 
- .columna-right .columna-vertical{
- width: 100%;
- max-width: 460px;
- display: flex;
- flex-direction: column;
- margin: auto;
- }
+  .columna-right .columna-vertical{
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  }
 
 
- /*EXPLORAR*/
- .explora h3{
- font-size: 1.1rem;
- font-family: 'Times New Roman', Times, serif;
- color: #000000;
-text-align: center;
-text-decoration: underline;
-margin-bottom: 15px;
- }
+   /*EXPLORAR*/
+   .explora h3{
+   font-size: 1.1rem;
+   font-family: 'Times New Roman', Times, serif;
+   color: #000000;
+   text-align: center;
+   text-decoration: underline;
+   margin-bottom: 15px;
+    }
 
- .columna-right .columna-vertical .subcontainer-right{
+   .columna-right .columna-vertical .subcontainer-right{
    width: 100%;
    max-width: 460px;
    display: flex;
    flex-direction: row;
    margin: auto;
- }
+   }
 
  .columna-right .columna-vertical .subcontainer-right  .imagen-right{
    display: block;
    position: relative;
    float: left;
   width: 120px;
-}
+  }
 
 
-.columna-right .columna-vertical .subcontainer-right  .titulo-right{
+  .columna-right .columna-vertical .subcontainer-right  .titulo-right{
   width: 100%;
    max-width: 380px;
    display: block;
    position: relative;
    float: right;
- }
+  }
 
-/*TITULO*/
-.titulo-right h1{
-font: 1.1rem;
-font-family: 'Times New Roman', Times, serif;
-color: #000000;
-
-}
-/*..SUBTITULO*/
-.titulo-right h2{
-font-size: 1.1rem;
-font-family: 'Times New Roman', Times, serif;
-color: #2d2d2d;
-
-}
-
-/*FIN ULTIMOS......................................................................*/
+  /*TITULO*/
+  .titulo-right h1{
+  font: 1.1rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #000000;
+  }
 
 
-hr {
+  /*..SUBTITULO*/
+  .titulo-right h2{
+   font-size: 1.1rem;
+   font-family: 'Times New Roman', Times, serif;
+   color: #2d2d2d;
+   }
+
+    /*FIN ULTIMOS....................................*/
+
+
+  hr {
   height: 1px;
   border-width:0;
   color:#d3d3d3;
   background-color: #cecece;
- width: 100%;
- padding-left: 0;
- padding-right: 0 ;
-
-}
-
-
-
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0 ;
+  }
 
   /*...............................................................*/
-
-
 
     /*RECETAS  DEL INDEX................................*/
       .plan-total-alimentacion{
@@ -5052,38 +5109,174 @@ hr {
         margin-left: 26px;
       }
   
-  /*CONTAINER DE LAS 4 IMAGENES PEQUEÑAS*/
-      .plan-alimentacion{
-        margin: auto;
+
+     /*CONTAINER DE LAS 4 IMAGENES PEQUEÑAS*/
+    .plan-alimentacion{
+    margin: auto;
+    }
+
+
+    /*CAJA DE IMAGEN..*/
+    .plan-alimentacion .plan-post-alimentacion  .plan-post-imagen{
+    width: 50%;
+    }
+    
+    .plan-post-imagen img{
+    width: 100%;
+    }
+    
+    /*CAJA DEL TITULO Y DESCRIPCION*/
+    .plan-post-letra{
+    width: 42%;
+    }
+  
+    .plan-post-letra h1{
+    font-size: 1.4rem;
+    }
+       
+    
+    /*ESTE ES DEL TAMAÑO NORMAL*/
+    .plan-imagen{
+    display: none;
+    }
+    
+
+    /*FIN DE LAS 4 FOTOS Y UNA GRANDE*/
+
+     /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS..................................................*/
+  /* NO PONER DISPLAY FLEX NI FLEX DIRECCION */
+  /*CATEGORIAS DE LA PAGINA RECETAS*/
+  /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS..................................................*/
+    /* NO PONER DISPLAY FLEX NI FLEX DIRECCION */
+    .categorias-subcategorias{
+      width: 100%;
+      height: 100%;
+      max-height: 220px;
+      display: flex;
+      flex-direction: row;
+      margin-left: 17px;
+      margin-bottom: 20px;
       }
 
 
-        /*CAJA DE IMAGEN..*/
-      .plan-alimentacion .plan-post-alimentacion  .plan-post-imagen{
-          width: 50%;
-         }
-    
-         .plan-post-imagen img{
-          width: 100%;
-         }
-    
-          /*CAJA DEL TITULO Y DESCRIPCION*/
-        .plan-post-letra{
-         width: 42%;
-          }
-  
-          .plan-post-letra h1{
-           font-size: 1.4rem;
-             }
-       
-    
-    
-       /*ESTE ES DEL TAMAÑO NORMAL*/
-        .plan-imagen{
-         display: none;
+      .categorias-subcategorias  .endfor{
+        width: 100%;
+        height: 100%;
+        max-height: 160px;
+        display: flex;
+        flex-direction: row;
+        margin-left: 17px;
+
         }
+
+
+          /*..ELIMINANDO LAS FLECHAS PORQUE NO SE VISIBILIZAN BIEN EN EL MOVI..*/
+          .categorias-subcategorias  .endfor .leftNav{
+        display: none;
+        visibility: hidden;
+        }
+
+  
+        .categorias-subcategorias  .endfor  .rightNav{
+        display: none;
+        visibility: hidden;
+        }
+  
+      .categorias-subcategorias .endfor .scrollmenu{
+    display: flex;
+    flex-direction: row;
+        width:  100%;
+        height: 100%;
+        max-height: 140px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        white-space: nowrap;
+        padding: 8px 2px;
+        margin-right: 10px ;
+        }
+     
+  
+        .categorias-subcategorias .scrollmenu img{
+         display: block;
+         width: 100%;
+         max-width: 100px;
+         height: 100%;
+         }
+
+  
+      /*..pre-line en whie-space..*/
+      .categorias-subcategorias .scrollmenu  h2{
+      width: 100%;
+      height: 30px;
+      white-space: initial;   
+      font-size: 0.9rem;
+      }
+
+  
+       .categorias-subcategorias .scrollmenu  a h1{
+       font-size: 0.6rem;
+      }
+  
+  
+
+
+      /*--SLIDER DE CATEGORIAS DE PLAN, DIETA Y TURISMO--CATEGORIAS-------------------------------------.*/
+     .caja-texto-slider{
+      display: block;
+      width: 92%;
+      margin-top: 70px;
+      margin-left: 14px;
+      }
     
-    /*FIN DE LAS 4 FOTOS Y UNA GRANDE*/
+      .caja-texto-slider .endfor {
+        margin-top: 20px;
+      }
+
+
+     /*..ELIMINANDO LAS FLECHAS PORQUE NO SE VISIBILIZAN BIEN EN EL MOVI..*/
+      .endfor .leftNav{
+      display: none;
+      visibility: hidden;
+      }
+
+     .endfor  .rightNav{
+      display: none;
+      visibility: hidden;
+      }
+    /*..FIN DE LAS FLECHAS RESPONSIVE..*/
+
+        /*---UL-----*/
+        .caja-texto-slider .scrollmenu{
+          display: flex;
+          flex-direction: row;
+          width:  100%;
+          overflow-x: auto;
+          overflow-y: hidden;
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none;  /* Internet Explorer 10+ */
+          white-space: nowrap;
+           padding: 8px 2px;
+           }
+        
+     /*------------TITULO DE RECETAS, PLANE,DIETA,TURMO---*/
+     .titulo-otras-paginas{
+      width: 94%;
+      height:40px;
+      display: block;
+      margin-bottom: 20px;
+      margin-top: 5px;
+      margin-left: 16px;
+      }
+  
+    .titulo-otras-paginas h1{
+     letter-spacing:   -0.3px;
+     word-spacing: 0.9px;
+     font-size: 1.6rem;
+     color: #000000;
+     font-weight: 600;
+     }
   
      /* LAS PAGINAS FRONTALES RECETAS  DIETA-PLAN Y TURISMO */
      #container-plan{
@@ -5132,7 +5325,6 @@ hr {
        /*..CAJA CONTIENE TITULO Y DESCRIPCION.*/
       .elemento-descripcion{
         width: 100%;
-      
       }
 
 
@@ -5985,41 +6177,45 @@ hr {
 
   /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-    nav .nav li:hover > ul {
+    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+   nav .nav li:hover > ul {
     display: flex;
-    flex-direction: column;
+   flex-direction: column;
     width: 100%;
-   visibility: visible; 
+    visibility: visible; 
    z-index: 800;
-  }
-
-
-    nav .nav ul {
-    width: 100%;
-    max-width: 650px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.5px;
-    visibility: hidden;
-     background-color: #fff;
     }
 
-   nav .nav ul li{
-   display: block;
-   width: 100%;
-    max-width: 650px;
+
+     nav .nav ul {
+    width: 100%;
+    max-width: 350px;
+    display: block;
+      position: absolute;
+    margin-top: 0.5px;
+    visibility: hidden;
+    background-color:  #fff;
+    }
+
+    nav .nav ul li{
+    width: 100%;
+    max-width:  350px;
     margin-left: 2px;
-  border-bottom: 1px solid #fefefe;
-   }
+    margin-bottom:  0.5px;
+    margin-top: -1px;
+   border-bottom: 1px solid #fefefe;
+    }
 
 
-   nav .nav li ul li a{
-   font-size: 1rem;
-   display: block;
-   width: 100%;
-   text-transform: lowercase;
-   margin-left: 6px;
-   }
+    nav .nav li ul li a{
+     font-size: 0.9rem;
+     display: block;
+    width: 100%;
+    text-transform: lowercase;
+    margin-left: 6px;
+    padding-top: 1px;
+     margin: auto;
+      }
 
 
    /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
@@ -6131,82 +6327,98 @@ hr {
     }
 
 
-  /*CAJA BLANCA DENTRO DE LA IMAGNEDEL MENU Y EL TITULO DE LA PAGINA*/
-  .portada-img3-responsive{
-    width:80%;
-    height: 17%;
-    display: block;
-    position: absolute;
-    margin-top: -140px;
-    margin-left:  97px;
-    background-color: #fff;
-    border-bottom: 3px solid #7aac41;
-    border-right: 3px solid #7aac41;
-    z-index: 120;
-    }
-
-   /*EL MENU*/
-    .portada-img-responsive #menu-simple-responsive{
+   /*CAJA BLANCA DENTRO DE LA IMAGNEDEL MENU Y EL TITULO DE LA PAGINA*/
+   /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
+  .portada .portada-img-responsive .portada-img3-responsive{
+  width:90%;
+  height: 45%;
+  display: block;
+  position: absolute;
+  margin-top:  -70px;
+  margin-left:  52px;
+  background-color: #fff;
+  border-bottom: 3px solid #7aac41;
+  border-right: 3px solid #7aac41;
+  z-index: 120;
+  }
+  
+  
+  
+  
+  /*EL MENU*/
+  .portada-img-responsive .portada-img3-responsive #menu-simple-responsive{
     width: 100%;
     height: 30px;
-    margin-bottom: 10px;
     display: block;
-     }
-
-
-     #menu-simple-responsive ul{
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
     margin-bottom: 20px;
-     }
-
-       
-   #menu-simple-responsive ul li{
-   list-style: none;
    }
-    
-              
+  
+  
+    #menu-simple-responsive ul{
+     display: flex;
+     flex-direction: row;
+     margin-top: 10px;
+     margin-bottom: 20px;
+      }
+  
+     
+    #menu-simple-responsive ul li{
+     list-style: none;
+     }
+  
+            
   #menu-simple-responsive ul li  p{
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: #000000;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 900;
   margin-left: 8px;
-
-   }
-
-
-   #menu-simple-responsive li p i {
+  }
+  
+  
+  #menu-simple-responsive li p i {
   border: 1px solid #000000;
   border-width: 0 0.8px 0.8px 0;
   display: inline-block;
   padding: 3px;
   margin-right: 9px;  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
   }
-          
-   #menu-simple-responsive .right {
-   transform: rotate(-45deg);
-   -webkit-transform: rotate(-45deg);
+        
+  #menu-simple-responsive .right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
   }
-          
-   /*ESTO ES EL TITULO*/
+        
+  
+  /*ES EL LI*/
+  .portada-img3-responsive #menu-simple-responsive p{
+    font-size: 1rem;
+    margin-left: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+    }
+  
+  
+  /*ESTO ES EL TITULO*/
   .portada .portada-img3-responsive h1{
-  font-size: 1.9rem;
-   margin-left: 8px;
-  margin-bottom: 3px;
+  font-size: 1.1rem;
+  margin-left: 8px;
+  margin-bottom: 10px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 900;
   color:#000000
-   }
-
-   /*ESTE ES EL PARRAFO*/
-   .portada-img3-responsive p{
-   font-size: 1.2rem;
-   margin-left: 8px;
-   font-family: 'Times New Roman', Times, serif;
-   color: #2d2d2d;
-   }
+  }
+  
+  /*ESTE ES EL PARRAFO*/
+  .portada-img3-responsive  p{
+  font-size: 1.1rem;
+  margin-left: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #2d2d2d;
+  }
+  
+          
+  
      /*FIN  PORTADAS RESPONSIVE IPOD DE LAS DEMAS PAGINAS*/
 
   /* PAGINA CONTACTO RESPONSIVE IPOD*/
@@ -7786,47 +7998,95 @@ hr {
 
 
        /*NEUS.. ESTE ES EL CUADRO QUE ESTA DENTRO DE LA FOTO DE LA PORTADA*/
-      .portada .portada-img-responsive .portada-img3-responsive{
-        width: 75%;
-        position: absolute;
-        display: block;
-        top: 300px;
-        margin-left: 200px;
-       background-color: #fff;
-       border-right: 2px solid #7aac41;
-       border-bottom: 2px solid #7aac41;
-      }
-
-
-      .portada .portada-img-responsive .portada-img3-responsive #menu-simple-responsive{
-      display: block;
+       /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
+  .portada .portada-img-responsive .portada-img3-responsive{
+    width:90%;
+    height: 45%;
+    display: block;
+    position: absolute;
+    margin-top:  -85px;
+    margin-left:  52px;
+    background-color: violet;
+    border-bottom: 3px solid #7aac41;
+    border-right: 3px solid #7aac41;
+    z-index: 120;
+    }
+    
+    
+    
+    
+    /*EL MENU*/
+    .portada-img-responsive .portada-img3-responsive #menu-simple-responsive{
       width: 100%;
+      height: 30px;
+      display: block;
+      margin-bottom: 20px;
+     }
+    
+    
+      #menu-simple-responsive ul{
+       display: flex;
+       flex-direction: row;
+       margin-top: 10px;
+       margin-bottom: 20px;
+        }
+    
+       
+      #menu-simple-responsive ul li{
+       list-style: none;
+       }
+    
+              
+    #menu-simple-responsive ul li  p{
+    font-size: 1rem;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    margin-left: 8px;
+    }
+    
+    
+    #menu-simple-responsive li p i {
+    border: 1px solid #000000;
+    border-width: 0 0.8px 0.8px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-right: 9px;  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
+    }
+          
+    #menu-simple-responsive .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    }
+          
+    
+    /*ES EL LI*/
+    .portada-img3-responsive #menu-simple-responsive p{
+      font-size: 1rem;
+      margin-left: 8px;
+      font-family: 'Times New Roman', Times, serif;
+      color: #000000;
       }
-
-
-
-      .portada .portada-img-responsive .portada-img3-responsive #menu-simple-responsive ul{
-        display: flex;
-        flex-direction: row;
-      }
- 
-      .portada .portada-img-responsive .portada-img3-responsive #menu-simple-responsive ul li{
-        padding-left: 8px;
-        list-style: none;
-      }
-
-
-      .portada .portada-img-responsive .portada-img3-responsive #menu-simple-responsive ul li a p{
-        font-size: 1rem;
-      }
-
-
-      .portada .portada-img-responsive .portada-img3-responsive p{
-        font-size: 1.2rem;
-      }
-       /* FIN  ESTE ES EL CUADRO QUE ESTA DENTRO DE LA FOTO DE LA PORTADA*/
-
-
+    
+    
+    /*ESTO ES EL TITULO*/
+    .portada .portada-img3-responsive h1{
+    font-size: 1.1rem;
+    margin-left: 8px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    color:#000000
+    }
+    
+    /*ESTE ES EL PARRAFO*/
+    .portada-img3-responsive  p{
+    font-size: 1.1rem;
+    margin-left: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #2d2d2d;
+    }
+    
 
       .portada .portada-img-responsive .imagen-responsive-movil{
        display: none;
@@ -8311,6 +8571,16 @@ hr {
      display: none;
     }
     /*..........................................................*/
+
+     .categorias-subcategorias{
+       display: block;
+       margin-top:  130px;
+     }
+
+     .caja-texto-slider{
+      display: block;
+      margin-top:  130px;
+    }
 
 
     /*PAGINA PNA DE COMIDAS*/
@@ -8975,50 +9245,45 @@ hr {
 
 
     /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
- /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
     nav .nav li:hover > ul {
-      display: flex;
-     flex-direction: column;
-   width: 100%;
-
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     visibility: visible; 
     z-index: 800;
-  
     }
 
 
-    nav .nav ul {
+      nav .nav ul {
       width: 100%;
       max-width: 700px;
       display: flex;
       flex-direction: column;
       margin-top: 0.5px;
-   visibility: hidden;
-   background-color: #fff;
-   }
+      visibility: hidden;
+      background-color: #fff;
+      }
 
-  nav .nav ul li{
-    display: block;
-    width: 100%;
+     nav .nav ul li{
+      display: block;
+      width: 100%;
       max-width: 700px;
-  margin-left: 2px;
-    border-bottom: 1px solid #fefefe;
-  }
+      margin-left: 2px;
+      border-bottom: 1px solid #fefefe;
+      }
 
 
-  nav .nav li ul li a{
-  font-size: 1rem;
-  display: block;
-  width: 100%;
-  text-transform: lowercase;
-  margin-left: 6px;
-  }
-
-  
- /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
-
+     nav .nav li ul li a{
+     font-size: 1rem;
+     display: block;
+     width: 100%;
+     text-transform: lowercase;
+     margin-left: 6px;
+     }
 
   
+     /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO......*/
     /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
      nav  .estilo-logo:after{
      text-decoration: none;
@@ -9045,93 +9310,182 @@ hr {
     /*..FIN NAV ESCONDIDO...........................*/
 
 
-    
-     
     /*PORTADA*/
-    .portada{
-    width: 100%;
-    height: 100%;
-    max-height: 420px;
-    margin-top: 0.7%;
-    }
-
-  .portada-img{
-  width: 100%;
-  height: 100%;
-  max-height: 420px;
-  }
-
-  .portada-img img{
-  width: 100%;
-  height: 100%;
-  max-height: 420px;
-  margin-top: 0.7%;
-  }
    
-.portada-img-responsive{
-  display: block;
-  visibility: hidden;
-}
-  .portada-img  .portada-titulo{
-   margin-top: 80px;
-  width: 100%;
-  }
-
-
-   .portada-img .portada-titulo1{
-    position: absolute;
-    top: 200px;
-    margin:auto;
-    width: 100%;
-    }
-  
-
-        /*LETRA DE LA PORTADA INDEX*/
-        .portada-img  .portada-titulo h2 {
-    display:block;
-    margin: 0;
-    text-align: center;
-    font-size: 1.6rem;
-    line-height: 1;
-    -webkit-transform: translateY(10rem);
-           transform: translateY(10rem);               /*DISTANCIA DE SUBIDA*/
-    -webkit-animation: up 650ms linear forwards;        /*TIEMPO QUE SUBE */
-           animation: up 650ms linear forwards;
-           z-index: 1;
-           text-shadow: 0px 2px 2px #2d2d2d;           
-   color: azure;
-   font-family: 'Cabin', sans-serif;
-   word-spacing: 5px; ;
+       /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+    /*.FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV........MENU ESCONIDDO DEL NAV ARROW.....*/
+   /*FIN ANIMACION SUBRAYADO */
+   .portada{
+    display: block;
+    padding: 0 0 0 0;
    }
 
-    /*LETRA DE LA PORTADA INDEX*/
-    .portada-img   .portada-titulo1 h6 {
-   display:block;
-   margin: 0;
-   text-align: center;
-   font-size: 1.6rem;
-   line-height: 1;
-   -webkit-transform: translateY(10rem);
-          transform: translateY(10rem);               /*DISTANCIA DE SUBIDA*/
-   -webkit-animation: up 650ms linear forwards;        /*TIEMPO QUE SUBE */
-          animation: up 650ms linear forwards;
-          z-index: 1;
-          text-shadow: 0px 2px 2px #2d2d2d;           
-  color: azure;
-  font-family: 'Cabin', sans-serif;
-  word-spacing: 5px; ;
-  }
+   .portada .portada-img{
+     display: none;
+     visibility: hidden;
+   }
 
-   
-   /*portadas  PORTADA PORTADAS SE PUEDE MODIFCAR SU CAMBIAMOS EL DIBUJO*/
-   .portada-receta-img2{
+   .portada .portada-img-responsive {
+    display: block;
+    width: 100%;
+     }
+
+
+      /*NEUS.. ESTE ES EL CUADRO QUE ESTA DENTRO DE LA FOTO DE LA PORTADA*/
+      /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
+ .portada .portada-img-responsive .portada-img3-responsive{
+   width:90%;
+   height: 38%;
    display: block;
-   width: 90%;
-   height: 90%;
    position: absolute;
-   margin-top:  -45%;
-   margin-left:3%;
-   margin-bottom: 40%; 
+   margin-top:  -85px;
+   margin-left:  80px;
+   background-color: fuchsia;
+   border-bottom: 3px solid #7aac41;
+   border-right: 3px solid #7aac41;
+   z-index: 120;
+   }
+   
+   
+   
+   
+   /*EL MENU*/
+   .portada-img-responsive .portada-img3-responsive #menu-simple-responsive{
+     width: 100%;
+     height: 30px;
+     display: block;
+     margin-bottom: 20px;
+    }
+   
+   
+     #menu-simple-responsive ul{
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+      margin-bottom: 20px;
+       }
+   
+      
+     #menu-simple-responsive ul li{
+      list-style: none;
+      }
+   
+             
+   #menu-simple-responsive ul li  p{
+   font-size: 1rem;
+   color: #000000;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 900;
+   margin-left: 8px;
+   }
+   
+   
+   #menu-simple-responsive li p i {
+   border: 1px solid #000000;
+   border-width: 0 0.8px 0.8px 0;
+   display: inline-block;
+   padding: 3px;
+   margin-right: 9px;  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
+   }
+         
+   #menu-simple-responsive .right {
+   transform: rotate(-45deg);
+   -webkit-transform: rotate(-45deg);
+   }
+         
+   
+   /*ES EL LI*/
+   .portada-img3-responsive #menu-simple-responsive p{
+     font-size: 1rem;
+     margin-left: 8px;
+     font-family: 'Times New Roman', Times, serif;
+     color: #000000;
+     }
+   
+   
+   /*ESTO ES EL TITULO*/
+   .portada .portada-img3-responsive h1{
+   font-size: 1.1rem;
+   margin-left: 8px;
+   margin-bottom: 10px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 900;
+   color:#000000
+   }
+   
+   /*ESTE ES EL PARRAFO*/
+   .portada-img3-responsive  p{
+   font-size: 1.1rem;
+   margin-left: 8px;
+   font-family: 'Times New Roman', Times, serif;
+   color: #2d2d2d;
+   }
+   
+
+     .portada .portada-img-responsive .imagen-responsive-movil{
+      display: none;
+      visibility: hidden;
+     }
+     .portada .portada-img-responsive .imagen-responsive-ipod{
+       display: block;
+     }
+
+     .portada .portada-img-responsive  .imagen-responsive-ipod img{
+     width: 100%;
+     }
+
+
+   /*FIN  PORTADAS*/
+   .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo{
+   width: 100%;
+   max-width: 800px;
+   display: block;
+   position: absolute;
+   top: 120px;
+    }
+ 
+
+    /** INDEX CONTAINER SEGUNDO TITULO DE LA PORTADA QUE SE MUEVE*/
+   .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo1{
+   width: 100%;
+   max-width: 800px;
+   display: block;
+   position: absolute;
+   font-size: 0;
+   top: 170px;
+   margin: auto;
+    z-index: 99;  
+   }
+
+
+   .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo h2{
+   font-size: 1.8rem;
+   color: white;
+   }
+
+   .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo h2 i{
+    font-size: 1.8rem;
+   }
+
+   .portada .portada-img-responsive .imagen-responsive-ipod  .portada-titulo1 h6{
+   font-size: 1.4rem;
+   color: white;
+   }
+
+   .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo1 h6 i{
+     font-size: 1.8rem;
+     color: white;
+   }
+
+   /*portadas  PORTADA PORTADAS SE PUEDE MODIFCAR SU CAMBIAMOS EL DIBUJO*/
+  .portada-receta-img2{
+   display: block;
+   width: 20%;
+   height: 20%;
+   position: absolute;
+   margin-top:  -200px;
+    margin-left:13px;
+   margin-bottom: 40%;
    }
 
     /*NUTRICION*/
@@ -9142,98 +9496,87 @@ hr {
     position: absolute;
     margin-top:  -45%;
     margin-left:3%;
-    margin-bottom: 40%; 
-   }
-
-    /*BATIDOS-ENSALADAS*/
-    .portada-perder-img2{
-    display: block;
-    width: 90%;
-    height: 90%;
-    position: absolute;
-    margin-top:  -45%;
-    margin-left:3%;
-    margin-bottom: 40%;
-     }
+    margin-bottom: 40%;  
+  }
 
 
-    /*TURISMO GASTRONOMICOS*/
-    .portada-turismo-img2{
-    display: block;
-    width: 90%;
-    height: 90%;
-    position: absolute;
-    margin-top:  -45%;
-    margin-left:3%;
-    margin-bottom: 40%;
+   /*BATIDOS-ENSALADAS*/
+   .portada-perder-img2{
+   display: block;
+   width: 90%;
+   height: 90%;
+   position: absolute;
+   margin-top:  -45%;
+   margin-left:3%;
+   margin-bottom: 40%;
     }
-    /*FIN  PORTADAS*/
-  
 
-   /*CONTENEDOR DE LA PRIMERA FRASE DE LA LETRA E MOVIEMINTO PROUDLY*/
-  .portada .portada-contacto-uno{
-  position: absolute;
-  overflow: hidden;
-  top: 34%; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
-  left: 50px ;
-  width: 45%;
+     /*TURISMO GASTRONOMICOS*/
+     .portada-turismo-img2{
+     display: block;
+     width: 90%;
+     height: 90%;
+     position: absolute;
+     margin-top:  -45%;
+     margin-left:3%;
+     margin-bottom: 40%;
+     }
+    
+
+  /*CONTENEDOR DE LA PRIMERA FRASE DE LA LETRA E MOVIEMINTO PROUDLY*/
+ .portada .portada-contacto-uno{
+ position: absolute;
+ overflow: hidden;
+ top: 34%; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
+ left: 50px ;
+ width: 45%;
+ }
+
+  /*---SEGUNDO PARRAFO----*/
+ /*PROUDLY CRAFTED*/
+  .portada .portada-contacto-dos{
+ position: absolute;
+ overflow: hidden;
+ top: 47%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+ left: 50px ;
+ width: 40%;
   }
 
-   /*---SEGUNDO PARRAFO----*/
-   /*PROUDLY CRAFTED*/
-   .portada .portada-contacto-dos{
-  position: absolute;
-  overflow: hidden;
-  top: 47%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
-  left: 50px ;
-  width: 40%;
-  }
-
-  .portada .portada-contacto-tres{
-  position: absolute;
-  overflow: hidden;
-  top: 56%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
-  left: 50px ;
-  width: 40%;
-  }
+.portada .portada-contacto-tres{
+ position: absolute;
+ overflow: hidden;
+ top: 56%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+ left: 50px ;
+ width: 40%;
+ }
 
 
-        /*PRIMER TITULO DE LA PORTADA CON LETRAS EN MOVIMIENOT*/
+       /*PRIMER TITULO DE LA PORTADA CON LETRAS EN MOVIMIENOT*/
   .portada .portada-contacto-uno .azulplata{
   line-height: 1.3;
-  font-size: 1.4rem; 
+  font-size: 1.4rem;
   }
 
 
-   /*--FORMA PARTE DEL .AZULPLATA PORQUE CAMBIE ESTILO DENTRO DE UN PARRAFO-----------------------*/
-   .portada .portada-contacto-uno .otroestilo { 
-   font-size:  1rem ;
-   }
+  /*--FORMA PARTE DEL .AZULPLATA PORQUE CAMBIE ESTILO DENTRO DE UN PARRAFO-----------------------*/
+ .portada .portada-contacto-uno .otroestilo { 
+  font-size:  1rem ;
+ }
 
-   .portada .portada-contacto-dos h6 {
-    font-size: 1.3rem;
-   }
- 
-    /*PORTADA DE CONTACTO NO BORRAR*/
-   .portada span h2{
-   color:#639a3a;
-   padding: 5px 6px 5px 7px;
-   word-spacing: -1px;
-   margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
-   font-family: 'Cabin', sans-serif;
-   font-size: 0.8rem;
-   }
+ .portada .portada-contacto-dos h6 {
+   font-size: 1.3rem;
+ }
 
-    /*NO SE SI ROBAR*/
-    .portada h2{
-    font-size: 2rem;
-    }
-
-
-   .portada h6{
-    font-size: 2rem;
-    }
-
+  /*PORTADA DE CONTACTO NO BORRAR*/
+.portada span h2{
+ color:#639a3a;
+ padding: 5px 6px 5px 7px;
+ word-spacing: -1px;
+ margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
+ font-family: 'Cabin', sans-serif;
+ font-size: 0.8rem;
+}
+    
 
     /*CONTENEDORES DE LOS TITULOS AISLADOS .......DE MEDIA QUERY 500 MAIXMO........*/
     /*--------TITULO PRINCIPAL-----------------*/
@@ -10277,113 +10620,267 @@ hr {
    
 
     /*PORTADA..............*/
-   .portada{
-    width: 100%;
-    margin: auto;
-    margin-bottom: 5%;
-    }
-
-
-    .portada-img img{
-    width: 100%;
-    }
-
-
-    /*BLOQUE DE LA PRIMER SEGMENTO DE LA LETRA QUE SE MUEVE*/
-    .portada-titulo{
-    top: 270px;
-    display: block;
-    position: absolute;
-    margin: auto;
-    }
-   
-
-   .portada-titulo h2{
-    font-size: 2.1rem;
-    }
-
-    .portada-titulo h2 i{
-    font-size: 2.3rem;
-    }
-
-    .portada-titulo h6 i{
-    font-size: 2.3rem;
-    }
-
-    .portada-titulo1 h6{
-    font-size: 2.1rem;
-    margin: auto;
-    }
-
-    .portada-titulo1{
-     top: 370px;
-     position: absolute;
-     display: block;
-     margin-left: 5%;
+    .portada{
+      display: block;
+      padding: 0 0 0 0;
      }
-    
-    .portada-img2{
-     width: 80%;
-     margin-left: 155px;
-     height: 180px;
-    }
-
+  
+     .portada .portada-img{
+       display: none;
+       visibility: hidden;
+     }
+  
+     .portada .portada-img-responsive {
+      display: block;
+      width: 100%;
+       }
+  
+  
+        /*NEUS.. ESTE ES EL CUADRO QUE ESTA DENTRO DE LA FOTO DE LA PORTADA*/
+        /*CAJA DEL MENU Y EL TITULO DE LA PAGINA QUE ESTA ENCIMA DE LA PORTADA RESPONSIVE*/
+   .portada .portada-img-responsive .portada-img3-responsive{
+     width:90%;
+     height: 38%;
+     display: block;
+     position: absolute;
+     margin-top:  -100px;
+     margin-left:  80px;
+     background-color: cadetblue;
+     border-bottom: 3px solid #7aac41;
+     border-right: 3px solid #7aac41;
+     z-index: 120;
+     }
      
-    /*PORTADA DE LA PAGINA CONTACTO CONTENEDOR DE LA 
-    PRIMERA FRASE DE LA LETRA E MOVIEMINTO PROUDLY*/
+     
+     
+     
+     /*EL MENU*/
+     .portada-img-responsive .portada-img3-responsive #menu-simple-responsive{
+       width: 100%;
+       height: 30px;
+       display: block;
+       margin-bottom: 20px;
+      }
+     
+     
+       #menu-simple-responsive ul{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        margin-bottom: 20px;
+         }
+     
+        
+       #menu-simple-responsive ul li{
+        list-style: none;
+        }
+     
+               
+     #menu-simple-responsive ul li  p{
+     font-size: 1rem;
+     color: #000000;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: 900;
+     margin-left: 8px;
+     }
+     
+     
+     #menu-simple-responsive li p i {
+     border: 1px solid #000000;
+     border-width: 0 0.8px 0.8px 0;
+     display: inline-block;
+     padding: 3px;
+     margin-right: 9px;  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
+     }
+           
+     #menu-simple-responsive .right {
+     transform: rotate(-45deg);
+     -webkit-transform: rotate(-45deg);
+     }
+           
+     
+     /*ES EL LI*/
+     .portada-img3-responsive #menu-simple-responsive p{
+       font-size: 1rem;
+       margin-left: 8px;
+       font-family: 'Times New Roman', Times, serif;
+       color: #000000;
+       }
+     
+     
+     /*ESTO ES EL TITULO*/
+     .portada .portada-img-responsive .portada-img3-responsive h1{
+     font-size: 1.2rem;
+     margin-left: 8px;
+     margin-bottom: 10px;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: 900;
+     color:#000000
+     }
+     
+     /*ESTE ES EL PARRAFO*/
+    .portada .portada-img-responsive .portada-img3-responsive  p{
+     font-size: 1.1rem;
+     margin-left: 8px;
+     font-family: 'Times New Roman', Times, serif;
+     color: #2d2d2d;
+     }
+     
+  
+       .portada .portada-img-responsive .imagen-responsive-movil{
+        display: none;
+        visibility: hidden;
+       }
+       .portada .portada-img-responsive .imagen-responsive-ipod{
+         display: block;
+       }
+  
+       .portada .portada-img-responsive  .imagen-responsive-ipod img{
+       width: 100%;
+       }
+  
+  
+     /*FIN  PORTADAS*/
+     .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo{
+     width: 100%;
+     max-width: 800px;
+     display: block;
+     position: absolute;
+     top: 120px;
+      }
+   
+  
+      /** INDEX CONTAINER SEGUNDO TITULO DE LA PORTADA QUE SE MUEVE*/
+     .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo1{
+     width: 100%;
+     max-width: 800px;
+     display: block;
+     position: absolute;
+     font-size: 0;
+     top: 170px;
+     margin: auto;
+      z-index: 99;  
+     }
+  
+  
+     .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo h2{
+     font-size: 1.8rem;
+     color: white;
+     }
+  
+     .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo h2 i{
+      font-size: 1.8rem;
+     }
+  
+     .portada .portada-img-responsive .imagen-responsive-ipod  .portada-titulo1 h6{
+     font-size: 1.4rem;
+     color: white;
+     }
+  
+     .portada .portada-img-responsive .imagen-responsive-ipod .portada-titulo1 h6 i{
+       font-size: 1.8rem;
+       color: white;
+     }
+  
+     /*portadas  PORTADA PORTADAS SE PUEDE MODIFCAR SU CAMBIAMOS EL DIBUJO*/
+    .portada-receta-img2{
+     display: block;
+     width: 20%;
+     height: 20%;
+     position: absolute;
+     margin-top:  -200px;
+      margin-left:13px;
+     margin-bottom: 40%;
+     }
+  
+      /*NUTRICION*/
+      .portada-nutricion-img2{
+      display: block;
+      width: 90%;
+      height: 90%;
+      position: absolute;
+      margin-top:  -45%;
+      margin-left:3%;
+      margin-bottom: 40%;  
+    }
+  
+  
+     /*BATIDOS-ENSALADAS*/
+     .portada-perder-img2{
+     display: block;
+     width: 90%;
+     height: 90%;
+     position: absolute;
+     margin-top:  -45%;
+     margin-left:3%;
+     margin-bottom: 40%;
+      }
+  
+       /*TURISMO GASTRONOMICOS*/
+       .portada-turismo-img2{
+       display: block;
+       width: 90%;
+       height: 90%;
+       position: absolute;
+       margin-top:  -45%;
+       margin-left:3%;
+       margin-bottom: 40%;
+       }
+      
+  
+    /*CONTENEDOR DE LA PRIMERA FRASE DE LA LETRA E MOVIEMINTO PROUDLY*/
    .portada .portada-contacto-uno{
    position: absolute;
    overflow: hidden;
    top: 34%; /*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----1*/
    left: 50px ;
    width: 45%;
-    }
-
-   /*---PORTADA CONTACTO SEGUNDO PARRAFO----*/
+   }
+  
+    /*---SEGUNDO PARRAFO----*/
    /*PROUDLY CRAFTED*/
-   .portada .portada-contacto-dos{
+    .portada .portada-contacto-dos{
    position: absolute;
    overflow: hidden;
    top: 47%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
    left: 50px ;
    width: 40%;
-   }
-
-
-  /*PORTADA CONTACTO*/
+    }
+  
   .portada .portada-contacto-tres{
-  position: absolute;
-  overflow: hidden;
-  top: 56%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
-  left: 50px ;
-  width: 40%;
-  }
-
-
-    /*PRIMER TITULO DE LA PORTADA CON LETRAS EN MOVIMIENOT*/
+   position: absolute;
+   overflow: hidden;
+   top: 56%;/*IMPORTANTE DISTANCIA DONDE QUEDA AL MOVERSE-----------------------------2*/
+   left: 50px ;
+   width: 40%;
+   }
+  
+  
+         /*PRIMER TITULO DE LA PORTADA CON LETRAS EN MOVIMIENOT*/
     .portada .portada-contacto-uno .azulplata{
     line-height: 1.3;
-    font-size: 1.5rem;
-    }
-
-    /*--FORMA PARTE DEL .AZULPLATA PORQUE CAMBIE ESTILO DENTRO DE UN PARRAFO-----------------------*/
-   .portada .portada-contacto-uno .otroestilo { 
-   font-size:  1.3rem ;
-    }
-
-   .portada .portada-contacto-dos h6 {
     font-size: 1.4rem;
     }
- 
-   /*PORTADA DE CONTACTO NO BORRAR*/
-   .portada span h2{
-   color:  #7aac41;
+  
+  
+    /*--FORMA PARTE DEL .AZULPLATA PORQUE CAMBIE ESTILO DENTRO DE UN PARRAFO-----------------------*/
+   .portada .portada-contacto-uno .otroestilo { 
+    font-size:  1rem ;
+   }
+  
+   .portada .portada-contacto-dos h6 {
+     font-size: 1.3rem;
+   }
+  
+    /*PORTADA DE CONTACTO NO BORRAR*/
+  .portada span h2{
+   color:#639a3a;
    padding: 5px 6px 5px 7px;
    word-spacing: -1px;
    margin-top: 20px; /*DISTANCIA DE SEPARACION DEL OTRO OARRAFO*/
    font-family: 'Cabin', sans-serif;
-   font-size: 0.9rem;
-   }
+   font-size: 0.8rem;
+  }
      
 
    /*TITULOS...*/
@@ -11404,7 +11901,23 @@ margin-top: 5px;
   background: white;
   }
   /*..FIN NAV ESCONDIDO...........................*/
-       
+      
+
+  /*CAJA DEL MENU Y TITULO UE ESTA DENTRO DE LA PORTADA DE LAS OTRAS PAGINAS, RECETS ETC...*/
+  .portada .portada-img .portada-img2 {
+    display: block;
+    width: 65%;
+    height: 50%;
+    margin-left:  370px;
+    margin-top: 220px;
+    background-color: orangered;
+
+  }
+
+   .portada .portada-img .portada-img2 #menu-simple{
+     display: block;
+     background-color: red;
+   }
    /*ES PARA SEPARAR EL BUSCADOR DE LA PORTADA*/
    .portada-receta-img2 {
     margin-bottom: 7.5%;
@@ -12457,7 +12970,7 @@ nav .logo-esconder .emoticon{
   /*..FIN NAV ESCONDIDO...........................*/
 
 
-
+     
       
    /*FIN ES PARA SEPARAR EL BUSCADOR DE LA PORTADA*/
            /** INDEX CONTAINER SEGUNDO TITULO DE LA PORTADA QUE SE MUEVE*/
@@ -12517,6 +13030,8 @@ nav .logo-esconder .emoticon{
   width: 45%;
    }
 
+
+    
  /*---PORTADA CONTACTO SEGUNDO PARRAFO----*/
 /*PROUDLY CRAFTED*/
 .portada .portada-contacto-dos{
@@ -12563,7 +13078,20 @@ nav .logo-esconder .emoticon{
   }
 
    
+    /*CAJA DEL MENU Y TITULO UE ESTA DENTRO DE LA PORTADA DE LAS OTRAS PAGINAS, RECETS ETC...*/
+     .portada .portada-img .portada-img2 {
+    display: block;
+    width: 65%;
+    height: 54%;
+    margin-left:  370px;
+    margin-top: 220px;
+    background-color: darkgoldenrod;
+    }
 
+     .portada .portada-img .portada-img2 #menu-simple{
+     display: block;
+     background-color: blue;
+     }
  
    /*CONTAINER DE TODO EL CONTENIDO.....ESTA ARRIBA CON EL WRAPPER.........CONTAINER........... */
    .titulo-principal{   
@@ -13507,7 +14035,20 @@ nav .logo-esconder .emoticon{
 
   /*..FIN NAV ESCONDIDO...........................*/
   /*..FIN NAV ESCONDIDO...........................*/
-
+    /*CAJA DEL MENU Y TITULO UE ESTA DENTRO DE LA PORTADA DE LAS OTRAS PAGINAS, RECETS ETC...*/
+    .portada .portada-img .portada-img2 {
+      display: block;
+      width: 65%;
+      height: 54%;
+      margin-left:  370px;
+      margin-top: 220px;
+      background-color: green;
+      }
+  
+       .portada .portada-img .portada-img2 #menu-simple{
+       display: block;
+       background-color: greenyellow;
+       }
 
 
     /*CONTENEDORES DE LOS TITULOS AISLADOS .......DE MEDIA QUERY 500 MAIXMO........*/

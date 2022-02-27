@@ -98,18 +98,19 @@
       <!--------------------------CONTENIDO---------------------------------------------->
      
 
-        <!-----SUBCATEGORIAS MENU-------<td id="left">&#8592;</td>-- id="right">&#8594---------------------->
-  
-          <!--------------CAJA QUE SE DESLIZA SCROLL-----------------------------------------------4----------->
-           <div class="caja-texto-slider">         
+      <!-----SUBCATEGORIAS MENU-------<td id="left">&#8592;</td>-- id="right">&#8594---------------------->
+      <!--------------CAJA QUE SE DESLIZA SCROLL-----------------------------------------------4----------->
+      <div class="caja-texto-slider">         
+
             <!--TITULO DE LAS CATEGORIAS-------------------------------------3--->
              <div class= "endfor">
+
                 <!---------------------&lt;----------FLECHA LEFT NAV----------------------2------->
                <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
+
+               
                 <!------------------------------------------------------1------>
                  <ul class="scrollmenu">    
-
-
 
                     {% for categoria in categorias %}
                     {% if not node.is_leaf_node %}
@@ -123,6 +124,7 @@
                     {% endfor %}
                     {% endif %}
                     {% endfor %}
+
                  </ul>
                 <!------------------------FIN UL SCROLLMENU-----&gt;--------------------------1----->
                 <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 

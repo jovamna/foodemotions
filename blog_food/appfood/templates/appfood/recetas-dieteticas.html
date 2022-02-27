@@ -6,13 +6,18 @@
 
 
        {% block content %}
+
+
         {% block portada %}
         <div class="portada">
+
+
           <!-- IMAGEN-->
         <section class="portada-img">
-                  <img src="{% block imagen %}{% static 'appfood/img/slider/1300-345zumo.jpg' %}{% endblock %}"
-                              class="slider__img">
-                             <!-- FIN IMAGEN-->         
+        <img src="{% block imagen %}{% static 'appfood/img/slider/1300-345zumo.jpg' %}{% endblock %}"  class="slider__img">
+        <!-- FIN IMAGEN-->  
+
+                <!---MENU SIMPLE DE LA PAGINA --->       
                 <div class="portada-img2">  
 
                 <!-------------------------------------------------------->
@@ -37,17 +42,18 @@
                     </div>   
                   <!-------------------------------------------------------------------->
 
+                  <h1>RECETAS DIETETICAS</h1>
+                  <p>comer sano y delicioso es posible!</p>
+                </div>               
+                <!-- FIN PORTADA IMG2-->
+          </section>
+          <!---FIN SECTION PORTADA IMG-->
 
-                            <h1>RECETAS DIETETICAS</h1>
-                            <p>comer sano y delicioso es posible!</p>
-            </div>               
-                           <!-- FIN LETRAS-->
-    </section>
 
    <!------------------PORTADA IMAGEN RESPONSIVE MOVIL Y IPDO--------------------------------------------------------------------------->
    <section class="portada-img-responsive">
-            <!----------IMAGEN-----DEL MOVIL---------------->
-            <div class="imagen-responsive-movil">
+              <!----------IMAGEN-----DEL MOVIL---------------->
+              <div class="imagen-responsive-movil">
               <img src="{% block img %}{% static 'appfood/img/slider/640-450recetadietaresponsivemovil.jpg' %}{% endblock  %}" >
               </div>
              <!----IMAGEN DEL IPOD------>
@@ -56,28 +62,28 @@
               </div>
               <!-- FIN IMAGEN-------------------->
 
-        <!-- LETRAS----------------------->
-        <div class="portada-img3-responsive">
-               <div id="menu-simple-responsive">
+             <!-- LETRAS----------------------->
+             <div class="portada-img3-responsive">
+                
+                <!--MENU SIMPLE RESPONSIVE---->
+                 <div id="menu-simple-responsive">
+
+                  <!----UL SCROLL--->
                   <ul>
                   <li>
-                   <a href="{% url 'appfood:index' %}"  >
+                  <a href="{% url 'appfood:index' %}"  >
                   <p>Inicio<i class="right"></i></p>
                   </a>
                   </li>
                   <li>
-                 <a href="{% url 'appfood:recetas-dieteticas' %}"> 
-                 <p>Recetas Dieteticas <i class="right"></i></p>
-                </a>
-                </li>
-                <li >
-                {% for receta in post_receta %}
-                <p>{{ receta.kategory }}<i class="right"></i></p></em>
-                {% endfor %}
-                </li>
-             </ul>
-          </div>
-
+                  <a href="{% url 'appfood:recetas-dieteticas' %}"> 
+                  <p>Recetas Dieteticas <i class="right"></i></p>
+                  </a>
+                  </li>
+                  </ul>
+                  <!---FIN UL SCROLL--->
+                 </div>
+                <!--FIN MENU RESPONSIVE--->
 
               <h1>RECETAS DIETETICAS</h1>
               <p>comer sano y delicioso es posible!</p>
@@ -97,46 +103,61 @@
 
               
 
-
-
-
-         
-
-
    
     
         <!---DIV DE 4 POST DE PERDERPESO--->  
         {% block imagenes-categorias %} 
          <div class="categorias-subcategorias">
-                   <!-- SUBCATEGORIAS ---->
-                  <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
+
+            <!--caja-----------------------------------2--->
+            <div class= "endfor">  
+
+
+              <!-- SUBCATEGORIAS ---->
+              <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
 
                   <!----------------------------------------------------------->
+                  <ul class= "scrollmenu">
                     {% load mptt_tags %} 
                     {% for category in categories %} 
                     {% if not node.is_leaf_node %}  
-                    <div class= "scrollmenu">
+                            <li>
+                            <!--------------------------------------------------->
                             <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
                             {% if category.image %}
                             <img src ="{{category.image.url}}" style="width:100%">
-                            {% endif %}
-                             </a>
-                      
-                     
+                                    
                             <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
-                            <h1>{{ category.name|linebreaksbr|truncatechars:31}}</h1>
+                            <h1>{{ category.name|linebreaksbr|truncatechars:33}}</h1>
                             </a>
                             <!------CATEGORIA RESPONSIVE--------------------->
                             <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
-                            <h2>{{ category.name|linebreaksbr|truncatechars:12 }}</h2>
+                            <h2>{{ category.name|linebreaksbr|truncatechars:33}}</h2>
                             </a>
+
+
+
+                            {% endif %}
+                            </a>
+                            <!--------------------------------------------------->
+                     
+                    
+                            </li>
                               
-                    </div>
+                   
                       {% endif %}
-                    {% endfor %}
-                    <!-----FIN SUBCATEGORY-------------------------------------------------> 
-                <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 
-        </div>
+                      {% endfor %}
+                      </ul>
+                       <!--FIN CAJA SCROLLMENU------------------------1----> 
+
+             <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 
+             <!------FLECHA------------------------------------>
+
+             </div>
+             <!---------------endfor----------------------------2--->
+   
+       </div>
+       <!--FIN CAJA DE CATEGORIAS DE RECETAS------ -->
            {% endblock imagenes-categorias %} 
 
 

@@ -64,31 +64,49 @@
               class="slider__img">
                 </div>
               <!-- FIN IMAGEN-->
-              <!-- LETRAS-->
-              <div class="portada-img3-responsive">
-              <div id="menu-simple-responsive">
-                     <ul class ="scrollresponsive">
-                  <li>
+
+
+          
+    <!-- ---CAJA DEL TITULO MENU DENTRO DE LA PORTADA-------->
+    <div class="portada-img3-responsive">
+
+          <!--------------------------------------------->
+          <div id="menu-simple-responsive">
+
+
+              <ul class ="scrollresponsive">
+              <li>
               <a href="{% url 'appfood:index' %}"  >
-                  <p>Inicio<i class="right"></i></p>
-                  </a>
-                </li>
-                <li>
-                <a href="{% url 'appfood:noticias-turismo-gastronomico' %}"> 
-                <p>Turismo Gastronomico <i class="right"></i></p>
-                </a>
-                </li>
-                <li >
-                {% for receta in post_receta %}
-                <p>{{ receta.kategory }}<i class="right"></i></p></em>
-                {% endfor %}
-                </li>
-            </ul>
+              <p>Inicio<i class="right"></i></p>
+              </a>
+              </li>
+
+              <li>
+              <a href="{% url 'appfood:noticias-turismo-gastronomico' %}"> 
+              <p>Turismo Gastronomico <i class="right"></i></p>
+              </a>
+              </li>
+              </ul>
+
+              <!---NOMBRE DE LA CATEGORIA--------------->
+              {% for receta in post_receta %}
+              <p>{{ receta.kategory }}<i class="right"></i></p></em>
+              {% endfor %}
+             
+
+
         </div>
+        <!------------------------------------------------------------>
+
+
               <h1>NOTICIAS Y TURISMO GASTRONOMICO</h1>
               <p>comer sano y delicioso es posible!</p>
               <!-- <img src="{% block imagen7 %}{% static 'appfood/img/foodemotions.png' %}{% endblock  %}" class="slider__img">--->
               </div>
+
+
+
+
       </section>
 
 
