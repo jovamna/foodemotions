@@ -2271,7 +2271,7 @@ display: block;
    font-size: 0.9rem;
    text-transform: uppercase;
    letter-spacing: 1px;
-   margin-top: 5px;
+   margin-top: 3px;
    }
 
 
@@ -2298,6 +2298,7 @@ display: block;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     background-color: #fff;
+    overflow-y: scroll;
     }
 
     nav .nav ul li{
@@ -2317,6 +2318,7 @@ display: block;
     text-transform: lowercase;
    margin-left: 6px;
    padding-top: 2px;
+   height: 40px;
     }
 
 

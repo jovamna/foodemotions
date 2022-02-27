@@ -787,7 +787,7 @@
    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
    background-color: #fff;
    overflow-y: scroll;
-   z-index: 200;
+   z-index: 20;
    visibility: visible;
    box-sizing: border-box;
   
@@ -803,9 +803,10 @@
   display: flex;
   flex-direction:row;
   justify-content: space-between;
-  width: 98%;
+  width: 95%;
   visibility: visible;
-  height: 80px;
+  height: 100%;
+  max-height: 80px;
    border-bottom: 1px solid #2d2d2d;
 
   }
@@ -944,7 +945,9 @@
 
   
     /* UL  */
-    header  nav .nav{
+   
+     /* UL  */
+     header  nav .nav{
       width: 90%; 
       height: 99%;
       display: flex;
@@ -954,37 +957,31 @@
        z-index: 99; 
       }
 
-      
-           /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-        nav .nav li{
-          width: 100%;
-          display: block;
-          list-style: none;
-          height: 35px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO*/
-          margin-bottom: 10px;
-          cursor:pointer;
-          border-bottom: 1px solid #aaaaaa;
-          }
-          
+    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav li{
+   list-style: none;
+   height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+   margin-left: 10px;
+   margin-bottom: 10px;
+   cursor:pointer;
+   border-bottom: 1px solid #2d2d2d;
+    }
 
-      nav .nav li a {
-      z-index: 100;
-      height: 30px;
-      color: #2d2d2d;
-      font-weight: 520;
-      font-size: 1rem;
-      text-transform: lowercase;
-      letter-spacing: 1px;
-      font-family:  sans-serif;
-      padding-top: 0;
-      margin-top: 0;
-      background-color: #fff;
-      }
-        
-      /*IMPORTANTE*/
-      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-      /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
+   nav .nav li a {
+   z-index: 100;
+   height: 24px;
+   color: #2d2d2d;
+   font-weight: 520;
+   font-size: 0.9rem;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin-top: 3px;
+   }
+
+
+   /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav .nav li:hover > ul {
       background-color:  #fff;
       width: 100%;
       max-width: 500px;
@@ -993,23 +990,22 @@
       z-index: 598;
       display: flex;
       flex-direction: column;
-      }
-    
-      
-  
-    
-      nav .nav ul{
-        display: none;
-        width: 160px;
-        min-width: 160px;
-        position: absolute;
-      background-color: #f1f1f1;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-      }
-    
-    
-    nav .nav  ul li {
+    }
+
+
+    nav .nav ul {
+      display: none;
+      width: 160px;
+      min-width: 160px;
+      position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: #fff;
+    overflow-y: scroll;
+    }
+
+    nav .nav ul li{
       float: left;
       background-color: rosybrown;
       width: 100%;
@@ -1017,15 +1013,16 @@
         height: 40px;
     border-bottom: 1px solid #fefefe;
     }
-        
-      
-    nav .nav li  ul li a{
-      font-size: 1rem;
-      display: block;
-      width: 100%;
-      text-transform: lowercase;
-     margin-left: 6px;
-     padding-top: 2px;
+
+
+   nav .nav li ul li a{
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    text-transform: lowercase;
+   margin-left: 6px;
+   padding-top: 2px;
+   height: 40px;
     }
 
 
