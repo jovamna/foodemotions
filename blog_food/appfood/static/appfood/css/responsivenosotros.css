@@ -986,6 +986,7 @@
       width: 100%;
       max-width: 500px;
       height: 100%;
+      max-height: 300px;
       margin-left: 6px;
       z-index: 598;
       display: flex;
@@ -994,15 +995,18 @@
 
 
     nav .nav ul {
-      display: none;
-      width: 160px;
-      min-width: 160px;
-      position: absolute;
+    display: none;
+    width: 100%;
+    max-width: 200px;
+    min-width: 160px;
+    height: 100%;
+    max-height:  310px;
+    position: absolute;
     background-color: #f1f1f1;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 600;
     background-color: #fff;
-    overflow-y: scroll;
+   
     }
 
     nav .nav ul li{
@@ -1010,7 +1014,7 @@
       background-color: rosybrown;
       width: 100%;
         max-width: 240px;
-        height: 40px;
+        height: 36px;
     border-bottom: 1px solid #fefefe;
     }
 
@@ -1022,7 +1026,7 @@
     text-transform: lowercase;
    margin-left: 6px;
    padding-top: 2px;
-   height: 40px;
+   height: 36px;
     }
 
 
