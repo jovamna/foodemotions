@@ -1340,11 +1340,11 @@ margin-top: 18px;
       /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS..................................................*/
    /* NO PONER DISPLAY FLEX NI FLEX DIRECCION */
     .categorias-subcategorias{
-    display: block;
-    position: relative;
-    float: left;
-    width: 100%;
-    height: 100%;
+      display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
     margin-top: 98px;
 
     }
@@ -1360,7 +1360,7 @@ margin-top: 18px;
       }
   
 
-    .categorias-subcategorias .endfor .scrollmenu{
+    .categorias-subcategorias .endfor .scroll{
     display: flex;
     flex-direction: row;
     width:  100%;
@@ -1368,44 +1368,43 @@ margin-top: 18px;
     max-height: 170px;
     overflow-x: visible;
     padding: 8px 2px;
-
     display: flex;
     flex-direction: row;
     align-items: center;
-    height:140px;
- 
-   
     border: 2px solid #fff;
-    overflow-x: auto;
-    overflow-y: hidden;
-    width:auto;
-  
+    overflow: hidden;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     flex-grow: nowrap;
-     padding:1rem;
       }
    
-      .categorias-subcategorias .endfor .scrollmenu li{
-    
-        margin-bottom: 20px;
-        text-decoration: none;
-        list-style: none;
-        border: 0;
+      .categorias-subcategorias .endfor .scroll li{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 90px;
+      height: 100%;
+      max-height: 120px;
+      margin-bottom: 20px;
+      text-decoration: none;
+      list-style: none;
+      border: 0;
+      margin-right: 10px;
+
       }
 
-      .categorias-subcategorias .endfor .scrollmenu img{
+      .categorias-subcategorias .endfor .scroll img{
      width: 100%;
      max-width: 70px;
      height: 100%;
-     max-height: 70px;
-     margin: auto;
+     max-height:100%;
+   
      margin-right: 10px;
      }
 
 
        /*..pre-line en whie-space..*/
-       .categorias-subcategorias .endfor .scrollmenu li a h1{
+       .categorias-subcategorias .endfor .scroll li a h1{
         width: 100%;
         max-width: 70px;
         white-space: initial;   
@@ -1472,7 +1471,7 @@ margin-top: 18px;
   transform: translateY(-50%);
    }
       /*TITULO CATEGORIA SLIDER RESPONSIVE..*/
-      .categorias-subcategorias .scrollmenu a h2{
+      .categorias-subcategorias .scroll a h2{
       display: none;
       }
  
