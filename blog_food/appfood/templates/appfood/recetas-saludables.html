@@ -107,20 +107,24 @@
       <!-- CAJA DE CATEGORIAS DE RECETAS----------------------->
       <div class="categorias-subcategorias"> 
 
+
+        <!---------------------&lt;----------FLECHA LEFT NAV----------------------2------->
+        <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
+
         <!--caja-----------------------------------2--->
         <div class= "endfor">  
 
-    
+     
             
                 <!--caja--SCROLLMENU---------------------------------1--->
-                <ul class= "scroll">
+                <ul class= "ulhorizontal">
                 
               
 
                <!--------------------------------------------------->
                {% for kategory in kategories %}
                 {% if not node.is_leaf_node %}  
-                <li>
+                <li class="lihorizontal">
    
 
                 {% if kategory.image %}
@@ -145,7 +149,7 @@
            
           </ul>
        
-
+          
 
         <!--FIN CAJA SCROLLMENU------------------------1----> 
 
@@ -154,6 +158,9 @@
 
              </div>
              <!---------------endfor----------------------------2--->
+
+                 <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 
+              <!--------------------------FLECHA--------------------------.-----2---->
    
        </div>
        <!--FIN CAJA DE CATEGORIAS DE RECETAS------ -->
@@ -246,7 +253,21 @@
 
            
 
+    <script>
 
+    $(document).ready(function(){
+  var margin = parseInt($(".lihorizontal").css("margin-right").replace("px",""));
+  var width = parseInt($(".lihorizontal").width()) ;
+  var widthitem = width + margin; 
+  console.log(widthitem)
+    $(".arrow-left").click(function(){
+        $(".endfor").animate({scrollLeft: "-="+widthitem});
+    });
+    $(".arrow-right").click(function(){
+        $(".endfor").animate({scrollLeft: "+="+widthitem});
+    });        
+});
+    </script>
 
 
    {% endblock content %}

@@ -1351,18 +1351,9 @@ margin-top: 18px;
   
   
 
-      .categorias-subcategorias   .endfor {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      height: 100%;
-      max-height: 170px;
-      }
-  
 
-    .categorias-subcategorias .endfor .scroll{
-    display: flex;
-    flex-direction: row;
+    .categorias-subcategorias .endfor {
+  
     width:  100%;
     height: 100%;
     max-height: 170px;
@@ -1377,8 +1368,15 @@ margin-top: 18px;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     flex-grow: nowrap;
       }
+
+
+      .categorias-subcategorias .endfor .ulhorizontal{
+        display: flex;
+        flex-direction: row;
+      }
+
    
-      .categorias-subcategorias .endfor .scroll li{
+      .categorias-subcategorias .endfor .ulhorizontal .lihorizontal{
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -1393,22 +1391,26 @@ margin-top: 18px;
 
       }
 
-      .categorias-subcategorias .endfor .scroll img{
+      .categorias-subcategorias .endfor .ulhorizontal .lihorizontal img{
      width: 100%;
      max-width: 70px;
      height: 100%;
-     max-height:100%;
+    
    
      margin-right: 10px;
      }
 
 
        /*..pre-line en whie-space..*/
-       .categorias-subcategorias .endfor .scroll li a h1{
+       .categorias-subcategorias .endfor .ulhorizontal .lihorizontal a h1{
         width: 100%;
         max-width: 70px;
         white-space: initial;   
       font-size: 0.8rem;
+      }
+
+      .categorias-subcategorias .endfor .ulhorizontal .lihorizontal a h2{
+       display: none;
       }
 
     /*CAJA DE LA FLECHA..*/

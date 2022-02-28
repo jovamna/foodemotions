@@ -114,14 +114,15 @@
 
 
               <!-- SUBCATEGORIAS ---->
-         
+                <!---------------------&lt;----------FLECHA LEFT NAV----------------------2------->
+               <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
 
                   <!----------------------------------------------------------->
-                  <ul class= "scroll">
+                  <ul class= "ulhorizontal">
                     {% load mptt_tags %} 
                     {% for category in categories %} 
                     {% if not node.is_leaf_node %}  
-                            <li>
+                            <li  class ="lihorizontal">
                             <!--------------------------------------------------->
                             <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
                             {% if category.image %}
@@ -152,6 +153,8 @@
 
      
              <!------FLECHA------------------------------------>
+                      <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 
+              <!--------------------------FLECHA--------------------------.-----2---->
 
              </div>
              <!---------------endfor----------------------------2--->
