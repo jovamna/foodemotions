@@ -44,8 +44,29 @@ nav .nav li:hover > ul {
 
 
 /*................................*/
+.categorias-subcategorias .endfor .scrollmenu li a img{
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  height: 100px;
+  }
 
-
+     /*ESTO ESCONDE LA BARRA QUE DESPLAZA*/
+      /* WebKit */
+      /*-- height: 10px;*/
+      .categorias-subcategorias .endfor .scrollmenu::-webkit-scrollbar { 
+        width: 0px;
+        background: transparent;
+        }  
+   /*ESTO ESCONDE LA BARRA QUE DESPLAZA*/
+      /* WebKit */
+      /*-- height: 10px;*/
+      .categorias-subcategorias .endfor .scrollmenu::-webkit-scrollbar { 
+        width: 0px;
+        background: transparent;
+        }  
+    
+/*......................*/
 
 *{
   margin:0;

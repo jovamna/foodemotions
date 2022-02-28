@@ -319,33 +319,35 @@
                 <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}" >Inicio </a>      
                 </li>
                 
-                <li> 
-                <a class="{% active 'appfood:recetas-saludables' %}">
+              <li> 
+                  <a class="{% active 'appfood:recetas-saludables' %}">
                    Recetas 
                   <i class ="fa fa-caret-down"></i>
-                 </a>
+                  </a>
+
+
                         <ul>  
-                     
                         <li>
-                        
-                          <a href="{% url 'appfood:recetas-saludables' %}">Todas las recetas</a>
-                        
-                          </li>
+                        <a href="{% url 'appfood:recetas-saludables' %}">Todas las recetas</a>
+                        </li>
 
-
+                      <li>
                         {% load mptt_tags %} 
                         <!-- LAS CATEGORIAS------->
                         {% for kategory in kategories %}
-                        <li>
+                     
                         <a href="/recetas-saludables/categoria/{{kategory.slug }} "style="text-decoration: none">
                         {{ kategory.name }}</a>
-                       </li>
+                      
                        {% endfor %}
+                       </li>
+
+
                       </ul>
                 </li>
 
                 
-                <li >
+                <li>
                 <a class="{% active 'appfood:recetas-dieteticas' %}" href="{% url 'appfood:recetas-dieteticas' %}">Recetas dieteticas</a>
                 </li>
 
@@ -372,8 +374,7 @@
               </a> 
                 
 
-                <ul>
-               
+              <ul>
                <li> 
                 <a class="{% active 'appcontact:contacto' %}"  href="{% url 'appcontact:contacto' %}">Contacto
                 </a> 
@@ -384,6 +385,7 @@
                 </a> 
                 </li>
                 </ul>
+
 
                 
                 </li>  

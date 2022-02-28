@@ -110,43 +110,48 @@
         <!--caja-----------------------------------2--->
         <div class= "endfor">  
 
-            <!--FLECHA--->
-            <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
+    
             
                 <!--caja--SCROLLMENU---------------------------------1--->
                 <ul class= "scrollmenu">
-                {% for kategory in kategories %}
-                {% if not node.is_leaf_node %}       
+                
               
 
                <!--------------------------------------------------->
-                {% if kategory.image %}
+               {% for kategory in kategories %}
+                {% if not node.is_leaf_node %}  
                 <li>
-                <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
-                <img src="{{kategory.image.url}}"  style="width:100%">
-                
+   
 
-               <!--<div class="nombredesubcategoria">-->
+                {% if kategory.image %}
                 <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
-                <h1>{{ kategory.name }}</h1> </a>
+                <img src="{{kategory.image.url}}" >
+                </a>
+                  {% endif %}
+
+               <!----------------------------------->
+                <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
+                <h1>{{ kategory.name }}</h1> 
+                </a>
+
+
                 <!------CATEGORIA RESPONSIVE--------------------->
                  <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
                 <h2>{{ kategory.name}}</h2>
                 </a>
                 </li>
-              <!--</div>--------------------------------------->
-           
                 {% endif %}
-
-
-
-             {% endif %}
-          {% endfor %}
+                {% endfor %}
+              <!----------------------------------------->
+           
+           
           </ul>
        
+
+
         <!--FIN CAJA SCROLLMENU------------------------1----> 
 
-             <div class="rightNav"><span class="arrow-right">&#129122;</span></div> 
+         
              <!------FLECHA------------------------------------>
 
              </div>
