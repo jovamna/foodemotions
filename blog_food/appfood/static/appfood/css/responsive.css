@@ -2083,7 +2083,7 @@ display: block;
     display: flex;
     flex-direction: column;
     position: fixed;
-    width: 99.3%;
+    width: 99.9%;
     height: 100%;
     margin: auto;
     top:0;
@@ -2285,7 +2285,7 @@ display: block;
    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
    nav .nav li:hover  ul {
-    display: block;
+    display: none;
     opacity:1;
     
     }
@@ -2293,7 +2293,7 @@ display: block;
 
      nav .nav li ul {
       display: none;
-      background:#011826;
+      background:#fff;
       position: static;
       width: 100%;
       white-space: initial;
@@ -2302,6 +2302,33 @@ display: block;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
     }
+
+
+     #submenu{
+       display: block;
+       margin-left: 10px;
+     }
+   #submenu h1{
+     font-size: 1.5rem;
+     color: #000000;
+     font-weight: 800;
+     font-family: 'Times New Roman', Times, serif;
+   }
+
+   #submenu h2{
+    font-size: 1.4rem;
+    color: #000000;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+
+   #submenu ul{
+     display: flex;
+     flex-direction: column;
+     margin-top: 30px;
+     float: left;
+   }
 
     .subnav.fullwidth{
       position: absolute;
@@ -2335,14 +2362,16 @@ display: block;
       display:block;
       overflow: hidden;
       border-bottom: 1px solid rgba(255,255,255,.5);
-      width: 400px;
+      width: 350px;
+      margin-bottom: 0.5px;
     }
 
 
     nav .nav li ul li a{
      font-size: 0.9rem;
      display: block;
-  
+      text-transform: lowercase;
+      padding-top: 1px;
       }
   
      /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
@@ -3349,13 +3378,30 @@ width: 100%;
 
 
       .categorias-subcategorias  .endfor   .ulhorizontal {
-        width: 100%;
+        width: 1500px;
         height: 100%;
         display: flex;
         flex-direction: row;
         }
     
-
+        span.arrow-left,span.arrow-right{
+          display: block;
+          position: absolute;
+          background-color: #555;
+          top: 40px;
+          color:white;
+          z-index: 2;
+          cursor: pointer;
+      }
+      span.arrow-left{
+          left: 0px;
+      }
+      span.arrow-right{
+          right: 0px;
+      }
+      span.arrow-left:hover,.offer-pg span.arrow-right:hover{
+          background-color: #333;
+      }
      
 
     .categorias-subcategorias .endfor .ulhorizontal  .lihorizontal {

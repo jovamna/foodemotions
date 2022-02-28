@@ -126,10 +126,12 @@ def recetas_saludables(request):
 def recetas(request):
     recetas = Receta.objects.all()
     kategory = Kategory.objects.all()  #SALE TODO!
+    kategories = Kategory.objects.filter(parent=None) #SALEN SOLO LAS CATEGORIAS
 
     context = {
         'recetas': recetas,
         'kategory': kategory,
+        'kategories': kategories,
     }
 
     print(recetas)

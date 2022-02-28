@@ -15,22 +15,23 @@
 
 
    <div id="submenu">
-   {% for receta in recetas %}
- <ul>  
-                      {{ kategory.name }}
-                       {{ receta.kategory }}
-                        {{ kategory.receta }}
+   <h1>Recetas Saludables</h1>
+    <h2> <a href="{% url 'appfood:recetas-saludables' %}">Ver Todas las recetas</a></h2>
 
+             <ul>           
+         
+                    {% for kategory in kategories %}    
                         <!-- LAS CATEGORIAS------->
-                        {% for kategory in kategories %}
+                     
                         <li>
 
                         <a href="/recetas-saludables/categoria/{{kategory.slug }} "style="text-decoration: none">
-                        {{ kategory.name }}</a>
+                          {{ kategory.name }}</a>
+                          
                        </li>
-                       {% endfor %}
+                    {% endfor %}
                       </ul>
-   {% endfor %}
+  
 
 
   </div>
@@ -38,4 +39,7 @@
   
     {% endblock content %}
 
-
+ {% block sexto %}{% endblock sexto %}
+  {% block septimo %}{% endblock septimo %} 
+{% block texto-animado %}{% endblock texto-animado %}
+{% block footer %} {% endblock footer %}

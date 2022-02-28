@@ -798,8 +798,8 @@
    display: flex;
    flex-direction: column;
    position: fixed;
-   width: 100%;
-   max-width: 640px;
+   width :  99.6%;
+  
    height: 100%;
    margin: auto;
    top:0;
@@ -969,7 +969,6 @@
      header  nav .nav{
       width: 90%; 
       height:  100%;
-      max-height: 350px;
       display: flex;
       flex-direction: column;
       margin-top: 1px;
@@ -1000,53 +999,66 @@
    
       /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
       /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-       nav .nav li:hover > ul {
-         width: 100%;
-         max-width: 320px;
-         height: 100%;
-         margin-left: 5px;
-          z-index: 300;
-         display: flex;
-         flex-direction: column;
-       }
-   
-   
-       nav .nav ul {
-         display: none;
-         width: 100%;
-         max-width: 319px;
-         min-width: 160px;
-         height: 100%;
-         position: absolute;
-         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-         background-color: #fff;
+      nav .nav li:hover  ul {
+        display: block;
+        opacity:1;
         
-         }
+        }
      
-         nav .nav ul li{
-         float: left;
-         background-color: rosybrown;
-         width: 100%;
-         max-width:320px;
-         height: 32px;
-         border-bottom: 1px solid #fefefe;
-         margin-bottom: 0.4px;
-       
-         }
-     
-     
-         nav .nav li ul li a{
-         font-size: 1rem;
+    
+    
+         nav .nav li ul {
+          display: none;
+          background:#fff;
+          position: static;
+          width: 100%;
+          white-space: initial;
+          z-index:1000;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+    
+        .subnav.fullwidth{
+          position: absolute;
+          right: -15px;
+          top: 58px;
+          width: 100vw;
+          background: #F6F4F4;
+          padding: 48px 64px 48px;
+          box-shadow: inset 0 1px 0 #e2e3df, 0 3px 6px rgba(113,111,111,.7);
+          -webkit-transform: translateX(0);
+          -moz-transform: translateX(0);
+          -ms-transform: translateX(0);
+          -o-transform: translateX(0);
+          transform: translateX(0);
+          -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+          -moz-transition: opacity .3s 0s, visibility 0s 0s;
+          transition: opacity .3s 0s, visibility 0s 0s;
+          /* box-shadow: 1px 2px 5px #7D7D7D; */
+      }
+      .row{margin:0}
+      .top-bar .logo {
+          width: 150px;
+      }
+      .subnav li{float:none; display: block;}
+    
+    
+    
+    
+    
+        nav .nav li ul li{
+          display:block;
+          overflow: hidden;
+          border-bottom: 1px solid rgba(255,255,255,.5);
+          width: 350px;
+        }
+    
+    
+        nav .nav li ul li a{
+         font-size: 0.9rem;
          display: block;
-         width: 100%;
-         text-transform: lowercase;
-         margin-left: 6px;
-         padding-top: 2px;
-         height: 31px;
-         background-color: #fff;
-         }
-     
-
+          }
 
 
   /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
