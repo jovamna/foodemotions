@@ -59,10 +59,11 @@
               <!-- FIN IMAGEN-RESPONSIVES DE MOVIL Y IPOD -->
               <!--CONTAINER QUE ESTA ENCIMA DE LA FOTO LETRAS-->
               <div class="portada-img3-responsive">
+              
               <div id="menu-simple-responsive">
                   <ul class ="scrollresponsive">
                   <li>
-                  <a href="{% url 'appfood:index' %}"  >
+                  <a href="{% url 'appfood:index' %}">
                   <p>Inicio<i class="right"></i></p>
                   </a>
                   </li>
@@ -70,11 +71,6 @@
                   <a href="{% url 'appfood:plan-comidas-saludables' %}"> 
                   <p>Plan de Comidas Saludables <i class="right"></i></p>
                   </a>
-                  </li>
-                  <li >
-                   {% for receta in post_receta %}
-                   <p>{{ receta.kategory }}<i class="right"></i></p></em>
-                   {% endfor %}
                   </li>
                   </ul>
                </div>
@@ -108,7 +104,7 @@
                 <!---------------------&lt;----------FLECHA LEFT NAV----------------------2------->
                <div class="leftNav"><span class="arrow-left">&#129120;</span></div> 
 
-               
+
                 <!------------------------------------------------------1------>
                  <ul class="scrollmenu">    
 

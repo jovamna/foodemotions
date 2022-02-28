@@ -1,3 +1,52 @@
+
+nav .nav li:hover > ul {
+  display: flex;
+ flex-direction: column;
+  width: 100%;
+  visibility: visible; 
+ z-index: 800;
+  }
+
+
+   nav .nav ul {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+    position: absolute;
+  margin-top: 0.5px;
+  visibility: hidden;
+  background-color:  #fff;
+   
+  height: 500px;
+   overflow-y: scroll;
+  }
+
+  nav .nav ul li{
+  width: 100%;
+  max-width:  350px;
+  margin-left: 2px;
+  margin-bottom:  0.5px;
+  margin-top: -1px;
+ border-bottom: 1px solid #fefefe;
+  }
+
+
+  nav .nav li ul li a{
+   font-size: 0.9rem;
+   display: block;
+  width: 100%;
+  text-transform: lowercase;
+  margin-left: 6px;
+  padding-top: 1px;
+   margin: auto;
+    }
+
+
+
+/*................................*/
+
+
+
 *{
   margin:0;
   padding:0;
