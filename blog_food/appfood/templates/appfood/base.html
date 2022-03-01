@@ -318,33 +318,54 @@
                 <li> 
                 <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}" >Inicio </a>      
                 </li>
-                
-              <li> 
+
+
+                <!------------------------------------------------------->
+              <li class="li-escondido"> 
                   <a class="{% active 'appfood:recetas-saludables' %}"  a href="{% url 'appfood:recetas' %}">
                    Recetas 
                   <i class ="fa fa-caret-down"></i>
                   </a>
 
 
-                        <ul>  
-                        <li>
-                        <a href="{% url 'appfood:recetas-saludables' %}">Todas las recetas</a>
-                        </li>
-                          {% load mptt_tags %} 
-                        <!-- LAS CATEGORIAS------->
-                        {% for kategory in kategories %}
-                      <li>
-                    
-                     
-                        <a href="/recetas-saludables/categoria/{{kategory.slug }} "style="text-decoration: none">
-                        {{ kategory.name }}</a>
-                      
-                      
-                       </li>
- {% endfor %}
+                 
 
-                      </ul>
                 </li>
+
+
+                <!----------------------------------------------------------------------------->
+                 <li class="li-ocultar"> 
+                  <a class="{% active 'appfood:recetas-saludables' %}"  a href="{% url 'appfood:recetas-saludables' %}">
+                   Recetas 
+                  <i class ="fa fa-caret-down"></i>
+                  </a>
+
+
+                      <ul class="submenu-responsive">  
+
+
+                      <li>
+                      <a href="{% url 'appfood:recetas-saludables' %}">Todas las recetas</a>
+                      </li>
+                      
+                      {% load mptt_tags %} 
+                      <!-- LAS CATEGORIAS------->
+                      {% for kategory in kategories %}
+                      <li>
+                      <a href="/recetas-saludables/categoria/{{kategory.slug }} "style="text-decoration: none">
+                      {{ kategory.name }}</a>
+                      </li>
+                     {% endfor %}
+
+
+                    </ul>
+
+
+                </li>
+
+
+
+                <!------------------------------------------------------------------------------------>
 
                 
                 <li>
