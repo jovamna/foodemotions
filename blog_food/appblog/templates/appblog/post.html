@@ -38,21 +38,26 @@
 
      {% block content %}
         <div class="primera-columna">
-        {% for post in posts %}
-        <!-- caja 1-------------------------->
-        <div class="primer-articulo">
-          <!-- TITULO 1-----------------> 
-          <h1>   {{post.title}} </h1>
-           <p> {{post.description}}</p>  
-          <!-- DESCRIPCION--------------->               
-      </div>
-        <div class= "fecha">
-         <p>{{post.publish}}</p> 
-         </div>
+
+             {% for post in posts %}
+             <!-- caja 1-------------------------->
+             <div class="primer-articulo">
+              <!-- TITULO 1-----------------> 
+             <h1>   {{post.title}} </h1>
+              <p> {{post.description}}</p>  
+             <!-- DESCRIPCION--------------->               
+             </div>
+
+
+            <div class= "fecha">
+             <p>{{post.publish}}</p> 
+            </div>
         
-        <!--------------------------------------->
-        <div class="imagen-central">
-                <div class="redes">
+            <!--------------------------------------->
+              <div class="imagen-central">
+
+
+                    <div class="redes">
                     <ul class="iconos-social">
                     <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
                     <i class="fas fa-envelope"></i> </a> <br>
@@ -69,14 +74,16 @@
                     <i class="fab fa-instagram"></i> </a> <br>
                     </li>
                     </ul>
-                </div>
+                    </div>
 
-               <!-- TENIA PROBLEMAS CON LA IMAGEN SALIA ERROR CON IF SE SOLUCIONO--> 
+                    <!-- TENIA PROBLEMAS CON LA IMAGEN SALIA ERROR CON IF SE SOLUCIONO--> 
                     <div class="imagen-principal">               
-                        {% if post.imagefront %}
-                        <img src="{{post.imagefront.url}}" alt="">
-                        {% endif %}
+                    {% if post.imagefront %}
+                    <img src="{{post.imagefront.url}}" alt="">
+                    {% endif %}
                   </div>
+
+                  
          </div>
    <!-------------------FIN DE IMAGEN CENTRAL--------------------------------------------------------------------->
 
@@ -308,19 +315,22 @@
 
               <!---SEXTA CAJA CON DOS TITULOS (TERCER TITULO DE DOS)------->
               <section class="articulo-ultimo">
-                      <!--AUTOR IMAGEN Y NOMBRE-->
-                      <div class="autor-nombre">
+                          <!--AUTOR IMAGEN Y NOMBRE-->
+                          <div class="autor-nombre">
+
                            <!--FOTO AUTOR--->
                            <div class="autor-foto">
                            {% if post.imageauthor %}
                            <img src="{{post.imageauthor.url}}" alt="" >
                            {% endif %}
                            </div>
+
                            <!--NOMBRE DE AUTOR-->
                            <div class="autor-letra">  
                            <em><h3>Por: {{post.author}}</h3></em>
                            </div>
-                      </div>
+
+                           </div>
                     <!-------CIERRE AUTOR-NOMBRE---------------------------->
                          <!------CATEGORIA SIN LINK-------------- --->  
                          <div class="categoria-en-post">
@@ -509,16 +519,19 @@
         <!------------------FINAL BUSCADOR--------------------------->
          <div class="tercera-columna">
                 <h2> alimentación saludable y dietas..</h2>
+
                 <div class="aside-colum">
-                      {% for post in pos %} 
-                       {% if post.imagefront %}
+
+                  {% for post in pos %} 
+                  {% if post.imagefront %}
                    <img src ="{{post.imagefront.url}}">
-                    {% endif %}
+                  {% endif %}
+
                    <a href ="{% url 'appblog:post' post.slug %}">
                    <h1>{{ post.title }} </h1>
                    </a>
-                    {% endfor %} 
-                   </div>
+                  {% endfor %} 
+                  </div>
          </div>
         <!----------------------------- -------------->
       

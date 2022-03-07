@@ -8,75 +8,93 @@
     <!-- CONTENEDOR DEL CUERPO DEL BODY-------->
     {% block content %}           
       <div id ="container-categorias-subcategorias">                                  
-            <!--  CAJA DE NAVEGACION DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
-            <!--------------------------------------------------------------->
-            <div class="intro">
-                <div class="menu-introescrito">
-                    <!--MENU-->
-                    <div class="menu">
-                    <ul>
-                    <li>
-                    <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
-                    </li>
-                    <li>    
-                    <a  href="{% url 'appfood:noticias-turismo-gastronomico' %}">
-                    Turismo Gastronomico<i class="right"></i> 
-                    </a>
-                    </li>
-                    
-                    <!----BlOQUE CATEGORIAS--------------->
-                         <!--MENU ESCONDIDO -CATEGORIAS------------------>
-                    <li>
-                    <p>Categorias<i class="right"></i></p>
-                    <ul>
-                   {% load mptt_tags %} 
-                    {% for categori in categories %} 
-                    <!--  TITULO--CATEGORIA---> 
-                    <li>
-                    <a href="/noticias-turismo-gastronomico/categoria/{{ categori.slug }}">
-                    <p> {{categori.name}}</p> 
-                    </a>    
-                    </li>
-                    {% endfor %}
-                    </ul>
-                    </li>
-                    <!---FIN MENUS ESCONDIDO CATEGORIAS---->
-                    <!--FIN BLOQUE CATEGORIAS------------>
+         <!--  CAJA DE NAVEGACION DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
+         <!--------------------------------------------------------------->
+         <div class="intro">
+               <div class="menu-introescrito">
+                  <!--MENU-->
+                  <div class="menu">
+                        <!--fin del menu scrolling--->
+                        <div class="menu-scrolling">
+                        <ul>
+                        <li>
+                        <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i>
+                        </a>
+                        </li>
+
+                        <li>    
+                        <a href="{% url 'appfood:noticias-turismo-gastronomico' %}">
+                        Turismo Gastronomico<i class="right"></i> 
+                       </a>
+                       </li>
+                        <!-------------------------------------------->
+
+
+                         <!--MENU ESCONDIDO -CATEGORIAS-----LLEVA P------------->
+                        <li>
+                        <p>Categorias<i class="right"></i></p>
+                        <ul>
+                        {% load mptt_tags %} 
+                        {% for categori in categories %} 
+                        <!--  TITULO--CATEGORIA---> 
+                        <li>
+                        <a href="/noticias-turismo-gastronomico/categoria/{{ categori.slug }}">
+                        {{categori.name}}
+                        </a>    
+                        </li>
+                        {% endfor %}
+                        </ul>
+                        </li>
+                        <!---FIN MENUS ESCONDIDO CATEGORIAS---->
+                       <!--FIN BLOQUE CATEGORIAS------------>
+
+
+                       <!-- CATEGORIA--ACTIVE--------------->
+                       <li>
+                       {% load mptt_tags %}
+                       {% for posturismo in category_deals %}
+                       <a href="/noticias-turismo-gastronomico/categoria/{{ posturismo.slug }}">
+                       {{category_deals.get}}
+                       <i class="right"></i>
+                       </a>
+                       {% endfor %}
+                       </li>
+
+
+                       <!--FIN TITULO CATEGORIA-------------->
+                       </ul>
+                       </div>
+                       <!--fin del menu scrolling--->
+                       </div>
+            <!-----FIN MENU--------------------------------------------------------------------------------------->
 
 
 
-                    <!--TITULO CATEGORIA----------------->
-                    <li>
-                    {% load mptt_tags %}
-                    {% for posturismo in category_deals %}
-                    <a href="/noticias-turismo-gastronomico/categoria/{{ posturismo.slug }}">
-                    <p> {{category_deals.get}}<i class="right"></i></p>
-                    </a>
-                    {% endfor %}
-                    </li>
-                    <!--FIN TITULO CATEGORIA-------------->
-                    </ul>
-                    </div>
-                    <!-----FIN MENU------------------>
+                     <!------------------------------------------------------------------------------------->
+                     <div class="introescrito">
 
 
-                                <div class="introescrito">
                                 <!---TITULO DE CATEGORIA--->
                                {% load mptt_tags %}
                                {% for post in category_deals %}
                                <!--  TITULO--CATEGORIA---> 
-                                <div class="menu-intro-titulo">  
-                                        <h2> {{category_deals.get}}</h2>     
-                                </div>
+                              <div class="menu-intro-titulo">  
+                              <h2> {{category_deals.get}}</h2>     
+                              </div>
                                {% endfor %}
-                              <!---FIN TITULO DE CATEGORIA--->        
-                               </div>
+                              <!---FIN TITULO DE CATEGORIA---> 
+
 
                      </div>
+                     <!----------------------------------->
+           </div>
+           <!--FIN DIV MENU-INTROESCRITO---------------------------------->
+
+
                             <!-- FIN DIV MENU INTRO ESCRITO--->
                             <div class="intro-dos-vacios">
-                            <!------ LAS CATEGORIAS---------------->
-                            <!--NECEARIO ESTAR VACIO---->
+                          
+                            <!---- ESTA VACIO---->
                             </div>
             </div>
         <!-----------FINAL INTRO--------------------------->
@@ -117,6 +135,10 @@
           
          <!--------------- FIN CAJA DE NAVEGACION DE LAS SUBCATEGORIA-PERDER------------------->
      <div class = "container-posts-categorias">
+
+       
+                    <!--- DIV QUE DIVIDE COLUMNA Y ASIDE---->
+                       <div id = "posts-categorias-aside">
                <!--COLUMNA CATEGORIAS DE 70% -------->
                <div class="columna-categorias">
 
@@ -160,6 +182,8 @@
                      <!-- 20% ASIDE --->
                     <div id="aside">  </div>
                     <!--FIN ASIDE 20%--->
+                       </div>
+                    <!---FIN DIV QUE DIVIDE COLUMNA Y ASIDE---->
            </div>
            <!--100% FIN DEL POSTS CATEGORIAs--->
             

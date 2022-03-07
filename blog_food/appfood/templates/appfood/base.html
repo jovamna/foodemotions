@@ -228,7 +228,7 @@
 
   <!-------------------------------------------------------->
              <div id="controls">
-                 <form class="buscador" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
+                 <form class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
                   <!------------------------------------------------------------------>
                     <div id="custom-search-input-header">
 	                  <input id="ducks" type="text"  name="q" 
@@ -320,52 +320,42 @@
                 </li>
 
 
-                <!------------------------------------------------------->
-              <li class="li-escondido"> 
-                  <a class="{% active 'appfood:recetas-saludables' %}"  a href="{% url 'appfood:recetas' %}">
-                   Recetas 
-                  <i class ="fa fa-caret-down"></i>
-                  </a>
-
-
-                 
-
+                 <!---------LI DEL MOVIL---------------------------------------------->
+                 <li class="li-movil"> 
+                 <a class="{% active 'appfood:recetas-saludables' %}"  a href="{% url 'appfood:recetas' %}">
+                 Recetas 
+                 <i class ="fa fa-caret-down"></i>
+                 </a>
                 </li>
 
 
-                <!----------------------------------------------------------------------------->
-                 <li class="li-ocultar"> 
-                  <a class="{% active 'appfood:recetas-saludables' %}"  a href="{% url 'appfood:recetas-saludables' %}">
-                   Recetas 
-                  <i class ="fa fa-caret-down"></i>
-                  </a>
+                <!--------------LI DE PANTALLA GRANDE--------------------------------------------------------------->
+                <li class="li-pc"> 
+                <a class="{% active 'appfood:recetas-saludables' %}"  a href="{% url 'appfood:recetas-saludables' %}">
+                Recetas 
+                <i class ="fa fa-caret-down"></i>
+                </a>
 
 
                       <ul class="submenu-responsive">  
-
-
                       <li>
                       <a href="{% url 'appfood:recetas-saludables' %}">Todas las recetas</a>
                       </li>
                       
                       {% load mptt_tags %} 
-                      <!-- LAS CATEGORIAS------->
+                      <!-- CATEGORIAS------->
                       {% for kategory in kategories %}
                       <li>
                       <a href="/recetas-saludables/categoria/{{kategory.slug }} "style="text-decoration: none">
                       {{ kategory.name }}</a>
                       </li>
                      {% endfor %}
-
-
                     </ul>
 
 
                 </li>
-
-
-
                 <!------------------------------------------------------------------------------------>
+
 
                 
                 <li>

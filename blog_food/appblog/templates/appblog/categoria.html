@@ -15,38 +15,45 @@
                   <div class="menu-introescrito">
                            <!--MENU-------------------------------------->
                            <div class="menu">
+                           <div class="menu-scrolling">
                            <ul>
+
                            <li>
                            <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
                            </li>
+
                            <li>    
-                           <a  href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}">Alimentacion Sana<i class="right"></i> </a>
+                            <a href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}">Alimentacion Sana<i class="right"></i> 
+                           </a>
                            </li>
 
-                        <!--CATEGORIAS------------------------>
-                        <!--MENU ESCONDIDO -CATEGORIAS------------------>
+                  
+                        <!--MENU ESCONDIDO -CATEGORIAS---DESPLEGABLE--------------->
                         <li>
                         <p>Categorias<i class="right"></i></p>
+
                         <ul>
                         {% load mptt_tags %}
                         {% for kategoria in categories %} 
                         <!--  TITULO--CATEGORIA---> 
                         <li>
                         <a href="/dietas-especiales-y-alimentacion-saludable/categoria/{{ kategoria.slug }}">
-                        <p> {{categoria.name}}</p> 
+                        {{categoria.name}}
                         </a>    
                         </li>
                         {% endfor %}
                         </ul>
                         </li>
                         <!---FIN MENUS ESCONDIDO CATEGORIAS---->
-                     <!--FIN DE LAS CATEGORIAS----------------->
-                           <!---TITULO DE LA CATEGORIA---->
+
+
+                
+                           <!--CATEGORIA---ACTIVA--->
                            <li>
                            {% load mptt_tags %}
                            {% for posts in category_deals %}
                            <a href="/dietas-especiales-y-alimentacion-saludable/categoria/{{ posts.slug }}">
-                           <p> {{category_deals.get}}<i class="right"></i></p>
+                           {{category_deals.get}}<i class="right"></i>
                            </a>
                            {% endfor %}
                            </li>
@@ -54,13 +61,16 @@
 
                            </ul>
                            </div>
-                           <!----FIN DEL MENU------------------>
+                           <!--fin del menu scrolling--->
+                           </div>
+            <!----------------FIN DEL MENU------------------------------------------------->
 
 
 
 
-
+                           <!----------------------------->
                            <div class="introescrito">
+
                            <!---TITULO DE CATEGORIA--->
                            {% load mptt_tags %}
                            {% for post in category_deals %}
@@ -70,9 +80,13 @@
                            </div>
                            {% endfor %}
                            <!---FIN TITULO DE CATEGORIA--->   
+
                            </div>
+                           <!---VIN INTROESCRITO---->
+
+
                            </div>
-                            <!-- FIN DIV MENU INTRO ESCRITO--->
+                            <!-- FIN DIV MENU-INTROESCRITO--->
 
   <!-------------------------MENU CON TTULO Y COSTADO DE LAS CATEGORIAS---------------------->
 
@@ -149,6 +163,8 @@
 
             <!---CONTAINER DE COLUMNA CATEGORIA Y ASIDE-->
        <div class = "container-posts-categorias">
+
+                      <div id = "posts-categorias-aside">
                <!--COLUMNA CATEGORIAS DE 70% -------->
                <div class="columna-categorias">
 
@@ -189,6 +205,9 @@
                      <!-- 20% ASIDE --->
                     <div id="aside">  </div>
                     <!--FIN ASIDE 20%--->
+
+                    </div>
+                    <!---FIN DE     <div id = "posts-categorias-aside">---->
                
            </div>
            <!--100% FIN DEL POSTS CATEGORIAs--->

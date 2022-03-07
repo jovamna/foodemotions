@@ -86,6 +86,10 @@ def post_turismo(request, slug):
     per = Categori.objects.get(pk=1).get_leafnodes()
     post_turismo = Posturismo.objects.all().order_by(
         '-publish')[:1]  #va en el aside de turismo
+
+    recetas = Receta.objects.all()  #RECETAS SALUDABLES
+    kategory = Kategory.objects.all()  #RECETAS SALUDABLES
+    kategories = Kategory.objects.filter(parent=None)
     #aqui empieza los coments
     posturismo = Posturismo.objects.get(slug=slug)
     allcomments = posturismo.comments.filter(status=True)
@@ -133,6 +137,9 @@ def post_turismo(request, slug):
         'comment_form': comment_form,
         'allcomments': allcomments,
         'comments': comments,
+        'recetas': recetas,
+        'kategory': kategory,
+        'kategories': kategories,
     }
 
     print(posts)
@@ -192,6 +199,10 @@ def categori(request, slug=True):
     categories = Categori.objects.filter(
         parent=None)  #SALEN SOLO LAS CATEGORIAS
 
+    recetas = Receta.objects.all()  #RECETAS SALUDABLES
+    cat = Kategory.objects.all()  #RECETAS SALUDABLES
+    kategories = Kategory.objects.filter(parent=None)
+
     listado_posts = Posturismo.objects.filter()
     paginator = Paginator(listado_posts, 2)
     pagina = request.GET.get("page") or 1
@@ -214,6 +225,9 @@ def categori(request, slug=True):
         'categories': categories,
         'listado_posts': listado_posts,
         'posts': posts,
+        'recetas': recetas,
+        'cat': cat,
+        'kategories': kategories,
     }
     return render(request, "appturismo/categoria.html", context)
 

@@ -95,22 +95,21 @@ text-decoration: underline;
 
 
 /*CONTENEDOR PRINCIPAL DE TODA LA CABECERA INCLUYENDO SLIDER*/
-#wrapper {
+  #wrapper {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   min-width:250px;
   flex-wrap: wrap;
-
- }
+  }
     
  #wrapper > * {
  padding: 20px;
  }
    
  div {
-flex: 1;
+ flex: 1;
  }
 
 
@@ -131,16 +130,16 @@ flex: 1;
   /*height 125px  left 0 */
 
  header{
-width:100%;
-position: fixed;
-z-index: 2000;   /*IMPORTANTE  */
-top:0;
-left: 0;
-margin: auto;
-height: 100px;
-box-shadow: 0 8px 6px -6px #DCDCDC;
-background-color: #fff;
- }
+  width:100%;
+  position: fixed;
+  z-index: 2000;   /*IMPORTANTE  */
+  top:0;
+  left: 0;
+  margin: auto;
+  height: 100px;
+  box-shadow: 0 8px 6px -6px #DCDCDC;
+  background-color: #fff;
+  }
 
  header.black{
   height: 100px;
@@ -193,7 +192,7 @@ background-color: #fff;
   
   
   /*IMPORTANTE*/
-  .cabecera  #controls .buscador{
+  .cabecera  #controls .d-flex{
     display: block;
         width: 100%;
       
@@ -287,34 +286,36 @@ margin-top: 18px;
 
       
      /*NAV   SEMENTO QUE CONTIENE LOGO BUSCADOR Y NAVEGACION ESCONDIDA */
-     nav{
-      display:flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 92%;
-      margin-top: 3px;
-      height: 34px;
+    nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 92%;
+    margin-top: 3px;
+    height: 34px;
     }
   
   
-  nav .esconder{
+    nav .esconder{
     display: none;
     visibility: hidden;
-  }
-  nav .logo-esconder{
-    display: none;
-    visibility: hidden;
-  }
+    }
 
-  nav .buscador-esconder{
+    nav .logo-esconder{
     display: none;
     visibility: hidden;
-  }
+    }
+
+
+    nav .buscador-esconder{
+    display: none;
+    visibility: hidden;
+    }
    
- nav .siguenos{
-  display: none;
-  visibility: hidden;
- }
+   nav .siguenos{
+   display: none;
+   visibility: hidden;
+   }
   
        /*---UL--*/
    nav .nav{
@@ -323,7 +324,6 @@ margin-top: 18px;
     display: block;
     float: right;
     margin-top: 6px;
- 
     }
  
      /*---LI---*/
@@ -336,11 +336,8 @@ margin-top: 18px;
 
    }
    
-  
-       
-
-  /*ESTO SEPARAR MAS LAS LETRAS ...  padding: .2em; */
- nav .nav li a{
+   /*ESTO SEPARAR MAS LAS LETRAS ...  padding: .2em; */
+   nav .nav li a{
    display: block;
    text-decoration: none;
    color: #242424;
@@ -348,14 +345,13 @@ margin-top: 18px;
    font-size: 0.78rem;
    text-transform: uppercase;
    font-family: Arial, Helvetica, sans-serif;
-  font-weight: 790;
-  letter-spacing: 0.2px;
-  line-height:120%;
+   font-weight: 790;
+   letter-spacing: 0.2px;
+   line-height:120%;
    width: 100%;
-
    }
 
-   nav li .current {
+     nav li .current {
     color: #7aac41;
      }
       
@@ -366,27 +362,25 @@ margin-top: 18px;
     }
     
 
-  /* items del menu desplegable al pasar el ratón     display:block;
- width: 100%;*/
- nav .nav li:hover > ul {
+    /* items del menu desplegable al pasar el ratón display:block; width: 100%;*/
+   nav .nav li:hover > ul {
    display:block; 
-  
    width:60%; 
-
    }
    
+   
+   /*LI QUE SE OCULTA ES DEL MOVIL*/
+    nav .nav .li-movil {
+    display: none;
+    }
 
-     nav .nav .li-escondido {
-      display: none;
-     }
 
-
-  /* efecto al pasar el ratón por los items del menu */
-  /*IMPORTANTE PARA QUE NO SALGAN DOBLE RAYA AL HACER HOVER*/
-  .nav a:hover{
-  text-decoration: none;
-  cursor: pointer;
-  }
+    /* efecto al pasar el ratón por los items del menu */
+    /*IMPORTANTE PARA QUE NO SALGAN DOBLE RAYA AL HACER HOVER*/
+   .nav a:hover{
+    text-decoration: none;
+    cursor: pointer;
+    }
     
    /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
   nav .nav ul {
@@ -402,32 +396,31 @@ margin-top: 18px;
  float: left;
   margin-left: -10px; /*IMPORTANTE MUEVE */   
   height: 100%;
-  background-color: rosybrown;
+  margin-bottom:  -4px;
   }
 
-       /* enlaces de los items del menu desplegable*/
-       nav .nav ul a {
-        line-height:120%;
-        padding:10px 15px;
-        background-color: #fff;
-        color: #000000;
-         font-size: 0.7rem;
-         width: 100%;
-         }
+    /* enlaces de los items del menu desplegable*/
+    nav .nav ul a {
+  
+    padding:10px 15px;
+    background-color: #fff;
+    color: #000000;
+    font-size: 0.7rem;
+    width: 100%;
+    }
   
 
-       #container  #submenu{
-        display: block;
-         width: 80%;
-  
-        z-index: 2;
-         }
+    #container  #submenu{
+    display: block;
+    width: 80%;
+    z-index: 2;
+    }
 
-         #container  #submenu  .submenu-responsive{
-           display: flex;
-           flex-direction: column;
-           width: 100%;
-         }
+    #container  #submenu  .submenu-responsive{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
 
 
 
@@ -539,26 +532,26 @@ margin-top: 18px;
     }
 
 
-  .portada h2::before, h2::after{
-  position:absolute;
-  content:'';
-  width:0px;
-  height:1px;
-  left:0;
-  z-index: -1;
-  }
+   .portada h2::before, h2::after{
+   position:absolute;
+   content:'';
+   width:0px;
+   height:1px;
+   left:0;
+   z-index: -1;
+   }
 
    .portada h2::before{
-  top: 1.4rem;
-  -webkit-animation: draw 500ms linear 1s forwards;
+   top: 1.4rem;
+   -webkit-animation: draw 500ms linear 1s forwards;
           animation: draw 500ms linear 1s forwards;
    }  
 
-  .portada h2::after{
-  bottom: 0.4rem;
-  -webkit-animation: draw 500ms linear 1s forwards;
+   .portada h2::after{
+   bottom: 0.4rem;
+   -webkit-animation: draw 500ms linear 1s forwards;
           animation: draw 500ms linear 1s forwards;
-  }
+   }
 
 
 
@@ -1398,8 +1391,6 @@ margin-top: 18px;
      width: 100%;
      max-width: 70px;
      height: 100%;
-    
-   
      margin-right: 10px;
      }
 
@@ -1475,6 +1466,7 @@ margin-top: 18px;
   cursor: pointer;
   transform: translateY(-50%);
    }
+   
       /*TITULO CATEGORIA SLIDER RESPONSIVE..*/
       .categorias-subcategorias .scroll a h2{
       display: none;

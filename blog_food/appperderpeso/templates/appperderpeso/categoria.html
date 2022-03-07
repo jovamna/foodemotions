@@ -8,57 +8,67 @@
               <!-- CONTENEDOR DEL CUERPO DEL BODY-------->
      {% block content %}           
      <div id ="container-categorias-subcategorias">                                  
-          <!--  CAJA DE NAVEGACION DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
+          <!--  CAJA DE MENU DE LAS CATEGORIA Y SUBCATEGORIAS---------------->
                
            <!--------------------------------------------------------------->
            <div class="intro">
                 <div class="menu-introescrito">
                       <!--MENU-->
                       <div class="menu">
+                      <div class="menu-scrolling">
                       <ul>
                       <li>
                       <a href="{% url 'appfood:index' %}">
-                      Inicio<i class="right"></i></a>
+                      Inicio<i class="right"></i>
+                      </a>
                       </li>
+
                       <li>    
                       <a  href="{% url 'appfood:plan-comidas-saludables' %}">
-                      Plan de comidas saludables<i class="right"></i> </a>
+                      Plan de comidas saludables<i class="right"></i> 
+                      </a>
                       </li>
 
 
-                    <!--BLOQUE CATEGORIAS------------------------>
+            
                     <!--MENU ESCONDIDO -CATEGORIAS------------------>
                     <li>
-                    <p>Categorias<i class="right"></i></p>
+                    <p>Categorias<i class="right"></i>
+                    </p>
                     <ul>
+
                     {% load mptt_tags %}
                     {% for categoria in categories %} 
-                    <!--  TITULO--CATEGORIA---> 
+                    <!--CATEGORIA-SUBMENUS--> 
                     <li>
                     <a href="/plan-comidas-saludables/categoria/{{ categoria.slug }}">
-                    <p> {{categoria.name}}</p> 
+                    {{categoria.name}}
                     </a>    
                     </li>
                     {% endfor %}
+
                     </ul>
                     </li>
                     <!---FIN MENUS ESCONDIDO CATEGORIAS---->
-                     <!--FIN DE BLOQUES  CATEGORIAS----------------->
-                      
 
+
+                     <!------------------------------------>
                       <li>
                       {% load mptt_tags %}
                       {% for perderpeso in category_deals %}
                       <a href="/plan-comidas-saludables/categoria/{{ perderpeso.slug }}">
-                      <p> {{category_deals.get}}<i class="right"></i></p>
+                       {{category_deals.get}}<i class="right"></i>
                       </a>
                       {% endfor %}
                       </li>
                       </ul>
+                     </div>
+                     <!--fin del menu scrolling--->
                       </div>
-                      <!--FIN FIN MENU MENU------------------>
+         <!--FIN MENU--------------------------------------------------------------------------->
 
 
+         <!----------------------------------------------------------------------------------------------->
                                 <div class="introescrito">
                                 <!---TITULO DE CATEGORIA--->
                                {% load mptt_tags %}
@@ -71,22 +81,21 @@
                               <!---FIN TITULO DE CATEGORIA--->        
                                </div>
 
-                   </div>
+                      </div>
 
 
 
-                  <!-- FIN DIV MENU INTRO ESCRITO--->
-                  <div class="intro-dos-vacios">
-                  <!------VACIOS  LAS CATEGORIAS---------------->
-                                          
-                  <!--FIN CATEGORIAS--->
-                  </div>
+                      <!-- FIN DIV MENU INTRO ESCRITO--->
+                      <div class="intro-dos-vacios">
+                      <!-----VACIO--ESPACIO----->
+                       </div>
+                      <!--------------------------------->
 
-                     </div>
-                     <!---FINAL INTRO--->
+         </div>
+          <!---FINAL INTRO-------------------------------------------------->
 
-                  </div>
-                  <!---FIN DIV SUBCATEGORIA PERDER-->
+         </div>
+         <!---FIN DIV SUBCATEGORIA PERDER---------------------------------->
 
 
       <!-----SUBCATEGORIAS MENU------------------------------------->
@@ -121,6 +130,8 @@
 
       <!---CONTAINER DE COLUMNA CATEGORIA Y ASIDE-->
         <div class = "container-posts-categorias">
+           
+            <div id = "posts-categorias-aside">
                <!--COLUMNA CATEGORIAS DE 70% -------->
                <div class="columna-categorias">
                     <!---DIV CONTAINER DE 4 POST Y DE RPLAN DE ALIMENTACION--->
@@ -161,6 +172,9 @@
                      <!-- 20% ASIDE --->
                     <div id="aside">  </div>
                     <!--FIN ASIDE 20%--->
+
+                    </div>
+                    <!---FIN DIV QUE DIVIDE COLUMNA Y ASIDE---->
            </div>
            <!--100% FIN DEL POSTS CATEGORIAs--->
             

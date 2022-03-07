@@ -13,17 +13,23 @@
               <div class="intro">
               <!---A-------------------------------------------------------------------->
                    <div class="menu-introescrito">
-                      <!--MENU---------------------------------------------------------->
-                      <div class="menu">
-                               <ul>
-                               <li>
-                               <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
-                               </li>
-                               <li>    
-                                <a  href="{% url 'appfood:recetas-dieteticas' %}">Recetas dieteticas<i class="right"></i> </a>
-                              </li>
+                  <!--MENU---------------------------------------------------------->
+                  <div class="menu">
+                      
+                    <!--fin del menu scrolling--->
+                    <div class="menu-scrolling">
+                        <ul>
+
+                          <li>
+                          <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
+                          </li>
+
+                          <li>    
+                          <a  href="{% url 'appfood:recetas-dieteticas' %}">Recetas dieteticas<i class="right"></i> </a>
+                              
+                          </li>
            
-                          <!--MENU ESCONDIDO -CATEGORIAS-HAY QUE CAMBIARLO CODIGO NO ES DE RECIPE----------------->
+                          <!--MENU ESCONDIDO----------------->
                           <li>
                           <p>Categorias<i class="right"></i></p>
                           <ul>
@@ -32,7 +38,7 @@
                           <!--  TITULO--CATEGORIA---> 
                           <li>
                           <a href="/recetas-dieteticas/categoria/{{ category.slug }}">
-                          <p> {{category.name}}</p> 
+                           {{category.name}}
                           </a>    
                           </li>
                           {% endfor %}
@@ -41,16 +47,20 @@
                           </li>
                           <!---FIN MENUS ESCONDIDO CATEGORIAS---->
                             
-                              <li>
-                             {% load mptt_tags %}
-                             {% for recipe in category_deals %}
-                            <a href="/recetas-dieteticas/categoria/{{ recipe.slug }}">
-                            <p>{{category_deals.get}}<i class="right"></i></p>
-                            </a>
-                            {% endfor %}
-                            </li>
+
+
+                          <li>
+                          {% load mptt_tags %}
+                          {% for recipe in category_deals %}
+                          <a href="/recetas-dieteticas/categoria/{{ recipe.slug }}">
+                          {{category_deals.get}}<i class="right"></i>
+                          </a>
+                          {% endfor %}
+                          </li>
 
                        </ul>
+                      </div>
+                      <!--fin del menu scrolling--->
                      </div>
                      <!---FIN -MENU---------------------------------------------->
 
@@ -94,7 +104,8 @@
                        <div class= "subcategoria">
                         {% if child.image %}
                         <img src="{{child.image.url}}">
-                        {% endif %}      
+                        {% endif %}   
+                           
                         <a href="/recetas-dieteticas/subcategoria/{{ child.slug }}"><h3>{{ child.name }}</h3>
                         </a>
                        </div>
@@ -114,7 +125,7 @@
              <!--DEBE MEDIR  80%-------------80%---------->
              <div id = "posts-categorias-aside">
                 <!--------------- INICIO POST CATEGORIA------------------------->
-                <div class=" post-cuatro-categorias">
+                <div class=  "post-cuatro-categorias">
                 <!---DIV DE 4 POST DE POSTS---> 
 
 

@@ -95,6 +95,10 @@ def post_detail(request, slug):
     posts = Post.objects.all().filter(slug=slug, status='published')
     categories = Kategoria.objects.filter(parent=None)
     #per=Kategoria.objects.get(pk=1).get_leafnodes()
+    recetas = Receta.objects.all()  #RECETAS SALUDABLES
+    kategory = Kategory.objects.all()  #RECETAS SALUDABLES
+    kategories = Kategory.objects.filter(
+        parent=None)  #SALEN SOLO LAS CATEGORIAS RECETAS SALUDABLES
     post = Post.objects.get(
         slug=slug)  #este codigo es de los comentarios no cambiar get
     pos = Post.objects.order_by('-slug')[:1]  #va en el aside
@@ -151,6 +155,9 @@ def post_detail(request, slug):
         'comment_form': comment_form,
         'allcomments': allcomments,
         'comments': comments,
+        'recetas': recetas,
+        'kategory': kategory,
+        'kategories': kategories,
     }
 
     print(posts)
@@ -215,6 +222,10 @@ def category(request, slug=True):
     post = Post.objects.filter(
         kategoria_id__in=category)  #SE USA CUANDO NO HAY SUBCATEGORIA
 
+    recetas = Receta.objects.all()  #RECETAS SALUDABLES
+    cat = Kategory.objects.all()  #RECETAS SALUDABLES
+    kategories = Kategory.objects.filter(parent=None)
+
     listado_posts = Post.objects.all()
     paginator = Paginator(listado_posts, 2)
     pagina = request.GET.get("page") or 1
@@ -239,6 +250,9 @@ def category(request, slug=True):
         'paginas': paginas,
         'current_page': current_page,
         'category': category,
+        'recetas': recetas,
+        'cat': cat,
+        'kategories': kategories,
     }
 
     return render(request, "appblog/categoria.html", context)

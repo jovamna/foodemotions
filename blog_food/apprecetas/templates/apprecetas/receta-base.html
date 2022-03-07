@@ -4,7 +4,7 @@
  <html lang="en">
  <head>
        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-     <meta charset="utf-8">
+       <meta charset="utf-8">
         <meta meta content="width=device-width, initial-scale=1,  maximum-scale=1" name="viewport">
         <title>{% block titulo %} {{object.title}}{% endblock titulo %}</title>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -137,7 +137,7 @@
       <!-- Windows Phone --> 
      <meta name="msapplication-navbutton-color" content="#568632"> 
      <!-- iOS Safari --> 
-    <meta name="apple-mobile-web-app-capable" content="yes"> 
+     <meta name="apple-mobile-web-app-capable" content="yes"> 
      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
 
 
@@ -160,10 +160,10 @@
      <!-- SCRIPT IMPORTANTE PARA QUE EN MENU ESCONDIDO SE DESPLAZE JUNTO AL CODIGO ESCRITO 
         DONDE ABAJODEL TODO DESPUES DEL FOOTER  HE PUESTO UN LINK DEL ARCHIVO ESCRITO LLAMADO 
          MENURECTDESPLAZA Y PONIENDO EL NAV EN FIXED TAMBIEN PARA EL CARROUSEL-->
-    <script src="https://code.jquery.com/jquery-latest.js"></script>
+      <script src="https://code.jquery.com/jquery-latest.js"></script>
 
-     <!-- GOOGLE FONTS-->
-     <link
+      <!-- GOOGLE FONTS-->
+      <link
         href="https://fonts.googleapis.com/css?family=Archivo+Black|Artifika|Bai+Jamjuree|Cabin|Merienda|Roboto+Condensed|Satisfy&display=swap"
         rel="stylesheet">
 
@@ -177,14 +177,14 @@
             <!-- CABECERA ----------------------------------------------------------->
             <div class="cabecera-recetas">
                   <!-- caja logo ---->
-                  <div class="logo">
-                  <a  href="{% url 'appfood:index' %}">
+                   <div class="logo">
+                   <a  href="{% url 'appfood:index' %}">
                    <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
-                  </a>
-                  </div>
-                 <!-- final caja logo-->
+                   </a>
+                   </div>
+                   <!-- final caja logo-->
 
-               <div class="controls">
+                   <div class="controls">
                    <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
                       <div id="custom-search-input">
 	                       <input type="text"  class="sin-borde" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
@@ -192,52 +192,55 @@
                            <span class="icon"><i class="fa fa-search"></i></span>   
                         </button>
                           <!--</span>-->
-                     </div>
-                 </form>
-	           </div>
-                                     
-                                           
-              <!-- BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
+                       </div>
+                  </form>
+	                </div>     
+                 <!-- BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
             
                   <!------  caja boletin--------------------------->
                   <div class="suscribe">
-                    <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none"><h4>SUSCRIBETE</h4>  
-                    </a>
-                    </div>
-             
-                <!---------- final caja boletin------------------->
+                  <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">
+                  <h4>SUSCRIBETE</h4>  
+                  </a>
+                  </div>
+                  <!---------- final caja boletin------------------->
 
                 <div class="menu-btn"> 
                        <!---------------MENU RESPONSIVE -------------->
-                       <div class="hamburguesa">
-                      <div class="menu-btn__burger">  </div>
-                      </div>
+                    <div class="hamburguesa">
+                    <div class="menu-btn__burger">  
+                    </div>
+                    </div>
                         <!----FIN  MENU RESPONSIVE ------->        
-               </div>
-
+                </div>
             <!-- final BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
-
-           <!-- NAV MENU QUE VA CON EL BOTON MENU-->
+ </div>
+          
          <!-- NAV MENU QUE VA CON EL BOTON MENU-->
       <!----------------NAVEGACION---EN PAGINA ORDENADOR Y---RESPONSIVE---------------------------------------------------->
         <nav>
+              <!------------------------------------------->
                 <div class="logo-esconder"> 
-                    <div class="logo-en-menu-responsive">
-                       <a class="estilo-logo" href="{% url 'appfood:index' %}">
-                       <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
-                       </a>
-                     </div>
-                     <div class="emoticon">
-                     </div>
 
-                      <div class="suscriptor">
-                       <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
-                       <h4>SUSCRIBETE</h4>  
-                      </a>
-                     </div>
+                    <div class="logo-en-menu-responsive">
+                    <a class="estilo-logo" href="{% url 'appfood:index' %}">
+                    <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" width="100%" alt="Food Emotions"> 
+                    </a>
+                    </div>
+
+                    <div class="emoticon">
+                    </div>
+
+                    <div class="suscriptor">
+                    <a href="{% url 'appcontact:contacto' %}"  style="text-decoration: none">     
+                    <h4>SUSCRIBETE</h4>  
+                    </a>
+                    </div>
                     
                 </div>
+              <!-------------------------------------------->
 
+             <!--------------------------------------------->
              <div class="buscador-esconder"> 
               <form class="d-flex" method = "GET" action= "{% url 'appblog:search' %}" value= "{{ request.GET.q }}"> {% csrf_token %}
                   <!------------------------------------------------------------------>
@@ -252,43 +255,62 @@
                   </div>
                 <!--------------------------------------------------------------------->
                </form>                 
-           
            </div>
+           <!--------------------------------------------------------------->
 
            <ul class="nav">
                
                 <li> 
-                <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}" >Inicio </a>      
+                <a class="{% active 'appfood:index' %}" href="{% url 'appfood:index' %}">Inicio </a>      
                 </li>
                 
-                <li> 
-                <a class="{% active 'appfood:recetas-saludables' %}"  href="{% url 'appfood:recetas-saludables' %}" >
-                   Recetas 
-                  <i class ="fa fa-caret-down"></i>
+                  <!---------LI DEL MOVIL---------------------------------------------->
+                 <li class="li-movil"> 
+                 <a class="{% active 'appfood:recetas-saludables' %}"  a href="{% url 'appfood:recetas' %}">
+                 Recetas 
+                 <i class ="fa fa-caret-down"></i>
                  </a>
-                        <ul>  
-                        {% load mptt_tags %} 
-                        <!-- LAS CATEGORIAS------->
-                        {% for kategory in kategories %}
-                        <li>
-                        <a href="/recetas-saludables/categoria/{{kategory.slug }} "style="text-decoration: none">
-                        {{ kategory.name }}</a>
-                       </li>
-                       {% endfor %}
-                      </ul>
-                </li>
+                 </li>
+ 
+                <!--------------LI DE PANTALLA GRANDE--------------------------------------------------------------->
+                <li class="li-pc"> 
+                <a class="{% active 'appfood:recetas-saludables' %}"  a href="{% url 'appfood:recetas-saludables' %}">
+                Recetas 
+                <i class ="fa fa-caret-down"></i>
+                </a>
 
+
+                      <ul class="submenu-responsive">  
+                      <li>
+                      <a href="{% url 'appfood:recetas-saludables' %}">Todas las recetas</a>
+                      </li>
+                   
+                      
+                      
+                      {% load mptt_tags %} 
+                      <!-- CATEGORIAS------->
+                      {% for kategory in categories %}
+                      <li>
+                      <a href="/recetas-saludables/categoria/{{kategory.slug }} "style="text-decoration: none">
+                      {{ kategory.name }}</a>
+                      </li>
+                     {% endfor %}
+                    </ul>
+
+
+                </li>
+                <!------------------------------------------------------------------------------------>
                 
-                <li >
+                <li>
                 <a class="{% active 'appfood:recetas-dieteticas' %}" href="{% url 'appfood:recetas-dieteticas' %}">Recetas dieteticas</a>
                 </li>
 
-                  <li> 
+                <li> 
                 <a class="{% active 'appfood:plan-comidas-saludables' %}" href="{% url 'appfood:plan-comidas-saludables' %}">Plan Comidas Sanas</a>
                 </li>
 
 
-                <li > 
+                <li> 
                 <a class="{% active 'appfood:dietas-especiales-y-alimentacion-saludable' %}" href="{% url 'appfood:dietas-especiales-y-alimentacion-saludable' %}"> Dietas y Alimentacion Sana  </a> 
                 </li>
 
@@ -306,8 +328,9 @@
                 <a class="{% active 'appfood:contacto' %} " href="{% url 'appcontact:contacto' %}">
                 Contacto
                 </a> 
-                
                 </li>  
+
+
            </ul>
           
            <!------------------------------------------------------------------->
@@ -341,7 +364,7 @@
 
              </nav> 
             <!-----FIN  NAVEGATION-------------------------------------------------->
-       </div>
+      
        <!-- FINAL CABECERA --------------------------------------------------------------------------------------------------------------------->
 
    </header>
@@ -420,15 +443,19 @@
                     <!------------------------------->
                   <!--TIEMPO INFORMACION NUTRICIONAL------>
                     <div class="contiene">
-                  <div class="temps">
-                      <p></p>
-                  </div>
-                  <div class="porciones">
-                  <p></p>
-                  </div>
-                  <div class="nutricional-imagen">
-                  <h2></h2>  <p></p>
-                  </div>
+                       <div class="temps">
+                        <p></p>
+                        </div>
+
+                        <div class="porciones">
+                        <p></p>
+                         </div>
+
+
+                       <div class="nutricional-imagen">
+                       <h2></h2>  
+                       <p></p>
+                       </div>
                   </div>
                   <!--------------------------------------->
                   </div>
@@ -552,7 +579,7 @@
                         <h3>Suscribete a nuestro Newsletter.</h3>
                         <form action="." method="POST">
 
-                            <input type="text" name="email" id="email" placeholder="Type your email address">
+                            <input type="text" name="email" id="email" placeholder="Escribe tu email">
                             <button type="submit" class="submit">Suscribete</button>
                         </form>
                           </div>

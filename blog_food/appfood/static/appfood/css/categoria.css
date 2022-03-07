@@ -1,62 +1,59 @@
 
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-  }
-  body{
-    padding:0;
-    margin: 0;
-    background-color: #fff;
-    color: rgba(0,0,0,.95);
-    font-family: "Argos",serif;
-     }
-  
-  html, body {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  height: 100%;
-  
-  }
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body{
+  padding:0;
+  margin: 0;
+  background-color: #fff;
+  color: rgba(0,0,0,.95);
+  font-family: "Argos",serif;
+   }
+
+html, body {
+line-height: 1.15;
+-webkit-text-size-adjust: 100%;
+height: 100%;
+
+}
+
 
  
-   a:link {
-    color: black;
-  
-     }
-  
-     a:visited {
-      color:#101010; /*IMPORTANTE*/
-      text-decoration: none;
-       }
-    
+
+  a {
+color: #524c56;
+text-decoration: none;
+font-weight: lighter;
+ }
 
 
-        #wrapper-categorias{
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        min-width:250px;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-        margin: 0;   
-        }
-    
-      
-    
-       #wrapper-categorias img {
-      width: 100%;
-      height: auto;
-      border: 0;
-       }
-    
-      
+ a, a:hover,a:visited, a:focus {
+text-decoration:none;
+ }
+
+  
+  #wrapper-categorias {
+    box-sizing: border-box;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+min-width:250px;
+flex-wrap: wrap;
+  }
         
   #wrapper-categorias > * {
-    padding:20px;
-    }
+  padding: 20px;
+  }
+  div {
+    flex: 1;
+     }
     
+        
+ 
 
    /*...CATEGORIA Y SUCATEGRIAS............................................*/
     /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
@@ -64,7 +61,7 @@
       display: flex;
       flex-direction: column;
       width:100%;
-    max-width: 1200px;
+    max-width: 1250px;
     margin-left:auto;
     margin-right:auto;
      padding-left: 0;
@@ -74,86 +71,86 @@
   
 
     /*border-bottom: 2px solid #DDD;*/
-     /*HEADER LLAMADO CATEGORIA*/
     header{
-    width: 100%;
-    z-index: 999;
-    position: fixed;
-    height:  70px;
-    box-shadow: 0 8px 6px -6px #c9c9c9;
-    background-color:#fff;
-    }
-  
-    header.black{
-     background-color:#fff ;
-     height:  70px;
-    }
-  
-     /*CABECERA */
-     #cabecera-categorias{
       width: 100%;
-      max-width: 1200px;
-      height: 40px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin: auto;
-      margin-top: -2px;
+      z-index: 999;
+      position: fixed;
+      height:  70px;
+      background-color: #fff;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
       }
+    
+      header.black{
+       height:  70px;
+       background-color: #fff;
+      }
+    
   
+    #cabecera-categorias{
+      width: 100%;
+     max-width: 1250px;
+     height: 40px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin: auto;
+     margin-top: -2px;
+     z-index: 2;
+     }
+ 
+   
     /*caja */
-    .logo{
-    display: inline-flex;
-    width: 19.8%;
-    max-width: 350px;
-    height: 40px; 
-    }
-      
-     /*IMAGEN DEL LOGO*/
-     #cabecera-categorias .logo img{
-      width: 100%;
-      height: 40px;  
-      }
-       
+    #cabecera-categorias .logo{
+     display: block;
+      position: relative;
+      float: left;
+     width: 22%;
+     max-width: 320px;
+     min-width: 290px;
+     height: 40px; 
+     }
      
-     #container-categorias #controls-responsive{
-        display: none;
-        visibility: hidden;
-      }
-
-      /*CONTAINER DEL BUSCADOR................. */
-      #cabecera-categorias  .controls{
-        display: block;
-        position: relative;
-        float: left;
-        width: 35%;
-        max-width: 550px;
-        height: 38px;  
-        }
-
-
-          #cabecera-categorias .controls form{
-          width: 100%;
-          max-width: 390px;
-          }
-
-
-   #cabecera-categorias #custom-search-input input[type=text]:focus {
-  outline: none;
-  border: 0;
-  background-color: #fff;
-  padding-left: 8px; /*MUEVE LA LETRA*/
-  }
-
-
-  /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
-    #cabecera-categorias #custom-search-input{
-    width: 390px;
-    height: 32px;
-    display: flex;
-    flex-direction: row;
-    border-radius: 0px;
-    -moz-border-radius: 0px;
+    /*IMAGEN DEL LOGO*/
+    #cabecera-categorias .logo img{
+     width: 100%;
+     height: 35px;  
+     max-width: 190px;
+     min-width: 190px;
+     }
+      
+     
+     /* BUSCADOR INTERNO RESPONSIVE*/
+     #controls-responsive{
+       display: none;
+     }
+ 
+ 
+        /*CONTAINER DEL BUSCADOR................. */
+        #cabecera-categorias .controls{
+         display: block;
+         position: relative;
+         float: left;
+         width: 35%;
+         max-width: 600px;
+         min-width: 560px;
+         height: 40px;  
+         }
+ 
+ 
+         .controls form{
+           width: 100%;
+           max-width: 390px;
+         }
+ 
+  
+   /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
+   #cabecera-categorias .controls #custom-search-input{
+     width: 100%;
+   height: 32px;
+   display: flex;
+   flex-direction: row;
+   border-radius: 0px;
+   -moz-border-radius: 0px;
    -webkit-border-radius: 0px;
    box-sizing: border-box;
    -moz-box-sizing: border-box;
@@ -161,146 +158,152 @@
    box-shadow: 4px 8px 6px -6px #8c8c8c;
    background: #FEFEFE;
    background-image: linear-gradient(45deg, #FFF, #F9F9F9);
-   border: 1.2px solid #FAFAFA; 
+   border: 1.5px solid #FAFAFA;
     }
-
-
-    /*CAMPO SEARCH BUSCADOR */
-    #cabecera-categorias  #custom-search-input .sin-borde{
-    display: inline-flex;
-    border: 0px solid #fff;
-    -moz-border: 0px  solid #fff;
-    -webkit-border: 0px solid #fff;
-    width: 330px;
-    height: 30px;
-    padding-left: 8px; /*MUEVE LA LETRA*/
-    background-color: #f8f8f8;
-    }
-
-
-    input::placeholder {
-    width: 250px;
-    font-size: 1rem;
-    color: #2d2d2d;
-    }
-
-
-    /*BOTOM BUSCADOR */
-    #cabecera-categorias .controls .boton{
-    border-right: 4px;
-    -moz-border-right: 2px;
-    -webkit-border-right: 2px;
-    color: #fff;
-    padding-left:2px; /*MUEVE LA LETRA*/ 
-    width: 15%;
-    max-width: 55px;
-    height: 30px;
-    background-color: #fff;
-    }
-
-
-    #cabecera-categorias   .controls .icon .fa-search{
-    color: #000000;
-    }
-
+ 
+    .controls  #custom-search-input input[type=text]:focus {
+     outline: none;
+     border: 0;
+     background-color: #fff;
+     padding-left: 8px; /*MUEVE LA LETRA*/
+      }
+  
+  
+ 
+   /*CAMPO SEARCH BUSCADOR */
+   #cabecera-categorias .controls  #custom-search-input .sin-borde{
+   border: 0px solid #fff;
+   -moz-border: 0px  solid #fff;
+   -webkit-border: 0px solid #fff;
+   width: 92%;
+   height: 30px;
+   padding-left: 8px; /*MUEVE LA LETRA*/
+   background-color: #f8f8f8;
+   }
+ 
+ 
+   input::placeholder {
+     width: 250px;
+     font-size: 1rem;
+     color: #2d2d2d;
+     }
+ 
+ 
+     /*BOTOM BUSCADOR */
+      .controls  #custom-search-input .boton{
+     border-right: 4px;
+     -moz-border-right: 2px;
+     -webkit-border-right: 2px;
+      padding-left:2px; /*MUEVE LA LETRA*/
+      width: 8%;
+      max-width: 55px;
+      height: 30px;
+     background-color: #fff;
+      }
+ 
+     .controls .icon .fa-search{
+     color: #000000;
+     }
+ 
+ 
+   
   
      /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
      /*CONTENEDOR  REVISTA Y SOCIALES*/
-     #cabecera-categorias .suscribe{
-      width: 20%;
-      max-width: 110px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
-      display: inline-flex;
-      height: 32px;
-      }
-
-
-     .suscribe  a h4{
-      width: 100%;
-      max-width: 90px;
-      font-size: 1rem;
-      word-spacing: -3px;
-      letter-spacing: -0.7%;
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 700;
-      color:#2d2d2d;
-      margin-top:  16px;
-      }
-  
-
-   /*LETRA INSCRIBETE*/
- n  .suscribe a h4:hover{
-    color: #7aac41;
-    text-decoration: none;
-     }
-
-
-    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-    /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
-    #cabecera-categorias .menu-btn {
-    display: inline-flex;
-    width: 10%;
-    max-width: 39px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
-    height: 32px;
-    cursor: pointer;
-     }
-
-
-       #cabecera-categorias .menu-btn  .hamburguesa{
-        width: 100%;
-        max-width: 39px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
-        height: 32px;
-        display: block;
-        position: relative;
-        float: left;
-        margin: auto;
+      .suscribe{
+       width: 20%;
+       max-width: 110px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
+       display: inline-flex;
+       height: 40px;
        }
-
-
-      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-      .menu-btn .hamburguesa .menu-btn__burger {
-      display: block;
-      position: relative;
-      float: left;
-      margin: auto;
-      margin-top: 17px ;
-      width: 100%;
-      max-width: 38px;
-     height: 4.2px;
-     background: #2d2d2d;
-     border-radius: 2px;
-     box-shadow: 0 2px 5px rgba(255,101,47,.2);
-     transition: all .5s ease-in-out;
-     z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/   
-      }
-
-
-   /*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
+ 
+     .suscribe  a h4{
+       font-size: 0.9rem;
+       word-spacing: -3px;
+       letter-spacing: -0.7%;
+       font-family: Arial, Helvetica, sans-serif;
+       font-weight: 700;
+       color:#2d2d2d;
+       margin-top:  16px;
+       }
+   
+   
+ 
+    /*LETRA INSCRIBETE*/
+    .suscribe a h4:hover{
+     color: #7aac41;
+     text-decoration: none;
+    }
+    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+ 
+ /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+ 
+ 
+ 
+ /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+  /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
+    .menu-btn {
+   display: block;
+   position: relative;
+   float: right;
+   height: 40px;
+   width: 8%;
+   max-width: 38px;
+   min-width: 38px;
+    cursor: pointer;
+    }
+ 
+    .menu-btn  .hamburguesa{
+       width: 100%;
+       max-width: 39px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+       height: 40px;
+       display: block;
+       position: relative;
+       float: left;
+    
+     }
+ 
+     /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+     .menu-btn .hamburguesa .menu-btn__burger {
+    display: block;
+    position: relative;
+    float: left;
+    margin: auto;
+    margin-top: 17.5px ;
+    width: 38px;
+   height: 4.2px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+    z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
+    }
+ 
+ 
+ /*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
  .menu-btn__burger::before,
  .menu-btn__burger::after {
-  content: '';
-  position: absolute;
-  width: 38px;
-  height: 4.2px;
-  background:#2d2d2d;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-  transition: all .5s ease-in-out;
+ content: '';
+ position: absolute;
+ width: 38px;
+ height: 4.2px;
+ background:#2d2d2d;
+ border-radius: 2px;
+ box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+ transition: all .5s ease-in-out;
  z-index: 800;
-  
-  
+ 
+ 
  }
  .menu-btn__burger::before {
-   transform: translateY(-10px);
+  transform: translateY(-9px);
  }
  .menu-btn__burger::after {
-   transform: translateY(10px);
-  
+  transform: translateY(9px);
+ 
  }
 
 
-
-
-  /* ANIMATION */
   /* ANIMATION */
   .hamburguesa.open .menu-btn__burger {
     transform: translateX(-50px);
@@ -347,7 +350,7 @@
   top:0;
   bottom: 0;
   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-   background-color: #fff;
+   background-color: #000;
    overflow-y: scroll;
    z-index: 200;
    visibility: visible;
@@ -369,7 +372,6 @@
   margin-left: 50px;
   visibility: visible;
   height: 80px;
- 
    border-bottom: 1px solid #2d2d2d;
 
   }
@@ -384,37 +386,37 @@
 
  
 
-nav .logo-esconder .logo-en-menu-responsive img{
+  nav .logo-esconder .logo-en-menu-responsive img{
   width: 100%;
   max-width: 120px;
   min-width: 120px;
   margin-top: 45px;
-}
+  }
 
-nav .logo-esconder .emoticon{
+  nav .logo-esconder .emoticon{
   width: 8%;
   height: 80px;
-}
+  }
 
- nav .logo-esconder .suscriptor{
+  nav .logo-esconder .suscriptor{
    width: 30%;
    height: 80px;
    display: block;
    position: relative;
    float: right;
+   }
 
- }
-  nav .logo-esconder .suscriptor a h4{
-  font-size: 0.8em;
-  margin-top: 50px;
 
-  }
+    nav .logo-esconder .suscriptor a h4{
+    font-size: 0.8em;
+    margin-top: 50px;
+    color: #fff;
+    }
 
-  nav .siguenos{
+   nav .siguenos{
     display: block;
     width: 95%;
     margin-top: 40px;
-    width: 90%;
     margin-left: 50px;
   }
 
@@ -425,39 +427,37 @@ nav .logo-esconder .emoticon{
     margin-left: 10px;
   }
 
-   nav .siguenos h1{
+   nav .siguenos .red-social h1{
      font-size: 0.9em;
      display: inline-flex;
      margin: 10px 0;
      padding: 5px 9px 5px 4px;
-   }
+     color: #fff;
+    }
 
-  nav .siguenos ul li{
+   nav .siguenos .red-social li{
     margin: 10px 0;
     list-style: none;
     padding: 5px 9px 5px 4px;
+    }
 
-  }
+
+    nav .siguenos ul li .fa-envelope{
+    color: oldlace;
+    }
+
+   nav .siguenos ul li .fa-facebook-f{
+    color: oldlace;
+   }
+
+    nav .siguenos ul li .fa-pinterest{
+      color: oldlace;
+   }
 
 
-   nav .siguenos ul li .fa-envelope{
-    background-color: oldlace;
-    color: #2d2d2d;
-  }
-
-  nav .siguenos ul li .fa-facebook-f{
-    background-color: oldlace;
-    color:  #2d2d2d;
-  }
-
-  nav .siguenos ul li .fa-pinterest{
-    background-color: oldlace;
-    color:   #2d2d2d;
-  }
-  nav .siguenos ul li .fa-instagram{
-    background-color: oldlace;
-    color: #2d2d2d;
-  }
+    nav .siguenos ul li .fa-instagram{
+      color: oldlace;
+    }
       
    /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
    nav .buscador-esconder{
@@ -526,64 +526,138 @@ nav .logo-esconder .emoticon{
     }
 
    /* UL  */
+    /* UL  */
     header  nav .nav{
-    width: 90%; 
-    height: 99%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    width: 90%;
-  margin-left: 50px;
-     z-index: 99; 
-    }
-
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav .nav li{
-    list-style: none;
-    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-left: 10px;
-    margin-bottom: 10px;
-    cursor:pointer;
-    border-bottom: 1px solid #2d2d2d;
-    }
-    
-    nav .nav li a {
-    z-index: 100;
+      width: 90%; 
+      height: 99%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      margin-left: 50px;
+      z-index: 10; 
+      background-color: #000;
+      }
+  
+  
+       /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+       header  nav .nav li{
+      height: 25px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+      margin-bottom: 10px;
+      border-bottom: 1px solid #2d2d2d;
+      z-index:  1; 
+      display: block;
+      }
+      
+     header nav .nav li a {
+      z-index: 1;
     height: 24px;
-    color: #2d2d2d;
+    color: #fff;
     font-weight: 520;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    }
-  
- 
-      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
-       display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
-      }
-
-
-    nav .nav li ul li a{
-    font-size: 1rem;
     display: block;
-    max-width: 200px;
-    width: 100%;
-    margin-left: -2px;
-    padding-bottom: -2px;
-    margin-left: -76px;
-    }
-
-     nav .nav ul {
-    visibility: hidden;
-    }
-
-      /*FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
+      }
+    
+      /*LI QUE SE OCULTA ES DEL MOVIL*/
+      nav .nav .li-movil {
+      display: none;
+      }
+  
+      /*MUY IMPORTANTE PARA QUE EL SUBMENU ESTE POR ENCIMA DE LOS OTROS LI*/
+       nav .nav .li-pc {
+      display: block;
+      z-index: 2000;
+      }
+   
+  
+       header nav .nav .li-pc:hover  .submenu-responsive {
+      display: block;
+       position: absolute;
+      visibility: visible;
+      z-index: 2;
+      }
+  
+      
+      /*NAV UL LI UL*/
+       header  nav .nav .li-pc  .submenu-responsive {
+      display: none;
+      background-color:  #fff;
+      width: 100%;
+      max-width: 400px;
+      white-space: initial;
+      z-index:1000;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+       box-sizing: border-box;
+        }
+  
+  
+      /*NAV UL LI UL LI*/
+      header nav .nav .li-pc .submenu-responsive li{
+      display:block;
+      position: relative;
+      float: left;
+      width: 400px;
+      margin-left: -2px;
+      margin-bottom: 0.5px;
+      z-index: 1000;
+      border-bottom: 1px solid #000;
+      }
+    
+    
+         header nav .nav .li-pc .submenu-responsive li a{
+      font-size: 0.9rem;
+      display: block;
+      text-transform: lowercase;
+      padding-top: 2px;
+      z-index: 1500;
+      color: #000000;
+      background-color: #fff;
+      margin-left: 5px;
+      }
+      
+  
+          
+      nav .nav li ul {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 300px;
+      white-space: initial;
+      z-index:1000;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      }
+    
+  
+      
+      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+      /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+      nav .nav li:hover  ul {
+      display: block;
+      visibility: visible;
+      }
+  
+  
+       nav .nav li ul li{
+        display:block;
+        border-bottom: 1px solid rgba(255,255,255,.5);
+        width: 350px;
+        margin-bottom: 0.5px;
+        z-index: 1500;
+        }
+  
+  
+      nav .nav li ul li a{
+      font-size: 0.9rem;
+      display: block;
+      text-transform: lowercase;
+      padding-top: 1px;
+        }
+  
+        /*..FIN NAV ESCONDIDO...........................*/
   
  
 
@@ -603,33 +677,7 @@ nav .logo-esconder .emoticon{
 
 
   
-  /*ANIMACION SUBRAYADO */
-  nav a {
-  display: inline-block;
-  position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
-
-  nav  a:after {
- content: "";
- display: block;
- margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
- height: 2px;
- width: 0px;
- transition: all .8s;
- z-index: 10;
- 
- }
-  nav  a:hover:after {
- width: 100%;
- max-width: 500px;
- padding-left: 40px;
- padding-right: -150px;
- height: 2px;
- background: white;
-    }
+  
 
    /*FIN ANIMACION SUBRAYADO */
    
@@ -726,138 +774,182 @@ nav .logo-esconder .emoticon{
       }
   
 
-      /*.........AL PRINCIPIO DE LA PAGINA  EL MENU QUE LEVA INICIO ETC.............................*/
-     
-      .intro{
+      /*...CONTAINER TOTAL DE INICIO CATEGORIAS ETC ETC........................*/
+      #container-categorias-subcategorias{
+      display: block;
+      width: 100%;
+      }
+
+      
+      /*..INTRO CONTAINR DE MENU-INTROESCRITO Y INTRO-DOS-VACIOS..*/
+      #container-categorias-subcategorias .intro{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
-      max-width: 1250px;
       height: 100%;
       max-height: 180px;
-      margin-bottom: 30px;  /*SEPARA EL TITULO DE LA BARRA DE LAS SUBCATEGORIAS*/
-      
+      margin-bottom: 30px; 
       }
 
-      .menu-introescrito{
-        display: flex;
-        flex-direction: column;
-        width: 70%;
-        height: 180px;
-        border-left: 5px solid #7aac41;
-        border-right: 5px solid #7aac41;
+
+    /*..SUBCONTAINER DEL MENU Y TUTULO DE PAGE CATEGORIA...*/
+    .intro .menu-introescrito{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 180px;
+    border-left: 5px solid #7aac41;
+    border-right: 5px solid #7aac41;
       }
    
-           
-      .menu-introescrito  p{
+
+       /*CONTAINER DEL MENU INIO RECETAS S.. CATEGORIAS ...ETC*/
+    .intro  .menu-introescrito .menu{
+    display: block;
+    width: 100%;
+    height: 80px;
+      }
+
+    
+    /*ESTO ESCONDE LA BARRA QUE DESPLAZA*/
+    /* WebKit */
+   .menu-scrolling::-webkit-scrollbar { 
+   width: 0px;
+   background: transparent;
+   }  
+
+
+    .intro .menu-introescrito  .menu  .menu-scrolling{
+    width: auto;
+    height: 60px;
+    padding-top: 4px;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden; 
+    overflow-x:  scroll;
+    white-space: nowrap;
+    flex-wrap: nowrap; 
+    }
+
+    /*..  border: 2px solid #fff..*/
+    .intro .menu-introescrito  .menu ul{
+    display: flex;
+    flex-direction: row;
+    width: 99.5%;
+    margin-left: 4px;
+    width:  100%;
+    height: 100%;
+    max-height: 30px;
+    align-items: center;
+      }
+       
+      .intro .menu-introescrito .menu  ul li{
+      margin-right: 9px;
+      list-style: none;
+       }
+         
+
+       /*LETTRA DEL MENU LI SIN P*/
+      .intro .menu-introescrito .menu  ul li a{ 
+      color: #2d2d2d;
+      text-transform: uppercase;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      font-weight: 900;
+      }
+
+
+    
+    
+         /*..ARROW DEL MENU.*/
+      .intro .menu-introescrito .menu  ul li a i::after{
+      position: relative;
+      content: "";
+      display: inline-block;
+      width: 0.4em;
+      height: 0.4em;
+      border-right: 0.18em solid #7aac41;
+      border-top: 0.18em solid #7aac41;
+      transform: rotate(45deg);
+      margin-right: 0.5em;
+      }
+            
+
+    
+      /*SOLO DE LA PALABRA CATEGORIA*/
+           /*LETTRA DEL MENU LI SIN P*/
+      .intro .menu-introescrito .menu  ul li p{
+       color: #2d2d2d;
+      text-transform: uppercase;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      font-weight: 900;
+      }
+
+     /*..ARROW DEL MENU...DE CATEGORIA*/
+      .intro .menu-introescrito .menu  ul li p i::after {
+        position: relative;
+        content: "";
+        display: inline-block;
+        width: 0.4em;
+        height: 0.4em;
+        border-right: 0.18em solid #7aac41;
+        border-top: 0.18em solid #7aac41;
+        transform: rotate(45deg);
+        margin-right: 0.5em;
+          }
+                
+    
+    
+      /*..FIN...*/
+          
+      .intro  .menu-introescrito .menu  ul li:hover > ul {
+      display:block;
+       }
+
+
+      .intro  .menu-introescrito .menu ul ul{
+      display:none;
+      float: right;
+      z-index: 1000;
+      width: 30%;
+      position:absolute;
+      top:  19.4%;  /*ESTA MEDIDA HACE QUE EL MENU ESCOCIDO S SITUE ABAJO DEL TITULO*/
+      padding:0;
+      background-color: #fff;
+              }
+          
+        
+      .intro  .menu-introescrito .menu ul ul li{
+      display: block;
+      width:  100%;
+      border-bottom: 1px solid #2d2d2d;
+      background-color: #fff;
+              }
+
+      .intro .menu-introescrito  .menu  ul li ul li a{
+        display: block;
+        width: 100%;
+        padding-top: 1px;
         letter-spacing: -0.4px;
         font-size:  0.94rem;
-        line-height: 1.45;
         color: #000000;
         font-family: 'Times New Roman', Times, serif;
-        text-transform: uppercase;
+        text-transform:  lowercase;
         font-weight: 900;
         }
        
-      /*BLOQUE DE COSTADO DERECHO*/
-      .menu{
-        width: 100%;
-        height: 60px;
-        
-      }
-
-      .menu ul{
-      display: flex;
-      flex-direction: row;
-
-      overflow-x: auto;
-      overflow-y: hidden;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none;  /* Internet Explorer 10+ */
-       white-space: nowrap;
-      }
-  
       .menu ul::-webkit-scrollbar { /* WebKit */
         width: 0px;
         height: 20px;
         }
     
-      .menu li{
-        list-style: none;
-        margin: 2px 13px 2px 4px;
-      }
-  
-        .menu a {
-          letter-spacing: -0.4px;
-          font-size:  0.94rem;
-          line-height: 1.45;
-          color: #000000;
-          font-family: 'Times New Roman', Times, serif;
-          text-transform: uppercase;
-          font-weight: 900;
-        }
-     
-       .menu i {
-          border: 1px solid #000000;
-          border-width: 0 0.8px 0.8px 0;
-          display: inline-block;
-          padding: 4px;
-         }
-        
-           .menu .right {
-           transform: rotate(-45deg);
-           -webkit-transform: rotate(-45deg);
-          }
 
-
-    
-
-      /*MENU ESCONDIDO DE LAS CATEGORIAS*/
-        /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
-      .menu  ul ul {
-      display:none;
-      position:absolute;
-      top:  24.1%;  /*ESTA MEDIDA HACE QUE EL MENU ESCOCIDO S SITUE ABAJO DEL TITULO*/
-      left: 90px;
-      background-color: #000000;
-      padding:0;
-      width: 60%;
-     }
-
-   
-
-       .menu ul ul li {
-      float:none;
-      width:250px;
-    
-      }
-
-      .menu ul ul p{
-        color: #fff;
-        line-height: 100%;
-      }
-     
-    /* enlaces de los items del menu desplegable */
-
-    .menu ul ul a {
-     
-       padding: 10px 15px;
-       margin-left: -300px; /*MUEVE LTRAS*/   
-      
-       }
-  
-     /* items del menu desplegable al pasar el ratón */
-      .menu  ul li:hover > ul {
-       display:block;
-       width: 50%;  /*IMPORTANTE*/
-      }
- 
- 
     /* efecto al pasar el ratón por los items del menu */
     .menu ul li:hover {
-   cursor: pointer;
-  }
+     cursor: pointer;
+    }
  
 
        /*BLOQUE DE COSTADO IZQUIEROD*/
@@ -962,18 +1054,14 @@ nav .logo-esconder .emoticon{
       /*CONTINER TOTAL DE LA PPAGINA  DE RECETAS Y DE DIETA Y PLAN Y TURISMO...*/
       .container-posts-categorias{
       display: block;
-      position: relative;
-      float: left;
-      justify-content: space-between;
       width: 100%;
       margin-bottom: 100px;
       }
 
-      .columna-categorias{
+      .container-posts-categorias  .columna-categorias{
         display: flex;
        flex-direction: column;
        width: 100%;
-       
        }
       /*..........................*/
 
@@ -1076,12 +1164,13 @@ nav .logo-esconder .emoticon{
     }
 
 
-  /*CONTAINER ESTE CONTAINER ES DE RECETAS..CONTIENE COLUMNA Y ASIDE..........*/
+  /*CONTAINER ESTE CONTAINER ES DE RECETAS..PLAN DIETAS CONTIENE COLUMNA Y ASIDE..........*/
      #posts-categorias-aside{
      display: flex;
      flex-direction: row;
      justify-content: space-between;
     width: 100%;
+
      }
   
      /*XOLUMNA CONTENEDOR DE VARIOS POSTS*/
@@ -1091,6 +1180,7 @@ nav .logo-esconder .emoticon{
      float: left;
     width: 80%;
     max-width: 950px;
+  
     }
 
 
@@ -1526,8 +1616,11 @@ nav .logo-esconder .emoticon{
      /*SUB-caja ICONOS SOCIALES*/
      .icon-social1{
       width: 49.5%;
-      max-width: 250px;
+      max-width: 420px;
       height: 90px;
+      display: block;
+      position: relative;
+      float: left;
      }
 
       .icon-social1 p{
@@ -1535,7 +1628,7 @@ nav .logo-esconder .emoticon{
       word-spacing: -3px;
       letter-spacing: -1px;
       font-family: 'Archivo Black', sans-serif;
-      color: #2d2d2d;
+      color: #7aac41;
       }
     
 
@@ -1546,7 +1639,7 @@ nav .logo-esconder .emoticon{
     .icon-social1  .social2{
     display: inline-flex;
   list-style: none;
-  width: 80%;
+  width: 90%;
   display: block;
   position: relative;
    margin-top: 9px;
@@ -1607,8 +1700,9 @@ nav .logo-esconder .emoticon{
          /*SUB-caja contenedor de la caja correo*/
    .box{
     width: 45%;
-    margin-top: 8px; /*SUBE CAJA A MENOS TOP*/
-    transform: translate(-5%, -5%);
+    display: block;
+    position: relative;
+    float: right;
     height: 90px;
      }
   
@@ -1625,15 +1719,15 @@ nav .logo-esconder .emoticon{
 
    /*cajita del correo */
   .box form{
-    display: flex;
-    margin-top: 9px;
+    display: block;
+    width: 95%;
+    margin: auto;
   }
   
   .box input[type="text"]
   {
   background-color: #fff;
-  display: flex;
-  width:60%;
+  width:65%;
   height: 50px;
   border: 1.5px solid 	#DCDCDC;
   padding: 0 18px;
@@ -1644,14 +1738,14 @@ nav .logo-esconder .emoticon{
   .box button[type="submit"]{
   left: 10px;  /*EL TRUCO IMPORTANTE*/
   border-radius: 0 5px 5px 0;
-  width: 30%;
+  width: 22%;
   height: 50px;
   border: none ;
   outline: none;
   cursor: pointer;
   background-color: #2d2d2d;
   color: #fff;
-  font-size: 12px;
+  font-size:  0.9rem;
   font-family: 'Archivo Black', sans-serif;
   }
   

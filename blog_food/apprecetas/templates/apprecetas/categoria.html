@@ -17,6 +17,9 @@
 
                           <!--MENU------------------------------------------------------------->
                           <div class="menu">
+                             
+                           <!--fin del menu scrolling--->
+                           <div class="menu-scrolling">
                           <ul>
                           <li>
                           <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
@@ -33,7 +36,7 @@
                           <!--  TITULO--CATEGORIA---> 
                           <li>
                           <a href="/recetas-saludables/categoria/{{ kategory.slug }}">
-                          <p> {{kategory.name}}</p> 
+                          {{kategory.name}} 
                           </a>    
                           </li>
                           {% endfor %}
@@ -47,13 +50,15 @@
                           {% load mptt_tags %}
                           {% for receta in category_deals %}
                           <a href="/recetas-saludables/categoria/{{ receta.slug }}">
-                          <p>{{category_deals.get}}<i class="right"></i></p>
+                          {{category_deals.get}}<i class="right"></i>
                           </a>
                           {% endfor %}
                           </li>
                           <!----FIN NOMBRE DE LA CATEGORIA--->
 
                           </ul>
+                          </div>
+                          <!--fin del menu scrolling--->
                        </div>
                       <!--FIN --MENU------------------------------------------------------------>
 

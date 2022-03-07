@@ -155,18 +155,6 @@ def recipe_detail(request, category_id=True, slug=True):
 
     return render(request, "apprecetasalzum/recipe-detail.html", context)
 
-    class CategoryRedirectView(RedirectView):
-        permanent = False
-        query_string = True
-        #permanent = True
-
-    def get_redirect_url(self, *args, **kwargs):
-        category = get_object_or_404(Category, name=self.kwargs['category'])
-        recipe = Recipe.objects.filter(
-            category_id__in=category.get_descendants(include_self=True))
-
-        return reverse('categoria', 'recipe', kwargs={'slug': category.slug})
-
 
 def show_category(request, slug=True):
     category_deals = Category.objects.filter(slug=slug).order_by('slug')
@@ -181,6 +169,10 @@ def show_category(request, slug=True):
     categories = Category.objects.filter(
         parent=None)  #SALEN SOLO LAS CATEGORIAS
 
+    recetas = Receta.objects.all()  #RECETAS SALUDABLES
+    cat = Kategory.objects.all()  #RECETAS SALUDABLES
+    kategories = Kategory.objects.filter(parent=None)
+
     print(category_deals)  #CATEGORIA
     #print(category_diet)  #CATEGORIA
     print(category)  #CATEGORIA Y SUS HIJOS
@@ -193,6 +185,9 @@ def show_category(request, slug=True):
         'recipe_post': recipe_post,
         'post_recipe': post_recipe,
         'categories': categories,
+        'recetas': recetas,
+        'cat': cat,
+        'kategories': kategories,
     }
     return render(request, "apprecetasalzum/categoria.html", context)
 
@@ -235,12 +230,6 @@ def show_subcategory(request, slug=True):
     print(cat)
 
     return render(request, "apprecetasalzum/subcategoria.html", context)
-
-
-#def receta_detail(request, slug):
-#recipe = get_object_or_404(Recipe, slug=slug)
-#print(recipe)
-#return render(request, "apprecetasalzum/recipe.html", {'recipe':recipe})  #recipe.slug QUE VA EN LA URL PARA REDIRECCIONAR A UNA PAGINA
 
 
 def categoriasoriginal(request):
@@ -298,25 +287,3 @@ def categoriasoriginal(request):
     }
 
     return render(request, 'apprecetasalzum/batidosyensaladas.html', context)
-
-
-#def categorias(request):
-
-#recipes=Recipe.objects.all()
-#categorias_salzum = Category.objects.all()
-#context = {
-#'recipes':recipes,
-# 'categorias_salzum': categorias_salzum,}
-# print(recipes)
-
-#return render(request, 'apprecetasalzum/categorias.html', context)
-
-#def categoria(request, categoria):
-#subcategories = Category.objects.filter(parent_category__id=target_category.id)
-#cat = Recipe.objects.filter(categories__name__icontains=categoria).order_by('title').distinct()
-#context={
-#'cat':cat,
-#}
-# print(cat)
-
-#return render(request, "apprecetasalzum/categoria.html", context)

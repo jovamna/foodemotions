@@ -1,29 +1,57 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
+*{
+  margin:0;
+  padding:0;
+  border:0;
   box-sizing: border-box;
 }
+/*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+ 
+*, *:before, *:after {
+box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  float:left;
+  clear:both
+ }
+
+
+ /*--IMPORTANTE COLOR DEL LOGO #3d6024 */
+
+  body{
+  padding:0;
+  margin: 0;
+  background-color: #fff;
+  color: rgba(0,0,0,.95);
+  font-family: "Argos",serif;
+   }
+
+html, body {
+line-height: 1.15;
+-webkit-text-size-adjust: 100%;
+height: 100%;
+
+}
+
 
 /*line-height: 20pt;        /* para la separacion entre lineas */ 
 /*text-indent: 30pt;  */ 
 
-#wrapper-articulo {
-  margin:0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-width: 250px;
-  flex-wrap: wrap;
-}
+  #wrapper-articulo {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width:250px;
+    flex-wrap: wrap;
+  }
       
-#wrapper-articulo > * {
-  padding:20px;
-  
+   #wrapper-articulo > * {
+  padding:20px;  
   }
 
-  #container-articulo{
+    #container-articulo{
     width:100%;
     max-width: 1200px;
     margin-left:auto;
@@ -39,51 +67,50 @@
     }
  
      
-a {
+   a {
   color: #524c56;
   text-decoration: none;
   font-weight: lighter;
-}
+   }
 
-.children form {
+   .children form {
   margin-left: -48px;
+   }
 
-  /* will touch very left side */
-}
-
-.children .children form {
+   .children .children form {
   margin-left: -96px;
   /* will touch very left side */
+   }
 
-}
-
-#comentarios{
+   #comentarios{
   background-color: violet;
   display: flex;
   width: 100%;
   max-width: 900px;
-}
+   }
 
 
- #controls-responsive{
+    #controls-responsive{
    display: none;
- }
+    }
 
 
-/*border-bottom: 2px solid #DDD;*/
+   /*border-bottom: 2px solid #DDD;*/
   header{
-  width: 100%;
-  z-index: 999;
-  position: fixed;
-  margin: auto;
-  height:  70px;
-  box-shadow: 0 8px 6px -6px #c9c9c9;
-  background-color:#fff;
+    width:100%;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
+    top:0;
+    left: 0;
+    margin: auto;
+    height: 65px;
+    box-shadow: 0 8px 6px -6px #DCDCDC;
+    background-color: #fff;
   }
 
   header.black{
    background-color:#fff ;
-   height:  70px;
+   height:  65px;
   }
   
   
@@ -95,43 +122,42 @@ a {
 
   .cabecera{
     width: 100%;
-    max-width: 1200px;
-    height: 40px;
+   max-width: 1200px;
+    height: 35px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
     margin: auto;
-    margin-top: -2px;
   }
 
    /*caja */
    .logo{
-    display: inline-flex;
-    width: 19.8%;
-    max-width: 350px;
-    height: 40px;
+    display: block;
+    width: 70%;
+    max-width: 880px;
+    min-width: 800px;
+    height: 35px;
    }
     
    /*IMAGEN DEL LOGO*/
    .logo img{
     width: 100%;
-    height: 40px;  
+    max-width: 200px;
+    min-width: 180px;
+    height:  35px;  
     }
      
  
      /*CONTENEDOR  REVISTA Y SOCIALES*/
       .suscribe{
-      width: 30%;
-      max-width: 350px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
+      width: 20%;
+      max-width: 300px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
       position: relative;
       float: right;
-      height: 32px;
+      height: 35px;
       }
 
     .suscribe  a h4{
-     width: 100%;
-     max-width: 90px;
       font-size: 1rem;
       word-spacing: -3px;
       letter-spacing: -0.7%;
@@ -150,100 +176,103 @@ a {
    }
    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
 
-  /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
-   .menu-btn {
-    display: inline-flex;
-    width: 10%;
-    max-width: 39px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
-      height: 32px;
-    cursor: pointer;
-     }
+    /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
+   /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+   .cabecera .menu-btn {
+    display: block;
+    position: relative;
+    float: right;
+    width: 8%;
+    max-width: 40px;
+    min-width: 38px;
+    height: 35px;
+    margin: auto;
+    margin-top: 22px;
+    z-index: 1000;
+    }
 
-     .menu-btn  .hamburguesa{
-        width: 100%;
-        max-width: 39px;
-        display: block;
-        position: relative;
-        float: left;
-      }
-
-      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-      .menu-btn .hamburguesa .menu-btn__burger {
+  
+  .menu-btn .hamburguesa{
   display: block;
   position: relative;
-  float: left;
-   margin: auto;
-   margin-top: 18px;
-    width: 100%;
-    max-width: 38px;
-    height: 4.2px;
-  background: #2d2d2d;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2);
-  transition: all .5s ease-in-out;
-  z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
-   
- }
- /*--fin MUEVE EL MENU............ESTE ES EL BURGER*/
- .menu-btn__burger::before,
- .menu-btn__burger::after {
+  float:left;
+  width: 100%;
+  max-width: 40px;
+   }
+
+     /*---- box-shadow: 0 2px 5px rgba(255,101,47,.2);----------*/
+   .menu-btn .hamburguesa .menu-btn__burger {
+      display: block;
+      position: relative;
+      float: right;
+      width: 37px;
+      height: 4px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      transition: all .5s ease-in-out;
+      z-index: 1000;
+      }
+  
+
+
+       /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
   content: '';
   position: absolute;
-  width: 38px;
-  height: 4.2px;
+  height: 4px;
+  width: 37px;
   background:#2d2d2d;
   border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
   transition: all .5s ease-in-out;
- z-index: 800;
-  
-  
- }
- .menu-btn__burger::before {
-   transform: translateY(-10px);
- }
- .menu-btn__burger::after {
-   transform: translateY(10px);
-  
- }
+  z-index: 800;  
+  }
+
+    
+  .menu-btn__burger::before {
+  transform: translateY(-7px);
+  z-index:3000;
+  }
 
 
+  .menu-btn__burger::after {
+  transform: translateY(7px);
+  z-index:3000;
+  }
 
 
-  /* ANIMATION */
   /* ANIMATION */
   .hamburguesa.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-    }
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+  }
 
 
-     /* background: #fff;  */
-    .hamburguesa.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-   
-    }
+   /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+ 
+  }
 
 
-    /* background: #fff;  */
-    .hamburguesa.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-
-    }
-
-
-
+  /* background: #fff;  */
+  .hamburguesa.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  }
 
   .menu-btn__burger:hover{
-    background-color: #639a3a;
+  background-color: #7aac41;
+  }
+  
+
+  .menu-btn__burger:hover::before,
+  .menu-btn__burger:hover::after{
+  background-color: #7aac41;
   }
 
-   .menu-btn__burger:hover::before,
-   .menu-btn__burger:hover::after{
-    background-color: #639a3a;
-  }
 
+     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
 
   /* ESTE ES EL MENU NAV*/
 
@@ -259,9 +288,9 @@ a {
   top:0;
   bottom: 0;
   left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-   background-color: #fff;
+   background-color: #000;
    overflow-y: scroll;
-   z-index: 200;
+   z-index: 20;
    visibility: visible;
    box-sizing: border-box;
   
@@ -302,23 +331,24 @@ nav .logo-esconder .logo-en-menu-responsive img{
   margin-top: 45px;
 }
 
-nav .logo-esconder .emoticon{
+  nav .logo-esconder .emoticon{
   width: 8%;
   height: 80px;
-}
+   }
 
- nav .logo-esconder .suscriptor{
+
+   nav .logo-esconder .suscriptor{
    width: 30%;
    height: 80px;
    display: block;
    position: relative;
    float: right;
+    }
 
- }
   nav .logo-esconder .suscriptor a h4{
   font-size: 0.8em;
   margin-top: 50px;
-
+  color: #fff;
   }
 
   nav .siguenos{
@@ -341,6 +371,7 @@ nav .logo-esconder .emoticon{
      display: inline-flex;
      margin: 10px 0;
      padding: 5px 9px 5px 4px;
+     color: #fff;
    }
 
   nav .siguenos ul li{
@@ -351,57 +382,54 @@ nav .logo-esconder .emoticon{
   }
 
 
-   nav .siguenos ul li .fa-envelope{
-    background-color: oldlace;
-    color: #2d2d2d;
-  }
+    nav .siguenos ul li .fa-envelope{
+    color: oldlace;
+    }
 
-  nav .siguenos ul li .fa-facebook-f{
-    background-color: oldlace;
-    color:  #2d2d2d;
-  }
+    nav .siguenos ul li .fa-facebook-f{
+    color: oldlace;  
+    }
 
-  nav .siguenos ul li .fa-pinterest{
-    background-color: oldlace;
-    color:   #2d2d2d;
-  }
-  nav .siguenos ul li .fa-instagram{
-    background-color: oldlace;
-    color: #2d2d2d;
-  }
+    nav .siguenos ul li .fa-pinterest{
+    color: oldlace;
+    }
+
+    nav .siguenos ul li .fa-instagram{
+    color: oldlace;
+   }
       
    /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
    nav .buscador-esconder{
-  display: flex;
-  flex-direction: column;
-  width: 85%;
-  visibility: visible;
-  margin-top: 40px;
-  width: 90%;
-  margin-left: 50px;
-  height: 50px;
-  }
+   display: flex;
+   flex-direction: column;
+   width: 85%;
+   visibility: visible;
+   margin-top: 40px;
+   width: 90%;
+   margin-left: 50px;
+   height: 50px;
+   }
 
-  .d-flex{
+    .d-flex{
     width: 100%;
     height: 50px;
     display: flex;
     flex-direction: row;
-   box-sizing: border-box;
-  }
+    box-sizing: border-box;
+    }
 
-  #custom-search{
+   #custom-search{
     width: 100%;
     height: 50px;
-   border: 1px solid #2d2d2d;
-   border-radius: 8px;
-  }
+    border: 1px solid #2d2d2d;
+    border-radius: 8px;
+    }
 
- .buscador-esconder #custom-search input[type=text]{
+   .buscador-esconder #custom-search input[type=text]{
    box-sizing: border-box;
- }
+   }
 
- .buscador-esconder .d-flex #custom-search .sin-borde{
+   .buscador-esconder .d-flex #custom-search .sin-borde{
     width: 90%;
     height: 40px;
     margin-top: 4px;
@@ -411,9 +439,9 @@ nav .logo-esconder .emoticon{
     display: block;
     position: relative;
     float: left;
-  }
+     }
 
- .buscador-esconder .d-flex #custom-search .boton{
+   .buscador-esconder .d-flex #custom-search .boton{
   width: 10%;
   height: 40px;
   border-radius: 1px;
@@ -436,88 +464,145 @@ nav .logo-esconder .emoticon{
     color: #568632;
     }
 
+   /*.....................................*/
+     
    /* UL  */
-    header  nav .nav{
+   header  nav .nav{
     width: 90%; 
     height: 99%;
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    width: 90%;
-  margin-left: 50px;
-     z-index: 99; 
+    margin-left: 50px;
+    z-index: 10; 
+    background-color: #000;
     }
 
+
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav .nav li{
-    list-style: none;
-    height: 30px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-left: 10px;
+     header  nav .nav li{
+    height: 25px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
     margin-bottom: 10px;
-    cursor:pointer;
     border-bottom: 1px solid #2d2d2d;
+    z-index:  1; 
+    display: block;
     }
     
-    nav .nav li a {
-    z-index: 100;
+   header nav .nav li a {
+    z-index: 1;
     height: 24px;
-    color: #2d2d2d;
+    color: #fff;
     font-weight: 520;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    display: block;
     }
   
+    /*LI QUE SE OCULTA ES DEL MOVIL*/
+    nav .nav .li-movil {
+    display: none;
+    }
+
+    /*MUY IMPORTANTE PARA QUE EL SUBMENU ESTE POR ENCIMA DE LOS OTROS LI*/
+     nav .nav .li-pc {
+    display: block;
+    z-index: 2000;
+    }
  
-      /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav .nav li:hover > ul {
-       display: block;
-      margin-left: -200px;
-      height: 200px;
-      visibility: visible; 
-      z-index: 598;
+
+     header nav .nav .li-pc:hover  .submenu-responsive {
+    display: block;
+     position: absolute;
+    visibility: visible;
+    z-index: 2;
+    }
+
+    
+    /*NAV UL LI UL*/
+     header  nav .nav .li-pc  .submenu-responsive {
+    display: none;
+    background-color:  #fff;
+    width: 100%;
+    max-width: 400px;
+    white-space: initial;
+    z-index:1000;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+      }
+
+
+       /*NAV UL LI UL LI*/
+       header nav .nav .li-pc .submenu-responsive li{
+    display:block;
+    position: relative;
+    float: left;
+    width: 400px;
+    margin-left: -2px;
+    margin-bottom: 0.5px;
+    z-index: 1000;
+  
+    border-bottom: 1px solid #000;
+      }
+  
+  
+       header nav .nav .li-pc .submenu-responsive li a{
+    font-size: 0.9rem;
+    display: block;
+    text-transform: lowercase;
+    padding-top: 2px;
+    z-index: 1500;
+    color: #000000;
+    background-color: #fff;
+    margin-left: 5px;
+    }
+    
+
+        
+    nav .nav li ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    white-space: initial;
+    z-index:1000;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+  
+
+    
+    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+    nav .nav li:hover  ul {
+    display: block;
+    visibility: visible;
+    }
+
+
+     nav .nav li ul li{
+      display:block;
+      border-bottom: 1px solid rgba(255,255,255,.5);
+      width: 350px;
+      margin-bottom: 0.5px;
+      z-index: 1500;
       }
 
 
     nav .nav li ul li a{
-    font-size: 1rem;
+    font-size: 0.9rem;
     display: block;
-    max-width: 200px;
-    width: 100%;
-    margin-left: -2px;
-    padding-bottom: -2px;
-    margin-left: -76px;
-    }
+    text-transform: lowercase;
+    padding-top: 1px;
+      }
 
-     nav .nav ul {
-    visibility: hidden;
-    }
-
-      /* f............FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV.........................MENU ESCONIDDO DEL NAV ARROW.......................*/
-  
- /*ANIMACION SUBRAYADO */
- nav a {
- display: inline-block;
- position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
-
- nav  a:after {
-  content: "";
-  display: block;
-  margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-  height: 2px;
-  width: 0px;
-  transition: all .8s;
-  z-index: 10;
-  }
+      /*..FIN NAV ESCONDIDO...........................*/
 
 
 
-  /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+    /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
    nav  .estilo-logo:after{
    text-decoration: none;
    height: 0px;
@@ -532,49 +617,8 @@ nav .logo-esconder .emoticon{
 
 
  
-  /* width: 100%;*/
-  nav  a:hover:after {
-  padding-left: 40px;
-  padding-right: -150px;
-  height: 2px;
-  background: white;
-  }
-
-  /*..FIN NAV ESCONDIDO...........................*/
-
 
   
-
-
-  
-  /*ANIMACION SUBRAYADO */
-  nav a {
-  display: inline-block;
-  position: relative;
- color: white;
- text-decoration: none;
- z-index: 40;
- }
-
-  nav  a:after {
- content: "";
- display: block;
- margin-top: 30px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
- height: 2px;
- width: 0px;
- transition: all .8s;
- z-index: 10;
- 
- }
-  nav  a:hover:after {
- width: 100%;
- max-width: 500px;
- padding-left: 40px;
- padding-right: -150px;
- height: 2px;
- background: white;
-    }
-
    /*FIN ANIMACION SUBRAYADO */
 
 
@@ -644,7 +688,7 @@ nav .logo-esconder .emoticon{
    #menu-simple .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-    border: 2px solid #568632;
+    border: 2px solid #7aac41;
     border-width: 0 2px 2px 0;
   }
 
@@ -1445,6 +1489,33 @@ nav .logo-esconder .emoticon{
 
      }
 
+     .container-total-carrusell{
+      display: block;
+      width: 100%;
+   
+      }
+   
+      .container-total-carrusell h1{
+        font-size: 1.8rem;
+        color: #000000;
+   
+     }
+   
+     .container-total-carrusell  .carrusel .product{
+       height: 260px;
+   
+     }
+   
+     .container-total-carrusell  .carrusel .product   a p{
+       color: #2d2d2d;
+       margin-left: 16px;
+      margin-top: 8px;
+     }
+  
+
+
+
+
     /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
     #carrusel {
     float:left;
@@ -1457,15 +1528,7 @@ nav .logo-esconder .emoticon{
     }
     
     
-     /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
-        #carrusel h1{
-        font-size:  24px;
-        word-spacing: -3px;
-        letter-spacing: -2px;
-        font-family: 'Archivo Black', sans-serif;
-        margin-bottom: 8px;
-        }
-  
+    
     /*CONTAINER DE TODAS LAS IMAGENES*/
      /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
        .carrusel {

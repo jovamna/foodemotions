@@ -51,7 +51,7 @@
                       <!------------------------------->
                       <div class="recetas">
                            {% if recipe.title %}
-                          <h1>{{recipe.title|safe}} </h1>
+                          <h1>{{recipe.title}} </h1>
                            {% endif %}
                            {% if recipe.description %}
                           <p>{{recipe.description|safe}} </p>
@@ -139,8 +139,9 @@
 
 
 
-                <!--TIEMPO E INFORMACION NUTRICIONAL--->
-                  <div class="contiene">
+            <!--TIEMPO E INFORMACION NUTRICIONAL--->
+            <div class="contiene">
+
                   <!--------------------------->
                   <div class="temps-porciones">
                   <!--TIEMPO ----------------->  
@@ -159,14 +160,20 @@
                   </div>
                     <!--FIN DIV TEMPS PORCIONES----->
 
+
+
+
                     <!--INFORMACION NUTRICIONAL---> 
                      <div class="nutricional-imagen">
                         {% if recipe.tituloperfil %}
                         <h2>{{recipe.tituloperfil|safe}} :</h2>
                         {% endif %}  
+
+                        <ul>
                        {% if recipe.perfilnutricional %}
-                       <p>{{recipe.perfilnutricional|safe}}</p> 
-                        {% endif %}  
+                       <li>{{recipe.perfilnutricional|safe}}</li> 
+                        {% endif %}
+                        </ul>  
                      </div>
                   
                  </div>
@@ -417,6 +424,7 @@
                            <h2>{{recipe.titlepreparation|safe}}</h2>
                            </div>
                           {% endif %} 
+
                            <!--PIC DE LA PREPARARCIOM--->
                             <div class="prepa-pic"> 
                             <img src= "{% static 'appfood/img/gif/dos.png' %}"/>

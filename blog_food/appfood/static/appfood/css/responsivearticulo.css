@@ -928,24 +928,23 @@ border-radius:6px;
 
 
 
-   @media only screen and (min-width: 360px) and (max-width: 640px){
-       html, body{
-      width: 100%;
-      height: 100%;
-      margin: 0;
-       }
+  @media only screen and (min-width: 360px) and (max-width: 640px){
+    html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    }
   
   
-  
-      #wrapper-articulo {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-        border-spacing: 0;
-        border-collapse: collapse;
-        margin: 0 auto;
-        margin-left: auto;
-        margin-right: auto;
+    #wrapper-articulo {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
      }
   
     
@@ -973,223 +972,151 @@ border-radius:6px;
 
 
 
-      /*border-bottom: 2px solid #DDD;*/
-      header{
-        display: block;
-        width:100%;
-        height: 59px;
-        top:0;
-        left: 0;
-        position: fixed;
-        z-index: 2000;   /*IMPORTANTE  */
-        margin: auto;
-        background-color: #fff;
-        box-shadow: 0 8px 6px -6px #c6c6c6;
-     }
-  
-     header.black{
-     background-color:#fff ;
-     height:  59px;
-     }
-    
-    #menu-simple{
-    width: 92%;
-    margin-top: 14px;
-    margin-bottom: 5px;
-    margin-left: 15px;
-    }
-
-    #menu-simple ul{
-    height: 50px;
-    }
-
-
-
-     /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-     #controls-responsive{
-      display: block;
-      visibility: visible;
-      width: 92%;
-      height: 35px;
-      margin-top: 58px;  
-      margin: auto;
-       }
-  
-       #custom-search-input-responsive{
-       width:  100%;
-       height: 35px;
-       border: 1px solid #c9c9c9;
-       border-radius: 4px;
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between;
-       margin: auto;
-       }
-  
-  
-       #controls-responsive .sin-borde-responsive{
-       width: 80%;
-       height: 32px;
-       display: inline-flex;
-      }
-  
-  
-       #controls-responsive .boton-responsive{
-       width: 20%;
-       height: 32px;
-       background-color: #ffffff;
-        }
-     
-          /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA...............FIN BUSCADOR RESPONSIVE*/
-
-
-        
-     .cabecera{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      height: 38px;
-      margin: auto;
-      }
-         
-    /*caja */
-    .logo{
-    display: inline-flex;
-    width: 23%;
-    max-width: 180px;
-    height: 38px;
-    }
-              
-       .logo img {
-      display: block;
-      width: 100%;
-      max-width: 142px;
-     }
-         
-    /*CONTENEDOR  REVISTA Y SOCIALES*/
-    .cabecera .suscribe{
-      display: block;
-    position: relative;
-    float: left;
-    width: 20%;
-    max-width: 95px;
-    height: 38px;
-    }
-  
-    .cabecera .suscribe a h4{
-      font-size: 0.8rem;
-      margin-top: 10px;
-      font-weight: 700;
-      letter-spacing: 0.9px;
-      font-family: 'Times New Roman', Times, serif;
-       }
    
-     .controls{
-      display: none;
-      }
+
+
         
-
-
-      .menu-btn {
-      display: block;
-      position: relative;
-      float: right;
-      width: 20%;
-      max-width: 40px;
-      height: 38px;
-      }
-
-
-       /*..............................*/
-       .menu-btn .hamburguesa{
-        display: block;
-      position: relative;
-      float: right;
-      width: 20%;
-      max-width: 40px;
-      height: 38px;
+          header{
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            margin: auto;
+            height:  55px;
+            box-shadow: 0 8px 6px -6px #c9c9c9;
+              }
+            
+               header.black{
+                background-color:#fff;
+                width: 100%;
+                height:  55px;
+                }
+              
+               .cabecera{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                margin: auto;
+                height: 30px;
+               }
+               
+               .cabecera .logo{
+                display: block;
+                position: relative;
+                float: left;
+                width: 20%;
+                max-width: 320px;
+                min-width: 140px;
+                height: 35px;
+              }
+                        
+              .cabecera .logo img {
+                display: block;
+                width: 100%;
+                max-width: 140px;
+                min-width: 120px;
+                height: 35px;
+                z-index: 40;
+               }
+               
+        
+           .cabecera  .suscribe{
+            width: 12%;
+            height: 35px;
+          display: block;
+          position: relative;
+          float: right;
+          max-width: 220px;
+          min-width: 140px;
+        
+            }
+        
+              /*LETRA INSCRIBETE*/
+              .cabecera  .suscribe a h4{
+                display: block;
+                position: relative;
+                float: right;
+                 width: 100%;
+                max-width: 82px;
+                min-width: 82px;
+                font-size: 0.78rem;
+                margin-top: 12px;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                z-index: 5;
+              }
+                
+              .cabecera  .suscribe a h4:hover{
+              color: #7aac41;
+              text-decoration: none;
+              }
+        
+             /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+            .cabecera  .menu-btn {
+            display: block;
+            position: relative;
+            float: right;
+            width: 7%;
+            max-width: 35px;
+            min-width: 34px;
+            height: 35px;
+            margin: auto;
+              }
+        
+            /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+           .menu-btn  .menu-btn__burger {
+             display: block;
+             position: relative;
+             float: left;
+             margin-top:   13px;
+             width: 28px;
+             height: 3.6px;
+            background: #2d2d2d;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2);
+            transition: all .5s ease-in-out;
+            z-index: 1000;
+            }
+                
+            .menu-btn__burger::before,
+            .menu-btn__burger::after {
+            content: '';
+            position: absolute;
+            width: 36px;
+            height: 3.6px;
+            background:#2d2d2d;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+            transition: all .5s ease-in-out;
+            z-index: 800; 
+            }
+        
+            .menu-btn__burger::before {
+            transform: translateY(-8px);
+            z-index:3000;         
+            }
+        
+        
+          .menu-btn__burger::after {
+          transform: translateY(8px);
+          z-index:3000;
+          }
+        
+         .menu-btn__burger:hover{
+         background-color: #7aac41;
          }
+              
+         .menu-btn__burger:hover::before,
+         .menu-btn__burger:hover::after{
+         background-color: #7aac41;      
+          }
 
-
-    /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-    .menu-btn .hamburguesa  .menu-btn__burger {
-    display: block;
-    position: relative;
-    float: right;
-    margin-top: 10px;
-    width: 100%;
-    max-width: 28px;
-    min-width: 28px;
-    height: 4px;
-    background: #2d2d2d;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(255,101,47,.2);
-    transition: all .5s ease-in-out;
-    z-index: 1000;
-    }
-        
-      .menu-btn__burger::before,
-      .menu-btn__burger::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      max-width: 28px;
-      min-width: 28px;
-      height: 4px;
-      background:#2d2d2d;
-      border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-      transition: all .5s ease-in-out;
-      z-index: 800;   
-      }
-
-
-    .menu-btn__burger::before {
-    transform: translateY(-7px);
-    z-index:3000;
-    }
-
-    .menu-btn__burger::after {
-    transform: translateY(7px);
-    z-index:3000;
-    }
-
-
-     .menu-btn__burger:hover{
-      background-color: #7aac41;
-    }
-        
-     .menu-btn__burger:hover::before,
-    .menu-btn__burger:hover::after{
-    background-color: #7aac41;
-
-    }
-
-     /* ANIMATION */
-   .hamburguesa.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-     }
-          
-    .hamburguesa.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-    background: #fff;
-    }
-
-    .hamburguesa.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-    background: #fff;
-    }
           
         /*FIN ANIMACION IMPORTANTE*/
-      header  .cabecera nav{
+      header  nav{
         display: flex;
         flex-direction: column;
         position: fixed;
         width: 100%;
-        max-width: 640px;
         height: 100%;
         margin: auto;
         top:0;
@@ -1206,7 +1133,7 @@ border-radius:6px;
           color: #fff;
          
         }
-       header .cabecera  nav .logo-esconder{
+       header   nav .logo-esconder{
           width: 90%;
           margin-left: 20px;
           visibility: visible;
@@ -1215,7 +1142,7 @@ border-radius:6px;
           }
 
 
-          header .cabecera  nav .nav{
+          header  nav .nav{
             display: flex;
             flex-direction: column;
             width: 90%;
@@ -1223,7 +1150,7 @@ border-radius:6px;
             margin-top: 40px;
           }
 
-          header .cabecera  nav .nav li{
+          header   nav .nav li{
             width: 100%;
             margin: auto;
           }
@@ -1263,14 +1190,78 @@ border-radius:6px;
           background-color: #000000;
         }
       
-        nav .siguenos ul li .fa-pinterest{
-          color:oldlace;
-          background-color: #000000;
+    nav .siguenos ul li .fa-pinterest{
+    color:oldlace;
+    background-color: #000000;
+    }
+
+
+    nav .siguenos ul li .fa-instagram{
+    color:oldlace;
+    background-color: #000000;
+    }
+
+
+    nav .nav .li-movil {
+    display: block;
+    }
+      
+      
+    nav .nav .li-pc {
+    display: none;
+    visibility: hidden;
+    }
+        
+      
+    #menu-simple{
+      width: 92%;
+      margin-top: 14px;
+      margin-bottom: 5px;
+      margin-left: 15px;
+      }
+  
+      #menu-simple ul{
+      height: 50px;
+      }
+  
+  
+  
+       /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+       #controls-responsive{
+        display: block;
+        visibility: visible;
+        width: 92%;
+        height: 35px;
+        margin-top: 58px;  
+        margin: auto;
+         }
+    
+         #custom-search-input-responsive{
+         width:  100%;
+         height: 35px;
+         border: 1px solid #c9c9c9;
+         border-radius: 4px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         margin: auto;
+         }
+    
+    
+         #controls-responsive .sin-borde-responsive{
+         width: 80%;
+         height: 32px;
+         display: inline-flex;
         }
-        nav .siguenos ul li .fa-instagram{
-          color:oldlace;
-          background-color: #000000;
-        }
+    
+    
+         #controls-responsive .boton-responsive{
+         width: 20%;
+         height: 32px;
+         background-color: #ffffff;
+          }
+       
+            /*FIN BUSCADOR QUE VA DEBAJO DE LA CABECERA...............FIN BUSCADOR RESPONSIVE*/
 
   /*  EMPIEZA EL CONTENIDO*/
    /*..PAGINA DEL SEARCH CAJA BUSCADO ..............CAJA BUSCADOR*/
@@ -1526,10 +1517,10 @@ border-radius:6px;
     }
 
    
-      .imageone{
-        width: 100%;
-        height: 100%;
-      }
+    .imageone{
+    width: 100%;
+    height: 100%;
+    }
 
 
       .imageone  img{
@@ -1557,6 +1548,7 @@ border-radius:6px;
       font-size: 1rem;
       margin-left: -1px;
       }
+
 
     .blockquote{
     width:92%;
@@ -1792,8 +1784,12 @@ border-radius:6px;
      width: 45%;
     }
 
+    .tercera-columna-fija .controls{
+      display: none;
+    }
+
     /*BLOQUE DE CATEGORIAS, LO ANULO PORQUE YA ESTA EN EL ANTERIOR BLOQUE*/
-    .categorias-aside{
+    .tercera-columna-fija .categorias-aside{
       display: none;
     }
 
@@ -1861,7 +1857,9 @@ border-radius:6px;
      margin-left: -15px;
   }
  
-  .carrusel p{
+  .carrusel a p{
+    margin-left: 20px;
+    color: #2d2d2d;
     font-size: 1rem;
   }
   
@@ -2148,188 +2146,249 @@ border-radius:6px;
   }
       
 
-   header{
-      width: 100%;
-      z-index: 999;
-      position: fixed;
-      margin: auto;
-      height:  80px;
-      box-shadow: 0 8px 6px -6px #c9c9c9;
+  header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  62px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+      }
+    
+       header.black{
+        background-color:#fff;
+        width: 100%;
+        height:  62px;
         }
       
-     header.black{
-          background-color:#fff;
-          width: 100%;
-          height:  80px;
-          }
-
-
-          #comentarios{
-            background-color: violet;
-            display: flex;
-            width: 100%;
-          }
-          
-    .cabecera{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    height: 45px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
-    }
-         
-          
+       .cabecera{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        height: 33px;
+        margin-top: -6px;
+       }
+       
    /*caja */
-  .logo{
-   height: 45px;
-   width: 50%;
-   }
-              
-    .logo img {
-    width: 100%;
-    height: 45px;
-    margin: auto;
-    }
-
-
-       /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-        
-       .menu-btn {
-       width: 20%;
-       height: 45px;
-       display: flex;
-       flex-direction: row;
-      }
-
-         
-        
-    /*CONTENEDOR  REVISTA Y SOCIALES*/
-    .boletin{
-    width: 15%;
+  .cabecera .logo{
+    display: block;
     position: relative;
     float: left;
-    }
-    
-        
-        /*LETRA INSCRIBETE*/
-    .boletin a h4{
-    font-size: 0.95rem;
-    letter-spacing: 0.1px;
-    font-family: 'Cabin', sans-serif;
-    font-weight: 800;
-    color:#2d2d2d;
-    margin-top:34px;
-    }
-        
-     .boletin a h4:hover{
-    color: #639a3a;
-    text-decoration: none;
-    }
-          
-      
-
-        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-          .menu-btn__burger {
-          display: block;
-          position: relative;
-          float: right;
-          z-index: 1000;
-          margin-top: 28px;
-          width: 38px;
-          height: 5px;
-          background: #2d2d2d;
-          border-radius: 2px;
-          box-shadow: 0 2px 5px rgba(255,101,47,.2);
-          transition: all .5s ease-in-out;
-          
-           }
-        
-           .menu-btn__burger::before,
-          .menu-btn__burger::after {
-            content: '';
-            position: absolute;
-            width: 38px;
-            height: 5px;
-            margin-left: 1%;
-            background:#2d2d2d;
-            border-radius: 2px;
-            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-            transition: all .5s ease-in-out;
-           z-index: 800;
-           
-          }
-          .menu-btn__burger::before {
-            transform: translateY(-10px);
-            z-index:3000;
-            
-          }
-         .menu-btn__burger::after {
-            transform: translateY(10px);
-            z-index:3000;
-          }
-
-
-     .menu-btn__burger:hover{
-            background-color: #639a3a;
-          }
-        
-          .menu-btn__burger:hover::before,
-           .menu-btn__burger:hover::after{
-            background-color: #639a3a;    
-          }
-
-           /* ANIMATION */
-         .menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
+  width: 62%;
+  max-width: 400px;
+  min-width: 350px;
+  height: 33px;
   }
-          .menu-btn.open .menu-btn__burger::before {
-            transform: rotate(45deg) translate(35px, -35px);
-            background: #fff;
-          }
-         .menu-btn.open .menu-btn__burger::after {
-            transform: rotate(-45deg) translate(35px, 35px);
-            background: #fff;
-          }
-          
+            
+  .logo img {
+  width: 100%;
+  max-width: 160px;
+  min-width: 140px;
+  height: 34px;
+   }
        
-              /*IMPORTANTE*/
-nav li a p{
-  background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-  display: block;
-  border-radius: 8px solid #639a3a;
-   margin-top:8px;
-  position: absolute;
- padding: 1px 1px ;
-  z-index: 200;
-  margin-left: -5px;
 
-  color: #fff;
-  font-weight: lighter;
-  font-size: 1rem;
-  text-transform: lowercase;
-  letter-spacing: 1px;
-  font-family:  sans-serif;
-}
+   .cabecera  .suscribe{
+    width: 10%;
+    height: 33px;
+  display: block;
+  position: relative;
+  float: right;
+  max-width: 190px;
+  min-width: 170px;
+
+    }
+
+      /*LETRA INSCRIBETE*/
+      .cabecera  .suscribe a h4{
+      font-size: 1rem;
+      letter-spacing: -0.3px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 900;
+      color:#2d2d2d;
+      margin-top:  14px;
+      }
+        
+      .cabecera  .suscribe a h4:hover{
+      color: #7aac41;
+      text-decoration: none;
+      }
+
+     /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+    .cabecera  .menu-btn {
+    display: block;
+    position: relative;
+    float: right;
+    width: 8%;
+    max-width: 38px;
+    min-width: 36px;
+    height: 33px;
+    margin: auto;
+    margin-top:  18px;
+      }
+
+    /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+    .menu-btn__burger {
+     display: block;
+     position: relative;
+     float: left;
+    width: 38px;
+    height: 4px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+    z-index: 1000;
+    }
+        
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 38px;
+    height: 4px;
+    background:#2d2d2d;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+    transition: all .5s ease-in-out;
+    z-index: 800; 
+    }
+
+    .menu-btn__burger::before {
+    transform: translateY(-8px);
+    z-index:3000;         
+    }
+
+
+  .menu-btn__burger::after {
+  transform: translateY(8px);
+  z-index:3000;
+  }
+
+ .menu-btn__burger:hover{
+ background-color: #7aac41;
+ }
+      
+ .menu-btn__burger:hover::before,
+ .menu-btn__burger:hover::after{
+ background-color: #7aac41;      
+  }
+
+
+/*BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
+  #controls-responsive{
+  display: block;
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  margin-top: -8px;
+  }
+
+
+   #custom-search-input-responsive{
+   width: 100%;
+   height: 45px;
+   border: 1px solid #c9c9c9;
+   border-radius: 8px;
+   display: flex;
+   flex-direction: row;
+   margin-top: 1.5px;
+  }
+
+
+  #controls-responsive .sin-borde-responsive{
+   width: 88%;
+   height: 38px;
+   border-radius: 4px;
+   display: inline-flex;
+   margin-top: 2px;
+   }
+
+
+   #controls-responsive .boton-responsive{
+   width: 12%;
+   height: 38px;
+   margin-top: 2px;
+   }
+
+       
+    nav{
+      display: flex;
+      flex-direction: column;
+   
+      position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  top:0;
+  bottom: 0;
+  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+   overflow-y: scroll;
+   z-index: 200;
+   visibility: visible;
+   box-sizing: border-box;
+      
+    }
+
+    nav .nav{
+      display: block;
+      width: 100%;
+    }
+
+    nav .nav ul{
+      display: none;
+    }
+
+    nav .nav li:hover > ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      visibility: visible; 
+       z-index: 800;
+      }
+  
+
    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-   nav ul li{
+   nav .nav  li{
     display: flex;
     width: 100%;
-    max-width: 200px;
     margin-top: 1.5%;/*IMPORTANTE */
-    filter: alpha(opacity=80);
     height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
     list-style: none;
     cursor:pointer;
-    margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
-
     }
+
+                 /*IMPORTANTE*/
+  nav  .nav li a {
+    background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+    display: block;
+    padding: 1px 1px ;
+    z-index: 200;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family:  sans-serif;
+  }
+
+
+    nav .nav .li-pc{
+   display: none;
+    }  
+
+     nav .nav .li-movil{
+       display: block;
+     }
+
   /*..FINAL MENU HAMBURGUESA*/
 
 
 
    #menu-simple{
     width: 100%;
+    margin-top: 20px;
     }
 
     #menu-simple ul{
@@ -2471,24 +2530,30 @@ nav li a p{
       }
 
       .articulo-ultimo{
+        display: block;
         width: 100%;
       }
 
-      .autor-nombre{
+      .articulo-ultimo .autor-nombre{
         width: 100%;
         display: flex;
         flex-direction: row;
       }
 
-      .autor-foto img{
+      .autor-nombre  .autor-foto img{
         width: 100%;
         max-width: 50px;
         height: 50px;
+        display: block;
+        position: relative;
+        float: left;
       }
 
-      .autor-letra{
-        position: absolute;
-        margin-left: 40px;
+      .autor-nombre .autor-letra{
+       display: block;
+       position: relative;
+       float: right;
+        margin-left: 8px;
       }
 
       .tercera-columna-fija{
@@ -2499,47 +2564,53 @@ nav li a p{
         margin-top: 50px;
       }
 
-      .controls{
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-       margin: auto;
+      .tercera-columna-fija .controls{
+        display: none;
       }
      
-      #custom-search-input{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-
-      }
+     
       .tercera-columna{
         width: 100%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+      flex-direction: column;
         margin-top: 30px;
       }
  
+
+      .tercera-columna .aside-colum{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+
+
+
        .tercera-columna h2{
-         display: none;
+         display: block;
+         font-size: 1.3rem;
+         color: #000000;
        }
-      .tercera-columna img{
+      .tercera-columna .aside-colum img{
         width: 50%;
         display: block;
         position: relative;
         float: left;
       }
 
-      .tercera-columna p{
+      .tercera-columna .aside-colum  h1{
         width: 45%;
         display: block;
         position: relative;
         float: right;
+        font-size: 1.1rem;
       }
 
+      
+
       .categorias-aside{
-        margin-top: 20px;
+        display: none;
       }
+
 
 
   /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT.... */
@@ -2554,6 +2625,19 @@ nav li a p{
   margin-bottom: 20px;
   }
   
+
+     .container-total-carrusell h1{
+       font-size: 1.6rem;
+       color: #000000;
+     }
+
+
+    .container-total-carrusell #carrusel  .carrusel a p{
+       margin-left: 16px;
+       color: #2d2d2d;
+     }
+
+
   /*ESCONDE IMAGGENES*/
  /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
   .carrusel{
@@ -2590,40 +2674,37 @@ nav li a p{
     }
 
     
-      /*CIRCULO  DERECHO*/
-      #carrusel li.right-arrow{
-        margin-left: 81%;
-        }
+    /*CIRCULO  DERECHO*/
+    #carrusel li.right-arrow{
+    margin-left: 81%;
+    }
     
-       /*CIRCULO   IZQUIERDO*/
-       #carrusel li.left-arrow{
-        margin-right: 3.8%;
-        }
+    /*CIRCULO   IZQUIERDO*/
+    #carrusel li.left-arrow{
+    margin-right: 3.8%;
+    }
     
- /*MUY IMPORTNATE*/  
-      /* ARROW LEFT .......................SOLO ARROW LEFT...................................ARROW LEFT SIN PALO............... */
+    /*MUY IMPORTNATE*/  
+      /* ARROW LEFT ....SOLO ARROW LEFT............ARROW LEFT SIN PALO.... */
    .carrusel1 ul li.left-arrow span{
     top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-  left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
-  transform: translateY(-50%) rotate(-45deg);
-  border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
-  border-bottom: none;
-  }
+    left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+    transform: translateY(-50%) rotate(-45deg);
+    border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+    border-bottom: none;
+    }
 
     
-   /*MUY IMPORTNATE*/  
+     /*MUY IMPORTNATE*/  
      /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
      .carrusel1 ul li.right-arrow span{
-  top: 50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-  right:  8.5%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
-  transform: translateY(-50%) rotate(-45deg);
-  border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
-  border-top: none;
-  }
+    top: 50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+    right:  8.5%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+    transform: translateY(-50%) rotate(-45deg);
+    border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+    border-top: none;
+     }
  
-
-
-
 
  /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
  .carrusel>div {
@@ -2855,24 +2936,136 @@ nav li a p{
   
 
     header{
-      width:100%;
-      height: 80px;
-      top:0;
-      left: 0;
+      width: 100%;
+      z-index: 999;
       position: fixed;
-      z-index: 2000;   /*IMPORTANTE  */
       margin: auto;
-      box-shadow: 0 8px 6px -6px #DCDCDC;
+      height:  62px;
+      box-shadow: 0 8px 6px -6px #c9c9c9;
+        }
+      
+         header.black{
+          background-color:#fff;
+          width: 100%;
+          height:  62px;
+          }
+        
+         .cabecera{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          margin: auto;
+          height: 33px;
+          margin-top: -6px;
+         }
+         
+     /*caja */
+    .cabecera .logo{
+      display: block;
+      position: relative;
+      float: left;
+    width: 65%;
+    max-width: 450px;
+    min-width: 400px;
+    height: 33px;
+    }
+              
+    .logo img {
+    width: 100%;
+    max-width: 160px;
+    min-width: 140px;
+    height: 34px;
+     }
+         
+
+     .cabecera  .suscribe{
+      width: 10%;
+      height: 33px;
+    display: block;
+    position: relative;
+    float: right;
+    max-width: 190px;
+    min-width: 170px;
+ 
       }
-    
-      header.black{
-        width: 100%;
-      background-color: #fff;
-      height: 80px;
+  
+        /*LETRA INSCRIBETE*/
+        .cabecera  .suscribe a h4{
+        font-size: 1rem;
+        letter-spacing: -0.3px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 900;
+        color:#2d2d2d;
+        margin-top:  14px;
+        }
+          
+        .cabecera  .suscribe a h4:hover{
+        color: #7aac41;
+        text-decoration: none;
         }
 
-             /*BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
-    
+       /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+      .cabecera  .menu-btn {
+      display: block;
+      position: relative;
+      float: right;
+      width: 8%;
+      max-width: 38px;
+      min-width: 36px;
+      height: 33px;
+      margin: auto;
+      margin-top:  18px;
+        }
+
+      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+      .menu-btn__burger {
+       display: block;
+       position: relative;
+       float: left;
+      width: 38px;
+      height: 4px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+      z-index: 1000;
+      }
+          
+      .menu-btn__burger::before,
+      .menu-btn__burger::after {
+      content: '';
+      position: absolute;
+      width: 38px;
+      height: 4px;
+      background:#2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+      transition: all .5s ease-in-out;
+      z-index: 800; 
+      }
+
+      .menu-btn__burger::before {
+      transform: translateY(-8px);
+      z-index:3000;         
+      }
+
+
+    .menu-btn__burger::after {
+    transform: translateY(8px);
+    z-index:3000;
+    }
+
+   .menu-btn__burger:hover{
+   background-color: #7aac41;
+   }
+        
+   .menu-btn__burger:hover::before,
+   .menu-btn__burger:hover::after{
+   background-color: #7aac41;      
+    }
+
+
+  /*BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
     #controls-responsive{
     display: block;
     width: 100%;
@@ -2890,7 +3083,6 @@ nav li a p{
      display: flex;
      flex-direction: row;
      margin-top: 1.5px;
-   
     }
 
 
@@ -2910,156 +3102,22 @@ nav li a p{
      }
 
           
-    .cabecera{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      height: 50px;
-    }
-           
-          
-    /*caja */
-    .logo{
-      width: 30%;
-      max-width: 300px;
-      height: 50px;
-    }
-                
-    .logo img {
-      display: block;
-      width: 100%;
-      max-width: 190px;
-      height: 50px;
-    }
-           
-          
-    
-
-             /*CONTENEDOR  REVISTA Y SOCIALES*/
-           .suscribe{
-            display: inline-flex;
-            width: 30%;
-            max-width: 240px;
-            height: 50px;
-            }
-
-          /*LETRA FOOD EMOTIONS*/
-          
-          /*LETRA INSCRIBETE*/
-           .suscribe a h4{
-            font-size: 1.1rem;
-              letter-spacing: 0.4px;
-              font-family: 'Times New Roman', Times, serif;
-              font-weight: 800;
-              color:#2d2d2d;
-              margin-top: 15px;
-            }
-          
-       
-            .suscribe a h4:hover{
-              color: #7aac41;
-              text-decoration: none;
-             }
-            
-           /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-          
-       
-           .menu-btn {
-            display: block;
-            position: relative;
-            float: right;
-            width: 10%;
-            max-width: 40px;
-            height: 50px;
-          }
-
-          .hamburguesa{
-            width: 100%;
-            height: 50px;
-          }
-    
-
-        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-        .menu-btn  .menu-btn__burger {
-          display: block;
-          position: relative;
-          float: left;
-        margin-top: 38px;
-        width: 41px;
-        height: 5px;
-        background: #2d2d2d;
-        border-radius: 2px;
-        box-shadow: 0 2px 5px rgba(255,101,47,.2);
-        transition: all .5s ease-in-out;
-        z-index: 1000;
-        }
-          
-        .menu-btn  .menu-btn__burger::before,
-        .menu-btn  .menu-btn__burger::after {
-        content: '';
-        position: absolute;
-        width: 40px;
-        height: 5px;
-        background:#2d2d2d;
-        border-radius: 2px;
-        box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-        transition: all .5s ease-in-out;
-        z-index: 800;        
-        }
-
-
-        .menu-btn__burger::before {
-        transform: translateY(-11px);
-        z-index:3000;
-        }
-
-
-        .menu-btn__burger::after {
-        transform: translateY(11px);
-        z-index:3000;
-        }
-
-       .menu-btn__burger:hover{
-      background-color: #7aac41;
-      }
-          
-      .menu-btn__burger:hover::before,
-      .menu-btn__burger:hover::after{
-      background-color: #7aac41;    
-      }
+   
   
-      /* ANIMATION */
-      .hamburguesa.open .menu-btn__burger {
-      transform: translateX(-50px);
-      background: transparent;
-      box-shadow: none;
-       }
-
-      .hamburguesa.open .menu-btn__burger::before {
-      transform: rotate(45deg) translate(35px, -35px);
-      background: #fff;
-      }
-
-      .hamburguesa.open .menu-btn__burger::after {
-      transform: rotate(-45deg) translate(35px, 35px);
-      background: #fff;
-      }
-      /*FIN ANIMACION IMPORTANTE*/
-          
+     
             
      /*IMPORTANTE*/
      nav{
       background-position:82% 88%;
       background-repeat:no-repeat;
      }
-     nav ul{
+     nav .nav{
        margin-top: 95px;
        width: 80%;
      }
 
 
-    nav li a p{
+    nav .nav li a p{
     background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
     display: block;
     z-index: 200;
@@ -3072,7 +3130,7 @@ nav li a p{
     }
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-     nav ul li{
+     nav .nav  li{
      display: flex;
      width: 100%;
      margin-top: 1.5%;/*IMPORTANTE */
@@ -3084,7 +3142,7 @@ nav li a p{
       }
       
 
-      nav ul li a {
+      nav .nav  li a {
       transition: cubic-bezier(0.075, 0.82, 0.165, 1);
       width: 100%;
       z-index: 100;
@@ -3092,24 +3150,68 @@ nav li a p{
 
           /* NAV ESCONDIDO  NAV ESCONDIDO*/
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-      nav ul li:hover > ul {
+      nav .nav  li:hover > ul {
       display: block;
-      margin-left: 180px;
-      margin-top:-40px;
-      visibility: visible; 
+  
       z-index: 598;
       }
 
+      nav .nav ul{
+        display: none;
+        width: 100%;
+        background-color: #fff;
+      }
+
+       nav .nav li ul li{
+         display: block;
+         height: 35px;
+       }
      
-    nav ul li ul li a {
+    nav  .nav  li ul li a {
     font-size: 1rem;
     display: block;
-    position: absolute;
-    width: 100%;
+     height: 28px;
+     text-transform: lowercase;
     }
     /*..FINAL MENU HAMBURGUESA*/
-  
+    nav .nav .li-pc{
+      display: none;
+    }
 
+    nav .nav .li-movil{
+    display: block;
+    }
+
+
+
+
+    nav .siguenos{
+    display: block;
+    width: 90%;
+    }
+
+    
+    nav .siguenos .red-social{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    margin-left: -3px;
+    }
+
+    nav .siguenos .red-social h1{
+    font-size: 1rem;
+    margin-right: 6px;
+    }
+
+
+    nav .siguenos .red-social li{
+    width: 8%;
+    max-width: 38px;
+    }
+    
+ 
+      
+      /*....................................................*/
       #comentarios{
       background-color: violet;
       display: flex;
@@ -3523,8 +3625,8 @@ nav li a p{
 
      .tercera-columna-fija{
        width: 100%;
-       max-width: 720px;
-      display: block;
+     display: flex;
+     flex-direction: column;
       margin-top: 100px;
      }
 
@@ -3533,16 +3635,20 @@ nav li a p{
      display: none;
     }
    
-    .tercera-columna{
+    .tercera-columna-fija  .tercera-columna{
       width: 100%;
      margin-bottom: 20px;
     }
 
-    .tercera-columna  h1{
+    .tercera-columna-fija .tercera-columna  h2{
     font-size: 1.4rem;
+    color: #000000;
+    display: block;
+    width: 450px;
+   
     }
 
-    .aside-colum{
+    .tercera-columna .aside-colum{
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -3550,21 +3656,43 @@ nav li a p{
     }
 
 
-    .tercera-columna img{
-    width: 50%;
-     display: inline-flex;
-     margin-right: 15px;
+    .tercera-columna .aside-colum img{
+    width: 40%;
+     display: block;
+     position: relative;
+     float: left;
+     margin-right: 10px;
     }
 
-    .tercera-columna  a h2{
-      display: inline-flex;
-    width: 98%;
-    max-width: 390px;
-    font-size: 1.3rem;
+    .tercera-columna .aside-colum  a h1{
+    display: block;
+    position: relative;
+    float: right;
+ 
+    width: 380px;
+    font-size: 1.2rem;
     color: #2d2d2d;
     margin-top: 20px;
     }
 
+      .tercera-columna-fija .categorias-aside{
+        display: none;
+      }
+
+
+      .container-total-carrusell{
+      width: 100%;
+      }
+
+      .container-total-carrusell h1{
+       font-size: 1.5rem;
+       color: #000000;
+      }
+
+
+      .carrusel a p{
+        margin-left: 4px;
+      }
        /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
   
     #footer-articulo{
@@ -3813,8 +3941,8 @@ nav li a p{
 
 
   
-  /* 769 A 900 ..................................................................................................................................................................................................... */
-  
+      /* 769 A 900 ......IPAD AIR.......... */
+        /*..NEUS 10 .800 1280.............*/
     @media only screen and (min-width: 769px) and (max-width: 900px){
     #wrapper-articulo {
       box-sizing: border-box;
@@ -3829,149 +3957,144 @@ nav li a p{
     }
       
     #container-articulo{
-      width:100%;
-      margin-top: 12%;
-        margin-left:auto;
-        margin-right:auto;
+    width:100%;
+    margin-top: 12%;
+    margin-left:auto;
+    margin-right:auto;
       }
 
 
         
-      #comentarios{
-        background-color: violet;
-        display: flex;
-        width: 100%;
+    #comentarios{
+    background-color: violet;
+    display: flex;
+    width: 100%;
    
       }
       
-  header{
-      width: 100%;
-      z-index: 999;
-      position: fixed;
-      margin: auto;
-      height:  85px;
-      box-shadow: 0 8px 6px -6px #c9c9c9;
-        }
-      
-       header.black{
-          background-color:#fff;
-          width: 100%;
-          height:  85px;
+      header{
+        width: 100%;
+        z-index: 999;
+        position: fixed;
+        margin: auto;
+        height:  65px;
+        box-shadow: 0 8px 6px -6px #c9c9c9;
           }
         
-       .cabecera{
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          margin: auto;
-          height: 50px;
-       
-         }
-       
-        
-      
-          
-           /*caja */
-      .logo{
-      display: inline-flex;
-      width: 60%;
-      height: 50px;
-    
-      }
-              
-      .logo img {
-      margin: auto;
-      width: 100%;
-      height: 50px;
-      }
-         
-            /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-            .menu-btn {
-             display: flex;
-             flex-direction: row;
-              width: 25%;
-              max-width: 190px;
-              height: 50px;
-          
+           header.black{
+            background-color:#fff;
+            width: 100%;
+            height:  65px;
             }
-    
-     /*CONTENEDOR  REVISTA Y SOCIALES*/
-      .menu-btn  .boletin{
-      width: 100%;
-      height: 50px;
-      display: block;
-      position: relative;
-      float: left;
-     
-      }
-      
-        /*LETRA FOOD EMOTIONS*/
-        /*LETRA INSCRIBETE*/
-         .boletin a h4{
-          font-size: 1rem;
-          letter-spacing: -0.1px;
-          font-family: 'Times New Roman', Times, serif;
-          font-weight: 900;
-          color:#2d2d2d;
-           margin-top: 32px;
-           background-color: red;
-          }
-        
-          .boletin a h4:hover{
-            color: #639a3a;
-            text-decoration: none;
-           }
           
-     
-     
-
-        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-      .menu-btn .menu-btn__burger {
+           .cabecera{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            height: 35px;
+           }
+           
+       /*caja */
+      .cabecera .logo{
+        display: block;
+      width: 70%;
+      max-width: 550px;
+      min-width: 500px;
+      height: 35px;
+      }
+                
+      .logo img {
+      width: 100%;
+      max-width: 180px;
+      min-width: 150px;
+      height: 35px;
+       }
+           
+  
+       .cabecera  .suscribe{
+        width: 12%;
+        height: 35px;
       display: block;
       position: relative;
       float: right;
-      margin-top: 32px;
-      width: 38px;
-      height: 5px;
-      background: #2d2d2d;
-      border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(255,101,47,.2);
-      transition: all .5s ease-in-out;
-      z-index: 1000;
-      }
-        
-          .menu-btn__burger::before,
-          .menu-btn__burger::after {
-            content: '';
-            position: absolute;
-            width: 38px;
-            height: 5px;
-            background:#2d2d2d;
-            border-radius: 2px;
-            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-            transition: all .5s ease-in-out;
-           z-index: 800;
-           
-          }
-
-          .menu-btn__burger::before {
-            transform: translateY(-10px);
-            z-index:3000;   
-          }
-
-        .menu-btn__burger::after {
-        transform: translateY(10px);
-         z-index:3000;
-          }
-
-       .menu-btn__burger:hover{
-        background-color: #639a3a;
+      max-width:  230px;
+      min-width: 190px;
+   
         }
+    
+          /*LETRA INSCRIBETE*/
+          .cabecera  .suscribe a h4{
+          font-size: 1rem;
+          letter-spacing: -0.3px;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 900;
+          color:#2d2d2d;
+          margin-top:  16px;
+          }
+            
+          .cabecera  .suscribe a h4:hover{
+          color: #7aac41;
+          text-decoration: none;
+          }
+  
+         /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+        .cabecera  .menu-btn {
+        display: block;
+        position: relative;
+        float: right;
+        width: 8%;
+        max-width: 40px;
+        min-width: 38px;
+          }
+  
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+        .menu-btn__burger {
+         display: block;
+         position: relative;
+         float: left;
         
-   .menu-btn__burger:hover::before,
-   .menu-btn__burger:hover::after{
-   background-color: #639a3a;
-   }
+        width: 38px;
+        height: 4px;
+        background: #2d2d2d;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2);
+        transition: all .5s ease-in-out;
+        z-index: 1000;
+        }
+            
+        .menu-btn__burger::before,
+        .menu-btn__burger::after {
+        content: '';
+        position: absolute;
+        width: 38px;
+        height: 4px;
+        background:#2d2d2d;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+        transition: all .5s ease-in-out;
+        z-index: 800; 
+        }
+  
+        .menu-btn__burger::before {
+        transform: translateY(-8px);
+        z-index:3000;         
+        }
+  
+  
+      .menu-btn__burger::after {
+      transform: translateY(8px);
+      z-index:3000;
+      }
+  
+     .menu-btn__burger:hover{
+     background-color: #7aac41;
+     }
+          
+     .menu-btn__burger:hover::before,
+     .menu-btn__burger:hover::after{
+     background-color: #7aac41;      
+      }
 
            /* ANIMATION */
            .menu-btn.open .menu-btn__burger {
@@ -3992,74 +4115,116 @@ nav li a p{
         
       
               /*IMPORTANTE*/
-nav li a p{
-  background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-  display: block;
-  border-radius: 8px solid #639a3a;
-   margin-top:8px;
-  position: absolute;
- padding: 1px 1px ;
-  z-index: 200;
-  margin-left: -5px;
+   nav .nav  li a{
+   background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+   display: block;
+   padding: 1px 1px ;
+   color: #fff;
+   font-size: 1rem;
+   text-transform: lowercase;
+   letter-spacing: 1px;
+   font-family:  sans-serif;
+   width: 100%;
+   display: block;
+   height:  30px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
+   }
 
-  color: #fff;
-  font-weight: lighter;
-  font-size: 1rem;
-  text-transform: lowercase;
-  letter-spacing: 1px;
-  font-family:  sans-serif;
-}
    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-   nav ul li{
-    display: flex;
+   nav  .nav  li{
+    display:  block;
     width: 100%;
-    margin-top: 1.5%;/*IMPORTANTE */
-    filter: alpha(opacity=80);
     list-style: none;
     cursor:pointer;
-    margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
-   z-index: 1000;
+    height: 36px;
     }
 
-    nav ul li a {
-      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    width: 100%;
+    
+
+    nav .nav li ul li a {
+    font-size: 1rem;
     display: block;
-      position: absolute;
-    height:6px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
-    z-index: 100;
-  
+    width: 100%;
     }
-    nav ul li ul li a {
-      font-size: 1rem;
-      display: block;
-      position: absolute;
-     
-      width: 100%;
-     
-  
-    }
+
+
           /* NAV ESCONDIDO  NAV ESCONDIDO*/
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-    nav ul li:hover > ul { 
+    nav .nav li:hover > ul { 
     display: block;
-    margin-left: 200px;
-    margin-top:-40px;
-    height: 200px;
-    visibility: visible; 
-    z-index: 598;
+    
     }
+
+    nav .nav .li-pc{
+      display: none;
+    }
+
+    nav .nav .li-movil{
+      display: block;
+    }
+
+    /*.............................*/
+   nav .siguenos{
+    display: block;
+    width: 95%;
+  
+    visibility: visible;
+    }
+
+    nav .siguenos .red-social{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    margin-left: 10px;
+    }
+
+   nav .siguenos .red-social h1{
+     font-size: 0.9em;
+   margin-right: 30px;
+   }
+
+  nav .siguenos .red-social li{
+    width: 40px;
+    list-style: none;
+  }
+   
   /*..FINAL MENU HAMBURGUESA*/
 
-    /*BUSCADOR*/
-    .controls .form-control{
-      width: 75%;
-      }
+   /*BUSCADOR QUE VA DEBAJO DE LA CABECERA*/
+   #controls-responsive{
+    display: block;
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    margin-top: -8px;
+    }
 
-     .controls .boton{
-      width: 25%;
-      font-size: 1rem;
-      }
+
+     #custom-search-input-responsive{
+     width: 100%;
+     height: 45px;
+     border: 1px solid #c9c9c9;
+     border-radius: 8px;
+     display: flex;
+     flex-direction: row;
+     margin-top: 1.5px;
+    }
+
+
+    #controls-responsive .sin-borde-responsive{
+     width: 88%;
+     height: 38px;
+     border-radius: 4px;
+     display: inline-flex;
+     margin-top: 2px;
+     }
+
+
+     #controls-responsive .boton-responsive{
+     width: 12%;
+     height: 38px;
+     margin-top: 2px;
+     }
+
       /*FIN BUSCADOR*/
 
 
@@ -4072,143 +4237,369 @@ nav li a p{
         height: 40px;
       }
 
+      
 
-   /*EMPIEZA EL CONTENIDO*/
-      #tres-columnas-articulo{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      margin-top: 20px;
+   
+      #menu-simple{
+        margin-top: 15px;
       }
 
-     .columna-primera{
-  
-      width: 65%;
-     display: flex;
-     flex-direction: column;
-    
-     }
+      #menu-simple ul{
+        height: 50px;
+      }
 
-   .segunda-columna{
-     width: 5%;
-     max-width: 40px;
-   }
 
-       /*TERCERA COLUMNA*/
-   .tercera-columna-fija{
-    width: 25%;
-    max-width: 190px;
+    /*EMPIEZA EL CONTENIDO*/
+    #tres-columnas-articulo{
+    width: 100%;
     display: flex;
     flex-direction: column;
-  }
- 
-     
-   .primer-articulo h1{
-    font-size: 2.1rem;
-    word-spacing: 0.3px;
-    letter-spacing: -0.8px;
+    margin-top: 20px;
+    }
+  
 
-  }
-
-     
-  .segundo-articulo h1{
-    color:#000000;
-    font-size: 1.6rem;
-    word-spacing: 0.3px;
-    letter-spacing: -0.8px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 900;
-
+  .primera-columna{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   }
 
-  .title-two h1{
-    color:#000000;
-    font-size: 1.6rem;
-    word-spacing: 0.3px;
-    letter-spacing: -0.4px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 900;
-  }
 
- 
-    
-
-    /*CONTIEE IMAGEN*/
-   .tercera-columna {
-    width:  100%;
-       }
-    
-       /*PRIMERA COLUMNA*/
-       .imagen-central img{
-        width: 100%;
-        height: 280px;
-       }
-
-       .segunda-imagen .foto img{
-         width: 100%;
-         height: 280px;
-       }
-   .tercera-columna img{
+   .columna-primera{
     width: 100%;
-    height: 140px;
-       }
-    
+  }
+
+        .imagen-central{
+         width: 100%;
+         display: flex;
+         flex-direction: column;
        
-  /*PARRAFO DEL BLOQUOTE*/
-         .blockquote .blockquote-text{
-          font-size: 1rem;
-          margin-left: 12px;
-          margin-top: 8px;
+        }
+
+        .redes{
+          width: 20%;
           }
 
-         .blockquote{
-          width:100%;
-          margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
-          padding: 20px;
-          border:  1px solid #DDD;
-          color:#666;
-          box-sizing: border-box;
-          font-family:  'sans-serif' ;
-          font-size: 1.15rem;
-          font-weight:400;
-          line-height: 1.3;
-          
-         }
+     .iconos-social{
+      display: flex;
+      flex-direction: row;
+     }
 
-         .blockquote-quoted::before { 
-          content: "\201C"; /* inicio comilla */
-          width: 30%;
-          font-family: Georgia;
-          font-size:  4remx; /* tamaño */
-          font-weight: bold; 
-          line-height: 0px;
-          color:#DDD; /* Color  */
-          margin-top: 20px;
-          margin-bottom: -10px;
-          margin-left: -20px;
-          display: block;
-          }
+     .iconos-social  li .fa-envelope{
+      padding: 5px 5px  5px  5px;
+      font-size:  5px;
+      width: 35px;
+      height: 38px;
+      margin-right: 12px;
+    
+    }
+    
+    .iconos-social li .fa-facebook-f{
+      padding: 5px 5px  5px  5px;
+      font-size:  5px;
+      width: 35px;
+      height: 38px;
+      margin-right: 12px;
+    }
+    
+    .iconos-social  li .fa-twitter{
+      padding: 5px 5px  5px  5px;
+      font-size:  5px;
+      width: 35px;
+      height: 38px;
+      margin-right: 12px;
+    }
+    
+     .iconos-social  li .fa-instagram{
+      padding: 5px 5px  5px  5px;
+      font-size:  5px;
+      width: 35px;
+      height: 38px;  
+      }
+    
+     /*CONTAINER IMAGEN PRINCIPAL Y REDES..*/
+      .imagen-central{
+      width: 100%;
+      }
+      
+      /*. CAJA DE LA IMAGEN PRINCIPAL..*/
+      .imagen-principal{
+        width: 100%;
+      }
+    .primer-articulo h1{
+      font-size: 2.4rem;
+    }
+   .segundo-articulo h1{
+     color:#000000;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: 900;
+     font-size: 1.9rem;
+     letter-spacing: -1.3px;
+     word-spacing: 0.5px;
+   }
 
-          .blockquote-quoted::after{ /* final */
-            content: "\201D";
+    
+   .title-two  h1{
+    color:#000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: 1.9rem;
+    letter-spacing: -1px;
+     word-spacing: 0.5px;
+  }
+
+   /*CONTAINER AUTOR Y NOMBRE..................*/
+ 
+
+    .articulo-ultimo{
+      width: 100%;
+      display: flex;
+     flex-direction: column;
+      margin-bottom: 2%;
+   
+    }
+
+    /*CONTENEDOR DE FOTO AUTOR Y SU OMBRE*/
+    .autor-nombre {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      max-height: 80px;
+     margin-bottom: 4%;
+    }
+
+
+    .autor-foto{
+    width: 20%;
+    display: inline-flex;
+    }
+
+      .autor-foto img{
+      margin: auto;
+      max-width: 60px;
+      max-height: 60px;
+      }
+    
+  
+    .autor-letra{
+     width: 80%;
+     position: absolute;
+     display: inline-flex;
+     margin-top: 40px;
+     margin-left: 60px;
+    }
+  
+
+    /*FIN CONTAINER FOTO AUTOR Y NOMBRE*/
+
+        .cursiva p{
+          font-size: 1.2rem;
+        }
+        .primer-articulo p{
+          font-size: 1.3rem;
+          font-family: 'Times New Roman', Times, serif;
+        }
+
+
+    .segundo-articulo p{
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    }
+      
+
+    /*ESTO SERVIRA PARA SEPARAR UN ARTICULO DEL OTRO*/
+     .categorias-posts-links{
+      margin-bottom: 20%;
+      border-bottom: 1.5px solid	#DCDCDC;
+      }
+
+      
+    .categoria-en-post{
+     width: 100%;
+     display: flex;
+    }
+
+   .blockquote .blockquote-text{
+    font-size: 1.1rem;
+    margin-left: 9px;
+    margin-top: 2px;
+    }
+  
+
+           .blockquote{
+            width:100%;
+            margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
+            padding: 20px;
+            border:  1px solid #DDD;
+            color:#666;
+            box-sizing: border-box;
+            font-family:  'sans-serif' ;
+            font-size: 1.15rem;
+            font-weight:400;
+            line-height: 1.3;    
+           }
+  
+
+            .blockquote-quoted::before { 
+            content: "\201C"; /* inicio comilla */
+            width: 30%;
             font-family: Georgia;
-            font-size:4rem; /* tamaño */
-            font-weight: bold;
-            line-height:0px;
+            font-size:  4rem; /* tamaño */
+            font-weight: bold; 
+            line-height: 0px;
             color:#DDD; /* Color  */
-            margin-bottom: -20px;
-            margin-left: 408px;
+            margin-top: 20px;
+            margin-bottom: -10px;
+            margin-left: -20px;
             display: block;
             }
 
-          .blockquote-text-credit{
-            text-align: right;
-            width: 90%;  
-            }
+  
+            .blockquote-quoted::after{ /* final */
+              content: "\201D";
+              font-family: Georgia;
+              font-size:  4rem; /* tamaño */
+              font-weight: bold;
+              line-height:0px;
+              color:#DDD; /* Color  */
+              margin-bottom: -20px;
+              margin-left:  335px;
+              display: block;
+              }
 
+
+             .blockquote-text-credit{
+              text-align: right;
+              width: 90%;  
+              }
+
+
+      /*CONTAINER DE AUTOR Y NOMBRE*/
+      .articulo-ultimo{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 2px;
+      }
+             
+
+      /*CONTAINER DEL AUTOR Y NOMBRE*/
+      .articulo-ultimo   .autor-nombre{
+      width: 50%;
+      height: 60px;
+      display: flex;
+      flex-direction: row;
+      }
+            
+      /*FOTO DEL AUTOR*/
+      .articulo-ultimo   .autor-nombre .autor-foto{
+      display: inline-flex;
+      width: 30%;
+      height: 60px;
+      }
+          
+      .articulo-ultimo   .autor-nombre .autor-foto img{
+      width: 100%;
+      height: 60px;
+      display: block;
+       }
+
+      /*NOMBRE DE AUTOR*/
+      .autor-letra{
+      width: 30%;
+      display: block;
+      position: relative;
+      float: right;
+      margin-left: 6px;
+      }
+
+  
+            /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+     .categorias-posts-links{
+      margin-bottom: 10px;
+      }
+
+        /*ANULANDO LA COLUMNA DEL BUSCADOR*/
+        .tercera-columna-fija{
+          display: block;
+          width: 100%;
+          max-width: 700px;
+          min-width: 600px;
+          margin: auto;
+          margin-top: 50px;
+        }
+
+        .tercera-columna-fija  .controls{
+          display: none;
+        }
         
+        .tercera-columna-fija  .tercera-columna{
+          display:  flex;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .tercera-columna-fija  .tercera-columna h2{
+          display: block;
+          width: 100%;
+        }
+
+        .tercera-columna .aside-colum{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+        }
+
+        .tercera-columna .aside-colum  img{
+          display: block;
+          position: relative;
+          float: left;
+          width: 45%;
+        }
+
+        .tercera-columna .aside-colum h1{
+          display: block;
+          position: relative;
+          float: right;
+          width: 45%;
+          
+          font-size: 1.3rem;
+        }
+
+        .tercera-columna-fija  .categorias-aside{
+          display: none;
+
+        }
+
+
+
+  /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+  .container-total-carrusell{
+    display: block;
+    width: 100%;
+ 
+    }
+ 
+    .container-total-carrusell h1{
+      font-size: 1.4rem;
+      color: #000000;
+ 
+   }
+ 
+   .container-total-carrusell  .carrusel .product{
+     height: 200px;
+ 
+   }
+ 
+   .container-total-carrusell  .carrusel .product   a p{
+     color: #2d2d2d;
+     margin-left: 16px;
+ 
+   }
+
           /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
-  .carrusel1{
+  .carrusell{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -4256,8 +4647,6 @@ nav li a p{
 
 
 
- /**MUY IMPORTANTE..*/
-  /*CIRCULO PARA MOVER EL ALTO Y ANCHO................................................................................................. */
   .carusel{
     width: 100%;
     display: flex;
@@ -4478,8 +4867,8 @@ nav li a p{
 
 
 
-    /*A PARTIR DE AQUI PONERLO EN ROW................................................................................................*/
-    /* 901 A 1000 ............. */
+    /*A PARTIR DE AQUI PONERLO EN ROW.........................................*/
+    /* SURFACE PRO 7 ...912 1398............. */
     @media only screen and (min-width: 901px) and (max-width: 1000px){
      #wrapper-articulo {
       box-sizing: border-box;
@@ -4506,137 +4895,133 @@ nav li a p{
     }
 
 
-   header{
-      width: 100%;
-      z-index: 999;
-      position: fixed;
-      margin: auto;
-      height:  80px;
-      box-shadow: 0 8px 6px -6px #c9c9c9;
-        }
-      
-       header.black{
-      background-color:#fff;
-      height:  80px;
-      }
-        
-        
-         #comentarios{
-          background-color: violet;
-          display: flex;
-          width: 100%;
-      
-        }
-        
-        
-        .cabecera{
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          margin: auto;
-          height: 50px;
-         }
-         
-          
-           /*caja */
-           .logo{
-             display: flex;
-             height: 50px;
-           width: 70%;
-      
-           }
-              
-          .logo img {
-           width: 100%;
-           height: 50px;
-          
-         }
-         
-             /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-    .menu-btn {
-     display: flex;
-     flex-direction: row;
-     height: 50px;
-      width: 20%;
-    background-color: greenyellow;
-        }
-  
-        
-           /*CONTENEDOR  REVISTA Y SOCIALES*/
-        .boletin{
-          width: 20%;
-         display: block;
-         position: relative;
-         float: left;
-        }
- 
-      
-        /*LETRA INSCRIBETE*/
-       .boletin a h4{
-      font-size: 1rem;
-      letter-spacing: 0.2px;
-      font-family: 'Cabin', sans-serif;
-      font-weight: 900;
-     color:#2d2d2d;
-     margin-top: 42px;
-      }
-        
-    .boletin a h4:hover{
-    color: #639a3a;
-    text-decoration: none;
+    header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  65px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
     }
-          
-
-
-        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-       .menu-btn__burger {
-          display: block;
-          position: relative;
-          float: right;
-          margin-top: 33px;
-          width: 38px;
-          height: 5px;
-          background: #2d2d2d;
-          border-radius: 2px;
-          box-shadow: 0 2px 5px rgba(255,101,47,.2);
-          transition: all .5s ease-in-out;
-          z-index: 1000;
-          
-           }
+      
+    header.black{
+    background-color:#fff;
+    width: 100%;
+    height:  65px;
+    }
         
-          .menu-btn__burger::before,
-          .menu-btn__burger::after {
-            content: '';
-            position: absolute;
-            width: 38px;
-            height: 5px;
-            margin-left: 1%;
-            background:#2d2d2d;
-            border-radius: 2px;
-            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-            transition: all .5s ease-in-out;
-           z-index: 800;
-           
-          }
-          .menu-btn__burger::before {
-            transform: translateY(-10px);
-            z-index:3000;
-            
-          }
-          .menu-btn__burger::after {
-            transform: translateY(10px);
-            z-index:3000;
-          }
-              /*IMPORTANTE*/
-           .menu-btn__burger:hover{
-            background-color: #639a3a;
-          }
-        
-        .menu-btn__burger:hover::before,
-        .menu-btn__burger:hover::after{
-         background-color: #639a3a;
-          }
 
+    .cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    height: 34px;
+    }
+
+         
+     /*caja */
+     .cabecera .logo{
+      display: block;
+      width: 70%;
+      max-width: 600px;
+      min-width: 550px;
+      height: 35px;
+      }
+      
+      
+     .logo img {
+     width: 100%;
+     max-width: 160px;
+     min-width: 140px;
+     height: 35px;
+     }
+         
+
+     .cabecera  .suscribe{
+     width: 14%;
+     height: 35px;
+     display: block;
+     position: relative;
+     float: right;
+     max-width:   290px;
+     min-width:  240px;
+      }
+
+
+      /*LETRA INSCRIBETE*/
+      .cabecera  .suscribe a h4{
+      font-size:  0.9rem;
+      letter-spacing: -0.3px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 900;
+      color:#2d2d2d;
+      margin-top:  16px;
+      }
+          
+      .cabecera  .suscribe a h4:hover{
+      color: #7aac41;
+      text-decoration: none;
+      }
+      
+
+       /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+      .cabecera  .menu-btn {
+      display: block;
+      position: relative;
+      float: right;
+      width: 8%;
+      max-width: 40px;
+      min-width: 38px;
+      height: 35px;
+        }
+
+      /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+      .menu-btn .menu-btn__burger {
+       display: block;
+       position: relative;
+       float: left;
+      width: 38px;
+      height: 4px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+      z-index: 1000;
+      }
+          
+      .menu-btn__burger::before,
+      .menu-btn__burger::after {
+      content: '';
+      position: absolute;
+      width: 38px;
+      height: 4px;
+      background:#2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+      transition: all .5s ease-in-out;
+      z-index: 800; 
+      }
+
+      .menu-btn__burger::before {
+      transform: translateY(-8px);
+      z-index:3000;         
+      }
+
+
+    .menu-btn__burger::after {
+    transform: translateY(8px);
+    z-index:3000;
+    }
+
+   .menu-btn__burger:hover{
+   background-color: #7aac41;
+   }
+        
+   .menu-btn__burger:hover::before,
+   .menu-btn__burger:hover::after{
+   background-color: #7aac41;      
+    }
            /* ANIMATION */
          .menu-btn.open .menu-btn__burger {
           transform: translateX(-50px);
@@ -4655,34 +5040,33 @@ nav li a p{
         /*FIN ANIMACION IMPORTANTE*/
         
          
-     nav li a p{
+     nav .nav li a {
      background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
      display: block;
-     border-radius: 8px solid #639a3a;
-     margin-top:8px;
-     position: absolute;
      padding: 1px 1px ;
      z-index: 200;
-    margin-left: -5px;
     color: #fff;
-    font-weight: lighter;
     font-size: 1rem;
     text-transform: lowercase;
     letter-spacing: 1px;
      font-family:  sans-serif;
      }
    /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-     nav ul li{
-    display: flex;
+     nav .nav  li{
+    display: block;
     width: 100%;
-    margin-top: 1.5%;/*IMPORTANTE */
-    filter: alpha(opacity=80);
     height: 60px;  /*IMPORTANTE  DISTANCIA IGUAL EN a */
     list-style: none;
-    cursor:pointer;
-    margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
-
+    cursor:pointer;  
     }
+
+     nav .nav .li-movil{
+       display: none;
+     }
+
+     nav .nav .li-pc{
+       display: block;
+     }
   /*..FINAL MENU HAMBURGUESA*/
 
 
@@ -4697,20 +5081,51 @@ nav li a p{
      
 
      
-        .columna-primera{
-          width: 70%;
+      #tres-columnas-articulo .columna-primera{
+          width: 62%;
      
         }
-         .segunda-columna{
-           width: 7%;
-          max-width: 60px;
+        #tres-columnas-articulo .segunda-columna{
+           width: 5%;
+           max-width: 65px;
          }
 
-         .tercera-columna-fija{
-           width: 23%;
-           max-width: 190px;
+         #tres-columnas-articulo  .tercera-columna-fija{
+           width:  33%;
+        
          }
-      
+
+         /*.............*/
+         .primera-columna{
+           display: flex;
+           flex-direction: column;
+           width: 100%;
+         }
+
+
+         .primera-columna .imagen-central{
+           display: flex;
+           flex-direction: column;
+         }
+
+
+         .imagen-central .redes{
+           display: block;
+           width: 100%;
+         }
+
+         .imagen-central .redes .iconos-social{
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+        }
+
+        .imagen-central .redes .iconos-social  li{
+          display: block;
+          margin-left: 10px;
+        }
+     /*.....
+      /*................................*/
          
          .columna-primera img{
            width: 100%;
@@ -4808,7 +5223,30 @@ nav li a p{
 
 
           /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
-  .carrusel1{
+          .container-total-carrusell{
+            display: block;
+            width: 100%;
+         
+            }
+         
+            .container-total-carrusell h1{
+              font-size: 1.4rem;
+              color: #000000;
+         
+           }
+         
+           .container-total-carrusell  .carrusel .product{
+             height: 210px;
+         
+           }
+         
+           .container-total-carrusell  .carrusel .product   a p{
+             color: #2d2d2d;
+             margin-left: 16px;  
+           }
+
+
+  .carrusell{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -5106,128 +5544,130 @@ border-radius:6px;
        }
 
        header{
-      width: 100%;
-      z-index: 999;
-      position: fixed;
-      top: 0;
-      margin: auto;
-      height:  85px;
-      box-shadow: 0 8px 6px -6px #c9c9c9;
-        }
-      
-           header.black{
-          background-color:#fff;
-          height:  85px;
+        width: 100%;
+        z-index: 999;
+        position: fixed;
+        margin: auto;
+        height:  65px;
+        box-shadow: 0 8px 6px -6px #c9c9c9;
           }
         
+           header.black{
+            background-color:#fff;
+            width: 100%;
+            height:  65px;
+            }
+          
            .cabecera{
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          margin: auto;
-          height: 55px;   
-         }
-         
-           /*caja */
-           .logo{
-           width: 60%;
-           height: 55px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            height: 35px;
            }
-              
-         .logo img {
-           width: 100%;
-         height: 55px;
-         margin: auto;
-         }
-         
-
-              /*TERCER SEGMENTO DE LA CABCERA*/
-         /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-        .menu-btn {
-        display: flex;
-        flex-direction: row;
-          width: 20%;
-          max-width: 190px;
-          height: 55px;
-          }
-  
- 
-        /*CONTENEDOR  REVISTA Y SOCIALES*/
-       .boletin{
-        width: 15%;
+           
+       /*caja */
+      .cabecera .logo{
         display: block;
-        position: relative;
-        float: left;
-        height: 55px;
-        margin-right: 5px;
-        background-color: rgb(255, 0, 157);
+      width: 75%;
+      max-width: 800px;
+      min-width: 700px;
+      height: 35px;
+      }
+                
+      .logo img {
+      width: 100%;
+      max-width: 200px;
+      min-width: 180px;
+      height: 35px;
+       }
+           
+  
+       .cabecera  .suscribe{
+        width: 15%;
+        height: 35px;
+      display: block;
+      position: relative;
+      float: right;
+      max-width: 260px;
+      min-width: 200px;
+   
         }
-
-        /*LETRA INSCRIBETE*/
-          .boletin a h4{
-          font-size: 1.1rem;
+    
+          /*LETRA INSCRIBETE*/
+          .cabecera  .suscribe a h4{
+          font-size:  0.9rem;
           letter-spacing: -0.3px;
           font-family: 'Times New Roman', Times, serif;
           font-weight: 900;
           color:#2d2d2d;
-          margin-top: 35px;
+          margin-top:  16px;
           }
-        
-         .boletin a h4:hover{
-        color: #639a3a;
-        text-decoration: none;
-        }
-          
-      
-        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-        .menu-btn__burger {
-          display: block;
-          position: relative;
-          float: right;
-          margin-top:  38px;
-          width: 40px;
-          height: 4px;
-          background: #2d2d2d;
-          border-radius: 2px;
-          box-shadow: 0 2px 5px rgba(255,101,47,.2);
-          transition: all .5s ease-in-out;
-          z-index: 1000;
-          }
-        
-          .menu-btn__burger::before,
-          .menu-btn__burger::after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 4px;
-            margin-left:    -0.5%;
-            background:#2d2d2d;
-            border-radius: 2px;
-            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-            transition: all .5s ease-in-out;
-            z-index: 800; 
-          }
-          .menu-btn__burger::before {
-            transform: translateY(-10px);
-            z-index:3000;
             
+          .cabecera  .suscribe a h4:hover{
+          color: #7aac41;
+          text-decoration: none;
           }
-       .menu-btn__burger::after {
-            transform: translateY(10px);
-            z-index:3000;
+  
+         /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+        .cabecera  .menu-btn {
+        display: block;
+        position: relative;
+        float: right;
+        width: 8%;
+        max-width: 40px;
+        min-width: 38px;
+        height: 35px;
+        margin: auto;
           }
-       .menu-btn__burger:hover{
-            background-color: #639a3a;
-         
-          }
-        
-           .menu-btn__burger:hover::before,
-           .menu-btn__burger:hover::after{
-            background-color: #639a3a;
-        
-         
-          }
-
+  
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+       .menu-btn  .menu-btn__burger {
+         display: block;
+         position: relative;
+         float: left;
+        width: 38px;
+        height: 4px;
+        margin-top:  18px;
+        background: #2d2d2d;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2);
+        transition: all .5s ease-in-out;
+        z-index: 1000;
+        }
+            
+        .menu-btn__burger::before,
+        .menu-btn__burger::after {
+        content: '';
+        position: absolute;
+        width: 38px;
+        height: 4px;
+        background:#2d2d2d;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+        transition: all .5s ease-in-out;
+        z-index: 800; 
+        }
+  
+        .menu-btn__burger::before {
+        transform: translateY(-8px);
+        z-index:3000;         
+        }
+  
+  
+      .menu-btn__burger::after {
+      transform: translateY(8px);
+      z-index:3000;
+      }
+  
+     .menu-btn__burger:hover{
+     background-color: #7aac41;
+     }
+          
+     .menu-btn__burger:hover::before,
+     .menu-btn__burger:hover::after{
+     background-color: #7aac41;      
+      }
            /* ANIMATION */
     .menu-btn.open .menu-btn__burger {
     transform: translateX(-50px);
@@ -5245,64 +5685,51 @@ border-radius:6px;
           
         /*FIN ANIMACION IMPORTANTE*/
         
-              /*IMPORTANTE*/
-nav li a p{
+              /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+  nav .nav  li{
+    display: block;
+    width: 100%;
+    margin: auto;
+    list-style: none;
+    cursor:pointer;
+    height: 68px;
+    }
+
+   nav .nav li a {
   background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
   display: block;
-  border-radius: 8px solid #639a3a;
-   margin-top:8px;
-  position: absolute;
- padding: 1px 1px ;
-  z-index: 200;
-  margin-left: -5px;
+   padding: 1px 1px ;
   color: #fff;
-  font-weight: lighter;
   font-size: 1rem;
   text-transform: lowercase;
   letter-spacing: 1px;
   font-family:  sans-serif;
-}
-  /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-  nav ul li{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    z-index: 1000;
-    margin: auto;
-    filter: alpha(opacity=80);
-    list-style: none;
-    cursor:pointer;
-    margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
+  height: 60px;
     }
-/*..FINAL MENU HAMBURGUESA*/
 
-   
-  /*IMPORTANTE PARA SEPARA UN MENU DE OTRO*/
-  nav ul li a {
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  width: 100%;
-  max-width: 800px;
-  height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
-  z-index: 100;
-  }
 
-   
-      /* NAV ESCONDIDO  NAV ESCONDIDO*/
+
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-   nav ul li:hover > ul {
-     
+   nav .nav li:hover > ul {
     display: block;
-   margin-left: 240px;
-    margin-top:-40px;
-   height: 200px;
-   visibility: visible; 
- z-index: 598;
-  }
+    }
+
+      nav .nav .li-movil{
+        display: none;
+      }
+
   /*..FINAL MENU HAMBURGUESA*/
-  #menu-simple p{
+  #menu-simple ul li a p{
     font-size: 1rem;
   }
 
+  #menu-simple{
+    display: block;
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    margin-top: -25px;
+  }
      /*EMPIEZA EL CONTENIDO*/
 
       #tres-columnas-articulo{
@@ -5495,8 +5922,37 @@ nav li a p{
     display: flex;
    }
 
+   
+
+
+   .container-total-carrusell{
+   display: block;
+   width: 100%;
+
+   }
+
+   .container-total-carrusell h1{
+     font-size: 1.4rem;
+     color: #000000;
+
+  }
+
+  .container-total-carrusell  .carrusel .product{
+    height: 210px;
+
+  }
+
+  .container-total-carrusell  .carrusel .product   a p{
+    color: #2d2d2d;
+    margin-left: 16px;
+
+  }
+
+
+
+
           /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
-  .carrusel1{
+  .carrusell{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -5823,138 +6279,129 @@ nav li a p{
       }
 
 
-     header{
-      width: 100%;
-      z-index: 999;
-      position: fixed;
-      margin: auto;
-      height:  85px;
-      box-shadow: 0 8px 6px -6px #c9c9c9;
-    }
-      
-    header.black{
-    background-color:#fff;
-    height:  85px;
-    }
+      header{
+        width: 100%;
+        z-index: 999;
+        position: fixed;
+        margin: auto;
+        height:  65px;
+        box-shadow: 0 8px 6px -6px #c9c9c9;
+          }
         
-          #comentarios{
-            background-color: violet;
-            display: flex;
+           header.black{
+            background-color:#fff;
             width: 100%;
-            max-width: 900px;
-          }
+            height:  65px;
+            }
           
-
-    .cabecera{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    height: 55px;
+           .cabecera{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            height: 35px;
+           }
+           
+       /*caja */
+      .cabecera .logo{
+        display: block;
+      width: 70%;
+      max-width: 840px;
+      min-width: 800px;
+      height: 35px;
+      }
+                
+      .logo img {
+      width: 100%;
+      max-width: 200px;
+      min-width: 180px;
+      height: 35px;
+       }
+           
   
-    }
-         
-        
-    /*caja */
-    .logo{
-    width: 60%;
-    height: 55px;
-
-    }
-              
-    .logo img {
-    width: 100%;
-    height: 55px;
-    }
-
-        /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/  
-        .menu-btn {
-          display: flex;
-          flex-direction: row;
-          width: 20%;
-          }
-    
-         
-        
-      /*CONTENEDOR  REVISTA Y SOCIALES*/
-      .boletin{
-      width: 15%;
-      height: 55px;
+       .cabecera  .suscribe{
+        width: 11%;
+        height: 35px;
       display: block;
       position: relative;
-      float: left;
-      background-color: olive;
+      float: right;
+      max-width: 210px;
+      min-width: 170px;
+   
+        }
+    
+          /*LETRA INSCRIBETE*/
+          .cabecera  .suscribe a h4{
+          font-size: 1rem;
+          letter-spacing: -0.3px;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 900;
+          color:#2d2d2d;
+          margin-top:  16px;
+          }
+            
+          .cabecera  .suscribe a h4:hover{
+          color: #7aac41;
+          text-decoration: none;
+          }
+  
+         /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+        .cabecera  .menu-btn {
+        display: block;
+        position: relative;
+        float: right;
+        width: 8%;
+        max-width: 40px;
+        min-width: 38px;
+          }
+  
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+       .cabecera  .menu-btn__burger {
+         display: block;
+         position: relative;
+         float: left;
+        
+        width: 38px;
+        height: 4px;
+        background: #2d2d2d;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2);
+        transition: all .5s ease-in-out;
+        z-index: 1000;
+        }
+            
+        .menu-btn__burger::before,
+        .menu-btn__burger::after {
+        content: '';
+        position: absolute;
+        width: 38px;
+        height: 4px;
+        background:#2d2d2d;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+        transition: all .5s ease-in-out;
+        z-index: 800; 
+        }
+  
+        .menu-btn__burger::before {
+        transform: translateY(-8px);
+        z-index:3000;         
+        }
+  
+  
+      .menu-btn__burger::after {
+      transform: translateY(8px);
+      z-index:3000;
       }
   
-      /*LETRA INSCRIBETE*/
-      .boletin a h4{
-      font-size: 1rem;
-      letter-spacing: 0.2px;
-      font-family: 'Cabin', sans-serif;
-      font-weight: 900;
-      color:#2d2d2d;
-      margin-top: 37px;
-      }
-        
-      .boletin a h4:hover{
-      color: #639a3a;
-      text-decoration: none;
-      }
+     .menu-btn__burger:hover{
+     background-color: #7aac41;
+     }
           
- 
-   
-
-        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-         .menu-btn__burger {
-          display: block;
-          position: relative;
-          float: right;
-          margin-top: 29px;
-          width: 38px;
-          height: 5px;
-          background: #2d2d2d;
-          border-radius: 2px;
-          box-shadow: 0 2px 5px rgba(255,101,47,.2);
-          transition: all .5s ease-in-out;
-          z-index: 1000;
-           }
-        
-          .menu-btn__burger::before,
-          .menu-btn__burger::after {
-            content: '';
-            position: absolute;
-            width: 38px;
-            height: 5px;
-            margin-left: 1%;
-            background:#2d2d2d;
-            border-radius: 2px;
-            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-            transition: all .5s ease-in-out;
-           z-index: 800;  
-          }
-
-          .menu-btn__burger::before {
-            transform: translateY(-10px);
-            z-index:3000;
-            
-          }
-          .menu-btn__burger::after {
-            transform: translateY(10px);
-            z-index:3000;
-          }
-
-
-
-      .menu-btn__burger:hover{
-      background-color: #639a3a;
+     .menu-btn__burger:hover::before,
+     .menu-btn__burger:hover::after{
+     background-color: #7aac41;      
       }
-        
-           .menu-btn__burger:hover::before,
-           .menu-btn__burger:hover::after{
-            background-color: #639a3a;
-          }
-
-
            /* ANIMATION */
     .menu-btn.open .menu-btn__burger {
     transform: translateX(-50px);
@@ -5975,58 +6422,42 @@ nav li a p{
         
       
               /*IMPORTANTE*/
-nav li a p{
-  background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
-  display: block;
-  border-radius: 8px solid #639a3a;
-   margin-top:8px;
-  position: absolute;
- padding: 1px 1px ;
-  z-index: 200;
-  margin-left: -5px;
-  color: #fff;
-  font-weight: lighter;
-  font-size: 1rem;
-  text-transform: lowercase;
-  letter-spacing: 1px;
-  font-family:  sans-serif;
-}
-   /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav ul li{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      z-index: 1000;
-      margin: auto;
-      filter: alpha(opacity=80);
-      list-style: none;
-      cursor:pointer;
-      background-color: turquoise;
-      margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
-      }
-  /*..FINAL MENU HAMBURGUESA*/
-
-     
-    /*IMPORTANTE PARA SEPARA UN MENU DE OTRO*/
-    nav ul li a {
-      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    width: 100%;
-    max-width: 800px;
-    height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
-    z-index: 100;
+   nav .nav li a{
+   background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
+   display: block;
+   padding: 1px 1px ;
+   color: #fff;
+   font-size: 1rem;
+   text-transform: lowercase;
+   letter-spacing: 1px;
+   font-family:  sans-serif;
+   height: 60px;
     }
 
 
+   /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+    nav .nav  li{
+      display: block;
+      width: 100%;
+      margin: auto;
+      list-style: none;
+      cursor:pointer;
+      height: 68px;
+      }
+
+
+  /*..FINAL MENU HAMBURGUESA*/
+
+     
+ 
+
+
         /* NAV ESCONDIDO  NAV ESCONDIDO*/
-   /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-   nav ul li:hover > ul {
+      /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+     nav .nav  li:hover > ul {
     display: block;
-   margin-left: 230px;
-    margin-top:-40px;
-   height: 200px;
-   visibility: visible; 
- z-index: 598;
-  }
+ 
+     }
   /*..FINAL MENU HAMBURGUESA*/
 
    
@@ -6436,126 +6867,130 @@ nav li a p{
       margin-right:auto;
       }
 
-    header{
-    width: 100%;
-    z-index: 999;
-    position: fixed;
-    height:  90px;
-    box-shadow: 0 8px 6px -6px #c9c9c9;
-    }
-      
-    header.black{
-    background-color:#fff;
-    height:  90px;
-    }
+      header{
+        width: 100%;
+        z-index: 999;
+        position: fixed;
+        margin: auto;
+        height:  65px;
+        box-shadow: 0 8px 6px -6px #c9c9c9;
+          }
         
-    .cabecera{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    height: 55px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
-    }
-        
-      /*caja */
-      .logo{
-      width: 100%;
-      height: 55px;
+           header.black{
+            background-color:#fff;
+            width: 100%;
+            height:  65px;
+            }
+          
+           .cabecera{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            height: 35px;
+           }
+           
+       /*caja */
+      .cabecera .logo{
+        display: block;
+      width: 75%;
+      max-width: 880px;
+      min-width: 800px;
+      height: 35px;
       }
-              
+                
       .logo img {
       width: 100%;
-      height: 55px;
-      }
-              /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-      .menu-btn {
-        width: 30%;
-        display: flex;
-        flex-direction: row;
-       max-width: 200px;
-        }
+      max-width: 200px;
+      min-width: 180px;
+      height: 35px;
+       }
+           
   
-        
-      /*CONTENEDOR  REVISTA Y SOCIALES*/
-      .boletin{
-       width: 25%;
-       max-width: 160px;
-       height: 55px;
-       display: block;
-       position: relative;
-       float: left;
-      background-color: teal;
-      }
-
-     
-        
-      /*LETRA INSCRIBETE*/
-      .boletin a h4{
-      font-size: 1rem;
-      letter-spacing: 0.4px;
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 900;
-      color:#2d2d2d;
-      text-transform: uppercase;
-      margin-top: 36px;
-      }
-        
-      .boletin a h4:hover{
-      color: #639a3a;
-      text-decoration: none;
-      }
-          
-  
-   
-        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-      .menu-btn__burger {
+       .cabecera  .suscribe{
+        width: 15%;
+        height: 35px;
       display: block;
       position: relative;
       float: right;
-      margin-top: 28.5px;
-      width: 38px;
-      height: 5px;
-      background: #2d2d2d;
-      border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(255,101,47,.2);
-      transition: all .5s ease-in-out;
-      z-index: 1000;
-      }
-        
-     .menu-btn__burger::before,
-     .menu-btn__burger::after {
-            content: '';
-            position: absolute;
-            width: 38px;
-            height: 5px;
-            background:#2d2d2d;
-            border-radius: 2px;
-            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-            transition: all .5s ease-in-out;
-           z-index: 800;    
+      max-width: 260px;
+      min-width: 200px;
+   
+        }
+    
+          /*LETRA INSCRIBETE*/
+          .cabecera  .suscribe a h4{
+          font-size: 1rem;
+          letter-spacing: -0.3px;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 900;
+          color:#2d2d2d;
+          margin-top:  16px;
           }
-
-    .menu-btn__burger::before {
-    transform: translateY(-10px);
-    z-index:3000;     
-     }
-
-     .menu-btn__burger::after {
-      transform: translateY(10px);
+            
+          .cabecera  .suscribe a h4:hover{
+          color: #7aac41;
+          text-decoration: none;
+          }
+  
+         /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+        .cabecera  .menu-btn {
+        display: block;
+        position: relative;
+        float: right;
+        width: 8%;
+        max-width: 40px;
+        min-width: 38px;
+          }
+  
+        /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+        .menu-btn__burger {
+         display: block;
+         position: relative;
+         float: left;
+        
+        width: 38px;
+        height: 4px;
+        background: #2d2d2d;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2);
+        transition: all .5s ease-in-out;
+        z-index: 1000;
+        }
+            
+        .menu-btn__burger::before,
+        .menu-btn__burger::after {
+        content: '';
+        position: absolute;
+        width: 38px;
+        height: 4px;
+        background:#2d2d2d;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+        transition: all .5s ease-in-out;
+        z-index: 800; 
+        }
+  
+        .menu-btn__burger::before {
+        transform: translateY(-8px);
+        z-index:3000;         
+        }
+  
+  
+      .menu-btn__burger::after {
+      transform: translateY(8px);
       z-index:3000;
       }
-
-    .menu-btn__burger:hover{
-     background-color: #639a3a;
-    }
-        
-           .menu-btn__burger:hover::before,
-           .menu-btn__burger:hover::after{
-            background-color: #639a3a;
-        
-         
-          }
-
+  
+     .menu-btn__burger:hover{
+     background-color: #7aac41;
+     }
+          
+     .menu-btn__burger:hover::before,
+     .menu-btn__burger:hover::after{
+     background-color: #7aac41;      
+      }
+  
            /* ANIMATION */
           .menu-btn.open .menu-btn__burger {
     transform: translateX(-50px);
@@ -6577,47 +7012,31 @@ nav li a p{
               /*IMPORTANTE*/
 
                  /*IMPORTANTE*/
-  nav li a p{
+  nav .nav li a {
     background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
     display: block;
-    border-radius: 8px solid #639a3a;
-     
-    position: absolute;
     padding: 1px 1px ;
-    margin-left: -5px;
     color: #fff;
-    font-weight: lighter;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-transform: lowercase;
     letter-spacing: 1px;
     font-family:  sans-serif;
-    z-index: 1000;
     }
 
      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-      nav ul li{
-      display: flex;
-      flex-direction: column;
+      nav  .nav li{
+     display: block;
       width: 100%;
-      z-index: 1000;
-      margin: auto;
-      filter: alpha(opacity=80);
       list-style: none;
       cursor:pointer;
-      background-color: turquoise;
-      margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
       }
   /*..FINAL MENU HAMBURGUESA*/
 
      
-    /*IMPORTANTE PARA SEPARA UN MENU DE OTRO*/
-    nav ul li a {
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    width: 100%;
-    max-width: 800px;
-    height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
-    z-index: 100;
+    nav .nav .li-movil{
+      display: none;
     }
+
 
     #comentarios{
     background-color: violet;
@@ -6633,31 +7052,40 @@ nav li a p{
   
       /*INICIO CONTENIDO*/
     #tres-columnas-articulo{
+      width: 100%;
     display: flex;
     flex-direction: row;
     margin-top: 20px;
     }
 
+     
 
-    .columna-primera{
-      width: 70%;
+    #tres-columnas-articulo .primera-columna{
+      width: 75%;
      }
 
-     .segunda-columna{
-       width: 7%;
-       max-width: 100px;
+     #tres-columnas-articulo .segunda-columna{
+       width: 3%;
+       max-width: 40px;
      }
 
 
-     .tercera-columna-fija{
-     width: 23%;
-     max-width: 230px;
+     #tres-columnas-articulo .tercera-columna-fija{
+     width: 25%;
+    
      }
 
-    .columna-primera img{
+     #tres-columnas-articulo .primera-columna img{
     width: 100%;
-    height:  25%;
+ 
     }
+
+    #tres-columnas-articulo .primera-columna  .primer-articulo{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      }
 
    .blockquote .blockquote-text{
     font-size: 1rem;
@@ -6726,9 +7154,14 @@ nav li a p{
      margin-left: 50px;
      }
 
+     .container-total-carrusell h1{
+       font-size: 1.6rem;
+       color: #000000;
+
+     }
 
           /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
-  .carrusel1{
+  .container-total-carrusell .carrusell{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -6747,7 +7180,15 @@ nav li a p{
   z-index:0;
   }
 
+   /*ALTO DE CADA DIV DE LA IMAGEN*/
+   .carrusel .product{
+    height: 230px;
+   }
    
+   .carrusel .product a p{
+     margin-left: 16px;
+
+   }
  
 
     /*PARA QUE LAS FLECHAS DESPAREZCAN */
@@ -6778,7 +7219,7 @@ nav li a p{
 /*.............CON ESTO SE ACOMODA EL CIRCUO Y LA FLECHA*/
     /*CIRCULO  DERECHO*/
     #carrusel li.right-arrow{
-    margin-left: 87%;
+    margin-left:  84%;
      }
     /*CIRCULO   IZQUIERDO*/
      #carrusel li.left-arrow{
@@ -6788,7 +7229,7 @@ nav li a p{
       /* ARROW LEFT .......................SOLO ARROW LEFT...................................ARROW LEFT SIN PALO............... */
   .carrusel1 ul li.left-arrow span{
     top: 48%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-  left: 3%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+  left: 13%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
   transform: translateY(-50%) rotate(-45deg);
   border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
   border-bottom: none;
@@ -6798,7 +7239,7 @@ nav li a p{
      /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
     .carrusel1 ul li.right-arrow span{
   top:   50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-  right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+  right: 10%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
   transform: translateY(-50%) rotate(-45deg);
   border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
   border-top: none;
@@ -7028,14 +7469,14 @@ nav li a p{
       z-index: 999;
       position: fixed;
       margin: auto;
-      height:  90px;
+      height:  65px;
       box-shadow: 0 8px 6px -6px #c9c9c9;
         }
       
          header.black{
           background-color:#fff;
           width: 100%;
-          height:  90px;
+          height:  65px;
           }
         
          .cabecera{
@@ -7043,66 +7484,70 @@ nav li a p{
           display: flex;
           flex-direction: row;
           margin: auto;
-          height: 60px;
+          height: 35px;
          }
          
      /*caja */
-    .logo{
-    width: 60%;
-    height: 60px;
+    .cabecera .logo{
+      display: block;
+    width: 75%;
+    max-width: 880px;
+    min-width: 800px;
+    height: 35px;
     }
               
     .logo img {
     width: 100%;
-    height: 60px;
+    max-width: 200px;
+    min-width: 180px;
+    height: 35px;
      }
          
 
-       /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-       .menu-btn {
-       display: flex;
-       flex-direction: row;
-        width: 22%;
-     max-width: 200px;
-   
-        }
+     .cabecera  .suscribe{
+      width: 15%;
+      height: 35px;
+    display: block;
+    position: relative;
+    float: right;
+    max-width: 260px;
+    min-width: 200px;
+ 
+      }
   
-        
-           /*CONTENEDOR  REVISTA Y SOCIALES*/
-    .boletin{
-    width: 15%;
-    height: 60px;
-  display: block;
-  position: relative;
-  float: right;
-  margin-right: 12px;
-    }
-
-      /*LETRA INSCRIBETE*/
-      .boletin a h4{
-      font-size: 1rem;
-      letter-spacing: -0.3px;
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 900;
-      color:#2d2d2d;
-      margin-top:  42px;
-      }
-        
-      .boletin a h4:hover{
-      color: #639a3a;
-      text-decoration: none;
-      }
+        /*LETRA INSCRIBETE*/
+        .cabecera  .suscribe a h4{
+        font-size: 1rem;
+        letter-spacing: -0.3px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 900;
+        color:#2d2d2d;
+        margin-top:  16px;
+        }
           
-    
+        .cabecera  .suscribe a h4:hover{
+        color: #7aac41;
+        text-decoration: none;
+        }
+
+       /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+      .cabecera  .menu-btn {
+      display: block;
+      position: relative;
+      float: right;
+      width: 8%;
+      max-width: 40px;
+      min-width: 38px;
+        }
 
       /*--MUEVE EL MENU............ESTE ES EL BURGER*/
       .menu-btn__burger {
        display: block;
        position: relative;
        float: left;
-       margin-top: 25px;
+      
       width: 38px;
-      height: 5px;
+      height: 4px;
       background: #2d2d2d;
       border-radius: 2px;
       box-shadow: 0 2px 5px rgba(255,101,47,.2);
@@ -7110,40 +7555,41 @@ nav li a p{
       z-index: 1000;
       }
           
-            .menu-btn__burger::before,
-            .menu-btn__burger::after {
-              content: '';
-              position: absolute;
-              width: 38px;
-              height: 5px;
-              background:#2d2d2d;
-              border-radius: 2px;
-              box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-              transition: all .5s ease-in-out;
-             z-index: 800;
-             
-            }
-            .menu-btn__burger::before {
-              transform: translateY(-11px);
-              z-index:3000;         
-            }
+      .menu-btn__burger::before,
+      .menu-btn__burger::after {
+      content: '';
+      position: absolute;
+      width: 38px;
+      height: 4px;
+      background:#2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
+      transition: all .5s ease-in-out;
+      z-index: 800; 
+      }
 
-            .menu-btn__burger::after {
-              transform: translateY(11px);
-              z-index:3000;
-            }
+      .menu-btn__burger::before {
+      transform: translateY(-8px);
+      z-index:3000;         
+      }
 
-  .menu-btn__burger:hover{
-  background-color: #639a3a;
-  }
-        
-  .menu-btn__burger:hover::before,
-  .menu-btn__burger:hover::after{
-  background-color: #639a3a;      
+
+    .menu-btn__burger::after {
+    transform: translateY(8px);
+    z-index:3000;
     }
 
-  /* ANIMATION */
-   .menu-btn.open .menu-btn__burger {
+   .menu-btn__burger:hover{
+   background-color: #7aac41;
+   }
+        
+   .menu-btn__burger:hover::before,
+   .menu-btn__burger:hover::after{
+   background-color: #7aac41;      
+    }
+
+    /* ANIMATION */
+    .menu-btn.open .menu-btn__burger {
     transform: translateX(-50px);
     background: transparent;
     box-shadow: none;
@@ -7154,48 +7600,38 @@ nav li a p{
     background: #fff;
     }
 
-          .menu-btn.open .menu-btn__burger::after {
-            transform: rotate(-45deg) translate(35px, 35px);
-            background: #fff;
-          }
+    .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    background: #fff;
+    }
           
+      /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+      nav .nav  li{
+        display: block;
+        width: 100%;
+        list-style: none;
+        cursor:pointer;
+        }
       
   /*IMPORTANTE*/
-  nav li a p{
+  nav .nav li a {
   background-color:  #000000;  /*IMPORTANTE  DAR COLOR NEGRO*/
   display: block;
-  border-radius: 8px solid #639a3a;
-  position: absolute;
   padding: 1px 1px ;
-  margin-left: -5px;
   color: #fff;
   font-weight: lighter;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-transform: lowercase;
   letter-spacing: 1px;
   font-family:  sans-serif;
-    z-index: 1000;
    }
 
 
-   /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-    nav ul li{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    z-index: 1000;
-    margin: auto;
-    filter: alpha(opacity=80);
-    list-style: none;
-    cursor:pointer;
-    margin-left: 8% ;    /*con esto se desplaza a la izquierda porque no estaba bien centrado a la hora de visualizar el menu */
-    }
+   
 
     /*IMPORTANTE PARA SEPARA UN MENU DE OTRO*/
-    nav ul li a {
-      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    nav .nav  li a {
     width: 100%;
-    max-width: 800px;
     height:60px;    /*IMPORTANTE  DISTANCIA IGUAL EN li*/
     z-index: 100;
   
@@ -7203,13 +7639,13 @@ nav li a p{
 
         /* NAV ESCONDIDO  NAV ESCONDIDO*/
     /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-    nav ul li:hover > ul {
+    nav .nav li:hover > ul {
     display: block;
-    margin-left: 240px;
-    margin-top:-40px;
-    visibility: visible; 
-    z-index: 598;
     }
+
+     nav .nav .li-movil{
+       display: none;
+     }
 
 
 
@@ -7229,28 +7665,34 @@ nav li a p{
       #tres-columnas-articulo{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         width: 100%;
         margin-top: 3%;
       }
+       
+      #tres-columnas-articulo .primera-columna{
+        display: block;
+        width: 800px;
+       }
 
-       .columna-primera img{
+
+       #tres-columnas-articulo .primera-columna img{
          width: 100%;
-         height:  25%;
        }
   
-       .columna-primera{
-        width: 68%;
+      
+  
+       #tres-columnas-articulo .segunda-columna{
+         width: 5%;
+         max-width: 60px;
+        display: block;
        }
   
-       .segunda-columna{
-         width: 11%;
-         max-width: 130px;
-       }
   
-  
-       .tercera-columna-fija{
-       width: 21%;
-       max-width: 230px;
+       #tres-columnas-articulo .tercera-columna-fija{
+       width: 25%;
+       display: flex;
+       flex-direction: column;
        }
        
        .segundo-articulo h1{
@@ -7343,7 +7785,21 @@ nav li a p{
           }
 
           /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
-      .carrusel1{
+          /*ALTO DE CADA DIV DE LA IMAGEN*/
+          .container-total-carrusell h1{
+            font-size: 1.7rem;
+            color: #000000;
+          }
+   .carrusel .product{
+    height: 230px;
+   }
+   
+   .carrusel .product a p{
+     margin-left: 16px;
+    color: #2d2d2d;
+   }
+ 
+      .carrusell{
      width: 100%;
      display: flex;
      flex-direction: column;
@@ -7393,7 +7849,7 @@ nav li a p{
           /*CIRCULO  DERECHO CON ESTO EL CIRCULO MANTIENE SU FORMA*/
           /*MANTENERO EN 86 PARA QUE EL CIRCULO NO PIERDA LA FORMA*/
      #carrusel li.right-arrow{
-      margin-left:86%;  
+      margin-left:  85%;  
       }
   
       /*CIRCULO   IZQUIERDO*/

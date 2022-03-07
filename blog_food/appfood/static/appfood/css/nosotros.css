@@ -196,7 +196,8 @@
     margin: auto;
     border-top: 0.7px solid 		#DCDCDC;
     border-bottom: 0.7px solid 		#DCDCDC;
-  
+    z-index: 10;
+    background-color: #fff;
   }
    
  
@@ -245,7 +246,6 @@
   /*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS   float:none*/
   nav .nav ul li {
   float: left;
-  background-color: rosybrown;
   width: 100%;
   max-width: 600px;
   }
@@ -295,7 +295,7 @@
   
  
    .nav  a:hover:after {
-     width: 100%;
+   
      background: #568632;
      }
 
