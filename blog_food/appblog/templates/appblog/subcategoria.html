@@ -13,10 +13,14 @@
                   <div class="menu-introescrito">
                     <!-------------MENU------------------>
                              <div class="menu">
+                             <div class="menu-scrolling">
+
                              <ul>
+
                              <li>
                              <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
                              </li>
+
                              <li>    
                              <a  href="{% url 'appblog:dietas-especiales-y-alimentacion-saludable' %}">
                              Alimentacion Sana<i class="right"></i> 
@@ -25,57 +29,65 @@
 
                              <!---BLOQUE DE CATEGORIAS----->
                               <li>
-                              <p>Categorias<i class="right"></i></p>
-                                <ul>
-                              {% load mptt_tags %} 
-                              <!-----SUBMENU DE - LAS CATEGORIAS------>
-                              {% for category in categorias %} 
-                                <li>
-                              <!-- LAS DOS CATEGORIAS CON SUS SUBCATEGORIAS---->
-                              <a href="/dietas-especiales-y-alimentacion-saludable/categoria/{{ category.slug }}">
-                              <p>{{ category }}<i class="right"></i>
+                              <p>Subcategorias<i class="right"></i>
                               </p>
-                              </a>
-                              {% endfor %}
+
+                              <!-----SUBMENU DE - LAS CATEGORIAS------>
+                              <ul>
+                              
+                              {% load mptt_tags %} 
+                              {% for kategoria in kategorias %} 
+                                 {% for child in kategoria.get_children %}
                               <li>
-                              </ul>
-                              <!--  SUBMENU ESCONDIDO----->
-                              </li> 
-                            <!--FIN FIN BLOQUE DE CATEGORIAS-------------------------->
-
-                        <!--MENU MENU TITULO SUBCATEGORIA----------------->
-                        {% for category in category %}
-                        <li>    
-                        <a href="/dietas-especiales-y-alimentacion-saludable/subcategoria/{{ category.slug }}">
-                        <p> {{ category.ame }}{{ child.get }}</p>  
-                        </a>
-                        </li>
-                        {% endfor %}
-                        <!--  FIN -TITULO SUBCATEGORIA---->
-                         </ul>
-                         </div>
-                      <!-----FIN DEL MENU------------------------------------>
+                              <!-- CATEGORIAS CON SUS SUBCATEGORIAS---->
+                                         <a href="/dietas-especiales-y-alimentacion-saludable/subcategoria/{{ child.slug }}">
+                              {{child.name }}
+                              </a>
+                              <li>
+                              {% endfor %}
+                                   {% endfor %}
 
 
-                                  <!---------------------------------------------------------->
-                                        <div class="introescrito">
-                                        <!---TITULO DE SUBCATEGORIA--->
-                                        {% load mptt_tags %}
-                                         {% for category in category %}
-                                         {% if not node.is_leaf_node %}
-                                        <!--  TITULO--CATEGORIA---> 
-                                        <div class="menu-intro-titulo">  
-                                          <a href="/dietas_especiales-y-alimentacion-saludable/subcategoria/{{ category.slug }}"> 
-                                           <h2> {{ category.name }} {{ child.get }}</h2>
-                                          </a>
-                                        </div>
-                                        {% endif %}
-                                        {% endfor %}  
-                                      
-                                  <!---FIN TITULO DE CATEGORIA--->   
-                                        </div>
-                            </div>
-                            <!-- FIN DIV MENU INTRO ESCRITO--->
+                      </ul>
+                      <!--  SUBMENU ESCONDIDO----->
+                      </li> 
+                      <!--FIN FIN BLOQUE DE CATEGORIAS-------------------------->
+
+
+                      <!--MENU.TITULO SUBCATEGORIA----------------->
+                      {% for category in category %}
+                      <li>    
+                      <a href="/dietas-especiales-y-alimentacion-saludable/subcategoria/{{ category.slug }}">
+                      {{ category.name }}{{ child.get }}<i class="right"></i>
+                      </a>
+                      </li>
+                       {% endfor %}
+                      <!--  FIN -TITULO SUBCATEGORIA---->
+                     </ul>
+                     </div>
+                     <!--fin del menu scrolling--->
+                  </div>
+                  <!-----FIN DEL MENU------------------------------------>
+
+
+                  <!---------------------------------------------------------->
+                  <div class="introescrito">
+                  <!---TITULO DE SUBCATEGORIA--->
+                  {% load mptt_tags %}
+                  {% for category in category %}
+                  {% if not node.is_leaf_node %}
+                  <!--TITULO--CATEGORIA---> 
+                  <div class="menu-intro-titulo">  
+                  <a href="/dietas_especiales-y-alimentacion-saludable/subcategoria/{{ category.slug }}"> 
+                  <h2> {{ category.name }} {{ child.get }}</h2>
+                  </a>
+                  </div>
+                  {% endif %}
+                  {% endfor %}    
+                  <!---FIN TITULO DE CATEGORIA--->   
+                  </div>
+                  </div>
+                <!-- FIN DIV MENU INTRO ESCRITO--->
 
   <!-------------------------MENU CON TTULO Y COSTADO DE LAS CATEGORIAS---------------------->
 

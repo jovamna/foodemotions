@@ -1483,99 +1483,82 @@ nav .logo-esconder .logo-en-menu-responsive img{
  
   
     /*CONTAINER GENERAL DEL CARRUSEL............................................. */
-   .container-total-carrusell{
-    display: block;
-    position: relative;
-
-     }
-
      .container-total-carrusell{
-      display: block;
+     display: block;
+     position: relative;
+     display: block;
       width: 100%;
-   
-      }
-   
+     }
+    
       .container-total-carrusell h1{
         font-size: 1.8rem;
         color: #000000;
-   
      }
    
-     .container-total-carrusell  .carrusel .product{
-       height: 260px;
    
-     }
-   
-     .container-total-carrusell  .carrusel .product   a p{
-       color: #2d2d2d;
-       margin-left: 16px;
-      margin-top: 8px;
-     }
-  
-
-
-
-
+     
     /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
     #carrusel {
-    float:left;
-    width:90%;
-    overflow:hidden;
-     height: 305px;
-    position:relative;
-    margin: auto;
-    margin-bottom: 20px;
-    }
-    
-    
-    
+      display: block;
+      float:left;
+      width:90%;
+      overflow:hidden;
+       height: 305px;
+      position:relative;
+      margin: auto;
+      margin-bottom: 20px;
+      }
+      
+
     /*CONTAINER DE TODAS LAS IMAGENES*/
      /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
-       .carrusel {
-        width:4000px;
-        left: 1px;
-        position:absolute;
-        z-index:0;
-       }
+     .carrusel {
+      width:4000px;
+      left: 1px;
+      position:absolute;
+      z-index:0;
+     }
 
-     /*MODIFICAR ANCHO Y ALTO  */
-    .carrusel>div {
-        float: left;
-  
-        margin-right: 14px;   /*ESPACIO */
-        width: 100%;
-        max-width: 260px;
-    }
-     /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
-    .carrusel img {
-    cursor:pointer;
-    width: 100%;
-    max-width: 260px;
-    height: 210px;
-    border: #666 1px solid;
-    border-radius:6px;
-    }
-     
-
-
-    .carrusel p{
-        letter-spacing: -0.2px;
-        font-family: 'Cabin', sans-serif;
-        text-align: center;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.45;
-        color: #666;
-        text-overflow: ellipsis;
-    }
-
-    /*CNTAINER DE CADA IMAGEN no poner border    border:#CCCCCC 0px solid;*/
-    .product {
+   /*MODIFICAR ANCHO Y ALTO  */
+  .carrusel>div {
+      float: left;
+      margin-right: 14px;   /*ESPACIO */
       width: 100%;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-       }
-     
-    
+      max-width: 260px;
+  }
+
+      /*CNTAINER DE CADA IMAGEN no poner border    border:#CCCCCC 0px solid;*/
+ .carrusel .product {
+    width: 100%;
+    height: 260px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+     }
+   
+   /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+  .carrusel .product img {
+  cursor:pointer;
+  width: 100%;
+  max-width: 260px;
+  height: 210px;
+  border: #666 1px solid;
+  border-radius:6px;
+  }
+   
+
+
+ .product a p{
+      letter-spacing: -0.2px;
+      font-family: 'Cabin', sans-serif;
+      margin-left: auto;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #2d2d2d;
+     margin-top: 8px;
+     margin-left: 40px;
+  }
+
+
+   
   /*..CONTAINER DE LAS FLECHAS Y CIRCULO ...*/ 
   /*ALTURA DEL CIRCULO CON LA FLECHA INCLUIDA......... */
     .carusel{
@@ -1688,18 +1671,11 @@ nav .logo-esconder .logo-en-menu-responsive img{
   .container-total-carrusell ul li.left-arrow:hover span:before{
     transform: rotate(45deg) translate(6px, 14px) scaleX(1);
     }
-    /*............................................*/
-
-
-
-    /*.........................*/
- 
-  
+   
   /*FINAL CARRUSEL...................... */
   
   
-  
-/*FINAL CARRUSEL.........FINAL CARRUSEL................. */
+
 
 
    /* ...PAGINACION ...................................*/
@@ -1759,155 +1735,153 @@ nav .logo-esconder .logo-en-menu-responsive img{
   
     /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
    .footer-primero-articulo{
-    width: 70%;
-    height: 150px;
-    padding-top: 20px;
-    margin-bottom: 10px;
+    width: 80%;
+    max-width: 900px;
+    height: 100px;
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
+    justify-content: space-between;
     margin: auto;
-     z-index: 10;
    }
  
 
   /*SUB-caja ICONOS SOCIALES*/
    .icon-social1{
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 90px;
+    display: block;
+    position: relative;
+    float: left;
+     width: 55%;
+     max-width: 600px;
+     height: 100px;
    }
   
     .icon-social1 p{
-    font-size: 1.2rem;
-    word-spacing: -3px;
-    letter-spacing: -2px;
-    font-family: 'Archivo Black', sans-serif;
-    color: #2d2d2d;
-     margin-top: -3px;
+      font-size: 1.4rem;
+      word-spacing: -3px;
+      letter-spacing: -1px;
+      font-family: 'Archivo Black', sans-serif;
+      color: #7aac41;
+      display: block;
+      height: 30px;
     }
   
+       /* UL*/
+       .icon-social1  .social2{
+     width: 32%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     height: 48px;
+     padding-top: 0;
+    }
+ 
+  /*UL LI..*/
+  .icon-social1 .social2 li{
+    list-style: none;
+    display: inline-block;
+    height: 34px;
 
-  .icon-social1 li{
-  list-style: none;
-  display: inline-flex;
   }
 
 
-
-  /* UL*/
- .social2{
- display: flex;
- flex-direction: row;
- list-style: none;
- margin-top: -8px;
- }
-
-
 .social2  li  .fa-envelope{
-background-color: oldlace;
 color: #2d2d2d;
-width:40px;
-height: 40px;
-padding: 5px 5px 5px 5px;
-border-radius: 25px;
-border: solid #E9E9E9;
-
+    width:40px;
+    height: 40px;
+    padding: 6px 6px 6px 6px;
+    border-radius: 24px;
+     border: solid #E9E9E9;
 }
 
 .social2  li  .fa-facebook-f{
-background-color: oldlace;
-color:  #2d2d2d;
-width:40px;
-height: 40px;
-padding: 5px 5px 5px 5px;
-border-radius: 25px;
-border: solid #E9E9E9;
+  color: #2d2d2d;
+  width:40px;
+  height: 40px;
+  padding: 6px 6px 6px 6px;
+  border-radius: 24px;
+   border: solid #E9E9E9;
 
 }
 
 
 .social2  li  .fa-twitter{
-background-color: oldlace;
-color:   #2d2d2d;
-width:40px;
-height: 40px;
-padding: 5px 5px 5px 5px;
-border-radius: 25px;
-border: solid #E9E9E9;
-
+  color: #2d2d2d;
+  width:40px;
+  height: 40px;
+  padding: 6px 6px 6px 6px;
+  border-radius: 24px;
+   border: solid #E9E9E9;
 }
 
 
 .social2 li   .fa-instagram{
-background-color: oldlace;
-color: #2d2d2d;
-width:40px;
-height: 40px;
-padding: 5px 5px 5px 5px;
-border-radius: 25px;
-border: solid #E9E9E9;
-
+  color: #2d2d2d;
+  width:40px;
+  height: 40px;
+  padding: 6px 6px 6px 6px;
+  border-radius: 24px;
+   border: solid #E9E9E9;
 }
 
  /*SUB-caja contenedor de la caja correo*/
 
  /*SUBCONTENEDOR DONDE ESTA EL BOX*/
  .box{
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  height: 90px;
+  display: block;
+  position: relative;
+  float: right;
+ width: 35%;
+ height: 100px;
   }
+
+   /*LETRA DE LA CAJA DE SUSCRIBIR*/
+   .box h3{
+    letter-spacing: -0.1px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size:  0.9rem;
+    font-weight: 400;
+    color: #2d2d2d;
+    display: block;
+    height: 34px;
+    }
+  
+
  /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
- .box form{
-  display: flex;
- flex-direction: row;
-  width: 70%;
+     /*cajita del correo */
+  .box form{
+    display: flex;
+    flex-direction: row;
   }
-
-
-/*LETRA DE LA CAJA DE SUSCRIBIR*/
-.box h3{
-letter-spacing: -0.1px;
-font-family: 'Archivo Black', sans-serif;
-font-size: 1rem;
-font-weight: 400;
-margin-top: 3px;
-
-color: #2d2d2d;
-}
-
-
-.box input[type="text"]
-{
-background-color: #fff;
-display: flex;
-width:60%;
-height: 50px;
-border: 1.5px solid 	#DCDCDC;
-padding: 0 18px;
-border-radius: 5px 0 0 5px;
-font-size: 1rem;
-font-family: 'Times New Roman', Times, serif;
-
-}
-
-.box button[type="submit"]{
-left: 10px;  /*EL TRUCO IMPORTANTE*/
-border-radius: 0 5px 5px 0;
-width: 30%;
-height: 50px;
-border: none ;
-outline: none;
-cursor: pointer;
-background-color: #2d2d2d;
-color: #fff;
-font-size: 12px;
-font-family: 'Archivo Black', sans-serif;
-}
-
+  
+  .box input[type="text"]
+  {
+  background-color: #fff;
+  display: block;
+   position: relative;
+   float: left;
+  width:60%;
+  height: 50px;
+  border: 1.5px solid 	#DCDCDC;
+  padding: 0 18px;
+  border-radius: 5px 0 0 5px;
+  
+  }
+  
+  .box button[type="submit"]{
+    display: block;
+    position: relative;
+    float: right;
+  border-radius: 0 5px 5px 0;
+  width: 20%;
+  height: 50px;
+  border: none ;
+  outline: none;
+  cursor: pointer;
+  background-color: #2d2d2d;
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: 'Archivo Black', sans-serif;
+  }
 
 /*FIN de la cajita del correo */
 
@@ -1915,21 +1889,23 @@ font-family: 'Archivo Black', sans-serif;
 
   /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
   .footer-second-articulo{
-  width: 100%;
-  height: 30px;  /*IMPORTANTE*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  height: 22px;
+  margin-top: 20px;
    }
 
   
-.final-food-articulo{
-width: 100%;
-height: 20px;
-padding-bottom: 10px;
- 
- }
+   .final-food-articulo{
+    height: 22px;
+    display: block;
+    width: 100%;
+    }
 
-.final-food-articulo p{
+  .final-food-articulo p{
   text-align: center;
- font-family: 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   color: #2d2d2d;
   font-size: 0.8rem;
  

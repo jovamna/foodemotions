@@ -13,10 +13,12 @@
                 <div class="menu-introescrito">
                       <!--MENU-->
                       <div class="menu">
+                      <div class="menu-scrolling">
                       <ul>
                       <li>
                       <a href="{% url 'appfood:index' %}">
-                      Inicio<i class="right"></i></a>
+                      Inicio<i class="right"></i>
+                      </a>
                       </li>
                       <li>    
                       <a  href="{% url 'appfood:plan-comidas-saludables' %}">
@@ -27,14 +29,14 @@
                     <!--BLOQUE CATEGORIAS------------------------>
                     <!--MENU ESCONDIDO -CATEGORIAS------------------>
                     <li>
-                    <p>Categorias<i class="right"></i></p>
+                    <p>Sucategorias<i class="right"></i></p>
                     <ul>
                     {% load mptt_tags %}
-                    {% for categoria in categories %} 
+                       {% for categoria in category_deals %}
                     <!--  TITULO--CATEGORIA---> 
                     <li>
-                    <a href="/plan-comidas-saludables/categoria/{{ categoria.slug }}">
-                    <p> {{categoria.name}}</p> 
+                    <a href="/plan-comidas-saludables/subcategoria/{{ perderpeo.slug }}">
+                      {{ categoria.name }}{{ child.get }}
                     </a>    
                     </li>
                     {% endfor %}
@@ -48,11 +50,13 @@
                       {% load mptt_tags %}
                       {% for categoria in category_deals %}
                       <a href="/plan-comidas-saludables/categoria/{{ perderpeso.slug }}">
-                      <p> {{ categoria.name }}{{ child.get }}<i class="right"></i></p>
+                      {{ categoria.name }}{{ child.get }}<i class="right"></i>
                       </a>
                       {% endfor %}
                       </li>
                       </ul>
+                     </div>
+                     <!--fin del menu scrolling--->
                       </div>
                       <!--FIN FIN MENU MENU------------------>
 

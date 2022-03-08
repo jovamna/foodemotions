@@ -126,7 +126,8 @@ def recetas_saludables(request):
 def recetas(request):
     recetas = Receta.objects.all()
     kategory = Kategory.objects.all()  #SALE TODO!
-    kategories = Kategory.objects.filter(parent=None) #SALEN SOLO LAS CATEGORIAS
+    kategories = Kategory.objects.filter(
+        parent=None)  #SALEN SOLO LAS CATEGORIAS
 
     context = {
         'recetas': recetas,
@@ -142,7 +143,7 @@ def recetas(request):
 
     #PAGINA PRINCIPAL DE BATIDOS
 def recetas_dieteticas(request):
-    recipes = Recipe.objects.all().order_by('-slug')[1:6]
+    recipes = Recipe.objects.all().order_by('-slug')
     #post_recipes = Recipe.objects.all().prefetch_related(
     #'category', 'category__parent').order_by('-publish')[1:6]
     category = Category.objects.all()  #SALE TODO!

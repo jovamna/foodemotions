@@ -20,15 +20,27 @@
                                <li>
                                <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
                               </li>
+
                               <li>    
-                              <a  href="{% url 'appfood:recetas-dieteticas' %}">Batidos y Ensaladas<i class="right"></i> </a>
+                              <a  href="{% url 'appfood:recetas-dieteticas' %}">Recetas Dieteticas<i class="right"></i> </a>
                               </li>
+
+                              <!--DEBERIA ESTA AQUI LA CATEGORIA ACTUAL---->
+                              <li>  
+                                 {% for category in category_deals %}
+                             <a href="/recetas-dieteticas/categoria/{{ category_deals.slug }}">
+                           {{category_deals.name}}  
+                            <i class="right"></i> </a>
+                           {% endfor %}
+                              </li>
+                 
+
 
                
                             <li>
-                              {% for recipe in category %}
+                              {% for category in category %}
                             <a href="/recetas-dieteticas/subcategoria/{{ recipe.slug }}">
-                            <p>{{categori}}<i class="right"></i></p>
+                           {{categori}}<i class="right"></i>
                             </a>
                           {% endfor %}
                             </li>
@@ -41,7 +53,7 @@
                                 <div class="introescrito">
                                 <!---TITULO DE CATEGORIA--->
                              
-                                      <!--  TITULO--CATEGORIA---> 
+                                      <!--  TITULO-GRANDE EN EL CENTRO DE LA-SUBCATEGORIA---> 
                                      <div class="menu-intro-titulo">  
                                         <h2> {{categori}}</h2>     
                                      </div>
@@ -99,51 +111,61 @@
       <!------------------------------------------------------------------------------------------------->
 
 
-        <!---100%----------DIV CONTAINER DE 4 POSTS DE SUBCATEGORIAS------------------------>
+      <!---DIV  DEBE MEDIR 100%  CONTAINER DE 4 POST Y DE RECETAS--->
       <div class="container-posts-categorias">
+            <!--DEBE MEDIR  80%-------------80%---------->
+            <div id = "posts-categorias-aside">
 
 
-            <!--80%------------------------------>
-            <div id = "posts-categoria">
+                   <!----- INICIO POST CATEGORIA-------->
+                   <div class=  "post-cuatro-categorias">
+                   <!---DIV DE 4 POST DE POSTS---> 
             
-                <!--25% -----DIV DE 4 POST DE POSTS--->
-                 {% for recipe in recipes %}  
-                <div class="elemento-categoria">          
+
+                        <!--25% -----DIV DE 4 POST DE POSTS--->
+                        {% for category in recipe %}  
+                        <div class="elemento-categoria">          
                     
-                          <!--  IMAGEN DEL POSTPERDER---->
-                          {% if recipe.image %}
-                          <img src ="{{recipe.image.url}}">
-                          {% endif %}
+                               <!---FECHA E IMAGEN-->  
+                               <div id="imagen-elemento-categoria"> 
+                              <!-- IMAGEN--->
+                              {% if category.image %} 
+                              <img src ="{{category.image.url}}">
+                              {% endif %}
 
 
-                                   <!--  DESCRIPCION---->
-                                  <div class="elemento-descripcion">
-                                     <h2>{{recipe.title}}</h2>
-                                     <!--  DESCRIPTION DEL POST PERDER---->
-                                     <p>{{recipe.description|safe}} </p> 
-                                     <!--  LINK QUE REDIRIGE AL POST --->
-                                     <a href ="/recetas-dieteticas/receta/{{ recipe.slug }}/">
-                                      <em><p>Leer mas...</p></em></a>
-                                     <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
-                                        <p class="a">Por <span class="o"> {{ receta.author }}</span> </p> 
-                                     <!--<h3>Categoria: {{ categori }}</h3>--->
-                                     <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE ENDFOR--->
-                                  </div>
-                            <!--DESCRPCION FINAL-->
-                             </div>     
-                     <!--FIN 25% DEL FIN ELEMENTO-CATEGORIA------->          
+                              <!--  DESCRIPCION---->
+                             <div class="imagen-descripcion">
+                              <h2>{{category.title}}</h2>
+                              <!--  DESCRIPTION DEL POST PERDER---->
+                              <p>{{category.description|safe|truncatechars_html:60}} </p> 
+                              <!--  LINK QUE REDIRIGE AL POST --->
+                              <a href ="/recetas-dieteticas/receta/{{ category.slug }}/">
+                              <em><p>Leer mas...</p></em></a>
+                              <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
+                              <p class="a">Por <span class="o"> {{ receta.author }}</span> </p> 
+                              <h3>Categoria: {{ category.recipe }}
+                              <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE ENDFOR--->
+                              </div>
+                              <!--DFIN DIV IMAGEN DESCRIPCION-->
+                          </div>
+                          <!---FIN DIV IMAGEN ELEMNTO CATEGORIA--->
+
+                        </div>     
+                        <!--FIN 25% DEL FIN ELEMENTO-CATEGORIA------->          
                        {% empty %}
-                      <p>No hay posts</p>
-                   {% endfor %} 
-                <!--25% FIN ENDFOR ELEMENTO CATEGORIA--->            
+                       <p>No hay posts</p>
+                       {% endfor %} 
+                       <!--25% FIN ENDFOR ELEMENTO CATEGORIA--->            
             </div>
-            <!---80% FIN DIV post-categoria 80%- VAN 3 POSTS-->
+            <!---80% FIN DIV POST-CUATRO-CATEGORIAS a 80%- VAN 3 POSTS-->
                     <!-- 20% ASIDE --->
                     <div id="aside">    </div>
                     <!--FIN ASIDE 20%--->
            </div>
-           <!--100% FIN DEL POSTs CATEGORIAs--->
-            
+           <!--100% FIN DEL POSTS CATEGORIAS ASIDE --->
+      </div>
+      <!---FIN CONTAINER POSTS-CATEGORIAS----->
 
       {% endblock content %}
 

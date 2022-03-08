@@ -13,6 +13,7 @@
                 <div class="menu-introescrito">
                     <!--MENU-->
                     <div class="menu">
+                    <div class="menu-scrolling">
                     <ul>
                     <li>
                     <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
@@ -24,11 +25,12 @@
                     </li>
                     
                     <!----BlOQUE CATEGORIAS--------------->
-                         <!--MENU ESCONDIDO -CATEGORIAS------------------>
+                    <!--MENU ESCONDIDO -CATEGORIAS------------------>
                     <li>
                     <p>Categorias<i class="right"></i></p>
+
                     <ul>
-                   {% load mptt_tags %} 
+                    {% load mptt_tags %} 
                     {% for categori in categories %} 
                     <!--  TITULO--CATEGORIA---> 
                     <li>
@@ -37,26 +39,29 @@
                     </a>    
                     </li>
                     {% endfor %}
-                    </ul>
-                    </li>
-                    <!---FIN MENUS ESCONDIDO CATEGORIAS---->
-                    <!--FIN BLOQUE CATEGORIAS------------>
 
+                    
+                  </ul>
 
+                  </li>
+                  <!---FIN MENUS ESCONDIDO CATEGORIAS---->
+                  <!--FIN BLOQUE CATEGORIAS------------>
 
-                    <!--TITULO CATEGORIA----------------->
-                    <li>
-                    {% load mptt_tags %}
-                    {% for categori in category_deals %}
-                    <a href="/turismo_gastronomico/categoria/{{ posturismo.slug }}">
-                    <p> {{categori.name}}{{ child.get }}<i class="right"></i></p>
-                    </a>
-                    {% endfor %}
-                    </li>
-                    <!--FIN TITULO CATEGORIA-------------->
-                    </ul>
-                    </div>
-                    <!-----FIN MENU------------------>
+                  <!--TITULO CATEGORIA----------------->
+                  <li>
+                  {% load mptt_tags %}
+                  {% for categori in category_deals %}
+                  <a href="/turismo_gastronomico/categoria/{{ posturismo.slug }}">
+                  {{categori.name}}{{ child.get }}<i class="right"></i>
+                  </a>
+                  {% endfor %}
+                  </li>
+                  <!--FIN TITULO CATEGORIA-------------->
+                  </ul>
+                  </div>
+                    <!--fin del menu scrolling--->
+                </div>
+                <!-----FIN MENU------------------>
 
 
                                 <div class="introescrito">

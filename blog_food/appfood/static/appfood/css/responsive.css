@@ -1812,7 +1812,7 @@ nav .buscador-esconder .d-flex{
 
 
 
-   /*.....................MOVIL MEDIO.............*/
+   /*.....................MOVIL.............*/
   @media only screen and (min-width: 360px) and (max-width: 640px){
    
     body{
@@ -3695,6 +3695,8 @@ width: 100%;
       letter-spacing: -2px;
       text-align: center;
       font-weight: 600;
+      color: #7aac41;
+        font-family: Arial, Helvetica, sans-serif;
       }
   
 
@@ -3704,54 +3706,46 @@ width: 100%;
       display: flex;
       flex-direction: row;
       margin: auto;
-      margin-top: -5px;
       }
 
 
-       .icon-email  ul li .fa-envelope{
-        background-color: oldlace;
-        color: #2d2d2d;
-        width: 38px;
-        height: 38px;
-        padding: 2px 2px 2px 2px;
-        border-radius: 25px;
-        border: solid #E9E9E9;
-        margin-right: 5px;
+      .icon-email  ul li .fa-envelope{
+      color: #2d2d2d;
+      width: 35px;
+      height: 35px;
+      padding: 0.5px 0.5px 0.5px 0.5px;
+      border-radius: 2px;
+      border: solid #E9E9E9;
         }
         
-         .icon-email  ul li .fa-facebook-f{
-          background-color: oldlace;
-          color:  #2d2d2d;
-          width: 38px;
-          height: 38px;
-          padding: 2px 2px 2px 2px;
-          border-radius: 25px;
-          border: solid #E9E9E9;
-          margin-right: 5px;
+    .icon-email  ul li .fa-facebook-f{
+    color: #2d2d2d;
+    width: 35px;
+      height: 35px;
+    padding: 0.5px 0.5px 0.5px 0.5px;
+    border-radius: 2px;
+    border: solid #E9E9E9;    
           }
         
         
-         .icon-email  ul li .fa-twitter{
-          background-color: oldlace;
-          color:   #2d2d2d;
-          width: 38px;
-          height: 38px;
-          padding: 2px 2px 2px 2px;
-          border-radius: 25px;
-          border: solid #E9E9E9;
-          margin-right: 5px;
+    .icon-email  ul li .fa-twitter{
+      color: #2d2d2d;
+      width: 35px;
+      height: 35px;
+      padding: 0.5px 0.5px 0.5px 0.5px;
+      border-radius: 2px;
+      border: solid #E9E9E9;
         }
         
         
-        .icon-email ul li .fa-instagram{
-          background-color: oldlace;
-          color: #2d2d2d;
-          width: 38px;
-          height: 38px;
-          padding: 2px 2px 2px 2px;
-          border-radius: 25px;
-          border: solid #E9E9E9;
-        }
+    .icon-email ul li .fa-instagram{
+      color: #2d2d2d;
+      width: 35px;
+      height: 35px;
+    padding: 0.5px 0.5px 0.5px 0.5px;
+    border-radius: 2px;
+    border: solid #E9E9E9;    
+    }
         
   
         
@@ -3939,17 +3933,13 @@ width: 100%;
 
   
   /*MEDIDA DESPUES DEL MOVIL*/
-
   @media only screen and (min-width: 641px) and (max-width: 700px){
-
     html, body{
       width: 100%;
       height: 100%;
       margin: 0;
       box-sizing: border-box;
        }
-  
-  
   
        #wrapper {
       width: 100%;

@@ -927,7 +927,7 @@ border-radius:6px;
 
 
 
-
+   /*............MOVIL................................*/
   @media only screen and (min-width: 360px) and (max-width: 640px){
     html, body{
     width: 100%;
@@ -1112,104 +1112,104 @@ border-radius:6px;
 
           
         /*FIN ANIMACION IMPORTANTE*/
-      header  nav{
+     
+  /*FIN ANIMACION IMPORTANTE*/
+  header  nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+     overflow-y: scroll;
+     z-index: 200;
+     visibility: visible;
+     box-sizing: border-box;
+      background-color: #000000;
+    }
+
+    nav .nav li a {
+      color: #fff;
+     
+    }
+   header  nav .logo-esconder{
+      width: 90%;
+      margin-left: 20px;
+      visibility: visible;
+      height: 80px;
+       border-bottom: 1px solid #2d2d2d;
+      }
+
+
+     header  nav .nav{
         display: flex;
         flex-direction: column;
-        position: fixed;
+        width: 90%;
+        margin-top: 40px;
+        margin-left: 30px;
+      }
+
+      header  nav .nav li{
         width: 100%;
-        height: 100%;
-        margin: auto;
-        top:0;
-        bottom: 0;
-        left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-         overflow-y: scroll;
-         z-index: 200;
-         visibility: visible;
-         box-sizing: border-box;
-          background-color: #000000;
-        }
+      }
 
-        nav .nav li a {
-          color: #fff;
-         
-        }
-       header   nav .logo-esconder{
-          width: 90%;
+
+      /*BUSCADOR DEL NAV ESCONDIDO */
+         /* BUSCADOR DEL NAV ESCONDIDO*/
+         nav .buscador-esconder{
           margin-left: 20px;
-          visibility: visible;
-          height: 80px;
-           border-bottom: 1px solid #2d2d2d;
-          }
+         }
 
+         .buscador-esconder .d-flex #custom-search .sin-borde{
+           width: 87%;
+          margin-left: 5px;
+         }
 
-          header  nav .nav{
-            display: flex;
-            flex-direction: column;
-            width: 90%;
-            margin: auto;
-            margin-top: 40px;
-          }
-
-          header   nav .nav li{
-            width: 100%;
-            margin: auto;
-          }
-
-          /* BUSCADOR DEL NAV ESCONDIDO*/
-          nav .buscador-esconder{
-            margin-left: 20px;
-           }
-  
-           .buscador-esconder .d-flex #custom-search .sin-borde{
-             width: 87%;
-            margin-left: 5px;
-           }
-  
-           .buscador-esconder .d-flex #custom-search .boton{
-             width: 10%;
-            margin-left: -3px;
-           }
-
-
-           nav .siguenos{
-            margin-left: 20px;
-           }
-
-         nav .siguenos h1{
-           color: #fff;
+         .buscador-esconder .d-flex #custom-search .boton{
+           width: 10%;
+          margin-left: -3px;
          }
 
 
-         nav .siguenos ul li .fa-envelope{
-          color:oldlace;
-          background-color: #000000;
-        }
-      
-        nav .siguenos ul li .fa-facebook-f{
-          color:oldlace;
-          background-color: #000000;
-        }
-      
+       nav .siguenos{
+        margin-left: 20px;
+       }
+
+      nav .siguenos h1{
+       color: #fff;
+       }
+
+
+      nav .siguenos ul li .fa-envelope{
+      color:oldlace;
+      background-color: #000000;
+      }
+  
+    nav .siguenos ul li .fa-facebook-f{
+      color:oldlace;
+      background-color: #000000;
+    }
+  
     nav .siguenos ul li .fa-pinterest{
-    color:oldlace;
-    background-color: #000000;
+      color:oldlace;
+      background-color: #000000;
     }
-
-
     nav .siguenos ul li .fa-instagram{
-    color:oldlace;
-    background-color: #000000;
+      color:oldlace;
+      background-color: #000000;
     }
 
 
-    nav .nav .li-movil {
-    display: block;
+
+    header nav .nav .li-pc{
+      display: none;
     }
-      
-      
-    nav .nav .li-pc {
-    display: none;
-    visibility: hidden;
+
+    header nav .nav .li-movil{
+      display: block;
     }
         
       
@@ -1796,9 +1796,8 @@ border-radius:6px;
     /*..CARRUSELL.............................*/
     .container-total-carrusell{
       display: block;
-      position: relative;
       width: 100%;
-      height: 400px;
+
     }
 
        /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
@@ -1808,13 +1807,13 @@ border-radius:6px;
       word-spacing: -2px;
       letter-spacing: 0.4px;
       font-family: 'Times New Roman', Times, serif;
-      padding-bottom: 10px;   
       margin-left: 15px;
       }
 
 
-     /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+
     /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
+      /*IMPORTANTE PARA EL HEIGHT..*/
     #carrusel {
     float:left;
     width: 100%;
@@ -1830,35 +1829,37 @@ border-radius:6px;
     /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
      .carrusel{
      width: 5000px;
-     height: 380px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
      left: 0px;
      position:absolute;
-     z-index:0;
+    }
+  
+    .carrusel>div {
+      float: left;
+      margin-right: 14px;   /*ESPACIO */
     }
 
+      /*IMPORTANTE PARA EL HEIGHT..*/
     .carrusel .product {
       width: 100%;
       max-width: 400px;
-      height: 380px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+      height: 380px;
       margin: auto;
        box-shadow: #f3f3f3 0px 13px 27px -5px, #f3f3f3 0px 8px 16px -8px;
      }
 
        /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
- .carrusel  .product img {
-  cursor:pointer;
-  width: 100%;
-  height: 180px;
-  border: 2px solid #DDD ;
-  padding: 3px ;
-  border-radius:6px;
-  width: 100%;
-       max-width: 360px;
-     margin-left: -15px;
-  }
+   .carrusel  .product img {
+    cursor:pointer;
+    border: 2px solid #DDD ;
+    padding: 3px ;
+    border-radius:6px;
+     width: 100%;
+     max-width: 400px;
+    
+     }
  
   .carrusel a p{
-    margin-left: 20px;
+    margin-left: 128px;
     color: #2d2d2d;
     font-size: 1rem;
   }
@@ -1927,13 +1928,7 @@ border-radius:6px;
       }
  
 
-  /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
-  .carrusel>div {
-  float: left;
-  width: 100%;
-  margin-right: 5px;   /*ESPACIO */
-  text-align:center;
-  }
+ 
 
 
      /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
@@ -1980,11 +1975,14 @@ border-radius:6px;
 
 
       #footer-articulo .footer-primero-articulo .icon-social1 p{
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         text-align: center;
         letter-spacing: 0.1px;
-        word-spacing: 0.2px;
-        margin-bottom: 3px;
+        word-spacing: -0.8px;
+        margin-bottom: 10px;
+        color: #7aac41;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
       }
 
        /* UL */
@@ -1992,52 +1990,47 @@ border-radius:6px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 50%;
+        width: 40%;
         height: 60px;
         margin: auto;
      }
 
 
      #footer-articulo .social2  ul li .fa-envelope{
-  background-color: oldlace;
-  color: #2d2d2d;
-  width: 7px;
-  height: 7px;
-  padding: 0.3px 0.3px 0.3px 0.3px;
-  border-radius: 1px;
-  border: solid #E9E9E9;
-  }
+      color: #2d2d2d;
+    width: 8px;
+    height: 8px;
+    padding: 0.5px 0.5px 0.5px 0.5px;
+    border-radius: 2px;
+    border: solid #E9E9E9;
+     }
   
     #footer-articulo .social2  ul li .fa-facebook-f{
-  background-color: oldlace;
-  color:  #2d2d2d;
-  width: 7px;
-  height: 7px;
-  padding: 0.3px 0.3px 0.3px 0.3px;
-  border-radius: 1px;
-  border: solid #E9E9E9;
-  }
+      color: #2d2d2d;
+      width: 8px;
+      height: 8px;
+      padding: 0.5px 0.5px 0.5px 0.5px;
+      border-radius: 2px;
+      border: solid #E9E9E9;
+    }
   
   
     #footer-articulo .social2  ul li .fa-twitter{
-    background-color: oldlace;
-    color:   #2d2d2d;
-    width: 7px;
-    height: 7px;
+      color: #2d2d2d;
+    width: 8px;
     height: 8px;
-    padding: 0.3px 0.3px 0.3px 0.3px;
-    border-radius: 1px;
+    padding: 0.5px 0.5px 0.5px 0.5px;
+    border-radius: 2px;
     border: solid #E9E9E9;
      }
   
 
     #footer-articulo .social2 ul li .fa-instagram{
-    background-color: oldlace;
-    color: #2d2d2d;
-    width: 7px;
-    height: 7px;;
-    padding: 0.3px 0.3px 0.3px 0.3px;
-    border-radius: 1px;
+      color: #2d2d2d;
+    width: 8px;
+    height: 8px;
+    padding: 0.5px 0.5px 0.5px 0.5px;
+    border-radius: 2px;
     border: solid #E9E9E9;
     }
 
@@ -2045,50 +2038,58 @@ border-radius:6px;
     #footer-articulo  .box{
       display: flex;
       flex-direction: column;
-       width: 100%;
-      height: 80px;
+     width: 100%;
+     height: 100%;
+      max-height: 130px;
      margin-top: 10px;
    }
 
    /*LETRA ENCIMA DEL BOX*/   
    #footer-articulo  .box h3{
-     font-size: 1rem;
-      margin: auto;
+    display: block;
+   width: 65%;
+  font-size: 0.8em;
+   margin-bottom: 8px;
+   margin: auto;
      }
 
      #footer-articulo .box form{
-      width: 90%;
-      display: flex;
-      flex-direction: row;
-      margin: auto;
-     margin-top: 8px;
+      width: 85%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
     }
 
     #footer-articulo .box input[type="text"]
     {
-    background-color: #fff;
-    width:70%;
-     height: 38px;
-    border: 1.5px solid 	#DCDCDC;
-    padding: 0 5px;
-    border-radius: 5px 0 0 5px;
-    font-size: 0.7rem;
+      background-color: #fff;
+      width:75%;
+       height: 40px;
+      border: 1.5px solid 	#DCDCDC;
+      border-radius: 5px 0 0 5px;
+      font-size: 0.7rem;
+      display: block;
+        position: relative;
+        float: left;
     }
      
 
     #footer-articulo .box button[type="submit"]{
-    left: 6px;  /*EL TRUCO IMPORTANTE*/
-    border-radius: 0 5px 5px 0;
-    width: 30%;
-    height: 38px;
-    border: none ;
-    outline: none;
-    cursor: pointer;
-    background-color: #2d2d2d;
-    color: #fff;
-    font-size: 0.6rem;
-    font-family: 'Archivo Black', sans-serif;
-    padding: 0 5px 1px 1px;
+      left: -6px;  /*EL TRUCO IMPORTANTE*/
+      border-radius: 0 5px 5px 0;
+      width: 25%;
+      height: 40px;
+      border: none ;
+      outline: none;
+      cursor: pointer;
+      background-color: #2d2d2d;
+      color: #fff;
+      font-size: 0.6rem;
+      font-family: 'Archivo Black', sans-serif;
+      padding: 0 5px 1px 1px;
+      display: block;
+        position: relative;
+        float: right;
     }
 
 

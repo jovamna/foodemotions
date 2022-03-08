@@ -156,12 +156,12 @@ def recipe_detail(request, category_id=True, slug=True):
     return render(request, "apprecetasalzum/recipe-detail.html", context)
 
 
-def show_category(request, slug=True):
+def show_category(request, slug):
     category_deals = Category.objects.filter(slug=slug).order_by('slug')
     #category_diet = category_deals[0].name
     category = Category.objects.all().filter(slug=slug)
     post_recipe = Recipe.objects.filter(
-        category_id__in=category)  #SE USA CUANDO NO HAY SUBCATEGORIA
+        category_id__in=category)  #SE USA CUANDO NO HAY SUBCATEGORIa
     recipe_post = Recipe.objects.filter(
         category_id__in=category.get_descendants(include_self=True))
     categor = category.get_descendants(
@@ -188,47 +188,53 @@ def show_category(request, slug=True):
         'recetas': recetas,
         'cat': cat,
         'kategories': kategories,
+     
     }
     return render(request, "apprecetasalzum/categoria.html", context)
 
 
 def show_subcategory(request, slug=True):
+    categories = Category.objects.filter(
+        parent=None)  #SALEN SOLO LAS CATEGORIAS
     category_deals = Category.objects.filter(slug=slug).order_by('slug')
     categori = category_deals[0].name
     category = Category.objects.all().filter(slug=slug)
-    category = category.get_descendants(include_self=True)
-    recipes = Recipe.objects.filter(category__in=category.get_descendants(
+    recipes = Recipe.objects.all()
+    recipe = Recipe.objects.filter(category__in=category.get_descendants(
         include_self=True))
-    categories = Category.objects.filter(
-        parent=None)  #SALEN SOLO LAS CATEGORIAS
-    category_id = int(
-        request.GET.get('category_id', default=1)
-    )  #ESTE ME PARECE LIMITA A QUE SOLO SALGA LA PRIMERA CATEGORIA
-    current_category = Category.objects.get(pk=category_id)  #c
-    parent = Category.objects.filter(children__isnull=True)
-    cat = Category.objects.filter(
-        parent=None,
-        children__in=Category.objects.filter(level=1),
-        rght__in=Recipe.objects.all()).distinct()
+    cati = Category.objects.filter(slug=slug)
+    categoria = Category.objects.filter(parent=None).order_by('slug')
+
+    #cater = Category.objects.all().filter(parent=None)
+    #kategorie = Category.objects.filter(parent=None).order_by('slug')
+    #parent = Category.objects.filter(children__isnull=True)
 
     context = {
+        'recipe': recipe,
+        'recipes': recipes,
         'category_deals': category_deals,
         'categori': categori,
         'category': category,
-        'recipes': recipes,
+        'categoria': categoria,
         'categories': categories,
-        'parent': parent,
+        #'kategorie': kategorie,
+        'cati': cati,
+
+        #'parent': parent,
     }
 
+    print(categories)
     print(category_deals)
     print(categori)
     print(category)
-    print(recipes)
-    print(current_category)
-    print(categories)
-    print(parent)
-    print(cat)
+    print(cati)
+    print(categoria)
 
+    #print(recipes)
+    #print(recipe)
+    #print(kategorie)
+    #print(cat)
+    #print(parent)
     return render(request, "apprecetasalzum/subcategoria.html", context)
 
 
@@ -240,6 +246,18 @@ def categoriasoriginal(request):
         current_category = Category.objects.get(pk=category_id)
         children = current_category.get_children()
         cat = Category.objects.filter(parent__isnull=True)
+
+        cat = Category.objects.filter(
+            parent=None,
+            children__in=Category.objects.filter(level=1),
+            rght__in=Recipe.objects.all()).distinct()
+
+        category_id = int(
+            request.GET.get('category_id', default=1)
+        )  #ESTE ME PARECE LIMITA A QUE SOLO SALGA LA PRIMERA CATEGORIA
+        current_category = Category.objects.get(
+            pk=category_id)  #NO VALE SALE LA MISMA CATEGORIA PRIMERA SIEMPRE
+
     #category = Category.objects.all()  #SALE TODO!
     #cateysubcate = Category.objects.filter(parent__in=category)
 

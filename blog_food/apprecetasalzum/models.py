@@ -41,15 +41,14 @@ class Category(MPTTModel):
         ordering = ['-created']
 
     def __str__(self):
-        return self.name
-
-    def __str__(self):
         full_path = [self.name]
         k = self.parent
+
         while k is not None:
             full_path.append(k.name)
             k = k.parent
-        return ' - Subcategoria   '.join(full_path[::-1])
+
+        return ' -   '.join(full_path[::-1])
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -63,7 +62,7 @@ class Category(MPTTModel):
             new_slugs.append('/'.join(slugs[:idx]))
         return new_slugs
 
-    def get_recursive_perderpeso_count(self):
+    def get_recursive_recipe_count(self):
         return Recipe.objects.filter(category__in=self.get_descendants(
             include_self=True)).count()
 

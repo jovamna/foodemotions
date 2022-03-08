@@ -265,8 +265,8 @@ def subcategory(request, slug=True):
     categoria = category.get_descendants(include_self=True)  #2
     posts = Post.objects.filter(kategoria__in=category.get_descendants(
         include_self=True))  #PONER TRUE SI NO NO SALEN LOS POSTS
-    categorias = Kategoria.objects.filter(
-        parent=None)  #SALEN SOLO LAS CATEGORIAS
+    categorias = Kategoria.objects.filter(parent=None)  #SALEN SOLO LAS CATEGORIAS
+    kategorias = Kategoria.objects.all()
     category_id = int(
         request.GET.get('categoria_id', default=1)
     )  #ESTE ME PARECE LIMITA A QUE SOLO SALGA LA PRIMERA CATEGORIA
@@ -279,6 +279,7 @@ def subcategory(request, slug=True):
         'category': category,
         'posts': posts,
         'categorias': categorias,
+        'kategorias': kategorias,
     }
 
     print(category_deals)

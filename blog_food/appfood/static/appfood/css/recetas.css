@@ -1782,7 +1782,7 @@ nav .logo-esconder .emoticon{
   .footer-primero-recetas{
   width: 80%;
   max-width: 900px;
-  height: 92px;
+  height: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1790,92 +1790,87 @@ nav .logo-esconder .emoticon{
   }
   
   /*SUB-caja ICONOS SOCIALES*/
-  #icon-social1{
-    display: flex;
-    flex-direction: column;
-  width: 49.5%;
-  max-width: 250px;
-  height: 90px;
-  }
+    #footer-recetas .footer-primero-recetas  #icon-social1{
+    display: block;
+    position: relative;
+    float: left;
+     width: 55%;
+     max-width: 600px;
+     height: 100px;
+     }
   
-  #icon-social1  p{
-    font-size: 1.2rem;
-    word-spacing: -3px;
-    letter-spacing: -1px;
-    font-family: 'Archivo Black', sans-serif;
-   margin-top: -5px;
-    color: #2d2d2d;
-   
-    }
-  
+     #footer-recetas .footer-primero-recetas   #icon-social1 p{
+      font-size: 1.4rem;
+      word-spacing: -3px;
+      letter-spacing: -1px;
+      font-family: 'Archivo Black', sans-serif;
+      color: #7aac41;
+      }
 
-    #icon-social1 .social2{
-      width: 80%;
-     display: block;
-     position: relative;
-      margin-top: -10px;
+  
+   /**...UL DEL SOCIAL..*/
+     #icon-social1 .social2{
+      width: 32%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     height: 45px;
       }
       
-   .social2  li{
-  list-style: none;
-  display: inline-flex;
-   }
+     .social2  li{
+      list-style: none;
+      display: block;
+      height: 34px;
+      }
   
-
-  
-
   
    .social2   li .fa-envelope{
-  background-color: oldlace;
-  color: #2d2d2d;
-  width:40px;
-  height: 40px;
-  padding: 5px 5px 5px 5px;
-  border-radius: 25px;
-  border: solid #E9E9E9;
-  }
+    color: #2d2d2d;
+    width:40px;
+    height: 40px;
+    padding: 6px 6px 6px 6px;
+    border-radius: 24px;
+     border: solid #E9E9E9;
+     }
   
   .social2    li .fa-facebook-f{
-  background-color: oldlace;
-  color:  #2d2d2d;
-  width:40px;
-  height: 40px;
-  padding: 5px 5px 5px 5px;
-  border-radius: 25px;
-  border: solid #E9E9E9;
+    color: #2d2d2d;
+    width:40px;
+    height: 40px;
+    padding: 6px 6px 6px 6px;
+    border-radius: 24px;
+    border: solid #E9E9E9;
   }
   
   
   .social2    li .fa-twitter{
-  background-color: oldlace;
-  color:   #2d2d2d;
-  width:40px;
-  height: 40px;
-  padding: 5px 5px 5px 5px;
-  border-radius: 25px;
-  border: solid #E9E9E9;
+    color: #2d2d2d;
+    width:40px;
+    height: 40px;
+    padding: 6px 6px 6px 6px;
+    border-radius: 24px;
+    border: solid #E9E9E9;
   }
   
   
   
   
   .social2   li .fa-instagram{
-  background-color: oldlace;
-  color: #2d2d2d;
-  width:40px;
-  height: 40px;
-  padding: 5px 5px 5px 5px;
-  border-radius: 25px;
-  border: solid #E9E9E9;
+    color: #2d2d2d;
+    width:40px;
+    height: 40px;
+    padding: 6px 6px 6px 6px;
+    border-radius: 24px;
+    border: solid #E9E9E9;
   }
   
    /*SUB-caja contenedor de la caja correo*/
-   .box{
-    width: 45%;
-    margin-left: 5% ;
-    margin-top: 6px; /*SUBE CAJA A MENOS TOP*/
-    transform: translate(-5%, -5%);
-    height: 90px;
+   #footer-recetas .footer-primero-recetas .box{
+     display: block;
+     position: relative;
+     float: right;
+    width: 35%;
+    height: 100px;
      }
   
 
@@ -1883,24 +1878,27 @@ nav .logo-esconder .emoticon{
   .box h3{
   letter-spacing: -0.1px;
   font-family: 'Archivo Black', sans-serif;
-  font-size: .8rem;
+  font-size:  0.9rem;
   font-weight: 400;
-  line-height: -0.4px;
-  margin-left: 16%;
-  padding-top: 0;
   color: #2d2d2d;
+  display: block;
+  height: 34px;
   }
+
+
+
    /*cajita del correo */
-  .box form{
+   .box form{
     display: flex;
-    margin-left: 4%;
-    margin-top: 8px;
+    flex-direction: row;
   }
   
   .box input[type="text"]
   {
   background-color: #fff;
-  display: flex;
+  display: block;
+   position: relative;
+   float: left;
   width:60%;
   height: 50px;
   border: 1.5px solid 	#DCDCDC;
@@ -1910,26 +1908,23 @@ nav .logo-esconder .emoticon{
   }
   
   .box button[type="submit"]{
-  left: 10px;  /*EL TRUCO IMPORTANTE*/
+    display: block;
+    position: relative;
+    float: right;
   border-radius: 0 5px 5px 0;
-  width: 30%;
+  width: 20%;
   height: 50px;
   border: none ;
   outline: none;
   cursor: pointer;
   background-color: #2d2d2d;
   color: #fff;
-  font-size: 12px;
+  font-size: 0.8rem;
   font-family: 'Archivo Black', sans-serif;
   }
   
 
   /*FIN de la cajita del correo */
-  
-  
-  
-  
-  
   
   
   /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/

@@ -887,7 +887,7 @@
 
 
 
-  
+   /*.......MOVIL...........................................*/  
    @media only screen and (min-width: 360px) and (max-width: 640px){
     html, body{
       width: 100%;
@@ -1143,7 +1143,6 @@
     flex-direction: column;
     position: fixed;
     width: 100%;
-    max-width: 640px;
     height: 100%;
     margin: auto;
     top:0;
@@ -1169,17 +1168,16 @@
       }
 
 
-      header  nav .nav{
+      #wrapper-recetas header  nav .nav{
         display: flex;
         flex-direction: column;
         width: 90%;
-        margin: auto;
         margin-top: 40px;
+        margin-left: 30px;
       }
 
       header  nav .nav li{
         width: 100%;
-        margin: auto;
       }
 
 
@@ -1685,66 +1683,64 @@
        font-family: 'Times New Roman', Times, serif;
        }
      
-       /*cajita2*/
-       
-       
-         .tips-titulo-pic{
-           width: 100%;
-           display: flex;
-           flex-direction: row;
-         }
 
-         .tips-titulo{
-           width: 91%;
+    /*cajita2*/
+    .tips-titulo-pic{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    }
+
+    .tips-titulo{
+    width: 91%;
+    }
+
+
+    .tips-pic{
+    width: 9%;
+    }
+
+    .tips-pic img{
+    width: 30px;
+    }
+
+
+    /*CONTAINER QUE INCLUYE NUTRICIONAL Y CATEGORIA*/
+    .nutricion-informe{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .nutricion-informe .nutricional{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 30px;
+    }
+
+
+    /*TITULO DE NUTRICION*/
+    .nutricion-informe .nutricional h2{
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: -0.001rem ;
+    word-spacing: -0.01rem;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+     text-align: start;
+    }
         
-         }
-
-         .tips-pic{
-           width: 9%;
-     
-         }
-
-         .tips-pic img{
-          width: 30px;
-         }
-
-       /*CONTAINER QUE INCLUYE NUTRICIONAL Y CATEGORIA*/
-         .nutricion-informe{
-           width: 100%;
-           display: flex;
-           flex-direction: column;
-         }
-
-         .nutricion-informe .nutricional{
-           display: flex;
-           flex-direction: column;
-           margin: auto;
-           margin-bottom: 30px;
-    
-         }
-
-
-           /*TITULO DE NUTRICION*/
-         .nutricion-informe .nutricional h2{
-          font-weight: 800;
-          font-size: 1.4rem;
-          letter-spacing: -0.001rem ;
-          word-spacing: -0.01rem;
-         color: #000000;
-         font-family: 'Times New Roman', Times, serif;
-          text-align: start;
-         }
-        
-         .nutricion-informe .nutricional p{
-          letter-spacing: 0.01rem ;
-          word-spacing: -0.01rem;
-         font-family: 'Times New Roman', Times, serif;
-          font-size:  1.2rem;
-          font-weight: 400;
-          line-height: -0.4px;
-          color: #666;
-          margin: auto;
-        }
+    .nutricion-informe .nutricional p{
+    letter-spacing: 0.01rem ;
+    word-spacing: -0.01rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:  1.2rem;
+    font-weight: 400;
+    line-height: -0.4px;
+    color: #666;
+    margin: auto;
+     }
 
         .categoria{
           width: 100%;
@@ -1793,11 +1789,11 @@
    }
       
 
-       /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
-      #aside-recetas{
-      width:100%;
-      margin-top: 4%;
-      }
+    /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
+    #aside-recetas{
+    width:100%;
+    margin-top: 4%;
+    }
 
 
     /*ASIDE*/
@@ -1827,32 +1823,29 @@
       justify-content: space-between;
         }
 
-        .galeria-columna1 .img1 img{
-          width: 99.9%;
-          margin-right: 2%;
-       
+      .galeria-columna1 .img1 img{
+      width: 99.9%;
+      margin-right: 2%;
            }
 
-           .img1 p{
-           text-align: start;
-           font-size: 1.2rem;
-           }
+      .img1 p{
+      text-align: start;
+      font-size: 1.2rem;
+      }
 
-             /*--CATEGORIAS EN ASIDE PERO NO FUNOIICNA EL CSS.*/
-         /*..CATEGORIAS EN EL ASIDE QUE TAMBIEEN USA H2....*/
-        .categorias-recetas-links-aside h2{
-          display: none;
-         }
+      /*--CATEGORIAS EN ASIDE PERO NO FUNOIICNA EL CSS.*/
+      /*..CATEGORIAS EN EL ASIDE QUE TAMBIEEN USA H2....*/
+      .categorias-recetas-links-aside h2{
+      display: none;
+      }
          
-        .categorias-recetas-links-aside p{
-           display: none;
-         }
+      .categorias-recetas-links-aside p{
+      display: none;
+      }
       
    
-           /*FOOTER*/
-         /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
-
-    #footer-recetas{
+      /*FOOTER*/
+      #footer-recetas{
       width: 100%;
       bottom: 0;  
       left: 0;
@@ -1867,18 +1860,16 @@
       box-shadow: 0px -3px 6px  #DCDCDC;
       z-index: 10;
       background-color: #f4f4f4;
-
-   
       }
       
       
-        /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
-        #footer-recetas .footer-primero-recetas{
-        width: 100%;
-        height: 170px;
-       display: flex;
-       flex-direction: column;
-       margin: auto;
+      /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........ */
+      #footer-recetas .footer-primero-recetas{
+      width: 100%;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
       margin-bottom: 10px;
       padding-top: 0;
       z-index: 10;
@@ -1897,13 +1888,17 @@
         }
   
   
-      #icon-social1 p{
-        font-size: 1.2rem;
-        text-align: center;
-        letter-spacing: 0.1px;
-        word-spacing: 0.2px;
-        margin-bottom: 3px;
+        #footer-recetas .footer-primero-recetas   #icon-social1 p{
+          font-size: 1.8rem;
+            text-align: center;
+            letter-spacing: 0.1px;
+            word-spacing: -0.8px;
+            margin-bottom: 10px;
+            color: #7aac41;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
         }
+    
   
          /* UL */
          #icon-social1 .social2{
@@ -1916,8 +1911,7 @@
        }
   
   
-       #footer-recetas .social2  ul li .fa-envelope{
-    background-color: oldlace;
+    #footer-recetas .social2  ul li .fa-envelope{
     color: #2d2d2d;
     width: 8px;
     height: 8px;
@@ -1927,7 +1921,6 @@
     }
     
     #footer-recetas .social2  ul li .fa-facebook-f{
-    background-color: oldlace;
     color:  #2d2d2d;
     width: 8px;
     height: 8px;
@@ -1938,7 +1931,6 @@
     
     
     #footer-recetas .social2  ul li .fa-twitter{
-      background-color: oldlace;
       color:   #2d2d2d;
       width: 8px;
       height: 8px;
@@ -1949,7 +1941,6 @@
     
   
        #footer-recetas .social2 ul li .fa-instagram{
-      background-color: oldlace;
       color: #2d2d2d;
       width: 8px;
       height: 8px;
@@ -1960,52 +1951,61 @@
   
     
       #footer-recetas .footer-primero-recetas  .box{
-      display: flex;
-      flex-direction: column;
+        display: flex;
+        flex-direction: column;
        width: 100%;
-      height: 80px;
+       height: 100%;
+        max-height: 130px;
      margin-top: 10px;
      }
   
      /*LETRA ENCIMA DEL BOX*/   
      .footer-primero-recetas .box h3{
-       font-size: 1rem;
-        margin: auto;
+      display: block;
+   width: 65%;
+  font-size: 0.8em;
+   margin-bottom: 8px;
+   margin: auto;
        }
   
        .footer-primero-recetas .box form{
-        width: 90%;
-       display: flex;
-       flex-direction: row;
-       margin: auto;
+        width: 85%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
    
       }
   
       .footer-primero-recetas .box input[type="text"]
       {
-      background-color: #fff;
-      width:70%;
-       height: 38px;
-      border: 1.5px solid 	#DCDCDC;
-      padding: 0 5px;
-      border-radius: 5px 0 0 5px;
-      font-size: 0.7rem;
+        background-color: #fff;
+        width:75%;
+         height: 40px;
+        border: 1.5px solid 	#DCDCDC;
+        border-radius: 5px 0 0 5px;
+        font-size: 0.7rem;
+        display: block;
+          position: relative;
+          float: left;
       }
        
   
       .footer-primero-recetas .box button[type="submit"]{
-      left: 6px;  /*EL TRUCO IMPORTANTE*/
-      border-radius: 0 5px 5px 0;
-      width: 30%;
-      height: 38px;
-      border: none ;
-      outline: none;
-      cursor: pointer;
-      background-color: #2d2d2d;
-      color: #fff;
-      font-size: 0.6rem;
-      font-family: 'Archivo Black', sans-serif;
-      padding: 0 5px 1px 1px;
+        left: -6px;  /*EL TRUCO IMPORTANTE*/
+        border-radius: 0 5px 5px 0;
+        width: 25%;
+        height: 40px;
+        border: none ;
+        outline: none;
+        cursor: pointer;
+        background-color: #2d2d2d;
+        color: #fff;
+        font-size: 0.6rem;
+        font-family: 'Archivo Black', sans-serif;
+        padding: 0 5px 1px 1px;
+        display: block;
+          position: relative;
+          float: right;
       }
   
   
@@ -6855,34 +6855,21 @@ nav li a p{
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* 1200 A 1290 ..................................................................................................................................................................................................... */
-  
-
-@media only screen and (min-width: 1200px) and (max-width: 1246px){
-
-   #wrapper-recetas {
+    /* 1200 A 1290 ...................................................................... */
+   @media only screen and (min-width: 1200px) and (max-width: 1246px){
+      #wrapper-recetas {
       margin:0;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-    }
+      }
           
-    #wrapper-recetas > * {
-    padding: 35px;
-    }
+      #wrapper-recetas > * {
+      padding: 35px;
+      }
        
-    header{
+      header{
       width: 100%;
       z-index: 999;
       position: fixed;
@@ -6896,12 +6883,13 @@ nav li a p{
        width: 100%;
        height:   80px;
       }
-    #container-recetas{
+
+      #container-recetas{
       width:100%;
       margin-left:auto;
       margin-right:auto;
       margin-top:  78px;
-   }
+      }
   
    .cabecera-recetas{
     width: 100%;

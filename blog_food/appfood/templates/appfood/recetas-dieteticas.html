@@ -182,41 +182,48 @@
 
   
     <!---DIV DE 4 POST DE RECiPES ZUMOS Y ENSALADAS--->                     
-          {% block paginas %}
+    {% block paginas %}
      <div id ="container-plan">
 
-          <div class="container-columna-posts">    
+        <div class="container-columna-posts">  
+             
+              {% for recipe in recipes %}
              <div class="recetas-bloque">
 
 
-                  <!--------------------------------------------->
-                  {% for recipe in recipes %}
-                    <div class = "elemento-post">
+                 <!--------------------------------------------->
+                
+                 <div class = "elemento-post">
                          <!---------------------------->   
                          <div class="elemento-imagen">
                          {% if recipe.imagenfront %}
                          <img src ="{{recipe.imagenfront.url}}" style="width:100%">
                          {% endif %}
+                         </div>
+                         <!---------------------------------->
+
+                         <!----------------------------------->
+                          <div class="elemento-descripcion">
+
+                             <div class ="elemento-descripcion-columna">
+                             <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                             <h1>{{recipe.title}}</h1></a>
+                             <p>{{recipe.description|truncatechars:60|safe}}</p> 
+                             </div>
+
+                             <div class="elemento-leer">
+                             <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" class="arrow1">LEER MAS<span class="arrow-right"></span>
+                             </a>     
+                             </div>
+
                         </div>
-                        <!---------------------------------->
-                        <!----------------------------------->
-                        <div class="elemento-descripcion">
-                           <div class ="elemento-descripcion-columna">
-                           <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
-                           <h1>{{recipe.title}}</h1></a>
-                           <p>{{recipe.description|truncatechars:60|safe}}</p> 
-                           </div>
-                           <div class="elemento-leer">
-                           <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" class="arrow1">LEER MAS<span class="arrow-right"></span>
-                           </a>     
-                          </div>
-                       </div>
-                  <!--------------------------------------------------->    
+                <!--------------------------------------------------->    
                 </div>
-               {% endfor %}
+               
                <!----------------------------------------------------------------->
 
           </div>
+          {% endfor %}
          </div> 
 
 

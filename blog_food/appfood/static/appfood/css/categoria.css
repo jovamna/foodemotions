@@ -379,9 +379,10 @@ flex-wrap: wrap;
   nav .logo-esconder .logo-en-menu-responsive{
     width: 30%;
     max-width: 150px;
-    display: inline-flex;
+    display:block;
+    position: relative;
+    float: left;
     height: 80px;
-    margin-left: 10px;
   }
 
  
@@ -525,7 +526,7 @@ flex-wrap: wrap;
     color: #568632;
     }
 
-   /* UL  */
+
     /* UL  */
     header  nav .nav{
       width: 90%; 
@@ -535,7 +536,7 @@ flex-wrap: wrap;
       margin-top: 30px;
       margin-left: 50px;
       z-index: 10; 
-      background-color: #000;
+     
       }
   
   
@@ -857,6 +858,8 @@ flex-wrap: wrap;
       font-family: 'Courier New', Courier, monospace;
       font-size: 1rem;
       font-weight: 900;
+      word-spacing: -3px;
+      
       }
 
 
@@ -931,13 +934,14 @@ flex-wrap: wrap;
       .intro .menu-introescrito  .menu  ul li ul li a{
         display: block;
         width: 100%;
-        padding-top: 1px;
+        padding-top: 2px;
+        padding-bottom: 3px;
         letter-spacing: -0.4px;
-        font-size:  0.94rem;
-        color: #000000;
-        font-family: 'Times New Roman', Times, serif;
+        font-size:  1.02rem;
+        color: #2d2d2d;
+        font-family: 'Courier New', Courier, monospace;
         text-transform:  lowercase;
-        font-weight: 900;
+      font-weight: 900;
         }
        
       .menu ul::-webkit-scrollbar { /* WebKit */
@@ -1025,8 +1029,6 @@ flex-wrap: wrap;
       margin-bottom: 80px;  /*SEPARA BARRA DE SUBCATEGORIAS DE LOS POSTS*/
       display: flex;
       flex-direction: row;
-  
-     
       }
 
         .imagenes-pequeñas  img{
@@ -1197,8 +1199,8 @@ flex-wrap: wrap;
        display: block;
        position: relative;
        float: left;
-       margin-right: 14px;
-       border-radius: 4px;
+       margin-right: 20px;
+       border-radius: 8px;
        break-inside: avoid-column;
        overflow: hidden;
        -moz-column-break-inside:avoid;
@@ -1604,31 +1606,32 @@ flex-wrap: wrap;
     /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
     .footer-primero-categorias{
       width: 80%;
-     max-width: 900px;
-     height: 92px;
-     display: flex;
+      max-width: 900px;
+      height: 100px;
+      display: flex;
       flex-direction: row;
       justify-content: space-between;
-       margin: auto;
-
+      margin: auto;
     }
  
      /*SUB-caja ICONOS SOCIALES*/
      .icon-social1{
-      width: 49.5%;
-      max-width: 420px;
-      height: 90px;
       display: block;
       position: relative;
       float: left;
+       width: 55%;
+       max-width: 600px;
+       height: 100px;
      }
 
       .icon-social1 p{
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       word-spacing: -3px;
       letter-spacing: -1px;
       font-family: 'Archivo Black', sans-serif;
       color: #7aac41;
+      display: block;
+      height: 34px;
       }
     
 
@@ -1637,60 +1640,57 @@ flex-wrap: wrap;
 
     /* UL*/
     .icon-social1  .social2{
-    display: inline-flex;
-  list-style: none;
-  width: 90%;
-  display: block;
-  position: relative;
-   margin-top: 9px;
+      width: 32%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 46px;
     }
    
     .social2 li{
       list-style: none;
-      display: inline-flex;
+      display: block;
+      height: 34px;
+      margin-top: 3px;
       }
    
 
     .social2  li  .fa-envelope{
-      background-color: oldlace;
       color: #2d2d2d;
-      width:40px;
-      height: 40px;
-      padding: 5px 5px 5px 5px;
-      border-radius: 25px;
-      border: solid #E9E9E9; 
+    width:40px;
+    height: 40px;
+    padding: 6px 6px 6px 6px;
+    border-radius: 24px;
+     border: solid #E9E9E9;
       }
       
       .social2  li  .fa-facebook-f{
-      background-color: oldlace;
-      color:  #2d2d2d;
-      width:40px;
-      height: 40px;
-      padding: 5px 5px 5px 5px;
-      border-radius: 25px;
-      border: solid #E9E9E9;     
+        color: #2d2d2d;
+        width:40px;
+        height: 40px;
+        padding: 6px 6px 6px 6px;
+        border-radius: 24px;
+         border: solid #E9E9E9;
       }
       
       
       .social2  li  .fa-twitter{
-      background-color: oldlace;
-      color:   #2d2d2d;
-      width:40px;
-      height: 40px;
-      padding: 5px 5px 5px 5px;
-      border-radius: 25px;
-      border: solid #E9E9E9;
+        color: #2d2d2d;
+        width:40px;
+        height: 40px;
+        padding: 6px 6px 6px 6px;
+        border-radius: 24px;
+         border: solid #E9E9E9;
       }
       
       
       .social2 li   .fa-instagram{
-      background-color: oldlace;
-      color: #2d2d2d;
-      width:40px;
-      height: 40px;
-      padding: 5px 5px 5px 5px;
-      border-radius: 25px;
-      border: solid #E9E9E9;
+        color: #2d2d2d;
+        width:40px;
+        height: 40px;
+        padding: 6px 6px 6px 6px;
+        border-radius: 24px;
+         border: solid #E9E9E9;
       
       }
       
@@ -1699,53 +1699,56 @@ flex-wrap: wrap;
        /*SUBCONTENEDOR DONDE ESTA EL BOX*/
          /*SUB-caja contenedor de la caja correo*/
    .box{
-    width: 45%;
     display: block;
     position: relative;
     float: right;
-    height: 90px;
+   width: 35%;
+   height: 100px;
      }
   
   .box h3{
-  letter-spacing: -0.1px;
+    letter-spacing: -0.1px;
   font-family: 'Archivo Black', sans-serif;
-  font-size: .8rem;
+  font-size:  0.9rem;
   font-weight: 400;
-  line-height: -0.4px;
-  margin-left: 16%;
   color: #2d2d2d;
+  display: block;
+  height: 34px;
   }
 
 
-   /*cajita del correo */
-  .box form{
+    /*cajita del correo */
+    .box form{
+    display: flex;
+    flex-direction: row;
+   }
+  
+   .box input[type="text"]
+   {
+    background-color: #fff;
     display: block;
-    width: 95%;
-    margin: auto;
-  }
-  
-  .box input[type="text"]
-  {
-  background-color: #fff;
-  width:65%;
-  height: 50px;
-  border: 1.5px solid 	#DCDCDC;
-  padding: 0 18px;
-  border-radius: 5px 0 0 5px;
-  
-  }
-  
+     position: relative;
+     float: left;
+    width:60%;
+    height: 50px;
+    border: 1.5px solid 	#DCDCDC;
+    padding: 0 18px;
+    border-radius: 5px 0 0 5px;
+   }
+   
   .box button[type="submit"]{
-  left: 10px;  /*EL TRUCO IMPORTANTE*/
+    display: block;
+    position: relative;
+    float: right;
   border-radius: 0 5px 5px 0;
-  width: 22%;
+  width: 20%;
   height: 50px;
   border: none ;
   outline: none;
   cursor: pointer;
   background-color: #2d2d2d;
   color: #fff;
-  font-size:  0.9rem;
+  font-size: 0.8rem;
   font-family: 'Archivo Black', sans-serif;
   }
   
@@ -1767,12 +1770,14 @@ flex-wrap: wrap;
 
    #footer-second-categorias{
     width: 100%;
-    display: block;
-    height: 20px;  
+    display: flex;
+    flex-direction: column;
+  height: 30px;
+  margin-top: 10px; 
     }
 
   .final-food-categorias{
-    height: 15px;
+    height: 20px;
     display: block;
     width: 100%;
   }

@@ -74,34 +74,32 @@
 
     <!---DIV DE 4 POST DE RECiPES ZUMOS Y ENSALADAS--->                     
       <div id ="container-plan">
-          <div class="container-columna-posts">
-       <!---DIV CONTAINER DE 4 POST Y DE RECETAS--->
-              {% for recipe in post_recipes %}
-               <div class = "elemento-post">
-                  <!---DIV DE 4 POST DE PERDERPESO--->   
-                  <div class="elemento-imagen">
-                         {% if recipe.imagenfront %}
-                         <img src ="{{recipe.imagenfront.url}}" style="width:100%">
-                         {% endif %}
-                  </div>
+           <div class="container-columna-posts">
 
-                  <div class="elemento-descripcion">
-                         <h2>{{recipe.title}}</h2>
-                         <p>{{recipe.description|truncatechars:60|safe}} </p> 
-                    
-                         <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" class="arrow1">LEE MAS
-                        <span class="arrow-right"></span>
-                        </a>
-                </div>
-                                    <!---FIN DIV ELEMENTO DESCRIPCION---> 
+           <!---DIV CONTAINER DE 4 POST Y DE RECETAS--->
+                 {% for recipe in post_recipes %}
+                 <div class = "elemento-post">
+                      <!---DIV DE 4 POST DE PERDERPESO--->   
+                      <div class="elemento-imagen">
+                      {% if recipe.imagenfront %}
+                      <img src ="{{recipe.imagenfront.url}}" style="width:100%">
+                      {% endif %}
+                      </div>
+
+                      <div class="elemento-descripcion">
+                      <h2>{{recipe.title}}</h2>
+                      <p>{{recipe.description|truncatechars:60|safe}} </p> 
+                      <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" class="arrow1">LEE MAS
+                      <span class="arrow-right"></span>
+                      </a>
+                      </div>
+                      <!---FIN DIV ELEMENTO DESCRIPCION---> 
                 </div>
               <!-- DIV FINAL ELEMENTO POST --CONTIENE IMAGEN Y DESCRIPCION DEL POST------------------------>  
-                  
-   <!---------FIN DIV ELEMTNO POST---------------------------------------------->
             {% endfor %}
-   <!----FIN ENDFOR DE ELEMNTO POST---------------------->
+            <!----FIN ENDFOR DE ELEMNTO POST---------------------->
              </div>
-   <!---FIN CONTAINER COLUMNA POSTS---->
+     <!---FIN CONTAINER COLUMNA POSTS---->
                     
                     <!--- FIN CONTAINER SEARCH------------------------------------------------------------------------> 
       <div class="aside-batido">2</div>
