@@ -16,6 +16,7 @@
                    <div class="menu-introescrito">
                               <!--MENU-->
                                <div class="menu">
+                               <div class="menu-scrolling">
                                <ul>
                                <li>
                                <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
@@ -25,29 +26,27 @@
                               <a  href="{% url 'appfood:recetas-dieteticas' %}">Recetas Dieteticas<i class="right"></i> </a>
                               </li>
 
-                              <!--DEBERIA ESTA AQUI LA CATEGORIA ACTUAL---->
-                              <li>  
-                                 {% for category in category_deals %}
-                             <a href="/recetas-dieteticas/categoria/{{ category_deals.slug }}">
-                           {{category_deals.name}}  
-                            <i class="right"></i> </a>
-                           {% endfor %}
-                              </li>
+                            <!--DEBERIA ESTA AQUI LA CATEGORIA ACTUAL---->
+                            <li>  
+                            {% for recipe in recipes %}
+                           <p>Categoria:{{recipe.category}}  
+                            <i class="right"></i></p> 
+                           {% endfor %} 
+                           </li>
                  
 
 
                
-                            <li>
-                              {% for category in category %}
-                            <a href="/recetas-dieteticas/subcategoria/{{ recipe.slug }}">
-                           {{categori}}<i class="right"></i>
-                            </a>
-                          {% endfor %}
-                            </li>
+                         
 
                           </ul>
+                    </div>
+                     <!--fin del menu scrolling--->
                           </div>
                           <!--MENU---------------------------------------------->
+
+
+
 
                              <!--TITULO DE LA SUBCATEGORIA ------------------------>
                                 <div class="introescrito">
@@ -123,29 +122,25 @@
             
 
                         <!--25% -----DIV DE 4 POST DE POSTS--->
-                        {% for category in recipe %}  
+                        {% for recipe in recipes %}  
                         <div class="elemento-categoria">          
                     
-                               <!---FECHA E IMAGEN-->  
-                               <div id="imagen-elemento-categoria"> 
+                            <!---FECHA E IMAGEN-->  
+                            <div id="imagen-elemento-categoria"> 
                               <!-- IMAGEN--->
-                              {% if category.image %} 
-                              <img src ="{{category.image.url}}">
+                              {% if recipe.image %} 
+                              <img src ="{{recipe.image.url}}">
                               {% endif %}
 
 
                               <!--  DESCRIPCION---->
                              <div class="imagen-descripcion">
-                              <h2>{{category.title}}</h2>
-                              <!--  DESCRIPTION DEL POST PERDER---->
-                              <p>{{category.description|safe|truncatechars_html:60}} </p> 
-                              <!--  LINK QUE REDIRIGE AL POST --->
-                              <a href ="/recetas-dieteticas/receta/{{ category.slug }}/">
+                              <h2>{{recipe.title}}</h2>
+                              <p>{{recipe.description|safe|truncatechars_html:60}} </p> 
+                              <a href ="/recetas-dieteticas/receta/{{ recipe.slug }}/">
                               <em><p>Leer mas...</p></em></a>
-                              <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
-                              <p class="a">Por <span class="o"> {{ receta.author }}</span> </p> 
-                              <h3>Categoria: {{ category.recipe }}
-                              <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE ENDFOR--->
+                              <p class="a">Por <span class="o"> {{ recipe.author }}</span> </p> 
+                              <h3>Categoria: {{ recipe.category }}
                               </div>
                               <!--DFIN DIV IMAGEN DESCRIPCION-->
                           </div>

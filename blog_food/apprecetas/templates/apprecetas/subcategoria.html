@@ -23,32 +23,34 @@
                                <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
                                </li>
                                <li>    
-                                <a  href="{% url 'apprecetas:recetas-saludables' %}">Recetas Saludables<i class="right"></i> </a>
+                              <a  href="{% url 'apprecetas:recetas-saludables' %}">Recetas Saludables<i class="right"></i> 
+                              </a>
                                </li>
                            
-                              <!--MENU ESCONDIDO -CATEGORIAS------------------>
-                              <li>
-                                  <p>Subcategoria<i class="right"></i></p>
+                      <!--MENU ESCONDIDO -CATEGORIAS------------------>
+                      <li>
+                      <p>Subcategoria<i class="right"></i>
+                      </p>
 
-                                  <ul>
+                      <ul>
                                  
-                                   {% load mptt_tags %}
-                                    {% for kategory in category_deals %}
-                       {% if not node.is_leaf_node %}
-                                  {% for child in kategory.get_children %}
-                                 <!--  TITULO--CATEGORIA---> 
-                                   <li>
-                                    <a href="/recetas-saludables/subcategoria/{{ child.slug }}">
-                                   <p> {{ child.name}} jova</p> 
-                                     </a>    
-                                   </li>
-                                 {% endfor %}
+                      {% load mptt_tags %}
+                      {% for kategory in category_deals %}
+                      {% if not node.is_leaf_node %}
+                      {% for child in kategory.get_children %}
+                      <!--  TITULO--CATEGORIA---> 
+                      <li>
+                      <a href="/recetas-saludables/subcategoria/{{ child.slug }}">
+                      {{ child.name}} jova
+                      </a>    
+                      </li>
+                      {% endfor %}
                       {% endif %}
                        {% endfor %}
                               
-                                  </ul>
-                                  </li>
-                              <!---FIN MENUS ESCONDIDO CATEGORIAS---->
+                      </ul>
+                    </li>
+                    <!---FIN MENUS ESCONDIDO CATEGORIAS---->
                             
                                 <!--NOMBRE DE LA SUBCATEGORIA----->
                               {% for receta in category %}
@@ -139,16 +141,22 @@
                            
         
                      
-    <!---100%--->
-            <div class="container-posts-categorias">    
-                                    
-                   <!-------------DIV CONTAINER DE 4 POSTS DE SUBCATEGORIAS------------------------>
-         <div id = "posts-categoria">
+ 
+      <!---DIV  DEBE MEDIR 100%  CONTAINER DE 4 POST Y DE RECETAS--->
+      <div class="container-posts-categorias">
+            <!--DEBE MEDIR  80%-------------80%---------->
+            <div id = "posts-categorias-aside">
+
+
+                   <!----- INICIO POST CATEGORIA-------->
+                   <div class=  "post-cuatro-categorias">
+                   <!---DIV DE 4 POST DE POSTS---> 
+            
          
                           <!---DIV DE 4 POST DE POSTS--->
-                       
+                           {% for receta in recetas %}
                           <div class="elemento-categoria">          
-                               {% for receta in recetas %}
+                             
                             <!--  IMAGEN DEL POSTPERDER---->
                              <div id="imagen-elemento-categoria"> 
                              {% if receta.image %}
@@ -166,11 +174,13 @@
                                 
                                    <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
                                       <p class="a">Por <span class="o"> {{ receta.author }}</span> </p> 
-                                
-                                   <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE EBDFOR--->
                                    </div>
-                              <!--fin elemento descripcion--->
-                               </div>
+                              <!--DFIN DIV IMAGEN DESCRIPCION-->
+                          </div>
+                          <!---FIN DIV IMAGEN ELEMNTO CATEGORIA--->
+
+                        </div>     
+                        <!--FIN 25% DEL FIN ELEMENTO-CATEGORIA------->
                           <!--25%  FIN ELEMENTO CATEGORIA--->         
                           {% empty %}
                          <p>No hay posts</p>
@@ -178,14 +188,14 @@
                 <!----------CIERRA EL POST ------------------------------------------>          
                   
              </div>
-       </div>
-               <!---75% FIN POSTS CATEGORIAS --->   
-                  <div id="aside">   </div>
-                <!---FINAL ENDFOR DE 4 POST IN POSTS--->
-
-                  </div>
-           <!---100%-FIN CONTAINER POSTS CATEGORIAS---------------------------->
-             
+  
+                           <!-- 20% ASIDE --->
+                    <div id="aside">    </div>
+                    <!--FIN ASIDE 20%--->
+           </div>
+           <!--100% FIN DEL POSTS CATEGORIAS ASIDE --->
+      </div>
+      <!---FIN CONTAINER POSTS-CATEGORIAS----->
         
  
            <!--- FIN CONTAINER CATGEORIAS SUBCATEGORIAS-----------------> 

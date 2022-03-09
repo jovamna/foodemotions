@@ -289,8 +289,9 @@ def dieta_alimentacion(request):
         'categories': categories,
     }
 
-    #print(categoria)
-    #print(categorias)
+    print(kategoria)
+    print(kategorias)
+    print(post_list)
 
     return render(request, "appfood/alimentacion-sana.html", context)
 

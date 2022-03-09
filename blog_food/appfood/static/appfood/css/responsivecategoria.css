@@ -1117,31 +1117,34 @@
     .intro .menu-introescrito .menu .menu-scrolling ul ul {
     display:none;
     position:absolute;
-    background-color: #fff;
+    width: 80%;
     top:  172px;
+    left: 26px;
     z-index: 1000;
        }
 
-       .intro .menu-introescrito   .menu .menu-scrolling ul ul li{
-         display: block;
-         height: 30px;
-         border-bottom: 1px solid #2d2d2d;
+    .intro .menu-introescrito   .menu .menu-scrolling ul ul li{
+     display: block;
+     height: 30px;
+    border-bottom: 1px solid #2d2d2d;
        }
 
-       .intro .menu-introescrito .menu .menu-scrolling  ul li ul li a{
-         height: 20px;
-         padding-top: 1px;
-         font-size: 1rem;
-         color: #2d2d2d;
-         text-transform: lowercase;
+
+    .intro .menu-introescrito .menu .menu-scrolling  ul li ul li a{
+    height: 20px;
+    padding-top: 1px;
+    font-size: 1rem;
+    color: #2d2d2d;
+    text-transform: lowercase;
+    width: 100%;
        }
 
 
     /* items del menu desplegable al pasar el ratón */
     .intro .menu-introescrito .menu .menu-scrolling  ul li:hover > ul {
      display:block;
-     width: 50%;  /*IMPORTANTE*/
-     left: 150px;
+     width: 78%;  /*IMPORTANTE*/
+     background-color: #fff ;
     }
 
 
@@ -1174,17 +1177,18 @@
    .menu-intro-titulo  a h2{
     font-size: 1.6rem;
     }
-  /*..........................*/
-  /*PAGINA DE RECETAS SUBCATEGORIAS IMAGENES*/
+   /*..........................*/
 
-  .imagenes-pequeñas{
+   /*PAGINA DE RECETAS SUBCATEGORIAS IMAGENES*/
+   .imagenes-pequeñas{
     width: 92%;
-   margin-left: 15px;
-   margin-bottom: 35px;
-  }
-  .imagenes-pequeñas .subcategoria h3{
+    margin-left: 15px;
+    margin-bottom: 35px;
+   }
+
+   .imagenes-pequeñas .subcategoria h3{
     font-size: 0.8rem;
-  }
+   }
 
 
   /* APP DIETA. PLAN COMIDA Y TURISMO*/
@@ -1208,19 +1212,20 @@
 
 
 
-      /*CATEGORIA DE PLAN COMIDAS, DIETSA ETC..*/
-      #texto-slider .leftNav{
-      display: none;
-      visibility: hidden;
-    }
+    /*CATEGORIA DE PLAN COMIDAS, DIETSA ETC..*/
+    #texto-slider .leftNav{
+    display: none;
+    visibility: hidden;
+     }
+
     #texto-slider .rightNav{
-      display: none;
-      visibility: hidden;
-    }
+    display: none;
+    visibility: hidden;
+     }
   
   
     /*...................*/
-   .container-posts-categorias{
+    .container-posts-categorias{
      width: 92%;
      display: flex;
      flex-direction: column;
@@ -1233,32 +1238,29 @@
     }
 
     .por-categoria{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-   
-    }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+     }
 
     .por-foto{
-      width: 100%;
-      max-width: 640px;
-  
-    
+    width: 100%;
+    max-width: 640px;
     }
 
-    .por-foto img{
+     .por-foto img{
       width: 100%;
       margin: auto;
-    }
+     }
 
 
-   /*DE LA PAGINA DE DIETS, PLAN DE COMIDA Y TURISMO*/
-   .por-descripcion {
+    /*DE LA PAGINA DE DIETS, PLAN DE COMIDA Y TURISMO*/
+    .por-descripcion {
      display: flex;
      flex-direction: column;
      width: 100%;
      margin: auto;
-   }
+    }
 
 
     .por-descripcion h2{
@@ -1281,28 +1283,27 @@
   
   
     a:link {
-      color: black;
+    color: black;
+    }
     
-       }
-    
-       a:visited {
-        color:#101010; /*IMPORTANTE*/
-        text-decoration: none;
-         }
+    a:visited {
+    color:#101010; /*IMPORTANTE*/
+    text-decoration: none;
+    }
       
 
 
     /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/ 
     .fecha{
-      display: none;
+    display: none;
      }
 
 
-      /*CONTAINER QUE DIVIDE LOS POST DE RECTAS Y EL ASIDE VA EN 100 PERO AQUI SERA EN COLUMN*/
-      #posts-categorias-aside{
-      display: flex;
-      flex-direction: column ;
-      width: 100%;
+    /*CONTAINER QUE DIVIDE LOS POST DE RECTAS Y EL ASIDE VA EN 100 PERO AQUI SERA EN COLUMN*/
+    #posts-categorias-aside{
+    display: flex;
+    flex-direction: column ;
+    width: 100%;
      }
     
      /*LA COLUMNA DE LOS PSTS*/
@@ -1339,7 +1340,6 @@
 
     #imagen-elemento-categoria img{
     width: 38%;
-     
     display: block;
     position: relative;
     float: left;
@@ -1369,63 +1369,61 @@
 
 
 
-   /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
-       /*..CARRUSELL.............................*/
-       .container-total-carrusell{
-        display: block;
-      
+     /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT................... */
+    /*..CARRUSELL.............................*/
+    .container-total-carrusell{
+    display: block;
       }
 
-         /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
-         .container-total-carrusell h1{
-          font-size: 1.4rem;
-          font-weight: 900;
-          word-spacing: -2px;
-          letter-spacing: 0.4px;
-          font-family: 'Times New Roman', Times, serif; 
-          margin-left: 15px;
-          }
+    /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
+    .container-total-carrusell h1{
+    font-size: 1.4rem;
+    font-weight: 900;
+    word-spacing: -2px;
+    letter-spacing: 0.4px;
+    font-family: 'Times New Roman', Times, serif; 
+    margin-left: 15px;
+    }
 
-    /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
-    #carrusel {
-      float:left;
-      width: 100%;
-      overflow:hidden;
-      position:relative;
-     margin: auto;
-      margin-bottom: 10px;
-      height: 400px;
-      }
+     /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
+     #carrusel {
+    float:left;
+    width: 100%;
+    overflow:hidden;
+    position:relative;
+    margin: auto;
+    margin-bottom: 10px;
+    height: 400px;
+    }
       
     
-      
-      /*ESCONDE IMAGGENES*/
-      /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
-       #carrusel .carrusel{
-       width:4000px;
-       height: 310px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
-       left: 0px;
-       position:absolute;
-       z-index:0;
+    /*ESCONDE IMAGGENES*/
+    /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+    #carrusel .carrusel{
+    width:4000px;
+    height: 310px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
+    left: 0px;
+    position:absolute;
+    z-index:0;
       }
   
  
     /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
     .carrusel>div {
-      float: left;
-      width: 100%;
-      max-width: 420px;
-   
-      margin-right: 5px;   /*ESPACIO */
-      text-align:center;
+    float: left;
+    width: 100%;
+    max-width: 420px;
+    margin-right: 5px;   /*ESPACIO */
+    text-align:center;
       }
      
-      /*IMPORTATNTE EL WIDTH PARA QUE LA IMAGEN CREZCA..*/
-      .carrusel .product {
-        width: 100%;
-        max-width: 420px;
-        height: 400px;
-        box-shadow: #f3f3f3 0px 13px 27px -5px, #f3f3f3 0px 8px 16px -8px;
+
+    /*IMPORTATNTE EL WIDTH PARA QUE LA IMAGEN CREZCA..*/
+    .carrusel .product {
+    width: 100%;
+    max-width: 420px;
+    height: 400px;
+    box-shadow: #f3f3f3 0px 13px 27px -5px, #f3f3f3 0px 8px 16px -8px;
       }
     
       
@@ -1438,6 +1436,7 @@
       padding: 3px ;
       border-radius:6px;
       }
+
    
      /*CIRCULO   IZQUIERDO*/
       #carrusel li.left-arrow{
@@ -1489,20 +1488,18 @@
      transition:all .5s ease-in-out;
      }
         
-        #carrusel ul li.left-arrow:hover {
-        display: block;
-        background-color:  #fff;
-        opacity: 3;
-        }
+
+    #carrusel ul li.left-arrow:hover {
+    display: block;
+    background-color:  #fff;
+    opacity: 3;
+      }
    
   
    
 
-/*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
-
- /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
-
- #footer-categorias{
+  /*FOOTER FOOTER FOOTE FOOTER ........ */
+  #footer-categorias{
   width: 100%;
   bottom: 0;  
   left: 0;
@@ -1518,13 +1515,13 @@
   }
   
   
-    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;......... */
-    .footer-primero-categorias{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    z-index: 10;
-    margin-bottom: 20px;
+  /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;......... */
+  .footer-primero-categorias{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  margin-bottom: 20px;
      }
 
 
@@ -1557,7 +1554,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: 40%;
+      width: 55%;
       height: 40px;
       margin: auto;
    }
@@ -1583,7 +1580,7 @@
    }
 
 
-    #footer-categorias .social2  ul li .fa-twitter{
+    #footer-categorias .social2  ul li .fa-pinterest{
       color: #2d2d2d;
       width: 8px;
       height: 8px;

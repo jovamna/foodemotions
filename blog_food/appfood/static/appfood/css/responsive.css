@@ -3702,7 +3702,7 @@ width: 100%;
 
           /* UL CAJA DE REDES*/
       .social2{
-      width: 50%;
+      width: 55%;
       display: flex;
       flex-direction: row;
       margin: auto;
@@ -3728,7 +3728,7 @@ width: 100%;
           }
         
         
-    .icon-email  ul li .fa-twitter{
+    .icon-email  ul li .fa-pinterest{
       color: #2d2d2d;
       width: 35px;
       height: 35px;

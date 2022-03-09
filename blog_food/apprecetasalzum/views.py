@@ -188,7 +188,6 @@ def show_category(request, slug):
         'recetas': recetas,
         'cat': cat,
         'kategories': kategories,
-     
     }
     return render(request, "apprecetasalzum/categoria.html", context)
 
@@ -199,9 +198,9 @@ def show_subcategory(request, slug=True):
     category_deals = Category.objects.filter(slug=slug).order_by('slug')
     categori = category_deals[0].name
     category = Category.objects.all().filter(slug=slug)
-    recipes = Recipe.objects.all()
-    recipe = Recipe.objects.filter(category__in=category.get_descendants(
+    recipes = Recipe.objects.filter(category__in=category.get_descendants(
         include_self=True))
+
     cati = Category.objects.filter(slug=slug)
     categoria = Category.objects.filter(parent=None).order_by('slug')
 
@@ -210,7 +209,6 @@ def show_subcategory(request, slug=True):
     #parent = Category.objects.filter(children__isnull=True)
 
     context = {
-        'recipe': recipe,
         'recipes': recipes,
         'category_deals': category_deals,
         'categori': categori,

@@ -117,17 +117,15 @@
                  <div class="leftNav"><span class="arrow-left">&#129120;</span></div>
                 <!------------------------------------------------------1------>
                  <ul class="scrollmenu">    
-                    {% for kategoria in kategorias %}
-                    {% if not node.is_leaf_node %}
-                    {% for child in kategoria.get_children %}
+                    {% for kategoria in kategoria %}
+             
                     <li> 
                     <!-- SUBCATEGORIAS ----------------------->
-                    <a href="/dietas-especiales-y-alimentacion-saludable/subcategoria/{{ child.slug }}">
-                    <h3>{{ child.name }}</h3>
+                    <a href="/dietas-especiales-y-alimentacion-saludable/categoria/{{ kategoria.slug }}">
+                    <h3>{{ kategoria.name }}</h3>
                     </a>
                     </li>
-                    {% endfor %}
-                    {% endif %}
+                   
                     {% endfor %}
                  </ul>
                 <!------------------------FIN UL SCROLLMENU-------------------------------1----->

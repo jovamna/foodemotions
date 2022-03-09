@@ -21,16 +21,18 @@
                              <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
                              </li>
 
-                             <li>    
-                             <a  href="{% url 'appblog:dietas-especiales-y-alimentacion-saludable' %}">
-                             Alimentacion Sana<i class="right"></i> 
-                             </a>
-                             </li>
+                            <li>    
+                            <a  href="{% url 'appblog:dietas-especiales-y-alimentacion-saludable' %}">
+                            Alimentacion Sana<i class="right"></i> 
+                            </a>
+                            </li>
 
-                             <!---BLOQUE DE CATEGORIAS----->
-                              <li>
-                              <p>Subcategorias<i class="right"></i>
-                              </p>
+                             <!---TITULO CATEGORIA Y SUBCATEGORIA JUNTOS TAMBIEN SA EL MENU DESPLEGABLE--->
+                           <li>
+                           {% for post in posts %}
+                           <p> Categoria: {{post.kategoria}} <i class="right"></i></p>
+                           {% endfor %}
+                              
 
                               <!-----SUBMENU DE - LAS CATEGORIAS------>
                               <ul>
@@ -54,15 +56,7 @@
                       <!--FIN FIN BLOQUE DE CATEGORIAS-------------------------->
 
 
-                      <!--MENU.TITULO SUBCATEGORIA----------------->
-                      {% for category in category %}
-                      <li>    
-                      <a href="/dietas-especiales-y-alimentacion-saludable/subcategoria/{{ category.slug }}">
-                      {{ category.name }}{{ child.get }}<i class="right"></i>
-                      </a>
-                      </li>
-                       {% endfor %}
-                      <!--  FIN -TITULO SUBCATEGORIA---->
+                  
                      </ul>
                      </div>
                      <!--fin del menu scrolling--->
@@ -153,38 +147,43 @@
 
 
                                     
-              <!-------------DIV CONTAINER DE 4 POSTS DE SUBCATEGORIAS------------------------>
-       <div class = "container-posts-categorias">
-            <div class="columna-categorias">
-                      {% load mptt_tags %}
-                      {% for post in posts %}
-                      <div class="por-categoria">
-                                 <div class="por-foto">
-                                      <!--FECHA-->
-                                    <div class="fecha">
-                                    <em><p>{{ post.created }}</p> </em>
-                                    </div>
+    <!-------------DIV CONTAINER DE 4 POSTS DE SUBCATEGORIAS------------------------>
+    <div class = "container-posts-categorias">
+         <div class="columna-categorias">
+            {% load mptt_tags %}
+            {% for post in posts %}
+            <div class="por-categoria">
+                     <!------------------->
+                     <div class="por-foto">
+                     <!--FECHA-
+                     <div class="fecha">
+                     <em><p>{{ post.created }}</p> </em>
+                     </div>--->
 
-                                    <!--IMAGEN-->
-                                    {% if post.image %}
-                                    <img src ="{{post.image.url}}">
-                                    {% endif %} 
-                                </div>
-
-                                 <div class="por-descripcion">
-                                    <a href="/dietas-especiales-y-alimentacion-saludable/post/{{ perd.slug}}">
-                                     <!-------TITULO POST PERDERPESO---------->
-                                     <h2>{{ post.title }}</h2>
-                                     </a>
-                                     <!-------DESCRIPCION POST PERDERPESO---------->
-                                     <p>{{post.description|truncatechars:190|safe}} </p>
-                                     <a href ="/dietas-especiales-y-alimentacion-saludable/post/{{ post.slug }}/">
-                                     <em><p>Leer mas...</p></em>
-                                     </a>
-                                      <em><p>Categoria: {{post.kategoria}} </p></em> 
-                               </div>
+                     <!--IMAGEN-->
+                     {% if post.imagefront %}
+                     <img src ="{{post.imagefront.url}}">
+                     {% endif %} 
+                     </div>
+                     <!-------------------------------->
+                     <!-------------------------------->
+                     <div class="por-descripcion">
+                     <a href="/dietas-especiales-y-alimentacion-saludable/post/{{ perd.slug}}">
+                     <!---TITULO POST PERDERPESO---->
+                     <h1>{{ post.title }}</h1>
+                     </a>
+                     <!-------DESCRIPCION POST PERDERPESO---------->
+                     <p>{{post.description|truncatechars:190|safe}} </p>
+                     <a href ="/dietas-especiales-y-alimentacion-saludable/post/{{ post.slug }}/"   class="arrow1">
+                     LEE MAS
+                     <span class="arrow-right"></span>
+                     </a>
+                     <em><p>Categoria: {{post.kategoria}} </p></em> 
+                     </div>
+                     <!--------------------------------------------->
                   
-                           </div>
+         </div>
+         <!----FIN DIV POR CATEGORIA---------------------------------->
                          {% empty %}
                         <p>No items</p>
                        {% endfor %}
