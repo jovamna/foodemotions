@@ -146,28 +146,29 @@
       </div>
     <!------------------------------------------------------------------------------------------>
 
-
+     <!----ROW-------------------------->
      {% block paginas %}
-     <div id ="container-plan">
-
+     <div id ="container-post-plan">
+       <!----FLOAT LEFT---->
         <div class="container-columna-posts">
-          <div class="recetas-bloque"> 
+          <!---VA EN COLUMN--------------->
+          <div class="posts-bloque"> 
 
-
+            <!----VA EN ROW----->
               {% for post in posts %}
-              <div class = "elemento-post">
+              <div class = "post-imagen-descripcion">
 
                   <!------------------------------->   
-                  <div class="elemento-imagen">
-                  {% if post.imagefront %}
-                  <img src="{{post.imagefront.url}}" style="width:100%">
+                  <div class="post-imagen">
+                  {% if post.image %}
+                  <img src="{{post.image.url}}" style="width:100%">
                   {% endif %}
                   </div>
 
-                  <div class="elemento-descripcion">
-                  <div class ="elemento-descripcion-columna">
+                  <div class="post-descripcion">
+                  <div class ="post-descripcion-columna">
                   <h1>{{post.title}}</h1>  
-                  <p>{{post.description|linebreaksbr|truncatechars:110}} </p>
+                  <p>{{post.description|linebreaksbr|truncatechars:50}} </p>
                   <a href ="{% url 'appblog:post' post.slug %}" class="arrow1">
                   LEER MAS <span class="arrow-right"></span></a>
                   </div>
@@ -177,38 +178,39 @@
 
             </div>
             {% endfor %}
-
+            <!---row----->
 
           </div>
+
+          <!----COLUMN---->
          </div>
-   
+         <!---FIN -FLOAT LEFT---->
 
       <!--- cCONTAINER ASIDE-------------------------------------------------------------------> 
-      <div class="aside-plan">  </div>
+      <div class="aside-post-plan">  </div>
       </div>
 
-          {% endblock paginas %}
+    {% endblock paginas %}
 
 
-     {% block noticias-turismo %}  
+       {% block noticias-turismo %}  
        {% endblock noticias-turismo %}
-         {% block primero_recetasaludable %}
+
+      {% block primero_recetasaludable %}
        {% endblock primero_recetasaludable %}
 
- 
-
        {% block recetas_dieteticas %}  
-         {% endblock recetas_dieteticas %}  
+      {% endblock recetas_dieteticas %}  
 
 
-   {% block plandealimentacion %}
+       {% block plandealimentacion %}
       {% endblock plandealimentacion %}
 
-               {% block dietas-alimento %}
-                {% endblock dietas-alimento %}
+      {% block dietas-alimento %}
+      {% endblock dietas-alimento %}
 
-                {% block quinto_perder %}
-                {% endblock quinto_perder %}
+      {% block quinto_perder %}
+      {% endblock quinto_perder %}
 
    {% endblock content %}
 

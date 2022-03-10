@@ -1832,30 +1832,30 @@ nav .buscador-esconder .d-flex{
        }
   
   
-       #wrapper {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-        border-spacing: 0;
-        border-collapse: collapse;
-        margin: 0 auto;
-        margin-left: auto;
-        margin-right: auto;
-      }
+    #wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    }
       
-
-  
     
      #controls{
       display: none;
       visibility: hidden;
      }
 
-  #wrapper img {
-  width: 100%;
-  height: auto;
-  border: 0;
+
+    #wrapper img {
+    width: 100%;
+    height: auto;
+   border: 0;
    }
+
 
      #wrapper > * {
     padding: 15px;
@@ -2273,8 +2273,6 @@ nav .buscador-esconder .d-flex{
     }
   
 
-
-
    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
    nav .nav li:hover  ul {
@@ -2316,57 +2314,58 @@ nav .buscador-esconder .d-flex{
      /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
 
     #container  #submenu{
-       width: 100%;
-       max-width: 640px;
-       display: block;
-       position: relative;
-       float: left;
-       margin-top: -70px;
- 
+    width: 100%;
+    max-width: 640px;
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: -70px;
      }
 
-     #submenu .submenu-responsive{
-       display: flex;
-       flex-direction: column;
-       margin-left: 10px;
-       width: 95%;
-    }
+
+    #submenu .submenu-responsive{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 95%;
+     }
 
 
-   #submenu .submenu-responsive h1{
-     font-size: 1.5rem;
-     color: #000000;
-     font-weight: 800;
-     font-family: 'Times New Roman', Times, serif;
-     margin-bottom: 30px;
-     text-decoration: underline;
-   }
+    #submenu .submenu-responsive h1{
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 800;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    text-decoration: underline;
+     }
 
-   #submenu .submenu-responsive h2{
+
+     #submenu .submenu-responsive h2{
     font-size: 1.4rem;
     color: #000000;
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
-  }
+    }
 
 
-   #submenu ul{
+    #submenu ul{
     width: 100%;
-    
-     display: flex;
-     flex-direction: column;
-     margin-top: 30px;
-     float: left;
-   }
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    float: left;
+     }
 
-   #submenu ul  li{
+
+     #submenu ul  li{
     display: block;
     width: 100%;
     list-style: none;
     border-bottom: 1px solid #2d2d2d;
-  }
+    }
 
-
+    /*NO ES CODGIGO DE LA WEB*/
     .subnav.fullwidth{
       position: absolute;
       right: -15px;
@@ -2384,18 +2383,15 @@ nav .buscador-esconder .d-flex{
       -moz-transition: opacity .3s 0s, visibility 0s 0s;
       transition: opacity .3s 0s, visibility 0s 0s;
       /* box-shadow: 1px 2px 5px #7D7D7D; */
-  }
-  .row{margin:0}
-  .top-bar .logo {
+     }
+
+
+     .row{margin:0}
+      .top-bar .logo {
       width: 150px;
-  }
-  .subnav li{float:none; display: block;}
+      }
+      .subnav li{float:none; display: block;}
 
-
-
-
-
- 
 
  
   
@@ -2909,16 +2905,17 @@ width: 100%;
 
 
   
-      /*------------------------------------*/
-      .titulo-principal{
-        display: flex;
-        flex-direction: row;
-      width: 100%;
-      margin: auto;
-      margin-top: -180px;
-      margin-bottom: 15px; /*REALCIONADO CON EL PLAN TOTAL DE ALIMENTACION EL MARGIN*/
+  /*------------------------------------*/
+  .titulo-principal{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+  margin-top: -180px;
+  margin-bottom: 15px; /*REALCIONADO CON EL PLAN TOTAL DE ALIMENTACION EL MARGIN*/
       }
     
+
       .titulo-principal .escrito{
       width: 90%;
       max-width: 320px;
@@ -3378,11 +3375,7 @@ width: 100%;
 
 
 
-  
-
     /*..ELIMINANDO LAS FLECHAS PORQUE NO SE VISIBILIZAN BIEN EN EL MOVI..*/
-   
- 
   /*..UL...*/
     .categorias-subcategorias .endfor{
     height:  250px;
@@ -3498,65 +3491,97 @@ width: 100%;
      }
   
 
-   /* LAS PAGINAS FRONTALES RECETAS  DIETA-PLAN Y TURISMO -----------------*/
-   #container-plan{
+    /* LAS PAGINAS PLAN COMIDA. DIETS Y TURISMO----------------*/
+     #container-post-plan{
      width: 94%;
      display: flex;
      flex-direction: column;
      margin: auto;
-   }
+     }
  
-   /*CONTAINER COLUMNA*/
-   #container-plan .container-columna-posts{
+     /*CONTAINER COLUMNA*/
+     #container-post-plan .container-columna-posts{
      width: 100%;
      display: flex;
      flex-direction: column;
-   }
+     }
   
 
-   #container-plan .container-columna-posts .recetas-bloque{
+    #container-post-plan .container-columna-posts .posts-bloque{
     width: 100%;
-  display: flex;
-  flex-direction: column;
-  }
+     display: flex;
+     flex-direction: column;
+     }
 
-    /*..CONTAINER DE ELEMENTO-IMAGEN Y DE ELEMENTO-DESCRIPCION..*/
-    #container-plan .container-columna-posts .recetas-bloque .elemento-post{
+
+     /*..CONTAINER DE ELEMENTO-IMAGEN Y DE ELEMENTO-DESCRIPCION..*/
+     .posts-bloque .post-imagen-descripcion{
      width: 100%;
      display: flex;
      flex-direction: column;
-     margin: auto; 
      }
+
+
 
      /*..CAJA CONTIENE IMAGEN..*/
-     .elemento-post .elemento-imagen{
-      width: 98%;
-      max-width: 640px;
-      height: 100%;
-      max-height: 500px;
-      flex-direction: column;
-      margin: auto;
-      margin-bottom: 8px;
-     }
+     .posts-bloque .post-imagen-descripcion .post-imagen{
+     display: block;
+     width: 100%;
+     max-width: 500px;
+     margin-bottom: 10px;
+      }
 
-    .elemento-imagen img{
+
+    .posts-bloque .post-imagen-descripcion .post-imagen img{
     width: 100%;
-    max-width: 640px;
-    max-height: 300px;
-    height: 100%; 
+    max-width: 500px;
     }
    
-     /*..CAJA CONTIENE TITULO Y DESCRIPCION.*/
-    .elemento-descripcion{
-      width: 100%;
-     margin-bottom: 30px;
-    }
+    /*..CAJA CONTIENE TITULO Y DESCRIPCION.*/
+    .posts-bloque .post-imagen-descripcion .post-descripcion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+      }
 
-     .elemento-descripcion-columna h2{
-       font-size: 1.3rem;
+      .post-descripcion .post-descripcion-columna{
+        width: 95%;
+        max-width: 500px;
+        margin: auto;
+       }
+
+     .post-descripcion-columna h1{
+      font-size: 1.1rem;
+     }
+     /*.....................................*/
+
+
+
+      /*..PAGINAS RECETAS....*/
+      #container-recetas{
+       display: block;
+       width: 94%;
+       margin: auto;
+      }
+
+     .receta-imagen-descripcion .receta-imagen{
+      width: 25%;
+      max-width: 155px;
      }
 
-  /*QUINTO SEGMENTO .........................................................................  */
+     .receta-imagen-descripcion .receta-imagen img{
+      width: 100%;
+      max-width: 145px;
+      }
+
+      .receta-imagen-descripcion .receta-descripcion{
+      width: 75%;
+      }
+
+
+
+    /*QUINTO SEGMENTO ...............................  */
   .quinto-segmento{
    width: 100%;
    border-bottom: 1.5px solid	#DCDCDC;
@@ -3564,27 +3589,27 @@ width: 100%;
    margin-bottom: 30px;
    }
 
-   .resumen{
+    .resumen{
     width: 48%;
     margin-right: 2%;
     }
 
     .resumen1{
-      width: 1%;
+    width: 1%;
     }
 
     .resumen3{
-      width: 3%;
+    width: 3%;
     }
 
     /*DONDE ESTNA LAS LETRAS..*/
     .resumen2{
-      width: 96%;
+    width: 96%;
     }
 
    .quinto{
     width: 45%;
-     }
+    }
 
   .quinto-segmento h1{
    font-size: 140%;
@@ -3934,20 +3959,20 @@ width: 100%;
   
   /*MEDIDA DESPUES DEL MOVIL*/
   @media only screen and (min-width: 641px) and (max-width: 700px){
-    html, body{
+      html, body{
       width: 100%;
       height: 100%;
       margin: 0;
       box-sizing: border-box;
        }
   
+
        #wrapper {
       width: 100%;
       max-width: 100%;
       overflow: hidden;
       border-spacing: 0;
       border-collapse: collapse;
-     
      }
   
     
@@ -3960,16 +3985,16 @@ width: 100%;
   
   
     #wrapper > * {
-    padding: 25px;
+    padding: 20px;
     }  
   
     #container{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-       padding-left: 0;
-      padding-right: 0; 
-      margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0; 
+    margin-top: 35px;
       }
 
 
@@ -3987,19 +4012,19 @@ width: 100%;
     }
   
 
-      header.black{
-      height: 59px;
-      background-color: #fff;
+    header.black{
+    height: 59px;
+    background-color: #fff;
      }
 
   
      
-      .cabecera{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      height: 35px;
+    .cabecera{
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     height: 35px;
      }
          
 
@@ -4065,7 +4090,7 @@ width: 100%;
    max-width: 38px;
    }
 
-     /*-------------- box-shadow: 0 2px 5px rgba(255,101,47,.2);-------------------------------------------------------*/
+     /*---- box-shadow: 0 2px 5px rgba(255,101,47,.2);------*/
    .menu-btn .hamburguesa .menu-btn__burger {
       display: block;
       position: relative;
@@ -5263,10 +5288,9 @@ margin-left: 5px;
 
     /*FIN DE LAS 4 FOTOS Y UNA GRANDE*/
 
-     /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS..................................................*/
-  /* NO PONER DISPLAY FLEX NI FLEX DIRECCION */
+
   /*CATEGORIAS DE LA PAGINA RECETAS*/
-  /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS..................................................*/
+  /*PAGINA RECETAS SALUDABLES ..SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS.....*/
     /* NO PONER DISPLAY FLEX NI FLEX DIRECCION */
     .categorias-subcategorias{
       width: 100%;
@@ -5396,56 +5420,118 @@ margin-left: 5px;
      color: #000000;
      font-weight: 600;
      }
-  
-     /* LAS PAGINAS FRONTALES RECETAS  DIETA-PLAN Y TURISMO */
-     #container-plan{
-       width: 100%;
-       display: flex;
-       flex-direction: column;
-     }
-   
-     /*CONTAINER COLUMNA*/
-     #container-plan .container-columna-posts{
-       width: 100%;
-       display: flex;
-       flex-direction: column;
-     }
+    /*...............................................*/
 
 
-     #container-plan .container-columna-posts  .recetas-bloque{
-      width: 100%;
+    /*..PAGINAS POST PLAN TURISMO DIETAS....*/
+    #container-post-plan{
     display: flex;
-    flex-direction: column;
-    }
-    
-    /*..CONTAINER DE ELEMENTO-IMAGEN Y DE ELEMENTO-DESCRIPCION..*/
-     .elemento-post{
-       width: 100%;
-       display: flex;
-       flex-direction: column;
-     }
-  
-      /*..CAJA CONTIENE IMAGEN..*/
-      .elemento-imagen{
-        width: 100%;
-        max-width: 640px;
-        flex-direction: column;
-        margin-bottom: 20px;
-      }
-  
-      .elemento-imagen img{
-        width: 100%;
-        max-width: 600px;
-        height: 100%;
-        max-height: 270px;
-        margin: auto;
-      }
-     
-       /*..CAJA CONTIENE TITULO Y DESCRIPCION.*/
-      .elemento-descripcion{
-        width: 100%;
+    flex-direction: row;
+    width: 94%;
+    margin: auto;
+         }
+   
+
+    #container-post-plan  .aside-post-plan{
+    display: block;
+    position: relative;
+    float: right;
+    width: 10%;
+    max-width: 30px;
       }
 
+
+    /*FLOAT LEFT..*/
+    .container-columna-posts{
+    display: block ;
+    position: relative;
+    float: left;
+    width: 90%;
+    max-width: 550px;
+      }
+
+    .post-imagen-descripcion .post-imagen{
+    width: 28%;
+    max-width: 210px;
+    }
+   
+    .post-imagen-descripcion .post-imagen img{
+    width: 100%;
+    max-width: 180px;
+    }
+   
+    .post-imagen-descripcion .post-descripcion{
+    width: 75%;
+    }
+
+    .post-descripcion .post-descripcion-columna h1{
+    font-size: 1.2rem;
+    }
+  
+    .post-descripcion .post-descripcion-columna  p{
+    font-size: 1rem;
+    }
+
+    .post-descripcion .post-descripcion-columna  a{
+    font-size:  0.9rem;
+    }
+  
+  
+     /*..PAGINAS RECETAS....*/
+    #container-recetas{
+    display: block;
+    width: 94%;
+    margin: auto;
+    }
+
+    .container-recetas-aside{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+       }
+
+    .container-recetas-aside .recetas-bloque{
+     display: block;
+    position: relative;
+    float: left;
+    width: 90%;
+    max-width: 550px;
+    }
+
+
+    #container-recetas .aside-receta{
+    display: block;
+    position: relative;
+    float: right;
+    }
+
+
+    .receta-imagen-descripcion{
+    width: 100%;
+    }
+ 
+    .receta-imagen-descripcion .receta-imagen{
+    width: 28%;
+    max-width: 210px;
+    }
+ 
+    .receta-imagen-descripcion .receta-imagen img{
+    width: 100%;
+    max-width: 180px;
+    }
+ 
+    .receta-imagen-descripcion  .receta-descripcion{
+    width: 75%;
+    }
+
+
+    .receta-descripcion .receta-descripcion-columna h1{
+    font-size: 1.2rem;
+    }
+
+    .receta-descripcion .receta-descripcion-columna  p{
+    font-size: 1rem;
+    }
 
   
    /*QUINTO SEGMENTO .........................................................................  */
@@ -7229,63 +7315,129 @@ margin-left: 5px;
    }
 
 
-  #container-plan{
-  width: 93%;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-   }
-
-
-
-   #container-plan .container-columna-posts{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-   }
-
-   .recetas-bloque{
-    width: 100%;
+  /*..PAGINAS POST PLAN TURISMO DIETAS....*/
+  #container-post-plan{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 94%;
+    margin: auto;
+         }
+   
+
+    #container-post-plan  .aside-post-plan{
+    display: block;
+    position: relative;
+    float: right;
+    width: 8%;
+    max-width: 30px;
+      }
+
+
+    /*FLOAT LEFT..*/
+    .container-columna-posts{
+    display: block ;
+    position: relative;
+    float: left;
+    width: 92%;
+    max-width: 720px;
+      }
+
+    .post-imagen-descripcion .post-imagen{
+      width: 29%;
+      max-width: 240px;
+    }
+   
+    .post-imagen-descripcion .post-imagen img{
+    width: 100%;
+    max-width:  210px;
+    }
+   
+    .post-imagen-descripcion .post-descripcion{
+    width: 70%;
     }
 
-  /*CONTAINER DE ELEMTNO IMAGEN Y ELEMENTO DESCRIPCION..*/
-  .elemento-post{
-   width: 100%;
-  height: 280px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    .post-descripcion .post-descripcion-columna h1{
+    font-size: 1.2rem;
+    }
+  
+    .post-descripcion .post-descripcion-columna  p{
+    font-size: 1rem;
+    }
+
+    .post-descripcion .post-descripcion-columna  a{
+    font-size:  0.9rem;
+    }
+  
+  
+     /*..PAGINAS RECETAS....*/
+    #container-recetas{
+    display: block;
+    width: 94%;
+    margin: auto;
+    }
+
+    .container-recetas-aside{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+       }
+
+       /*BLOQUE DE LAS RECETAS*/
+    .container-recetas-aside .recetas-bloque{
+     display: block;
+    position: relative;
+    float: left;
+    width: 85%;
+    max-width: 680px;
+    }
+
+    .recetas-column{
+      width: 100%;
+      max-width: 670px;
+  
+    }
+
+    .container-recetas-aside #aside-receta{
+    display: block;
+    position: relative;
+    float: right;
+    width: 15%;
+    max-width: 50px;
     }
 
 
-  .elemento-post .elemento-imagen{
-  display: inline-flex;
-  width: 100%;
-  max-width: 305px;
-  height: 100%;
-  max-height: 260px;
-  }
+    .receta-imagen-descripcion{
+    width: 100%;
+    }
+ 
+    .receta-imagen-descripcion .receta-imagen{
+    width: 29%;
+    max-width: 240px;
+    }
+ 
+    .receta-imagen-descripcion .receta-imagen img{
+    width: 100%;
+    max-width: 210px;
+    }
+ 
+    .receta-imagen-descripcion  .receta-descripcion{
+    width: 70%;
+    }
 
 
-  .elemento-imagen img{
-  width:100%;
-   }
+    .receta-descripcion .receta-descripcion-columna h1{
+    font-size: 1.2rem;
+    }
 
-   .elemento-descripcion{
-   width: 100%;
-   max-width: 370px;
-   display: inline-flex;
-   margin-right: 37px;
-   }
-
-  #aside-plan{
-  width: 100%;
-  }
-  /*DE LAS PAGINAS DIETA PLAN COMIDA Y TURISMO*/
+    .receta-descripcion .receta-descripcion-columna  p{
+    font-size: 1rem;
+    }
 
   /*-------------------------------------*/
+
+
+
   .quinto-segmento{
     width: 100%;
   }

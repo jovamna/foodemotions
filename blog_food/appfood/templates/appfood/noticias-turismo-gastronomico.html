@@ -180,46 +180,49 @@
 
 
     {% block paginas %}
-    <div id ="container-plan">
-
-
+     <div id ="container-post-plan">
+       <!----FLOAT LEFT---->
         <div class="container-columna-posts">
-            <div class="recetas-bloque">
+          <!---VA EN COLUMN--------------->
+          <div class="posts-bloque"> 
 
-                {% for posturismo in posts %}
-                <div class = "elemento-post">
-                        
-                <!------------------------------------------------------>
-                <div class="elemento-imagen">
-                {% if posturismo.imagefront %}
-                <img src="{{posturismo.imagefront.url}}">
-                {% endif %}
-                </div>
 
-                <div class="elemento-descripcion">
-                <div class ="elemento-descripcion-columna">
-                <h1>{{posturismo.title}}</h1>  
-                <p>{{posturismo.description|linebreaksbr|truncatechars:110}} </p>
-                <a href ="{% url 'appturismo:post' posturismo.slug %}" class="arrow1">
-                LEER MAS <span class="arrow-right"></span></a>
-                </div>
-                </div>
-                <!-------------------------------------------------------->                  
-            
-              </div>
+                <!----VA EN ROW----->
+                 {% for posturismo in posts %}
+                 <div class = "post-imagen-descripcion">
+
+                    <!------------------------------->   
+                    <div class="post-imagen">
+                    {% if posturismo.imagefront %}
+                    <img src="{{posturismo.imagefront.url}}">
+                    {% endif %}
+                    </div>
+
+                    <div class="post-descripcion">
+                    <div class ="post-descripcion-columna">
+                    <h1>{{posturismo.title}}</h1>  
+                    <p>{{posturismo.description|linebreaksbr|truncatechars:50}} </p>
+                    <a href ="{% url 'appturismo:post' posturismo.slug %}" class="arrow1">
+                    LEER MAS <span class="arrow-right"></span></a>
+                    </div>
+                    </div>
+                    <!-------------------------------------->                  
+
+               </div>
               {% endfor %}
+              <!---row---ROW----------->
 
-         <!---------FIN DIV ELEMTNO POST--------------------->
           </div>
-       </div>
-   
+          <!----COLUMN---->
+         </div>
+         <!---FIN -FLOAT LEFT---->
 
       <!--- cCONTAINER ASIDE-------------------------------------------------------------------> 
-      <div class="aside-plan">  </div>
+      <div class="aside-post-plan">  </div>
       </div>
-                            
 
- {% endblock paginas %}
+    {% endblock paginas %}
+    
 
    {% block noticias-turismo %}  
        {% endblock noticias-turismo %}

@@ -89,7 +89,7 @@ def home(request):  #nombre de la vista
 
 #PAGINA PRINCIPAL DE RECETAS SALUDABLES   recetas = Receta.objects.order_by('-publish')[0:8]
 def recetas_saludables(request):
-    recetas = Receta.objects.all().order_by('slug')[0:5]
+    recetas = Receta.objects.all().order_by('slug')[1:8]
 
     post_recetas = Receta.objects.all().prefetch_related(
         'kategory', 'kategory__parent')
@@ -143,7 +143,7 @@ def recetas(request):
 
     #PAGINA PRINCIPAL DE BATIDOS
 def recetas_dieteticas(request):
-    recipes = Recipe.objects.all().order_by('-slug')
+    recipes = Recipe.objects.all().order_by('-slug')[1:8]
     #post_recipes = Recipe.objects.all().prefetch_related(
     #'category', 'category__parent').order_by('-publish')[1:6]
     category = Category.objects.all()  #SALE TODO!

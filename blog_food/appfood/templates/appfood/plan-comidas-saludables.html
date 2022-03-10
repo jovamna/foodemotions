@@ -153,43 +153,48 @@
                                
  
      {% block paginas %}
-     <div id ="container-plan">
-
-         <div class="container-columna-posts">
-             <div class="recetas-bloque"> 
-
+     <div id ="container-post-plan">
+       <!----FLOAT LEFT---->
+        <div class="container-columna-posts">
+          <!---VA EN COLUMN--------------->
+          <div class="posts-bloque"> 
+                <!----VA EN ROW----->
                {% for perderpeso in perder %}
-               <div class = "elemento-post">
-                      <!---------------------------->   
-                      <div class="elemento-imagen">
-                      {% if perderpeso.imagefront %}
-                      <img src ="{{perderpeso.imagefront.url}}" style="width:100%">
+                <div class = "post-imagen-descripcion">
+
+                  <!------------------------------->   
+                  <div class="post-imagen">
+                      {% if perderpeso.image %}
+                      <img src ="{{perderpeso.image.url}}" style="width:100%">
                       {% endif %}
                       </div>
 
-                      <div class="elemento-descripcion">
-                      <div class ="elemento-descripcion-columna">
+                      <div class="post-descripcion">
+                      <div class ="post-descripcion-columna">
                       <h1>{{perderpeso.title}}</h1>
-                      <p>{{perderpeso.description|truncatechars:110|safe}}</p>
-                       <a href ="/plan-comidas-saludables/post/{{ perderpeso.slug }}/" class="arrow1">
-                          LEER MAS <span class="arrow-right"></span></a>
+                      <p>{{perderpeso.description|truncatechars:50|safe}}</p>
+                      <a href ="/plan-comidas-saludables/post/{{ perderpeso.slug }}/" class="arrow1">
+                      LEER MAS <span class="arrow-right"></span></a>
                       </div>
-                      </div>
-                    <!--------------------------------->         
-               </div>
+                  </div>
+                  <!-------------------------------------->                  
+
+
+            </div>
             {% endfor %}
+            <!---row----->
 
+          </div>
 
-               </div>      
-             </div>
-    
-
+          <!----COLUMN---->
+         </div>
+         <!---FIN -FLOAT LEFT---->
 
       <!--- cCONTAINER ASIDE-------------------------------------------------------------------> 
-      <div class="aside-plan">  </div>
+      <div class="aside-post-plan">  </div>
       </div>
-      {% endblock paginas %}
 
+    {% endblock paginas %}
     
 
          {% block noticias-turismo %}  

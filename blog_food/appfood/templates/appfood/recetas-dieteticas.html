@@ -182,60 +182,77 @@
 
   
     <!---DIV DE 4 POST DE RECiPES ZUMOS Y ENSALADAS--->                     
-    {% block paginas %}
-     <div id ="container-plan">
+       {% block recetas %}
+     <div id ="container-recetas">
 
-        <div class="container-columna-posts">  
-             
-              {% for recipe in recipes %}
-             <div class="recetas-bloque">
+          <!---FLEX ROW-------------------------->
+          <div class="container-recetas-aside"> 
+
+          <!--------FLOAT LEFT------------------>        
+           <div class="recetas-bloque">
+                <!---FLOAT COLUM--------------->
+                {% for recipe in recipes %}
+                <div class="recetas-column">
 
 
                  <!--------------------------------------------->
                 
-                 <div class = "elemento-post">
-                         <!---------------------------->   
-                         <div class="elemento-imagen">
-                         {% if recipe.imagenfront %}
-                         <img src ="{{recipe.imagenfront.url}}" style="width:100%">
-                         {% endif %}
-                         </div>
-                         <!---------------------------------->
-
-                         <!----------------------------------->
-                          <div class="elemento-descripcion">
-
-                             <div class ="elemento-descripcion-columna">
-                             <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
-                             <h1>{{recipe.title}}</h1></a>
-                             <p>{{recipe.description|truncatechars:60|safe}}</p> 
-                             </div>
-
-                             <div class="elemento-leer">
-                             <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" class="arrow1">LEER MAS<span class="arrow-right"></span>
-                             </a>     
-                             </div>
-
-                        </div>
-                <!--------------------------------------------------->    
-                </div>
-               
-               <!----------------------------------------------------------------->
-
-          </div>
-          {% endfor %}
-         </div> 
-
-
-
-      <div class="aside-plan">  </div>
-      
-        </div>
-   {% endblock paginas %}
-<!------------------------------------------------------------------------------------------------------------------------>
                 
-              <!--- FIN CONTAINER SEARCH------------------------------------------------------------------------> 
-           
+                <!---FLEX ROW--------------------------->
+                <div class = "receta-imagen-descripcion">
+                    <!----------------------------------------->   
+                    <div class="receta-imagen">
+                      {% if recipe.image %}
+                      <img src ="{{recipe.image.url}}" style="width:100%">
+                      {% endif %}
+                      </div>
+                      <!---------------------------------->
+
+                      <!----------------------------------->
+                      <div class="receta-descripcion">
+                      <div class ="receta-descripcion-columna">
+                      <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                      <h1>{{recipe.title}}</h1></a>
+                      <p>{{recipe.description|truncatechars:60|safe}}</p> 
+                      </a>
+                      <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" class="arrow1">LEER MAS<span class="arrow-right"></span>
+                      </a>     
+                      </div>
+                  </div>
+                  <!-------------------------------------------------> 
+          </div>    
+            <!--FIN RECETA IMAGEN DESCRIPCION----------------------------->
+
+
+
+
+
+
+         
+        </div>
+        {% endfor %}
+        <!---FIN DIV RECETAS COLUMNA--->
+    </div>
+    <!---FIN RECETAS BLOQUE------------------->
+          
+
+
+
+             <!---FIN E ------------------------------>
+           <div id="aside-receta">
+           <div class="aside">
+            holaa
+           </div>
+           </div>
+            
+           <!------------------------------------------------------------->
+
+    </div>
+    <!---FIN CONTAINER ASIDE---->
+
+    </div>
+    {% endblock recetas %} 
+      <!--- FIN CONTAINER RECETAS---------------------------------------------------------------> 
 
         {% block noticias-turismo %}  
        {% endblock noticias-turismo %}

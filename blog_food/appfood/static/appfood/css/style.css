@@ -1621,9 +1621,9 @@ margin-top: 18px;
    
 
 
-/*ESTO DE LOS FRONTEND DE RECETAS DIETA TURISMO  PLAN------------------------------*/
-/*..CONTAINER DE COLUMNA POSTS Y ASIDE*/
-    #container-plan{
+/*ESTO DE LOS FRONTEND DE DIETA TURISMO  PLAN------------------------------*/
+
+    #container-post-plan{
       width:100%;
       max-width: 1250px;
       display: flex;
@@ -1633,96 +1633,79 @@ margin-top: 18px;
     }
 
 
-   
-      #container-plan .container-columna-posts{
-      width: 80%;
-      max-width: 800px;
+      /*..COLUMNA DONDE ESTA RECTAS..POSTS...*/
+      #container-post-plan .container-columna-posts{
+      width: 85%;
        display: block;
        position: relative;
        float: left;
        }
 
-     .container-columna-posts .recetas-bloque{
+     .container-columna-posts .posts-bloque{
      width: 100%;
-     max-width: 800px;
      display: flex;
      flex-direction: column;
     }
 
     /*..CONTAINER DE ELEMENTO-IMAGEN Y ELEMENTO-DESCRIPONTITULO*/
-     .elemento-post{
+     .post-imagen-descripcion{
      width: 100%;
-     max-width: 800px;
      display: flex;
      flex-direction: row;
      justify-content: space-between;
-    border-bottom: 2px solid #DCDCDC;
-    margin-bottom: 20px;
+     border-bottom: 2px solid #DCDCDC;
+     margin-bottom: 20px;
     padding-bottom: 20px;
 
     }
 
 
-    .elemento-post .elemento-imagen{
+    .post-imagen-descripcion .post-imagen{
       display: block;
       position: relative;
       float: left;
       width: 30%;
-      max-width: 280px;
-  
+      max-width: 300px;
     }
   
-    .elemento-post .elemento-imagen img{
+    .post-imagen-descripcion .post-imagen img{
     width: 100%;
-    max-width: 255px;
-    height: 100%;
-    max-height: 165px;
+    max-width: 280px;
     }
   
-    .elemento-post .elemento-descripcion{
+    .post-imagen-descripcion .post-descripcion{
     display: block;
     position: relative;
     float: right;
-    width: 65%;
-    max-width: 500px;
-   
+    width: 70%;
       }
 
-      .elemento-descripcion-columna{
+      .post-descripcion-columna{
         display: flex;
         flex-direction: column;
+        width: 95%;
+        margin: auto;
       }
 
-      .elemento-descripcion-columna h1{
+      .post-descripcion-columna h1{
         font-size: 1.3rem;
         color:#000;
         letter-spacing: 0.7px;
         }
        
 
-     .elemento-descripcion-columna p{
+     .post-descripcion-columna p{
        font-size: 1rem;
       color:#4b4b4b;
       letter-spacing: 0.7px;
       }
      
-      .elemento-leer{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
+     
 
-
-      #container-plan  .columna-tres{
-        width: 5%;
-        max-width: 80px;
-        display: inline-block;
-       
-      }
-
+ 
 
      /*--COSTADO*/
-      #container-plan .aside-plan{
+      #container-post-plan .aside-post-plan{
      width: 15%;
      max-width: 350px;
      display: block;
@@ -1732,7 +1715,7 @@ margin-top: 18px;
 
  
     /*ARROW  LEE MAS*/
-    .elemento-descripcion .arrow-right:after {
+    .post-descripcioin .post-descripcion-columna .arrow-right:after {
       content: "";
       display: inline-block;  /*!important  */
       width: 0;
@@ -1745,7 +1728,7 @@ margin-top: 18px;
 
     
     /*PALO* LEE MAS*/
-    .elemento-descripcion  .arrow-right:before {
+    .post-descripcion .post-descripcion-columna  .arrow-right:before {
       width: 15px;
       height: 2px;
       background: #000000;
@@ -1755,10 +1738,10 @@ margin-top: 18px;
     }
 
       /*a de la flecha...*/
-     .elemento-descripcion .arrow1{
+      .post-descripcion .post-descripcion-columna .arrow1{
       font-size: 0.9rem;
       color: #000;
-      font-family: 'Times New Roman', Times, serif;
+   
       font-weight: 900;
       margin-top: 5px;
       margin-bottom: 5px;
@@ -1768,11 +1751,147 @@ margin-top: 18px;
   /*... FIN DEL HTML DE LAS DEMAS PAGINAS EXCEPTO INDEX........*/
 
 
+     /*..RECETAS......................................................*/
+     #container-recetas{
+     display: block;
+     width: 100%;
+    margin-bottom: 300px;
+    }
 
+
+      /*..COLUMNA DONDE ESTA RECTAS..POSTS...*/
+      #container-recetas .container-recetas-aside{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+       }
+
+     .container-recetas-aside .recetas-bloque{
+     width: 80%;
+     max-width: 850px;
+     display: block;
+     position: relative;
+     float: left;
+    }
+
+
+    .recetas-column{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+     /*..CONTAINER DE ELEMENTO-IMAGEN Y ELEMENTO-DESCRIPONTITULO*/
+     .receta-imagen-descripcion{
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     border-bottom: 2px solid #DCDCDC;
+     margin-bottom: 20px;
+     padding-bottom: 20px;
+    }
+
+
+    .receta-imagen-descripcion .receta-imagen{
+      display: block;
+      position: relative;
+      float: left;
+      width: 35%;
+      max-width: 320px;
+    }
+  
+    .receta-imagen-descripcion .receta-imagen img{
+    width: 100%;
+    max-width: 280px;
+    }
+  
+    .receta-imagen-descripcion .receta-descripcion{
+    display: block;
+    position: relative;
+    float: right;
+    width: 65%;
+      }
+
+      .receta-descripcion  .receta-descripcion-columna{
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin: auto;
+      }
+
+      .receta-descripcion-columna h1{
+        font-size: 1.3rem;
+        color:#000;
+        letter-spacing: 0.7px;
+        }
+       
+
+     .receta-descripcion-columna p{
+       font-size: 1rem;
+      color:#4b4b4b;
+      letter-spacing: 0.7px;
+      }
+     
+
+
+
+     /*--COSTADO*/
+      #container-recetas .container-recetas-aside #aside-receta{
+     display: block;
+     position: fixed;
+     float: right;
+     width: 15%;
+     max-width: 100px;
+  
+     background-color: orangered;
+      }
+
+      #aside-receta .aside{
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         max-width: 100px;
+         background-color: darkgreen;
+       }
  
+    /*ARROW  LEE MAS*/
+    .receta-descripcion .arrow-right:after {
+      content: "";
+      display: inline-block;  /*!important  */
+      width: 0;
+      height: 0;
+      border-left: 6px solid #000000;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      vertical-align: middle;
+      }
+
+    
+    /*PALO* LEE MAS*/
+    .receta-descripcion  .arrow-right:before {
+      width: 15px;
+      height: 2px;
+      background: #000000;
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+      /*a de la flecha...*/
+     .receta-descripcion .arrow1{
+      font-size: 0.9rem;
+      color: #000;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 900;
+      margin-top: 5px;
+      margin-bottom: 5px;
+     }
+    
 
 
- /*............................................................................*/
+ /*............FIN RECETAS................................................................*/
 
 
 

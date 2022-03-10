@@ -169,88 +169,111 @@
 
         <!--  PRIMER SEGMENTO ----------------------------------------------------->
       <div class="titulo-otras-paginas">
-          
-             <!-- PARRAFO ANIMADO--------------data-anime="top"------------------------------------>
+        <!-- PARRAFO ANIMADO--------------data-anime="top"------------------------------------>
          <a href="{% url 'apprecetas:categorias' %}">
-           <h1>Recetas Saludables de la Gastronomia Internacional</h1>
-           </a>
-      </div>
+        <h1>Recetas Saludables de la Gastronomia Internacional</h1>
+        </a>
+    </div>
 
 
 
   <!------------------------------------------------------------------------------------------>
-    {% block paginas %}
-    <div id ="container-plan">
-            <div class="container-columna-posts">         
-                <div class="recetas-bloque">
-
-            {% for receta in recetas %}
-            <div class = "elemento-post">
+    {% block recetas %}
+    <div id ="container-recetas">
+   
+          <!---FLEX ROW-------------------------->
+          <div class="container-recetas-aside"> 
          
-                <!----------------------------------------->   
-                <div class="elemento-imagen">
-                       {% if receta.imagefront %}
-                <img src="{{receta.imagefront.url}}" alt="">
-                {% endif %}
-                </div>
 
-                <div class="elemento-descripcion">
-                <div class ="elemento-descripcion-columna">
-                <h1>{{ receta.title }}</h1>
-                <p>{{ receta.description|truncatechars:110|safe }}</p>
+
+
+
+      <!--------FLOAT LEFT------------------>        
+      <div class="recetas-bloque">
+      <!---FLOAT COLUM--------------->
+        {% for receta in recetas %}
+        <div class="recetas-column">
+
+
+
+
+            <!---FLEX ROW--------------------------->
+            <div class = "receta-imagen-descripcion">
+                    <!----------------------------------------->   
+                    <div class="receta-imagen">
+                    {% if receta.image %}
+                    <img src="{{receta.image.url}}" alt="">
+                    {% endif %}
+                    </div>
+
+                   <div class="receta-descripcion">
+                   <div class ="receta-descripcion-columna">
+                   <h1>{{ receta.title }}</h1>
+                   <p>{{ receta.description|truncatechars:50|safe }}</p>
        
-                <a href="{% url 'apprecetas:receta' receta.slug %}" class="arrow1">LEER MAS <span class="arrow-right"></span>
-                </a>            
-                </div>
-                </div>
-                <!-------------------------------------------------> 
-            
-             </div>    
-            {% endfor %}
-        
-           </div>
-           </div>
+                   <a href="{% url 'apprecetas:receta' receta.slug %}" class="arrow1">LEER MAS <span class="arrow-right"></span>
+                   </a>            
+                  </div>
+                  </div>
+                  <!-------------------------------------------------> 
+          </div>    
+            <!--FIN RECETA IMAGEN DESCRIPCION----------------------------->
+
+
+
+
+
+
+         
+        </div>
+        {% endfor %}
+        <!---FIN DIV RECETAS COLUMNA--->
+    </div>
+    <!---FIN RECETAS BLOQUE------------------->
+          
+
   
 
-      <div class="aside-plan"> </div>
-      <!------------------------------------------------------------->
+
+
+             <!---FIN E ------------------------------>
+           <div id="aside-receta">
+           <div class="aside">
+            holaa
+           </div>
+           </div>
+            
+           <!------------------------------------------------------------->
 
     </div>
-          
-      <!--- cCONTAINER ASIDE-------------------------------------------------------------------> 
-     {% endblock paginas %}
+    <!---FIN CONTAINER ASIDE---->
+
+    </div>
+    {% endblock recetas %} 
+      <!--- FIN CONTAINER RECETAS---------------------------------------------------------------> 
+ 
 
 
 
-   <!------------------------------------------------------------------------------------------------------------------------>
+   <!------------------------------------------------------------------>
 
-
-
-    
-      <!--- FIN CONTAINER SEARCH------------------------------------------------------------------------> 
-           
-
-      
-
-
-     {% block noticias-turismo %}  
+        {% block noticias-turismo %}  
        {% endblock noticias-turismo %}
+
          {% block primero_recetasaludable %}
        {% endblock primero_recetasaludable %}
-
- 
 
        {% block recetas_dieteticas %}  
          {% endblock recetas_dieteticas %}  
 
 
-   {% block plandealimentacion %}
+      {% block plandealimentacion %}
       {% endblock plandealimentacion %}
 
-               {% block dietas-alimento %}
-                {% endblock dietas-alimento %}
+      {% block dietas-alimento %}
+      {% endblock dietas-alimento %}
 
-           
+          {% endblock content %}  
 
     <script>
 
@@ -269,7 +292,7 @@
     </script>
 
 
-   {% endblock content %}
+ 
 
 
 

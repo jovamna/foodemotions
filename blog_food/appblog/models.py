@@ -87,6 +87,10 @@ class Post(models.Model):
                                    upload_to="appblog",
                                    null=True,
                                    blank=True)
+    image = models.ImageField(verbose_name="Imagen",
+                              upload_to="appblog",
+                              null=True,
+                              blank=True)
     subtitle = models.TextField(max_length=500,
                                 null=True,
                                 blank=True,
@@ -184,10 +188,7 @@ class Post(models.Model):
                                    null=True,
                                    blank=True,
                                    verbose_name="Titulo-ultimo")
-    image = models.ImageField(verbose_name="Imagen",
-                              upload_to="appblog",
-                              null=True,
-                              blank=True)
+
     contentultimo = RichTextField(null=True,
                                   blank=True,
                                   verbose_name="Contenido-ultimo")
