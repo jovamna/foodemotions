@@ -3485,7 +3485,7 @@ width: 100%;
     .titulo-otras-paginas h1{
      letter-spacing:   -0.3px;
      word-spacing: 0.9px;
-     font-size: 1.3rem;
+     font-size: 1.4rem;
      color: #000000;
      font-weight: 600;
      }
@@ -3559,8 +3559,10 @@ width: 100%;
       font-size: 0.9rem;
      }
 
-     .post-descripcion-columna a{
-      font-size: 0.9rem;
+       /*..LEER MAS..*/
+     .post-descripcion .post-descripcion-columna .arrow1{
+      font-size: 0.8rem;
+      
      }
      /*.....................................*/
 
