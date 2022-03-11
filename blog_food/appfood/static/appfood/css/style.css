@@ -1688,19 +1688,27 @@ margin-top: 18px;
       }
 
       .post-descripcion-columna h1{
-        font-size: 1.3rem;
-        color:#000;
-        letter-spacing: 0.7px;
+        font-size: 1.5rem;
+        color:#000000;
+        letter-spacing:  -0.4px;
+        word-spacing: -0.5px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
         }
        
 
      .post-descripcion-columna p{
-       font-size: 1rem;
-      color:#4b4b4b;
+       font-size: 1.1rem;
+      color:  #2d2d2d;
       letter-spacing: 0.7px;
+      font-family: 'Times New Roman', Times, serif;
       }
      
-     
+      .post-descripcion-columna a{
+        color: #000000;
+        font-size: 1rem;
+        font-family: 'Times New Roman', Times, serif;
+      }
 
  
 
@@ -1715,7 +1723,7 @@ margin-top: 18px;
 
  
     /*ARROW  LEE MAS*/
-    .post-descripcioin .post-descripcion-columna .arrow-right:after {
+    .post-descripcion .post-descripcion-columna .arrow-right:after {
       content: "";
       display: inline-block;  /*!important  */
       width: 0;
@@ -1822,18 +1830,23 @@ margin-top: 18px;
       }
 
       .receta-descripcion-columna h1{
-        font-size: 1.3rem;
-        color:#000;
-        letter-spacing: 0.7px;
+        font-size: 1.5rem;
+        color:   #000000;
+        letter-spacing: 0.1px;
         }
        
 
      .receta-descripcion-columna p{
-       font-size: 1rem;
-      color:#4b4b4b;
+       font-size: 1.1rem;
+      color:   #2d2d2d;
       letter-spacing: 0.7px;
       }
-     
+        
+      .receta-descripcion-columna a{
+        font-size: 1rem;
+       color:   #2d2d2d;
+      
+       }
 
 
 
@@ -1844,17 +1857,15 @@ margin-top: 18px;
      float: right;
      width: 15%;
      max-width: 100px;
-  
-     background-color: orangered;
       }
 
       #aside-receta .aside{
-         display: flex;
-         flex-direction: column;
-         width: 100%;
-         max-width: 100px;
-         background-color: darkgreen;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 100px;
        }
+
  
     /*ARROW  LEE MAS*/
     .receta-descripcion .arrow-right:after {
