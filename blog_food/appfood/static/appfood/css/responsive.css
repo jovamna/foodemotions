@@ -3565,7 +3565,7 @@ width: 100%;
      }
 
      .post-descripcion .post-descripcion-columna .arrow-right{
-      font-size: 0.8rem;
+      font-size: 0.7rem;
      }
 
 
@@ -3594,6 +3594,22 @@ width: 100%;
       width: 75%;
       }
 
+      .receta-descripcion-columna h1{
+        font-size: 1rem;
+       }
+  
+       .receta-descripcion-columna  p{
+        font-size: 0.8rem;
+       }
+  
+         /*..LEER MAS..*/
+       .receta-descripcion .receta-descripcion-columna .arrow1{
+        font-size: 0.7rem;
+       }
+  
+       .receta-descripcion .receta-descripcion-columna .arrow-right{
+        font-size: 0.7rem;
+       }
 
 
     /*QUINTO SEGMENTO ...............................  */
