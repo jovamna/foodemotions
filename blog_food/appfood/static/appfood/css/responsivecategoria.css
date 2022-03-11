@@ -1026,6 +1026,16 @@
     }
      /*CIERRE NAV*/
 
+     a:link {
+      color: black;
+      }
+      
+      a:visited {
+      color:#101010; /*IMPORTANTE*/
+      text-decoration: none;
+      }
+        
+  
 
     /*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
     #container-categorias-subcategorias{
@@ -1063,11 +1073,10 @@
 
      /*MENU DESPLEGALEB DE CATEGORIAS..*/
      .intro .menu-introescrito .menu{
-      width: 100%;
+      width: 95%;
       height: 100%;
       max-height: 80px;
-      margin: 4px, 4px;
-      padding: 8px 2px;
+      margin: auto;
     }
 
     .intro .menu-introescrito  .menu  .menu-scrolling{
@@ -1149,7 +1158,7 @@
 
 
      /*..CAJA DEL TITULO GRANDE..*/
-    .introescrito{
+    .menu-introescrito .introescrito{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1160,7 +1169,7 @@
 
 
    /*CAJA DEL TITULO CENTRAL */
-   .menu-intro-titulo{
+  .introescrito  .menu-intro-titulo{
      display: flex;
      flex-direction: column;
      margin: auto;
@@ -1170,12 +1179,15 @@
      margin-top: 5px; 
      }
 
-   .menu-intro-titulo  h2{
-   font-size: 1.6rem;
-   }
+    .introescrito .menu-intro-titulo  h1{
+     width: 95%;
+     font-size: 1.6rem;
+     margin: auto;
+    }
 
-   .menu-intro-titulo  a h2{
+   .introescrito .menu-intro-titulo  a h1{
     font-size: 1.6rem;
+    width: 95%;
     }
    /*..........................*/
 
@@ -1184,16 +1196,17 @@
     width: 92%;
     margin-left: 15px;
     margin-bottom: 35px;
-   }
+    }
 
-   .imagenes-pequeñas .subcategoria h3{
+
+    .imagenes-pequeñas .subcategoria h3{
     font-size: 0.8rem;
-   }
+    }
 
 
-  /* APP DIETA. PLAN COMIDA Y TURISMO*/
-   /*....CONTAINER DONDE ESTAN LAS SUBCATEGORIAS PERO DE PALABRAS SIN IMAGENES...........*/
-   #texto-slider{
+    /* APP DIETA. PLAN COMIDA Y TURISMO*/
+    /*....CONTAINER DONDE ESTAN LAS SUBCATEGORIAS PERO DE PALABRAS SIN IMAGENES...........*/
+    #texto-slider{
     display: block;
     width: 92%;
     margin-left: 12px;
@@ -1224,7 +1237,7 @@
      }
   
   
-    /*...................*/
+    /*....CONTAINER GENERAL DECCATEGORIAS DE RECETAS..DIETAS PLAN ETC.............*/
     .container-posts-categorias{
      width: 92%;
      display: flex;
@@ -1232,12 +1245,20 @@
      margin: 0 auto;
      margin-bottom: 80px;
     }
-
-    .columna-categorias{
+     
+    .container-posts-categorias  #posts-categorias-aside{
+      display: flex;
+      flex-direction: column ;
+      width: 100%;
+       }
+      
+     /*...COLUMNA DE DIETAS, PLAN Y TURISMO...*/
+     .container-posts-categorias  #posts-categorias-aside  .columna-categorias{
     width: 100%;
     }
 
-    .por-categoria{
+    /*....POR FOTO Y POR DESCRIPCION.DIETAS, TURISMO ETC..*/
+    .columna-categorias .por-categoria{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1263,7 +1284,7 @@
     }
 
 
-    .por-descripcion h2{
+    .por-descripcion h1{
      font-size: 1.4rem;
     }
 
@@ -1279,35 +1300,16 @@
      /*...................*/
 
 
-   
-  
-  
-    a:link {
-    color: black;
-    }
-    
-    a:visited {
-    color:#101010; /*IMPORTANTE*/
-    text-decoration: none;
-    }
-      
-
-
     /*CONTAINER que contiene ELEMENTO-CATEGORIA DE LOS POST DE LAS SUBCATEGORIAS......................................*/ 
     .fecha{
     display: none;
      }
 
 
-    /*CONTAINER QUE DIVIDE LOS POST DE RECTAS Y EL ASIDE VA EN 100 PERO AQUI SERA EN COLUMN*/
-    #posts-categorias-aside{
-    display: flex;
-    flex-direction: column ;
-    width: 100%;
-     }
-    
-     /*LA COLUMNA DE LOS PSTS*/
-     .post-cuatro-categorias{
+    /*CONTAINER EXCLUSIVO DE  RECETAS Y EL ASIDE VA EN 100 PERO AQUI SERA EN COLUMN*/
+  
+     /*...COLUMNA DE LAS RECETAS */
+     .container-posts-categorias  #posts-categorias-aside .post-cuatro-categorias{
      width: 100%;
      display: flex;
      flex-direction: column;   
@@ -1316,7 +1318,7 @@
 
    
     /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
-    .elemento-categoria{
+    .post-cuatro-categorias .elemento-categoria{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1325,7 +1327,7 @@
     }
 
 
-    /*CONTIENE SOLO LA IMAGEN y DENTRO EL DIV DESCRIPCION*/
+    /*EN ROW DIVIDE IMAGEN Y DESCRIPCION DE LAS RECETAS*/
    .elemento-categoria #imagen-elemento-categoria{
     width: 100%;
     max-width: 600px;
@@ -1339,7 +1341,7 @@
 
 
     #imagen-elemento-categoria img{
-    width: 38%;
+    width: 42%;
     display: block;
     position: relative;
     float: left;
@@ -1348,8 +1350,8 @@
 
    
     #imagen-elemento-categoria .imagen-descripcion{
-    width: 52%;
-    max-width: 300px;
+    width: 50%;
+    max-width: 280px;
     display: block;
     position: relative;
     float: right;
@@ -1358,14 +1360,33 @@
 
 
        /* TITULO DEL POST*/
-      #imagen-elemento-categoria .imagen-descripcion h2{
-      font-size: 1.3rem;
+      #imagen-elemento-categoria .imagen-descripcion h1{
+      font-size: 1.1rem;
       margin-bottom: 5px;
       font-family: 'Times New Roman', 'sans serif';
       font-weight: bolder;
       color: #000000;
       top: 0;
       }
+
+      #imagen-elemento-categoria .imagen-descripcion a h1{
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        font-family: 'Times New Roman', 'sans serif';
+        font-weight: bolder;
+        color: #000000;
+        top: 0;
+        }
+ 
+        #imagen-elemento-categoria .imagen-descripcion p{
+          font-size: 0.8rem;
+          margin-bottom: 5px;
+          font-family: 'Times New Roman', 'sans serif';
+          font-weight: lighter;
+          color: #2d2d2d;
+          top: 0;
+          }
+    
 
 
 

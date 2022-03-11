@@ -49,9 +49,8 @@
                       <li>
                       {% load mptt_tags %}
                       {% for categoria in category_deals %}
-                      <a href="/plan-comidas-saludables/categoria/{{ perderpeso.slug }}">
-                      {{ categoria.name }}{{ child.get }}<i class="right"></i>
-                      </a>
+                     <p> {{ categoria.name }}{{ child.get }}<i class="right"></i></p>
+                  
                       {% endfor %}
                       </li>
                       </ul>
@@ -67,7 +66,7 @@
                                {% for categoria in category_deals %}
                                <!--  TITULO--CATEGORIA---> 
                                 <div class="menu-intro-titulo">  
-                                   <h2> {{ categoria.name }}{{ child.get }}</h2>    
+                                   <h1> {{ categoria.name }}{{ child.get }}</h1>    
                                 </div>
                                {% endfor %}
                               <!---FIN TITULO DE CATEGORIA--->        

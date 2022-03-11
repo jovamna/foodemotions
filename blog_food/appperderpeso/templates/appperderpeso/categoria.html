@@ -68,24 +68,26 @@
          <!--FIN MENU--------------------------------------------------------------------------->
 
 
-         <!----------------------------------------------------------------------------------------------->
+         <!--------------------------TITULO DE LA CATEGORIA--------------------------------------------------------------------->
                                 <div class="introescrito">
-                                <!---TITULO DE CATEGORIA--->
                                {% load mptt_tags %}
                                {% for perderpeso in category_deals %}
                                <!--  TITULO--CATEGORIA---> 
                                 <div class="menu-intro-titulo">  
-                                        <h2> {{category_deals.get}}</h2>     
+                                 <h1> {{category_deals.get}}</h1>     
                                 </div>
                                {% endfor %}
-                              <!---FIN TITULO DE CATEGORIA--->        
+                              <!---FIN TITULO CATEGORIA--->        
                                </div>
+         <!-------------------------------------------------------------------------------------------------->
 
                       </div>
+        <!-- FIN DIV MENU INTRO ESCRITO----------------------------------->
 
 
 
-                      <!-- FIN DIV MENU INTRO ESCRITO--->
+
+
                       <div class="intro-dos-vacios">
                       <!-----VACIO--ESPACIO----->
                        </div>
@@ -138,22 +140,24 @@
                     {% load mptt_tags %}
                     {% for perderpeso in post_plan %}
                     <div class="por-categoria">
+
+                            <!---------------------->
                             <div class="por-foto">                              
-                                    <!--IMAGEN-->
-                                    {% if perderpeso.image %}
-                                    <img src ="{{perderpeso.image.url}}">
-                                    {% endif %} 
-                             </div>
+                           {% if perderpeso.image %}
+                           <img src ="{{perderpeso.image.url}}">
+                           {% endif %} 
+                           </div>
+
+
                              <!------------------------------------------->
                              <div class="por-descripcion">
                              <a href="/plan-comidas-saludables/post/{{ perderpeso.slug}}">
                              <!-------TITULO POST PERDERPESO---------->
                              <h1>{{ perderpeso.title }}</h1>
                              </a>
-                             <!--DESCRIPCION------------------------------------>
                             <p>{{perderpeso.description|truncatechars_html:70|safe}} </p>
                             <a href ="/plan-comidas-saludables/post/{{ perderpeso.slug }}/" class="arrow1">
-                              LEE MAS
+                            LEE MAS
                             <span class="arrow-right"></span>
                             </a>
                             <!--- <em><p>Categoria: {{perderpeso.kategoria}} </p></em> ---->                 
