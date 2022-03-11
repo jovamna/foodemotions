@@ -3556,14 +3556,19 @@ width: 100%;
      }
 
      .post-descripcion-columna  p{
-      font-size: 0.9rem;
+      font-size: 0.8rem;
      }
 
        /*..LEER MAS..*/
      .post-descripcion .post-descripcion-columna .arrow1{
-      font-size: 0.8rem;
-      
+      font-size: 0.7rem;
      }
+
+     .post-descripcion .post-descripcion-columna .arrow-right{
+      font-size: 0.8rem;
+     }
+
+
      /*.....................................*/
 
 
