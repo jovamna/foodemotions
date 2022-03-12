@@ -3367,7 +3367,7 @@ width: 100%;
   /*PAGINA RECETAS SALUDABLES.SEGMENTO DONDE ESTAN LAS SUBCATEGORIAS EN IMAGENES REDONDAS....*/
     .categorias-subcategorias{
     width: 100%;
-     height: 270px;
+     height: 220px;
      display: block;
      position: relative;
      float: left;
@@ -3378,11 +3378,10 @@ width: 100%;
     /*..ELIMINANDO LAS FLECHAS PORQUE NO SE VISIBILIZAN BIEN EN EL MOVI..*/
   /*..UL...*/
     .categorias-subcategorias .endfor{
-    height:  250px;
+    height:  190px;
     overflow-x: scroll;
     overflow-y: hidden;
     width: 100%;
-    
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     -webkit-overflow-scrolling: touch;
@@ -3390,31 +3389,32 @@ width: 100%;
      padding:1rem;
       }
 
+      .categorias-subcategorias .endfor::-webkit-scrollbar { 
+        width: 0px;
+        background: transparent;
+        }  
+  
 
       .categorias-subcategorias  .endfor   .ulhorizontal {
         width: 1500px;
-        height: 100%;
+        height: 110px;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         }
     
   
      
 
     .categorias-subcategorias .endfor .ulhorizontal  .lihorizontal {
-      width: 100%;
-    display: flex;
-    flex-direction: column;
-    height:100%;
-    max-height: 150px;
-    margin-right: 16px;
+     width: 60px;
+     height: 110px;
+     display: flex;
+     flex-direction: column;
     }
 
     .categorias-subcategorias .endfor .ulhorizontal  .lihorizontal  img{
     width: 100%;
-    max-width: 120px;
-    height: 100%;
-    max-height: 120px;
     cursor: pointer;
     }
 
@@ -3431,6 +3431,8 @@ width: 100%;
       white-space: initial;   
       font-size: 0.6rem;
       display: block;
+      text-align: center;
+      margin-top: 5px;
       }
 
 
