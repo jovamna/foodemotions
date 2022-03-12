@@ -203,8 +203,9 @@ def categori(request, slug=True):
     cat = Kategory.objects.all()  #RECETAS SALUDABLES
     kategories = Kategory.objects.filter(parent=None)
 
-    listado_posts = Posturismo.objects.filter()
-    paginator = Paginator(listado_posts, 2)
+    posts = Posturismo.objects.filter(categori_id=kategory).order_by(
+        'slug')  #IMPORTANTE VA EN EL TEMPLATE
+    paginator = Paginator(posturismos, 3)
     pagina = request.GET.get("page") or 1
     posts = paginator.get_page(pagina)
     current_page = int(pagina)
@@ -223,7 +224,9 @@ def categori(request, slug=True):
         'post_turismo': post_turismo,
         'posturismos': posturismos,
         'categories': categories,
-        'listado_posts': listado_posts,
+        'pagina': pagina,
+        'paginas': paginas,
+        'current_page': current_page,
         'posts': posts,
         'recetas': recetas,
         'cat': cat,

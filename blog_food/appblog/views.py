@@ -207,27 +207,28 @@ class CategoryRedirectView(RedirectView):
 
 #CATEGORIA SIN CHILD QUE SE FILTRAN POST POR CATEGORIA
 def category(request, slug=True):
-    category_deals = Kategoria.objects.filter(slug=slug).order_by('slug')
-    categori = category_deals[0].name
     category = Kategoria.objects.all().filter(
         slug=slug
     )  #MUY IMPORTANTE PARA OBTNER POSTS SEGUN CATEGORIA AUQNUE NO HAYA SUBCATEGORIAS
     post_dieta = Post.objects.filter(kategoria_id__in=category.get_descendants(
         include_self=True))  #VA CON EL ANTERIOR
+    category_deals = Kategoria.objects.filter(slug=slug).order_by('slug')
+    categori = category_deals[0].name
+    
     categor = category.get_descendants(
         include_self=None)  #IMPORTANTE PARA LOS CHILDS DE LA MISMA CATEGORIA
     categories = Kategoria.objects.filter(
-        parent=None
-    )  #SALEN SOLO LAS CATEGORIAS si pongo True ya no salen las categorias
-    post = Post.objects.filter(
-        kategoria_id__in=category)  #SE USA CUANDO NO HAY SUBCATEGORIA
+        parent=None)  #SCATEGORIAS si pongo True ya no salen las categorias
+    #post = Post.objects.filter(
+    #kategoria_id__in=category)  #SE USA CUANDO NO HAY SUBCATEGORIA
 
     recetas = Receta.objects.all()  #RECETAS SALUDABLES
     cat = Kategory.objects.all()  #RECETAS SALUDABLES
     kategories = Kategory.objects.filter(parent=None)
 
-    listado_posts = Post.objects.all()
-    paginator = Paginator(listado_posts, 2)
+    posts = Post.objects.filter(kategoria_id=category).order_by(
+        'slug')  #IMPORTANTE
+    paginator = Paginator(post_dieta, 3)
     pagina = request.GET.get("page") or 1
     posts = paginator.get_page(pagina)
     current_page = int(pagina)
@@ -236,17 +237,22 @@ def category(request, slug=True):
     print(category_deals)  #CATEGORIA
     print(categori)  #CATEGORIA
     print(category)  #CATEGORIA Y SUS HIJOS
-    print(post)  #POSTS DE LA CATEGORIA ACTUAL
+    #print(post)  #POSTS DE LA CATEGORIA ACTUAL
     print(categories)
+    print(paginator)
+    print(pagina)
+    print(posts)
+    print(current_page)
+    print(paginas)
 
     context = {
         'category_deals': category_deals,
         'categori': categori,
         'category': category,
         'post_dieta': post_dieta,
-        'posts': posts,
         'categories': categories,
-        'listado_posts': listado_posts,
+        'posts': posts,
+        'pagina': pagina,
         'paginas': paginas,
         'current_page': current_page,
         'category': category,
@@ -265,7 +271,8 @@ def subcategory(request, slug=True):
     categoria = category.get_descendants(include_self=True)  #2
     posts = Post.objects.filter(kategoria__in=category.get_descendants(
         include_self=True))  #PONER TRUE SI NO NO SALEN LOS POSTS
-    categorias = Kategoria.objects.filter(parent=None)  #SALEN SOLO LAS CATEGORIAS
+    categorias = Kategoria.objects.filter(
+        parent=None)  #SALEN SOLO LAS CATEGORIAS
     kategorias = Kategoria.objects.all()
     category_id = int(
         request.GET.get('categoria_id', default=1)

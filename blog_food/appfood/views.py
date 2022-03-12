@@ -87,10 +87,9 @@ def home(request):  #nombre de la vista
 #recetas = Receta.objects.filter(kategory__name="gastronomia italiana")
 
 
-#PAGINA PRINCIPAL DE RECETAS SALUDABLES   recetas = Receta.objects.order_by('-publish')[0:8]
+#PAGINA PRINCIPAL DE RECETAS SALUDABLES   recetas = Receta.objects.order_by('-publish')[1:8]
 def recetas_saludables(request):
-    recetas = Receta.objects.all().order_by('slug')[1:8]
-
+    posts = Receta.objects.all().order_by('slug')
     post_recetas = Receta.objects.all().prefetch_related(
         'kategory', 'kategory__parent')
     kategory = Kategory.objects.all()  #SALE TODO!
@@ -105,19 +104,28 @@ def recetas_saludables(request):
     children = current_category.get_children()
     cateysubcate = Kategory.objects.filter(parent__isnull=True)
 
+    paginator = Paginator(posts, 5)
+    pagina = request.GET.get("page") or 1
+    posts = paginator.get_page(pagina)
+    current_page = int(pagina)
+    paginas = range(1, posts.paginator.num_pages + 1)
+
     print(children)
     print(cateysubcate)  #CATEGORIAS CON SUS SUBCATEGORIAS
     #print(post_recetas)  #TODOS LOS POSTS
     print(current_category)
 
     context = {
-        'recetas': recetas,
+        'posts': posts,
         'children': children,
         'cateysubcate': cateysubcate,
-        #'post_recetas': post_recetas,
         'current_category': current_category,
         'kategory': kategory,
         'kategories': kategories,
+        'posts': posts,
+        'pagina': pagina,
+        'paginas': paginas,
+        'current_page': current_page,
     }
 
     return render(request, 'appfood/recetas-saludables.html', context)
@@ -141,20 +149,27 @@ def recetas(request):
     return render(request, 'appfood/recetas.html', context)
 
 
-    #PAGINA PRINCIPAL DE BATIDOS
+    #PAGINA PRINCIPAL DE BATIDOS  [1:8]
 def recetas_dieteticas(request):
-    recipes = Recipe.objects.all().order_by('-slug')[1:8]
-    #post_recipes = Recipe.objects.all().prefetch_related(
-    #'category', 'category__parent').order_by('-publish')[1:6]
+    posts = Recipe.objects.all().order_by('-slug')
     category = Category.objects.all()  #SALE TODO!
     categories = Category.objects.filter(
         parent=None)  #SALEN SOLO LAS CATEGORIAS
+
+    paginator = Paginator(posts, 5)
+    pagina = request.GET.get("page") or 1
+    posts = paginator.get_page(pagina)
+    current_page = int(pagina)
+    paginas = range(1, posts.paginator.num_pages + 1)
 
     if request.method == 'GET':
         category_id = int(request.GET.get('category_id', default=1))
         current_category = Category.objects.get(pk=category_id)
         children = current_category.get_children()
         cat = Category.objects.filter(parent__isnull=True)
+
+    #post_recipes = Recipe.objects.all().prefetch_related(
+    #'category', 'category__parent').order_by('-publish')[1:6]
 
     #PARA EL MENU DE RECETSA SALUDABLES
     recetasaludable = Receta.objects.all()  #RECETAS SALUDABLES
@@ -172,42 +187,40 @@ def recetas_dieteticas(request):
         'categories': categories,
         'category': category,
         'children': children,
-        'recipes': recipes,
-        #'post_recipes': post_recipes,
         'cat': cat,
         'recetasaludable': recetasaludable,
         'kategory': kategory,
         'kategories': kategories,
+        'posts': posts,
+        'pagina': pagina,
+        'paginas': paginas,
+        'current_page': current_page,
     }
 
     return render(request, 'appfood/recetas-dieteticas.html', context)
 
 
-    #PAGINA PRINCIPAL DE DIETAS ESPECIALES
+    #PAGINA PRINCIPAL DE PLAN DE COMIDAS
 def plan_comidas(request):
-    perder = Perderpeso.objects.all().order_by('-publish')[0:6]
+    posts = Perderpeso.objects.all().order_by('-publish')[0:6]
     post_perder = Perderpeso.objects.all().prefetch_related(
         'categoria', 'categoria__parent')
-    categorias = Categoria.objects.all()  #SALE TODO!
-    categoria = Categoria.objects.filter(
-        parent=None)  #SALEN SOLO LAS CATEGORIAS
-
-    category_id = int(
-        request.GET.get('category_id', default=1)
-    )  #ESTE ME PARECE LIMITA A QUE SOLO SALGA LA PRIMERA CATEGORIA
-    current_category = Categoria.objects.get(
-        pk=category_id
-    )  #creo van juntos con category_id SALE SOLO LA CATEGORIA ACTUAL noMBRE
-    children = current_category.get_children()
-    cateysubcate = Categoria.objects.filter(parent__isnull=True)
-
+    categorias = Categoria.objects.all()
+    categoria = Categoria.objects.filter(parent=None)
     post_plan = Perderpeso.objects.filter(
         categoria_id__in=categoria.get_descendants(
             include_self=True))  #VA CON EL ANTERIOR
+    cateysubcate = Categoria.objects.filter(parent__isnull=True)
     categoria_get = categoria.get_descendants(include_self=None)
-
     f = Categoria.objects.select_related('parent').prefetch_related(
         'name__parent__in')  #SIRVE AQUI
+
+    paginator = Paginator(posts, 5)
+    pagina = request.GET.get("page") or 1
+    posts = paginator.get_page(pagina)
+    current_page = int(pagina)
+    paginas = range(1, posts.paginator.num_pages + 1)
+
     #PARA EL MENU DE RECETAS SALUDABLES
     recetas = Receta.objects.all()  #RECETAS SALUDABLES
     kategory = Kategory.objects.all()  #RECETAS SALUDABLES
@@ -224,9 +237,7 @@ def plan_comidas(request):
     print(f)  #REPITE MUHCO TODO LAS CATEGORIAS Y SUBSCATEGORIAS
 
     context = {
-        'perder': perder,
         'cateysubcate': cateysubcate,
-        'children': children,
         'categorias': categorias,
         'categoria': categoria,
         'categoria_get': categoria_get,
@@ -237,21 +248,33 @@ def plan_comidas(request):
         'kategories': kategories,
         'category': category,
         'categories': categories,
+        'posts': posts,
+        'pagina': pagina,
+        'paginas': paginas,
+        'current_page': current_page,
     }
 
     return render(request, 'appfood/plan-comidas-saludables.html', context)
 
 
 def dieta_alimentacion(request):
-    post_list = Post.objects.all().prefetch_related('kategoria',
-                                                    'kategoria__parent')
+    posts = Post.objects.all().prefetch_related('kategoria',
+                                                'kategoria__parent')
     kategorias = Kategoria.objects.all()  #SALE TODO!
     kategoria = Kategoria.objects.filter(
         parent=None)  #SALEN SOLO LAS CATEGORIAS
 
-    recetas = Receta.objects.all()  #RECETAS SALUDABLES
-    category = Category.objects.all()  #FIN PARA EL MENU DE RECETSA SALUDABLES
+    category = Category.objects.all()  #SALE TODO!
+    categories = Category.objects.filter(
+        parent=None)  #SALEN SOLO LAS CATEGORIAS
 
+    paginator = Paginator(posts, 3)
+    pagina = request.GET.get("page") or 1
+    posts = paginator.get_page(pagina)
+    current_page = int(pagina)
+    paginas = range(1, posts.paginator.num_pages + 1)
+
+    recetas = Receta.objects.all()  #RECETAS SALUDABLES
     kategory = Kategory.objects.all()  #A
     kategories = Kategory.objects.filter(
         parent=None)  #SALEN SOLO LAS CATEGORIAS RECETAS SALUDABLES
@@ -263,22 +286,7 @@ def dieta_alimentacion(request):
     if cat:
         post_list = post_list.filter(category__pk=cat)
 
-    paginator = Paginator(post_list, 10)
-    page = request.GET.get('page')
-
-    try:
-        posts = paginator.page(page)
-    except PageNotAnInteger:
-        posts = paginator.page(1)
-    except EmptyPage:
-        posts = paginator.page(paginator.num_pages)
-
-    category = Category.objects.all()  #SALE TODO!
-    categories = Category.objects.filter(
-        parent=None)  #SALEN SOLO LAS CATEGORIAS
-
     context = {
-        'posts': posts,
         'kategoria': kategoria,
         'kategorias': kategorias,
         'category': category,
@@ -287,23 +295,31 @@ def dieta_alimentacion(request):
         'kategories': kategories,
         'category': category,
         'categories': categories,
+        'posts': posts,
+        'pagina': pagina,
+        'paginas': paginas,
+        'current_page': current_page,
     }
 
     print(kategoria)
     print(kategorias)
-    print(post_list)
 
     return render(request, "appfood/alimentacion-sana.html", context)
 
 
 #PAGINA PRINCIPAL DE TURISMO
 def noticias_turismo(request):
+    posts = Posturismo.objects.all()
     post_turismo = Posturismo.objects.all().prefetch_related(
         'categori', 'categori__parent')
     categoris = Categori.objects.all()  #SALE TODO!
     categori = Categori.objects.filter(parent=None)  #SALEN SOLO LAS CATEGORIAS
 
-    post_list = Posturismo.objects.all()
+    paginator = Paginator(posts, 3)
+    pagina = request.GET.get("page") or 1
+    posts = paginator.get_page(pagina)
+    current_page = int(pagina)
+    paginas = range(1, posts.paginator.num_pages + 1)
 
     #PARA EL MENU DE RECETAS SALUDABLES
     recetas = Receta.objects.all()  #RECETAS SALUDABLES
@@ -317,16 +333,6 @@ def noticias_turismo(request):
     cat = request.GET.get('cat')
     if cat:
         post_list = post_list.filter(categori__pk=cat)
-
-    paginator = Paginator(post_list, 10)
-    page = request.GET.get('page')
-
-    try:
-        posts = paginator.page(page)
-    except PageNotAnInteger:
-        posts = paginator.page(1)
-    except EmptyPage:
-        posts = paginator.page(paginator.num_pages)
 
     category = Category.objects.all()  #SALE TODO!
     categories = Category.objects.filter(
@@ -342,6 +348,10 @@ def noticias_turismo(request):
         'kategories': kategories,
         'category': category,
         'categories': categories,
+        'posts': posts,
+        'pagina': pagina,
+        'paginas': paginas,
+        'current_page': current_page,
     }
     return render(request, "appfood/noticias-turismo-gastronomico.html",
                   context)

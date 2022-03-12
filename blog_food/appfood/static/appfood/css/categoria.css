@@ -851,18 +851,6 @@ flex-wrap: wrap;
        }
          
 
-       /*LETTRA DEL MENU LI SIN P*/
-      .intro .menu-introescrito .menu  ul li a{ 
-      color: #2d2d2d;
-      text-transform: uppercase;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 1rem;
-      font-weight: 900;
-      word-spacing: -3px;
-      
-      }
-
-
     
     
          /*..ARROW DEL MENU.*/
@@ -883,12 +871,28 @@ flex-wrap: wrap;
       /*SOLO DE LA PALABRA CATEGORIA*/
            /*LETTRA DEL MENU LI SIN P*/
       .intro .menu-introescrito .menu  ul li p{
-       color: #2d2d2d;
-      text-transform: uppercase;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 1rem;
-      font-weight: 900;
+        color: #2d2d2d;
+        text-transform: uppercase;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+        font-weight: 900;
+        word-spacing: -4px;
+        letter-spacing:  1px;
       }
+
+      
+       /*LETTRA DEL MENU LI SIN P*/
+       .intro .menu-introescrito .menu  ul li a{ 
+        color: #2d2d2d;
+        text-transform: uppercase;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+        font-weight: 900;
+        word-spacing: -4px;
+        letter-spacing:  1px;
+        }
+  
+  
 
      /*..ARROW DEL MENU...DE CATEGORIA*/
       .intro .menu-introescrito .menu  ul li p i::after {
@@ -1283,14 +1287,13 @@ flex-wrap: wrap;
       font-family: 'Archive Black', 'sans serif';
       font-weight: 600;
       color: #2d2d2d;
-    
       margin-left: 5px;
       text-decoration: underline;
      }
 
-     #imagen-elemento-categoria .imagen-descripcion .a{
+       #imagen-elemento-categoria .imagen-descripcion .a{
        margin-bottom: 8px;
-     }
+      }
       
      #imagen-elemento-categoria .imagen-descripcion h3{
      font-size: 0.9rem;
@@ -1506,39 +1509,52 @@ flex-wrap: wrap;
     .container-total-carrusell ul li.left-arrow:hover span:before{
       transform: rotate(45deg) translate(6px, 14px) scaleX(1);
       }
-     
-    
-    
-    
+
        /*FINAL CARRUSEL.........FINAL CARRUSEL................. */
-     /*FINAL CARRUSEL................................................................FINAL CARRUSEL.................................... */
+ 
 
 
-/* ...PAGINACION ...................................*/
-.paginacion{
+  /* ...PAGINACION ...................................*/
+  .paginacion{
   width:100%;
-  display: flex;
-  justify-content: center;
+  display: block;
   padding-top: 8%;
   margin-bottom: 8%;
+  }
 
-}
+   /*..UL...*/
+   .paginacion .pagination{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     width: 13%;
+     margin: auto;
+   }
+     
+   /*...UL....*/
+    .pagination .page-item{
+     list-style: none;
+     }
 
-/*LETRA*/
+     .pagination .page-food{
+       list-style: none;
+       margin-right: -28px;
+     }
+
+  /*LETRA*/
   .paginacion a{
     font-size: 1rem;
     color: #000;
     text-decoration: none;
     font-family: 'Arial Black';
    font-weight: 400;
-   
-  }
+     }
 
 
-   .paginacion a:hover{
+    .paginacion a:hover{
      background-color: #000;
      color:#fff;
-   }
+     }
 
    
    /*DA COLOR AL BOTON DE ACTIVO */
@@ -1549,6 +1565,8 @@ flex-wrap: wrap;
     color: #fff;
     font-family: 'Arial Black';
   }
+
+
 /*ICINOS SOCIALES PARA COMPARTIR ............................................. */
 .icon-social{
   display: flex;

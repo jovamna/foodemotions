@@ -3497,6 +3497,7 @@ width: 100%;
      display: flex;
      flex-direction: column;
      margin: auto;
+     margin-bottom:40px;
      }
  
      /*CONTAINER COLUMNA*/
@@ -3578,6 +3579,7 @@ width: 100%;
        display: block;
        width: 94%;
        margin: auto;
+       margin-bottom: 40px;
       }
 
      .receta-imagen-descripcion .receta-imagen{
@@ -3611,7 +3613,28 @@ width: 100%;
         font-size: 0.7rem;
        }
 
+   /*..PAGINACION..............................*/
+   .paginacion{
+     width: 90%;
+     margin: auto;
+     padding-top: 1px;
+    }
 
+       /*..UL...*/
+       .paginacion .pagination{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin: auto;
+      }
+
+       /*LETRA*/
+    .paginacion a{
+      font-size: 0.7rem;
+       }
+  
+        
+  
     /*QUINTO SEGMENTO ...............................  */
   .quinto-segmento{
    width: 100%;

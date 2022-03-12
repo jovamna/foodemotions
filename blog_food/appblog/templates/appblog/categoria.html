@@ -169,8 +169,8 @@
                <div class="columna-categorias">
 
                    <!---CONTAINER POR CATEGORIA QUE TIENE LA IMAGEN Y LA DESCRIPCION ES ROW---->
-                   {% load mptt_tags %}
-                   {% for post in post_dieta %}
+                
+                   {% for post in posts %}
                    <div class="por-categoria">
                           <!-------IMAGEN------>
                           <div class="por-foto">
@@ -213,52 +213,12 @@
            <!--100% FIN DEL POSTS CATEGORIAs--->
             
              <!--100% FINAL CONTAINER POSTS CATEGOIRAS---->   
+             
+    
 
     {% endblock content %}
 
-
-
-
-
-     <!---------------- PAGINACION--------------------------------------------------------------->
-      {% block paginacion %}
-            <div class="paginacion">
-                    <nav>
-                      <ul class="pagination">
-                      {% if posts.has_previous %}
-                      <li class="page-item">
-                      <a class="page-link" href="?page=1">Primero</a>
-                      </li>
-                      <li class="page-item">
-                      <a class="page-link" href="?page={{ posts.previous_page_number }}">&laquo;</a>
-                      </li>
-                      {% endif %}
-                      <!------------------------------------------------------>
-                      {% for pagina in paginas %}
-                      <li class="page-food{% if current_page == pagina %} active {% endif %}">
-                      <a class="page-link" href="?page={{ pagina }}">{{ pagina }}</a>
-                      </li>
-                      {% endfor %}
-                      <!--------------------------------------------------------------->
-                      <!---------------------------- ------------------------------------>
-                      {% if posts.has_next %}
-                      <li class="page-item">
-                      <a class="page-link" href="?page={{ posts.next_page_number }}">&raquo;</a>
-                      </li>
-                      <li class="page-item">
-                      <a class="page-link" href="?page={{ posts.paginator.num_pages}}">Ùltima</a>
-                      </li>
-                      {% endif %}
-                      </ul>
-                      </nav>
-                      </div>
-                      {% endblock paginacion %}
-                    <!--------------------------------------------------------------------------------->
-
-
-                           
- 
-
+   
 
 
 

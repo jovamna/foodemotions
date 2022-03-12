@@ -126,9 +126,7 @@ class CategoryRedirectView(RedirectView):
 def show_category(request, slug=True):
     category_deals = Categoria.objects.filter(slug=slug).order_by('slug')
     kategoria = category_deals[0].name
-    category = Categoria.objects.all().filter(
-        slug=slug
-    )  #MUY IMPORTANTE PARA OBTNER POSTS SEGUN CATEGORIA AUQNUE NO HAYA SUBCATEGORIAS
+    category = Categoria.objects.all().filter(slug=slug)
     post_plan = Perderpeso.objects.filter(
         categoria_id__in=category.get_descendants(
             include_self=True))  #VA CON EL ANTERIOR
@@ -139,9 +137,10 @@ def show_category(request, slug=True):
     recetas = Receta.objects.all()  #RECETAS SALUDABLES
     cat = Kategory.objects.all()  #RECETAS SALUDABLES
     kategories = Kategory.objects.filter(parent=None)
+    posts = Perderpeso.objects.filter(categoria_id=category).order_by(
+        'slug')  #IMPORTANTE
 
-    listado_posts = Perderpeso.objects.all()
-    paginator = Paginator(listado_posts, 2)
+    paginator = Paginator(post_plan, 3)
     pagina = request.GET.get("page") or 1
     posts = paginator.get_page(pagina)
     current_page = int(pagina)
@@ -155,8 +154,11 @@ def show_category(request, slug=True):
         'kategoria': kategoria,
         'post_plan': post_plan,
         'categories': categories,
-        'listado_posts': listado_posts,
+        'posts': posts,
         'paginator': paginator,
+        'pagina': pagina,
+        'paginas': paginas,
+        'current_page': current_page,
         'categoria': categoria,
         'recetas': recetas,
         'cat': cat,

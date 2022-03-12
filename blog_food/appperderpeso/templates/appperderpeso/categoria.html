@@ -56,9 +56,8 @@
                       <li>
                       {% load mptt_tags %}
                       {% for perderpeso in category_deals %}
-                      <a href="/plan-comidas-saludables/categoria/{{ perderpeso.slug }}">
-                       {{category_deals.get}}<i class="right"></i>
-                      </a>
+                       <p>{{category_deals.get}}<i class="right"></i><p>
+                     
                       {% endfor %}
                       </li>
                       </ul>
@@ -138,7 +137,7 @@
                <div class="columna-categorias">
                     <!---DIV CONTAINER DE 4 POST Y DE RPLAN DE ALIMENTACION--->
                     {% load mptt_tags %}
-                    {% for perderpeso in post_plan %}
+                    {% for perderpeso in posts %}
                     <div class="por-categoria">
 
                             <!---------------------->
@@ -160,7 +159,8 @@
                             LEE MAS
                             <span class="arrow-right"></span>
                             </a>
-                            <!--- <em><p>Categoria: {{perderpeso.kategoria}} </p></em> ---->                 
+
+                            <em><p>Categoria: {{perderpeso.categoria}} </p></em>                
                            </div>
                            <!-------------------------------------------->
                   
@@ -185,31 +185,6 @@
  
 
 
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   {% endblock content %}
 
 
@@ -221,40 +196,6 @@
 
 
 
-     <!---------------- PAGINACION--------------------------------------------------------------->
-      {% block paginacion %}
-            <div class="paginacion">
-                    <nav>
-                      <ul class="pagination">
-                      {% if posts.has_previous %}
-                      <li class="page-item">
-                      <a class="page-link" href="?page=1">Primero</a>
-                      </li>
-                      <li class="page-item">
-                      <a class="page-link" href="?page={{ posts.previous_page_number }}">&laquo;</a>
-                      </li>
-                      {% endif %}
-                      <!------------------------------------------------------>
-                      {% for pagina in paginas %}
-                      <li class="page-food{% if current_page == pagina %} active {% endif %}">
-                      <a class="page-link" href="?page={{ pagina }}">{{ pagina }}</a>
-                      </li>
-                      {% endfor %}
-                      <!--------------------------------------------------------------->
-                      <!---------------------------- ------------------------------------>
-                      {% if posts.has_next %}
-                      <li class="page-item">
-                      <a class="page-link" href="?page={{ posts.next_page_number }}">&raquo;</a>
-                      </li>
-                      <li class="page-item">
-                      <a class="page-link" href="?page={{ posts.paginator.num_pages}}">Ùltima</a>
-                      </li>
-                      {% endif %}
-                      </ul>
-                      </nav>
-                      </div>
-                      {% endblock paginacion %}
-                    <!--------------------------------------------------------------------------------->
 
 
                            

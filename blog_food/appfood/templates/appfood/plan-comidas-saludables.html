@@ -110,14 +110,14 @@
 
                     {% for categoria in categorias %}
                     {% if not node.is_leaf_node %}
-                    {% for child in categoria.get_children %}
+                    <!----for child in categoria.get_children ---->
                     <li> 
                     <!-- SUBCATEGORIAS ----------------------->
-                    <a href="/plan-comidas-saludables/subcategoria/{{ child.slug }}">
-                    <h3>{{ child.name }}</h3>
+                    <a href="/plan-comidas-saludables/categoria/{{ categoria.slug }}">
+                    <h3>{{ categoria.name }}</h3>
                     </a>
                     </li>
-                    {% endfor %}
+                  
                     {% endif %}
                     {% endfor %}
 
@@ -159,7 +159,7 @@
           <!---VA EN COLUMN--------------->
           <div class="posts-bloque"> 
                 <!----VA EN ROW----->
-               {% for perderpeso in perder %}
+               {% for perderpeso in posts %}
                 <div class = "post-imagen-descripcion">
 
                   <!------------------------------->   
