@@ -123,14 +123,14 @@ class CategoryRedirectView(RedirectView):
         return reverse('categoria', 'perder', kwargs={'slug': category.slug})
 
 
-def show_category(request, slug=True):
-    category_deals = Categoria.objects.filter(slug=slug).order_by('slug')
-    kategoria = category_deals[0].name
+def show_category(request, slug):
     category = Categoria.objects.all().filter(slug=slug)
     post_plan = Perderpeso.objects.filter(
         categoria_id__in=category.get_descendants(
             include_self=True))  #VA CON EL ANTERIOR
-    categoria = category.get_descendants(include_self=None)
+    category_deals = Categoria.objects.filter(slug=slug).order_by('slug')
+    kategoria = category_deals[0].name
+    categoria = category.get_descendants(include_self=True)
     categories = Categoria.objects.filter(
         parent=None)  #SALEN SOLO LAS CATEGORIAS
 
@@ -147,6 +147,11 @@ def show_category(request, slug=True):
     paginas = range(1, posts.paginator.num_pages + 1)
 
     print(category_deals)  #CATEGORIA
+
+    print(categories)
+    print(post_plan)
+    print(categoria)
+    print(category)
     print(kategoria)  #CATEGORIA Y SUS HIJOS
 
     context = {

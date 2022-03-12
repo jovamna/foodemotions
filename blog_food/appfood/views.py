@@ -206,12 +206,16 @@ def plan_comidas(request):
     post_perder = Perderpeso.objects.all().prefetch_related(
         'categoria', 'categoria__parent')
     categorias = Categoria.objects.all()
-    categoria = Categoria.objects.filter(parent=None)
+    categoria = Categoria.objects.filter(parent=None)  #importante
     post_plan = Perderpeso.objects.filter(
         categoria_id__in=categoria.get_descendants(
             include_self=True))  #VA CON EL ANTERIOR
     cateysubcate = Categoria.objects.filter(parent__isnull=True)
     categoria_get = categoria.get_descendants(include_self=None)
+    #category = Category.objects.all()  #SALE TODO!
+    #categories = Category.objects.filter(
+    #parent=None)  #SALEN SOLO LAS CATEGORIAS
+
     f = Categoria.objects.select_related('parent').prefetch_related(
         'name__parent__in')  #SIRVE AQUI
 
@@ -226,10 +230,6 @@ def plan_comidas(request):
     kategory = Kategory.objects.all()  #RECETAS SALUDABLES
     kategories = Kategory.objects.filter(
         parent=None)  #SALEN SOLO LAS CATEGORIAS RECETAS SALUDABLES
-
-    category = Category.objects.all()  #SALE TODO!
-    categories = Category.objects.filter(
-        parent=None)  #SALEN SOLO LAS CATEGORIAS
 
     print(categorias)  #SOLO CATEGORIAS SI HIJOS
     print(categoria)  #CATEGORIAS CON SUS SUBCATEGORIAS
@@ -246,8 +246,6 @@ def plan_comidas(request):
         'recetas': recetas,
         'kategory': kategory,
         'kategories': kategories,
-        'category': category,
-        'categories': categories,
         'posts': posts,
         'pagina': pagina,
         'paginas': paginas,

@@ -108,9 +108,8 @@
                 <!------------------------------------------------------1------>
                  <ul class="scrollmenu">    
 
-                    {% for categoria in categorias %}
-                    {% if not node.is_leaf_node %}
-                    <!----for child in categoria.get_children ---->
+                    {% for categoria in categoria %}
+                    <!--------------------------- ---->
                     <li> 
                     <!-- SUBCATEGORIAS ----------------------->
                     <a href="/plan-comidas-saludables/categoria/{{ categoria.slug }}">
@@ -118,7 +117,7 @@
                     </a>
                     </li>
                   
-                    {% endif %}
+               
                     {% endfor %}
 
                  </ul>

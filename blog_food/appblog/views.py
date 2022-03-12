@@ -239,11 +239,9 @@ def category(request, slug=True):
     print(category)  #CATEGORIA Y SUS HIJOS
     #print(post)  #POSTS DE LA CATEGORIA ACTUAL
     print(categories)
-    print(paginator)
-    print(pagina)
     print(posts)
-    print(current_page)
-    print(paginas)
+    print(categor)
+  
 
     context = {
         'category_deals': category_deals,
