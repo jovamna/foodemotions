@@ -159,15 +159,15 @@ def show_category(request, slug):
         'kategoria': kategoria,
         'post_plan': post_plan,
         'categories': categories,
+        'categoria': categoria,
+        'recetas': recetas,
+        'cat': cat,
+        'kategories': kategories,
         'posts': posts,
         'paginator': paginator,
         'pagina': pagina,
         'paginas': paginas,
         'current_page': current_page,
-        'categoria': categoria,
-        'recetas': recetas,
-        'cat': cat,
-        'kategories': kategories,
     }
     return render(request, "appperderpeso/categoria.html", context)
 
@@ -181,10 +181,18 @@ def show_subcategory(request, slug=True):
         include_self=True))
     categories = Categoria.objects.filter(
         parent=None)  #SALEN SOLO LAS CATEGORIAS
-    category_id = int(
-        request.GET.get('categoria_id', default=1)
-    )  #ESTE ME PARECE LIMITA A QUE SOLO SALGA LA PRIMERA CATEGORIA
-    #current_category = Categoria.objects.get(pk=category_id)  #c
+    category_id = int(request.GET.get('categoria_id', default=1))
+ 
+    posts = Perderpeso.objects.filter(categoria_id=category).order_by(
+        'slug')  #IMPORTANTE
+        
+    post_plan = Perderpeso.objects.filter(categoria_id__in=category.get_descendants(
+        include_self=True))  #VA CON EL ANTERIOR
+    paginator = Paginator(post_plan, 3)
+    pagina = request.GET.get("page") or 1
+    posts = paginator.get_page(pagina)
+    current_page = int(pagina)
+    paginas = range(1, posts.paginator.num_pages + 1)
 
     context = {
         'category_deals': category_deals,
@@ -193,6 +201,12 @@ def show_subcategory(request, slug=True):
         'categoria': categoria,
         'perder': perder,
         'categories': categories,
+        'post_plan': post_plan,
+        'posts': posts,
+        'paginator': paginator,
+        'pagina': pagina,
+        'paginas': paginas,
+        'current_page': current_page,
     }
 
     print(category_deals)

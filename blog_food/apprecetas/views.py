@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Receta, Kategory, Comment
-from django.core.paginator import Paginator
 from django.views.generic.base import RedirectView
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import redirect
 from .forms import NewCommentForm
 from django.http import JsonResponse
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 # Create your views here. direccion de los enlaces
@@ -26,11 +26,6 @@ def categorias(request):
     children = current_category.get_children()
     cateysubcate = Kategory.objects.filter(parent__isnull=True)
 
-    #PARA EL MENU DE RECETSA SALUDABLES
-    #kategory =Kategory.objects.all() #RECETAS SALUDABLES
-    #kategories = Kategory.objects.filter(parent=None) #SALEN SOLO LAS CATEGORIAS RECETAS SALUDABLES
-
-    #print(categories) #SOLO CATEGORIAS SI HIJOS
     print(children)
     print(cateysubcate)  #CATEGORIAS CON SUS SUBCATEGORIAS
     print(post_recetas)  #TODOS LOS POSTS
@@ -179,43 +174,62 @@ class CategoryRedirectView(RedirectView):
     #permanent = True
 
     def get_redirect_url(self, *args, **kwargs):
-        category = get_object_or_404(Kategory, name=self.kwargs['category'])
-        receta = Receta.objects.filter(
+        category = get_object_or_404(Kategory, name=self.kwargs['kategory'])
+        recetas = Receta.objects.filter(
             kategory_id__in=category.get_descendants(include_self=True))
         post_receta = Receta.objects.filter(
             Kategory_id=self.kwargs.get('slug'))
 
-        return reverse('categoria', 'receta', kwargs={'slug': category.slug})
+        return reverse('category', 'recetas', kwargs={'slug': category.slug})
+        #return reverse('categoria', 'receta', kwargs={'slug': category.slug})
 
 
 def categoria(request, slug=True):
+    category = Kategory.objects.all().filter(slug=slug)
+    recetas = Receta.objects.filter(kategory_id__in=category.get_descendants(
+        include_self=True))
+
+    catego = category.get_descendants(include_self=None)
     category_deals = Kategory.objects.filter(slug=slug).order_by('slug')
     categori = category_deals[0].name
-    category = Kategory.objects.all().filter(slug=slug)
-    catego = category.get_descendants(include_self=None)
-    receta = Receta.objects.filter(kategory_id__in=category.get_descendants(
-        include_self=True))
     categories = Kategory.objects.filter(
         parent=None)  #SALEN SOLO LAS CATEGORIAS
-    #category = category.get_descendants(include_self=None)  /*CREO IMPORTANTE NO BORRAR
+    posts_re = Receta.objects.all().order_by('slug')
+    post_recetas = Receta.objects.all().prefetch_related(
+        'kategory', 'kategory__parent')
+
+    posts = Receta.objects.filter(kategory_id=category).order_by(
+        'slug')  #IMPORTANTE VA EN EL TEMPLATE
+    paginator = Paginator(recetas, 3)
+    pagina = request.GET.get("page") or 1
+    posts = paginator.get_page(pagina)
+    current_page = int(pagina)
+    paginas = range(1, posts.paginator.num_pages + 1)
 
     cat = Kategory.objects.all()  #RECETAS SALUDABLES
-    kategories = Kategory.objects.filter(parent=None)
+    #category = category.get_descendants(include_self=None)  /*CREO IMPORTANTE NO BORRAR
 
     print(category_deals)  #CATEGORIA
     print(categori)  #CATEGORIA
     print(category)  #CATEGORIA Y SUS HIJOS
-    #print(receta)    #POSTS DE LA CATEGORIA ACTUAL
+    print(recetas)  #POSTS DE LA CATEGORIA ACTUAL
+    print(catego)  #POSTS DE LA CATEGORIA ACTUAL
+    print(posts_re)  #POSTS DE LA CATEGORIA ACTUA
+    print(post_recetas)  #POSTS DE LA CATEGORIA ACTUA
 
     context = {
         'category_deals': category_deals,
         'categori': categori,
         'catego': catego,
         'category': category,
-        'receta': receta,
+        'recetas': recetas,
         'categories': categories,
         'cat': cat,
-        'kategories': kategories,
+        #'post_recetas': post_recetas,
+        'pagina': pagina,
+        'paginas': paginas,
+        'current_page': current_page,
+        'posts': posts,
     }
     return render(request, "apprecetas/categoria.html", context)
 

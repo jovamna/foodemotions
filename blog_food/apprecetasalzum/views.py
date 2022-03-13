@@ -173,6 +173,14 @@ def show_category(request, slug):
     cat = Kategory.objects.all()  #RECETAS SALUDABLES
     kategories = Kategory.objects.filter(parent=None)
 
+    posts = Recipe.objects.filter(category_id=category).order_by(
+        'slug')  #IMPORTANTE VA EN EL TEMPLATE
+    paginator = Paginator(recipe_post, 3)
+    pagina = request.GET.get("page") or 1
+    posts = paginator.get_page(pagina)
+    current_page = int(pagina)
+    paginas = range(1, posts.paginator.num_pages + 1)
+
     print(category_deals)  #CATEGORIA
     #print(category_diet)  #CATEGORIA
     print(category)  #CATEGORIA Y SUS HIJOS
@@ -188,6 +196,10 @@ def show_category(request, slug):
         'recetas': recetas,
         'cat': cat,
         'kategories': kategories,
+        'pagina': pagina,
+        'paginas': paginas,
+        'current_page': current_page,
+        'posts': posts,
     }
     return render(request, "apprecetasalzum/categoria.html", context)
 

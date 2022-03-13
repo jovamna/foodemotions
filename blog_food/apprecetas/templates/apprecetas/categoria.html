@@ -131,51 +131,55 @@
             <div id = "posts-categorias-aside">
 
 
-                     <!---DIV DE 4 POST DE POSTS dentro de posts-cetagoria poner 70%--->   
+                     <!---DIV DE 4 POST DE POSTS dentro de posts-cetagoria poner 70%--->  
+
+     
+
                      <div class=" post-cuatro-categorias">
 
-                        {% for receta in receta %}
+                  
                          <div class="elemento-categoria">   
 
-  
 
-                            
+                             {% for receta in recetas %}
                               <!--  IMAGEN DEL POSTPERDER---->
                               <div id="imagen-elemento-categoria"> 
                               {% if receta.image %}
                               <img src ="{{receta.image.url}}">
                               {% endif %}
+
+
                               <!--  DESCRIPCION RECETAS----------------->
                               <div class ="imagen-descripcion">
-                               <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
-                               <h1>{{receta.title}}</h1>  </a>  
-                               <!--  DESCRIPTION DEL POST PERDER---->
-                               <p>{{receta.description|truncatechars_html:70|safe}} </p> 
-                       
-                               <!--LINK QUE REDIRIGE AL POST--->
-                                 <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
-                                 <em><p>Leer mas  ...</p></em>
-                               </a>                      
-                               <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
-                               <p class="a" >Por: <span class="o"> {{ receta.author }}</span> </p> 
-                               <!--  EMPTY POR SI NO HAY POST DBE IR SEGUIDO DEL CIERRE EBDFOR--->
+                              <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                              <h1>{{receta.title}}</h1>  </a>  
+                              <p>{{receta.description|truncatechars_html:70|safe}} </p> 
+                              <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                              <em><p>Leer mas  ...</p></em>
+                              </a>                      
+                              <p class="a" >Por: <span class="o"> {{ receta.author }}</span></p> 
                              </div>
-                             <!--fin IMAGEN DESCRIPCION------------------------------>
+                             <!--------------------------------------------------->
                              </div>
                              <!--25%  FIN IMAGEN ELEMENTO CATEGORIA ------------------------>         
                         <!----------CIERRA EL POST ---------->  
-
-                </div>
-              <!---------------FIN ELEMENTO CATEGORIA----------------------->
-                {% empty %}
+                              
+    {% empty %}
                <p>No hay posts</p>
                {% endfor %}  
+</div>
+             
+              <!---------------FIN ELEMENTO CATEGORIA----------------------->
+            
 
 
  
            </div> 
            <!--FINAL  POST 4 CATEGORIAS----------------->
-          
+    
+
+
+
        
                <!---75% FIN POSTS CATEGORIAS --->   
                   <div id="aside">  </div>
@@ -191,10 +195,6 @@
 
 
 
-   {% block redes %}
-            {% endblock redes %}
-          {% block paginacion %} 
-          {% endblock paginacion %}
 
           
  

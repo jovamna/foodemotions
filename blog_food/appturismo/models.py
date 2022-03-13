@@ -51,7 +51,7 @@ class Categori(MPTTModel):
         ancestors = self.get_ancestors(include_self=True)
         slugs = [ancestor.slug for ancestor in ancestors]
         new_slugs = []
-        for idx, ancestor in enumerate(slugs, 1):
+        for idx, ancestors in enumerate(slugs, 1):
             new_slugs.append('/'.join(slugs[:idx]))
         return new_slugs   
 

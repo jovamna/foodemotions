@@ -164,35 +164,34 @@
             <!---CONTAINER DE COLUMNA CATEGORIA Y ASIDE-->
        <div class = "container-posts-categorias">
 
-                      <div id = "posts-categorias-aside">
-               <!--COLUMNA CATEGORIAS DE 70% -------->
-               <div class="columna-categorias">
-
-                   <!---CONTAINER POR CATEGORIA QUE TIENE LA IMAGEN Y LA DESCRIPCION ES ROW---->
-                
-                   {% for post in posts %}
-                   <div class="por-categoria">
-                          <!-------IMAGEN------>
-                          <div class="por-foto">
-                          {% if post.imagefront %}
-                          <img src ="{{post.imagefront.url}}">
-                          {% endif %} 
-                           </div>
+              <div id = "posts-categorias-aside">
+                   <!--COLUMNA CATEGORIAS DE 70% -------->
+                   <div class="columna-categorias">
+ 
+                       <!---CONTAINER POR CATEGORIA QUE TIENE LA IMAGEN Y LA DESCRIPCION ES ROW---->
+                       {% for post in posts %}
+                       <div class="por-categoria">
+                           <!-------IMAGEN------>
+                           <div class="por-foto">
+                           {% if post.imagefront %}
+                           <img src ="{{post.imagefront.url}}">
+                           {% endif %} 
+                            </div>
                            <!---------------------->
-                          <!--CONTAINER DE LA DESCRIPCION------->
-                          <div class="por-descripcion">
-                          <!-------TITULO PLAN DE COMIDA-------->
-                          <a href="/dietas-especiales-y-alimentacion-saludable/post/{{ post.slug}}">
-                          <h1>{{ post.title }}</h1>
-                          </a>
-                          <!-------DESCRIPCION PLAN DE COMIDA APPBLOG--------->
-                          <p>{{post.description|truncatechars_html:70|safe}} </p>
-                          <a href ="/dietas-especiales-y-alimentacion-saludable/post/{{ post.slug }}/" class="arrow1">
-                          LEE MAS
-                          <span class="arrow-right"></span>
-                          </a>
-                          <em><p>Categoria: {{post.kategoria}} </p></em> 
-                         </div>
+                           <!--CONTAINER DE LA DESCRIPCION------->
+                           <div class="por-descripcion">
+                           <!-------TITULO PLAN DE COMIDA-------->
+                           <a href="/dietas-especiales-y-alimentacion-saludable/post/{{ post.slug}}">
+                           <h1>{{ post.title }}</h1>
+                           </a>
+                           <!-------DESCRIPCION PLAN DE COMIDA APPBLOG--------->
+                           <p>{{post.description|truncatechars_html:70|safe}} </p>
+                           <a href ="/dietas-especiales-y-alimentacion-saludable/post/{{ post.slug }}/" class="arrow1">
+                           LEE MAS
+                           <span class="arrow-right"></span>
+                           </a>
+                           <em><p>Categoria: {{post.kategoria}} </p></em> 
+                          </div>
                         <!--FIN DIV CONTAINER DE LA DESCRIPCION----------------->
                </div>
                {% empty %}

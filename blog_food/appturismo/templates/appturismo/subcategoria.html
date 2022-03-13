@@ -19,16 +19,19 @@
                     <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
                     </li>
                     <li>    
-                    <a  href="{% url 'appturismo:turismo_gastronomico' %}">
-                    Turismo Gastronomico<i class="right"></i> 
-                    </a>
+                   <a href="{% url 'appfood:noticias-turismo-gastronomico' %}">
+                        Turismo Gastronomico<i class="right"></i> 
+                       </a>
                     </li>
                     
                     <!----BlOQUE CATEGORIAS--------------->
                     <!--MENU ESCONDIDO -CATEGORIAS------------------>
                     <li>
-                    <p>Categorias<i class="right"></i></p>
-
+                   
+                           <p> Categoria:  {{category_deals.get}}<i class="right"></i></p>
+                        
+                       
+                      
                     <ul>
                     {% load mptt_tags %} 
                     {% for categori in categories %} 
@@ -47,7 +50,7 @@
                   <!---FIN MENUS ESCONDIDO CATEGORIAS---->
                   <!--FIN BLOQUE CATEGORIAS------------>
 
-                  <!--TITULO CATEGORIA----------------->
+                  <!--TITULO
                   <li>
                   {% load mptt_tags %}
                   {% for categori in category_deals %}
@@ -55,8 +58,9 @@
                   {{categori.name}}{{ child.get }}<i class="right"></i>
                   </a>
                   {% endfor %}
-                  </li>
-                  <!--FIN TITULO CATEGORIA-------------->
+                  </li>FIN TITULO CATEGORIA-------------->
+
+                  
                   </ul>
                   </div>
                     <!--fin del menu scrolling--->
@@ -127,7 +131,7 @@
 
             <!---CONTAINER DE LOS POST ABREVIADOS DE POSTURISMO--->
   
-                           {% for posturismo in posts %}
+                           {% for posturismo in posturismos %}
             <div class="por-categoria">
                          <div class="por-foto">
                          

@@ -41,12 +41,15 @@ class Category(MPTTModel):
         ordering = ['-created']
 
     def __str__(self):
+        return self.name
+
+    def __str__(self):
         full_path = [self.name]
         k = self.parent
-
         while k is not None:
             full_path.append(k.name)
             k = k.parent
+        return ' - Subcategoria   '.join(full_path[::-1])
 
         return ' -   '.join(full_path[::-1])
 
@@ -58,7 +61,7 @@ class Category(MPTTModel):
         ancestors = self.get_ancestors(include_self=True)
         slugs = [ancestor.slug for ancestor in ancestors]
         new_slugs = []
-        for idx, ancestor in enumerate(slugs, 1):
+        for idx, ancestors in enumerate(slugs, 1):
             new_slugs.append('/'.join(slugs[:idx]))
         return new_slugs
 

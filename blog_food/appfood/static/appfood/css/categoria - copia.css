@@ -1185,6 +1185,7 @@ flex-wrap: wrap;
      flex-direction: row;
      justify-content: space-between;
     width: 100%;
+     background-color: yellow;
      }
   
      /*XOLUMNA CONTENEDOR DE VARIOS POSTS*/
@@ -1194,21 +1195,21 @@ flex-wrap: wrap;
      float: left;
     width: 80%;
     max-width: 950px;
+    background-color: darkolivegreen;
     }
 
 
     /*IMPORTANTE QUE SEA BLOCK PARA QUE LOS POSTS SE ACOMODEN*/
     /*CAJA DE RECETAS*/
    /* CONTAINER DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
-    .elemento-categoria{
-    display: block;
-    width: 100%;
-    max-width: 900px;
+       .elemento-categoria{
+      display: block;
+       width: 100%;
+       max-width: 900px;
+       background-color: cornflowerblue;
     }
-
- 
      
-    .elemento-categoria  #imagen-elemento-categoria{
+    .elemento-categoria #imagen-elemento-categoria{
        display: block;
        position: relative;
        float: left;

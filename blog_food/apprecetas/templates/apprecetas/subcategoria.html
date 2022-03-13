@@ -28,40 +28,20 @@
                                </li>
                            
                       <!--MENU ESCONDIDO -CATEGORIAS------------------>
-                      <li>
-                      <p>Subcategoria<i class="right"></i>
-                      </p>
-
-                      <ul>
-                                 
-                      {% load mptt_tags %}
-                      {% for kategory in category_deals %}
-                      {% if not node.is_leaf_node %}
-                      {% for child in kategory.get_children %}
-                      <!--  TITULO--CATEGORIA---> 
-                      <li>
-                      <a href="/recetas-saludables/subcategoria/{{ child.slug }}">
-                      {{ child.name}} jova
-                      </a>    
-                      </li>
-                      {% endfor %}
-                      {% endif %}
-                       {% endfor %}
+                    
+                            <!--DEBERIA ESTA AQUI LA CATEGORIA ACTUAL---->
+                            <li>  
+                         
+                           <p>Categoria:{{category_deals.get}}
+                            <i class="right"></i></p> 
+                        
+                           </li>
                               
-                      </ul>
-                    </li>
+                    
+                   
                     <!---FIN MENUS ESCONDIDO CATEGORIAS---->
                             
-                                <!--NOMBRE DE LA SUBCATEGORIA----->
-                              {% for receta in category %}
-                              <li>
-                              <a href="/recetas-saludables/subcategoria/{{ receta.slug }}">
-                              <p> {{categori}}<i class="right"></i></p>
-                              </a>
-                             </li>
-                             {% endfor %}
-
-                             <!---FIN NOMBRE DE LA SUBCATEGORIA---->
+                              
                      
 
                              </ul>

@@ -221,9 +221,9 @@ def categori(request, slug=True):
         'category_deals': category_deals,
         'kategoria': kategoria,
         'kategory': kategory,
+        'categories': categories,
         'post_turismo': post_turismo,
         'posturismos': posturismos,
-        'categories': categories,
         'pagina': pagina,
         'paginas': paginas,
         'current_page': current_page,
@@ -236,18 +236,26 @@ def categori(request, slug=True):
 
 
 def subcategori(request, slug=True):
-    category_deals = Categori.objects.filter(slug=slug).order_by('slug')  #1
-    categori = category_deals[0].name  #
     category = Categori.objects.all().filter(slug=slug)  #2
     categoria = category.get_descendants(include_self=True)  #2
-    posts = Posturismo.objects.filter(
+    posturismos = Posturismo.objects.filter(
         categori__in=category.get_descendants(include_self=True))  #2
+    category_deals = Categori.objects.filter(slug=slug).order_by('slug')  #1
+    categori = category_deals[0].name  #
     categories = Categori.objects.filter(
         parent=None)  #SALEN SOLO LAS CATEGORIAS
     category_id = int(
         request.GET.get('categori_id', default=1)
     )  #ESTE ME PARECE LIMITA A QUE SOLO SALGA LA PRIMERA CATEGORIA
     current_category = Categori.objects.get(pk=category_id)  #c
+
+    posts = Posturismo.objects.filter(categori_id=category).order_by(
+        'slug')  #IMPORTANTE VA EN EL TEMPLATE
+    paginator = Paginator(posturismos, 3)
+    pagina = request.GET.get("page") or 1
+    posts = paginator.get_page(pagina)
+    current_page = int(pagina)
+    paginas = range(1, posts.paginator.num_pages + 1)
 
     context = {
         'category_deals': category_deals,
@@ -256,13 +264,19 @@ def subcategori(request, slug=True):
         'category': category,
         'posts': posts,
         'categories': categories,
+        'posturismos': posturismos,
+        'pagina': pagina,
+        'paginas': paginas,
+        'current_page': current_page,
+        'posts': posts,
     }
 
     print(category_deals)
     print(categori)
     print(category)
-    #print(perder)
-    print(current_category)
+    print(posturismos)
+    print(posts)
+    print(categoria)
 
     return render(request, "appturismo/subcategoria.html", context)
 
