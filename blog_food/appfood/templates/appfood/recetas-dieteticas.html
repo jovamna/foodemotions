@@ -211,11 +211,13 @@
                       <!----------------------------------->
                       <div class="receta-descripcion">
                       <div class ="receta-descripcion-columna">
+
                       <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
                       <h1>{{recipe.title}}</h1></a>
-                      <p>{{recipe.description|truncatechars:60|safe}}</p> 
-                      </a>
-                      <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" class="arrow1">LEER MAS<span class="arrow-right"></span>
+
+                      <p>{{ recipe.description|truncatewords_html:22|safe }}</p> 
+                      
+                      <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" class="arrow1">LEER MAS <span class="arrow-right"></span>
                       </a>     
                       </div>
                   </div>

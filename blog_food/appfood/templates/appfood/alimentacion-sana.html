@@ -167,10 +167,13 @@
 
                   <div class="post-descripcion">
                   <div class ="post-descripcion-columna">
+                  <a href ="{% url 'appblog:post' post.slug %}">
                   <h1>{{post.title}}</h1>  
-                  <p>{{post.description|linebreaksbr|truncatechars:50}} </p>
+                  </a>
+                  <p>{{post.description|truncatewords_html:22|safe}} </p>
                   <a href ="{% url 'appblog:post' post.slug %}" class="arrow1">
-                  LEER MAS <span class="arrow-right"></span></a>
+                  LEER MAS <span class="arrow-right"></span>
+                  </a>
                   </div>
                   </div>
                   <!-------------------------------------->                  

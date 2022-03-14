@@ -170,10 +170,13 @@
 
                       <div class="post-descripcion">
                       <div class ="post-descripcion-columna">
+                      <a href ="/plan-comidas-saludables/post/{{ perderpeso.slug }}/" >
                       <h1>{{perderpeso.title}}</h1>
-                      <p>{{perderpeso.description|truncatechars:50|safe}}</p>
+                      </a>
+                      <p>{{perderpeso.description|truncatewords_html:22|safe}}</p>
                       <a href ="/plan-comidas-saludables/post/{{ perderpeso.slug }}/" class="arrow1">
-                      LEER MAS <span class="arrow-right"></span></a>
+                      LEER MAS <span class="arrow-right"></span>
+                      </a>
                       </div>
                   </div>
                   <!-------------------------------------->                  

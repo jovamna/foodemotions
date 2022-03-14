@@ -38,6 +38,7 @@
 
      {% block content %}
     <div class="primera-columna">
+      <div class="primero-descripcion-y-fotoprincipal">
 
                 {% for post in posts %}
                 <!-- caja 1-------------------------->
@@ -49,8 +50,23 @@
                <!---------------------------------->
 
 
-                <div class= "fecha">
-                <p>{{post.publish}}</p> 
+                <div class= "row-autor-nombre-fecha">
+
+                   <div class="row-autor-nombre">
+                   <div class="autor-foto">
+                    {% if post.imageauthor %}
+                    <img src="{{post.imageauthor.url}}" alt="" >
+                    {% endif %}
+                   </div>
+
+                  <div class="autor-letra">
+                  <em><h3>Por: {{post.author}}</h3></em>
+                  </div>
+                  </div>
+
+                  <div class="fecha">
+                   <p>{{post.publish}}</p>
+                   </div>
                 </div>
         
                 <!--------------------------------------->
@@ -81,14 +97,25 @@
                     {% if post.imagefront %}
                     <img src="{{post.imagefront.url}}" alt="">
                     {% endif %}
-                  </div>
+                    </div>
 
                   
                 </div>
                 <!-------------------FIN DE IMAGEN CENTRAL--------------------->
 
+    <!---------------------------------------------------------------------------->
+      </div> 
+    <!-------FIN---primero-descripcion-y-fotoprincipal------------------------------------------>
 
 
+
+
+
+      <div clas="articulovacio-articulolleno">
+          <!------------------------------>
+          <div class="articulovacio"></div>
+          <!------------------------------>
+             <div class="articulolleno">
                 <!---- <div class="segundo-articulo" data-anime="top">--->
                 <!-- caja 2-------------------------------------------------------->
                 <!-- SUBTITULO 2------------------->
@@ -121,17 +148,23 @@
 
              <!--TITULO------NARRATIVA--------------->
              <div class="contentwo">
+   
+
              {% if post.subtitleuno %}
              <div class="title-two">
              <h1> {{post.subtitleuno|safe}}</h1>
              </div>
             {% endif %} 
              <!---CONTENIDO---NARRATIVA---------->
-             {% if post.narrativa %}
+              {% if post.narrativa %}
              <div class="content-two">
              <p> {{post.narrativa|safe}}</p>
              </div> 
-             {% endif %} 
+               {% endif %} 
+               <!---------------------------------------->
+
+             </div>
+             
      
      <!--------------------------------------------------------------------------------> 
 
@@ -303,76 +336,61 @@
              <img src="{{post.image.url}}" alt=""> 
              </div>
              {% endif %} 
-           <!--CONTENIDO SEGUNDO------------->
+              <!--CONTENIDO SEGUNDO------------->
               {% if post.contentultimo %}
-            <div class="content-two">
-            <p> {{post.contentultimo|safe}} </p>
-            </div>
-             {% endif %} 
+              <div class="content-two">
+              <p> {{post.contentultimo|safe}} </p>
+              </div>
+              {% endif %} 
          </div>
-         
-    </div> 
-  <!------------------------------------------------------------------------------------------->
+
+      <!--------------------------------------------------------->
+      </div>
+      <!---articulo lleno-->
+    </div>
+      <!----articulovacio-articulolleno ROW------------------------------->
 
 
-              <!---SEXTA CAJA CON DOS TITULOS (TERCER TITULO DE DOS)------->
-              <section class="articulo-ultimo">
-                          <!--AUTOR IMAGEN Y NOMBRE-->
-                          <div class="autor-nombre">
+                         <!---SEXTA CAJA CON DOS TITULOS (TERCER TITULO DE DOS)------->
+                         <section class="articulo-ultimo">
 
-                           <!--FOTO AUTOR--->
-                           <div class="autor-foto">
-                           {% if post.imageauthor %}
-                           <img src="{{post.imageauthor.url}}" alt="" >
-                           {% endif %}
-                           </div>
-
-                           <!--NOMBRE DE AUTOR-->
-                           <div class="autor-letra">  
-                           <em><h3>Por: {{post.author}}</h3></em>
-                           </div>
-
-                           </div>
-                    <!-------CIERRE AUTOR-NOMBRE---------------------------->
                          <!------CATEGORIA SIN LINK-------------- --->  
-                         <div class="categoria-en-post">
-                            <em><h2>Categoria:</h2><p>{{ post.kategoria}}</p></em>
-                        </div>
-            <!-----------CIERRE DIV DE CATEGORIA SIN LINKS---------------------------- --->  
-              </section> 
-          <!---------------CIERRE SECTION DE ARTICULO ULTIMO------------------------ --->  
+                          <div class="categoria-en-post">
+                            <em><h2>Categoria:</h2>
+                            <p>{{ post.kategoria}}</p></em>
+                          </div>
+                          <!-----------CIERRE DIV DE CATEGORIA SIN LINKS---------------------------- --->  
+                          </section> 
+                     <!---------------CIERRE SECTION DE ARTICULO ULTIMO------------------------ --->  
                          
-              
-                            <!-- CATEGORIAS DENTRO DEL DIV ARTICULO-UNO------------------>
-                                      <div class="categorias-posts-links">
-                                        <!--CATEGORIA ACTUAL--->
-                                        <em><h4>   Categorias: </h4></em>
-                                          <!--CATEGORIAS CON LIKS --->  
-                                        {% load mptt_tags %}
-                                         {% for categoria in categories %} 
-                                         <a href="/dietas-especiales-y-alimentacion-saludable/categoria/{{ categoria.slug }}" style="text-decoration: none">   
-                                        <em>  <h3>{{ categoria }}</h3></em></a>       
-                                        {% endfor %}
-                                      <!--ENDFOR FINAL DE LA CATEGORIA --->              
-                                        <!--if not forloop.last endif es para ES PARA REPETIR EL ARTICULO QUE CORRESPONDA --->
-                                     </div>
-                                     <!--DIV CIERRE DE CATEGORIAS-POSTS-LINKS--->
+                      <!-- CATEGORIAS DENTRO DEL DIV ARTICULO-UNO------------------>
+                      <div class="categorias-posts-links">
+                      <!--CATEGORIA ACTUAL--->
+                      <em><h4>   Categorias: </h4></em>
+                      <!--CATEGORIAS CON LIKS --->  
+                      {% load mptt_tags %}
+                      {% for categoria in categories %} 
+                      <a href="/dietas-especiales-y-alimentacion-saludable/categoria/{{ categoria.slug }}" style="text-decoration: none">   
+                      <em>  <h3>{{ categoria }}</h3></em></a>       
+                      {% endfor %}             
+                      </div>
+                    <!--DIV CIERRE DE CATEGORIAS-POSTS-LINKS--->
+                  
+               
+        <!---------------ENDFOR FINAL DE PRIMERA COLUMNA----------------->  
+       <!-- CIERRE DIV DE PRIMERA COLUMNA---------------------------------->
+       {% endfor %}
 
-                 {% endfor %}
-        <!---------------ENDFOR FINAL DE PRIMERA COLUMNA------------------------- --->  
-             </div>                           
-     <!-- CIERRE DIV DE PRIMERA COLUMNA----------------------------------------------------------------------------------------------->
-   
 
- 
+
 
 
 
      <!----------COMENTARIOS COMENTARIOS COMENTARIOS COMENTARIOS---------------------->
         <div id="comentarios">
         {% for comment in post.latest_comments %}
-   <p>{{ comment.user.username }}: {{ comment.description }}</p>
-     {% endfor %}
+        <p>{{ comment.user.username }}: {{ comment.description }}</p>
+         {% endfor %}
            <!---------------------------------------------------------------------------->
            <div class="col-md-10">
                {% with allcomments.count as total_comments %}
@@ -489,16 +507,22 @@
 
          </div>
        <!----CIERRE DIV COMENTARIOS---------FIN ALL COMMENTS---------------------------->
-
    <!----------------FIN ORMULARIO--------------------------------------->
 
 
-   <!---CIERRE DEL BLOCK QUE CONTIENE COFIDICACION---->
-          {% endblock content %}
-      <!-- CIERRE DIV DE  COLUMNA PRIMERA------------------->
-       </div> 
 
-                       
+
+
+
+
+                               <!---FIN COLUMNA PRIMERA-------------------------->
+                                           </div> 
+                              <!------------------------------------------------->             
+                            <!---CIERRE DEL BLOCK QUE CONTIENE COFIDICACION---->
+                           {% endblock content %}
+                          <!-- CIERRE DIV DE  COLUMNA PRIMERA-------------------> 
+             
+           
  
 
                              
@@ -554,7 +578,7 @@
      {% endblock tercera-columna %}
      <!-- FINAL DIV TERCERA COLUMNA-->
      
-    </div>    
+  
 
     <!------------------------------>
 

@@ -208,8 +208,10 @@
 
                    <div class="receta-descripcion">
                    <div class ="receta-descripcion-columna">
+                    <a href="{% url 'apprecetas:receta' receta.slug %}">
                    <h1>{{ receta.title }}</h1>
-                   <p>{{ receta.description|truncatechars:50|safe }}</p>
+                   </a>
+                   <p>{{ receta.description|truncatewords_html:22|safe }}</p>
        
                    <a href="{% url 'apprecetas:receta' receta.slug %}" class="arrow1">LEER MAS <span class="arrow-right"></span>
                    </a>            

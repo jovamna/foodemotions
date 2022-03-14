@@ -970,11 +970,6 @@ border-radius:6px;
       padding-left: 0;
      }
 
-
-
-   
-
-
         
           header{
             width: 100%;
@@ -1003,10 +998,10 @@ border-radius:6px;
                 display: block;
                 position: relative;
                 float: left;
-                width: 20%;
-                max-width: 320px;
-                min-width: 140px;
-                height: 35px;
+                width: 25%;
+                max-width: 330px;
+                min-width: 190px;
+                height: 30px;
               }
                         
               .cabecera .logo img {
@@ -1021,13 +1016,12 @@ border-radius:6px;
         
            .cabecera  .suscribe{
             width: 12%;
-            height: 35px;
+            height: 25px;
           display: block;
           position: relative;
           float: right;
-          max-width: 220px;
-          min-width: 140px;
-        
+          max-width: 225px;
+          min-width: 90px;
             }
         
               /*LETRA INSCRIBETE*/
@@ -1036,8 +1030,7 @@ border-radius:6px;
                 position: relative;
                 float: right;
                  width: 100%;
-                max-width: 82px;
-                min-width: 82px;
+             
                 font-size: 0.78rem;
                 margin-top: 12px;
                 font-weight: 700;
@@ -1050,25 +1043,34 @@ border-radius:6px;
               text-decoration: none;
               }
         
-             /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-            .cabecera  .menu-btn {
-            display: block;
-            position: relative;
-            float: right;
-            width: 7%;
-            max-width: 35px;
-            min-width: 34px;
-            height: 35px;
-            margin: auto;
-              }
-        
+      /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+    .cabecera  .menu-btn {
+    display: block;
+    position: relative;
+    float: right;
+    width: 8%;
+    max-width: 36px;
+    min-width: 36px;
+    height: 30px;
+    margin: auto;
+     }
+
+
+
+        .hamburguesa{
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          max-width: 36px;
+        }
             /*--MUEVE EL MENU............ESTE ES EL BURGER*/
            .menu-btn  .menu-btn__burger {
              display: block;
              position: relative;
              float: left;
              margin-top:   13px;
-             width: 28px;
+             width: 34px;
              height: 3.6px;
             background: #2d2d2d;
             border-radius: 2px;
@@ -1270,7 +1272,6 @@ border-radius:6px;
     #controls-uno{
       width: 92%;
       margin-top: 10px;
-      background-color: darkolivegreen;
       }
 
 
@@ -1406,16 +1407,72 @@ border-radius:6px;
       font-size: 1rem;   
     }
      
-   /*FECHA*/
+  /*... *FECHA*/
+  .row-autor-nombre-fecha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px; 
+   }
+
    .fecha{
-    width: 92%;
-    margin-left: 15px;
+     display: block;
+     position: relative;
+     float: right;
+     width: 65%;
+     height: 20px;
+     margin-top: 20px;
+   }
+
+   .fecha p{
+    font-size: 0.7rem;
+    text-align: center;
+   }
+
+ /*..CAJA DE LA  FOTO Y E NOMBRE..*/
+   .row-autor-nombre{
+    display: block;
+    position: relative;
+    float: left;
+    width: 28%;
+    max-width: 130px;
+    height: 40px;
+   }
+
+    /*..CAJA DE FOTO....*/
+   .row-autor-nombre .autor-foto{
+      display: block;
+      position: relative;
+      float: left;
+      width: 32%;
+      height: 40px;
     }
 
-    .fecha p{
-    font-size: 1rem;
+    .autor-foto img{
+      width: 100% ;
+      max-width: 40px;
+      height: 40px;
+     }
+    
+     /*..CAJA DE NOMBRE NOMBRE*/
+     .row-autor-nombre  .autor-letra{
+      width: 68%;
+      height: 40px;
+      display: block;
+      position: relative;
+      float: right;
     }
 
+
+   /*NOMBRE DE AUTOR*/
+   .row-autor-nombre .autor-letra h3{
+   font-size: 0.7rem;
+   color: #000000;
+   font-family: 'Times New Roman', Times, serif;
+   display: inline-block;
+   margin-top: 22px;
+   }
      
   .imagen-central{
   width: 100%;
@@ -1483,11 +1540,25 @@ border-radius:6px;
         padding: 5px 5px 5px 5px;    
         }
 
+        /*segundo articulo en adelante...*/
+   .primera-columna .articulovacio-articulolleno{
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+   }
+
+    .articulolleno{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+   }
+
     /*TAMBIEN LO USA LA APPTURISMO*/
-      .segundo-articulo{
-      width: 92%;
-      margin: auto;
-      }
+    .segundo-articulo{
+    width:  92%;
+    margin: auto;
+    }
 
    
      /*SEGUNDO TITULO*/
@@ -1508,7 +1579,7 @@ border-radius:6px;
 
      .cursiva{
       width: 92%;
-      margin-left: 15px;
+      margin-left: 5px;
     }
 
 
@@ -1559,11 +1630,13 @@ border-radius:6px;
       flex-direction: column;
      width: 92%;
      margin: auto;
+     margin-bottom: 8px;
     }
 
     .contentwo .title-two{
       display: block;
-      width: 100%;
+      width:  92%;
+      margin: auto;
       margin-top: 20px;
     }
 
@@ -1574,6 +1647,7 @@ border-radius:6px;
     font-family: 'Times New Roman', Times, serif;
     letter-spacing: -0.4px;
     word-spacing: -1.5px;
+
      }
    
     .contentwo .image-two{
@@ -1589,6 +1663,8 @@ border-radius:6px;
 
       .contentwo .subtitle-two{
       display: block;
+      width:  92%;
+      margin: auto;
       }
 
       .contentwo .subtitle-two h2{
@@ -1598,7 +1674,8 @@ border-radius:6px;
       /*...DESCRIPCION..*/
        .contentwo .content-two{
         display: block;
-        width: 100%;
+        width:  92%;
+        margin: auto;
         }
 
       .contentwo  .content-two  p{

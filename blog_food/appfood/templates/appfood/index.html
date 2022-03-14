@@ -88,29 +88,33 @@
              <div class="vacio"></div>
           </div>
 
-        <!-- CUARTO SEGMENTO-----TURISMO GASTRONMICO-------------------------------->
+
+
+        <!------TURISMO GASTRONMICO----NOTICIAS---------------------------->
         <div class="primer-segmento">
+              <!--------------------------------------------->
               {% for posturismo in posturismos %}
               <div class="tres"> 
-                        {% if posturismo.imagefront %}
-                        <img src="{{posturismo.imagefront.url}}" width="100%"  alt="" >
-                        {% endif %}
+                    {% if posturismo.imagefront %}
+                    <img src="{{posturismo.imagefront.url}}" width="100%"  alt="">
+                    {% endif %}
 
-                        <a href ="{% url 'appturismo:post' posturismo.slug %}">
-                        <h1>{{ posturismo.title }}</h1>
-                         </a> 
+                    <a href ="{% url 'appturismo:post' posturismo.slug %}">
+                    <h1>{{ posturismo.title }}</h1>
+                    </a> 
 
-                          <span>{{ posturismo.description|linebreaksbr|truncatechars_html:70 }} </span>
+                    <span>{{ posturismo.description|truncatewords_html:16|safe }} </span>
 
-                        <a href ="{% url 'appturismo:post' posturismo.slug %}">
-                     <span> Leer mas...  </a> </span>
+                    <a href ="{% url 'appturismo:post' posturismo.slug %}">
+                    <span> Leer mas...  </a> </span>
                                      
               </div>
               {% endfor %}
-      </div>
-      <!-- QUINTO SEGMENTO  INICIO TITULO ------------>
+              <!------------------------------------------------->
+        </div>
+        <!---------------------- TURISMO NOTICIAS ------------>
       {% endblock noticias-turismo %}
-   <!---------------------------------------------------------------------------------------------------------------------------->
+   <!------------------------------------------------------------------------------------>
 
 
      {% block ultimos_posts %}
@@ -134,12 +138,13 @@
              <div class="columna-left">
 
           
-        <!---------FLOAT LEFT-------------EMPEZANDO OTRO POSTS----------------2------------->
-          <div class="posts-ultimos-left">
-                   <!---DEBE IR EN COLUMNA---->
-                  {% for recipe in recipedietaultimo %}
-                     <div class="post-ultimo-encolumna">
-                     <!----ROW---------------------------->
+      <!---------FLOAT LEFT-------------EMPEZANDO OTRO POSTS----------------2------------->
+      <div class="posts-ultimos-left">
+          
+            <!---DEBE IR EN COLUMNA---->
+            {% for recipe in recipedietaultimo %}
+            <div class="post-ultimo-encolumna">
+            <!----ROW---------------------------->
         
                   <div class="ultimo-imagen-titulo">
                      <!--------------------------------->
@@ -157,7 +162,7 @@
                             <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
                             <h1>{{recipe.title}}</h1>
                             </a>
-                            <p>{{recipe.description|safe|linebreaksbr|truncatechars:120}}.</p>
+                            <p>{{recipe.description|truncatewords_html:18|safe}}</p>
                             <span class="lee">
                             <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
                             Leer mas..
@@ -201,7 +206,7 @@
                                 <a href ="{% url 'apprecetas:receta' receta.slug %}">
                                 <h1> {{receta.title}}</h1>
                                 </a> 
-                                <p>{{receta.description|safe|linebreaksbr|truncatechars:200}}.</p>   
+                                <p>{{receta.description|truncatewords_html:18|safe}}.</p>   
                                 <span class="lee"> 
                                 <a href ="{% url 'apprecetas:receta' receta.slug %}">
                                 Leer mas...
@@ -253,7 +258,7 @@
                 <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
                 <h1>{{perderpeso.title}}</h1>
                 </a>
-                <p>{{perderpeso.description|safe|truncatechars:120}}.</p>
+                <p>{{perderpeso.description|truncatewords_html:18|safe}}.</p>
                 <span class="lee"> 
                 <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
                 Leer mas..
@@ -298,7 +303,7 @@
                   <a href ="{% url 'appblog:post' post.slug %}">
                   <h1>{{post.title}}</h1>
                   </a>
-                  <p>{{post.description|safe|linebreaksbr|truncatechars:65}}.</p>
+                  <p>{{post.description|truncatewords_html:18|safe}}.</p>
                   <span class="lee">
                   <a href ="{% url 'appblog:post' post.slug %}">
                   Leer mas...
@@ -337,7 +342,7 @@
                   <a href ="{% url 'appturismo:post' posturismo.slug %}">
                   <h1>{{posturismo.title}}</h1>
                   </a>
-                  <p>{{posturismo.description|safe|linebreaksbr|truncatechars:65}}.</p>
+                  <p>{{posturismo.description|truncatewords_html:18|safe}}.</p>
                   <span class="lee"> 
                   <a href ="{% url 'appturismo:post' posturismo.slug %}">
                   Leer mas...
@@ -549,39 +554,42 @@
          <div class ="row-ultimos-y-categorias">        
 
 
-             <!--FLOAT LEFT..TODOS LOS POSTS------->
-             <div class="columna-left">
+          <!--FLOAT LEFT..TODOS LOS POSTS------->
+          <div class="columna-left">
 
-                 <!---------FLOAT LEFT------------------------------------------>
-                 <div class="posts-ultimos-left">
+              <!---------FLOAT LEFT------------------------------------------>
+              <div class="posts-ultimos-left">
 
 
 
-                       <!---DEBE IR EN COLUMNA---->
-                    {% for recipe in recipes %}
-                     <div class="post-ultimo-encolumna">
+                  <!---DEBE IR EN COLUMNA---->
+                  {% for recipe in recipes %}
+                  <div class="post-ultimo-encolumna">
+
                      <!----ROW---------------------------->
-                        <div class="ultimo-imagen-titulo">
+                      <div class="ultimo-imagen-titulo">
                  
-                      <div class="post-ultimo-imagen">
-                      {% if recipe.imagenfront %}
-                      <img src ="{{recipe.imagenfront.url}}" >
-                      {% endif %}
-                      </div>
+                         <div class="post-ultimo-imagen">
+                         {% if recipe.imagenfront %}
+                         <img src ="{{recipe.imagenfront.url}}" >
+                         {% endif %}
+                         </div>
 
-                      <!--TITULO Y DECSRIPCION---->
-                      <div class="posts-ultimos-titulo">
-                      <div class="post-ultimo-titulo">
-                      <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" >
-                      <h1>{{recipe.title}}</h1>
-                      </a>
-                      <p>{{recipe.description|safe|linebreaksbr|truncatechars:65}}</p>
-                      <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
-                      <p>Leer mas...</p>
-                      </a>
-                      </div>
-                      </div>
-                      <!------------------------------------->
+                         <!--TITULO Y DECSRIPCION---->
+                         <div class="posts-ultimos-titulo">
+                         <div class="post-ultimo-titulo">
+                         <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}" >
+                         <h1>{{recipe.title}}</h1>
+                         </a>
+                         <p>{{recipe.description|truncatewords_html:18|safe}}</p>
+                         <span class="lee">
+                         <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                         Leer mas...
+                         </a>
+                         </span>
+                         </div>
+                         </div>
+                         <!------------------------------------->
                       </div>
                       <!---------------FIN ROW--->
                       </div>

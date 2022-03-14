@@ -200,10 +200,13 @@
 
                     <div class="post-descripcion">
                     <div class ="post-descripcion-columna">
+                    <a href ="{% url 'appturismo:post' posturismo.slug %}">
                     <h1>{{posturismo.title}}</h1>  
-                    <p>{{posturismo.description|linebreaksbr|truncatechars:50}} </p>
+                    </a>
+                    <p>{{posturismo.description|truncatewords_html:22|safe}} </p>
                     <a href ="{% url 'appturismo:post' posturismo.slug %}" class="arrow1">
-                    LEER MAS <span class="arrow-right"></span></a>
+                    LEER MAS <span class="arrow-right"></span>
+                    </a>
                     </div>
                     </div>
                     <!-------------------------------------->                  

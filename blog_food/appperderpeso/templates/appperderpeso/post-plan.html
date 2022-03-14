@@ -55,22 +55,57 @@
    <div class= "columna-primera">
          {% block content %}
          <div class="primera-columna">
-                {% for perderpeso in post %}
-                <!-- caja 1-------------------------->
-                <div class="primer-articulo">
+            <div class="primero-descripcion-y-fotoprincipal">
+             
+                    {% for perderpeso in post %}
+                    <!-- caja 1-------------------------->
+                    <div class="primer-articulo">
                     <!-- TITULO 1-----------------> 
                     <h1>  {{perderpeso.title}}</h1> 
                     <!-- DESCRIPCION--------------->              
-                    <p> {{perderpeso.description}}</p> 
-                    <!----------LINK PARA ACORTAR EL ARTICULO--------------------------->                              
-              </div>
+                    <p> {{perderpeso.description}}</p>                 
+                    </div>
+                    <!---------------------------------->              
 
-              <div class= "fecha">
-              <p>{{perderpeso.publish}}</p> 
-              </div>   
-                      <!------------------------------------------------------->
+
+                  <!------AUTOR Y FECHA-------------------------->
+                  <div class= "row-autor-nombre-fecha">
+
+                   <!--------------------------------->
+                   <div class="row-autor-nombre">
+                   <!------------------------------>
+                   <div class="autor-foto">
+                   {% if post.imageauthor %}
+                   <img src="{{perderpeso.imageauthor.url}}" alt="" >
+                   {% endif %}
+                   </div>
+
+                  <div class="autor-letra">
+                  <em><h3>Por: {{perderpeso.author}}</h3></em>
+                  </div>
+                  <!------------------------------->
+                  </div>
+                  <!--------------------------------->
+
+
+
+                 <!-------------------------------->
+                  <div class="fecha">
+                  <p>{{perderpeso.publish}}</p>
+                  </div>
+                <!--------------------------------->
+                </div>
+                <!-------------------------------->
+          
+
+
+
+
+
+
+                         <!--------------------------------------------->
                          <div class="imagen-central">
-                            <div class="redes">
+                               <div class="redes">
                                 <ul class="iconos-social">
                                 <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
                                 <i class="fas fa-envelope"></i> </a> <br>
@@ -87,16 +122,29 @@
                                 <i class="fab fa-instagram"></i> </a> <br>
                                 </li>
                               </ul>
-                           </div>
+                              </div>
 
-                          <!-- TENIA PROBLEMAS CON LA IMAGEN SALIA ERROR CON IF SE SOLUCIONO-->   
-                          <div class="imagen-principal">          
-                          {% if perderpeso.image %}
-                           <img src="{{perderpeso.image.url}}" alt="" >
-                          {% endif %}                         
+                         
+                             <div class="imagen-principal">          
+                             {% if perderpeso.image %}
+                             <img src="{{perderpeso.image.url}}" alt="" >
+                            {% endif %}                         
+                            </div>
                         </div>
-                        </div>
-      <!---------------------------FIN DE IMAGEN CENTRAL---------------------------->
+                       <!-------------------FIN DE IMAGEN CENTRAL--------------------->
+
+         <!---------------------------------------------------------------------------->
+        </div> 
+        <!-----------FIN FOTO Y DESCRIPCION--------------------------------------->
+
+
+
+
+
+    <div clas="articulovacio-articulolleno">
+        <div class="articulovacio"></div>
+
+           <div class="articulolleno">
 
               <!--- <div class="segundo-articulo" data-anime="top"---------------->
               <!-- caja 2-------------------------------------------------------->
@@ -125,7 +173,7 @@
                 </div>
                  {% endif %}
 
-      <!-------------PRIMERA SEMANA----------PLANES DE ALIMENTACION----------------------->
+               <!-------------PRIMERA SEMANA----------PLANES DE ALIMENTACION----------------------->
                <div class="semana">
                    <div class="imagen-semana">
                     {% if perderpeso.imagefirstweek %}
@@ -490,7 +538,7 @@
                     </div>
                   {% endif %}  
 
-  </div>
+              </div>
 
 
           <!---------------DIA 15---------------------->
@@ -501,7 +549,8 @@
                    <h2>{{perderpeso.titlediaquince|safe}}</h2>
                    </div>
                    {% endif %}
-                   <div class="imagen-dia">
+
+                     <div class="imagen-dia">
                      {% if perderpeso.imagediaquince %}
                     <img src="{{perderpeso.imagediaquince.url}}" alt="">
                     {% endif %} 
@@ -652,7 +701,7 @@
                     {% endif %} 
                    </div>
 
-                  <div class="imagen-semana-dos">
+                   <div class="imagen-semana-dos">
                     {% if perderpeso.imagecuatroweek %}
                     <img src="{{perderpeso.imagecuatroweek.url}}" alt="">
                     {% endif %} 
@@ -669,15 +718,15 @@
                     <p>{{perderpeso.contenfourweek|safe}}</p>
                     </div>   
                      {% endif %} 
-     </div>
+              </div>
 
                <!----DIA---22-------------->
-          <div class="container-dia">
-                      {% if perderpeso.titlediaveintidos %}
+             <div class="container-dia">
+                   {% if perderpeso.titlediaveintidos %}
                    <div class="plan-titulo-dia"> 
-                    <h2>{{perderpeso.titlediaveintidos|safe}}</h2>
+                   <h2>{{perderpeso.titlediaveintidos|safe}}</h2>
                    </div>
-                      {% endif %}
+                   {% endif %}
                      <div class="imagediaone">
                      {% if perderpeso.imagediaveintidos %}
                     <img src="{{perderpeso.imagediaveintidos.url}}" alt="">
@@ -695,10 +744,10 @@
                      {% if perderpeso.titlediaveintitres %}
                     <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediaveintitres|safe}}</h2>
-                   </div>
-                     {% endif %}
-                     <div class="imagen-dia">
-                     {% if perderpeso.imagediaveintitres %}
+                    </div>
+                    {% endif %}
+                    <div class="imagen-dia">
+                    {% if perderpeso.imagediaveintitres %}
                     <img src="{{perderpeso.imagediaveintitres.url}}" alt="">
                     {% endif %} 
                     </div> 
@@ -710,13 +759,13 @@
 
                      <!--- DIA 24-------------------------->
               <div class="container-dia">
-                       {% if perderpeso.titlediaveinticuatro %}
-                     <div class="plan-titulo-dia"> 
+                    {% if perderpeso.titlediaveinticuatro %}
+                    <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediaveinticuatro|safe}}</h2>
-                   </div>
-                     {% endif %}
-                     <div class="imagen-dia">
-                     {% if perderpeso.imagediaveinticuatro %}
+                    </div>
+                    {% endif %}
+                    <div class="imagen-dia">
+                    {% if perderpeso.imagediaveinticuatro %}
                     <img src="{{perderpeso.imagediaveinticuatro.url}}" alt="">
                     {% endif %} 
                     </div> 
@@ -730,12 +779,12 @@
                       <!-- DIA 25-------------------------->
                <div class="container-dia">
                     {% if perderpeso.titlediaveinticinco %}
-                   <div class="plan-titulo-dia"> 
+                    <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediaveinticinco|safe}}</h2>
                     </div>
-                     {% endif %}
-                     <div class="imagen-dia">
-                     {% if perderpeso.imagediaveinticinco %}
+                    {% endif %}
+                    <div class="imagen-dia">
+                    {% if perderpeso.imagediaveinticinco %}
                     <img src="{{perderpeso.imagediaveinticinco.url}}" alt="">
                     {% endif %} 
                     </div>  
@@ -748,58 +797,58 @@
 
                    <!---DIA 26------------------------>
            <div class="container-dia">
-                      {% if perderpeso.titlediaveintiseis %}
-                     <div class="plan-titulo-dia"> 
-                     <h2>{{perderpeso.titlediaveintiseis|safe}}</h2>
-                     </div>
-                     {% endif %}
-                     <div class="imagen-dia">
-                      {% if perderpeso.imagediaveintiseis %}
-                    <img src="{{perderpeso.imagediaveintiseis.url}}" alt="">
-                    {% endif %} 
-                    </div>  
+                {% if perderpeso.titlediaveintiseis %}
+                <div class="plan-titulo-dia"> 
+                <h2>{{perderpeso.titlediaveintiseis|safe}}</h2>
+                </div>
+                {% endif %}
+                <div class="imagen-dia">
+                {% if perderpeso.imagediaveintiseis %}
+                <img src="{{perderpeso.imagediaveintiseis.url}}" alt="">
+                {% endif %} 
+                </div>  
 
-                    <div class="dia">
-                     <p>{{perderpeso.diaveintiseis|safe}}</p>
-                   </div>
+                <div class="dia">
+                <p>{{perderpeso.diaveintiseis|safe}}</p>
+                </div>
 
               </div>
 
                      <!---DIA 27-------------------------->
-                 <div class="container-dia">
-                    {% if perderpeso.titlediaveintisiete %}
-                   <div class="plan-titulo-dia"> 
-                     <h2>{{perderpeso.titlediaveintisiete|safe}}</h2>
-                    </div>
-                     {% endif %}
-                     <div class="image-dia">
-                    {% if perderpeso.imagediaveintisiete %}
-                   <img src="{{perderpeso.imagediaveintisiete.url}}" alt="">
-                    {% endif %} 
-                    </div> 
+              <div class="container-dia">
+                  {% if perderpeso.titlediaveintisiete %}
+                  <div class="plan-titulo-dia"> 
+                  <h2>{{perderpeso.titlediaveintisiete|safe}}</h2>
+                  </div>
+                  {% endif %}
+                  <div class="image-dia">
+                  {% if perderpeso.imagediaveintisiete %}
+                  <img src="{{perderpeso.imagediaveintisiete.url}}" alt="">
+                  {% endif %} 
+                  </div> 
 
-                    <div class="dia">
-                    <p>{{perderpeso.diaveintisiete|safe}}</p>
-                   </div>
+                  <div class="dia">
+                  <p>{{perderpeso.diaveintisiete|safe}}</p>
+                  </div>
 
              </div>
 
                       <!---DIA 28--------------------------->
           <div class="container-dia">
-                   {% if perderpeso.titlediaveintiocho %}
+                  {% if perderpeso.titlediaveintiocho %}
                   <div class="plan-titulo-dia"> 
-                 <h2>{{perderpeso.titlediaveintiocho|safe}}</h2>
-                 </div>
-                    {% endif %}
-                     <div class="imagen-dia">
-                        {% if perderpeso.imagediaveintiocho %}
-                    <img src="{{perderpeso.imagediaveintiocho.url}}" alt="">
-                    {% endif %} 
-                    </div> 
+                  <h2>{{perderpeso.titlediaveintiocho|safe}}</h2>
+                  </div>
+                  {% endif %}
+                  <div class="imagen-dia">
+                  {% if perderpeso.imagediaveintiocho %}
+                  <img src="{{perderpeso.imagediaveintiocho.url}}" alt="">
+                  {% endif %} 
+                  </div> 
 
-                    <div class="dia">
-                        <p>{{perderpeso.diaveintiocho|safe}}</p>
-                   </div>
+                  <div class="dia">
+                  <p>{{perderpeso.diaveintiocho|safe}}</p>
+                  </div>
 
               </div>
               <!-- quinta caja---------------------------------------------------->
@@ -811,22 +860,39 @@
 
              <!----------------FINAL--------------------------------->
           
-             <div class="title-fin">
-             {% if perderpeso.titlefin %} 
-                 <h2>{{perderpeso.titlefin|safe}}</h2>
-                {% endif %} 
-             </div>
+            <div class="title-fin">
+            {% if perderpeso.titlefin %} 
+            <h2>{{perderpeso.titlefin|safe}}</h2>
+            {% endif %} 
+            </div>
             
 
 
-             <div class="content-fin">
-               <p>{{perderpeso.contentfin|safe}}</p>
-             </div>
+            <div class="content-fin">
+            <p>{{perderpeso.contentfin|safe}}</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!---articulo lleno-->
+    </div>
+    <!---ARTICULO LLENO Y ARTICULO VACIO------>
+
+
+
+
+
        <!---SEXTA CAJA CON DOS TITULOS (TERCER TITULO DE DOS)------->
               <section class="articulo-ultimo">
-                    <div class="autor-solo-nombre">
-                    <em><p>{{perderpeso.author}}</p></em>
-                    </div>
+                   
                      <!--CATEGORIA TITULO SIN LINK---> 
                     <div class="categoria-en-post">
                     <em> <h2>Categoria:{{ perderpeso.categoria }}</h2></em>        
@@ -838,34 +904,30 @@
                                    
                                 
 
-                                  <div class="categorias-posts-links">  
-                                        <em><h4>   Categorias: </h4></em>
-                                        {% load mptt_tags %}
-                                       {% for categoria in categories %}   
-                                       <a href="/plan-comidas-saludables/categoria/{{ categoria.slug}}"  style="text-decoration: none">
-                                       <em><h3>{{ categoria.name }}</h3></em></a> 
-                                       {% endfor %}
-                                       <!--ENDFOR ENTRO DE LA CAJA PORQUE SI NO SE DESTROZA LA PAGINA--->
-                                </div>
-                                    
-                                    <!--ENDFOR FINAL DE LA CATEGORIA  con links---> 
+                      <div class="categorias-posts-links">  
+                      <em><h4>Categorias: </h4></em>
+                      {% load mptt_tags %}
+                      {% for categoria in categories %}   
+                      <a href="/plan-comidas-saludables/categoria/{{ categoria.slug}}"  style="text-decoration: none">
+                      <em><h3>{{ categoria.name }}</h3></em></a> 
+                      {% endfor %}
+                      </div>
+                  <!--ENDFOR FINAL DE LA CATEGORIA  con links---> 
                                                                                   
-       <!--if not forloop.last endif es para ES PARA REPETIR EL ARTICULO QUE CORRESPONDA --->  
-       <!---------------ENDFOR FINAL DE TODO EL ARTICULO --FOR POST IN POSTS------------------------- --->  
-       {% endfor %} 
+       
+        <!---------------ENDFOR FINAL DE TODO EL ARTICULO --FOR POST IN POSTS------------------------- --->  
+        {% endfor %} 
+        <!--HASTA AQUI EL POST DE DJANGO----------------------------->
+        <!-- CIERRE DIV DE PRIMERA COLUMNA------------------------------------->
+        </div> 
+   
+        <!-- CIERRE DIV DE  COLUMNA PRIMERA------------------->
+   
+        {% endblock content %}
 
- <!--HASTA AQUI EL POST DE DJANGO----------------------------------------------------------------------------------------------------------------------------------------->
+        <!--------------INCLUYENDO LA PAGINATION ------------------------------------->
 
- <!-- CIERRE DIV DE PRIMERA COLUMNA----------------------------------------------------------------------------------------------->
-       </div> 
-     {% endblock content %}
-    <!-- CIERRE DIV DE  COLUMNA PRIMERA------------------->
-      </div>  
-
-
-                                              <!--------------INCLUYENDO LA PAGINATION ------------------------------------------------------------------------>
-
-
+     </div>  
 
 
 
