@@ -1055,58 +1055,65 @@ margin-top: 18px;
 
   /*--------------------------------------*/
 
-  /*...POSTS ULTIMOS....................*/  
-   .bloque-posts-ultimos{
-    width: 100%;
-   display: block;
-   position: relative;
-   float: left;
-     }
+  /*---LINKS DECORADOS DE POSTS ULTIMOS*/
+      
+ 
 
-    /*SEGMENTO DE LOS POSTS ULTIMOS....................2  */
-    .bloque-posts-ultimos .row-ultimos-y-categorias{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 10px;  /*IMPORTANTE PARA ESPACIO DE UN BLOQUE AL OTRO*/
-    }
+
   
-   .row-ultimos-y-categorias .columna-left{
-    width:79%;
-    max-width: 800px;
+  /*SEGMENTO DE LOS POSTS ULTIMOS............................................................................2  */
+   .dos-columnas{
+    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;  /*IMPORTANTE PARA ESPACIO DE UN BLOQUE AL OTRO*/
+  background-color: #0672d0;
+  }
+  
+ .columna-left{
+    width:80%;
+    max-width: 700px;
     display: block;
     position: relative;
-    float: left;
+    float: right;
+    background-color: olive;
      }
 
+
+    .bloque-ultimo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+     }
 
 
       /*800px*/
-   .posts-ultimos-left{
+  .posts-ultimos{
    width: 100%;
-   max-width: 750px;
-   display: block;
-   position: relative;
-   float: left;
-   border-top: 1px solid #d9d9d9;
-   }
+  max-width: 750px;
+  display: block;
+ 
+  border-top: 1px solid #d9d9d9;
+  background-color: orangered;
+  }
 
     .post-ultimo-encolumna{
       display: flex;
       flex-direction: column;
-      width: 100%;
+      background-color: #0672d0;
     }
-
-    .post-ultimo-encolumna .ultimo-imagen-titulo{
-     width: 100%;
+    .posts-ultimos .post-ultimo{
+       width: 100%;
      display: flex;
      flex-direction: row;
      justify-content: space-between;
      margin-bottom: 30px;
+     background-color: aquamarine;
       }
   
-      .post-ultimo-imagen{
+      .posts-ultimos-imagen{
       display:block;
       position: relative;
       float: left;
@@ -1114,9 +1121,10 @@ margin-top: 18px;
       max-width: 280px;
       height: 145px;   /*MUY IMPORTANTE PARA QUE LA IMAGEN NO CREZCA*/
       margin-right: 10px;
+
       }
   
-     .post-ultimo-imagen img{
+     .posts-ultimos-imagen img{
       width: 100%;
       max-width: 250px;
       height: 100%;
@@ -1136,102 +1144,107 @@ margin-top: 18px;
       width: 100%;
       display: flex;
       flex-direction: column;
+
      }
 
-     .ultimo-imagen-titulo  .posts-ultimos-titulo .post-ultimo-titulo  a h1{
+     .posts-ultimos .post-ultimo  .posts-ultimos-titulo .post-ultimo-titulo  a h1{
       font-size: 1.4rem;
       margin-top: 10px;
       margin-bottom: 0px;
       color: #000000;
-     }
+    }
   
      
-     .ultimo-imagen-titulo   .posts-ultimos-titulo .post-ultimo-titulo p{
+  .posts-ultimos .post-ultimo  .posts-ultimos-titulo .post-ultimo-titulo p{
     font-size: 1rem;
     color:  #2d2d2d;
-    margin-top: 0px;
-    padding-top: 0;
+  margin-top: 0px;
+  padding-top: 0;
+ 
     }
 
-     .posts-ultimos-titulo .post-ultimo-titulo .lee{
+    .posts-ultimos-titulo .post-ultimo-titulo .lee{
       font-size: 1rem;
       color:  #2d2d2d;
+
       }
   
     /*..EL ASIDE.....EXPLORAR CATEGORIAS RECETAS DIETETICAS............*/
-    .columna-right{
+  .columna-right{
     display: block;
+    position: absolute;
     float: right;
-    position: relative;
-    width: 20%;
-    max-width: 400px;
-    }
+   width: 330px;
+    margin-left: 900px;
+   }
 
-    .columna-right-column{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 400px;
-    }
+   .columna-right-segunda{
+    display: block;
+    position: relative;
+    float: right;
+   width: 100%;
+   max-width: 330px;
+   }
 
 
     /*  background-color:  #EDFEED;            #FEF6ED*/
-    /*...#fddfdc.....#bceca5   #d6ffbf  #f9f9f9*       #feefed*/
-    .explora{
+   /*...#fddfdc.....#bceca5   #d6ffbf  #f9f9f9*       #feefed*/
+  .explora{
     width: 100%;
-    max-width: 330px;
-    margin: auto;
-    }
+   max-width: 330px;
+    display: flex;
+    flex-direction: column;
+  }
 
     /*EXPLORAR*/
     .explora h1{
-    font-size: 1.6rem;
-    color: #000000;
+      font-size: 1.6rem;
+      color: #000000;
      text-align: center;
      text-decoration: underline;
      margin-bottom: 20px;
     }
 
-   .columna-right-categorias{
-   width: 100%;
-   display: flex;
-   flex-direction: column;
+  .columna-vertical{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
    }
-
      /*background-color:  #EDEDFE ;*/
     /*..#56863..*/
-   .right-row-imagen-titulo{
+   .columna-right .subcontainer-right{
    width: 100%;
    max-width: 330px;
    display: flex;
    flex-direction:row;
-   margin: auto;
    border-bottom: 2px solid #eeeeee ;
    margin-bottom: 10px;
     background-color:  #FEEDF6;
    }
 
-   .right-imagen{
+   .imagen-right {
     width: 22%;
     max-width: 65px;
     margin-left: 22px;
     }
  
 
-   .right-imagen img{
+   .imagen-right img{
     width: 100%;
     }
 
-    .right-titulo{
+    .titulo-right {
     width: 200px;
     margin-left: 35px;
+
     }
 
-    .right-titulo h1{
-    font-size: 1.2rem;
-    color: #000000;
-    margin-top: 7px;
-     }
+  .titulo-right h1{
+   font-size: 1.2rem;
+   color: #000000;
+  margin-top: 7px;
+
+  }
    
 
     /*LINEA HORIZONTAL QUE SEPARA SEGMENTO DE 4POST CON FOTO GRANDE DE OTRO*/

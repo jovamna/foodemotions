@@ -37,24 +37,24 @@
 
 
      {% block content %}
-        <div class="primera-columna">
+    <div class="primera-columna">
 
-             {% for post in posts %}
-             <!-- caja 1-------------------------->
-             <div class="primer-articulo">
-              <!-- TITULO 1-----------------> 
-             <h1>   {{post.title}} </h1>
-              <p> {{post.description}}</p>  
-             <!-- DESCRIPCION--------------->               
-             </div>
+                {% for post in posts %}
+                <!-- caja 1-------------------------->
+                <!-- TITULO 1-----------------> 
+                <div class="primer-articulo">
+                <h1>   {{post.title}} </h1>
+                <p> {{post.description}}</p>               
+                </div>
+               <!---------------------------------->
 
 
-            <div class= "fecha">
-             <p>{{post.publish}}</p> 
-            </div>
+                <div class= "fecha">
+                <p>{{post.publish}}</p> 
+                </div>
         
-            <!--------------------------------------->
-              <div class="imagen-central">
+                <!--------------------------------------->
+                <div class="imagen-central">
 
 
                     <div class="redes">
@@ -84,79 +84,81 @@
                   </div>
 
                   
-         </div>
-   <!-------------------FIN DE IMAGEN CENTRAL--------------------------------------------------------------------->
+                </div>
+                <!-------------------FIN DE IMAGEN CENTRAL--------------------->
 
-            <!---- <div class="segundo-articulo" data-anime="top">--->
-            <!-- caja 2-------------------------------------------------------->
-            <div class="segundo-articulo">
-            <!-- SUBTITULO 2------------------->
-             {% if post.subtitle %}
-            <h1>{{post.subtitle|safe}}</h1> 
-             {% endif %}
-             {% if post.content %}
-            <p>{{post.content|safe}}</p> 
-             {% endif %} 
-           </div>
 
-   <!---------------------------------------------------------------------->
-          {% if post.cursiva %}  
-         <div class="cursiva">
-            <p><em>{{post.cursiva|safe}}</em> </p>
-         </div>
-          {% endif %} 
-   <!------------------------------------------------------------------------>
+
+                <!---- <div class="segundo-articulo" data-anime="top">--->
+                <!-- caja 2-------------------------------------------------------->
+                <!-- SUBTITULO 2------------------->
+                <div class="segundo-articulo">
+                {% if post.subtitle %}
+                <h1>{{post.subtitle|safe}}</h1> 
+                {% endif %}
+                {% if post.content %}
+                <p>{{post.content|safe}}</p> 
+                {% endif %} 
+                </div>
+
+               <!---------------------------------------------->
+               {% if post.cursiva %}  
+               <div class="cursiva">
+               <p><em>{{post.cursiva|safe}}</em> </p>
+               </div>
+               {% endif %} 
+               <!----------------------------------------------->
                         
                  
-         <!-- BLOCQUOTE--------------------------------------------------------->
-         {% if post.blocquote %}
-            <blockquote class="blockquote blockquote-bordered blockquote-quoted">
+               <!-- BLOCQUOTE--------------------------------------------------------->
+               {% if post.blocquote %}
+               <blockquote class="blockquote blockquote-bordered blockquote-quoted">
                <p class="blockquote-text"><em> {{post.blocquote}}</em> </p>
                <p class="blockquote-text blockquote-text-credit"> </p>
-         </blockquote>
-         {% endif %}
+               </blockquote>
+               {% endif %}
+              <!------------------------------------------------------------------------------------>
 
-     <!------------------------------------------------------------------------------------>
-          <!--TITULO------NARRATIVA--------------->
-          
-         <div class="contentwo">
-          {% if post.subtitleuno %}
-            <div class="title-two">
-           <h1> {{post.subtitleuno|safe}}</h1>
-           </div>
-           {% endif %} 
-           <!---CONTENIDO---NARRATIVA---------->
-            {% if post.narrativa %}
-           <div class="content-two">
-           <p> {{post.narrativa|safe}}</p>
-          </div> 
-          {% endif %} 
-      </div> 
-     <!-------------------------------------------------------------------------------->                   
+             <!--TITULO------NARRATIVA--------------->
+             <div class="contentwo">
+             {% if post.subtitleuno %}
+             <div class="title-two">
+             <h1> {{post.subtitleuno|safe}}</h1>
+             </div>
+            {% endif %} 
+             <!---CONTENIDO---NARRATIVA---------->
+             {% if post.narrativa %}
+             <div class="content-two">
+             <p> {{post.narrativa|safe}}</p>
+             </div> 
+             {% endif %} 
+     
+     <!--------------------------------------------------------------------------------> 
+
          <!-- UNO----------------UNO-------------->
          <div class="contentwo">
-             {% if post.titleone %}
-            <div class="title-two">
-            <h1>{{post.titleone|safe}}</h1>  
-            </div> 
-               {% endif %}  
-          <!----------IMAGEN-------->
-            {% if post.imageone %}
-           <div class="image-two">
-            <img src="{{post.imageone.url}}" alt="">
-          </div>
-           {% endif %}  
-         <!-- SUBTITULO-----------> 
-          {% if post.subtitleone %}
-         <div class="subtitle-two">
-         <h2> {{post.subtitleone|safe}} </h2>
-         </div>
-           {% endif %}
-         <!--CONTENIDO  UNO----------> 
-          {% if post.contenone %} 
-         <div class="content-two">
-         <p> {{post.contenone|safe}}</p>
-         </div>
+               {% if post.titleone %}
+               <div class="title-two">
+               <h1>{{post.titleone|safe}}</h1>  
+                </div> 
+                {% endif %}  
+                <!----------IMAGEN-------->
+                {% if post.imageone %}
+                <div class="image-two">
+                <img src="{{post.imageone.url}}" alt="">
+                </div>
+                {% endif %}  
+                <!-- SUBTITULO-----------> 
+                {% if post.subtitleone %}
+                <div class="subtitle-two">
+                <h2> {{post.subtitleone|safe}} </h2>
+                </div>
+                {% endif %}
+                <!--CONTENIDO  UNO----------> 
+                {% if post.contenone %} 
+                <div class="content-two">
+                <p> {{post.contenone|safe}}</p>
+                </div>
             {% endif %}  
       </div>
 
@@ -309,7 +311,7 @@
              {% endif %} 
          </div>
          
-
+    </div> 
   <!------------------------------------------------------------------------------------------->
 
 

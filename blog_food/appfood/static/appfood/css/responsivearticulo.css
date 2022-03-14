@@ -1389,26 +1389,21 @@ border-radius:6px;
     margin: auto;
    }
 
-  /*FECHA EN INICIO DEL POST*/
-  .primer-articulo h4{
-  font-size: 0.8rem;
-  color: #2D2D2D;
-  }
 
 
    /*PRIMER ARTICULO TITULO*/
    .primer-articulo h1{
-   font-size: 1.9rem;
+   font-size: 1.5rem;
    color:#000000;
    font-weight: 800;
    font-family: 'Times New Roman', Times, serif;
    letter-spacing: -0.3px;
-   word-spacing: -0.1px;
+   word-spacing: -1px;
    }
  
 
     .primer-articulo p {
-      font-size: 1.4rem;    
+      font-size: 1rem;   
     }
      
    /*FECHA*/
@@ -1497,18 +1492,18 @@ border-radius:6px;
    
      /*SEGUNDO TITULO*/
      .segundo-articulo h1{
-      font-size: 1.7rem;
+      font-size: 1.3rem;
       color:#000000;
       font-weight: 900;
       font-family: 'Times New Roman', Times, serif;
-      letter-spacing: -1.2px;
+      letter-spacing: -0.9px;
       word-spacing: 0.9px;
       }
 
    
      
      .segundo-articulo p {
-      font-size: 1.5rem;    
+      font-size: 1rem;   
      }
 
      .cursiva{
@@ -1516,32 +1511,7 @@ border-radius:6px;
       margin-left: 15px;
     }
 
-   
-    .imageone{
-    width: 100%;
-    height: 100%;
-    }
 
-
-      .imageone  img{
-      width: 100%;
-      height: 220;
-      }
-
-
-      .title-two{
-        width: 100%;
-      }
-
-
-    /*TECER TITULO*/
-    .title-two H1{
-    font-size: 1.9rem;
-    color:#000000;
-    font-weight: 900;
-    font-family: 'Times New Roman', Times, serif;
-    letter-spacing: -1px;
-      }
    
       
       .blockquote .blockquote-text{
@@ -1583,31 +1553,60 @@ border-radius:6px;
     }
 
 
-      .contentwo{
-       display: flex;
-       flex-direction: column;
-      width: 92%;
-      margin: auto;
-      }
-     
+   /*APARYADO DE ARTICULOS CO IMAGENES*/
+    .contentwo{
+      display: flex;
+      flex-direction: column;
+     width: 92%;
+     margin: auto;
+    }
 
-     .title-two{
-       display: flex;
-       width: 100%;
-       margin-top: 20px;
-     }
+    .contentwo .title-two{
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+    }
 
-     .contentwo .title-two h1{
+    .contentwo .title-two h1{
       font-size: 1.5rem;
+    color:#000000;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: -0.4px;
+    word-spacing: -1.5px;
      }
+   
+    .contentwo .image-two{
+    width: 100%;
+    height: 100%;
+    }
 
-    .contentwo .subtitle-two h2{
-      font-size: 1.3rem;
-     }
 
-    .contentwo  .content-two  p{
-      font-size: 1rem;
-     }
+      .image-two  img{
+      width: 100%;
+      height: 220;
+      }
+
+      .contentwo .subtitle-two{
+      display: block;
+      }
+
+      .contentwo .subtitle-two h2{
+        font-size: 1.3rem;
+       }
+  
+      /*...DESCRIPCION..*/
+       .contentwo .content-two{
+        display: block;
+        width: 100%;
+        }
+
+      .contentwo  .content-two  p{
+        font-size: 1rem;
+       }
+     
+     
+  
 
     /*PAGINA PERDER PESO PLAN DE COMIDAS*/
     .semana{
@@ -1649,7 +1648,7 @@ border-radius:6px;
       .articulo-ultimo{
       width: 92%;
       margin: auto;
-      margin-top: 1px;
+      margin-top: 10px;
      }
 
        /*DE LA PAGINA POST PLAN...*/

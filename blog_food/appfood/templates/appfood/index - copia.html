@@ -113,37 +113,42 @@
    <!---------------------------------------------------------------------------------------------------------------------------->
 
 
-     {% block ultimos_posts %}
+
     <!-------------------------------LO ULTIMO------- data-anime="top"---------------------------------------->
-    
+      {% block ultimos_posts %}
           <div class="titulo">
                 <div class="vacio"></div>
                 <div class="escrito"><h1>ùltimas entradas</h1></div>
                 <div class="vacio"></div>
           </div> 
 
- 
+
     
     <!------------------------------------------------->
-    <div class="bloque-posts-ultimos">
-        <!---ROW-------->
-         <div class ="row-ultimos-y-categorias">        
+
+     <!-- POSTS ULTIMOS----------------POSTS UTLIMOS-----POSTS ULTIMOS------------->
+    <div class ="dos-columnas">        
 
 
-             <!--FLOAT LEFT..TODOS LOS POSTS------->
-             <div class="columna-left">
+    <!--  CONTENEDOR COLUMNA DE POSTS ULTIMOS--------->
+    <div class="columna-left">
+    
+        <div class="bloque-ultimo">
 
-          
-        <!---------FLOAT LEFT-------------EMPEZANDO OTRO POSTS----------------2------------->
-          <div class="posts-ultimos-left">
-                   <!---DEBE IR EN COLUMNA---->
-                  {% for recipe in recipedietaultimo %}
+
+
+
+               <!------------------------------------------------------------------------->
+         {% for recipe in recipedietaultimo %}
+         <div class="posts-ultimos">
+            <!---DEBE IR EN COLUMNA---->
+                 
                      <div class="post-ultimo-encolumna">
                      <!----ROW---------------------------->
         
-                  <div class="ultimo-imagen-titulo">
+               <div class="post-ultimo">
                      <!--------------------------------->
-                      <div class="post-ultimo-imagen">
+                      <div class="posts-ultimos-imagen">
                       {% if recipe.imagenfront %}
                       <img src ="{{recipe.imagenfront.url}}" >
                       {% endif %}
@@ -171,76 +176,31 @@
                     <!--FIN -POS-ULTIMO------------------------>
                     
               </div>
-              {% endfor %}
+          
             </div>
-       
+           {% endfor %}
         <!------------------------------------------------------------------------------------->
 
+
+
+
+
+
+
+
+
+    
+
+
+
+
+      <!------------------------------------------------------------------>
       
-                 <!---------FLOAT LEFT--------------------------------1---------->
-                 <div class="posts-ultimos-left">
-             
-                     <!---FLEX COLUMN--DE LOS DITINTOS POST DE LAS CATEGORIAS--->
-                   {% for receta in recetaultimo %}
-                     <div class="post-ultimo-encolumna">
-
-
-                     <!----ROW---------------------------->
-                     <div class="ultimo-imagen-titulo">
-                          <!------------------------------->
-                          <div class="post-ultimo-imagen">
-                          {% if receta.imagefront %}
-                          <img src="{{receta.imagefront.url}}">
-                          {% endif %}
-                           </div>
-                          <!-------------------------------->
-                         <!----------------------------------------------------->
-                           <div class="posts-ultimos-titulo">
-                                <!------------------------------------->
-                                <div class="post-ultimo-titulo">
-                                <a href ="{% url 'apprecetas:receta' receta.slug %}">
-                                <h1> {{receta.title}}</h1>
-                                </a> 
-                                <p>{{receta.description|safe|linebreaksbr|truncatechars:200}}.</p>   
-                                <span class="lee"> 
-                                <a href ="{% url 'apprecetas:receta' receta.slug %}">
-                                Leer mas...
-                                </a>
-                                </span> 
-                                </div>
-                                <!------------------------------------->
-                            </div>
-                        <!-------FIN CONTAINER POSTS ULTIMOS-TITULO----------------------------->
-                    </div>
-                    <!--ROW------FIN -POSt-ULTIMO------------------------>
-
-
-
-
-               </div>
-              {% endfor %}
-               <!---POST-ULTIMO-ENCOLUMNA--->
-              </div>
-              <!-------FLOAT LEFT--HASTA QUI SEPARAR LOS POST DE OTRAS CATEGORIAS------1------->
-
-
-
-
-   
-
-
-
-
-
-
-
-      <!---------FLOAT LEFT-------------EMPEZANDO OTRO POSTS--------------3------------>
-          <div class="posts-ultimos-left">
+        <div class="posts-ultimos">
            {% for perderpeso in perderultimo %}
-            <div class="post-ultimo-encolumna">
-          <div class="ultimo-imagen-titulo">
+          <div class="post-ultimo">
               
-              <div class="post-ultimo-imagen">
+              <div class="posts-ultimos-imagen">
               {% if perderpeso.imagefront %}
               <img src ="{{perderpeso.imagefront.url}}" >
               {% endif %}
@@ -265,27 +225,74 @@
                 <!--------------------------------------------------------------------->
                 
               </div>   
-              </div>
               {% endfor %}
             </div>
            
-        <!-----------------------------------------------------------------------3-------------->
+        <!------------------------------------------------------------------------------------->
+
+
+        
+
+
+        
+            <!--------------------------------------------------->
+              {% for receta in recetaultimo %}
+              <div class="posts-ultimos">
+             
+                     <!---DEBE IR EN COLUMNA---->
+                 
+                     <div class="post-ultimo-encolumna">
+                     <!----ROW---------------------------->
+                     <div class="post-ultimo">
+
+                          <!------------------------------->
+                          <div class="posts-ultimos-imagen">
+                          {% if receta.imagefront %}
+                          <img src="{{receta.imagefront.url}}">
+                          {% endif %}
+                           </div>
+                          <!-------------------------------->
+
+
+
+                         <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------->
+                          <div class="posts-ultimos-titulo">
+                                <!------------------------------------->
+                                <div class="post-ultimo-titulo">
+                                <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                                <h1> {{receta.title}}</h1>
+                                </a> 
+                                <p>{{receta.description|safe|linebreaksbr|truncatechars:200}}.</p>   
+                                <span class="lee"> 
+                                <a href ="{% url 'apprecetas:receta' receta.slug %}">
+                                Leer mas...
+                                </a>
+                                </span> 
+                                </div>
+                                <!------------------------------------->
+                        </div>
+                        <!-------FIN CONTAINER POSTS ULTIMOS-TITULO----------------------------->
+
+                    </div>
+                    <!--FIN -POS-ULTIMO------------------------>
+               </div>
+               <!---POST-ULTIMO-ENCOLUMNA--->
+              </div>
+       {% endfor %}
+     <!-------------------------------------------------------------------->
 
 
 
 
 
 
-
-
-
-      <!---------FLOAT LEFT-------------EMPEZANDO OTRO POSTS--------------4----------->
-          <div class="posts-ultimos-left">
+        <!------------------------------------------------------------------------->
+     
+        <div class="posts-ultimos">
            {% for post in postultimo %}
-            <div class="post-ultimo-encolumna">
-            <div class="ultimo-imagen-titulo">
+            <div class="post-ultimo">
 
-                  <div class="post-ultimo-imagen">
+                  <div class="posts-ultimos-imagen">
                   {% if post.imagefront %}
                   <img src ="{{post.imagefront.url}}" >
                   {% endif %}
@@ -310,21 +317,18 @@
                 <!------------------------------------->
 
               </div> 
-              </div>
             {% endfor %}
           </div>            
-        <!------------------------------------------------------------------------4----->
+        
+        <!----------------------------------------------------------------------------->
 
-      
-        <!---------FLOAT LEFT-------------EMPEZANDO OTRO POSTS--------------5---------->
-        <div class="posts-ultimos-left">
-              {% for posturismo in posturisultimo %}
-               <div class="post-ultimo-encolumna">
+         <!------------------------------------------------------------------------->
+   
+        <div class="posts-ultimos">
+             {% for posturismo in posturisultimo %}
+            <div class="post-ultimo">
 
-
-                 <div class="ultimo-imagen-titulo">
-
-                  <div class="post-ultimo-imagen">
+                  <div class="posts-ultimos-imagen">
                   {% if posturismo.imagefront %}
                   <img src ="{{posturismo.imagefront.url}}" >
                   {% endif %}
@@ -347,14 +351,19 @@
                   <!------------------------------------------->
                  </div>
                 <!------------------------------------->
-
-                
               </div> 
-              <!---ULTIMO IMAGEN-TITULO---->
-              </div>
             {% endfor %}
           </div>            
-        <!---------------------------------------------------------------------5-------->
+        <!----------------------------------------------------------------------------->
+
+
+       <!------------------------------------------------------------------>
+    
+       </div>   
+       <!---FIN -bloque-ultimo--->
+      <!------------------------------------------------->
+    </div>
+    <!--FIN COLUMNA LEFT-->
 
 
 
@@ -364,90 +373,48 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         </div>
-            <!-- FIN DOS COLUMNAS----------------------->
- 
-
-
-
-
-
-
-
-
-      <!---------ASIDE-----------EXPLORA CATEGORIAS DIETETICAS-------------->
+      <!---------ASIDE-----------EXPLORA CATEGORIAS DIETETICAS------------------------------------------->
       <div class="columna-right">
           <div class ="columna-right-column">
 
-
-              <!-----------------B--->
               <div class ="explora">
               <h1> Explorar</h1>
               </div>
-              <!-----------------B---->        
-             <!---------------------------------A--->
-             {% for category in categories %}
-             <div class="columna-right-categorias">
+                      
+            
+
+            <!---------------------------->
+               {% for category in categories %}
+            <div class="columna-vertical">
               
-                  <div class="right-row-imagen-titulo">
-                        <!-------------------------->
-                         <div class="right-imagen">
+                <div class="subcontainer-right">
+                     <!-------------------------------------->
+                         <div class="imagen-right">
                           {% if category.image %}
                          <img src="{{category.image.url}}">
                          {% endif %}
-                         </div>
+                        </div>
 
-                        <div class="right-titulo">
+                        <div class="titulo-right">
                         <a href="/recetas-dieteticas/categoria/{{ category.slug }}"> 
                         <h1>{{ category.name }}</h1>
                         </a>
                         </div>
-                        <!--------------------------------->
-                  </div>    
+                    <!------------------------------------------------>
+              </div>    
             
            </div>
-            {% endfor %}
-           <!----------------------------------------A--------->
-          
+           <!----------------------------------------------->
+           {% endfor %}
 
         </div>
         </div>
       <!----------------------------------------------------------------->
-
-
-
       <!---------CIERRE DIV DOS COLUMNAS------------------------------------------------------>
       </div>
 
-  </div>
+
+
 
 
             <!--FIN DIS DOS COLUMNAS-CONTIENE LOS POSTS Y EL ASIDE-->
@@ -542,28 +509,26 @@
                 <div class="vacio">  </div>
             </div>
 
-  
-    <!------------------------------------------------->
-    <div class="bloque-posts-ultimos">
-        <!---ROW-------->
-         <div class ="row-ultimos-y-categorias">        
+      <!-- TROW--------------------->
+      <div class="dos-columnas">    
 
 
-             <!--FLOAT LEFT..TODOS LOS POSTS------->
-             <div class="columna-left">
+            <!-- FLOAT LEFT --------->
+            <div class="columna-left">
 
-                 <!---------FLOAT LEFT------------------------------------------>
-                 <div class="posts-ultimos-left">
+                  <!--EN COLUMNA----->
+                  <div class="bloque-ultimo">
+                 <!---flot left--->
+                <div class="posts-ultimos">
 
 
-
-                       <!---DEBE IR EN COLUMNA---->
                     {% for recipe in recipes %}
+                        <!---DEBE IR EN COLUMNA---->
                      <div class="post-ultimo-encolumna">
                      <!----ROW---------------------------->
-                        <div class="ultimo-imagen-titulo">
+                        <div class="post-ultimo">
                  
-                      <div class="post-ultimo-imagen">
+                      <div class="posts-ultimos-imagen">
                       {% if recipe.imagenfront %}
                       <img src ="{{recipe.imagenfront.url}}" >
                       {% endif %}
@@ -585,18 +550,17 @@
                       </div>
                       <!---------------FIN ROW--->
                       </div>
+                      <!-----FIN POST-ULTMO-ENCOLUMNA---->
                      {% endfor %}
-                    <!-----FIN POST-ULTMO-ENCOLUMNA---->
-
-
-
               </div>
               
-              <!---------FIN--POSTS ULTIMOS LEFT------------------------------------------>
+              <!------------------------------------------------->
              </div>
-            <!-- FIN--COLUMNA LEFT---------------------->
+     
+         </div>
+            <!-- FINAL SECTION PRIMERA COLUMNA CINCO ----------------------->
       
-       <!--  --ASIDE------------------->
+    <!--  --ASIDE------------------->
                     <div class="columna-right-segunda">
                     <div class ="explora">
                  
@@ -607,11 +571,8 @@
 
 
           
-                </div>            
-            <!--FIN ROW------------------------>
-
-            </div>
-            <!----FIN BLOQUE ULTIMOS-------->
+     </div>            
+            <!--CIERRE DIV DE LAS DOS COLUMNAS  BATIDOS ENSALADAS----->
      {% endblock recetas_dieteticas %}
     <!-- FINAL TERCER SEGMMENTO DOS COLUMNAS EL SEGMENTO COMPLICADO --A--------------------------------------------------------------------------->
 
@@ -789,4 +750,193 @@
          
  <!-- FINAL FOOTER  FOOTER PRIMERO ESTA DENTRO DEL CONTAINER DE CONTENIDO------------------------------------------>
 
-  
+
+
+
+
+
+
+
+
+
+
+
+     <div class="posts-ultimos">
+            <!---DEBE IR EN COLUMNA---->
+                  {% for recipe in recipedietaultimo %}
+                     <div class="post-ultimo-encolumna">
+                     <!----ROW---------------------------->
+        
+               <div class="post-ultimo">
+                     <!--------------------------------->
+                      <div class="posts-ultimos-imagen">
+                      {% if recipe.imagenfront %}
+                      <img src ="{{recipe.imagenfront.url}}" >
+                      {% endif %}
+                      </div>
+                      <!--------------------------------->
+
+                      <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                      <div class="posts-ultimos-titulo">
+                        <!------------------------------------->
+                         <div class="post-ultimo-titulo">
+                            <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                            <h1>{{recipe.title}}</h1>
+                            </a>
+                            <p>{{recipe.description|safe|linebreaksbr|truncatechars:120}}.</p>
+                            <span class="lee">
+                            <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
+                            Leer mas..
+                            </a>
+                            </span>
+                        </div>
+                    <!-------------------------------------------->
+                     </div>
+                    <!---------FIN POSTS ULTIMOS TITULO------------------------------------>
+                      </div>
+                    <!--FIN -POS-ULTIMO------------------------>
+                    
+              </div>
+              {% endfor %}
+            </div>
+       
+        <!------------------------------------------------------------------------------------->
+
+
+
+
+
+
+      <!------------------------------------------------------------------>
+      
+        <div class="posts-ultimos">
+           {% for perderpeso in perderultimo %}
+            <div class="post-ultimo-encolumna">
+          <div class="post-ultimo">
+              
+              <div class="posts-ultimos-imagen">
+              {% if perderpeso.imagefront %}
+              <img src ="{{perderpeso.imagefront.url}}" >
+              {% endif %}
+              </div>
+
+              <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+              <div class="posts-ultimos-titulo">
+                <!--------------------------------->
+                <div class="post-ultimo-titulo">
+                <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                <h1>{{perderpeso.title}}</h1>
+                </a>
+                <p>{{perderpeso.description|safe|truncatechars:120}}.</p>
+                <span class="lee"> 
+                <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
+                Leer mas..
+                </a> 
+                </span>
+                </div>
+                <!----------------------------------------->
+                </div>
+                <!--------------------------------------------------------------------->
+                
+              </div>   
+              </div>
+              {% endfor %}
+            </div>
+           
+        <!------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+       <!------------------------------------------------------------------------->
+     
+        <div class="posts-ultimos">
+           {% for post in postultimo %}
+            <div class="post-ultimo-encolumna">
+            <div class="post-ultimo">
+
+                  <div class="posts-ultimos-imagen">
+                  {% if post.imagefront %}
+                  <img src ="{{post.imagefront.url}}" >
+                  {% endif %}
+                  </div>
+
+                   <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                  <div class="posts-ultimos-titulo">
+                  <!----------------------------------------->
+                  <div class="post-ultimo-titulo">
+                  <a href ="{% url 'appblog:post' post.slug %}">
+                  <h1>{{post.title}}</h1>
+                  </a>
+                  <p>{{post.description|safe|linebreaksbr|truncatechars:65}}.</p>
+                  <span class="lee">
+                  <a href ="{% url 'appblog:post' post.slug %}">
+                  Leer mas...
+                  </a> 
+                  </span>
+                  </div>
+                  <!------------------------------------------->
+                 </div>
+                <!------------------------------------->
+
+              </div> 
+              </div>
+            {% endfor %}
+          </div>            
+        
+        <!----------------------------------------------------------------------------->
+
+         <!------------------------------------------------------------------------->
+   
+        <div class="posts-ultimos">
+             {% for posturismo in posturisultimo %}
+              <div class="post-ultimo-encolumna">
+            <div class="post-ultimo">
+
+                  <div class="posts-ultimos-imagen">
+                  {% if posturismo.imagefront %}
+                  <img src ="{{posturismo.imagefront.url}}" >
+                  {% endif %}
+                  </div>
+
+                   <!-------CONTAINER DE LA CAJA TITULO LO PUSE PARA QUE SE PPUEDA RESOLVER EL TITULO------------------------>
+                  <div class="posts-ultimos-titulo">
+                  <!----------------------------------------->
+                  <div class="post-ultimo-titulo">
+                  <a href ="{% url 'appturismo:post' posturismo.slug %}">
+                  <h1>{{posturismo.title}}</h1>
+                  </a>
+                  <p>{{posturismo.description|safe|linebreaksbr|truncatechars:65}}.</p>
+                  <span class="lee"> 
+                  <a href ="{% url 'appturismo:post' posturismo.slug %}">
+                  Leer mas...
+                  </a> 
+                  </span>
+                  </div>
+                  <!------------------------------------------->
+                 </div>
+                <!------------------------------------->
+              </div> 
+              </div>
+            {% endfor %}
+          </div>            
+        <!----------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
