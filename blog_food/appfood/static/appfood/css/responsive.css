@@ -3599,12 +3599,14 @@ width: 100%;
       width: 75%;
       }
 
+      
       .receta-descripcion-columna h1{
         font-size: 1rem;
+        margin-bottom: 3px;
        }
   
        .receta-descripcion-columna  p{
-        font-size: 0.8rem;
+      display: none;
        }
   
          /*..LEER MAS..*/
