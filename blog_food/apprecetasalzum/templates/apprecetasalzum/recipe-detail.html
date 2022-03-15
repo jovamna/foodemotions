@@ -615,14 +615,14 @@
 
                   <!--NUTRICION INFORME------------------------------------------>
               <section class="nutricion-informe">
-                        <article class="nutricional">
+                        <div class="nutricional">
                           {% if recipe.titlenutricion %}
                           <h2>{{recipe.titlenutricion|safe}} </h2>
                           {% endif %}
                           {% if recipe.nutricional %}
                           <p>{{recipe.nutricional|safe}}</p>
                          {% endif %}
-                         </article>
+                         </div>
                       <!--LAS CATEGORIAS DENTRO DE LA SECTION INFORME NUTRICIONAL--------------->
                          {% if recipe.category %}
                         <div class="categoria">

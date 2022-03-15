@@ -1551,10 +1551,11 @@ nav .logo-esconder .emoticon{
     border-top: 2px solid #DCDCDC;
    }
   
+
    .primera-columna .nutricion-informe .nutricional h2{
     margin-top: 12px;
     font-weight: bolder;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     word-spacing: -0.001px;
     letter-spacing: -0.01px;
     font-family: 'Times New Roman', Times, serif;
@@ -1570,6 +1571,11 @@ nav .logo-esconder .emoticon{
     font-weight: 100;
     line-height: -0.4px;
     color: #2d2d2d;   
+    display: inline-block;
+    position: relative;
+    margin-right: 9px;
+    line-height: 22px;
+
   }
 
    /*..CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
@@ -1583,7 +1589,7 @@ nav .logo-esconder .emoticon{
     .primera-columna .nutricion-informe .categoria p{
     font-size: 1.1rem;
     font-family: 'Times New Roman', sans serif;
-    color:#524c56;
+    color:#2d2d2d;
     }
 
    /*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA SIN TIENEN LINK..*/
@@ -1597,7 +1603,7 @@ nav .logo-esconder .emoticon{
     .primera-columna .nutricion-informe .categorias-recetas-links p{
     font-size: 1.1rem;
     font-family: 'Times New Roman', sans serif;
-    color:#524c56;
+    color:#2d2d2d;
     }
 
 
