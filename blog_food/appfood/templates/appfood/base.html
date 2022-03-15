@@ -24,6 +24,17 @@
         <meta property="og:url" content="https://www.foodingemotion.com/{{object.slug}}">
         <meta name="twitter:card" value="summary">
 
+
+
+        <!----ESTO PUEDE RELENTIZAR PERO LO ACTUALIZA------------------------>
+        <meta http-equiv="cache-control" content="no-cache"/>
+        <!----CON ESTO LE DAMOS NAS HORAS PARA GUARADRLO LEUGO DE EOS EXPIRA---->
+        <meta http-equiv="expires" content="43200"/>
+        <!--PARECIDO AL DE ANTES------------------------->
+        <meta http-equiv="refresh" content="10; url=https://www.foodingemotion.com/"/>
+
+
+
         <!--------------------PINTEREST------------->
         <meta name="p:domain_verify" content="78443ea1e3d7fde8ea7b23d1b694ab45"/>
         <!---------------------------------------------------------------------------->
@@ -95,7 +106,26 @@
       <meta property="fb:app_id" content="165082593548215">
       <meta property="fb:pages" content="10053803772">
 
+
+      
+       <!-----ESTO CREO SIRVE PARA DAR NOMBRE A LA PESTAÑA--------------------------->
+       <b:if cond='data:blog.pageType == &quot;index&quot;'>
+       <title><data:blog.pageTitle/></title>
+       <b:else/>
+
+      <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+      <title><data:blog.pageName/> - <data:blog.title/></title>
+      </b:if></b:if>
+
+      <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+      <title>Page Not Found - <data:blog.title/></title>
+      </b:if>
+
+       <!---------------------------------------------------------------------------->
+
  
+
+
 
      <!--favicon-->
      <link rel="icon" href="favicon.ico" type="image/x-icon"/>
@@ -175,7 +205,13 @@
       </STYLE>
 
    
+         <!------------------------------------------------------------------------------->
+      <script>
+      var food= window.location.hostname
+      </script>
 
+    
+      <!---------------------------------------------------------------------------->
     
 
      <!-- SCRIPT PARA ANIMAR AL HACER SCROLL parece no sirve-->

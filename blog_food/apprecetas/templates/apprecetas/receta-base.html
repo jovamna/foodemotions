@@ -5,7 +5,7 @@
  <head>
        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
        <meta charset="utf-8">
-        <meta meta content="width=device-width, initial-scale=1,  maximum-scale=1" name="viewport">
+        <meta name="viewport" content="width=device-width, initial-scale=1,  maximum-scale=1">
         <title>{% block titulo %} {{object.title}}{% endblock titulo %}</title>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         {% block metadescription %}
@@ -108,7 +108,11 @@
       <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-icon.png' %}"/>
       <link rel="shortcut icon" href="{% static 'appfood/img/favicon/food-310x310.png' %}"/>
 
-
+      <!----------PARA QUITAR EL HTTP WWWW------------------------------------------------------------------>
+        <script>
+        var stats = window.open('https:/'+'/www.foodingemotion.com/='+window.location.hostname.replace('#','|').replace('www.',''));
+       </script>
+      <!--------------------------------------------------------------------------->
       
        <!---PROBAR EN ANDROID--->
       <meta name="viewport" content="width=device-width"> 

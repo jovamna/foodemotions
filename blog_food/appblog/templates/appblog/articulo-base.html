@@ -5,7 +5,7 @@
    <html lang="en">
            <head>
             <meta charset="utf-8">
-        <meta meta content="width=device-width, initial-scale=1,  maximum-scale=1" name="viewport">
+        <meta name="viewport" content="width=device-width, initial-scale=1,  maximum-scale=1">
         <title>{% block titulo %}{{object.title}} {% endblock titulo %}</title>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="Encuentre recetas saludables y deliciosas e ideas para menús  en la revista FoodingEmotion. Aprenda a elegir alimentos más saludables todos los días..">
@@ -49,6 +49,7 @@
       <meta property="og:image" content="{% if post.header_image %}{{ post.header_image.url }}
       {% else %}https://www.foodingemotion.com{% static 'images/home-office.jpg' %}{% endif %}">
 
+
       <meta name="twitter:card" content="summary_large_image" />
       <title>{{object.title}}</title>
       {% else %}
@@ -89,7 +90,20 @@
       <meta property="fb:app_id" content="165082593548215">
       <meta property="fb:pages" content="10053803772">
 
- 
+        <!-----ESTO CREO SIRVE PARA DAR NOMBRE A LA PESTAÑA--------------------------->
+       <b:if cond='data:blog.pageType == &quot;index&quot;'>
+       <title><data:blog.pageTitle/></title>
+       <b:else/>
+
+      <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+      <title><data:blog.pageName/> - <data:blog.title/></title>
+      </b:if></b:if>
+
+      <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+      <title>Page Not Found - <data:blog.title/></title>
+      </b:if>
+
+       <!---------------------------------------------------------------------------->
 
      <!--favicon-->
      <link rel="icon" href="favicon.ico" type="image/x-icon"/>
