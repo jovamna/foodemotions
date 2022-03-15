@@ -1298,11 +1298,11 @@
 
     /*TITULO DE LA RECETA*/
     .primer-bloque-cien  .articulo .articulo-flex-colum .recetas h1{
-      font-size: 2.3rem;
-      word-spacing: -3px;
-      letter-spacing: -1.5px;
+      font-size: 2.1rem;
+      word-spacing: -2.5px;
+      letter-spacing: -1px;
       font-family: 'Archivo Black', sans-serif;
-      font-weight: 600;
+      font-weight: 300;
       text-decoration-line: underline;
       color: #000000;
       }
@@ -1708,8 +1708,7 @@
     /*CONTAINER QUE INCLUYE NUTRICIONAL Y CATEGORIA*/
     .nutricion-informe{
     width: 100%;
-    display: flex;
-    flex-direction: column;
+   display: block;
     }
 
     .nutricion-informe .nutricional{
@@ -1723,9 +1722,9 @@
     /*TITULO DE NUTRICION*/
     .nutricion-informe .nutricional h2{
     font-weight: 800;
-    font-size: 1.4rem;
-    letter-spacing: -0.001rem ;
-    word-spacing: -0.01rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.3px ;
+    word-spacing: -0.5px;
     color: #000000;
     font-family: 'Times New Roman', Times, serif;
      text-align: start;
@@ -1735,39 +1734,49 @@
     letter-spacing: 0.01rem ;
     word-spacing: -0.01rem;
     font-family: 'Times New Roman', Times, serif;
-    font-size:  1.2rem;
+    font-size:  1rem;
     font-weight: 400;
     line-height: -0.4px;
-    color: #666;
+    color: #2d2d2d;
     margin: auto;
      }
 
-        .categoria{
+      /*CAJA DE LA CATEGORIA ACTUAL..*/
+      .nutricion-informe  .categoria{
           width: 100%;
           display: flex;
           flex-direction: column;
-          margin-top: 5px;
+          margin-top: 20px;
         }
+
+
         /*..TITULO CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
-         .categoria h2{
-          font-size:  1.3rem;
+       .nutricion-informe  .categoria h2{
+          font-size:  1rem;
           font-family: 'Times New Roman', sans serif;
           color:#000000;
-          letter-spacing:-0.001rem ;
-          word-spacing: -0.01rem;
+          letter-spacing:  0.2px;
+          word-spacing: -0.5px;
         }
 
           .categoria P{
-          font-size:  1.2rem;
+          font-size:  1rem;
           font-family: 'Times New Roman', sans serif;
-          color:#524c56;
-          letter-spacing:-0.001rem ;
-          word-spacing: -0.01rem;
+          color:#2d2d2d;
+          letter-spacing:  0.2px ;
+          word-spacing: -0.3px;
+        }
+
+        .categorias-recetas-links{
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
         }
 
          /*ESTO ES SOLO LA PALABRA CATEGORIAS TITULO CATEGORIAS EN PRIMERA COLUMNA*/
          #wrapper-recetas .categorias-recetas-links h2{
-          font-size:  1.3rem;
+          font-size:  1.1rem;
           font-family: 'Times New Roman', sans serif;
           color:#000000;
           letter-spacing:-0.001rem ;
@@ -1775,19 +1784,30 @@
          }
         
         /*..CATEGORIAS con TIENEN LINK..*/
-        #wrapper-recetas .categorias-recetas-links P{
-          font-size:   1.2rem;
+       .categorias-recetas-links P{
+          font-size:   1rem;
           font-family: 'Times New Roman', sans serif;
-          color:#524c56;
-          letter-spacing:-0.001rem ;
-          word-spacing: -0.01rem;
+          color:#2d2d2d;
+          letter-spacing:  0.2px;
+          word-spacing: -0.7px;
+          line-height: 15px;
+         display: inline-block;
+         margin-right: 8px;
          }
   
    /*..COMENTARIOS*/
    .comentarios{
     width: 100%;
    }
-      
+
+   
+     #myDIV #myForm h2{
+      font-size: 1.6rem;
+    }
+ 
+    #myForm #id_content {
+      width: 95%;
+     }
 
     /*ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE A...............................................SIDE */
     #aside-recetas{

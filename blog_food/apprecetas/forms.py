@@ -9,8 +9,7 @@ class NewCommentForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.fields['parent'].widget.attrs.update(
-            {'class': 'd-none'})
+        self.fields['parent'].widget.attrs.update({'class': 'd-none'})
 
         self.fields['parent'].label = ''
         self.fields['parent'].required = False
@@ -20,13 +19,20 @@ class NewCommentForm(forms.ModelForm):
         fields = ('name', 'parent', 'email', 'content')
 
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'col-sm-12'}),
-            'email': forms.TextInput(attrs={'class': 'col-sm-12'}),
-            'content': forms.Textarea(attrs={'class': 'ml-3 mb-3 form-control border-0 comment-add rounded-0', 'rows': '1', 'placeholder': 'Add a public comment'}),
+            'name':
+            forms.TextInput(attrs={'class': 'col-sm-12'}),
+            'email':
+            forms.TextInput(attrs={'class': 'col-sm-12'}),
+            'content':
+            forms.Textarea(
+                attrs={
+                    'class':
+                    'ml-3 mb-3 form-control border-0 comment-add rounded-0',
+                    'rows': '1',
+                    'placeholder': 'Añade un comentario'
+                }),
         }
 
     def save(self, *args, **kwargs):
         Comment.objects.rebuild()
         return super(NewCommentForm, self).save(*args, **kwargs)
-
-

@@ -1869,6 +1869,20 @@ border-radius:6px;
       display: none;
     }
 
+
+      /*..COMENTARIOS*/
+   .comentarios{
+    width: 100%;
+   }
+
+   
+     #myDIV #myForm h2{
+      font-size: 1.6rem;
+    }
+ 
+    #myForm #id_content {
+      width: 95%;
+     }
     /*..CARRUSELL.............................*/
     .container-total-carrusell{
       display: block;
@@ -1876,6 +1890,7 @@ border-radius:6px;
 
     }
 
+     
        /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
      .container-total-carrusell h1{
       font-size:1.6rem;

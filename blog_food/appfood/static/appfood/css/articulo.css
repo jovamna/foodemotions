@@ -83,7 +83,7 @@ height: 100%;
    }
 
    #comentarios{
-  background-color: violet;
+    background-color:  #FEEDF6;
   display: flex;
   width: 100%;
   max-width: 900px;
