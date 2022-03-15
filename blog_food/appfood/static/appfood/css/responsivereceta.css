@@ -1302,7 +1302,7 @@
       word-spacing: -2.5px;
       letter-spacing: -1px;
       font-family: 'Archivo Black', sans-serif;
-      font-weight: 300;
+      font-weight: 320;
       text-decoration-line: underline;
       color: #000000;
       }
@@ -1314,7 +1314,7 @@
       word-spacing: -0.01px;
       letter-spacing: -0.001px;
       font-family: 'Times New Roman', Times, serif;
-      color: #666;
+      color: #2d2d2d;
        margin-bottom: 5px;
       }
 
@@ -1498,7 +1498,7 @@
        font-size: 1rem;
        letter-spacing: -0.001rem ;
        word-spacing: -0.01rem;
-       color: #666;
+       color: #2d2d2d;
      }
 
        /*............CONTAINER DE INGREDIENTES Y PREPARARCION*/
@@ -1581,7 +1581,7 @@
         letter-spacing:  -0.001rem ;
         word-spacing: -0.01rem;
         font-weight: 400;
-        color: #666;
+        color: #2d2d2d;
         text-align: start;
        }
 
@@ -1751,15 +1751,15 @@
 
 
         /*..TITULO CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
-       .nutricion-informe  .categoria h2{
-          font-size:  1rem;
+        .primera-columna .nutricion-informe  .categoria h2{
+          font-size:  1.04rem;
           font-family: 'Times New Roman', sans serif;
           color:#000000;
           letter-spacing:  0.2px;
           word-spacing: -0.5px;
         }
 
-          .categoria P{
+        .primera-columna .nutricion-informe .categoria P{
           font-size:  1rem;
           font-family: 'Times New Roman', sans serif;
           color:#2d2d2d;
@@ -1775,8 +1775,8 @@
         }
 
          /*ESTO ES SOLO LA PALABRA CATEGORIAS TITULO CATEGORIAS EN PRIMERA COLUMNA*/
-         #wrapper-recetas .categorias-recetas-links h2{
-          font-size:  1.1rem;
+         .primera-columna .nutricion-informe .categorias-recetas-links   h2{
+          font-size:  1.04rem;
           font-family: 'Times New Roman', sans serif;
           color:#000000;
           letter-spacing:-0.001rem ;
@@ -1784,7 +1784,7 @@
          }
         
         /*..CATEGORIAS con TIENEN LINK..*/
-       .categorias-recetas-links P{
+        .primera-columna .nutricion-informe .categorias-recetas-links P{
           font-size:   1rem;
           font-family: 'Times New Roman', sans serif;
           color:#2d2d2d;

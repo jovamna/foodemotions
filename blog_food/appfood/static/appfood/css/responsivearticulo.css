@@ -1394,12 +1394,13 @@ border-radius:6px;
 
    /*PRIMER ARTICULO TITULO*/
    .primer-articulo h1{
-   font-size: 1.5rem;
-   color:#000000;
-   font-weight: 800;
-   font-family: 'Times New Roman', Times, serif;
-   letter-spacing: -0.3px;
-   word-spacing: -1px;
+    font-size: 2.1rem;
+      word-spacing: -2.5px;
+      letter-spacing: -1px;
+      font-family: 'Archivo Black', sans-serif;
+      font-weight: 320;
+      text-decoration-line: underline;
+      color: #000000;
    }
  
 
@@ -1567,7 +1568,7 @@ border-radius:6px;
       color:#000000;
       font-weight: 900;
       font-family: 'Times New Roman', Times, serif;
-      letter-spacing: -0.9px;
+      letter-spacing: -0.4px;
       word-spacing: 0.9px;
       }
 
@@ -1690,11 +1691,63 @@ border-radius:6px;
       width: 92%;
       margin: auto;
     }
+   
+    .imagen-semana{
+      display: block;
+    }
+
+
+    .imagen-semana-dos{
+      display: block;
+     
+    }
+
+    .titulo-semana{
+      display: block;
+    
+    }
+
+    .titulo-semana h2{
+      font-size: 1.6rem;
+    }
+
+    .descripcion-semana{
+    display: block;
+    }
+
+    .descripcion-semana p{
+     font-size: 1rem;
+    }
+
     .container-dia{
       width: 92%;
       margin: auto;
     }
 
+    .plan-titulo-dia{
+   display: block;
+    }
+  /*TITULO DEL DIA*/
+    .plan-titulo-dia h2{
+  font-size: 1.4rem;
+    }
+
+
+
+    .imagen-dia{
+    display: block;
+    }
+
+     .dia{
+     display: block;
+     }
+      
+     /*DESCRIPCION DEL DIA*/
+    .dia p{
+      font-size: 1rem;
+     
+
+    }
     .title-fin{
       width: 92%;
       margin: auto;
@@ -1782,12 +1835,14 @@ border-radius:6px;
 
      .categoria-en-post h2{
        width: 100%;
+       font-size: 1.05rem;
      }
 
      .categoria-en-post p{
       width: 100%;
       position: relative;
       float: right;
+      font-size: 1rem;
       }
 
     /*..FIN DE CONTAINER ARTICULO ULTIMO..*/
@@ -1800,7 +1855,17 @@ border-radius:6px;
       margin-bottom: 10px;
       border-bottom: 2px solid	#DCDCDC;
       }
-    
+      /*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA CON  LINK..*/
+   .categorias-posts-links h4{
+    font-size: 1.05rem;
+    color:#000000;
+   }
+
+   .categorias-posts-links h3{
+    font-size: 1rem;
+    color:#2d2d2d;
+    }
+
 
        /*COMENTARIOS*/
         #comentarios{
