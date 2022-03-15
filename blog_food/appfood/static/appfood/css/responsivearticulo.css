@@ -1727,9 +1727,11 @@ border-radius:6px;
     .plan-titulo-dia{
    display: block;
     }
-  /*TITULO DEL DIA*/
+
+
+    /*TITULO DEL DIA*/
     .plan-titulo-dia h2{
-  font-size: 1.4rem;
+     font-size: 1.6rem;
     }
 
 

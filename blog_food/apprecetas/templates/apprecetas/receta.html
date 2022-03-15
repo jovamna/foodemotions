@@ -786,16 +786,12 @@
                                 <p>{{receta.nutricional|safe}}</p>
                                 {% endif %}
                         </div>
-
-
-                        <!--LAS CATEGORIAS DENTRO DE LA SECTION INFORME NUTRICIONAL--------------->
+                       {% if receta.kategory %}                      
                         <div class="categoria">
-                                {% if receta.kategory %}
-                               <em><h2>Categoria:</h2><p>{{ receta.kategory }}</p></em>
-                               {% endif %}          
-                        <!--<a href="/recetas_sanas/categoria/{{kategory.slug }}">{{ kategory.nane }}</a>---> 
-                                <br>
+                                <em><h2>Categoria:</h2></em>
+                              <em> <p>{{ receta.kategory }}</p></em>       
                         </div>
+                         {% endif %}
                           <!--LAS CATEGORIAS CON LINKSDENTRO DE LA SECTION INFORME NUTRICIONAL--------------->
                         <div class="categorias-recetas-links">
                            
