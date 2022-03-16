@@ -1367,10 +1367,11 @@ border-radius:6px;
 
     /*CONTENIDO...............*/
    #tres-columnas-articulo{
-   width: 100%;
+   width: 92%;
    display: flex;
    flex-direction: column;
    margin-top: 2px;
+   margin: auto;
    }
 
 
@@ -1378,7 +1379,7 @@ border-radius:6px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 6%;
+  margin-bottom: 40px;
   }
 
   .primera-columna{
@@ -1391,7 +1392,7 @@ border-radius:6px;
   }
 
    .primer-articulo{
-    width: 92%;
+    width:  100%;
     margin: auto;
    }
 
@@ -1419,7 +1420,8 @@ border-radius:6px;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: 40px; 
+    height: 45px; 
+    margin: auto;
    }
 
    .fecha{
@@ -1441,9 +1443,9 @@ border-radius:6px;
     display: block;
     position: relative;
     float: left;
-    width: 28%;
-    max-width: 130px;
-    height: 40px;
+    width: 30%;
+    max-width: 150px;
+    height: 45px;
    }
 
     /*..CAJA DE FOTO....*/
@@ -1452,18 +1454,18 @@ border-radius:6px;
       position: relative;
       float: left;
       width: 32%;
-      height: 40px;
+      height: 45px;
     }
 
     .autor-foto img{
       width: 100% ;
-      max-width: 40px;
-      height: 40px;
+      max-width: 45px;
+      height: 45px;
      }
     
      /*..CAJA DE NOMBRE NOMBRE*/
      .row-autor-nombre  .autor-letra{
-      width: 68%;
+      width: 60%;
       height: 40px;
       display: block;
       position: relative;
@@ -1562,7 +1564,7 @@ border-radius:6px;
 
     /*TAMBIEN LO USA LA APPTURISMO*/
     .segundo-articulo{
-    width:  92%;
+    width:   100%;
     margin: auto;
     }
 
@@ -1577,31 +1579,29 @@ border-radius:6px;
       word-spacing: 0.9px;
       }
 
-   
      
      .segundo-articulo p {
-      font-size: 1em;   
+    font-size: 1em;   
      }
 
      .cursiva{
-      width: 92%;
-      margin-left: 5px;
+    width: 100%;
+    margin-left: 5px;
     }
 
     .cursiva p{
-      font-size: 1em;
+    font-size: 1em;
     }
 
    
-      
-      .blockquote .blockquote-text{
-      font-size: 1rem;
-      margin-left: -1px;
-      }
+    .blockquote .blockquote-text{
+    font-size: 1rem;
+    margin-left: -1px;
+    }
 
 
     .blockquote{
-    width:92%;
+    width:  100%;
     margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
     padding: 20px;
     border:  1px solid #DDD;
@@ -1637,25 +1637,26 @@ border-radius:6px;
     .contentwo{
       display: flex;
       flex-direction: column;
-     width: 92%;
+     width: 100%;
      margin: auto;
      margin-bottom: 8px;
     }
 
     .contentwo .title-two{
       display: block;
-      width:  92%;
+      width:  100%;
       margin: auto;
       margin-top: 20px;
     }
 
     .contentwo .title-two h1{
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     color:#000000;
     font-weight: 900;
     font-family: 'Times New Roman', Times, serif;
-    letter-spacing: -0.4px;
-    word-spacing: -1.5px;
+    letter-spacing: -0.6px;
+    word-spacing: -1px;
+    line-height: 22px;
 
      }
    
@@ -1672,23 +1673,29 @@ border-radius:6px;
 
       .contentwo .subtitle-two{
       display: block;
-      width:  92%;
+      width:   100%;
       margin: auto;
       }
 
       .contentwo .subtitle-two h2{
-        font-size: 1.3rem;
+        font-size: 1.3em;
        }
   
       /*...DESCRIPCION..*/
        .contentwo .content-two{
         display: block;
-        width:  92%;
+        width:  100%;
         margin: auto;
         }
 
       .contentwo  .content-two  p{
-        font-size: 1rem;
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        font-size: 0.9em;
+        line-height: 24px;
+        margin: auto;
        }
      
      
@@ -1812,64 +1819,65 @@ border-radius:6px;
       display: block;
       position: relative;
       float: left;
-      width: 92%;
-      margin-left: 15px;
+      width: 100%;
       margin-top: 10px;
      }
 
       
 
-     /*CATEGORIA.......*/
-     .categoria-en-post{
-      display: block;
-      position: relative;
-     float: left;
-       width: 92%;
-       margin-bottom: 1px;
+    /*CATEGORIA.......*/
+    .categoria-en-post{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 1px;
      }
 
      .categoria-en-post h2{
-       width: 100%;
-       font-size: 1.05rem;
+    width: 100%;
+    font-size: 1.05em;
      }
 
      .categoria-en-post p{
       width: 100%;
       position: relative;
       float: right;
-      font-size: 1rem;
+      font-size: 1em;
       }
-
     /*..FIN DE CONTAINER ARTICULO ULTIMO..*/
 
+
+
      /*CATEGORIAS...*/
-     .categorias-posts-links{
-      width: 92%;
-      margin-left: 15px;
-       margin-top: 2px;
-      margin-bottom: 10px;
-      border-bottom: 2px solid	#DCDCDC;
-      }
+    .categorias-posts-links{
+    width: 100%;
+    border-bottom: 2px solid	#DCDCDC;
+    }
+
+
       /*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA CON  LINK..*/
    .categorias-posts-links h4{
-    font-size: 1.05rem;
+    font-size: 1.05em;
     color:#000000;
    }
 
+
    .categorias-posts-links h3{
-    font-size: 1rem;
+    font-size: 1em;
     color:#2d2d2d;
     }
 
-    #comentarios{
-      background-color:  #FEEDF6;
-      display: block;
-      width: 93%;
-      margin: auto;
-      margin-top: 35px;
-     }
-  
+  /*...NO PONER #COMENTARIOS EL BACKGROUND COLOR PORQUE TODO EL POST TOMA ESE COLOR..*/o*/
     /*.........*/
+    #comentarios{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+
+
     .col-md-10{
     display: block;
     width: 92%;
@@ -1882,16 +1890,16 @@ border-radius:6px;
       font-weight: 700;
      }
 
-   /*CREAR NUEVO COENTARIO...*/
-   #myForm h2{
-     font-size: 1.1rem;
+     /*CREAR NUEVO COENTARIO...*/
+     #myForm h2{
+     font-size: 1em;
      font-family: 'Times New Roman', Times, serif;
      color: black;
      }
 
 
      #myDIV{
-       display: block;
+     display: block;
      }
 
      #myDIV .btn{
@@ -2043,7 +2051,7 @@ border-radius:6px;
       /*IMPORTANTE PARA EL HEIGHT..*/
     .carrusel .product {
       width: 100%;
-      max-width: 400px;
+      max-width: 410px;
       height: 380px;
       margin: auto;
        box-shadow: #f3f3f3 0px 13px 27px -5px, #f3f3f3 0px 8px 16px -8px;
@@ -2056,7 +2064,7 @@ border-radius:6px;
     padding: 3px ;
     border-radius:6px;
      width: 100%;
-     max-width: 400px;
+     max-width: 410px;
     
      }
  
@@ -2354,14 +2362,14 @@ border-radius:6px;
     z-index: 999;
     position: fixed;
     margin: auto;
-    height:  62px;
+    height:  61px;
     box-shadow: 0 8px 6px -6px #c9c9c9;
       }
     
        header.black{
         background-color:#fff;
         width: 100%;
-        height:  62px;
+        height:  61px;
         }
       
        .cabecera{
@@ -2517,20 +2525,19 @@ border-radius:6px;
 
        
     nav{
-      display: flex;
-      flex-direction: column;
-   
-      position: fixed;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  top:0;
-  bottom: 0;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-   overflow-y: scroll;
-   z-index: 200;
-   visibility: visible;
-   box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+     width: 100%;
+     height: 100%;
+     margin: auto;
+     top:0;
+     bottom: 0;
+     left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+     overflow-y: scroll;
+     z-index: 200;
+     visibility: visible;
+     box-sizing: border-box;
       
     }
 
@@ -2591,22 +2598,27 @@ border-radius:6px;
 
    #menu-simple{
     width: 100%;
-    margin-top: 20px;
+    height: 48px;
+    margin-top: 10px;
+
     }
 
     #menu-simple ul{
-    height: 40px;
+    height: 48px;
+    }
+
+    #menu-simple ul li{
+    height: 48px;
     }
 
   /*  EMPIEZA EL CONTENIDO*/
    /*..PAGINA DEL SEARCH CAJA BUSCADO ..............CAJA BUSCADOR*/
-  #controls-uno{
+    #controls-uno{
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
     width: 100%;
     height: 80px;
     margin: auto;
-   
     }
 
 
@@ -2653,282 +2665,761 @@ border-radius:6px;
     }
 
 
-      #tres-columnas-articulo{
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-      }
       
-      .columna-primera{
-        width: 100%;
-      }
-
-       .primera-columna img{
-          width: 100%;
-          height: 350px;
-       }
-
-       .primer-articulo h1{
-         font-size: 2.3rem;
-       }
-
-      .blockquote .blockquote-text{
-          font-size: 1rem;
-          margin-left: 14px;  /*MUEVE EL PARRAFO SEPARANDOLO DE LA COMILLA*/
-        }
-
-       .blockquote{
-          width:100%;
-          margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
-          padding: 20px;
-          border:  1px solid #DDD;
-          color:#666;
-          box-sizing: border-box;
-          font-family:  'sans-serif' ;
-          font-size: 1.15rem;
-          font-weight:400;
-          line-height: 1.3;
-          
-         }
-
-        .blockquote-quoted::before { 
-          content: "\201C"; /* inicio comilla */
-          width: 20%;
-          font-family: Georgia;
-          font-size:65px; /* tamaño */
-          font-weight: bold; 
-          line-height: 0px;
-          color:#DDD; /* Color  */
-          margin-top: 10px;
-          margin-bottom: -10px;
-          margin-left: -20px;
-          display: block;
-          }
-
-          .blockquote-quoted::after { 
-            margin-top: 10px;
-            margin-bottom: -10px;
-            margin-left: 550px;
-            display: block;
-
-          }
-    .blockquote-text-credit{
-    text-align: right;
-    width: 90%;
+    /*CONTENIDO...............*/
+   #tres-columnas-articulo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
     }
-
-      .contentwo{
-      width: 100%;
-      }
+ 
+ 
+   .columna-primera{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 60px;
+   }
+ 
+   .primera-columna{
+   width: 100%;
+   display: block;
+   }
+ 
+   .primero-descripcion-y-fotoprincipal{
+     width: 100%;
+     display: block;
+   }
+ 
+    .primer-articulo{
+     width: 100%;
+     margin: auto;
+    }
+ 
+ 
+ 
+    /*PRIMER ARTICULO TITULO*/
+    .primer-articulo h1{
+     font-size: 2.1em;
+       word-spacing: -2.5px;
+       letter-spacing: -1px;
+       font-family: 'Archivo Black', sans-serif;
+       font-weight: 320;
+       text-decoration-line: underline;
+       color: #000000;
+    }
+  
+ 
+     .primer-articulo p {
+       font-size: 1em;   
+     }
       
-      .title-two h1{
-        color: #000000;
-        font-size: 2rem;
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: 800;
+   /*... *FECHA*/
+   .row-autor-nombre-fecha{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     width: 100%;
+     height: 45px; 
+     margin: auto;
+    }
+ 
+    .fecha{
+      display: block;
+      position: relative;
+      float: right;
+      width: 65%;
+      height: 20px;
+      margin-top: 20px;
+    }
+ 
+    .fecha p{
+     font-size: 0.7rem;
+     text-align: center;
+    }
+ 
+  /*..CAJA DE LA  FOTO Y E NOMBRE..*/
+    .row-autor-nombre{
+     display: block;
+     position: relative;
+     float: left;
+     width: 30%;
+     max-width: 150px;
+     height: 45px;
+    }
+ 
+     /*..CAJA DE FOTO....*/
+    .row-autor-nombre .autor-foto{
+       display: block;
+       position: relative;
+       float: left;
+       width: 32%;
+       height: 45px;
+     }
+ 
+     .autor-foto img{
+       width: 100% ;
+       max-width: 45px;
+       height: 45px;
       }
-
-      .content-two p{
-        color: #2d2d2d;
-      }
-
-      .articulo-ultimo{
-        display: block;
-        width: 100%;
-      }
-
-      .articulo-ultimo .autor-nombre{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-      }
-
-      .autor-nombre  .autor-foto img{
-        width: 100%;
-        max-width: 50px;
-        height: 50px;
-        display: block;
-        position: relative;
-        float: left;
-      }
-
-      .autor-nombre .autor-letra{
+     
+      /*..CAJA DE NOMBRE NOMBRE*/
+      .row-autor-nombre  .autor-letra{
+       width: 60%;
+       height: 40px;
        display: block;
        position: relative;
        float: right;
-        margin-left: 8px;
-      }
-
-      .tercera-columna-fija{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 700px;
-        margin-top: 50px;
-      }
-
-      .tercera-columna-fija .controls{
-        display: none;
-      }
-     
-     
-      .tercera-columna{
-        width: 100%;
-        display: flex;
-      flex-direction: column;
-        margin-top: 30px;
+     }
+ 
+ 
+    /*NOMBRE DE AUTOR*/
+    .row-autor-nombre .autor-letra h3{
+    font-size: 0.7rem;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    margin-top: 22px;
+    }
+      
+   .imagen-central{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+    }
+ 
+    .imagen-principal{
+      width: 100%;
+    }
+ 
+    .imagen-central img{
+     width: 100%;
+     height: 100%;
+     }
+ 
+     .imagen-principal img{
+       width: 100%;
+     }
+    
+   
+     .redes{
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     margin-left: 15px;
       }
  
-
-      .tercera-columna .aside-colum{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-      }
-
-
-
-       .tercera-columna h2{
-         display: block;
-         font-size: 1.3rem;
-         color: #000000;
+ 
+     .iconos-social{
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     }
+ 
+ 
+     .iconos-social  li .fa-envelope{
+     font-size:  10px;
+     width: 30px;
+     height: 30px;
+     padding: 5px 5px 5px 5px;
+     margin-right: 8px;
+     }
+ 
+         .iconos-social li .fa-facebook-f{
+         font-size:  10px;
+         width: 30px;
+         height: 30px;
+         padding: 5px 5px 5px 5px;
+         margin-right: 8px;
+        }
+       
+        .iconos-social  li .fa-twitter{
+         font-size:  10px;
+         width: 30px;
+         height: 30px;
+         padding: 5px 5px 5px 5px;
+         margin-right: 8px;
+         }
+     
+        .iconos-social  li .fa-instagram{
+         font-size:  10px;
+         width: 30px;
+         height: 30px;
+         padding: 5px 5px 5px 5px;    
+         }
+ 
+         /*segundo articulo en adelante...*/
+    .primera-columna .articulovacio-articulolleno{
+     display: flex;
+     flex-direction: column;
+     width: 92%;
+    }
+ 
+     .articulolleno{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     margin: auto;
+    }
+ 
+     /*TAMBIEN LO USA LA APPTURISMO*/
+     .segundo-articulo{
+     width:  100%;
+     margin: auto;
+     }
+ 
+    
+      /*SEGUNDO TITULO*/
+      .segundo-articulo h1{
+       font-size: 1.3rem;
+       color:#000000;
+       font-weight: 900;
+       font-family: 'Times New Roman', Times, serif;
+       letter-spacing: -0.4px;
+       word-spacing: 0.9px;
        }
-      .tercera-columna .aside-colum img{
-        width: 50%;
-        display: block;
-        position: relative;
-        float: left;
-      }
-
-      .tercera-columna .aside-colum  h1{
-        width: 45%;
-        display: block;
-        position: relative;
-        float: right;
-        font-size: 1.1rem;
-      }
-
+ 
+    
       
+      .segundo-articulo p {
+       font-size: 1em;   
+      }
+ 
+      .cursiva{
+       width: 92%;
+       margin-left: 5px;
+     }
+ 
+     .cursiva p{
+       font-size: 1em;
+     }
+ 
+    
+       
+       .blockquote .blockquote-text{
+       font-size: 1rem;
+       margin-left: -1px;
+       }
+ 
+ 
+     .blockquote{
+     width:92%;
+     margin: 20px 0px;  /*espaciado del quotede arriba y abajo 40.................... */
+     padding: 20px;
+     border:  1px solid #DDD;
+     color:#2d2d2d;
+     box-sizing: border-box;
+     font-family:  'sans-serif' ;
+     font-size: 1.15rem;
+     font-weight:400;
+     margin: auto;
+     }
+ 
+     .blockquote-quoted::before { 
+     content: "\201C"; /* inicio comilla */
+     width: 30%;
+     font-family: Georgia;
+     font-size:65px; /* tamaño */
+     font-weight: bold; 
+     line-height: 0px;
+     color:#DDD; /* Color  */
+      margin-top: 20px;
+     margin-bottom: -10px;
+     margin-left: -20px;
+     display: block;
+     }
+ 
+     .blockquote-text-credit{
+     text-align: right;
+     width: 90%;     
+     }
+ 
+ 
+    /*APARYADO DE ARTICULOS CO IMAGENES*/
+     .contentwo{
+       display: flex;
+       flex-direction: column;
+      width: 92%;
+      margin: auto;
+      margin-bottom: 8px;
+     }
+ 
+     .contentwo .title-two{
+       display: block;
+       width:  100%;
+       margin: auto;
+       margin-top: 20px;
+     }
+ 
+     .contentwo .title-two h1{
+       font-size: 1.5rem;
+     color:#000000;
+     font-weight: 900;
+     font-family: 'Times New Roman', Times, serif;
+     letter-spacing: -0.4px;
+     word-spacing: -1.5px;
+ 
+      }
+    
+     .contentwo .image-two{
+     width: 100%;
+     height: 100%;
+     }
+ 
+ 
+       .image-two  img{
+       width: 100%;
+       height: 220;
+       }
+ 
+       .contentwo .subtitle-two{
+       display: block;
+       width:  92%;
+       margin: auto;
+       }
+ 
+       .contentwo .subtitle-two h2{
+         font-size: 1.3rem;
+        }
+   
+       /*...DESCRIPCION..*/
+        .contentwo .content-two{
+         display: block;
+         width:  100%;
+        
+         }
+ 
+       .contentwo  .content-two  p{
+        width:  100%;
+         padding-right: 16px; /*..IMPORTANTE*/
+         font-size: 0.9em;
+      
+        }
+      
+      
+   
+ 
+     /*PAGINA PERDER PESO PLAN DE COMIDAS*/
+     .semana{
+       width: 92%;
+       margin: auto;
+     }
+    
+     .imagen-semana{
+       display: block;
+     }
+ 
+ 
+     .imagen-semana-dos{
+       display: block;
+      
+     }
+ 
+     .titulo-semana{
+       display: block;
+     
+     }
+ 
+     .titulo-semana h2{
+       font-size: 1.6rem;
+     }
+ 
+     .descripcion-semana{
+     display: block;
+     }
+ 
+     .descripcion-semana p{
+      font-size: 1rem;
+     }
+ 
+     .container-dia{
+       width: 92%;
+       margin: auto;
+     }
+ 
+     .plan-titulo-dia{
+    display: block;
+     }
+ 
+ 
+     /*TITULO DEL DIA*/
+     .plan-titulo-dia h2{
+      font-size: 1.7em;
+     }
+ 
+ 
+ 
+     .imagen-dia{
+     display: block;
+     }
+ 
+      .dia{
+      display: block;
+      }
+       
+      /*DESCRIPCION DEL DIA*/
+     .dia p{
+       font-size: 1rem;
+      
+ 
+     }
+ 
+     /*TITULO FINAL DE TODO EL POST*/
+   /*FINAL..*/
+     .resumen-del-post{
+       width: 92%;
+       margin: auto;
+       margin-top: 20px;
+     }
+     .title-fin{
+       display: block;
+       width: 100%;
+     }
+ 
+   
+     .title-fin h2{
+       color: #000000;
+       font-size: 1.4em;
+       font-weight: 800;
+       font-family: 'Times New Roman', Times, serif;
+     }
+ 
+         /*DESCRIPCION DEL TITULO FINAL..*/
+     .content-fin{
+       display: block;
+       width: 100%;
+     }
+ 
+     .content-fin p{
+       color: #2d2d2d;
+       font-size: 0.9em;
+     }
+ 
+ 
+     /*..PAGINA APPTURISMO TURISMO...*/
+      .articulo-titulo{
+       width: 92%;
+       margin: auto;
+       }
+    
+       .articulo{
+       width: 92%;
+       margin: auto;
+       }
+ 
+       /*..FIN DE APPTURIMSO*/
+ 
+       /*..CONTENEDOR DEL AUTOR...*/
+       .articulo-ultimo{
+       display: block;
+       position: relative;
+       float: left;
+       width: 92%;
+       margin-left: 15px;
+       margin-top: 10px;
+      }
+ 
+       
+ 
+    /*CATEGORIA.......*/
+    .categoria-en-post{
+    display: block;
+    position: relative;
+    float: left;
+    width: 92%;
+    margin-bottom: 1px;
+    }
+ 
+    .categoria-en-post h2{
+     width: 100%;
+    font-size: 1.05rem;
+    }
+ 
+    .categoria-en-post p{
+    width: 100%;
+    position: relative;
+    float: right;
+    font-size: 1rem;
+    }
+    /*..FIN DE CONTAINER ARTICULO ULTIMO..*/
+ 
+    /*CATEGORIAS...*/
+    .categorias-posts-links{
+    width: 92%;
+    margin-left: 15px;
+    margin-top: 2px;
+    margin-bottom: 90px;
+    border-bottom: 2px solid	#DCDCDC;
+    }
 
-      .categorias-aside{
-        display: none;
+       /*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA CON  LINK..*/
+    .categorias-posts-links h4{
+     font-size: 1.05rem;
+     color:#000000;
+    }
+ 
+    .categorias-posts-links h3{
+     font-size: 1rem;
+     color:#2d2d2d;
+     }
+ 
+   /*...NO PONER #COMENTARIOS EL BACKGROUND COLOR PORQUE TODO EL POST TOMA ESE COLOR..*/o*/
+     /*.........*/
+     .col-md-10{
+     display: block;
+     width: 92%;
+     }
+      
+     /*..0 COMENTARIOS...*/
+     .col-md-10 h2{
+       font-size: 0.8rem;
+       font-family: Arial, Helvetica, sans-serif;
+       font-weight: 700;
       }
 
-
-
-  /*CARRUSEL CON FLECHA INCORPORADA Y JAVASCRIPT.... */
- /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
- #carrusel {
-  float:left;
-  width: 100%;
-  overflow:hidden;
- height: 305px;
-  position:relative;
-  margin: auto;
-  margin-bottom: 20px;
-  }
-  
-
-     .container-total-carrusell h1{
-       font-size: 1.6rem;
-       color: #000000;
+ 
+    /*CREAR NUEVO COENTARIO...*/
+    #myForm h2{
+      font-size: 1.1rem;
+      font-family: 'Times New Roman', Times, serif;
+      color: black;
+      }
+    
+      #myForm #id_content {
+        width: 95%;
+       }
+ 
+      #myDIV{
+        display: block;
+      }
+ 
+      #myDIV .btn{
+       background-color: #efefef;
+       color: black;
+       font-weight: 800;
      }
-
-
-    .container-total-carrusell #carrusel  .carrusel a p{
-       margin-left: 16px;
-       color: #2d2d2d;
+ 
+     #myDIV .btn-block{
+       background-color: #efefef;
      }
-
-
-  /*ESCONDE IMAGGENES*/
- /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
-  .carrusel{
-  width:4000px;
-  height: 270px;  /*VA DENTRO DEL #CARRUSEL MISMO TAMAÑO*/
-  left: 0px;
-  position:absolute;
-  z-index:0;
-  }
-
-    /*PARA QUE LAS FLECHAS DESPAREZCAN */
-  #carrusel:hover  li.left-arrow{
-  background-color: #fff;
-  opacity: .4;
-   top: 54px;
-  transition:all .5s ease-in-out;
-  }
-  
-  #carrusel ul li.left-arrow:hover {
-  display: block;
-  background-color:  #fff;
-  opacity: 3;
-  }
+ 
+ 
+     #myDIV .btn-lg{
+       background-color: #efefef;
    
+     }
+ 
+ 
+      #myDIV button[type="submit"] {
+       background-color: #efefef;
+     
+       }
 
- /**MUY IMPORTANTE..*/
-  /*CIRCULO PARA MOVERLO A LO ALTO Y ANCHO........................................................................................... */
-  .carusel{
-    width: 100%;
-    display: flex;
-    position: absolute;
-    margin-top: 16%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
-    margin-left:  50%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
-    }
-
+  
+     
+   
     
-    /*CIRCULO  DERECHO*/
-    #carrusel li.right-arrow{
-    margin-left: 81%;
-    }
+  
+      /*ELIMNADO EL BUSCADO QUE VA EN EL ASIDE PORQUE HAY BUSCADOR RESPONSIVE ARRIBA DE TODO*/
+      .tercera-columna-fija{
+      display: block;
+      width: 92%;
+      max-width: 600px;
+      margin: auto;
+      }
+           
+ 
+     .tercera-columna{
+      width: 100%;
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 40px;
+     }
+ 
+ 
+     .tercera-columna h2{
+     color: #000000;
+     font-size: 1.3rem;
+     }
+ 
+     
+     .aside-colum{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     }
+ 
+     .tercera-columna a h1{
+       color: #2d2d2d;
+       font-size: 1.2rem;
+      letter-spacing: 0.2px;
+     }
+ 
+     .tercera-columna-imagen{
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     }
+   
     
+       
+     .tercera-columna-imagen img{
+      width: 45%;
+     margin-right: 20px;
+     }
+ 
+     .tercera-columna-imagen p{
+      width: 45%;
+     }
+ 
+     .tercera-columna-fija .controls{
+       display: none;
+     }
+ 
+     /*BLOQUE DE CATEGORIAS, LO ANULO PORQUE YA ESTA EN EL ANTERIOR BLOQUE*/
+     .tercera-columna-fija .categorias-aside{
+       display: none;
+     }
+ 
+ 
+     /*..CARRUSELL.............................*/
+     .container-total-carrusell{
+       display: block;
+       width: 100%;
+ 
+     }
+ 
+      
+        /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
+      .container-total-carrusell h1{
+       font-size:1.6rem;
+       font-weight: 900;
+       word-spacing: -2px;
+       letter-spacing: 0.4px;
+       font-family: 'Times New Roman', Times, serif;
+       margin-left: 15px;
+       }
+ 
+ 
+ 
+     /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
+       /*IMPORTANTE PARA EL HEIGHT..*/
+     #carrusel {
+     float:left;
+     width: 100%;
+     overflow:hidden;
+     height: 430px;
+     position:relative;
+     margin: auto;
+     margin-bottom: 10px;
+     }
+     
+     
+     /*ESCONDE IMAGGENES*/
+     /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+      .carrusel{
+      width: 5000px;
+      left: 0px;
+      position:absolute;
+     }
+   
+     .carrusel>div {
+       float: left;
+       margin-right: 14px;   /*ESPACIO */
+     }
+ 
+       /*IMPORTANTE PARA EL HEIGHT..*/
+     .carrusel .product {
+       width: 100%;
+       max-width: 310px;
+       height: 430px;
+       margin: auto;
+        box-shadow: #f3f3f3 0px 13px 27px -5px, #f3f3f3 0px 8px 16px -8px;
+      }
+ 
+        /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+    .carrusel  .product img {
+     cursor:pointer;
+     border: 2px solid #DDD ;
+     padding: 3px ;
+     border-radius:6px;
+      width: 100%;
+      max-width: 310px;
+     height: 270px;
+      }
+  
+   .carrusel a p{
+     margin-left: 128px;
+     color: #2d2d2d;
+     font-size: 1rem;
+   }
+   
+     /*..CAJA DNDE ESTA LA IMAGEN..*/ 
+  
     /*CIRCULO   IZQUIERDO*/
-    #carrusel li.left-arrow{
-    margin-right: 3.8%;
-    }
+     #carrusel li.left-arrow{
+     margin-right: 3.8%;
     
+     }
+ 
+      /*CIRCULO  DERECHO NO PONERLO TAN ANCHO PORQUE PIERDE LA FORMA EL CIRCULO PONERLO DEBAJO DE 90*/
+     #carrusel li.right-arrow{
+     margin-left: 80.5%;
+     background-color: #7aac41;
+     }
+ 
+     /**MUY IMPORTANTE..*/
+    /*CIRCULO MODIFICA ALTO Y ANCHO.................. */
+    .carusel{
+     width: 100%;
+     display: flex;
+     position: absolute;
+     margin-top: 22%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+     margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+     }
+ 
+ 
     /*MUY IMPORTNATE*/  
-      /* ARROW LEFT ....SOLO ARROW LEFT............ARROW LEFT SIN PALO.... */
-   .carrusel1 ul li.left-arrow span{
-    top: 50%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-    left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
-    transform: translateY(-50%) rotate(-45deg);
-    border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
-    border-bottom: none;
-    }
-
-    
-     /*MUY IMPORTNATE*/  
-     /* ARROW RIGHT.............................ARROW RIGHT SIN PALO............................ */
-     .carrusel1 ul li.right-arrow span{
-    top: 50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-    right:  8.5%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+       /* ARROW LEFT ..........SOLO ARROW LEFT........ */
+     .carrusel1 ul li.left-arrow span{
+     top: 25%;  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+     left: 2.6%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+     transform: translateY(-50%) rotate(-45deg);
+     border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
+     border-bottom: none;
+     }
+ 
+     .container-total-carrusell .carusel ul li:hover{
+       background-color: #7aac41;
+       }
+     
+    /*MUY IMPORTNATE*/  
+    /* ARROW RIGHT.....ARROW RIGHT SIN PALO......... */
+    .carrusel1 ul li.right-arrow span{
+    top: 25%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+    right: 1%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
     transform: translateY(-50%) rotate(-45deg);
     border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
     border-top: none;
-     }
+    }
+  
+     /*PARA QUE LAS FLECHAS DESPAREZCAN */
+    #carrusel:hover  li.left-arrow{
+     background-color: #7aac41;
+    opacity: .4;
+    top: 20px;
+    transition:all .5s ease-in-out;
+    }
+       
+       #carrusel ul li.left-arrow:hover {
+       display: block;
+       background-color:  #fff;
+       opacity: 3;
+       }
+  
  
-
- /*MODIFICAR ANCHO Y ALTO IMPORTANTE */
- .carrusel>div {
- float: left;
- width: 100%;
- max-width: 296px;  /*IMPORTANTE*/
- height: 220px;
- margin-right: 8px;   /*ESPACIO */
- text-align:center;
- }
-
-  /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
-  .carrusel img {
-  cursor:pointer;
-  width: 100%;
-  max-width: 296px;  /*IMPORTANTE*/
-  height: 220px;
-  border: 3px solid #DDD ;
-  padding: 4px ;
-  border-radius:6px;
-  }
+  
  
      /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
 

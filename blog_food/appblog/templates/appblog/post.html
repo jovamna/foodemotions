@@ -198,13 +198,14 @@
         <!------------------------------------------------------------------------------------------------>
 
           <!----CONTAIINER DOS--------->
+           {% if post.titletwo %}
             <div class="contentwo">
                         <!---SUBTITULO--->
-                         {% if post.titletwo %}
+                        
                       <div class="title-two">
                       <h1>{{post.titletwo|safe}}</h1>  
                       </div> 
-                       {% endif %}  
+               
                       <!--IMAGEN SEGUNDO---->
                         {% if post.imagetwo %}
                       <div class="image-two">
@@ -224,18 +225,19 @@
                     <div class="content-two">
                     <p>{{post.contentwo|safe}}</p>
                    </div>
-                    {% endif %}  
+                  {% endif %}  
           </div>
-
+           {% endif %}  
 
        <!-----------------------TRES------------------------------------------------------->
+           {% if post.titlethree %}
           <div class="contentwo">
             <!--------SUBTITULO------------------>
-               {% if post.titlethree %}
+              
                <div class="title-two">
                <h1>{{post.titlethree|safe}}</h1>  
                </div> 
-               {% endif %}
+             
                <!--IMAGEN SEGUNDO---->
                {% if post.imagethree %}
                <div class="image-two">
@@ -253,18 +255,19 @@
                <div class="content-two">
                <p>{{post.contenthree|safe}}</p>
                </div>
-               {% endif %}
+                {% endif %}
       </div>
-
+       {% endif %}
 
          <!-------------------------CUATRO----------------------------------------------------->
+                {% if post.titlefour %}
                <div class="contentwo">
                   <!---TITULO----------------->
-                    {% if post.titlefour %}
+                   
                   <div class="title-two">
                      <h1>{{post.titlefour|safe}}</h1>  
                   </div> 
-                   {% endif %}
+                
                   <!--IMAGEN SEGUNDO---->
                   {% if post.imagefour %}
                   <div class="image-two">     
@@ -284,20 +287,21 @@
                   </div>
                    {% endif %}
              </div>
-   
+               {% endif %}
 
   <!------------------------------------------------------------------------------------------->
 
       
 
          <!--------------------QUINTO---------------------------------------------------------->
+                 {% if post.titlefive %}
             <div class="contentwo">
                <!--subtitulo-------------->
-                {% if post.titlefive %}
+           
                <div class="title-two">
                <h1>{{post.titlefive|safe}}</h1>  
                </div> 
-                {% endif %}
+             
                <!--IMAGEN --->
                 {% if post.imagefive %}
                <div class="image-two">
@@ -317,19 +321,20 @@
                </div>
                {% endif %} 
             </div>
+               {% endif %}
   <!------------------------------------------------------------------------------------------->
    
 
        
 
          <!------------------------------------------------------------------------------>
-         
+              {% if post.titleultimo %}
          <div class="contentwo">
-             {% if post.titleultimo %}
+         
              <div class="title-two">
              <h1>{{post.titleultimo|safe}}</h1>  
              </div> 
-              {% endif %}
+        
               <!--IMAGEN---->
              {% if post.image %}
              <div class="image-two">
@@ -343,7 +348,7 @@
               </div>
               {% endif %} 
          </div>
-
+                {% endif %}
       <!--------------------------------------------------------->
       </div>
       <!---articulo lleno-->

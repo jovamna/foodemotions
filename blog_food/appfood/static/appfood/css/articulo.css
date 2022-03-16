@@ -767,7 +767,7 @@ nav .logo-esconder .logo-en-menu-responsive img{
     
 
 
-  /*... *FECHA*/
+  /*.FOTO AUTOR Y FECHA*/
    .row-autor-nombre-fecha{
     display: flex;
     flex-direction: row;
@@ -1386,7 +1386,7 @@ nav .logo-esconder .logo-en-menu-responsive img{
     position: relative;
     float: left;
     margin-top: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     border-bottom: 1.5px solid	#DCDCDC;
     }
 
@@ -1571,9 +1571,10 @@ nav .logo-esconder .logo-en-menu-responsive img{
   
      #comentarios{
       background-color:  #FEEDF6;
-    display: flex;
+    display: block;
+    position: relative;
+    float: left;
     width: 100%;
-    max-width: 900px;
      }
   
     

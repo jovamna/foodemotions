@@ -3004,12 +3004,14 @@ width: 100%;
  
    .primer-segmento .tres{
     width: 100%;
-   display: flex;
-   flex-direction: column;
-   max-width: 640px;
-   padding-left: 0;
-   padding-right: 0;
-   }
+    display: block;
+    position: relative;
+    float: left;
+    max-width: 640px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 20px;
+    }
  
    .primer-segmento  .tres img{
       display: block;
@@ -3028,53 +3030,42 @@ width: 100%;
     word-spacing: -0.7px;
     letter-spacing: 0.2px;
     font-weight: 800;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-top: 5px;
-    margin-left: auto;
-     margin-right: auto;
+    display: block;
+    width: 100%;
+    max-width: 640px;
     }
 
     .primer-segmento .tres  h1{
       font-size: 1.1rem;
       font-weight: 800;
       margin-top: 5px;
-      margin-left: auto;
-      margin-right: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      width: 100%;
+      max-width: 640px;
     }
    
  
    /*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
    .primer-segmento  .tres  p{
-   font-size: 0.9rem;
+   font-size: 0.8rem;
    color: #2d2d2d;
-   letter-spacing: 0.2px;
+   letter-spacing: -0.2px;
    line-height: 20px;
    margin-top: 1px;
-   margin-bottom: 4px;
-   margin-right: auto;
-   margin-left: auto;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+   margin-bottom: 1px;
+   display: block;
+   width: 100%;
    }
 
-   .primer-segmento  .tres a p{
-  font-size: 0.9rem;
+   /*IMPORTANTE EL 100%..*/
+   .primer-segmento  .tres a {
+  font-size: 0.8rem;
   color: #2d2d2d;
   letter-spacing: 0.2px;
   line-height: 20px;
   margin-top: 1px;
-  margin-top: 5px;
-  margin-bottom: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  width: 100%;
   align-items: center;
   }
 
@@ -3082,7 +3073,7 @@ width: 100%;
      /*  SEGMENTO SEGUNDO DE LOS POST ULTIMOS..
      Y TAMBIEN SEGMENTO DE RECTAS DIETETICAS..........*/
      .bloque-posts-ultimos{
-      width: 94.5%;
+      width: 92.4%;
        margin: auto;
        margin-bottom: 40px;
      }
@@ -3100,6 +3091,7 @@ width: 100%;
       width: 100%;
       display: flex;
       flex-direction: column;
+     margin-bottom: 15px;
      }
   
    
@@ -3117,12 +3109,11 @@ width: 100%;
 
      .post-ultimo-encolumna .ultimo-imagen-titulo{
       width: 100%;
-      height:  100%;
-      max-height: 120px;
+      height: 130px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
      }
  
      .ultimo-imagen-titulo .post-ultimo-imagen{
@@ -3130,36 +3121,40 @@ width: 100%;
     position: relative;
     float: left;
     width: 45%;
-    max-width: 165px;  
+    height: 130px;
     }
 
     .ultimo-imagen-titulo .post-ultimo-imagen img{
    width: 100%;
    max-width: 155px;
-   height: 100%;
-    max-height: 120px;
+  
     }
 
    .ultimo-imagen-titulo .posts-ultimos-titulo{
    display: block;
    position: relative;
    float: right;
-   width: 40%;
+   width: 40%; 
+   height:  100%;
+   max-height: 120px;
    }
 
 
    .posts-ultimos-titulo .post-ultimo-titulo{
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  
+    height:  100%;
+    max-height: 120px;
     }
 
      /*.TITULO DE POSTS ULTIMOS Y DEL SEMENTO DE RECTEAS DIETETICAS...*/
      .ultimo-imagen-titulo .posts-ultimos-titulo .post-ultimo-titulo a h1{
      font-size: 0.95rem;
-      word-spacing: -0.5px;
-      margin-top: 4px;
-      padding-right: 11px;  /*para que las letras no sobresalgan*/
+     word-spacing: -0.5px;
+     margin-top: 4px;
+     width: 205px;
+     line-height: 20px;
      }
   
      .ultimo-imagen-titulo .posts-ultimos-titulo .post-ultimo-titulo p{
@@ -3169,8 +3164,8 @@ width: 100%;
 
    
 
-     .posts-ultimos-titulo .post-ultimo-titulo .lee{
-    font-size: 0.95rem;
+     .posts-ultimos-titulo .post-ultimo-titulo a{
+    font-size: 0.8rem;
     color:  #2d2d2d;
     }
   
@@ -3181,6 +3176,7 @@ width: 100%;
       flex-direction: column;
       width: 100%;
       margin: auto;
+ 
     }
      
     .columna-right .columna-right-column{
