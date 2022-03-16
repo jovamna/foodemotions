@@ -1079,7 +1079,7 @@ nav .logo-esconder .emoticon{
         color: #2d2d2d;
         }
 
-    
+      /*CONTAINER DEL PRIMER ÈRFIL NUTRICIONAL...*/
       .contiene .nutricional-imagen{
        display: block;
        position: relative;
@@ -1105,7 +1105,7 @@ nav .logo-esconder .emoticon{
   
       .contiene .nutricional-imagen  ul {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
 
       }
@@ -1120,7 +1120,7 @@ nav .logo-esconder .emoticon{
       margin-bottom: 8px;
       width: 100%;
       text-decoration: none;
-      display: block;
+      display: inline-block
      }
 
 
