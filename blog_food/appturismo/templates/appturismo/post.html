@@ -118,22 +118,26 @@
             <div class="imagen-central">
                   <div class="redes">
                          <ul class="iconos-social">
-                        <li> 
-                        <a href="malito:contacto@emotionsfood.com" target="_blank">
-                        <i class="fas fa-envelope"></i> 
-                        </a> <br>
-                        </li>
-                        {% if LINK_FACEBOOK %}
-                        <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank">
-                        <i class="fab fa-facebook-f"></i> </a> <br>
-                        </li>
-                        {% endif %}
-                        <li> <a href="http://twitter.com/foodemotions" target="_blank">
-                        <i class="fab fa-twitter"></i> </a> <br>
-                        </li>
-                        <li> <a href="http://instagram.com/foodemotions" target="_blank">
-                        <i class="fab fa-instagram"></i> </a> <br>
-                        </li>
+                      
+                            <li> 
+                          {% with base_url="https://foodingemotion.com" %} 
+                          <a href="https://www.facebook.com/sharer/sharer.php?u={{ base_url|urlencode }}{{ request.get_full_path|urlencode }}&t={{ object.title }}" target="_foodemotions">
+                          {% endwith %}
+                          <i class="fab fa-facebook-f"></i></a> <br>
+                          </li>
+                
+                        
+
+                          <li>
+                          {% with base_url="https://foodingemotion.com" %} 
+                          <a href="http://pinterest.com/pin/create/button/?url=LINK&media=URL_IMAGEN&description=TEXTO={{ base_url|urlencode }}{{ request.get_full_path|urlencode }}&t={{ object.title }}" target="_blank">
+                          {% endwith %} 
+                          <i class="fab fa-pinterest" aria-hidden="true"></i> </a> <br>
+                          </li>
+
+                          <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                          <i class="fas fa-envelope"></i> </a> <br>
+                          </li>  
                         </ul>
                   </div>
                       <!-- IMAGEN PRINCIPAL-->   
@@ -275,24 +279,21 @@
                                
               <!-- CATEGORIAS DENTRO DEL DIV ARTICULO-UNO------------------>
               <div class="categorias-posts-links">
-              <!--CATEGORIA ACTUAL--->
-              <em><h4>   Categorias: </h4></em>
-              <!--CATEGORIAS CON LIKS --->  
+              <em><h4>   Categorias: </h4></em>  
               {% load mptt_tags %}
               {% for categori in categories %} 
               <a href="/noticias-turismo-gastronomico/categoria/{{ categori.slug }}"  style="text-decoration: none">   
-              <em>  <h3>{{ categori}}</h3></em></a>       
-              {% endfor %}
-              <!--ENDFOR FINAL DE LA CATEGORIA --->              
+              <em><h3>{{ categori}}</h3></em>
+              </a>       
+              {% endfor %}          
               </div>
              <!--DIV CIERRE DE CATEGORIAS-POSTS-LINKS--->
             {% endfor %}
-          <!---------------ENDFOR FINAL DE PRIMERA COLUMNA------------------------- --->  
-             </div>                           
-           <!-- CIERRE DIV DE PRIMERA COLUMNA----------------------------------------------------------------------------------------------->
-   
 
- 
+          <!---------------ENDFOR FINAL DE PRIMERA COLUMNA---------------------------->  
+             </div>                           
+           <!-- CIERRE DIV DE PRIMERA COLUMNA------------------------------------->
+   
 
     <!---------------------------------------------------------------------->
      <!----------COMENTARIOS COMENTARIOS COMENTARIOS COMENTARIOS---------------------->
@@ -406,11 +407,9 @@
                                     <p>email requerido pero nunca mostrado</p>
                             </form>
                      </div>
-                          <!---FIN FORMULARIO PARA AÑADIR COMENTARIOS---->
-
+                    <!---FIN FORMULARIO PARA AÑADIR COMENTARIOS---->
            </div>
            <!--DIV FIN COL-DM-7---------------------------------------------------------->
-
          </div>
        <!----CIERRE DIV COMENTARIOS---------FIN ALL COMMENTS---------------------------->
 

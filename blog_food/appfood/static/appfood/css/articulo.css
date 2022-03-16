@@ -876,40 +876,39 @@ nav .logo-esconder .logo-en-menu-responsive img{
    .iconos-social{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 100%;
-    height: 28%;
     }
   
     .iconos-social li{
     list-style: none;
+    margin-bottom: 10px;
     }
 
    .iconos-social  li .fa-envelope{
-    padding: 10px 10px 10px 10px;
+    padding: 8px 8px 8px 8px;
     color: #639a3a;
     font-size:  10px;
-    width: 42px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border: 1px solid #639a3a; 
     border-radius: 9px;
     }
   
     .iconos-social li .fa-facebook-f{
-    padding: 10px 10px 10px 10px;
+    padding: 8px 8px 8px 8px;
     color: #639a3a;
     font-size:  10px;
-    width: 42px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border: 1px solid #639a3a;
     border-radius: 9px;
     }
   
-    .iconos-social  li .fa-twitter{
-    padding: 10px 10px 10px 10px;
+    .iconos-social  li .fa-pinterest{
+      padding: 8px 8px 8px 8px;
     color: #639a3a;
-    width: 42px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border: 1px solid #639a3a;
     border-radius: 9px;
     }
@@ -919,8 +918,8 @@ nav .logo-esconder .logo-en-menu-responsive img{
     color:  #639a3a;
     padding: 8px 8px 8px 8px;
     font-size:  9px;
-    width: 42px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border: 1px solid #639a3a;
     border-radius: 9px;
    

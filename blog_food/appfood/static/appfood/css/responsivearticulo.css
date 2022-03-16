@@ -1877,6 +1877,13 @@ border-radius:6px;
       width: 100%;
     }
 
+    #myDIV #myForm h2{
+      font-size: 1.6rem;
+    }
+ 
+    #myForm #id_content {
+      width: 95%;
+     }
 
     .col-md-10{
     display: block;
@@ -1995,13 +2002,7 @@ border-radius:6px;
    }
 
    
-     #myDIV #myForm h2{
-      font-size: 1.6rem;
-    }
- 
-    #myForm #id_content {
-      width: 95%;
-     }
+  
     /*..CARRUSELL.............................*/
     .container-total-carrusell{
       display: block;

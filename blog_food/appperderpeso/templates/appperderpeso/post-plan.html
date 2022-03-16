@@ -112,20 +112,25 @@
                          <div class="imagen-central">
                                <div class="redes">
                                 <ul class="iconos-social">
-                                <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
-                                <i class="fas fa-envelope"></i> </a> <br>
-                                </li>
-                                {% if LINK_FACEBOOK %}
-                                <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank">
-                                <i class="fab fa-facebook-f"></i> </a> <br>
-                                </li>
-                                {% endif %}
-                                <li> <a href="http://twitter.com/foodemtoions" target="_blank">
-                                <i class="fab fa-twitter"></i> </a> <br>
-                                </li>
-                                <li> <a href="http://instagram.com/foodemtoions" target="_blank">
-                                <i class="fab fa-instagram"></i> </a> <br>
-                                </li>
+                             
+                                      <li> 
+                          {% with base_url="https://foodingemotion.com" %} 
+                          <a href="https://www.facebook.com/sharer/sharer.php?u={{ base_url|urlencode }}{{ request.get_full_path|urlencode }}&t={{ object.title }}" target="_foodemotions">
+                          {% endwith %}
+                          <i class="fab fa-facebook-f"></i></a> <br>
+                          </li>
+                
+                        
+                          <li>
+                          {% with base_url="https://foodingemotion.com" %} 
+                          <a href="http://pinterest.com/pin/create/button/?url=LINK&media=URL_IMAGEN&description=TEXTO={{ base_url|urlencode }}{{ request.get_full_path|urlencode }}&t={{ object.title }}" target="_blank">
+                          {% endwith %} 
+                          <i class="fab fa-pinterest" aria-hidden="true"></i> </a> <br>
+                          </li>
+
+                          <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                          <i class="fas fa-envelope"></i> </a> <br>
+                          </li>  
                               </ul>
                               </div>
 

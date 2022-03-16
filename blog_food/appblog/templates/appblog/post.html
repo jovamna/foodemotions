@@ -75,20 +75,24 @@
 
                     <div class="redes">
                     <ul class="iconos-social">
-                    <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
-                    <i class="fas fa-envelope"></i> </a> <br>
-                    </li>
-                    {% if LINK_FACEBOOK %}
-                    <li> <a href="https://www.facebook.com/emotionsfood/?ref=settings" target="_blank">
-                    <i class="fab fa-facebook-f"></i> </a> <br>
-                    </li>
-                    {% endif %}
-                    <li> <a href="http://twitter.com/foodemtoions" target="_blank">
-                    <i class="fab fa-twitter"></i> </a> <br>
-                    </li>
-                    <li> <a href="http://instagram.com/foodemtoions" target="_blank">
-                    <i class="fab fa-instagram"></i> </a> <br>
-                    </li>
+                         <li>
+                          {% with base_url="https://foodingemotion.com" %} 
+                          <a href="https://www.facebook.com/sharer/sharer.php?u={{ base_url|urlencode }}{{ request.get_full_path|urlencode }}&t={{ object.title }}" target="_foodemotions">
+                          {% endwith %}
+                          <i class="fab fa-facebook-f"></i></a> <br>
+                          </li>
+                
+             
+                          <li>
+                          {% with base_url="https://foodingemotion.com" %} 
+                          <a href="http://pinterest.com/pin/create/button/?url=LINK&media=URL_IMAGEN&description=TEXTO={{ base_url|urlencode }}{{ request.get_full_path|urlencode }}&t={{ object.title }}" target="_blank">
+                          {% endwith %} 
+                          <i class="fab fa-pinterest" aria-hidden="true"></i> </a> <br>
+                          </li>
+
+                          <li> <a href="malito:contacto@emotionsfood.com" target="_blank">
+                          <i class="fas fa-envelope"></i> </a> <br>
+                          </li>  
                     </ul>
                     </div>
 
@@ -288,157 +292,161 @@
                    {% endif %}
              </div>
                {% endif %}
-
-  <!------------------------------------------------------------------------------------------->
+             <!------------------------------------------------------------------------------------------->
 
       
 
-         <!--------------------QUINTO---------------------------------------------------------->
-                 {% if post.titlefive %}
-            <div class="contentwo">
-               <!--subtitulo-------------->
-           
-               <div class="title-two">
-               <h1>{{post.titlefive|safe}}</h1>  
-               </div> 
+              <!--------------------QUINTO---------------------------------------------------------->
+              {% if post.titlefive %}
+              <div class="contentwo">
+
+                 <!------------------>
+                    <div class="title-two">
+                    <h1>{{post.titlefive|safe}}</h1>  
+                    </div> 
              
-               <!--IMAGEN --->
-                {% if post.imagefive %}
-               <div class="image-two">
-                <img src="{{post.imagefive.url}}" alt=""> 
-              </div>
-              {% endif %} 
-               <!-- TITULO ENTRADA SEGUNDO--------------> 
-                 {% if post.subtitlefive %}
-              <div class="subtitle-two">
-               <p> {{post.subtitlefive|safe}} </p>
-               </div>
-                {% endif %} 
-               <!--CONTENIDO SEGUNDO-------------> 
+                    <!--IMAGEN --->
+                    {% if post.imagefive %}
+                    <div class="image-two">
+                    <img src="{{post.imagefive.url}}" alt=""> 
+                    </div>
+                   {% endif %} 
+                   <!-- TITULO ENTRADA SEGUNDO--------------> 
+                   {% if post.subtitlefive %}
+                   <div class="subtitle-two">
+                   <p> {{post.subtitlefive|safe}} </p>
+                   </div>
+                   {% endif %} 
+                  <!--CONTENIDO SEGUNDO-------------> 
                   {% if post.contenfive %}
-               <div class="content-two">
-               <p> {{post.contenfive|safe}} </p>
-               </div>
-               {% endif %} 
+                  <div class="content-two">
+                  <p> {{post.contenfive|safe}} </p>
+                  </div>
+                  {% endif %} 
             </div>
-               {% endif %}
-  <!------------------------------------------------------------------------------------------->
+            {% endif %}
+            <!------------------------------------------------------------------------------------------->
    
 
        
 
-         <!------------------------------------------------------------------------------>
-              {% if post.titleultimo %}
-         <div class="contentwo">
+               <!---------------------------------------------------->
+                {% if post.titleultimo %}
+                <div class="contentwo">
          
-             <div class="title-two">
-             <h1>{{post.titleultimo|safe}}</h1>  
-             </div> 
+                  <div class="title-two">
+                  <h1>{{post.titleultimo|safe}}</h1>  
+                  </div> 
         
-              <!--IMAGEN---->
-             {% if post.image %}
-             <div class="image-two">
-             <img src="{{post.image.url}}" alt=""> 
-             </div>
-             {% endif %} 
-              <!--CONTENIDO SEGUNDO------------->
-              {% if post.contentultimo %}
-              <div class="content-two">
-              <p> {{post.contentultimo|safe}} </p>
-              </div>
-              {% endif %} 
-         </div>
-                {% endif %}
-      <!--------------------------------------------------------->
-      </div>
-      <!---articulo lleno-->
-    </div>
-      <!----articulovacio-articulolleno ROW------------------------------->
+                  <!--IMAGEN---->
+                  {% if post.image %}
+                  <div class="image-two">
+                  <img src="{{post.image.url}}" alt=""> 
+                  </div>
+                  {% endif %} 
+                  <!--CONTENIDO SEGUNDO------------->
+                  {% if post.contentultimo %}
+                  <div class="content-two">
+                  <p> {{post.contentultimo|safe}} </p>
+                  </div>
+                  {% endif %} 
+            </div>
+            {% endif %}
+          <!--------------------------------------------------------->
 
 
-                         <!---SEXTA CAJA CON DOS TITULOS (TERCER TITULO DE DOS)------->
+       </div>
+      <!---CIERRE ARTICULO LLENO DONDE ESTAN LOS POSTS-->
+     </div>
+    <!----CIERRE DEL ARTICULO LLENO Y EL ARTICULO VACIO 8%------------------>
+
+
+                         <!---CATEGORIA ACTUAL------>
                          <section class="articulo-ultimo">
-
-                         <!------CATEGORIA SIN LINK-------------- --->  
-                          <div class="categoria-en-post">
-                            <em><h2>Categoria:</h2></em>
-                            <em><p>{{ post.kategoria}}</p></em>
-                          </div>
-                          <!-----------CIERRE DIV DE CATEGORIA SIN LINKS---------------------------- --->  
+                             <div class="categoria-en-post">
+                             <em><h2>Categoria:</h2></em>
+                             <em><p>{{ post.kategoria}}</p></em>
+                             </div>
                           </section> 
                      <!---------------CIERRE SECTION DE ARTICULO ULTIMO------------------------ --->  
                          
-                      <!-- CATEGORIAS DENTRO DEL DIV ARTICULO-UNO------------------>
+                      <!-- CATEGORIAS TOTAL--------------------------->
                       <div class="categorias-posts-links">
-                      <!--CATEGORIA ACTUAL--->
                       <em><h4>   Categorias: </h4></em>
-                      <!--CATEGORIAS CON LIKS --->  
                       {% load mptt_tags %}
                       {% for categoria in categories %} 
                       <a href="/dietas-especiales-y-alimentacion-saludable/categoria/{{ categoria.slug }}" style="text-decoration: none">   
                       <em>  <h3>{{ categoria }}</h3></em></a>       
                       {% endfor %}             
                       </div>
-                    <!--DIV CIERRE DE CATEGORIAS-POSTS-LINKS--->
+                    <!------------------------------------------------->
                   
                
         <!---------------ENDFOR FINAL DE PRIMERA COLUMNA----------------->  
-       <!-- CIERRE DIV DE PRIMERA COLUMNA---------------------------------->
        {% endfor %}
-
-
-
-
-
+      <!---------------ENDFOR FINAL DE PRIMERA COLUMNA---------------------------->  
+      </div>                           
+      <!-- CIERRE DIV DE PRIMERA COLUMNA------------------------------------->
+     
 
      <!----------COMENTARIOS COMENTARIOS COMENTARIOS COMENTARIOS---------------------->
         <div id="comentarios">
-        {% for comment in post.latest_comments %}
-        <p>{{ comment.user.username }}: {{ comment.description }}</p>
-         {% endfor %}
+
+            {% for comment in post.latest_comments %}
+            <p>{{ comment.user.username }}: {{ comment.description }}</p>
+            {% endfor %}
+
            <!---------------------------------------------------------------------------->
            <div class="col-md-10">
-               {% with allcomments.count as total_comments %}
-               <h2>{{ total_comments }} comentario{{ total_comments|pluralize }}</h2>
-               {% endwith %}
+                {% with allcomments.count as total_comments %}
+                <h2>{{ total_comments }} comentario{{ total_comments|pluralize }}</h2>
+                {% endwith %}
 
                 {% load mptt_tags %}
-                <!----DIV DE TODOS LOS NODES------------------------------------------>
+                <!----DIV DE TODOS LOS NODES-----------------------------------B------->
                 <div>
-                     {% recursetree allcomments %}
-                     <!--DIV ID AQUI VA EL NODE ID QUE EN EL BUTTON TIENE SU FUNCTION--->
-                     <div id="{{ node.id }}" class="my-2 p-2" style="border: 1px solid grey">
-                             <!--DIV CLASS D-FLEX VA EL NODE.NAME Y NODE PUBLISH------->
-                             <div class="d-flex justify-content-between">
-                                 <p>Comentado por :</p> &nbsp;{{ node.name }}
-                                      <div>
-                                      <!---DIV VACIO---->
-                                      </div>
-                                {{ node.publish }}
-                             </div>
-                             <!----FIN DIV D-FLEX NODE.NAME Y NODE.PUBLISH------->
-                             <!----DIV SIN NOMBRE CLASS VA EL NODE.CONTENT------->
-                             <div>
-                                {{ node.content }}
-                             </div>
-                             <!----FIN DIV SIN NOMBRE CLASS VA EL NODE.CONTENT------->
-                             <hr />
+                        {% recursetree allcomments %}
+                        <!--DIV ID AQUI VA EL NODE ID QUE EN EL BUTTON TIENE SU FUNCTION--------A-->
+                        <div id="{{ node.id }}" class="my-2 p-2" style="border: 1px solid grey">
 
-                         <!--BOTONES----REPLY---REPLY--DEBERIA IR DELETE PARA QUE ESTO FUNCIONE USE JAVASCIPTt---->
-                          <!--ESTE DIV NO ESTABA LO HE AÑADIDO Y ES PARA CAMBIAR EL BOTON AL OTRO LADO---->
+
+                                <!--DIV CLASS D-FLEX VA EL NODE.NAME Y NODE PUBLISH----1--->
+                                <div class="d-flex justify-content-between">
+                                <p>Comentado por :</p> &nbsp;{{ node.name }}
+                                        <!-------------->
+                                        <div>
+                                        <!---DIV VACIO---->
+                                        </div>
+                                        <!--------------->
+                                {{ node.publish }}
+                                </div>
+                                <!----FIN DIV D-FLEX NODE.NAME Y NODE.PUBLISH------->
+
+
+                                <!----DIV SIN NOMBRE CLASS VA EL NODE.CONTENT----2--->
+                                <div>
+                                {{ node.content }}
+                                </div>
+                                <!----FIN DIV SIN NOMBRE CLASS VA EL NODE.CONTENT------->
+                                <hr />
+
+
+
+                             <!--BOTONES----REPLY--DEBERIA IR DELETE PARA QUE ESTO FUNCIONE USE JAVASCIPTt---------3--->
+                             <!--ESTE DIV NO ESTABA LO HE AÑADIDO Y ES PARA CAMBIAR EL BOTON AL OTRO LADO---->
                             <div class="d-flex flex-row-reverse">
                             {% if node.level < 4 %}
-                           <button class="btn btn-primary btn-sm" onclick="myFunction({{ node.id }})"  style="background-color: grey">
-                           Responder
-                           </button>
-                          {% endif %}
+                            <button class="btn btn-primary btn-sm" onclick="myFunction({{ node.id }})"  style="background-color: grey">
+                            Responder
+                            </button>
+                            {% endif %}
 
-                           <!--BOTON ELIMINAR NO FUNCIONA--->
-                          {% if node.name|stringformat:"s" == user.get_name  %}
-                          <button class="btn btn-secondary btn-sm mr-2" onclick="deleteComment({{ node.id }})">
-                          Delete
-                          </button>
-                          {% endif %}
+                            <!--BOTON ELIMINAR NO FUNCIONA--->
+                            {% if node.name|stringformat:"s" == user.get_name  %}
+                            <button class="btn btn-secondary btn-sm mr-2" onclick="deleteComment({{ node.id }})">
+                            Delete
+                            </button>
+                            {% endif %}
                             </div>
                           <!--CIERRE DEL DIV D-FLEX-ROW-REVERSE--->
                      
@@ -446,7 +454,9 @@
                            
                       
                      </div>
-                      <!--CIERRE DEL DIV ID DONDE ESTA EL NODE ID EL NODE NAME Y PUBLISH Y EL NODE CONTENT----->
+                      <!--CIERRE DEL DIV ID DONDE ESTA EL NODE ID EL NODE NAME Y PUBLISH Y EL NODE CONTENT-------A----->
+
+
                       {% if not node.is_leaf_node %}
                       <div class="children pl-2 pl-md-5">
                       {{ children }}
@@ -454,7 +464,15 @@
                      {% endif %}
                     {% endrecursetree %}
                </div>
-            <!----CIERRE DEL DIV DE TODOS LOS NODES NO TIENE  NOMBRE------------->
+            <!----CIERRE DEL DIV DE TODOS LOS NODES NO TIENE  NOMBRE-----------B------------->
+
+
+
+
+
+
+
+
            <!--CREO ES LA PAGINACION DE TODOS LOS COMENTS-DE ESTE FORMULARIO--------->
                <div class="py-4">
                        <nav aria-label="Page navigation example">
@@ -505,28 +523,99 @@
                                     <p>email requerido pero nunca mostrado</p>
                             </form>
                      </div>
-                          <!---FIN FORMULARIO PARA AÑADIR COMENTARIOS---->
-
+                    <!---FIN FORMULARIO PARA AÑADIR COMENTARIOS---->
            </div>
            <!--DIV FIN COL-DM-7---------------------------------------------------------->
-
          </div>
        <!----CIERRE DIV COMENTARIOS---------FIN ALL COMMENTS---------------------------->
    <!----------------FIN ORMULARIO--------------------------------------->
+        <!----CIERRE DIV COMENTARIOS---------FIN ALL COMMENTS---------------------------->
+
+
+  
+      <!-----------------FIN ALL COMMENTS---------------------------->
+
+
+   <script>
+      $(document).on('click', '#newcomment, #newcommentinner', function (e) {
+    e.preventDefault();
+
+    var button = $(this).attr("value");
+
+    var placement = "commentform"
+    if (button == "newcommentform") {
+      var placement = "newcommentform"
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: '{% url "appblog:addcomment" %}',
+      data: $("#" + button).serialize(),
+      cache: false,
+      success: function (json) {
+        console.log(json)
+
+
+        $('<div id="" class="my-2 p-2" style="border: 1px solid grey"> \
+          <div class="d-flex justify-content-between">By ' + json['name'] + '<div></div>Posted: Just now!</div> \
+          <div>' + json['result'] + '</div> \
+          <hr> \
+          </div>').insertBefore('#' + placement);
+
+        $('.commentform').trigger("reset");
+        formExit()
+
+      },
+      error: function (xhr, errmsg, err) {
+
+      }
+    });
+  })
 
 
 
+   function formExit(e) {
+    e.preventDefault();
+    document.getElementById("newcommentform").remove();
+    $("#newcommentform").remove();
+  }
+
+  function myFunction(id) {
+    if (document.contains(document.getElementById("newcommentform"))) {
+      document.getElementById("newcommentform").remove();
+    }
+  
+   var d1 = document.getElementById(id);
+    d1.insertAdjacentHTML('afterend',
+       '<form id="newcommentform" class="form-insert py-2" method="post"> \
+                <div class="d-flex justify-content-between"><h2>Reply:</h2><div><button type="button" class="btn btn-outline-secondary" onclick="formExit()"">Close</button></div></div> \
+                <label for="id_name">Name:</label> \
+                <input type="text" name="name" class="col-sm-12" maxlength="50" required="" id="id_name">\
+                <select name="parent" class="d-none" id="id_parentt"> \
+                <option value="' + id + '" selected="' + id + '"></option> \
+                </select> \
+                <label for="id_email">Email:</label> \
+                <input type="text" name="email" class="col-sm-12" maxlength="254" required="" id="id_email"> \
+                <label for="id_content">Content:</label> \
+                <textarea name="content" cols="40" rows="5" class="form-control" required id="id_content"></textarea> \
+                {% csrf_token %} \
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button> \
+              </form>');
+
+    document.querySelector('#id_parentt [value="' + id + '"]').selected = true;
+  }
+
+ $('#myForm').trigger("reset");
+  
+</script>
 
 
+   <!--CIERRE COMEMNTS----------------------------------------->
 
+          {% endblock content %}
+      <!-- CIERRE DIV DE  COLUMNA PRIMERA------------------->
+       </div> 
 
-                               <!---FIN COLUMNA PRIMERA-------------------------->
-                                           </div> 
-                              <!------------------------------------------------->             
-                            <!---CIERRE DEL BLOCK QUE CONTIENE COFIDICACION---->
-                           {% endblock content %}
-                          <!-- CIERRE DIV DE  COLUMNA PRIMERA-------------------> 
-             
            
  
 

@@ -3010,7 +3010,7 @@ width: 100%;
     max-width: 640px;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     }
  
    .primer-segmento  .tres img{
@@ -3025,7 +3025,7 @@ width: 100%;
  
     /*TITULO NOTICIA TURISMO*/
     .primer-segmento .tres a h1{
-    font-size: 1.1rem;
+    font-size: 1.16rem;
     color: #000000;
     word-spacing: -0.7px;
     letter-spacing: 0.2px;
@@ -3059,14 +3059,13 @@ width: 100%;
 
    /*IMPORTANTE EL 100%..*/
    .primer-segmento  .tres a {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #2d2d2d;
   letter-spacing: 0.2px;
-  line-height: 20px;
   margin-top: 1px;
   display: block;
   width: 100%;
-  align-items: center;
+  text-align: center;
   }
 
 
@@ -3142,8 +3141,9 @@ width: 100%;
 
    .posts-ultimos-titulo .post-ultimo-titulo{
     width: 100%;
-    display: flex;
-    flex-direction: column;  
+    display: block;
+    position: relative;
+    float: left;
     height:  100%;
     max-height: 120px;
     }
@@ -3153,12 +3153,11 @@ width: 100%;
      font-size: 0.95rem;
      word-spacing: -0.5px;
      margin-top: 4px;
-     width: 205px;
+     width: 167px;
      line-height: 20px;
      }
   
-     .ultimo-imagen-titulo .posts-ultimos-titulo .post-ultimo-titulo p{
-     visibility: hidden;
+   .posts-ultimos-titulo .post-ultimo-titulo p{
      display: none;
      }
 
