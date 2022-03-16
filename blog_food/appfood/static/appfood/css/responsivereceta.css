@@ -1308,10 +1308,11 @@
   
       /*DESCRIPCION DE LA RECETA*/
        .articulo-flex-colum  .recetas p{
-        font-size: 1.2rem;
+        font-size: 1em;
         word-spacing: -0.01px;
         letter-spacing: -0.001px;
         font-family: 'Times New Roman', Times, serif;
+        line-height: 23px;
         color: #2d2d2d;
         }
 
@@ -1484,7 +1485,7 @@
     
       /*PORCIONES*/
       .primer-bloque-cien .contiene  .temps-porciones .porciones p{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         color: #000000;
         font-family: 'Times New Roman', Times, serif;
         letter-spacing:-0.001rem ;
@@ -1510,14 +1511,24 @@
        font-size: 1.2rem;
        color: #000000;
        font-family: 'Times New Roman', Times, serif;
-       letter-spacing:-0.001rem ;
-       word-spacing: -0.01rem;
+       letter-spacing:-0.001px;
+       word-spacing: 0.01px;
+       width: 96%;
+       margin: auto;
+      }
+
+      .primer-bloque-cien .contiene .nutricional-imagen ul{
+        display: flex;
+        flex-direction: row;
+      width: 96%;
+      margin: auto;
+
       }
 
       .primer-bloque-cien .contiene .nutricional-imagen li{
-       font-size: 1rem;
-       letter-spacing: -0.001rem ;
-       word-spacing: -0.01rem;
+       font-size: 1em;
+       letter-spacing: 0.9px ;
+       word-spacing: -0.01px;
        color: #2d2d2d;
      }
 
@@ -1593,30 +1604,27 @@
         text-align: start;
        }
 
+       .lista-ingredientes .checkbox{
+        width: 100%;
+        height: 54px;
+      }
+
          /*LOS INGREDIENTES*/
-     .lista-ingredientes  p{
-        letter-spacing: -0.1px;
+     .lista-ingredientes .checkbox span{
+        letter-spacing: 0.3px;
         font-family: 'Times New Roman', Times, serif;
-        font-size: 1.2rem;
-        letter-spacing:  -0.001rem ;
-        word-spacing: -0.01rem;
+        font-size:  0.9em;
+        word-spacing: -0.01px;
         font-weight: 400;
         color: #2d2d2d;
         text-align: start;
+        line-height: 22px;
        }
 
-        .lista-ingredientes .checkbox{
-           width: 100%;
-           height: 50px;
-         }
-
-         /*LOS INGREDIENTES*/
-       .ingredientes-tres  .ingredientes .lista-ingredientes .checkbox span{
-           font-size: 1.1rem;
-           line-height: 30px;
-         }
-
-
+       
+        
+      
+      /*...BUSCAR ESTO..*/
        .salsa p{
          color: #000;
          font-weight: 900;
@@ -1629,12 +1637,29 @@
  
        }
 
-
        .preparacion-titulo{
         display: flex;
         flex-direction: row;
         width: 100%;
       }
+
+        /*..CAJA DEL TITULO DE PREPARACION..*/
+        .preparacion-titulo .prepa-titulo{
+          width: 91%;
+          margin-top: 10px;
+          }
+      
+              /*..CAJA DEL TITULO DE PREPARACION..*/
+         .preparacion-titulo .prepa-titulo h2{
+         font-size: 1.25em;
+         letter-spacing:-0.01px;
+         word-spacing: -0.01px;
+        font-weight: 800;
+        text-align: start;
+        color: #000;
+        font-family: 'Times New Roman', Times, serif;
+          }
+    
 
         /*PREPARANDO.......*/
         .preparacion-pasos {
@@ -1656,27 +1681,22 @@
 
       /*TITULO PASO 1*/
       .preparacion-pasos .checkbox span{
-        font-size: 1.2rem;
+        font-size: 1.2em;
+        color: #000;
+        font-weight: 800;
       }
 
           /*PREPARANDO.......*/
-      .preparacion-pasos p{
-      letter-spacing:-0.001rem ;
-      word-spacing: -0.01rem;
+      .preparacion-pasos .preparacion p{
+      letter-spacing:  -0.001px ;
+      word-spacing: -0.01px;
       font-family: 'Times New Roman', Times, serif;
-      font-size: 1.2rem;
+      font-size: 1em;
       font-weight: 400;;
-      line-height: -0.2px;
-      color: #666;
+      line-height: 22px;
+      color: #2d2d2d;
        }
       
-
-       .preparacion-titulo .prepa-titulo{
-        width: 91%;
-        margin-top: 10px;
-        }
-    
-       
         .prepa-pic  {
           width: 9%;
           height: 8%;
@@ -1691,18 +1711,7 @@
          }
 
 
-     
-        /*TITULO DE LA PREPARACION*/
-      .preparacion-dos .prepa h2{
-        font-size: 1.4rem;
-        letter-spacing:-0.01rem ;
-        word-spacing: -0.01rem;
-       font-weight: bolder;
-       text-align: start;
-       color: #000;
-       font-family: 'Times New Roman', Times, serif;
-       }
-     
+    
 
     /*cajita2*/
     .tips-titulo-pic{
@@ -1748,9 +1757,9 @@
     }
         
     .primera-columna .nutricion-informe .nutricional p{
-    letter-spacing: 0.3px ;
+    letter-spacing: -0.3px ;
     word-spacing: -0.4px;
-    font-size:  0.8rem;
+    font-size:  1em;
     font-weight: 400;
     color: #2d2d2d;
     display: inline-block;

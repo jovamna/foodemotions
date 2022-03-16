@@ -840,7 +840,7 @@ nav .logo-esconder .emoticon{
     color: #2d2d2d;
     text-align: start;
     margin-top: 2px;
-    line-height: 22px;
+    line-height: 23px;
    }
   
     /*---LEER MAS...*/
@@ -1079,11 +1079,11 @@ nav .logo-esconder .emoticon{
         color: #2d2d2d;
         }
 
-      /*CONTAINER DEL PRIMER ÈRFIL NUTRICIONAL...*/
+      /*CONTAINER DEL PRIMER PÈRFIL NUTRICIONAL...*/
       .contiene .nutricional-imagen{
        display: block;
        position: relative;
-        width: 98%;
+        width: 100%;
         margin: auto;
         margin-top: 25px;
         text-decoration: underline;
@@ -1101,12 +1101,15 @@ nav .logo-esconder .emoticon{
       color: #2d2d2d;
       font-weight: 600;
       list-style-type: none;
+      width: 99%;
+      margin: auto;
       }
   
       .contiene .nutricional-imagen  ul {
         display: flex;
         flex-direction: row;
-        width: 100%;
+        width: 99%;
+        margin: auto;
 
       }
      /*ENUMERANDO LOS NUTRIENTES*/
@@ -1447,8 +1450,8 @@ nav .logo-esconder .emoticon{
     
       /*PREPARANDO.DESCRIBIENDO COMO SE HACE LA COMIDA......*/
      .preparacion p{
-        letter-spacing: -0.001rem;
-        word-spacing:  -0.001rem;
+        letter-spacing: 0.1px;
+        word-spacing:  -0.001px;
        font-family: 'Times New Roman', Times, serif;
       font-size: 1.2rem;
       font-weight: 400;
@@ -1548,7 +1551,7 @@ nav .logo-esconder .emoticon{
     letter-spacing: 0.5px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2rem;
-    font-weight: 100;
+    font-weight: 400;
     line-height: 22px;
     color: #2d2d2d;   
     display: inline-block;
