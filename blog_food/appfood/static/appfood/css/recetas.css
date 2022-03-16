@@ -71,26 +71,7 @@
     text-decoration:none;
    }
 
-    /*ESTO ES DE LOS COMENTARIOS*/
-   .children form {
-    margin-left: -48px;
-
-    /* will touch very left side */
-    }
-  
-   .children .children form {
-    margin-left: -96px;
-    /* will touch very left side */
-   }
-
-   .comentarios{
-    background-color:  #FEEDF6;
-    display: flex;
-    width: 100%;
-    max-width: 900px;
-   }
-
-  /*.........*/
+   
 
 
 
@@ -863,6 +844,7 @@ nav .logo-esconder .emoticon{
     color: #2d2d2d;
     text-align: start;
     margin-top: 2px;
+    line-height: 22px;
    }
   
     /*---LEER MAS...*/
@@ -1540,42 +1522,38 @@ nav .logo-esconder .emoticon{
    /* NUTRICION INFORME    .......... */
    .primera-columna .nutricion-informe{
    width: 100%;
-   margin-top:5%;
-   margin-bottom: 15%;
+   margin-bottom: 60px;
    }
 
     /*cajita*/
     .primera-columna .nutricion-informe .nutricional{
+      display: block;
+      position: relative;
+      float: left;
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 30px;
     border-top: 2px solid #DCDCDC;
    }
   
 
    .primera-columna .nutricion-informe .nutricional h2{
-    margin-top: 12px;
     font-weight: bolder;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     word-spacing: -0.001px;
     letter-spacing: -0.01px;
     font-family: 'Times New Roman', Times, serif;
     color: #000000;
     text-decoration: underline; 
-    text-align: start;
     }
   
     .primera-columna .nutricion-informe .nutricional p{
-    letter-spacing: 0.01rem;
+    letter-spacing: 0.5px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2rem;
     font-weight: 100;
-    line-height: -0.4px;
+    line-height: 22px;
     color: #2d2d2d;   
     display: inline-block;
-    position: relative;
-    margin-right: 9px;
-    line-height: 22px;
-
   }
 
    /*..CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
@@ -1604,6 +1582,8 @@ nav .logo-esconder .emoticon{
     font-size: 1.1rem;
     font-family: 'Times New Roman', sans serif;
     color:#2d2d2d;
+    display: inline-block;
+    margin-right: 10px;
     }
 
 
@@ -1681,35 +1661,8 @@ nav .logo-esconder .emoticon{
     color: #2d2d2d;
    }
 
-    /*CONETENDOR DE CATEGORIAS EN ASIDE */
-   #aside-recetas .categorias-recetas-links-aside {
-     width: 100%;
-     height: 100%;
-     display: flex;
-     flex-direction: column;
-    
-  }
 
-   #aside-recetas .categorias-recetas-links-aside h2{
-    font-size: 1.2rem;
-    font-weight: 100;
-    word-spacing: -0.1px;
-    letter-spacing: -0.2px;
-    font-family: 'Times', 'sans-serif';
-    color: #000000;
-     margin-bottom: -0.1px;
-  
 
-   }
-   #aside-recetas .categorias-recetas-links-aside p{
-    font-size: 1.1rem;
-    font-weight: 100;
-    word-spacing: -0.1px;
-    letter-spacing: -0.2px;
-    font-family: 'Times', 'sans-serif';
-    color: #666;
-     margin-bottom: -0.1px;
-   }
     /*FINAL ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE ASIDE */
 
 
@@ -1720,40 +1673,76 @@ nav .logo-esconder .emoticon{
 
 
 
+    /*..COMENTARIOS.............*/
+
+    /*ESTO ES DE LOS COMENTARIOS*/
+    .children form {
+      margin-left: -48px;
+  
+      /* will touch very left side */
+      }
+    
+     .children .children form {
+      margin-left: -96px;
+      /* will touch very left side */
+     }
+  
+     .comentarios{
+      background-color:  #FEEDF6;
+      display: flex;
+      width: 100%;
+      max-width: 900px;
+     }
+  
+    /*.........*/
+    .col-md-10{
+    display: block;
+    }
+     
+    /*..0 COMENTARIOS...*/
+    .col-md-10 h2{
+      font-size: 1.2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+     }
+
+   /*CREAR NUEVO COENTARIO...*/
+   #myForm h2{
+     font-size: 1.5rem;
+     font-family: 'Times New Roman', Times, serif;
+     color: black;
+     }
 
 
-  .tipeo{
-  margin: auto;
-  margin-bottom: 20%;
-  display: table;
-  width: 90%;
-  height: 5%;
-  }
+     #myDIV{
+       display: block;
+     }
 
-  .tipeo h4{
-  position: relative; 
-  float: left;
-  color: #2d2d2d;
-  font-size: 2em;
-  }
+     #myDIV .btn{
+      background-color: #efefef;
+      color: black;
+      font-weight: 800;
+    }
 
-  .tipeo h1 { 
-  position: relative; 
-  float: left;
-  color: #2d2d2d;
-  font-size: 2em;
-  white-space: nowrap;
-  width:28%;
-  }
+    #myDIV .btn-block{
+      background-color: #efefef;
+    }
 
-   .tipeo h1 span {
-   position:absolute;
-   right:0;
-   width: 8em;
-   background: white;
-   border-left: 0.1px solid #DDD;
-   animation: escribir 5s steps(30) infinite alternate;
-   }
+
+    #myDIV .btn-lg{
+      background-color: #efefef;
+  
+    }
+
+
+     #myDIV button[type="submit"] {
+      background-color: #efefef;
+    
+      }
+
+
+   
+ 
 
 
 

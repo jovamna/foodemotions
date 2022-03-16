@@ -73,23 +73,6 @@ height: 100%;
   font-weight: lighter;
    }
 
-   .children form {
-  margin-left: -48px;
-   }
-
-   .children .children form {
-  margin-left: -96px;
-  /* will touch very left side */
-   }
-
-   #comentarios{
-    background-color:  #FEEDF6;
-  display: flex;
-  width: 100%;
-  max-width: 900px;
-   }
-
-
     #controls-responsive{
    display: none;
     }
@@ -1247,8 +1230,9 @@ nav .logo-esconder .logo-en-menu-responsive img{
 
    /*--PLAN COMIDAS------------------------*/
    .semana{
-     display: flex;
-     flex-direction: column;
+    display: block;
+    position: relative;
+    float: left;
      width: 100%;
    }
  
@@ -1289,6 +1273,9 @@ nav .logo-esconder .logo-en-menu-responsive img{
     
    /*DIA....*/
     .container-dia{
+      display: block;
+      position: relative;
+      float: left;
       width: 100%;
       margin-top: 40px;
     }
@@ -1310,17 +1297,40 @@ nav .logo-esconder .logo-en-menu-responsive img{
       width: 100%;
     }
 
+
+
+   /*..DE CONTAINER DIA SU DESCRIPCION..*/
     .dia{
       width: 100%;
+      display: block;
+      position: relative;
+      float: left;
     }
 
     .dia p{
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-family: "Argos Bold",serif;
       color: #2d2d2d;
+      line-height: 22px;
+      margin-top: 1px;
+      display: block;
+      height: 1px;
     }
 
-     .content-fin{
+     /*PARTE FINAL DEL POST CONCLUSIONES*/
+     .resumen-del-post{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 35px;
+      margin-bottom: 45px;
+     }
+
+     .resumen-del-post .title-fin{
+       display: block;
+      }
+      .resumen-del-post  .content-fin{
        width: 100%;
      display: block;
      }
@@ -1330,11 +1340,9 @@ nav .logo-esconder .logo-en-menu-responsive img{
      /*..CAJA ARTICULO ULTIMO ................. */
      /*--CONTIENE ULTIMA REDACCION AUTOR Y FOTO Y CATEGORIA SIN LINK.................................................*/
       .articulo-ultimo{
-      display: flex;
-      flex-direction: column;
-      margin: auto;
+     display: block;
       margin-top: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       width: 100%;
       }
  /*........TITULO ULTIMO DE PERDERPESO   (TERCERO Y ULTIMO)  ................ */
@@ -1350,14 +1358,19 @@ nav .logo-esconder .logo-en-menu-responsive img{
 
   /*--CATEGORIA QUE ESTA SIN LINK SOLO VA LA CATEGORIA ACTUAL..*/
   .categoria-en-post h2{
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: 'Times New Roman', sans serif;
   color:#000000;
+  font-weight: 900;
+  display: block;
+  position: relative;
   float: left;
   margin-right: 6px;
   }
 
    .categoria-en-post p{
+     display: block;
+     position: relative;
      float: right;
      font-size: 1.1rem;
      color: #2d2d2d;
@@ -1369,12 +1382,12 @@ nav .logo-esconder .logo-en-menu-responsive img{
    /*CONTENEDOR DE CATEGORIAS CON LINKS*/
   .categorias-posts-links{
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: block;
+    position: relative;
+    float: left;
     margin-top: 8px;
     margin-bottom: 10px;
     border-bottom: 1.5px solid	#DCDCDC;
-
     }
 
    /*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA SIN TIENEN LINK..*/
@@ -1389,12 +1402,14 @@ nav .logo-esconder .logo-en-menu-responsive img{
     font-size: 1.1rem;
     font-family: 'Times New Roman', sans serif;
     color:#000000;
+    font-weight: 900;
    }
 
    .categorias-posts-links h3{
     font-size: 1.1rem;
     font-family: 'Times New Roman', sans serif;
     color:#2d2d2d;
+    display: inline-block;
     }
 
 
@@ -1541,6 +1556,72 @@ nav .logo-esconder .logo-en-menu-responsive img{
      font-family: 'Times New Roman', Times, serif;
     }
  
+
+
+
+    
+   .children form {
+    margin-left: -48px;
+     }
+  
+     .children .children form {
+    margin-left: -96px;
+    /* will touch very left side */
+     }
+  
+     #comentarios{
+      background-color:  #FEEDF6;
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+     }
+  
+    
+    /*.........*/
+    .col-md-10{
+    display: block;
+    }
+     
+    /*..0 COMENTARIOS...*/
+    .col-md-10 h2{
+      font-size: 1.2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+     }
+
+   /*CREAR NUEVO COENTARIO...*/
+   #myForm h2{
+     font-size: 1.5rem;
+     font-family: 'Times New Roman', Times, serif;
+     color: black;
+     }
+
+
+     #myDIV{
+       display: block;
+     }
+
+     #myDIV .btn{
+      background-color: #efefef;
+      color: black;
+      font-weight: 800;
+    }
+
+    #myDIV .btn-block{
+      background-color: #efefef;
+    }
+
+
+    #myDIV .btn-lg{
+      background-color: #efefef;
+  
+    }
+
+
+     #myDIV button[type="submit"] {
+      background-color: #efefef;
+    
+      }  
   
     /*CONTAINER GENERAL DEL CARRUSEL............................................. */
      .container-total-carrusell{

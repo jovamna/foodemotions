@@ -2,6 +2,19 @@
 {% load static %}
 
 {% block titulo %}Receta{% endblock titulo %}  
+ <!---SEO--->
+   {% block metadescription %}
+    <meta name="description" content="{{recipe.title|truncatechars:25}}">
+  {% endblock %}
+   
+
+
+
+
+
+
+
+
 
 
 
@@ -743,7 +756,7 @@
                       <!---FORMULARIO PARA AÑADIR COMENTARIOS---->
                          <div id="myDIV" style="display:block;">
                                    <form id="myForm" method="post">
-                                   <h2>Create new comment</h2>
+                                   <h2>Crea un comentario</h2>
                                    {{ comment_form.as_p }}
                                    {% csrf_token %}
                                    <button type="submit" class="btn btn-primary btn-lg btn-block">

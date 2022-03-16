@@ -1082,14 +1082,13 @@ margin-top: 18px;
 
 
 
-      /*800px*/
+      /*BLOCK DE TODOS LOS POST FLOAT LEFT ..800px*/
    .posts-ultimos-left{
    width: 100%;
-   max-width: 750px;
+   max-width: 780px;
    display: block;
    position: relative;
    float: left;
- 
    }
 
     .post-ultimo-encolumna{
@@ -1102,7 +1101,7 @@ margin-top: 18px;
 
     .post-ultimo-encolumna .ultimo-imagen-titulo{
      width: 100%;
-     height: 190px;  
+     height: 180px;  
      display: flex;
      flex-direction: row;
      justify-content: space-between;
@@ -1115,7 +1114,7 @@ margin-top: 18px;
       float: left;
       width: 20%;
       max-width: 280px;
-      height: 190px;   /*MUY IMPORTANTE PARA QUE LA IMAGEN NO CREZCA*/
+      height: 180px;   /*MUY IMPORTANTE PARA QUE LA IMAGEN NO CREZCA*/
       margin-right: 10px;
       }
   
@@ -1132,39 +1131,49 @@ margin-top: 18px;
       display:block;
       position: relative;
       float: right;
-      width:  65%;
-      max-width: 610px;
-      height: 190px;
+      width:  75%;
+      height: 180px;
      }
 
      .posts-ultimos-titulo .post-ultimo-titulo{
       width: 100%;
-      height: 190px;
-      display: flex;
-      flex-direction: column;
+      height: 180px;
+      display: block;
+      position: relative;
+      float: left;
      }
 
      .ultimo-imagen-titulo  .posts-ultimos-titulo .post-ultimo-titulo  a h1{
-      font-size: 1.4rem;
+      font-size: 1.4em;
       margin-top: 10px;
-      margin-bottom: 0px;
+      word-spacing: -0.5px;
       color: #000000;
+      font-weight: 700;
+      line-height: 26px;
+      display: block;
+      width: 500px;
      }
   
+    
+  
+     
      
      .ultimo-imagen-titulo   .posts-ultimos-titulo .post-ultimo-titulo p{
-    font-size: 1rem;
+    font-size: 1.17em;
     color:  #2d2d2d;
-    margin-top: 7px;
-    margin-bottom: 3px;
+    margin-top: 5px;
     letter-spacing: 0.7px;
-    word-spacing: -0.3px;
-    line-height: 22px;
+    word-spacing: -0.5px;
+
+    font-family: 'Times New Roman', Times, serif;
     }
 
-     .posts-ultimos-titulo .post-ultimo-titulo .lee a{
+     .posts-ultimos-titulo .post-ultimo-titulo p a{
       font-size: 1rem;
       color:  #2d2d2d;
+      font-weight: 750;
+      margin-top: 1px;
+      line-height: 22px;
       }
   
     /*..EL ASIDE.....EXPLORAR CATEGORIAS RECETAS DIETETICAS............*/
@@ -1309,8 +1318,9 @@ margin-top: 18px;
      }
  
      .plan-post-letra h1{
-     font-size: 1.2rem;
+     font-size: 1.1rem;
      color:#000000;
+     font-weight: 700;
      margin: auto;
      }
  

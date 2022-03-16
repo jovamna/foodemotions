@@ -14,9 +14,9 @@ import random
 # Create your views here.
 def home(request):  #nombre de la vista
     recipedietaultimo = Recipe.objects.filter().order_by('publish')[
-        1:7]  #NO ME DEJA PONER EL NEGATIVO
+        1:4]  #NO ME DEJA PONER EL NEGATIVO
     perderultimo = Perderpeso.objects.all().order_by('-publish')[:1]
-    recetaultimo = Receta.objects.all().order_by('-publish')[:5]
+    recetaultimo = Receta.objects.all().order_by('-publish')[:10]
     postultimo = Post.objects.all().order_by('-publish')[:1]
     posturisultimo = Posturismo.objects.all().order_by('-publish')[:1]
 

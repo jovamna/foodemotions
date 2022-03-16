@@ -162,12 +162,13 @@
                             <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
                             <h1>{{recipe.title}}</h1>
                             </a>
-                            <p>{{recipe.description|truncatewords_html:18|safe}}</p>
-                            <span class="lee">
+                          
+                            <p>{{recipe.description|truncatewords_html:10|safe}}
                             <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
                             Leer mas..
                             </a>
-                            </span>
+                            </p>
+
                         </div>
                     <!-------------------------------------------->
                      </div>
@@ -206,12 +207,12 @@
                                 <a href ="{% url 'apprecetas:receta' receta.slug %}">
                                 <h1> {{receta.title}}</h1>
                                 </a> 
-                                <p>{{receta.description|truncatewords_html:18|safe}}.</p>   
-                                <span class="lee"> 
+
+                                <p>{{receta.description|truncatewords_html:8|safe}}
                                 <a href ="{% url 'apprecetas:receta' receta.slug %}">
                                 Leer mas...
                                 </a>
-                                </span> 
+                               </p>
                                 </div>
                                 <!------------------------------------->
                             </div>
@@ -258,12 +259,12 @@
                 <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
                 <h1>{{perderpeso.title}}</h1>
                 </a>
-                <p>{{perderpeso.description|truncatewords_html:18|safe}}.</p>
-                <span class="lee"> 
+
+                <p>{{perderpeso.description|truncatewords_html:10|safe}}</p>
                 <a href ="{% url 'appperderpeso:post' perderpeso.slug %}">
                 Leer mas..
                 </a> 
-                </span>
+           
                 </div>
                 <!----------------------------------------->
                 </div>
@@ -303,12 +304,11 @@
                   <a href ="{% url 'appblog:post' post.slug %}">
                   <h1>{{post.title}}</h1>
                   </a>
-                  <p>{{post.description|truncatewords_html:18|safe}}.</p>
-                  <span class="lee">
+
+                  <p>{{post.description|truncatewords_html:10|safe}}</p>
                   <a href ="{% url 'appblog:post' post.slug %}">
                   Leer mas...
                   </a> 
-                  </span>
                   </div>
                   <!------------------------------------------->
                  </div>
@@ -342,12 +342,12 @@
                   <a href ="{% url 'appturismo:post' posturismo.slug %}">
                   <h1>{{posturismo.title}}</h1>
                   </a>
-                  <p>{{posturismo.description|truncatewords_html:18|safe}}.</p>
-                  <span class="lee"> 
+                  <br>
+                  <p>{{posturismo.description|truncatewords_html:10|safe}}</p>
                   <a href ="{% url 'appturismo:post' posturismo.slug %}">
                   Leer mas...
                   </a> 
-                  </span>
+                  
                   </div>
                   <!------------------------------------------->
                  </div>
@@ -582,11 +582,11 @@
                          <h1>{{recipe.title}}</h1>
                          </a>
                          <p>{{recipe.description|truncatewords_html:18|safe}}</p>
-                         <span class="lee">
+                       
                          <a href ="{% url 'apprecetasalzum:receta' recipe.slug %}">
                          Leer mas...
                          </a>
-                         </span>
+                      
                          </div>
                          </div>
                          <!------------------------------------->
@@ -605,11 +605,9 @@
             <!-- FIN--COLUMNA LEFT---------------------->
       
        <!--  --ASIDE------------------->
-                    <div class="columna-right-segunda">
-                    <div class ="explora">
-                 
-                    </div>
-                   <!-- CODIGO DE APPRECETASALZUM ---------->   
+                    <div class="columna-right">
+                       <div class ="columna-right-column">
+                    </div>  
                   </div>
                  <!---CIERRE ASIDE SEUNDA----------------->     
 

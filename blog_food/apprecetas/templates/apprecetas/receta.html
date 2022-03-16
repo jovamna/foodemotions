@@ -1,11 +1,42 @@
   {% extends 'apprecetas/receta-base.html' %}
   {% load static %}
 
-   <!---SEO--->
-   {% block metadescription %}
-    <meta name="description" content="{{post.descripcion|truncatechars:25}}">
-  {% endblock %}
 
+  {% block titulo %}Receta{% endblock titulo %}  
+
+    {% block meta_title %}
+    {{ receta.title }} 
+   {% endblock meta_title %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!---SEO--->
+   {% block metadescription %}
+    <meta name="description" content="{{receta.title|truncatechars:25}}">
+  {% endblock %}
+   
 
 
 
@@ -59,9 +90,9 @@
                           {% if receta.title %}
                           <h1>{{receta.title|safe}} </h1>
                           {% endif %}
-                          {% if receta.imageauthor %}
-                          <p>{{receta.description|safe}} </p>
-                          {% endif %}
+                     
+                          <p>{{receta.description|safe}}</p>
+                        
                           </div>       
 
 
@@ -782,12 +813,13 @@
                                 {% if receta.titlenutricion %}
                                 <h2>{{receta.titlenutricion|safe}}</h2>
                                 {% endif %}
+
                                 {% if receta.nutricional %}
-                                
                                 <p>{{receta.nutricional|safe}}</p>
-                              
                                 {% endif %}
                         </div>
+
+
                        {% if receta.kategory %}                      
                         <div class="categoria">
                                 <em><h2>Categoria:</h2></em>
@@ -911,7 +943,7 @@
                         <!---FORMULARIO PARA AÑADIR COMENTARIOS---->
                          <div id="myDIV" style="display:block;">
                              <form id="myForm" method="post">
-                                   <h2>Crear nuevo comentario</h2>
+                                   <h2>Crear un comentario</h2>
                                    {{ comment_form.as_p }}
                                    {% csrf_token %}
                                    <button type="submit" class="btn btn-primary btn-lg btn-block">
@@ -976,18 +1008,4 @@
 
 
 
-
-<!--------------ESTO ES ASIDE----------------------->
-                          {% block categorias-recetas-links-aside %}
-                            <!---DIV DE LOS LINKS DE CATEGORIAS-EN EL ASIDE--->
-                              <div class="categorias-recetas-links-aside">
-                              <em><h2>Categorias:</h2></em>
-                                {% load mptt_tags %}
-                                {% for category in categories %}
-                                   <a href="/recetas-dieteticas/categoria/{{category.slug }}" style="text-decoration: none">
-                                   <em><p>{{ category.name }}</p></em></a>
-                                   {% endfor %}
-                             </div>
-                          <!-- FIN DIV DE LINKS CATEGORIAS EN ASIDE -------->
-                            {% endblock categorias-recetas-links-aside %}
 

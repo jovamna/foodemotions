@@ -1,7 +1,12 @@
 {% extends 'appblog/articulo-base.html' %}
 {% load static %}
-{% block title %} {{ object.some_varyable_from_query }}{% endblock %}
+
   
+   {% block titulo %}Plan Comidas{% endblock titulo %}  
+
+
+
+
 
               <!----------DE LA PAGINA SEARCH----------------->
              {% block buscador-search %}       {% endblock buscador-search %} 
@@ -173,8 +178,8 @@
                 </div>
                  {% endif %}
 
-               <!-------------PRIMERA SEMANA----------PLANES DE ALIMENTACION----------------------->
-               <div class="semana">
+          <!-------------PRIMERA SEMANA----------PLANES DE ALIMENTACION----------------------->
+          <div class="semana">
                    <div class="imagen-semana">
                     {% if perderpeso.imagefirstweek %}
                     <img src="{{perderpeso.imagefirstweek.url}}" alt="">
@@ -200,9 +205,9 @@
                    </div>   
            </div>
 
-
-          <div class="container-dia">
-                      <!-- PRIMER DIA------------------------------>
+                       <!-- PRIMER DIA------------------------------>
+                    <div class="container-dia">
+                  
                     <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediauno|safe}}</h2>
                    </div>
@@ -316,6 +321,7 @@
                </div>
 
                       <!---SEPTIMA DIA--------------------------->
+                       {% if perderpeso.titlediasiete  %}
                 <div class="container-dia">
 
                     <div class="plan-titulo-dia"> 
@@ -333,6 +339,7 @@
                    </div>
 
               </div>
+               {% endif  %}
               <!-- quinta caja---------------------------------------------------->
 
 
@@ -371,7 +378,7 @@
 
 
                     <!---DIA 8------------------------------->
-
+             {% if perderpeso.titledianochon  %}
             <div class="container-dia">
                      {% if perderpeso.titledianocho %}
                    <div class="plan-titulo-dia"> 
@@ -389,9 +396,11 @@
                    </div>
 
               </div>
+                {% endif %}
 
                    <!-- DIA 9--------------------------->
-             <div class="container-dia">
+                    {% if perderpeso.titledianueve %}
+                 <div class="container-dia">
                      {% if perderpeso.titledianueve %}
                     <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titledianueve|safe}}</h2>
@@ -408,8 +417,13 @@
                    </div>
 
               </div>
+              {% endif %}
+
+
+
 
                      <!--- DIA 10------------------------->
+              {% if perderpeso.titlediadiez  %}
                <div class="container-dia">
                      {% if perderpeso.titlediadiez %}
                     <div class="plan-titulo-dia"> 
@@ -427,9 +441,13 @@
                    </div>
 
               </div>
+               {% endif %}
+
+
 
                       <!-- DIA 11-------------------------->
-               <div class="container-dia">
+                    {% if perderpeso.titlediaonce %}
+                   <div class="container-dia">
                      {% if perderpeso.titlediaonce %}
                     <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediaonce|safe}}</h2>
@@ -446,15 +464,17 @@
                    </div>
 
               </div>
+               {% endif %}
 
 
                    <!--DIA 12--------------------------->
+            {% if perderpeso.titlediadoce  %}
             <div class="container-dia">
-                    {% if perderpeso.titlediadoce %}
+                  
                    <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediadoce|safe}}</h2>
                     </div>
-                     {% endif %}
+                     
                     <div class="imagen-dia">
                      {% if perderpeso.imagediadoce %}
                     <img src="{{perderpeso.imagediadoce.url}}" alt="">
@@ -465,15 +485,18 @@
                     <p>{{perderpeso.diadoce|safe}}</p>
                    </div>
 
-              </div>
-
+               </div>
+              {% endif %}
                      <!---DIA 13--------------------->
-          <div class="container-dia">
-                    {% if perderpeso.titletrece %}
+
+
+            {% if perderpeso.titletrece  %}
+           <div class="container-dia">
+                  
                     <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titletrece|safe}}</h2>
                     </div>
-                     {% endif %}
+                   
                     <div class="imagen-dia">
                     {% if perderpeso.imagediatrece %}
                     <img src="{{perderpeso.imagediatrece.url}}" alt="">
@@ -484,15 +507,18 @@
                     <p>{{perderpeso.diatrece|safe}}</p>
                    </div>
 
-          </div>
+              </div>
+            {% endif %}
+
 
                       <!---DIA 14------------------------->
-            <div class="container-dia">
-                     {% if perderpeso.titlediacatorce %}
+              {% if perderpeso.titlediacatorce %}
+              <div class="container-dia">
+                   
                    <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediacatorce|safe}}</h2>
                     </div>
-                      {% endif %}
+                    
                     <div class="imagen-dia">
                      {% if perderpeso.imagediacatorce %}
                     <img src="{{perderpeso.imagediacatorce.url}}" alt="">
@@ -504,6 +530,7 @@
                    </div>
 
               </div>
+                {% endif %}
               <!-- quinta caja---------------------------------------------------->
               
 
@@ -542,13 +569,13 @@
 
 
           <!---------------DIA 15---------------------->
-
+                {% if perderpeso.titlediaquince %}
               <div class="container-dia">
-                    {% if perderpeso.titlediaquince %}
+                 
                    <div class="plan-titulo-dia"> 
                    <h2>{{perderpeso.titlediaquince|safe}}</h2>
                    </div>
-                   {% endif %}
+                 
 
                      <div class="imagen-dia">
                      {% if perderpeso.imagediaquince %}
@@ -559,17 +586,17 @@
                     <div class="dia">
                     <p>{{perderpeso.diaquince|safe}}</p>
                    </div>
-                
-
               </div>
+               {% endif %}
 
                    <!-- DIA 16--------------------------->
+                 {% if perderpeso.titlediadieciseis %}
               <div class="container-dia">
-                     {% if perderpeso.titlediadieciseis %}
+                  
                     <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediadieciseis|safe}}</h2>
                     </div>
-                    {% endif %}
+                  
                
                     <div class="imagen-dia">
                      {% if perderpeso.imagediadieciseis %}
@@ -582,14 +609,16 @@
                    </div>
 
               </div>
+                {% endif %}
 
                      <!--- DIA 17-------------------------->
+                   {% if perderpeso.titlediadiecisiete %}
               <div class="container-dia">
-                     {% if perderpeso.titlediadiecisiete %}
+                
                    <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediadiecisiete|safe}}</h2>
                     </div>
-                      {% endif %}
+                     
                     <div class="imagen-dia">
                      {% if perderpeso.imagediadiecisiete %}
                     <img src="{{perderpeso.imagediadiecisiete.url}}" alt="">
@@ -601,15 +630,16 @@
                    </div>
 
               </div>
+                {% endif %}
 
                       <!-- DIA 18------------------------->
+                         {% if perderpeso.titlediadieciocho %}
               <div class="container-dia">
-                   {% if perderpeso.titlediadieciocho %}
+                
                   <div class="plan-titulo-dia"> 
                    <h2>{{perderpeso.titlediadieciocho|safe}}</h2>
                   </div>
-                    {% endif %}
-
+                 
                     <div class="imagen-dia">
                     {% if perderpeso.imagediadieciocho %}
                     <img src="{{perderpeso.imagediadieciocho.url}}" alt="">
@@ -621,15 +651,17 @@
                    </div>
 
               </div>
+                 {% endif %}
 
-
+              
                    <!---DIA 19--------------------------->
+               {% if perderpeso.titlediadiecinueve %}
               <div class="container-dia">
-                      {% if perderpeso.titlediadiecinueve %}
+                    
                     <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediadiecinueve|safe}}</h2>
                     </div>
-                      {% endif %}
+                 
                     <div class="imagen-dia">
                      {% if perderpeso.imagediadiecinueve %}
                     <img src="{{perderpeso.imagediadiecinueve.url}}" alt="">
@@ -641,14 +673,15 @@
                    </div>
 
               </div>
-
+                   {% endif %}
                      <!-----DIA 20------------------------>
+                   {% if perderpeso.titlediaveinte %}
                  <div class="container-dia">
-                     {% if perderpeso.titlediaveinte %}
+                   
                    <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediaveinte|safe}}</h2>
                     </div>
-                     {% endif %}
+                  
                     <div class="imagen-dia">
                      {% if perderpeso.imagediaveinte %}
                     <img src="{{perderpeso.imagediaveinte.url}}" alt="">
@@ -660,14 +693,16 @@
                    </div>
 
                </div>
+                  {% endif %}
+
 
                       <!---DIA 21--------------------------->
+                        {% if perderpeso.titlediaveintiuno %}
                <div class="container-dia">
-                     {% if perderpeso.titlediaveintiuno %}
                     <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediaveintiuno|safe}}</h2>
                     </div>
-                      {% endif %}
+               
                     <div class="imagen-dia">
                      {% if perderpeso.imagediacuatro %}
                     <img src="{{perderpeso.imagediaveintiuno.url}}" alt="">
@@ -679,6 +714,7 @@
                    </div>
 
               </div>
+                     {% endif %}
               <!-- quinta caja---------------------------------------------------->
               
 
@@ -707,13 +743,13 @@
                     {% endif %} 
                    </div>
 
-                    {% if perderpeso.titlefourweek != Null %}    
+                    {% if perderpeso.titlefourweek  %}    
                     <div class="titulo-semana">
                    <h2>{{perderpeso.titlefourweek|safe}}</h2>
                    </div>
                     {% endif %} 
 
-                      {% if perderpeso.contenfourweek != Null %}
+                      {% if perderpeso.contenfourweek  %}
                      <div class="descripcion-semana">
                     <p>{{perderpeso.contenfourweek|safe}}</p>
                     </div>   
@@ -721,12 +757,13 @@
               </div>
 
                <!----DIA---22-------------->
+               {% if perderpeso.titlediaveintidos %}
              <div class="container-dia">
-                   {% if perderpeso.titlediaveintidos %}
+                  
                    <div class="plan-titulo-dia"> 
                    <h2>{{perderpeso.titlediaveintidos|safe}}</h2>
                    </div>
-                   {% endif %}
+                   
                      <div class="imagediaone">
                      {% if perderpeso.imagediaveintidos %}
                     <img src="{{perderpeso.imagediaveintidos.url}}" alt="">
@@ -738,14 +775,16 @@
                    </div>
 
               </div>
+              {% endif %}
 
                    <!-- DIA------23---------------------->
+               {% if perderpeso.titlediaveintitres %}
              <div class="container-dia">
-                     {% if perderpeso.titlediaveintitres %}
+                  
                     <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediaveintitres|safe}}</h2>
                     </div>
-                    {% endif %}
+                  
                     <div class="imagen-dia">
                     {% if perderpeso.imagediaveintitres %}
                     <img src="{{perderpeso.imagediaveintitres.url}}" alt="">
@@ -756,14 +795,17 @@
                     <p>{{perderpeso.diaveintitres|safe}}</p>
                    </div>
               </div>
+                {% endif %}
+
 
                      <!--- DIA 24-------------------------->
-              <div class="container-dia">
                     {% if perderpeso.titlediaveinticuatro %}
+              <div class="container-dia">
+                
                     <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediaveinticuatro|safe}}</h2>
                     </div>
-                    {% endif %}
+                  
                     <div class="imagen-dia">
                     {% if perderpeso.imagediaveinticuatro %}
                     <img src="{{perderpeso.imagediaveinticuatro.url}}" alt="">
@@ -775,14 +817,17 @@
                    </div>
                     {% endif %}
               </div>
+                {% endif %}
+
 
                       <!-- DIA 25-------------------------->
+                   {% if perderpeso.titlediaveinticinco %}
                <div class="container-dia">
-                    {% if perderpeso.titlediaveinticinco %}
+                 
                     <div class="plan-titulo-dia"> 
                     <h2>{{perderpeso.titlediaveinticinco|safe}}</h2>
                     </div>
-                    {% endif %}
+                  
                     <div class="imagen-dia">
                     {% if perderpeso.imagediaveinticinco %}
                     <img src="{{perderpeso.imagediaveinticinco.url}}" alt="">
@@ -793,15 +838,17 @@
                     <p>{{perderpeso.diaveinticinco|safe}}</p>
                    </div>
               </div>
+                {% endif %}
 
 
                    <!---DIA 26------------------------>
+               {% if perderpeso.titlediaveintiseis %}
            <div class="container-dia">
-                {% if perderpeso.titlediaveintiseis %}
+              
                 <div class="plan-titulo-dia"> 
                 <h2>{{perderpeso.titlediaveintiseis|safe}}</h2>
                 </div>
-                {% endif %}
+               
                 <div class="imagen-dia">
                 {% if perderpeso.imagediaveintiseis %}
                 <img src="{{perderpeso.imagediaveintiseis.url}}" alt="">
@@ -813,14 +860,16 @@
                 </div>
 
               </div>
+               {% endif %}
 
                      <!---DIA 27-------------------------->
+                   {% if perderpeso.titlediaveintisiete %}
               <div class="container-dia">
-                  {% if perderpeso.titlediaveintisiete %}
+            
                   <div class="plan-titulo-dia"> 
                   <h2>{{perderpeso.titlediaveintisiete|safe}}</h2>
                   </div>
-                  {% endif %}
+                  
                   <div class="image-dia">
                   {% if perderpeso.imagediaveintisiete %}
                   <img src="{{perderpeso.imagediaveintisiete.url}}" alt="">
@@ -832,14 +881,16 @@
                   </div>
 
              </div>
+             {% endif %}
 
                       <!---DIA 28--------------------------->
+          {% if perderpeso.titlediaveintiocho %}
           <div class="container-dia">
-                  {% if perderpeso.titlediaveintiocho %}
+               
                   <div class="plan-titulo-dia"> 
                   <h2>{{perderpeso.titlediaveintiocho|safe}}</h2>
                   </div>
-                  {% endif %}
+                
                   <div class="imagen-dia">
                   {% if perderpeso.imagediaveintiocho %}
                   <img src="{{perderpeso.imagediaveintiocho.url}}" alt="">
@@ -851,6 +902,7 @@
                   </div>
 
               </div>
+                {% endif %}
               <!-- quinta caja---------------------------------------------------->
 
 
@@ -859,7 +911,7 @@
 
 
              <!----------------FINAL--------------------------------->
-          
+              <div class="resumen-del-post">
             <div class="title-fin">
             {% if perderpeso.titlefin %} 
             <h2>{{perderpeso.titlefin|safe}}</h2>
@@ -870,6 +922,7 @@
 
             <div class="content-fin">
             <p>{{perderpeso.contentfin|safe}}</p>
+            </div>
             </div>
 
 

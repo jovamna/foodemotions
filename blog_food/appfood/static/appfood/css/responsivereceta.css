@@ -1291,8 +1291,9 @@
     /* DESCRIPCION Y AUTOR*/
     .primer-bloque-cien  .articulo .articulo-flex-colum .recetas{
     width: 92%;
-    display: flex;
-    flex-direction: column;
+     display: block;
+     position: relative;
+     float: left;
     margin: auto;
     }
 
@@ -1309,13 +1310,12 @@
     
 
     /*DESCRIPCION DE LA RECETA*/
-    .primer-bloque-cien  .articulo .articulo-flex-colum  .recetas p{
+     .articulo-flex-colum  .recetas p{
       font-size: 1.2rem;
       word-spacing: -0.01px;
       letter-spacing: -0.001px;
       font-family: 'Times New Roman', Times, serif;
       color: #2d2d2d;
-       margin-bottom: 5px;
       }
 
         #foto-autor{
@@ -1471,22 +1471,23 @@
         letter-spacing:-0.001rem ;
         word-spacing: -0.01rem;
       }
-                /*PERFIL NUTRICIONAL */
 
-                .primer-bloque-cien   .contiene  .nutricional-imagen{
-                  width: 100%;
-                  margin: auto;
-                }
+
+      /*PERFIL NUTRICIONAL */
+      .primer-bloque-cien   .contiene  .nutricional-imagen{
+      width: 100%;
+      margin: auto;
+        }
          
 
-                .primer-bloque-cien .contiene  .nutricional-imagen {
-                  width: 100%;
-                  margin-top: 30px;
-                }
+      .primer-bloque-cien .contiene  .nutricional-imagen {
+      width: 100%;
+      margin-top: 30px;
+      }
 
 
 
-                .primer-bloque-cien .contiene .nutricional-imagen h2{
+      .primer-bloque-cien .contiene .nutricional-imagen h2{
        font-size: 1.2rem;
        color: #000000;
        font-family: 'Times New Roman', Times, serif;
@@ -1795,11 +1796,24 @@
     width: 100%;
    }
 
-   
-     #myDIV #myForm h2{
-      font-size: 1.6rem;
-    }
+   /*..0 COMENTARIOS...*/
+   .col-md-10 h2{
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+   }
+
+ /*CREAR NUEVO COENTARIO...*/
+ #myForm h2{
+   font-size: 1rem;
+   font-family: 'Times New Roman', Times, serif;
+   color: black;
+   }
  
+   #myDIV .btn{
+    font-size: 1em;
+  }
+
     #myForm #id_content {
       width: 95%;
      }
