@@ -2961,26 +2961,25 @@ width: 100%;
   width: 5%;
   }
 
-  /*TITULO ULTIMAS ENTRADAS*/
+     /*TITULO ULTIMAS ENTRADAS*/
     .titulo  .escrito h1{
-      width: 310px;
-      font-size:  1.6rem;
-      font-weight: 800;
-      color: #000000;
-      text-shadow: 0px 0.9px 0.9px white; 
-  
-      letter-spacing: -0.5px;
+     width: 310px;
+    font-size:  1.6rem;
+    font-weight: 800;
+    color: #000000;
+    text-shadow: 0px 0.9px 0.9px white; 
+    letter-spacing: -0.5px;
      }
 
       /*TITULO DE RECTAS DIETAS*/
-  .titulo .escrito a h1{
+    .titulo .escrito a h1{
     width: 310px;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #000000;
-  text-shadow: 0px 0.9px 0.9px white; 
-  letter-spacing: -0.5px;
-   }
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #000000;
+    text-shadow: 0px 0.9px 0.9px white; 
+    letter-spacing: -0.5px;
+    }
  
    .titulo .escrito p{
    font-size:  1rem;

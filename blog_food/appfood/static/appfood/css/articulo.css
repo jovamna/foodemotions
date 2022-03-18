@@ -758,8 +758,8 @@ nav .logo-esconder .logo-en-menu-responsive img{
     font-size: 1.2rem;
     font-weight:400;
     line-height: 22px;
-    color: #2d2d2d;
     letter-spacing: 0.4px;
+    color: #2d2d2d;
     display: block;
     padding-bottom: 10px;  /*SOLO ESTO SEPARABA*/
      }
@@ -848,6 +848,7 @@ nav .logo-esconder .logo-en-menu-responsive img{
        font-size: 1.1rem;
        font-family: 'Times New Roman', Times, serif;
        font-weight: 600;
+       background-color: red;
      }
 
 
@@ -980,10 +981,12 @@ nav .logo-esconder .logo-en-menu-responsive img{
   font-family:  'Times New Roman', Times, serif;
   font-size: 1.2rem;
   color:  #2d2d2d;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.4px;
   font-weight:400;
   line-height: 22px;
+  display: block;
   }
+
 
   .cursiva{
     display: block;
@@ -993,20 +996,21 @@ nav .logo-esconder .logo-en-menu-responsive img{
   margin-bottom: 60px;
   }
 
-   /*.............P.................*/
-  .cursiva p{
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top:  -33px;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 1.45;
-  color: #2d2d2d;
-  }
+    /*.............P.................*/
+   .cursiva p{
+   margin-left: 30px;
+   margin-right: 30px;
+   margin-top:  -33px;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 1.2rem;
+   font-weight: 300;
+   line-height: 22px;
+   color: #2d2d2d;
+   background-color: darkkhaki;
+    }
 
 
-  .cursiva-quote::before { 
+    .cursiva-quote::before { 
     content: "\201C"; /* inicio comilla */
     width: 30%;
     font-family: Georgia;
@@ -1019,7 +1023,7 @@ nav .logo-esconder .logo-en-menu-responsive img{
     }
    
     
-    .cursiva-quote::after{ /* final */
+      .cursiva-quote::after{ /* final */
       content: "\201D";
       font-family: Georgia;
       font-size:40px; /* tamaño */
@@ -1039,7 +1043,7 @@ nav .logo-esconder .logo-en-menu-responsive img{
     margin: 40px 0px;  /*espaciado top left. */
     padding: 50px;
     border:  1px solid #DDD;
-    color:#666;
+    color:   #2d2d2d;
     box-sizing: border-box;
     font-family:  'sans-serif' ;
     font-size: 1.15rem;
@@ -1062,7 +1066,7 @@ nav .logo-esconder .logo-en-menu-responsive img{
    font-size: 1.2rem;
    line-height: 22px;
    margin:auto;
-   color:#666;
+   color:#2d2d2d;
    width: 90%;
    font-family:  'sans-serif' ;
    font-weight:400;
@@ -1135,6 +1139,7 @@ nav .logo-esconder .logo-en-menu-responsive img{
     font-weight:400;
     line-height: 1.3;
     color: #2d2d2d;
+    background-color: chartreuse;
     }
  
 
@@ -1226,14 +1231,15 @@ nav .logo-esconder .logo-en-menu-responsive img{
        width: 100%;
       }
 
+      /*...ARTICULO DE DIETAS DEL TERCER PARRAFO EN ADELANTE..*/
       /*--------------P-----------------------*/
-      .contentwo  .content-two  p{
+       .content-two  p{
+        font-family:  'Times New Roman', Times, serif;
         font-size: 1.2rem;
-        font-family: 'Times New Roman', Times, serif;
-        color: #2d2d2d;
-        letter-spacing: 0.8px;
-        line-height: 24px;
-        margin: auto;  /*para ajustar al conteedor*/
+        color:  #2d2d2d;
+        letter-spacing: 0.6px;
+        font-weight:400;
+        line-height: 22px;
       }
 
   /*.....................................................*/
@@ -1280,6 +1286,7 @@ nav .logo-esconder .logo-en-menu-responsive img{
       font-size: 1.2rem;
       font-family: 'Times New Roman', Times, serif;
       color: #2d2d2d;
+      background-color: #8c8c8c;
     }
 
     
@@ -1319,14 +1326,15 @@ nav .logo-esconder .logo-en-menu-responsive img{
       float: left;
     }
 
+     /*DESCRIPCION DE PLAN POST COMIDAS...*/
     .dia p{
-      font-size: 1.1rem;
-      font-family: "Argos Bold",serif;
-      color: #2d2d2d;
-      line-height: 22px;
-      margin-top: 1px;
-      display: block;
-      height: 1px;
+      font-family:  'Times New Roman', Times, serif;
+        font-size: 1.2rem;
+        color:  #2d2d2d;
+        letter-spacing: 0.6px;
+        font-weight:400;
+        line-height: 22px;
+     
     }
 
      /*PARTE FINAL DEL POST CONCLUSIONES*/
@@ -1339,13 +1347,30 @@ nav .logo-esconder .logo-en-menu-responsive img{
       margin-bottom: 45px;
      }
 
+       /*..PARTE FINAL DE POST PLAN............*/
      .resumen-del-post .title-fin{
        display: block;
       }
+
+      .resumen-del-post .title-fin h2{
+        font-size: 1.4rem;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 800;
+        color: black;
+       }
+
+
       .resumen-del-post  .content-fin{
        width: 100%;
      display: block;
      }
+
+     .resumen-del-post  .content-fin p{
+       font-size: 1.1rem;
+       font-weight: 400;
+       color: #2d2d2d;
+    }
+ 
   
   /*FIN DIETAS ESPECIALES*/
 
@@ -1387,6 +1412,7 @@ nav .logo-esconder .logo-en-menu-responsive img{
      font-size: 1.1rem;
      color: #2d2d2d;
      font-family: 'Times New Roman', Times, serif;
+    
    }
    /*FIN HASTA AQUI ARTICULO ULTIMO.................................................................*/
 
