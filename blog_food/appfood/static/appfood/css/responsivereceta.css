@@ -1071,38 +1071,39 @@
 
 
   /*ESTO AVORTA ESPACIO ENTRE LAS LINEAS*/
- .menu-btn__burger::before {
+  .menu-btn__burger::before {
   transform: translateY(-7px);
   }
- .menu-btn__burger::after {
-  transform: translateY(7px);
- 
+
+
+   .menu-btn__burger::after {
+   transform: translateY(7px);
    }
 
    /* ANIMATION */
    .hamburguesa.open .menu-btn__burger {
-  transform: translateX(-50px);
-  background: transparent;
-  box-shadow: none;
-  }
+   transform: translateX(-50px);
+   background: transparent;
+   box-shadow: none;
+   }
 
-  .hamburguesa.open .menu-btn__burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
+   .hamburguesa.open .menu-btn__burger::before {
+   transform: rotate(45deg) translate(35px, -35px);
    }
 
    .hamburguesa.open.menu-btn__burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
+   transform: rotate(-45deg) translate(35px, 35px);
     }
 
 
-    #controls-responsive{
+      #controls-responsive{
       display: block;
       visibility: visible;
-      width: 92%;
+      width: 91%;
       height: 35px;
       margin-top: 8px;
-     margin: auto;
-    }
+      margin: auto;
+     }
   
   
       #custom-search-input-responsive{
@@ -1238,7 +1239,7 @@
     /* PRIMERA SECCION MENU ARROW*/
 
     #menu-simple{
-      width: 92%;
+      width: 91%;
       display: block;
       height: 35px;
       margin-top: 15px;
@@ -1260,7 +1261,7 @@
     display: block;
     position: relative;
     float: left;
-    width: 92.4%;
+    width: 91%;
     margin: auto;
     margin-bottom: 1px;
     }
