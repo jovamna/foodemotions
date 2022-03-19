@@ -70,10 +70,21 @@
                 </div>
         
                 <!--------------------------------------->
-                <div class="imagen-central">
+             
+                <!-------------------FIN DE IMAGEN CENTRAL--------------------->
+
+    <!---------------------------------------------------------------------------->
+      </div> 
+    <!-------FIN---primero-descripcion-y-fotoprincipal------------------------------------------>
 
 
-                    <div class="redes">
+
+
+
+      <div clas="articulovacio-articulolleno">
+          <!------------------------------>
+          <div class="articulovacio">
+             <div class="redes">
                     <ul class="iconos-social">
                          <li>
                           {% with base_url="https://foodingemotion.com" %} 
@@ -95,31 +106,32 @@
                           </li>  
                     </ul>
                     </div>
+               <!--------------FIN ARTICULO REDES--------------------->
+          </div>
+          <!--------------FIN COLUMNA VACIO------------------->
 
-                    <!-- TENIA PROBLEMAS CON LA IMAGEN SALIA ERROR CON IF SE SOLUCIONO--> 
+
+          <!------------------------------>
+             <div class="articulolleno">
+
+
+             <!---------------IMAGEN PRINCIPAL--------------------------------->
+                 <!-- TENIA PROBLEMAS CON LA IMAGEN SALIA ERROR CON IF SE SOLUCIONO--> 
                     <div class="imagen-principal">               
                     {% if post.imagefront %}
                     <img src="{{post.imagefront.url}}" alt="">
                     {% endif %}
                     </div>
 
-                  
-                </div>
-                <!-------------------FIN DE IMAGEN CENTRAL--------------------->
-
-    <!---------------------------------------------------------------------------->
-      </div> 
-    <!-------FIN---primero-descripcion-y-fotoprincipal------------------------------------------>
 
 
 
 
 
-      <div clas="articulovacio-articulolleno">
-          <!------------------------------>
-          <div class="articulovacio"></div>
-          <!------------------------------>
-             <div class="articulolleno">
+
+
+
+             <!---fin imagen princial--------------------------------------------->
                 <!---- <div class="segundo-articulo" data-anime="top">--->
                 <!-- caja 2-------------------------------------------------------->
                 <!-- SUBTITULO 2------------------->
@@ -134,7 +146,7 @@
 
                <!---------------------------------------------->
                {% if post.cursiva %}  
-               <div class="cursiva">
+               <div class="cursiva cursiva-quote">
                <p><em>{{post.cursiva|safe}}</em> </p>
                </div>
                {% endif %} 

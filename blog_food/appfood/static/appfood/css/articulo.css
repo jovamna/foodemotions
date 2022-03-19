@@ -730,6 +730,16 @@ nav .logo-esconder .logo-en-menu-responsive img{
     margin-bottom:10%;
     }
 
+    .primero-descripcion-y-fotoprincipal{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-bottom: 15px;
+     }
+     
+ 
+
    /*.........PRIMER TITULO ...................... */
     .primer-articulo{
     display: block;
@@ -765,14 +775,7 @@ nav .logo-esconder .logo-en-menu-responsive img{
      }
 
 
-    .primero-descripcion-y-fotoprincipal{
-     display: block;
-     position: relative;
-     float: left;
-     width: 100%;
-    }
-    
-
+ 
 
   /*.FOTO AUTOR Y FECHA*/
    .row-autor-nombre-fecha{
@@ -848,14 +851,13 @@ nav .logo-esconder .logo-en-menu-responsive img{
        font-size: 1.1rem;
        font-family: 'Times New Roman', Times, serif;
        font-weight: 600;
-       background-color: red;
      }
 
 
 
  
 
-   /*primera caja ..................................... */
+   /*primera caja ...DEJARLO POR SI ACASO.................................. */
   .imagen-central{
    width: 100%;
    display: flex;
@@ -864,21 +866,29 @@ nav .logo-esconder .logo-en-menu-responsive img{
    margin-bottom: 30px;
   }
 
-   .imagen-principal {
-    width: 88%;
+ 
+
+      /*CONTAINER QUE DIVIDE N DOS COLUMNAS 
+  segundo articulo en adelante...*/
+   .articulovacio-articulolleno{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    max-width: 720px;
+  }
+
+   .articulovacio{
+    width: 9.8%;
+    display: block;
+    position: relative;
+    float:left;
+    margin: auto;
    }
 
-
-   .imagen-principal img{
-    width: 100%;
-   }
-
-
-    .redes{
+   .articulovacio .redes{
     display: inline-flex;
-    width: 12%;
+    width: 100%;
     max-width: 65px;
-    margin-right: 2%;
     }
 
 
@@ -895,61 +905,47 @@ nav .logo-esconder .logo-en-menu-responsive img{
 
    .iconos-social  li .fa-envelope{
     padding: 8px 8px 8px 8px;
-    color: #639a3a;
+    color: #7aac41;
     font-size:  10px;
     width: 40px;
     height: 40px;
-    border: 1px solid #639a3a; 
+    border: 1px solid #7aac41; 
     border-radius: 9px;
     }
   
     .iconos-social li .fa-facebook-f{
     padding: 8px 8px 8px 8px;
-    color: #639a3a;
+    color: #7aac41;
     font-size:  10px;
     width: 40px;
     height: 40px;
-    border: 1px solid #639a3a;
+    border: 1px solid #7aac41;
     border-radius: 9px;
     }
   
     .iconos-social  li .fa-pinterest{
       padding: 8px 8px 8px 8px;
-    color: #639a3a;
+    color: #7aac41;
     width: 40px;
     height: 40px;
-    border: 1px solid #639a3a;
+    border: 1px solid #7aac41;
     border-radius: 9px;
     }
   
    .iconos-social  li .fa-instagram{
     border-radius: 15px;
-    color:  #639a3a;
+    color:  #7aac41;
     padding: 8px 8px 8px 8px;
     font-size:  9px;
     width: 40px;
     height: 40px;
-    border: 1px solid #639a3a;
+    border: 1px solid #7aac41;
     border-radius: 9px;
    
   }
   
 
-  /*segundo articulo en adelante...*/
-   .articulovacio-articulolleno{
-      display: flex;
-      flex-direction: row;
-      width: 70%;
-      max-width: 720px;
-    }
 
-    .articulo-vacio{
-      width: 12%;
- 
-      display: block;
-      position: relative;
-      float:left
-    }
 
      .articulolleno{
        display: block;
@@ -958,15 +954,34 @@ nav .logo-esconder .logo-en-menu-responsive img{
        width: 88%;
      }
 
+
+     .articulolleno .imagen-central{
+      width: 100%;
+      display: block;
+      margin-bottom: 30px;
+     }
+   
+
+     .articulolleno .imagen-principal {
+      width: 100%;
+      background-color: rgb(59, 5, 35);
+     }
   
   
-  /*..SEGUNDO ARTICULO....... */
-  .segundo-articulo{
-  display: block;
-  width: 100%;
-  }
+     .articulolleno .imagen-principal img{
+      width: 100%;
+     }
+  
+     
+  
+   /*..SEGUNDO ARTICULO....... */
+   .segundo-articulo{
+   display: block;
+   width: 100%;
+   margin-top: 10px;
+   }
  
-  /*..........SEGUNDO TITULO.... - segundo articulo........ */
+   /*..........SEGUNDO TITULO.... - segundo articulo........ */
     .segundo-articulo h1{   
     font-size: 1.8rem;
       word-spacing: -1px;
@@ -988,13 +1003,13 @@ nav .logo-esconder .logo-en-menu-responsive img{
   }
 
 
-  .cursiva{
+    .cursiva{
     display: block;
-  width:  100%;
-  border-left:2px solid #DDD;
-  margin-top: 40px;
-  margin-bottom: 60px;
-  }
+    width:  100%;
+    border-left: 1px solid #DDD;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    }
 
     /*.............P.................*/
    .cursiva p{
@@ -1004,9 +1019,8 @@ nav .logo-esconder .logo-en-menu-responsive img{
    font-family: 'Times New Roman', Times, serif;
    font-size: 1.2rem;
    font-weight: 300;
-   line-height: 22px;
+   line-height: 24px;
    color: #2d2d2d;
-   background-color: darkkhaki;
     }
 
 
@@ -1029,9 +1043,9 @@ nav .logo-esconder .logo-en-menu-responsive img{
       font-size:40px; /* tamaño */
       font-weight: bold;
       line-height:0px;
-      color:#DDD; /* Color  */
+      color: #DDD; /* Color  */
       margin-bottom: 0.2px;
-      margin-left:  750px;
+      margin-left:  600px;
       display: block;
       }
      /*...................................................................*/
@@ -1039,10 +1053,10 @@ nav .logo-esconder .logo-en-menu-responsive img{
 
    /*QUOTE ............................................ */
    .blockquote{
-    width:100%;
+    width:99.8%;
     margin: 40px 0px;  /*espaciado top left. */
-    padding: 50px;
-    border:  1px solid #DDD;
+    padding: 46px;
+    border:  0.5px solid #DDD;
     color:   #2d2d2d;
     box-sizing: border-box;
     font-family:  'sans-serif' ;
@@ -1053,13 +1067,14 @@ nav .logo-esconder .logo-en-menu-responsive img{
    
     /*LINEA PARALELA DEL COSTADO*/
     .blockquote-bordered{
-      border-left-width: 10px;
+      border-left-width: 5px;
       }
       
    /*BLOQUE DEL PARAFO PARA DISTANCIAR DE LAS COMILLAS*/
    .blockquote-text {
     margin-left: 1px;
     margin-top: 14px;
+    margin-bottom: 14px;
    }
   
    .blockquote-text p{
@@ -1084,7 +1099,7 @@ nav .logo-esconder .logo-en-menu-responsive img{
        font-size:65px; /* tamaño */
        font-weight: bold; 
        line-height: 0px;
-       color:#DDD; /* Color  */
+       color: #DDD; /* Color  */
        margin-bottom: -20px;
        margin-left: -42px;
        display: block;
@@ -1099,9 +1114,9 @@ nav .logo-esconder .logo-en-menu-responsive img{
         font-weight: bold;
         line-height:0px;
         color:#DDD; /* Color  */
-        margin-top: 20px;
+        margin-top: 15px;
        margin-bottom: 0.2px;
-        margin-left:  600px;
+        margin-left:  520px;
         display: block;
         }
   
@@ -1132,35 +1147,30 @@ nav .logo-esconder .logo-en-menu-responsive img{
    
     }
 
-    /*...................................................*/
+        /*container de dos imagenes*/
+     .articulo-imagen{
+      width: 100%;
+      display: block;
+      }
+   
+  
+      .articulo-imagen img{
+      width: 100%;
+      max-width: 840px;
+      }
+
+      .articulo{
+        width: 100%;
+        }
+      
+    /*....DESCRIPCION DEL ARTICULO TURISMO NOTICIAS...............*/
     .articulo  p{
     font-family:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 1.2rem;
     font-weight:400;
     line-height: 1.3;
     color: #2d2d2d;
-    background-color: chartreuse;
     }
- 
-
-
-     /*container de dos imagenes*/
-     .articulo-imagen{
-    width: 100%;
-    display: block;
-    }
- 
-
-    .articulo-imagen img{
-    width: 100%;
-    max-width: 840px;
-    }
-
-
-   .articulo{
-   width: 100%;
-   }
- 
 
 
    .imagen-sola{
@@ -1170,9 +1180,6 @@ nav .logo-esconder .logo-en-menu-responsive img{
   .imagen-sola img{
     width: 100%;
   }
-
-
-
 
   /*FIN ...........................*/
 

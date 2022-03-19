@@ -115,8 +115,20 @@
 
 
             <!--------------------------------------->
-            <div class="imagen-central">
-                  <div class="redes">
+           
+
+      <!---------------------------------------------------------------------------->
+      </div> 
+      <!----------FIN primero-descripcion--------------------------------------->
+
+
+
+      
+      <div clas="articulovacio-articulolleno">
+
+          <!---------------------------------------------------->
+          <div class="articulovacio">
+          <div class="redes">
                          <ul class="iconos-social">
                       
                             <li> 
@@ -140,27 +152,27 @@
                           </li>  
                         </ul>
                   </div>
-                      <!-- IMAGEN PRINCIPAL-->   
+          </div>
+          <!----------------------------------------------------------------------------------->
+
+          <!--------------INICIO COLUMNA DE ARTICULOS-------------->
+             <div class="articulolleno">
+
+             <!----INICIO IMAGEN PRINCIPAL-------------------------->
+                   <!-- IMAGEN PRINCIPAL-->   
                       <div class="imagen-principal">             
                       {% if posturismo.image %}
                       <img src="{{posturismo.image.url}}" alt="">
                      {% endif %} 
                     </div>
-            </div>
-            <!---------------------FIN DE IMAGEN CENTRAL---------------------------->
-
-      <!---------------------------------------------------------------------------->
-      </div> 
-      <!----------FIN primero-descripcion-y-fotoprincipal------------------------------------------>
+             <!----------FIN IMAGEN PRINCIPAL----------------------->
 
 
 
-      
-      <div clas="articulovacio-articulolleno">
-          <!------------------------------>
-          <div class="articulovacio"></div>
-          <!------------------------------>
-             <div class="articulolleno">
+
+
+
+
 
             <!--- <div class="segundo-articulo" data-anime="top">--->
             <!-- caja 2----DIV SEGUNDO ARTICULO SIN TITULO-------->
@@ -171,8 +183,8 @@
 
   <!------------------------------------------------------------------------------------>
             <!-----CURSIVA------>
-            <div class="cursiva">
-            <p><em>{{posturismo.cursiva|safe}}</em> </p>
+            <div class="cursiva cursiva-quote">
+            <p><em>{{posturismo.cursiva|safe}}</em></p>
             </div>
    <!------------------------------------------------------------->
 
@@ -200,7 +212,7 @@
                 <!-- BLOCQUOTE--------------------------------------------------------->
                 {% if posturismo.blocquote %}
                 <blockquote class="blockquote blockquote-bordered blockquote-quoted">
-                <p class="blockquote-text"><em> {{posturismo.blocquote}}ARI</em> </p>
+                <p class="blockquote-text"><em> {{posturismo.blocquote}}</em> </p>
                 <p class="blockquote-text blockquote-text-credit">   </p>
                 </blockquote>
                {% endif %}
@@ -252,14 +264,12 @@
       <!------------------------------------------------------------------------------------------>
 
 
-     <!---IMAGEN SOLA---------------------------------------------->
-  
+          <!---IMAGEN SOLA-PARA PONER CUALQUIER FOTO--------------------------------------------->
             <div class="imagen-sola">
               {% if posturismo.imagepic %}
               <img src="{{posturismo.imagepic.url}}" alt="">
               {% endif %}  
               </div>
-
              <!--------------------------------------------------------->
       </div>
       <!---articulo lleno-->
