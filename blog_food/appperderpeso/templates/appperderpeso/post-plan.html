@@ -166,25 +166,29 @@
               <h1>{{perderpeso.titleone|safe}}</h1> 
               <p>{{perderpeso.contentone|safe}}</p>  
               </div>
-
-               
               <!---------CONTENEDOR NARRATIVA------------------------------>
             
-                    <!-- BLOCQUOTE--------------------------------------------------------->
+
+
+               <!-- BLOCQUOTE--------------------------------------------------------->
                 {% if perderpeso.narrativa %}
                 <blockquote class="blockquote blockquote-bordered blockquote-quoted">
                 <p class="blockquote-text"><em> {{perderpeso.narrativa|safe}}</em> </p>
                 <p class="blockquote-text blockquote-text-credit">   </p>
                 </blockquote>
                {% endif %}
-                <!-- CIERR BLOCQUOTE---------------------------------------------->
+                <!-- CIERRa BLOCQUOTE---------------------------------------------->
          
+
+
                 <!-----------CONTENDOR CURSIVA---------------------------->
-                 {% if perderpeso.cursiva%}
+                 {% if perderpeso.cursiva %}
                 <div class="cursiva cursiva-quote">
                 <p><em> {{perderpeso.cursiva|safe}} </em> </p>
                 </div>
                  {% endif %}
+                <!--------------------------------------------------------->
+
 
           <!-------------PRIMERA SEMANA----------PLANES DE ALIMENTACION----------------------->
           <div class="semana">
