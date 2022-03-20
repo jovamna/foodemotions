@@ -1,7 +1,6 @@
   {% extends 'apprecetas/receta-base.html' %}
   {% load static %}
 
-
   {% block titulo %}Receta{% endblock titulo %}  
 
     {% block meta_title %}
@@ -9,61 +8,39 @@
    {% endblock meta_title %}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <!---SEO--->
+    <!---SEO--->
    {% block metadescription %}
     <meta name="description" content="{{receta.title|truncatechars:25}}">
-  {% endblock %}
+   {% endblock %}
    
 
 
 
  
-                   <!-- PRIMER  SEGMENTO MENU SIMPLE-->
-               {% block menusimple %}
-             <div id="menu-simple">
+        <!-- PRIMER  SEGMENTO MENU SIMPLE-->
+        {% block menusimple %}
+        <div id="menu-simple">
                     <ul>
-                     <li>
-                                     <a href="{% url 'appfood:index' %}"  >
-                                     <p>Inicio<i class="right"></i></p>
-                                     </a>
-                                </li>
-                                <li>
-                                    <a href="{% url 'appfood:recetas-saludables' %}"> 
-                                     <p>Recetas Saludables <i class="right"></i></p>
-                                     </a>
-                               </li>
-                              <li >
-                                    {% for receta in post_receta %}
-                                    <p>{{ receta.kategory }}<i class="right"></i></p></em>
-                                     {% endfor %}
-                              
-                                
-                             </li>
-                       </ul>
-                </div>
+                        <li>
+                        <a href="{% url 'appfood:index' %}"  >
+                        <p>Inicio<i class="right"></i></p>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="{% url 'appfood:recetas-saludables' %}"> 
+                        <p>Recetas Saludables <i class="right"></i>
+                        </p>
+                        </a>
+                        </li>
+
+                         <li>
+                         {% for receta in post_receta %}
+                        <p>{{ receta.kategory }}<i class="right"></i>
+                        </p>
+                        {% endfor %}
+                        </li>
+                    </ul>
+          </div>
 
       <!-- -CONTENEDOR GENERAL DEL CONTENIDO Y ASIDE----------------------------->
       {% endblock menusimple %}
@@ -207,23 +184,19 @@
 
 
 
-                     <!--INFORMACION NUTRICIONAL--->
-                     
-                     <div class="nutricional-imagen">
-                      {% if receta.tituloperfil %}
-                     <h2>{{receta.tituloperfil|safe}}</h2>
-                     {% endif %} 
-
-                        <ul>
-                       {% if receta.perfilnutricional %}
-                    
-                     <li>{{receta.perfilnutricional|safe}}</li>
-                       {% endif %} 
-                       </ul>
-                    </div>
-                   
-                     
-                    <!-------------------------------->
+          <!--INFORMACION NUTRICIONAL--->
+          <div class="nutricional-imagen">
+              {% if receta.tituloperfil %}
+              <h2>{{receta.tituloperfil|safe}}</h2>
+              {% endif %} 
+              <ul>
+                  {% if receta.perfilnutricional %}
+                  <li>{{receta.perfilnutricional|safe}}
+                  </li>
+                  {% endif %} 
+              </ul>
+          </div>
+          <!---------------------------------------------------->
           </div>
           <!---FIN DIV CONTIENE---------------------------------------------------------A-->
   
