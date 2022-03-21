@@ -1,12 +1,11 @@
-
-* {
+  * {
   margin: 0;
   padding: 0;
   border: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; 
+  }
 
-body{
+   body{
   padding:0;
   margin: 0;
   background-color: #fff;
@@ -14,12 +13,11 @@ body{
   font-family: "Argos",serif;
    }
 
-html, body {
-line-height: 1.15;
--webkit-text-size-adjust: 100%;
-height: 100%;
-
-}
+  html, body {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  }
 
 
  
@@ -38,12 +36,13 @@ text-decoration:none;
   
   #wrapper-categorias {
     box-sizing: border-box;
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-min-width:250px;
-flex-wrap: wrap;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+    min-width:250px;
+   flex-wrap: wrap;
   }
+
         
   #wrapper-categorias > * {
   padding: 20px;
@@ -60,62 +59,69 @@ flex-wrap: wrap;
     #container-categorias{
       display: flex;
       flex-direction: column;
-      width:100%;
-    max-width: 1250px;
-    margin-left:auto;
-    margin-right:auto;
-     padding-left: 0;
-     padding-right: 0;
+      width: 100%;
+      max-width: 1250px;
+      margin: auto;
+      height: auto;
+      padding-left: 0;
+      padding-right: 0;
      margin-top: 72px;
+     margin-bottom: 40px;
      }
   
 
     /*border-bottom: 2px solid #DDD;*/
+    /*border-bottom: 2px solid #DDD;*/
     header{
-      width: 100%;
-      z-index: 999;
-      position: fixed;
-      height:  70px;
-      background-color: #fff;
-      box-shadow: 0 8px 6px -6px #c9c9c9;
-      }
-    
-      header.black{
-       height:  70px;
-       background-color: #fff;
-      }
+    width:100%;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
+    top:0;
+    left: 0;
+    margin: auto;
+    height: 65px;
+    box-shadow: 0 8px 6px -6px #DCDCDC;
+    background-color: #fff;
+    }
+
+   header.black{
+   background-color:#fff ;
+   height:  65px;
+   }
+  
     
   
     #cabecera-categorias{
       width: 100%;
-     max-width: 1250px;
-     height: 40px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     margin: auto;
-     margin-top: -2px;
-     z-index: 2;
+      max-width: 1250px;
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: auto;
+      margin-top: -2px;
+      z-index: 2;
      }
  
    
-    /*caja */
-    #cabecera-categorias .logo{
-     display: block;
+        /*caja */
+       #cabecera-categorias .logo{
+      display: block;
       position: relative;
       float: left;
-     width: 22%;
-     max-width: 320px;
-     min-width: 290px;
-     height: 40px; 
+      width: 22%;
+      max-width: 320px;
+      min-width: 290px;
+      height: 40px; 
      }
      
+
     /*IMAGEN DEL LOGO*/
     #cabecera-categorias .logo img{
-     width: 100%;
-     height: 35px;  
-     max-width: 190px;
-     min-width: 190px;
+      width: 100%;
+      height: 35px;  
+      max-width: 170px;
+      min-width: 170px;
      }
       
      
@@ -126,106 +132,106 @@ flex-wrap: wrap;
  
  
         /*CONTAINER DEL BUSCADOR................. */
-        #cabecera-categorias .controls{
-         display: block;
-         position: relative;
-         float: left;
-         width: 35%;
-         max-width: 600px;
-         min-width: 560px;
-         height: 40px;  
-         }
- 
- 
-         .controls form{
-           width: 100%;
-           max-width: 390px;
-         }
- 
-  
-   /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
-   #cabecera-categorias .controls #custom-search-input{
-     width: 100%;
-   height: 32px;
-   display: flex;
-   flex-direction: row;
-   border-radius: 0px;
-   -moz-border-radius: 0px;
-   -webkit-border-radius: 0px;
-   box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   margin-top: 0.5px;
-   box-shadow: 4px 8px 6px -6px #8c8c8c;
-   background: #FEFEFE;
-   background-image: linear-gradient(45deg, #FFF, #F9F9F9);
-   border: 1.5px solid #FAFAFA;
-    }
- 
-    .controls  #custom-search-input input[type=text]:focus {
-     outline: none;
-     border: 0;
-     background-color: #fff;
-     padding-left: 8px; /*MUEVE LA LETRA*/
-      }
-  
-  
- 
-   /*CAMPO SEARCH BUSCADOR */
-   #cabecera-categorias .controls  #custom-search-input .sin-borde{
-   border: 0px solid #fff;
-   -moz-border: 0px  solid #fff;
-   -webkit-border: 0px solid #fff;
-   width: 92%;
-   height: 30px;
-   padding-left: 8px; /*MUEVE LA LETRA*/
-   background-color: #f8f8f8;
-   }
- 
- 
-   input::placeholder {
-     width: 250px;
-     font-size: 1rem;
-     color: #2d2d2d;
-     }
- 
- 
-     /*BOTOM BUSCADOR */
-      .controls  #custom-search-input .boton{
-     border-right: 4px;
-     -moz-border-right: 2px;
-     -webkit-border-right: 2px;
-      padding-left:2px; /*MUEVE LA LETRA*/
-      width: 8%;
-      max-width: 55px;
-      height: 30px;
-     background-color: #fff;
-      }
- 
-     .controls .icon .fa-search{
-     color: #000000;
-     }
- 
- 
-   
-  
-     /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
-     /*CONTENEDOR  REVISTA Y SOCIALES*/
-      .suscribe{
-       width: 20%;
-       max-width: 110px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
-       display: inline-flex;
-       height: 40px;
+      /*CONTAINER DEL BUSCADOR................. */
+      #cabecera-categorias .controls{
+      display: block;
+      position: relative;
+      float: left;
+      width: 34%;
+      max-width:590px;
+      min-width: 590px;
+      height: 40px;  
+      margin: auto;
+        }
+    
+    
+        .controls form{
+        width: 100%;
+        max-width: 460px;
+        height: 38px;  
+        }
+
+         
+        
+       /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
+       #cabecera-categorias .controls form #custom-search-input{
+        width: 100%;
+      height: 35px;
+      display: flex;
+      flex-direction: row;
+      border-radius: 0px;
+      -moz-border-radius: 0px;
+      -webkit-border-radius: 0px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      margin-top: 0.5px;
+      box-shadow: 4px 8px 6px -6px #8c8c8c;
+      background: #FEFEFE;
+      background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+      border: 1px solid #FAFAFA;
        }
- 
-     .suscribe  a h4{
-       font-size: 0.9rem;
-       word-spacing: -3px;
-       letter-spacing: -0.7%;
-       font-family: Arial, Helvetica, sans-serif;
-       font-weight: 700;
-       color:#2d2d2d;
-       margin-top:  16px;
-       }
+     
+    
+      /*CAMPO SEARCH BUSCADOR */
+      #cabecera-categorias  .controls  #custom-search-input .sin-borde{
+      border: 0px solid #fff;
+      -moz-border: 0px  solid #fff;
+      -webkit-border: 0px solid #fff;
+      width: 92%;
+      height: 32px;
+      background-color: #f8f8f8;
+    
+      }
+    
+    
+        /*BOTOM BUSCADOR */
+         .controls form  #custom-search-input .boton{
+        border-right: 4px;
+        -moz-border-right: 2px;
+        -webkit-border-right: 2px;
+         width: 8%;
+         max-width: 55px;
+         height: 32px;
+        background-color: #fff;
+         }
+    
+        .controls .icon .fa-search{
+        color: #000000;
+        font-size: 1em;
+        }
+    
+        .sin-borde::placeholder {
+          font-size: 0.8rem;
+          color: #2d2d2d;
+          height: 23px;
+          vertical-align: middle;
+          padding-top: 4px;
+          padding-left: 4px;
+            }
+         
+    
+     
+         /*CONTENEDOR  REVISTA Y SOCIALES*/
+          .suscribe{
+          position: relative;
+          float: right;
+          width: 20%;
+          max-width: 200px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
+          height: 40px;
+          }
+    
+        .suscribe  a h4{
+          font-size: 0.9rem;
+          word-spacing: -3px;
+          letter-spacing: -0.7%;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 700;
+          color:#2d2d2d;
+          margin-top:  16px;
+          }
+      
+      
+    
    
    
  
@@ -255,7 +261,7 @@ flex-wrap: wrap;
  
     .menu-btn  .hamburguesa{
        width: 100%;
-       max-width: 39px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+       max-width: 38px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
        height: 40px;
        display: block;
        position: relative;
@@ -296,10 +302,10 @@ flex-wrap: wrap;
  
  }
  .menu-btn__burger::before {
-  transform: translateY(-9px);
+  transform: translateY(-8px);
  }
  .menu-btn__burger::after {
-  transform: translateY(9px);
+  transform: translateY(8px);
  
  }
 
@@ -607,7 +613,7 @@ flex-wrap: wrap;
       }
     
     
-         header nav .nav .li-pc .submenu-responsive li a{
+      header nav .nav .li-pc .submenu-responsive li a{
       font-size: 0.9rem;
       display: block;
       text-transform: lowercase;
@@ -618,7 +624,6 @@ flex-wrap: wrap;
       margin-left: 5px;
       }
       
-  
           
       nav .nav li ul {
       display: none;
@@ -674,113 +679,16 @@ flex-wrap: wrap;
    width: 0px;
    z-index: 10;
    }
-
-
-
-  
   
 
    /*FIN ANIMACION SUBRAYADO */
    
     /*CONTENEDOR PERDERPESO CATEGORIA........................................ */
-     #container-categorias-subcategorias{
+    #container-categorias-subcategorias{
+      display: block;
     width: 100%;
-    max-width: 1230px;
     }
   
-
-     #texto-slider{
-       display: block;
-       height: 70px;
-       margin-bottom: 70px;
-     }
-     
-    /*SEGMENTO DE LAS SUBCATEGORIAS DE LAS APGINAS PLAN DE COMIDAS, DIETAS Y TURISMO      background-color: #ccc;*/
-    .caja-texto-slider{
-      display: block;
-      width: auto;
-      height: 60px;  /*SE ACORTA LA DISTANCIA ENTE EL SCROLL Y LA VENTANA MENU*/
-      overflow-x: auto;
-      overflow-y: hidden;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none;  /* Internet Explorer 10+ */
-      white-space: nowrap;
-      margin: 4px, 4px;
-      padding-top: 8px;
-  
-     }
-    
-
-     #texto-slider .scrollmenu{
-      display: flex;
-      flex-direction: row;
-      width:  100%;
-       }
-
-    /*ESTO DESAPARCEE LA BARRA DEL SCROLL*/
-    .caja-texto-slider::-webkit-scrollbar {
-      width: 0;
-      height: 0.4rem;
-    background-color: #7aac41;
-     
-    }
-
-
-   /*CAJA DE LA FLECHA. display: inline-block;
-    width:25px;
-    height: 25px;
-    border-radius: 15px;
-    position: absolute;
-    top: 363px;
-    left: 5em;
-    background-color: #7aac41;.*/
-   #texto-slider .caja-texto-slider .leftNav {
-    display: none;
-    }
-
-    .rightNav{
-      display: none;
-    }
-
-  
-
-
-     .scrollmenu{
-      display: 100%;
-      display: flex;
-      flex-direction: row; 
-      }
-
-
-    .scrollmenu  li{
-     margin-right: 12px;
-     list-style: none;
-     border: 4px solid #7aac41;
-     border-radius: 4%;
-     padding: 4px 4px 4px 4px;
-    }
-
-    #texto-slider a h3{
-      color: #000000;
-    }
-
-    #texto-slider::-webkit-scrollbar { /* WebKit */
-      width: 0px;
-      height: 5px;
-     
-      }
-  
-      .scrollmenu::-webkit-scrollbar {
-        display: none;
-      }
-  
-
-      /*...CONTAINER TOTAL DE INICIO CATEGORIAS ETC ETC........................*/
-      #container-categorias-subcategorias{
-      display: block;
-      width: 100%;
-      }
-
       
       /*..INTRO CONTAINR DE MENU-INTROESCRITO Y INTRO-DOS-VACIOS..*/
       #container-categorias-subcategorias .intro{
@@ -800,8 +708,8 @@ flex-wrap: wrap;
     flex-direction: column;
     width: 70%;
     height: 180px;
-    border-left: 5px solid #7aac41;
-    border-right: 5px solid #7aac41;
+    border-left: 2px solid #7aac41;
+    border-right: 2px solid #7aac41;
       }
    
 
@@ -834,7 +742,7 @@ flex-wrap: wrap;
     }
 
     /*..  border: 2px solid #fff..*/
-    .intro .menu-introescrito  .menu ul{
+    .intro .menu-introescrito  .menu .menu-scrolling ul{
     display: flex;
     flex-direction: row;
     width: 99.5%;
@@ -845,7 +753,7 @@ flex-wrap: wrap;
     align-items: center;
       }
        
-      .intro .menu-introescrito .menu  ul li{
+      .intro .menu-introescrito .menu  .menu-scrolling ul li{
       margin-right: 9px;
       list-style: none;
        }
@@ -870,7 +778,7 @@ flex-wrap: wrap;
     
       /*SOLO DE LA PALABRA CATEGORIA*/
            /*LETTRA DEL MENU LI SIN P*/
-      .intro .menu-introescrito .menu  ul li p{
+      .intro .menu-introescrito .menu  .menu-scrolling ul li p{
         color: #2d2d2d;
         text-transform: uppercase;
         font-family: 'Courier New', Courier, monospace;
@@ -878,11 +786,12 @@ flex-wrap: wrap;
         font-weight: 900;
         word-spacing: -4px;
         letter-spacing:  1px;
+        margin: auto;
       }
 
       
        /*LETTRA DEL MENU LI SIN P*/
-       .intro .menu-introescrito .menu  ul li a{ 
+       .intro .menu-introescrito .menu  .menu-scrolling ul li a{ 
         color: #2d2d2d;
         text-transform: uppercase;
         font-family: 'Courier New', Courier, monospace;
@@ -906,17 +815,15 @@ flex-wrap: wrap;
         transform: rotate(45deg);
         margin-right: 0.5em;
           }
-                
-    
-    
       /*..FIN...*/
           
+
       .intro  .menu-introescrito .menu  ul li:hover > ul {
       display:block;
        }
 
 
-      .intro  .menu-introescrito .menu ul ul{
+      .intro  .menu-introescrito .menu .menu-scrolling ul ul{
       display:none;
       float: right;
       z-index: 1000;
@@ -1023,7 +930,75 @@ flex-wrap: wrap;
       }
 
     
+    /*------------CAJA TEXTO SILER DONDE ESTAN TODAS LAS SUBCATEPRIAS....DE DIETA ,PLA, ETC--*/
+    #texto-slider{
+      display: block;
+      height: 75px;
+      margin-bottom: 70px;
+       }
+       
+      /*SEGMENTO DE LAS SUBCATEGORIAS DE LAS APGINAS PLAN DE COMIDAS, DIETAS Y TURISMO      background-color: #ccc;*/
+      .caja-texto-slider{
+        display: block;
+        width: auto;
+        height: 60px;  /*SE ACORTA LA DISTANCIA ENTE EL SCROLL Y LA VENTANA MENU*/
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        white-space: nowrap;
+        margin: 4px, 4px;
+        padding-top: 8px;
+       }
+      
+      
     
+           /*ESTO DESAPARCEE LA BARRA DEL SCROLL*/
+        .caja-texto-slider::-webkit-scrollbar {
+        width: 0;
+        height: 0.4px;
+        background-color: transparent;
+        display: none;
+       }
+  
+    
+       /*..UL..*/
+       .caja-texto-slider  .scrollmenu{
+        display: 100%;
+        display: flex;
+        flex-direction: row; 
+        }
+  
+        .scrollmenu  li{
+          margin-right: 12px;
+          list-style: none;
+          border: 2px solid #7aac41;
+          border-radius: 4%;
+          padding: 9px 6px 4px 6px;
+         }
+     
+  
+        .caja-texto-slider  .scrollmenu li a h3{
+          font-size: 1.1em;
+          color: black;
+         }
+  
+  
+        #texto-slider .caja-texto-slider .leftNav {
+        display: none;
+          }
+      
+        .arrow-left{
+        display: none;
+        }
+      
+        .rightNav{
+        display: none;
+          }
+      
+
+
+
     /*FIN FIN IMPORTANTE PARA LAS RAYAS ANIMADAS DEL MENU*/
 
 
@@ -1057,13 +1032,22 @@ flex-wrap: wrap;
         }
 
 
-      /*CONTINER TOTAL DE LA PPAGINA  DE RECETAS Y DE DIETA Y PLAN Y TURISMO...*/
+      /*CONTINER TOTAL DE LA PPAGINA  DE RECETAS , DE DIETA, PLAN Y TURISMO...*/
       .container-posts-categorias{
       display: block;
       width: 100%;
       margin-bottom: 100px;
       }
 
+        /*CONTAINER ESTE CONTAINER ES DE RECETAS..PLAN DIETAS CONTIENE COLUMNA Y ASIDE..........*/
+     #posts-categorias-aside{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     width: 100%;
+      }
+
+      /*..ESTO ES DE DIETAS, PLAN Y TURISMO.........A*/
       .container-posts-categorias  .columna-categorias{
         display: flex;
        flex-direction: column;
@@ -1071,7 +1055,7 @@ flex-wrap: wrap;
        }
       /*..........................*/
 
-      /*PAGINA CATEGORIA DE APPBLOG DIETAS ESPECIALES  APPPERDERPESO PLAN DE COMIDA Y APPTURISMO*/
+      /* DIETAS PLAN DE COMIDA TURISMO......................A-1*/
   /*DONDE ESTA EL POST ESTE ES EL BLOQUE DE POR FOTO Y POR DESCRIPCION */
      .por-categoria{
     width: 100%;
@@ -1093,7 +1077,7 @@ flex-wrap: wrap;
 
     
 
-  /*NO ES DE RECETAS*/
+    /* DIETAS PLAN DE COMIDA TURISMO......................A-2*/
    .por-foto{
       width: 30%;
       max-width: 395px;
@@ -1108,7 +1092,7 @@ flex-wrap: wrap;
   
     }
 
-    /*NO ES DE RECETAS*/
+     /* DIETAS PLAN DE COMIDA TURISMO......................A-3*/
     .por-descripcion{
       width: 66%;
       max-width: 710px;
@@ -1169,8 +1153,8 @@ flex-wrap: wrap;
 
 
   
-
-     #aside{
+    /* DIETAS PLAN DE COMIDA TURISMO......................A-4*/
+    #posts-categorias-aside #aside{
      display: block;
      position: relative;
      float: right;
@@ -1179,40 +1163,42 @@ flex-wrap: wrap;
     }
 
 
-  /*CONTAINER ESTE CONTAINER ES DE RECETAS..PLAN DIETAS CONTIENE COLUMNA Y ASIDE..........*/
-     #posts-categorias-aside{
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-    width: 100%;
-     }
-  
-     /*XOLUMNA CONTENEDOR DE VARIOS POSTS*/
-     .post-cuatro-categorias{
-     display: block;
+  /*..CAJA DE CATEGORIA RECETAS DE RESPONSIVE..*/
+    .categoria-receta-responsive{
+      display: none;
+    }
+    /*----BLOQUE RECETAS-------------A----R1---*/
+    .categoria-recetas-posts{
+    display: block;
     position: relative;
-     float: left;
+    float: left;
     width: 80%;
     max-width: 950px;
-    }
+      }
+  
+  
+       /* RECETAS .....ROW.........B............R-2*/
+       #posts-categorias-aside .post-cuatro-categorias{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 950px;
+       }
 
 
-    /*IMPORTANTE QUE SEA BLOCK PARA QUE LOS POSTS SE ACOMODEN*/
-    /*CAJA DE RECETAS*/
-   /* CONTAINER DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
+    /* RECETAS ............C.........R-3*/
     .elemento-categoria{
     display: block;
-    width: 100%;
-    max-width: 900px;
+     width: 30%;
+    max-width: 290px;
     }
 
  
      
+    /* RECETAS ................D................R-4*/
     .elemento-categoria  #imagen-elemento-categoria{
-       display: block;
-       position: relative;
-       float: left;
-       margin-right: 20px;
+      display: flex;
+      flex-direction: column;
        border-radius: 8px;
        break-inside: avoid-column;
        overflow: hidden;
@@ -1223,11 +1209,12 @@ flex-wrap: wrap;
        background: #FEFEFE;
        background-image: linear-gradient(45deg, #FFF, #F9F9F9);
        border: 2px solid #FAFAFA;
-       height: 480px;
-      width: 30%;
-      max-width: 270px;
+       height: 500px;
+       width: 100%;
+       max-width: 270px;
        margin-bottom: 30px;
-     }
+       margin-right: 20px;
+       }
 
 
        /*CAJA DE LA IMAGEN*/
@@ -1243,20 +1230,22 @@ flex-wrap: wrap;
     
  
 
-      /*RECETAS*/
-     .imagen-descripcion{
-      display: block;
-      position: relative;
-       width: 90%;
+      
+      /* RECETAS .....................R-4*/
+      .imagen-descripcion{
+       display: block;
+       position: relative;
+       width: 95%;
+       height: 200px;
        margin: auto;
        }
      
  
         /* TITULO DEL POST*/
-   .imagen-descripcion h1{
+    .imagen-descripcion a h1{
      display: inline-block;
     font-size: 1.24rem;
-    margin-top: 10px;
+    margin-top: 5px;
     word-spacing: -1px;
     letter-spacing: -0.2px;
     font-family: 'Times New Roman', 'sans serif';
@@ -1265,44 +1254,34 @@ flex-wrap: wrap;
     text-decoration: underline;
     }
 
-    #imagen-elemento-categoria .imagen-descripcion p {
-      font-size: 0.9rem;
+      .imagen-descripcion p {
+      font-size: 0.8rem;
       font-family: 'Times New Roman', 'sans serif';
       color: #2d2d2d;
-       margin-top: 10px;
        word-spacing: -0.5px;
+       line-height: 22px;
       }
   
     
       /*---POR...*/
-      .imagen-descripcion p {
-      
-        color: #000000;
+      .imagen-descripcion .a {
+      color: #2d2d2d;
       }
+
+
      /*..AUTOR...*/
      .imagen-descripcion .o{
       font-size: 1.1rem;
       font-family: 'Archive Black', 'sans serif';
       font-weight: 600;
-      color: #2d2d2d;
+      color: black;
       margin-left: 5px;
       text-decoration: underline;
      }
 
-       #imagen-elemento-categoria .imagen-descripcion .a{
-       margin-bottom: 8px;
-      }
+   
       
-     #imagen-elemento-categoria .imagen-descripcion h3{
-     font-size: 0.9rem;
-     color: #4b4b4b;
-     font-family: 'Archive Black', 'sans serif';
-     font-weight: 300;
-     }
-
-
-
-
+ 
 
     /*CUARTO SEGMENTO  CARROUSEL ............................................. */
     /*CONTAINER GENERAL DEL CARRUSEL............................................. */
@@ -1574,12 +1553,15 @@ flex-wrap: wrap;
   flex-direction: row;
   }
 
+
 .icon-social p{
   font-family: sans-serif;
   font-size: 0.8rem;
   word-spacing: -1px;
   font-weight: 900;
   }
+
+
   .icon-social ul{
   display: inline-flex;
   list-style: none;
@@ -1602,6 +1584,7 @@ flex-wrap: wrap;
     border: solid #E9E9E9;
     }
 
+
   .icon-social  ul li .fa-pinterest{
     background-color: #fff;
     color:    #7aac41;
@@ -1611,6 +1594,7 @@ flex-wrap: wrap;
     border-radius: 25px;
     border: solid #E9E9E9;
   }
+
   .icon-social  ul li .fa-facebook-f{
     background-color: oldlace;
     color:   #639a3a;
@@ -1674,9 +1658,6 @@ flex-wrap: wrap;
       height: 34px;
       }
     
-
- 
-
 
     /* UL*/
     .icon-social1  .social2{

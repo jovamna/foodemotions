@@ -971,137 +971,156 @@ border-radius:6px;
      }
 
         
-          header{
-            width: 100%;
-            z-index: 999;
-            position: fixed;
-            margin: auto;
-            height:  55px;
-            box-shadow: 0 8px 6px -6px #c9c9c9;
-              }
+    header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+     margin: auto;
+    height:  58px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
+        }
+
             
-               header.black{
-                background-color:#fff;
-                width: 100%;
-                height:  55px;
-                }
+    header.black{
+    background-color:#fff;
+    width: 100%;
+    height:  58px;
+        }
               
-               .cabecera{
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                margin: auto;
-                height: 30px;
-               }
+    
+    /*NAV*/
+    /*BUSCADR RESPONSIVE*/
+    .cabecera .controls{
+    display: none;
+    visibility: hidden;
+    }
+  
+
+    .cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    height: 30px;
+    }
                
-               .cabecera .logo{
-                display: block;
-                position: relative;
-                float: left;
-                width: 25%;
-                max-width: 330px;
-                min-width: 190px;
-                height: 30px;
-              }
+
+    .cabecera .logo{
+    display: block;
+    position: relative;
+    float: left;
+    width: 20%;
+    max-width: 190px;
+    min-width: 170px;
+    height: 30px;
+    }
                         
-              .cabecera .logo img {
-                display: block;
-                width: 100%;
-                max-width: 140px;
-                min-width: 120px;
-                height: 35px;
-                z-index: 40;
-               }
+    .cabecera .logo img {
+    display: block;
+    width: 100%;
+    max-width: 140px;
+    min-width: 140px;
+    height: 35px;
+    z-index: 40;
+     }
                
         
-           .cabecera  .suscribe{
-            width: 12%;
-            height: 25px;
-          display: block;
-          position: relative;
-          float: right;
-          max-width: 225px;
-          min-width: 90px;
-            }
-        
-              /*LETRA INSCRIBETE*/
-              .cabecera  .suscribe a h4{
-                display: block;
-                position: relative;
-                float: right;
-                 width: 100%;
-             
-                font-size: 0.78rem;
-                margin-top: 12px;
-                font-weight: 700;
-                letter-spacing: 0.5px;
-                z-index: 5;
-              }
-                
-              .cabecera  .suscribe a h4:hover{
-              color: #7aac41;
-              text-decoration: none;
-              }
-        
-      /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-    .cabecera  .menu-btn {
+    .cabecera  .suscribe{
     display: block;
     position: relative;
     float: right;
-    width: 8%;
-    max-width: 36px;
-    min-width: 36px;
+    width: 11%;
+    max-width: 135px;
+    min-width: 110px;
     height: 30px;
-    margin: auto;
+        }
+
+        
+    /*LETRA INSCRIBETE*/
+    .cabecera  .suscribe a h4{
+      font-size: 0.8rem;
+      margin-top: 10px;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+        }
+                
+
+    .cabecera  .suscribe a h4:hover{
+    color: #7aac41;
+    text-decoration: none;
+              }
+
+        
+      /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+    .cabecera  .menu-btn {
+      display: block;
+      position: relative;
+      float: right;
+      width: 8%;
+      max-width: 37px;
+      min-width: 37px;
+      height: 30px;
+      margin: auto;
      }
 
 
 
-        .hamburguesa{
-          display: block;
-          position: relative;
-          float: left;
-          width: 100%;
-          max-width: 36px;
+     .menu-btn  .hamburguesa{
+      display: block;
+      position: relative;
+      float: right;
+      width: 90%;
+      max-width: 32px;
+      min-width: 33px;
+      height: 30px;
+     margin: auto;
         }
-            /*--MUEVE EL MENU............ESTE ES EL BURGER*/
-           .menu-btn  .menu-btn__burger {
-             display: block;
-             position: relative;
-             float: left;
-             margin-top:   13px;
-             width: 34px;
-             height: 3.6px;
-            background: #2d2d2d;
-            border-radius: 2px;
-            box-shadow: 0 2px 5px rgba(255,101,47,.2);
-            transition: all .5s ease-in-out;
-            z-index: 1000;
-            }
+
+
+  /*--MUEVE EL MENU............ESTE ES EL BURGER*/
+  .menu-btn .hamburguesa  .menu-btn__burger {
+  display: block;
+  position: relative;
+  float: right;
+  margin: auto;
+  margin-top: 10.6px;
+  width: 100%;
+  max-width: 32px;
+  min-width: 32px;
+  height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+  z-index: 1000;
+
+
+      }
                 
-            .menu-btn__burger::before,
-            .menu-btn__burger::after {
-            content: '';
-            position: absolute;
-            width: 36px;
-            height: 3.6px;
-            background:#2d2d2d;
-            border-radius: 2px;
-            box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
-            transition: all .5s ease-in-out;
-            z-index: 800; 
-            }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  max-width: 32px;
+  min-width: 32px;
+  height: 4px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  transition: all .5s ease-in-out;
+    }
         
-            .menu-btn__burger::before {
-            transform: translateY(-8px);
-            z-index:3000;         
-            }
+  .menu-btn__burger::before {
+  transform: translateY(-7px);
+  z-index:3000;         
+  }
         
         
-          .menu-btn__burger::after {
-          transform: translateY(8px);
-          z-index:3000;
-          }
+  .menu-btn__burger::after {
+  transform: translateY(7px);
+  z-index:3000;
+  }
         
          .menu-btn__burger:hover{
          background-color: #7aac41;
@@ -3660,14 +3679,14 @@ border-radius:6px;
       z-index: 999;
       position: fixed;
       margin: auto;
-      height:  62px;
+      height:  69px;
       box-shadow: 0 8px 6px -6px #c9c9c9;
         }
       
          header.black{
           background-color:#fff;
           width: 100%;
-          height:  62px;
+          height:  69px;
           }
         
          .cabecera{
@@ -3676,9 +3695,13 @@ border-radius:6px;
           flex-direction: row;
           margin: auto;
           height: 33px;
-          margin-top: -6px;
+          margin-top: -5px;
          }
          
+         .cabecera  .controls{
+          display: none;
+         }
+
      /*caja */
     .cabecera .logo{
       display: block;
@@ -3734,7 +3757,7 @@ border-radius:6px;
       min-width: 36px;
       height: 33px;
       margin: auto;
-      margin-top:  18px;
+ 
         }
 
       /*--MUEVE EL MENU............ESTE ES EL BURGER*/
@@ -3960,32 +3983,65 @@ border-radius:6px;
     }
   
 
-  .primera-columna{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  }
+ 
+    #tres-columnas-articulo .columna-primera{
+      width: 100%;
+ 
+    }
+    #tres-columnas-articulo .segunda-columna{
+       width: 100%;
+    
+     }
+
+     #tres-columnas-articulo  .tercera-columna-fija{
+       width:  100%;
+    
+     }
+
+     /*.............*/
+     .primera-columna{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+     }
+
+     .primero-descripcion-y-fotoprincipal{
+       width: 100%;
+     }
+
+     .articulovacio{
+       width: 10%;
+     }
+     .articulovacio-articulolleno{
+       width: 100%;
+     }
 
 
-   .columna-primera{
+  
+  .articulolleno{
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
-        .imagen-central{
-         width: 100%;
-         display: flex;
-         flex-direction: column;
-       
-        }
+  .articulolleno .imagen-principal {
+    width: 100%;
+   }
 
-        .redes{
-          width: 20%;
-          }
 
-     .iconos-social{
+   .articulolleno .imagen-principal img{
+    width: 100%;
+
+   }
+
+
+  
+
+     .articulovacio .redes .iconos-social{
       display: flex;
       flex-direction: row;
-     }
+      width: 50%;
+    }
 
      .iconos-social  li .fa-envelope{
       padding: 5px 5px  5px  5px;
@@ -4004,7 +4060,7 @@ border-radius:6px;
       margin-right: 12px;
     }
     
-    .iconos-social  li .fa-twitter{
+    .iconos-social  li .fa-pinterest{
       padding: 5px 5px  5px  5px;
       font-size:  5px;
       width: 35px;
@@ -4351,9 +4407,7 @@ border-radius:6px;
      }
 
 
-    .controls{
-     display: none;
-    }
+ 
    
     .tercera-columna-fija  .tercera-columna{
       width: 100%;
@@ -4673,7 +4727,7 @@ border-radius:6px;
     }
           
     #wrapper-articulo > * {
-    padding: 20px;
+    padding: 35px;
     }
       
     #container-articulo{
@@ -4697,24 +4751,33 @@ border-radius:6px;
         z-index: 999;
         position: fixed;
         margin: auto;
-        height:  65px;
+        height:  75px;
         box-shadow: 0 8px 6px -6px #c9c9c9;
           }
         
            header.black{
             background-color:#fff;
             width: 100%;
-            height:  65px;
+            height:  75px;
             }
           
+            .cabecera  .controls{
+              display: none;
+             }
            .cabecera{
             width: 100%;
             display: flex;
             flex-direction: row;
             margin: auto;
             height: 35px;
+            margin-top: -5px;
            }
            
+           .cabecera .controls{
+             display: none;
+             visibility: hidden;
+           }
+
        /*caja */
       .cabecera .logo{
         display: block;
@@ -4978,24 +5041,73 @@ border-radius:6px;
     }
   
 
-  .primera-columna{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  }
 
-
-   .columna-primera{
-    width: 100%;
-  }
-
-        .imagen-central{
+    
+     #tres-columnas-articulo .columna-primera{
          width: 100%;
-         display: flex;
-         flex-direction: column;
+    
+       }
+       #tres-columnas-articulo .segunda-columna{
+          width: 100%;
        
         }
 
+        #tres-columnas-articulo  .tercera-columna-fija{
+          width:  100%;
+       
+        }
+
+        /*.............*/
+        .primera-columna{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .primero-descripcion-y-fotoprincipal{
+          width: 100%;
+        }
+
+        .articulovacio{
+          width: 10%;
+        }
+        .articulovacio-articulolleno{
+          width: 100%;
+        }
+
+
+     
+     .articulolleno{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+     }
+
+     .articulolleno .imagen-principal {
+       width: 100%;
+      }
+   
+   
+      .articulolleno .imagen-principal img{
+       width: 100%;
+   
+      }
+   
+
+     
+
+        .articulovacio .redes .iconos-social{
+         display: flex;
+         flex-direction: row;
+         width: 50%;
+       }
+
+    .redes .iconos-social  li{
+         display: block;
+         margin-left: 10px;
+       }
+    /*.....
+     /*................................*/
         .redes{
           width: 20%;
           }
@@ -5629,7 +5741,9 @@ border-radius:6px;
     width: 100%;
     height:  65px;
     }
-        
+    .cabecera  .controls{
+      display: none;
+     }
 
     .cabecera{
     width: 100%;
@@ -5793,8 +5907,8 @@ border-radius:6px;
       /*EMPIEZA EL CONTENIDO*/
 
       #tres-columnas-articulo{
-        display: flex;
-        flex-direction: row;
+       display: flex;
+       flex-direction: column;
         width: 100%;
         margin-top: 1%;
       }
@@ -5802,16 +5916,16 @@ border-radius:6px;
 
      
       #tres-columnas-articulo .columna-primera{
-          width: 62%;
+          width: 75%;
      
         }
         #tres-columnas-articulo .segunda-columna{
-           width: 5%;
-           max-width: 65px;
+           width: 100%;
+        
          }
 
          #tres-columnas-articulo  .tercera-columna-fija{
-           width:  33%;
+           width:  100%;
         
          }
 
@@ -5822,29 +5936,47 @@ border-radius:6px;
            width: 100%;
          }
 
-
-         .primera-columna .imagen-central{
-           display: flex;
-           flex-direction: column;
-         }
-
-
-         .imagen-central .redes{
-           display: block;
+         .primero-descripcion-y-fotoprincipal{
            width: 100%;
          }
 
-         .imagen-central .redes .iconos-social{
+         .articulovacio{
+           width: 10%;
+         }
+         .articulovacio-articulolleno{
+           width: 100%;
+         }
+
+
+      
+      .articulolleno{
+        width: 90%;
+      }
+
+      .articulolleno .imagen-principal {
+        width: 100%;
+       }
+    
+    
+       .articulolleno .imagen-principal img{
+        width: 100%;
+        height: 600px;
+       }
+    
+
+      
+
+         .articulovacio .redes .iconos-social{
           display: flex;
-          flex-direction: row;
-          width: 100%;
+          flex-direction: column;
+          width: 10%;
         }
 
-        .imagen-central .redes .iconos-social  li{
+     .redes .iconos-social  li{
           display: block;
           margin-left: 10px;
         }
-     /*.....
+   
       /*................................*/
          
          .columna-primera img{
@@ -6247,7 +6379,7 @@ border-radius:6px;
     }
           
       #wrapper-articulo > * {
-      padding: 20px;
+      padding: 30px;
       }
       
       #container-articulo{
@@ -6258,7 +6390,7 @@ border-radius:6px;
       }
 
         #comentarios{
-        background-color: violet;
+          background-color:  #FEEDF6;
         display: flex;
         width: 100%;
        }
@@ -6289,9 +6421,9 @@ border-radius:6px;
        /*caja */
       .cabecera .logo{
         display: block;
-      width: 75%;
-      max-width: 800px;
-      min-width: 700px;
+      width: 30%;
+      max-width: 310px;
+      min-width: 260px;
       height: 35px;
       }
                 
@@ -6302,6 +6434,88 @@ border-radius:6px;
       height: 35px;
        }
            
+ /*CONTAINER DEL BUSCADOR................. */
+ .cabecera .controls{
+  display: block;
+  position: relative;
+  float: left;
+  width: 30%;
+  max-width:  400px;
+  min-width: 350px;
+  height: 40px;  
+  margin: auto;
+    }
+
+
+  .controls form{
+  width: 100%;
+  max-width: 340px;
+  height: 38px;  
+    }
+
+
+/*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
+.cabecera  .controls form #custom-search-input{
+width: 100%;
+height: 35px;
+display: flex;
+flex-direction: row;
+border-radius: 0px;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+margin-top: 0.5px;
+box-shadow: 4px 8px 6px -6px #8c8c8c;
+background: #FEFEFE;
+background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+border: 1px solid #FAFAFA;
+}
+
+
+
+
+/*CAMPO SEARCH BUSCADOR */
+.cabecera .controls form #custom-search-input .sin-borde{
+border: 0px solid #fff;
+-moz-border: 0px  solid #fff;
+-webkit-border: 0px solid #fff;
+width: 92%;
+height: 32px;
+background-color: #f8f8f8;
+}
+
+
+
+
+
+/*BOTOM BUSCADOR */
+ .controls form  #custom-search-input .boton{
+border-right: 4px;
+-moz-border-right: 2px;
+-webkit-border-right: 2px;
+ width: 8%;
+ max-width: 55px;
+ height: 32px;
+background-color: #fff;
+ }
+
+.controls .icon .fa-search{
+color: #000000;
+font-size: 1em;
+}
+
+.sin-borde::placeholder {
+  font-size: 0.8rem;
+  color: #2d2d2d;
+  height: 23px;
+  vertical-align: middle;
+  padding-top: 4px;
+    }
+
+
+
+
   
        .cabecera  .suscribe{
         width: 15%;
@@ -6309,8 +6523,8 @@ border-radius:6px;
       display: block;
       position: relative;
       float: right;
-      max-width: 260px;
-      min-width: 200px;
+      max-width: 230px;
+      min-width: 190px;
    
         }
     
@@ -7025,9 +7239,9 @@ border-radius:6px;
        /*caja */
       .cabecera .logo{
         display: block;
-      width: 70%;
-      max-width: 840px;
-      min-width: 800px;
+      width: 30%;
+      max-width: 300px;
+      min-width: 260px;
       height: 35px;
       }
                 
@@ -7037,7 +7251,87 @@ border-radius:6px;
       min-width: 180px;
       height: 35px;
        }
-           
+            /*CONTAINER DEL BUSCADOR................. */
+ .cabecera .controls{
+  display: block;
+  position: relative;
+  float: left;
+  width: 30%;
+  max-width:  420px;
+  min-width: 380px;
+  height: 40px;  
+  margin: auto;
+    }
+
+
+  .controls form{
+  width: 100%;
+  max-width: 380px;
+  height: 38px;  
+    }
+
+
+/*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
+.cabecera  .controls form #custom-search-input{
+width: 100%;
+height: 35px;
+display: flex;
+flex-direction: row;
+border-radius: 0px;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+margin-top: 0.5px;
+box-shadow: 4px 8px 6px -6px #8c8c8c;
+background: #FEFEFE;
+background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+border: 1px solid #FAFAFA;
+}
+
+
+
+
+/*CAMPO SEARCH BUSCADOR */
+.cabecera .controls form #custom-search-input .sin-borde{
+border: 0px solid #fff;
+-moz-border: 0px  solid #fff;
+-webkit-border: 0px solid #fff;
+width: 92%;
+height: 32px;
+background-color: #f8f8f8;
+}
+
+
+
+
+
+/*BOTOM BUSCADOR */
+ .controls form  #custom-search-input .boton{
+border-right: 4px;
+-moz-border-right: 2px;
+-webkit-border-right: 2px;
+ width: 8%;
+ max-width: 55px;
+ height: 32px;
+background-color: #fff;
+ }
+
+.controls .icon .fa-search{
+color: #000000;
+font-size: 1em;
+}
+
+.sin-borde::placeholder {
+  font-size: 0.8rem;
+  color: #2d2d2d;
+  height: 23px;
+  vertical-align: middle;
+  padding-top: 4px;
+    }
+
+
+
   
        .cabecera  .suscribe{
         width: 11%;
@@ -7052,7 +7346,7 @@ border-radius:6px;
     
           /*LETRA INSCRIBETE*/
           .cabecera  .suscribe a h4{
-          font-size: 1rem;
+          font-size: 0.9em;
           letter-spacing: -0.3px;
           font-family: 'Times New Roman', Times, serif;
           font-weight: 900;
@@ -7613,9 +7907,9 @@ border-radius:6px;
        /*caja */
       .cabecera .logo{
         display: block;
-      width: 75%;
-      max-width: 880px;
-      min-width: 800px;
+      width: 25%;
+      max-width: 320px;
+      min-width: 290px;
       height: 35px;
       }
                 
@@ -7626,7 +7920,87 @@ border-radius:6px;
       height: 35px;
        }
            
-  
+   /*CONTAINER DEL BUSCADOR................. */
+ .cabecera .controls{
+  display: block;
+  position: relative;
+  float: left;
+  width: 30%;
+  max-width:  460px;
+  min-width: 410px;
+  height: 40px;  
+  margin: auto;
+    }
+
+
+  .controls form{
+  width: 100%;
+  max-width: 410px;
+  height: 38px;  
+    }
+
+
+/*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
+.cabecera  .controls form #custom-search-input{
+width: 100%;
+height: 35px;
+display: flex;
+flex-direction: row;
+border-radius: 0px;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+margin-top: 0.5px;
+box-shadow: 4px 8px 6px -6px #8c8c8c;
+background: #FEFEFE;
+background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+border: 1px solid #FAFAFA;
+}
+
+
+
+
+/*CAMPO SEARCH BUSCADOR */
+.cabecera .controls form #custom-search-input .sin-borde{
+border: 0px solid #fff;
+-moz-border: 0px  solid #fff;
+-webkit-border: 0px solid #fff;
+width: 92%;
+height: 32px;
+background-color: #f8f8f8;
+}
+
+
+
+
+
+/*BOTOM BUSCADOR */
+ .controls form  #custom-search-input .boton{
+border-right: 4px;
+-moz-border-right: 2px;
+-webkit-border-right: 2px;
+ width: 8%;
+ max-width: 55px;
+ height: 32px;
+background-color: #fff;
+ }
+
+.controls .icon .fa-search{
+color: #000000;
+font-size: 1em;
+}
+
+.sin-borde::placeholder {
+  font-size: 0.8rem;
+  color: #2d2d2d;
+  height: 23px;
+  vertical-align: middle;
+  padding-top: 4px;
+    }
+
+
+
        .cabecera  .suscribe{
         width: 15%;
         height: 35px;
@@ -8210,9 +8584,9 @@ border-radius:6px;
      /*caja */
     .cabecera .logo{
       display: block;
-    width: 75%;
-    max-width: 880px;
-    min-width: 800px;
+    width: 30%;
+    max-width: 320px;
+    min-width: 290px;
     height: 35px;
     }
               
@@ -8222,6 +8596,85 @@ border-radius:6px;
     min-width: 180px;
     height: 35px;
      }
+
+     /*CONTAINER DEL BUSCADOR................. */
+ .cabecera .controls{
+  display: block;
+  position: relative;
+  float: left;
+  width: 30%;
+  max-width:  460px;
+  min-width: 410px;
+  height: 40px;  
+  margin: auto;
+    }
+
+
+  .controls form{
+  width: 100%;
+  max-width: 410px;
+  height: 38px;  
+    }
+
+
+/*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
+.cabecera  .controls form #custom-search-input{
+width: 100%;
+height: 35px;
+display: flex;
+flex-direction: row;
+border-radius: 0px;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+margin-top: 0.5px;
+box-shadow: 4px 8px 6px -6px #8c8c8c;
+background: #FEFEFE;
+background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+border: 1px solid #FAFAFA;
+}
+
+
+
+
+/*CAMPO SEARCH BUSCADOR */
+.cabecera .controls form #custom-search-input .sin-borde{
+border: 0px solid #fff;
+-moz-border: 0px  solid #fff;
+-webkit-border: 0px solid #fff;
+width: 92%;
+height: 32px;
+background-color: #f8f8f8;
+}
+
+
+
+
+
+/*BOTOM BUSCADOR */
+ .controls form  #custom-search-input .boton{
+border-right: 4px;
+-moz-border-right: 2px;
+-webkit-border-right: 2px;
+ width: 8%;
+ max-width: 55px;
+ height: 32px;
+background-color: #fff;
+ }
+
+.controls .icon .fa-search{
+color: #000000;
+font-size: 1em;
+}
+
+.sin-borde::placeholder {
+  font-size: 0.8rem;
+  color: #2d2d2d;
+  height: 23px;
+  vertical-align: middle;
+  padding-top: 4px;
+    }
          
 
      .cabecera  .suscribe{

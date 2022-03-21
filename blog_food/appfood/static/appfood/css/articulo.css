@@ -27,51 +27,56 @@ a {
   font-family: "Argos",serif;
    }
 
-html, body {
-line-height: 1.15;
--webkit-text-size-adjust: 100%;
-height: 100%;
 
-}
+   html, body {
+   line-height: 1.15;
+   -webkit-text-size-adjust: 100%;
+    height: 100%;
+   }
 
 
-/*line-height: 20pt;        /* para la separacion entre lineas */ 
-/*text-indent: 30pt;  */ 
-
-  #wrapper-articulo {
+   /*line-height: 20pt;        /* para la separacion entre lineas */ 
+   /*text-indent: 30pt;  */ 
+    #wrapper-articulo {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     min-width:250px;
     flex-wrap: wrap;
-  }
+    }
       
    #wrapper-articulo > * {
-  padding:20px;  
+   padding:20px;  
+   }
+
+    
+   
+   div {
+    flex: 1;
   }
 
+   
+   a {
+   color: #524c56;
+   text-decoration: none;
+   font-weight: lighter;
+   }
+
+
     #container-articulo{
+    display: flex;
+    flex-direction: column;
     width:100%;
-    max-width: 1200px;
-    margin-left:auto;
-    margin-right:auto;
+    max-width: 1250px;
+    margin: auto;
+    height: auto;
     padding-left: 0;
     padding-right: 0;
     margin-top: 80px;
     margin-bottom: 140px;
     }
 
-    div {
-      flex: 1;
-    }
- 
-     
-   a {
-  color: #524c56;
-  text-decoration: none;
-  font-weight: lighter;
-   }
 
     #controls-responsive{
    display: none;
@@ -103,48 +108,136 @@ height: 100%;
       }
      /*FIN BUSCADOR RESPONSIVE  ..*/  
 
+
   .cabecera{
     width: 100%;
-   max-width: 1200px;
-    height: 35px;
+    max-width: 1250px;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: auto;
+    margin-top: -2px;
+    z-index: 2;
   }
 
    /*caja */
    .logo{
     display: block;
-    width: 70%;
-    max-width: 880px;
-    min-width: 800px;
-    height: 35px;
+    position: relative;
+    float: left;
+    width: 22%;
+    max-width: 320px;
+    min-width: 290px;
+   height: 40px; 
    }
     
+
    /*IMAGEN DEL LOGO*/
    .logo img{
     width: 100%;
-    max-width: 200px;
-    min-width: 180px;
-    height:  35px;  
+    height: 35px;  
+    max-width: 170px;
+    min-width: 170px; 
     }
      
+
+    
+       /*CONTAINER DEL BUSCADOR................. */
+       .cabecera .controls{
+      display: block;
+      position: relative;
+      float: left;
+      width: 34%;
+      max-width:590px;
+      min-width: 590px;
+      height: 40px;  
+      margin: auto;
+        }
+
+
+      .controls form{
+      width: 100%;
+      max-width: 460px;
+      height: 38px;  
+        }
+
+    
+   /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
+   .cabecera  .controls form #custom-search-input{
+    width: 100%;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+  margin-top: 0.5px;
+  box-shadow: 4px 8px 6px -6px #8c8c8c;
+  background: #FEFEFE;
+  background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+  border: 1px solid #FAFAFA;
+   }
+
+  
+ 
+
+  /*CAMPO SEARCH BUSCADOR */
+  .cabecera .controls form #custom-search-input .sin-borde{
+  border: 0px solid #fff;
+  -moz-border: 0px  solid #fff;
+  -webkit-border: 0px solid #fff;
+  width: 92%;
+  height: 32px;
+  background-color: #f8f8f8;
+  }
+
+
+ 
+
+
+    /*BOTOM BUSCADOR */
+     .controls form  #custom-search-input .boton{
+    border-right: 4px;
+    -moz-border-right: 2px;
+    -webkit-border-right: 2px;
+     width: 8%;
+     max-width: 55px;
+     height: 32px;
+    background-color: #fff;
+     }
+
+    .controls .icon .fa-search{
+    color: #000000;
+    font-size: 1em;
+    }
+
+    .sin-borde::placeholder {
+      font-size: 0.8rem;
+      color: #2d2d2d;
+      height: 23px;
+      vertical-align: middle;
+      padding-top: 4px;
+        }
+   
+
  
      /*CONTENEDOR  REVISTA Y SOCIALES*/
       .suscribe{
-      width: 20%;
-      max-width: 300px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
       position: relative;
       float: right;
-      height: 35px;
+      width: 20%;
+      max-width: 200px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
+      height: 40px;
       }
 
     .suscribe  a h4{
-      font-size: 1rem;
+      font-size: 0.9rem;
       word-spacing: -3px;
       letter-spacing: -0.7%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       font-weight: 700;
       color:#2d2d2d;
       margin-top:  16px;
@@ -162,38 +255,41 @@ height: 100%;
     /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
    /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
    .cabecera .menu-btn {
-    display: block;
-    position: relative;
-    float: right;
-    width: 8%;
-    max-width: 40px;
-    min-width: 38px;
-    height: 35px;
-    margin: auto;
-    margin-top: 22px;
+     display: block;
+   position: relative;
+   float: right;
+   height: 40px;
+   width: 8%;
+   max-width: 38px;
+   min-width: 38px;
+    cursor: pointer;
     z-index: 1000;
     }
 
   
   .menu-btn .hamburguesa{
-  display: block;
-  position: relative;
-  float:left;
-  width: 100%;
-  max-width: 40px;
+    width: 100%;
+      max-width: 38px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+      height: 40px;
+      display: block;
+      position: relative;
+      float: left;
    }
 
      /*---- box-shadow: 0 2px 5px rgba(255,101,47,.2);----------*/
    .menu-btn .hamburguesa .menu-btn__burger {
-      display: block;
-      position: relative;
-      float: right;
-      width: 37px;
-      height: 4px;
-      background: #2d2d2d;
-      border-radius: 2px;
-      transition: all .5s ease-in-out;
-      z-index: 1000;
+    display: block;
+    position: relative;
+    float: left;
+    margin: auto;
+    margin-top: 17.5px ;
+    width: 38px;
+   height: 4.2px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+    z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
       }
   
 
@@ -213,13 +309,13 @@ height: 100%;
 
     
   .menu-btn__burger::before {
-  transform: translateY(-7px);
+  transform: translateY(-8px);
   z-index:3000;
   }
 
 
   .menu-btn__burger::after {
-  transform: translateY(7px);
+  transform: translateY(8px);
   z-index:3000;
   }
 
@@ -307,12 +403,12 @@ height: 100%;
 
  
 
-nav .logo-esconder .logo-en-menu-responsive img{
+   nav .logo-esconder .logo-en-menu-responsive img{
   width: 100%;
   max-width: 120px;
   min-width: 120px;
   margin-top: 45px;
-}
+  }
 
   nav .logo-esconder .emoticon{
   width: 8%;
@@ -964,7 +1060,6 @@ nav .logo-esconder .logo-en-menu-responsive img{
 
      .articulolleno .imagen-principal {
       width: 100%;
-      background-color: rgb(59, 5, 35);
      }
   
   

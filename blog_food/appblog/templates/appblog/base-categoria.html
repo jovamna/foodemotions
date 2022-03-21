@@ -149,6 +149,12 @@
         <link rel="stylesheet" href="{% static 'appfood/css/categoria.css' %}">
         <link rel="stylesheet" href="{% static 'appfood/css/responsivecategoria.css' %}">
     
+        
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 
 
 
@@ -184,17 +190,17 @@
                   <!------ caja logo --------->
                   <div class="logo">
                   <a  href="{% url 'appfood:index' %}">
-                  <img src="{% static 'appfood/img/logo/739-153-logo.png' %}" alt="Fooding Emotion">
+                  <img src="{% static 'appfood/img/logo/739-153-logo.png' %}"  width="100%"  alt="Fooding Emotion">
                   </a>
                   </div>
                   <!------- final caja logo------->
 
 
-                 <div class="controls">
+                <div class="controls">
                  <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
 
                   <div id="custom-search-input">
-	                <input type="text"  class="sin-borde" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
+	                <input type="text"  class="sin-borde" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar...." >
                   <button type="submit" name="submit" class="boton btn-succes" value="Search"> 
                   <span class="icon"><i class="fa fa-search"></i></span>   
                   </button>
@@ -426,6 +432,16 @@
                      
                     </div>
 
+                     <!--------------------------------------------------------------->
+                       {% block categoria-receta-responsive %}  
+                     <div class="categoria-receta-responsive">
+                     <div class="categoria-columna-responsive">  
+                    <div id="categoria-imagen-descripcion-responsive"> 
+                   
+                     </div>
+                     </div>
+                     </div>
+                       {% endblock categoria-receta-responsive %}  
                      <!--------------------------------------------------------------->
 
               <!---DIV  DEBE MEDIR 100%  CONTAINER DE 4 POST Y DE RECETAS--->

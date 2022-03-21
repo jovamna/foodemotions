@@ -516,19 +516,7 @@
     <!------------------------- TERCERA COLUMNA----------------------------------------------------------->
    {% block tercera-columna %}
         <div class="tercera-columna-fija">
-         <!-------------------------BUSCADOR------------------>
-                  <div class="controls">
-                     <form  method = "GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}"> {% csrf_token %}
-                            <div id="custom-search-input">
-	                            <input type="text"  name="q" value="{{ request.GET.q }}" class="sin-borde" placeholder="  Buscar...." >
-                                <button type="submit" name="submit" class="boton btn-succes" value="Search">
-                                <span class="icon"><i class="fa fa-search"></i></span>   
-                                </button>
-                                        
-                             </div>
-                    </form>
-	     	    </div>
-        <!------------------FINAL BUSCADOR--------------------------->
+     
       
          <div class="tercera-columna">
                      <h2> todo sobre gastronomia internacional..</h2>

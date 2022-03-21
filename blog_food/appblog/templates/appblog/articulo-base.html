@@ -197,6 +197,7 @@
         rel="stylesheet">
    
         </head>
+                  
 
 
 
@@ -213,7 +214,29 @@
                 </div>
                 <!------- final caja logo------->
 
-                             
+
+
+                <!----BUSCADO----------------------------------->
+                
+                 <div class="controls">
+                 <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
+
+                  <div id="custom-search-input">
+	                <input type="text"  class="sin-borde" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar...." >
+                  <button type="submit" name="submit" class="boton btn-succes" value="Search"> 
+                  <span class="icon"><i class="fa fa-search"></i></span>   
+                  </button>
+                 </div>
+
+                 </form>
+	               </div>
+                <!------------------------------------------------->
+
+
+
+
+
+
                 <!-- BOTON HAMBURGUESA SIN FONTAWESOME Y SE COVIERTE EN ASPA-->
                          <!------  caja boletin--------------------------->
                      <div class="suscribe">
@@ -223,15 +246,16 @@
                     </div>
                 <!---------- final caja boletin------------------->
 
-                 <div class="menu-btn"> 
-                   
-                     <!---------------MENU RESPONSIVE -------------->
-                     <div class="hamburguesa">
-                     <div class="menu-btn__burger">  </div>
+                      <!----------------------------->
+                      <div class="menu-btn"> 
+                      <!--------------------------->
+                      <div class="hamburguesa">
+                      <div class="menu-btn__burger">  
+                      </div>
+                      </div>
+                     <!-------------------------->        
                      </div>
-                        <!----FIN  MENU RESPONSIVE ------->        
-                   </div>
-                <!-- final caja MENU ASPA--------------------------------------------------------->
+                   <!-- final caja MENU ASPA-------->
     </div> 
         <!-- FINAL CABECERA ----------------------------------------------------------->
 
@@ -520,22 +544,7 @@
      {% block tercera-columna %}
     <div class="tercera-columna-fija">
          
-                  <!------------CAJA BUSCADOR--------CONTROLS---------->
-                  <div class="controls">
-                  <!---FORMULARIO-------->
-                     <form  method = "GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}"> {% csrf_token %}
-                            <!--CONTAINER DEL INPUT TYPE Y BUTTON TYPE------------>
-                            <div id="custom-search-input">
-	                            <input type="text"  name="q" value="{{ request.GET.q }}" class="form-control" placeholder="Buscar...." >
-                                <button type="submit" name="submit" class="boton btn-succes" value="Search">
-                                <span class="icon"><i class="fa fa-search"></i></span>   
-                                </button>             
-                             </div>
-                             <!--FIN CONTAINER DEL INPUT TYPE Y BUTTON TYPE------------>
-                    </form>
-                    <!---FIN FORMULARIO----->
-	     	    </div>
-              <!----FIN CAJA CONTRLS BUSCADOR--------------------------->
+                
               <!--CONTAINER DENTRO DE LA TERCERA COLUMNA QUE CONTIENE IMAGENES----->
               <div class="tercera-columna">
                  <em><h1> </h1></em>

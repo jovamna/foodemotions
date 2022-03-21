@@ -18,8 +18,8 @@
                           <!--MENU------------------------------------------------------------->
                           <div class="menu">
                              
-                           <!--fin del menu scrolling--->
-                           <div class="menu-scrolling">
+                        <!--fin del menu scrolling--->
+                        <div class="menu-scrolling">
                           <ul>
                           <li>
                           <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
@@ -120,74 +120,156 @@
       
                         
           
-         <!--------------- FIN CAJA DE NAVEGACION DE LAS SUBCATEGORIA-PERDER------------------->
-
-
-
-            
-    <!---100%------------------------------------------->
-    <div class="container-posts-categorias">   
-            <!------------columna de 100%----------------------->
-            <div id = "posts-categorias-aside">
-
-
-                     <!---DIV DE 4 POST DE POSTS dentro de posts-cetagoria poner 70%--->  
-
+         <!---------------CATEGORIA VERSION MOVIL Y IPAD------------------>
+      {% block categoria-receta-responsive %}     
      
+    <!-----------------------------------------------A----->
+         <div class="categoria-receta-responsive">
+          
+               <!---------------------------------------B------>
+               <div class="categoria-columna-responsive">   
+                      {% for receta in recetas %}
 
-                     <div class=" post-cuatro-categorias">
+                     <!-----------------ROW---------------------C----->
+                       <div id="categoria-imagen-descripcion-responsive">
+                                   <!---------------------------> 
+                                 <div class="cat-recet-respon-img">
+                                 {% if receta.image %}
+                                  <img src ="{{receta.image.url}}">
+                                  {% endif %}
+                                  </div>
+                                  <!------------------------------->
 
+                                  <!-------------------------------->
+                                  <div class="cat-recet-respon-descrip">
+                                  <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                                  <h1>{{receta.title}}</h1>  
+                                  </a>  
+                                  <p>{{receta.description|truncatewords_html:8|safe}} </p> 
+                                  <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                                  <em><p>Leer mas  ...</p></em>
+                                  </a>                      
+                                  <p class="a" >Por: <span class="o"> {{ receta.author }}</span></p> 
+                                  </div>
+                                  <!------------------------------------>
+
+                       </div>
+                        {% endfor %}      
+                       <!--------------------------------------C-----> 
+                       </div>
+                       <!---------------------------------------B----->
                   
-                         <div class="elemento-categoria">   
-
-
-                             {% for receta in recetas %}
-                              <!--  IMAGEN DEL POSTPERDER---->
-                              <div id="imagen-elemento-categoria"> 
-                              {% if receta.image %}
-                              <img src ="{{receta.image.url}}">
-                              {% endif %}
-
-
-                              <!--  DESCRIPCION RECETAS----------------->
-                              <div class ="imagen-descripcion">
-                              <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
-                              <h1>{{receta.title}}</h1>  </a>  
-                              <p>{{receta.description|truncatechars_html:70|safe}} </p> 
-                              <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
-                              <em><p>Leer mas  ...</p></em>
-                              </a>                      
-                              <p class="a" >Por: <span class="o"> {{ receta.author }}</span></p> 
-                             </div>
-                             <!--------------------------------------------------->
-                             </div>
-                             <!--25%  FIN IMAGEN ELEMENTO CATEGORIA ------------------------>         
-                        <!----------CIERRA EL POST ---------->  
-                              
-    {% empty %}
-               <p>No hay posts</p>
-               {% endfor %}  
-</div>
-             
-              <!---------------FIN ELEMENTO CATEGORIA----------------------->
-            
-
-
- 
-           </div> 
-           <!--FINAL  POST 4 CATEGORIAS----------------->
-    
-
-
-
+         </div>
        
-               <!---75% FIN POSTS CATEGORIAS --->   
+         <!----FLOAT LEFT--------80%-----------RESPONSIVE----------------------------------A---->
+             {% endblock categoria-receta-responsive %}   
+
+
+
+         <!--------------------VERSION PC--------------------------------------------------------------------------------->
+            
+    <!---100%---------------------------------------2---->
+    <div class="container-posts-categorias">   
+            <!---------ROW---columna de 100%-------------------1---->
+            <div id = "posts-categorias-aside">
+  
+            <!----FLOAT LEFT--------80%---------------------------------------------A---->
+            <div class="categoria-recetas-posts">
+                
+                  <!---ROW-------------------------------------------B--->  
+                  <div class="post-cuatro-categorias">
+
+                     {% for receta in recetas %}
+                     <!---------------------------------------C------>
+                     <div class="elemento-categoria">   
+             
+
+
+                              <!----------------------------------D--->
+                              <div id="imagen-elemento-categoria"> 
+                                  {% if receta.image %}
+                                  <img src ="{{receta.image.url}}">
+                                  {% endif %}
+                                  <!-------------------------->
+
+                                  <!--  DESCRIPCION RECETAS-------------E---->
+                                  <div class ="imagen-descripcion">
+                                  <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                                  <h1>{{receta.title}}</h1>  
+                                  </a>  
+                                  <p>{{receta.description|truncatewords_html:8|safe}} </p> 
+                                  <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                                  <em><p>Leer mas  ...</p></em>
+                                  </a>                      
+                                  <p class="a" >Por: <span class="o"> {{ receta.author }}</span></p> 
+                                  </div>
+                                  <!----------------------------------------------E----->
+                             </div>                  
+                             <!--25%  FIN IMAGEN ELEMENTO CATEGORIA --------------------D---->         
+                         
+                                    
+                            
+                   </div>
+                 <!---------------FIN ELEMENTO CATEGORIA------------------------------------C--------->
+                  {% if forloop.counter|divisibleby:"3" %}
+       
+            </div> 
+            <!--FIN---ROW---POST 4 CATEGORIAS-------------------------------ROW----------------------B---->
+
+                   <!----SE REPITE EL CICLO ROW-------------------------------------->
+                    <div class="post-cuatro-categorias">
+                     {% if forloop.last or forloop.counter|divisibleby:"3" %}
+                    {% endif %}
+                    {% endif %}
+                    {% empty %}
+                    <p>No hay posts</p>
+                   {% endfor %}   
+                   </div>
+                  <!---CICLO ROW DE 3 POSTS-------------------------->
+
+
+
+
+              <!-------------------------------------------------------------->
+                     
+      
+  
+
+
+
+
+
+              <!-------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               </div>
+               <!------------------------------------------------------------A----------------->
+                  <!---75% FIN POSTS CATEGORIAS --->   
                   <div id="aside">  </div>
-                <!---FINAL ENDFOR DE 4 POST IN POSTS--->
-                 </div>
-                      </div>
-           <!---100%-FIN CONTAINER GENERAL DE LOS POSTS--------------------------->
-                 <!-----FINAL POST-CATEGORIAS-ASIDE----------------->
+              </div>
+            <!-----FINAL POST-CATEGORIAS-ASIDE--------------------------1--------->
+         </div>
+         <!---100%-FIN CONTAINER GENERAL DE LOS POSTS-----------------2---------->
+               
 
           
 
@@ -202,9 +284,7 @@
  
 
 
-
-
-
+      
 
 
 

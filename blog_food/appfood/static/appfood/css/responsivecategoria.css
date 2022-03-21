@@ -718,37 +718,34 @@
      }
 
 
-
       /*border-bottom: 2px solid #DDD;*/
       header{
-        display: block;
-        width:100%;
-        height: 59px;
-        top:0;
-        left: 0;
-        position: fixed;
-        z-index: 2000;   /*IMPORTANTE  */
-        margin: auto;
-        background-color: #fff;
-        box-shadow: 0 8px 6px -6px #c6c6c6;
+      display: block;
+      width:100%;
+      height: 58px;
+      top:0;
+      left: 0;
+      position: fixed;
+      z-index: 2000;   /*IMPORTANTE  */
+      margin: auto;
+      background-color: #fff;
+      box-shadow: 0 8px 6px -6px #c6c6c6;
      }
   
+
      header.black{
       background-color:#fff ;
-      height:  59px;
+      height:  58px;
      }
     
-  
-  
    
       #cabecera-categorias{
-        width: 100%;
+      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      height: 38px;
+      height: 30px;
       margin: auto;
- 
            }
 
     
@@ -758,83 +755,80 @@
       display: block;
       position: relative;
       float: left;
-      width: 30%;
-      max-width: 210px;
-      min-width: 180px;
-      height: 38px;
+      width: 20%;
+      max-width: 190px;
+      min-width: 170px;
+      height: 30px;
     }
        
+
     #cabecera-categorias .logo img {
         display: block;
       width: 100%;
-      max-width: 150px;
-      min-width: 150px;
-      height: 29px;
+      max-width: 140px;
+      min-width: 140px;
+      height: 30px;  /*DEBE SER DIFERENTE AL DE RECETAS Y ARTICULO*/
     }
 
 
- 
-  /*BOTON ICONO REVISTA Y SOCIALES*/
-  #cabecera-categorias  .suscribe{
+    /*BOTON ICONO REVISTA Y SOCIALES*/
+    #cabecera-categorias  .suscribe{
     display: block;
-    position: relative;
-    float: left;
-    width: 36%;
-    max-width: 190px;
-    min-width: 120px;
-    height: 38px;
-   }
+    width: 11%;
+    max-width: 135px;
+    min-width: 110px;
+    height: 30px;
+     }
  
  
      /*LETRA INSCRIBETE*/
-     #cabecera-categorias  .suscribe h4 {
+      #cabecera-categorias  .suscribe a h4 {
       font-size: 0.8rem;
-    margin-top: 10px;
-    font-weight: 700;
-    letter-spacing: 0.9px;
-    font-family: 'Times New Roman', Times, serif;
+      margin-top: 10px;
+      font-weight: 700;
+      letter-spacing: 0.9px;
       }
-
-  
-  
      
 
-   /*CONTENEDOR  REVISTA Y SOCIALES*/
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
     /*CONTAINER DE LA HAMBURGUESA*/
     #cabecera-categorias  .menu-btn {
-      display: block;
-      position: relative;
-      float: right;
-      width: 8%;
-      max-width: 37px;
-      min-width: 37px;
-      height: 38px;
+    display: block;
+    position: relative;
+    float: right;
+    width: 8%;
+    max-width: 37px;
+    min-width: 37px;
+    height: 30px;
       }
+
       
-      .hamburguesa{
-        display: block;
-        position: relative;
-        float: right;
-        width: 100%;
-        max-width: 37px;
-        min-width: 37px;
-        height: 38px;
+    .hamburguesa{
+    display: block;
+    position: relative;
+    float: right;
+    width: 100%;
+    max-width: 37px;
+    min-width: 37px;
+    height: 30px;
       }
 
 
     /*HAMBURGUESA*/
     .menu-btn .hamburguesa  .menu-btn__burger {
-    display: block;;
-    margin-top: 10px;
-    width: 100%;
-    max-width: 28px;
-    min-width: 28px;
-    height: 4px;
-    background: #2d2d2d;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(255,101,47,.2);
-    transition: all .5s ease-in-out;
-    z-index: 1000;
+      display: block;
+      position: relative;
+      float: right;
+      margin-top: 10.6px;
+      width: 100%;
+        max-width: 32px;
+        min-width: 32px;
+      height: 4px;
+      background: #2d2d2d;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px rgba(255,101,47,.2);
+      transition: all .5s ease-in-out;
+      z-index: 1000;
     }
    
      .menu-btn__burger::before,
@@ -842,14 +836,12 @@
       content: '';
       position: absolute;
       width: 100%;
-      max-width: 28px;
-      min-width: 28px;
+      max-width: 32px;
+      min-width: 32px;
       height: 4px;
-      background:#2d2d2d;
+      background: #2d2d2d;
       border-radius: 2px;
-      box-shadow: 0 2px 5px rgba(255,101,47,.2) ;
       transition: all .5s ease-in-out;
-      z-index: 800;   
       }
  
  
@@ -889,7 +881,7 @@
        #controls-responsive{
         display: block;
         visibility: visible;
-        width: 92%;
+        width: 90%;
         height: 35px;
         margin-top: 3px;  
         margin-bottom: 20px;
@@ -946,7 +938,7 @@
       }
 
 
-   header  nav .logo-esconder{
+      header  nav .logo-esconder{
       width: 90%;
       margin-left: 20px;
       visibility: visible;
@@ -1037,10 +1029,10 @@
 
     /*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
     #container-categorias-subcategorias{
-    width: 92%;
+    width: 90%;
     margin-bottom: 20px;
     margin-top: 10px;
-    margin-left: 15px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     }
@@ -1179,12 +1171,13 @@
 
     .introescrito .menu-intro-titulo  h1{
      width: 95%;
-     font-size: 1.6rem;
+     font-size: 1.5em;
+     font-weight: 800;
      margin: auto;
     }
 
    .introescrito .menu-intro-titulo  a h1{
-    font-size: 1.6rem;
+    font-size: 1.5em;
     width: 95%;
     }
    /*..........................*/
@@ -1206,7 +1199,7 @@
     /*....CONTAINER DONDE ESTAN LAS SUBCATEGORIAS PERO DE PALABRAS SIN IMAGENES...........*/
     #texto-slider{
     display: block;
-    width: 92%;
+    width: 90%;
     margin-left: 12px;
      }
 
@@ -1237,7 +1230,7 @@
   
     /*....CONTAINER GENERAL DECCATEGORIAS DE RECETAS..DIETAS PLAN ETC.............*/
     .container-posts-categorias{
-     width: 92%;
+     width: 90%;
      display: flex;
      flex-direction: column;
      margin: 0 auto;
@@ -1320,91 +1313,130 @@
 
 
     /*CONTAINER EXCLUSIVO DE  RECETAS Y EL ASIDE VA EN 100 PERO AQUI SERA EN COLUMN*/
-  
-     /*...COLUMNA DE LAS RECETAS */
-     .container-posts-categorias  #posts-categorias-aside .post-cuatro-categorias{
-     width: 100%;
-     display: flex;
-     flex-direction: column;   
-     }
-
-
-   
-    /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
-    .post-cuatro-categorias .elemento-categoria{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 2px;
-    margin-bottom: 10px;
+    .categoria-recetas-posts{
+      display: none;
+      visibility: hidden;
     }
 
-
-    /*EN ROW DIVIDE IMAGEN Y DESCRIPCION DE LAS RECETAS*/
-   .elemento-categoria #imagen-elemento-categoria{
-    width: 100%;
-    max-width: 600px;
-     height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    border-top: 2px solid #DCDCDC;
-    }
-
-
-    #imagen-elemento-categoria img{
-    width: 42%;
+    /*CONTAINER SOLO PARA MOVIL Y IPAD*/
+  .categoria-receta-responsive{
     display: block;
+    visibility: visible;
     position: relative;
     float: left;
-    margin-right: 20px;
+    width: 90%;
+    margin: auto;
+    background-color: #DDD;
+    }
+   
+    .categoria-columna-responsive{
+     display: block;
+     position: relative;
+      width: 100%;
+    }
+
+    #categoria-imagen-descripcion-responsive{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-radius: 8px;
+      break-inside: avoid-column;
+      overflow: hidden;
+      -moz-column-break-inside:avoid;
+      -webkit-column-break-inside:avoid;
+      -column-break-inside:avoid;
+      box-shadow: 0 1px 2px  rgba(34, 25, 25, 0.4);
+      background: #FEFEFE;
+      background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+      border: 2px solid #FAFAFA;
+      margin-bottom: 14px;
+    }
+ 
+
+    /*EN ROW DIVIDE IMAGEN Y DESCRIPCION DE LAS RECETAS*/
+    .cat-recet-respon-img{
+      width: 42%;
+      max-width: 240px;
+      display: block;
+      position: relative;
+      float: left;
+      margin-right: 12px;
+    }
+
+    .cat-recet-respon-img img{
+     width: 100%;
     }
 
    
-    #imagen-elemento-categoria .imagen-descripcion{
-    width: 50%;
-    max-width: 280px;
-    display: block;
-    position: relative;
-    float: right;
-     }
+    .cat-recet-respon-descrip{
+      width: 50%;
+      display: block;
+      position: relative;
+      float: right;
+    }
 
-
-
+  
        /* TITULO DEL POST*/
-      #imagen-elemento-categoria .imagen-descripcion h1{
-      font-size: 1.1rem;
-      margin-bottom: 5px;
+       #categoria-imagen-descripcion-responsive h1{
+      font-size: 1em;
       font-family: 'Times New Roman', 'sans serif';
       font-weight: bolder;
       color: #000000;
-      top: 0;
+      margin-top: 4px;
+      width: 50%;
+      display: block;
+      position: relative;
+      float: right;
+      width: 100%;
       }
 
-      #imagen-elemento-categoria .imagen-descripcion a h1{
-        font-size: 1.1rem;
-        margin-bottom: 5px;
+      #categoria-imagen-descripcion-responsive a h1{
+        font-size: 1em;
         font-family: 'Times New Roman', 'sans serif';
-        font-weight: bolder;
+        font-weight: 900;
         color: #000000;
         top: 0;
+        display: block;
+        position: relative;
+        float: right;
+        width: 100%;
         }
  
-        #imagen-elemento-categoria .imagen-descripcion p{
-          font-size: 0.8rem;
-          margin-bottom: 5px;
+        #categoria-imagen-descripcion-responsive p{
+          font-size: 0.9em;
           font-family: 'Times New Roman', 'sans serif';
           font-weight: lighter;
           color: #2d2d2d;
-          top: 0;
+          line-height: 22px;
+          display: block;
+          position: relative;
+          float: right;
+          width: 100%;
+         
           }
     
+
+    .cat-recet-respon-descrip .a{
+      font-weight: 800;
+      color: #2d2d2d;
+      font-size: 0.8em;
+          }
+
+    .cat-recet-respon-descrip  .o{
+    font-weight: 800;
+    color: black;
+    font-size: 0.8em;
+          }
+
+
+
      /* ...PAGINACION ...................................*/
    .paginacion{
     width:100%;
     display: block;
     padding-top: 1px;
+    margin-top: 5px;
     }
  
     /*..UL...*/
@@ -1449,7 +1481,7 @@
     /*..CARRUSELL.............................*/
     .container-total-carrusell{
     display: block;
-    margin-top: 40px;
+    margin-top: 15px;
       }
 
     /*ANCHO IMPORTANTE PARA HACER CRECER EL CARRUSEL */
@@ -1507,7 +1539,6 @@
       width: 100%;
       max-width: 360px;
       border: 2px solid #DDD ;
-     
       border-radius:6px;
    
       }
@@ -2299,9 +2330,9 @@
     background-color: #7aac41;
     }
 
-    .scrollmenu::-webkit-scrollbar {
+     .scrollmenu::-webkit-scrollbar {
       display: none;
-    }
+     }
 
 
 
@@ -2309,11 +2340,13 @@
       #texto-slider .leftNav{
       display: none;
       visibility: hidden;
-    }
-    #texto-slider .rightNav{
+     }
+
+
+      #texto-slider .rightNav{
       display: none;
       visibility: hidden;
-    }
+     }
   
   
     /*...................*/
@@ -2333,7 +2366,6 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-   
     }
 
     .por-foto{
@@ -2395,72 +2427,122 @@
      }
 
 
-      /*CONTAINER QUE DIVIDE LOS POST DE RECTAS Y EL ASIDE VA EN 100 PERO AQUI SERA EN COLUMN*/
-      #posts-categorias-aside{
-      display: flex;
-      flex-direction: column ;
-      width: 100%;
-     }
-    
-     /*LA COLUMNA DE LOS PSTS*/
-     .post-cuatro-categorias{
-     width: 100%;
-     display: flex;
-     flex-direction: column;   
-     }
-
-
-   
-    /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
-    .container-posts-categorias #posts-categorias-aside  .post-cuatro-categorias  .elemento-categoria{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 2px;
-    margin-bottom: 10px;
+       /*CONTAINER EXCLUSIVO DE  RECETAS Y EL ASIDE VA EN 100 PERO AQUI SERA EN COLUMN*/
+    .categoria-recetas-posts{
+      display: none;
+      visibility: hidden;
     }
 
-
-    /*CONTIENE SOLO LA IMAGEN y DENTRO EL DIV DESCRIPCION*/
-   .post-cuatro-categorias .elemento-categoria #imagen-elemento-categoria{
-    width: 100%;
-    max-width: 700px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-    margin-bottom: 10px;
-    border-top: 2px solid #DCDCDC;
-    }
-
-
-    .elemento-categoria #imagen-elemento-categoria img{
-    width: 50%;
+    /*CONTAINER SOLO PARA MOVIL Y IPAD*/
+  .categoria-receta-responsive{
     display: block;
+    visibility: visible;
     position: relative;
     float: left;
-    margin-right: 15px;
+    width: 90%;
+    margin: auto;
+    background-color: #DDD;
+    }
+   
+    .categoria-columna-responsive{
+     display: block;
+     position: relative;
+      width: 100%;
+    }
+
+    #categoria-imagen-descripcion-responsive{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-radius: 8px;
+      break-inside: avoid-column;
+      overflow: hidden;
+      -moz-column-break-inside:avoid;
+      -webkit-column-break-inside:avoid;
+      -column-break-inside:avoid;
+      box-shadow: 0 1px 2px  rgba(34, 25, 25, 0.4);
+      background: #FEFEFE;
+      background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+      border: 2px solid #FAFAFA;
+      margin-bottom: 14px;
+    }
+ 
+
+    /*EN ROW DIVIDE IMAGEN Y DESCRIPCION DE LAS RECETAS*/
+    .cat-recet-respon-img{
+      width: 42%;
+      max-width: 240px;
+      display: block;
+      position: relative;
+      float: left;
+      margin-right: 12px;
+    }
+
+    .cat-recet-respon-img img{
+     width: 100%;
     }
 
    
-    #imagen-elemento-categoria .imagen-descripcion{
-    width: 40%;
-    display: block;
-    position: relative;
-    float: right;
-     }
+    .cat-recet-respon-descrip{
+      width: 50%;
+      display: block;
+      position: relative;
+      float: right;
+    }
 
-
-
+  
        /* TITULO DEL POST*/
-      #imagen-elemento-categoria .imagen-descripcion h2{
-      font-size: 1.3rem;
-      margin-bottom: 5px;
+       #categoria-imagen-descripcion-responsive h1{
+      font-size: 1em;
       font-family: 'Times New Roman', 'sans serif';
       font-weight: bolder;
       color: #000000;
-      top: 0;
+      margin-top: 4px;
+      width: 50%;
+      display: block;
+      position: relative;
+      float: right;
+      width: 100%;
       }
 
+      #categoria-imagen-descripcion-responsive a h1{
+        font-size: 1em;
+        font-family: 'Times New Roman', 'sans serif';
+        font-weight: 900;
+        color: #000000;
+        top: 0;
+        display: block;
+        position: relative;
+        float: right;
+        width: 100%;
+        }
+ 
+        #categoria-imagen-descripcion-responsive p{
+          font-size: 0.9em;
+          font-family: 'Times New Roman', 'sans serif';
+          font-weight: lighter;
+          color: #2d2d2d;
+          line-height: 22px;
+          display: block;
+          position: relative;
+          float: right;
+          width: 100%;
+         
+          }
+    
+
+    .cat-recet-respon-descrip .a{
+      font-weight: 800;
+      color: #2d2d2d;
+      font-size: 0.8em;
+          }
+
+    .cat-recet-respon-descrip  .o{
+    font-weight: 800;
+    color: black;
+    font-size: 0.8em;
+          }
 
 
  
@@ -2701,7 +2783,7 @@ font-size: 0.8rem;
 
 
   #wrapper-categorias > * {
-  padding:20px;
+    padding:35px;
   }
   
   div {
@@ -2722,7 +2804,7 @@ font-size: 0.8rem;
       header{
         display: block;
         width:100%;
-        height: 59px;
+        height: 65px;
         top:0;
         left: 0;
         position: fixed;
@@ -2734,19 +2816,18 @@ font-size: 0.8rem;
   
      header.black{
       background-color:#fff ;
-      height:  59px;
+      height:  65px;
      }
     
   
-  
-   
       #cabecera-categorias{
         width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      height: 38px;
+      height: 30px;
       margin: auto;
+      margin-top: -5px;
            }
 
     
@@ -2759,7 +2840,7 @@ font-size: 0.8rem;
       width: 28%;
       max-width: 280px;
       min-width: 220px;
-      height: 38px;
+      height: 30px;
     }
        
     #cabecera-categorias .logo img {
@@ -2767,7 +2848,7 @@ font-size: 0.8rem;
       width: 100%;
       max-width: 160px;
       min-width: 160px;
-      height: 31px;
+      height: 33px;
     }
 
 
@@ -2780,14 +2861,14 @@ font-size: 0.8rem;
     width: 20%;
     max-width: 190px;
     min-width: 150px;
-    height: 38px;
+    height: 30px;
    }
  
  
      /*LETRA INSCRIBETE*/
-     #cabecera-categorias  .suscribe h4 {
-      font-size: 0.7rem;
-    margin-top: 10px;
+     #cabecera-categorias  .suscribe a h4 {
+      font-size: 0.8em;
+    margin-top: 16px;
     font-weight: 700;
     letter-spacing: 0.9px;
     font-family: Arial, Helvetica, sans-serif;
@@ -2806,7 +2887,7 @@ font-size: 0.8rem;
       width:  8%;
       max-width: 40px;
       min-width: 40px;
-      height: 38px;
+      height: 30px;
       }
       
      .menu-btn  .hamburguesa{
@@ -2814,7 +2895,7 @@ font-size: 0.8rem;
         position: relative;
         float: right;
         width: 100%;
-        height: 38px;
+        height: 30px;
       }
 
 
@@ -2823,7 +2904,7 @@ font-size: 0.8rem;
     display: block;
     position: relative;
     float: right;
-    margin-top: 10px;
+    margin-top: 16px;
     width: 100%;
     max-width: 34px;
     min-width: 34px;
@@ -2888,15 +2969,15 @@ font-size: 0.8rem;
         display: block;
         visibility: visible;
         width: 99.98%;
-        height: 44px;
+        height: 50px;
         margin-top: -31px;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
          }
     
     
          #custom-search-input-responsive{
          width: 100%;
-         height: 39px;
+         height: 45px;
          border: 1px solid#c9c9c9;
          border-radius: 6px;
          display: flex;
@@ -2907,7 +2988,7 @@ font-size: 0.8rem;
     
          #controls-responsive .sin-borde-responsive{
          width: 91%;
-         height: 33px;
+         height: 41px;
        display: block;
        position: relative;
        float: left;
@@ -2919,7 +3000,7 @@ font-size: 0.8rem;
            position: relative;
            float: right;
          width: 9%;
-         height: 33px;
+         height: 41px;
          background-color: #ffffff;
           }
           
@@ -3038,6 +3119,7 @@ font-size: 0.8rem;
         height: 0px;
         width: 0px;
       }
+
       nav .suscriptor .estilo-logo:hover:after {
          display: none;
          visibility: hidden;
@@ -3108,14 +3190,13 @@ font-size: 0.8rem;
       }
  
  
-      .intro .menu-introescrito .menu {
-       width: 100%;
-      height: 60px;
+    .intro .menu-introescrito .menu {
+    width: 100%;
+    height: 60px;
      }
  
      .intro .menu-introescrito .menu  .menu-scrolling{
-       width: 100%;
-   
+    width: 100%;
      }
  
  
@@ -3125,44 +3206,45 @@ font-size: 0.8rem;
       }
     
  
-        /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
-        .intro .menu-introescrito .menu .menu-scrolling ul ul {
-         display:none;
-         position:absolute;
-         background-color: #fff;
-         top:  202px;
-         z-index: 1000;
+    /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
+    .intro .menu-introescrito .menu .menu-scrolling ul ul {
+    display:none;
+    position:absolute;
+    background-color: #fff;
+    top:  202px;
+    z-index: 1000;
             }
      
-            .intro .menu-introescrito   .menu .menu-scrolling ul ul li{
-              display: block;
-              height: 28px;
-              border-bottom: 1px solid #2d2d2d;
-            }
+
+      .intro .menu-introescrito   .menu .menu-scrolling ul ul li{
+      display: block;
+      height: 28px;
+      border-bottom: 1px solid #2d2d2d;
+      }
      
-            .intro .menu-introescrito .menu .menu-scrolling  ul li ul li a{
-              height: 20px;
-              padding-top: 1px;
-              font-size: 1rem;
-              color: #2d2d2d;
-              text-transform: lowercase;
-            }
+      .intro .menu-introescrito .menu .menu-scrolling  ul li ul li a{
+      height: 20px;
+      padding-top: 1px;
+      font-size: 1rem;
+      color: #2d2d2d;
+      text-transform: lowercase;
+      }
      
      
-         /* items del menu desplegable al pasar el ratón */
-         .intro .menu-introescrito .menu .menu-scrolling  ul li:hover > ul {
-          display:block;
-          width:  46%;  /*IMPORTANTE*/
-          left:  240px;
-         }
+    /* items del menu desplegable al pasar el ratón */
+    .intro .menu-introescrito .menu .menu-scrolling  ul li:hover > ul {
+    display:block;
+    width:  46%;  /*IMPORTANTE*/
+    left:  240px;
+    }
      
      
  
-      /*..CAJA DE MENU-INTRO-TITULO..*/
-      #container-categorias-subcategorias .intro .menu-introescrito .introescrito{
+    /*..CAJA DE MENU-INTRO-TITULO..*/
+    #container-categorias-subcategorias .intro .menu-introescrito .introescrito{
     display: block;
     width: 100%;
-     height: 110px;
+    height: 110px;
      }
      
 
@@ -3228,10 +3310,10 @@ font-size: 0.8rem;
   
     /*...................*/
    .container-posts-categorias{
-     width: 92%;
+     width: 100%;
      display: flex;
      flex-direction: column;
-     margin: 0 auto;
+     margin: auto;
      margin-bottom: 80px;
     }
 
@@ -3305,73 +3387,127 @@ font-size: 0.8rem;
      }
 
 
-      /*CONTAINER QUE DIVIDE LOS POST DE RECTAS Y EL ASIDE VA EN 100 PERO AQUI SERA EN COLUMN*/
-      #posts-categorias-aside{
-      display: flex;
-      flex-direction: column ;
-      width: 100%;
-     }
-    
-     /*LA COLUMNA DE LOS PSTS*/
-     .post-cuatro-categorias{
-     width: 100%;
-     display: flex;
-     flex-direction: column;   
-     }
-
-
-   
-    /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
-    .elemento-categoria{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 2px;
-    margin-bottom: 10px;
+        /*CONTAINER EXCLUSIVO DE  RECETAS Y EL ASIDE VA EN 100 PERO AQUI SERA EN COLUMN*/
+    .categoria-recetas-posts{
+      display: none;
+      visibility: hidden;
     }
 
-
-    /*CONTIENE SOLO LA IMAGEN y DENTRO EL DIV DESCRIPCION*/
-   .elemento-categoria #imagen-elemento-categoria{
-    width: 100%;
-    max-width: 600px;
-     height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    border-top: 2px solid #DCDCDC;
-    }
-
-
-    #imagen-elemento-categoria img{
-    width: 38%;
+    /*CONTAINER SOLO PARA MOVIL Y IPAD*/
+  .categoria-receta-responsive{
     display: block;
+    visibility: visible;
     position: relative;
     float: left;
-    margin-right: 20px;
+    width: 99%;
+    margin: auto;
+    background-color: #DDD;
+    }
+   
+    .categoria-columna-responsive{
+     display: block;
+     position: relative;
+      width: 100%;
+    }
+
+    #categoria-imagen-descripcion-responsive{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-radius: 8px;
+      break-inside: avoid-column;
+      overflow: hidden;
+      -moz-column-break-inside:avoid;
+      -webkit-column-break-inside:avoid;
+      -column-break-inside:avoid;
+      box-shadow: 0 1px 2px  rgba(34, 25, 25, 0.4);
+      background: #FEFEFE;
+      background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+      border: 2px solid #FAFAFA;
+      margin-bottom: 14px;
+    }
+ 
+
+    /*EN ROW DIVIDE IMAGEN Y DESCRIPCION DE LAS RECETAS*/
+    .cat-recet-respon-img{
+      width: 42%;
+      max-width: 240px;
+      display: block;
+      position: relative;
+      float: left;
+      margin-right: 12px;
+    }
+
+    .cat-recet-respon-img img{
+     width: 100%;
     }
 
    
-    #imagen-elemento-categoria .imagen-descripcion{
-    width: 52%;
-    max-width: 300px;
-    display: block;
-    position: relative;
-    float: right;
-     }
+    .cat-recet-respon-descrip{
+      width: 50%;
+      display: block;
+      position: relative;
+      float: right;
+    }
 
-
-
+  
        /* TITULO DEL POST*/
-      #imagen-elemento-categoria .imagen-descripcion h2{
-      font-size: 1.3rem;
-      margin-bottom: 5px;
+       #categoria-imagen-descripcion-responsive h1{
+      font-size: 1em;
       font-family: 'Times New Roman', 'sans serif';
       font-weight: bolder;
       color: #000000;
-      top: 0;
+      margin-top: 4px;
+      width: 50%;
+      display: block;
+      position: relative;
+      float: right;
+      width: 100%;
       }
+
+      #categoria-imagen-descripcion-responsive a h1{
+        font-size: 1em;
+        font-family: 'Times New Roman', 'sans serif';
+        font-weight: 900;
+        color: #000000;
+        top: 0;
+        display: block;
+        position: relative;
+        float: right;
+        width: 100%;
+        }
+ 
+        #categoria-imagen-descripcion-responsive p{
+          font-size: 0.9em;
+          font-family: 'Times New Roman', 'sans serif';
+          font-weight: lighter;
+          color: #2d2d2d;
+          line-height: 22px;
+          display: block;
+          position: relative;
+          float: right;
+          width: 100%;
+         
+          }
+    
+
+    .cat-recet-respon-descrip .a{
+      font-weight: 800;
+      color: #2d2d2d;
+      font-size: 0.8em;
+          }
+
+    .cat-recet-respon-descrip  .o{
+    font-weight: 800;
+    color: black;
+    font-size: 0.8em;
+          }
+
+
+
+
+
      /*CARRUSELL*/
    /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
    #carrusel {
@@ -3405,7 +3541,8 @@ height: 230px;
 margin-right:  0.4%;   /*ESPACIO */
 text-align:center;
 }
-/*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+
+ /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
  .carrusel img {
  cursor:pointer;
  width: 100%;
@@ -3693,7 +3830,7 @@ font-family: 'Archivo Black', sans-serif;
   }
       
   #wrapper-categorias > * {
-  padding:20px;
+  padding:30px;
   }
   
    div {
@@ -3716,23 +3853,32 @@ font-family: 'Archivo Black', sans-serif;
       z-index: 999;
       position: fixed;
       margin: auto;
-      height:   64px;
+      height:   70px;
       box-shadow: 0 8px 6px -6px #c9c9c9;
        }
   
       /*HEADER LLAMADO CATEGORIA*/
       header.black{
       width: 100%;
-      height: 64px;
+      height: 70px;
       background-color:#fff ;
       }
     
+     
+       /*BUSCADR EN CABECERA */
+       #cabecera-categorias .controls{
+        display: none;
+        visibility: hidden;
+        }
+
+
+
       #cabecera-categorias{
         width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      height: 36px;
+      height: 30px;
            }
 
     
@@ -3745,7 +3891,7 @@ font-family: 'Archivo Black', sans-serif;
       width: 24%;
       max-width: 200px;
       min-width: 160px;
-      height: 36px;
+      height: 30px;
     }
        
     #cabecera-categorias .logo img {
@@ -3753,98 +3899,10 @@ font-family: 'Archivo Black', sans-serif;
       width: 100%;
       max-width: 160px;
       min-width: 160px;
-      height: 31px;
+      height: 32px;
     }
 
   /* BUSCADOR INTERNO RESPONSIVE*/
-  #controls-responsive{
-    display: none;
-  }
-
-
-     /*CONTAINER DEL BUSCADOR................. */
-     #cabecera-categorias .controls{
-      display: block;
-      position: relative;
-      float: left;
-      width: 35%;
-      max-width: 350px;
-      min-width: 320px;
-      height: 36px;  
-      }
-
-
-      .controls form{
-        width: 100%;
-        max-width: 390px;
-        height: 32px;
-      }
-
-
-/*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
-#cabecera-categorias .controls #custom-search-input{
-  width: 95%;
-height: 32px;
-display: flex;
-flex-direction: row;
-border-radius: 0px;
--moz-border-radius: 0px;
--webkit-border-radius: 0px;
-box-sizing: border-box;
--moz-box-sizing: border-box;
-margin-top: 0.5px;
-box-shadow: 4px 8px 6px -6px #8c8c8c;
-background: #FEFEFE;
-background-image: linear-gradient(45deg, #FFF, #F9F9F9);
-border: 1.5px solid #FAFAFA;
- }
-
- .controls  #custom-search-input input[type=text]:focus {
-  outline: none;
-  border: 0;
-  background-color: #fff;
-  padding-left: 8px; /*MUEVE LA LETRA*/
-   }
-
-
-
-/*CAMPO SEARCH BUSCADOR */
-#cabecera-categorias .controls  #custom-search-input .sin-borde{
-border: 0px solid #fff;
--moz-border: 0px  solid #fff;
--webkit-border: 0px solid #fff;
-width: 92%;
-height: 30px;
-padding-left: 8px; /*MUEVE LA LETRA*/
-background-color: #f8f8f8;
-}
-
-
-input::placeholder {
-  width: 250px;
-  font-size: 1rem;
-  color: #2d2d2d;
-  }
-
-
-  /*BOTOM BUSCADOR */
-   .controls  #custom-search-input .boton{
-  border-right: 4px;
-  -moz-border-right: 2px;
-  -webkit-border-right: 2px;
-   padding-left:2px; /*MUEVE LA LETRA*/
-   width: 8%;
-   max-width: 55px;
-   height: 30px;
-  background-color: #fff;
-   }
-
-  .controls .icon .fa-search{
-  color: #000000;
-  }
-
-
-
  
   /*BOTON ICONO REVISTA Y SOCIALES*/
   #cabecera-categorias  .suscribe{
@@ -3854,22 +3912,18 @@ input::placeholder {
     width: 10%;
     max-width: 120px;
     min-width: 100px;
-    height: 36px;
+    height: 30px;
    }
  
  
      /*LETRA INSCRIBETE*/
-     #cabecera-categorias  .suscribe h4 {
-      font-size: 0.8rem;
-    margin-top:  20px;
+     #cabecera-categorias  .suscribe a h4 {
+      font-size: 0.9em;
+    margin-top:  14px;
     font-weight: 700;
-    letter-spacing: 0.9px;
-    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.5px;
       }
 
-  
-  
-     
 
    /*CONTENEDOR  REVISTA Y SOCIALES*/
     /*CONTAINER DE LA HAMBURGUESA*/
@@ -3883,14 +3937,17 @@ input::placeholder {
       width:  8%;
       max-width: 38px;
       min-width: 38px;
-      height: 36px;
+      height: 29px;
       }
  
       .menu-btn .hamburguesa{
         display: block;
+        position: relative;
+        float: right;
         width: 100%;
         max-width: 38px;
         min-width: 38px;
+        height: 29px;
       }
 
 
@@ -3921,7 +3978,7 @@ input::placeholder {
    /*NAV DE SURFACE PRO 7 AQUI EMPIEZA EN LI MOVIL...*/
    /*NAV*/
     nav  .nav li a {
-      font-size: 1rem;
+      font-size: 1em;
     }
 
     nav .nav{
@@ -3946,6 +4003,51 @@ input::placeholder {
       }
 
    /*FIN NAV*/
+      
+  
+       /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
+       #controls-responsive{
+        display: block;
+        visibility: visible;
+        width: 99.98%;
+        height: 55px;
+        margin-top: -31px;
+        margin-bottom: 40px;
+         }
+    
+    
+         #custom-search-input-responsive{
+         width: 100%;
+         height: 45px;
+         border: 1px solid#c9c9c9;
+         border-radius: 6px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         }
+    
+    
+         #controls-responsive .sin-borde-responsive{
+         width: 91%;
+         height: 40px;
+       display: block;
+       position: relative;
+       float: left;
+        }
+    
+    
+         #controls-responsive .boton-responsive{
+           display: block;
+           position: relative;
+           float: right;
+         width: 9%;
+         height: 40px;
+         background-color: #ffffff;
+          }
+          
+
+
+
 
    #container-categorias-subcategorias{
     display: block;
@@ -3971,8 +4073,9 @@ input::placeholder {
     }
 
        /*..   font-family: 'Archivo Black', sans-serif;...*/
-       .menu-intro-titulo h2{
-        font-size: 2.5rem;
+       .menu-intro-titulo h1{
+        font-size: 2.3rem;
+        font-weight: 800;
         font-family: 'Times New Roman', Times, serif;
       }
  
@@ -4028,10 +4131,9 @@ input::placeholder {
 
      /*..CAJA DE MENU-INTRO-TITULO..*/
      #container-categorias-subcategorias .intro .menu-introescrito .introescrito{
-   display: block;
+     display: block;
    width: 100%;
     height: 80px;
-
     }
     
 
@@ -4094,67 +4196,125 @@ input::placeholder {
    
 
 
-   #posts-categorias-aside  .post-cuatro-categorias{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-    }
+   /*CONTAINER EXCLUSIVO DE  RECETAS Y EL ASIDE VA EN 100 PERO AQUI SERA EN COLUMN*/
+   .categoria-recetas-posts{
+    display: none;
+    visibility: hidden;
+  }
 
-           /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
-   .elemento-categoria{
-    display: flex;
-    flex-direction: column;
+  /*CONTAINER SOLO PARA MOVIL Y IPAD*/
+.categoria-receta-responsive{
+  display: block;
+  visibility: visible;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: auto;
+  background-color: #DDD;
+  }
+ 
+  .categoria-columna-responsive{
+   display: block;
+   position: relative;
     width: 100%;
-    border-radius: 2px ;
-    background-color:#EFF4EB;
+  }
+
+  #categoria-imagen-descripcion-responsive{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 8px;
+    break-inside: avoid-column;
+    overflow: hidden;
+    -moz-column-break-inside:avoid;
+    -webkit-column-break-inside:avoid;
+    -column-break-inside:avoid;
+    box-shadow: 0 1px 2px  rgba(34, 25, 25, 0.4);
+    background: #FEFEFE;
+    background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+    border: 2px solid #FAFAFA;
+    margin-bottom: 14px;
+  }
+
+
+  /*EN ROW DIVIDE IMAGEN Y DESCRIPCION DE LAS RECETAS*/
+  .cat-recet-respon-img{
+    width: 42%;
+    max-width: 240px;
+    display: block;
+    position: relative;
+    float: left;
+    margin-right: 12px;
+  }
+
+  .cat-recet-respon-img img{
+   width: 100%;
+  }
+
+ 
+  .cat-recet-respon-descrip{
+    width: 50%;
+    display: block;
+    position: relative;
+    float: right;
+  }
+
+
+     /* TITULO DEL POST*/
+     #categoria-imagen-descripcion-responsive h1{
+    font-size: 1em;
+    font-family: 'Times New Roman', 'sans serif';
+    font-weight: bolder;
+    color: #000000;
+    margin-top: 4px;
+    width: 50%;
+    display: block;
+    position: relative;
+    float: right;
+    width: 100%;
     }
- 
 
-       /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
-     .elemento-categoria  #imagen-elemento-categoria{
-       display: flex;
-       flex-direction: row;
+    #categoria-imagen-descripcion-responsive a h1{
+      font-size: 1em;
+      font-family: 'Times New Roman', 'sans serif';
+      font-weight: 900;
+      color: #000000;
+      top: 0;
+      display: block;
+      position: relative;
+      float: right;
       width: 100%;
-      max-width: 700px;
       }
 
-   
-      
-      #imagen-elemento-categoria img{
-        display: block;
-        position: relative;
-        float: left;
-        width: 45%;
-        margin-right: 30px;
-      }
-
- 
-      .imagen-descripcion{
+      #categoria-imagen-descripcion-responsive p{
+        font-size: 0.9em;
+        font-family: 'Times New Roman', 'sans serif';
+        font-weight: lighter;
+        color: #2d2d2d;
+        line-height: 22px;
         display: block;
         position: relative;
         float: right;
-        width: 60%;
-      }
-             /* TITULO DEL POST*/
-             .imagen-descripcion h2{
-              margin-bottom: 5px;
-              text-align:start; 
-              font-size: 1.3em;
-              margin-top:  10px;
-              font-family: 'Times New Roman', 'sans serif';
-              font-weight: 900;
-              color: #000000;
-             }
-        
-    .imagen-descripcion p{
-      margin-bottom: 20px;
-      text-align:start;
-      font-size: 0.8;
-      font-family: 'Times New Roman', 'sans serif';
-      font-weight: 400;
-      color: #2d2d2d;
-     }
-     
+        width: 100%;
+       
+        }
+  
+
+  .cat-recet-respon-descrip .a{
+    font-weight: 800;
+    color: #2d2d2d;
+    font-size: 0.8em;
+        }
+
+  .cat-recet-respon-descrip  .o{
+  font-weight: 800;
+  color: black;
+  font-size: 0.8em;
+        }
+
+
+        /*CARRUSEL....*/
      .carusel ul{
        margin-top: 7%;
      }
@@ -4524,44 +4684,45 @@ font-family: 'Archivo Black', sans-serif;
     }
 
 
-.menu-btn__burger::before {
- transform: translateY(-8px);
- z-index:3000;
- }
+  .menu-btn__burger::before {
+  transform: translateY(-8px);
+  z-index:3000;
+  }
 
-.menu-btn__burger::after {
+  .menu-btn__burger::after {
  transform: translateY(8px);
  z-index:3000;
  }
 
 
- /*NAV*/
-  nav .nav li a{
+    /*NAV*/
+     nav .nav li a{
     font-size: 1rem;
     z-index: 1000;
-  }
+    }
 
-  nav .nav{
+    nav .nav{
     display: flex;
     flex-direction: column;
-  }
+    }
   
-  nav .nav li ul li a{
+
+    nav .nav li ul li a{
     margin-left: 10px;
-  }
+    }
 
 
     /* SE PUEDE PONER LA LETRA A LO ANCHO*/
     nav .nav li ul li {
-      list-style: none;
-     display: block;
+    list-style: none;
+    display: block;
     width: 100%;
     font-size: 0.8rem;
-  }
+    }
    
-  nav .nav .li-movil{
+    nav .nav .li-movil{
     display: none;
-  }
+    }
 
     nav .nav .li-pc{
       display: block;
@@ -4571,19 +4732,20 @@ font-family: 'Archivo Black', sans-serif;
       margin-left: 30px;
     }
 
-    #container-categorias-subcategorias{
-      margin-top: -36px;
-      margin-bottom: 30px;
 
+    #container-categorias-subcategorias{
+    margin-top: -36px;
+    margin-bottom: 30px;
     }
 
-   /*FIN NAV*/
-   #container-categorias-subcategorias .intro{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 200px;
-   }
+
+    /*FIN NAV*/
+    #container-categorias-subcategorias .intro{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    }
 
 
    .intro .menu-introescrito{
@@ -4636,21 +4798,56 @@ font-family: 'Archivo Black', sans-serif;
     flex-direction: column;
     }
       
+
     .container-posts-categorias #posts-categorias-aside{
       width: 100%;
       display: flex;
       flex-direction: row;
       }
   
+   /*CONTENEDOR PERDERPESO CATEGORIA......RECETAS....................... */
+   .container-posts-categorias{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+
+    #aside{
+      width: 8%;
+      max-width: 90px;
+      display: block;
+      position: relative;
+      float: right;
+    }
+      
+    .container-posts-categorias #posts-categorias-aside{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      }
   
-      #posts-categorias-aside .post-cuatro-categorias{
-          display: block;
-          width: 92%;
+     /*---CONTAINER DELMOVIL...*/
+      .categoria-receta-responsive{
+        display: none;
+      }
+  
+      .categoria-recetas-posts{
+        display: block;
+        position: relative;
+        float: left;
+        width: 92%;
+        max-width: 1000px;
+      }
+
+      .categoria-recetas-posts .post-cuatro-categorias{
+         display: flex;
+         flex-direction: row;
+          width: 100%;
         }
   
      
   /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
-  #posts-categorias-aside .post-cuatro-categorias  .elemento-categoria{
+  .categoria-recetas-posts .post-cuatro-categorias  .elemento-categoria{
     display: block;
     position: relative;
     float: left;
@@ -4660,49 +4857,56 @@ font-family: 'Archivo Black', sans-serif;
    }
   
        /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
-       .post-cuatro-categorias  .elemento-categoria  #imagen-elemento-categoria{
-      width: 30%;
-      margin-right: 30px;
-      background-color: cornflowerblue;
+    .elemento-categoria  #imagen-elemento-categoria{
+      width: 100%;
+      max-width: 190px;
+      height: 380px;
+      margin-right: 15px;
       }
   
     
       
-      #posts-categorias-aside .post-cuatro-categorias .elemento-categoria #imagen-elemento-categoria img{
-        width: 100%;
-        max-width: 200px;
-        height: 100%;
-        max-height: 180px;
-      
+    .elemento-categoria #imagen-elemento-categoria img{
+    width: 100%;
+    height: 180px;
       }
     
-      #posts-categorias-aside .post-cuatro-categorias .elemento-categoria  .imagen-descripcion{
-        width: 100%;
-     
-      
+      #imagen-elemento-categoria   .imagen-descripcion{
+      display: block;
+      width: 96%;
+      margin: auto;
       }
   
   
-  
-             /* TITULO DEL POST*/
-             #posts-categorias-aside .post-cuatro-categorias .elemento-categoria  .imagen-descripcion h1{
-              margin-bottom: 5px;
-              text-align:start; 
-              font-size: 1.2rem;
-              margin-top:  10px;
-              font-family: 'Times New Roman', 'sans serif';
-              font-weight: 900;
-              color: #000000;
-             }
-        
-             #posts-categorias-aside .post-cuatro-categorias .elemento-categoria  .imagen-descripcion p{
-      margin-bottom: 20px;
-      font-size: 0.7rem;
+      /* TITULO DEL POST*/
+      #imagen-elemento-categoria   .imagen-descripcion a h1{
+      font-size: 1.1em;
+      margin-top:  4px;
       font-family: 'Times New Roman', 'sans serif';
-      color: #2d2d2d;
-     }
-     
+      font-weight: 900;
+      color: #000000;
+      width: 100%;
+      line-height: 20px;
+             }
 
+        
+     .imagen-descripcion p{
+      font-size: 0.8em;
+      font-family: 'Times New Roman', 'sans serif';
+      font-weight: 400;
+      color: #2d2d2d;
+      width: 100%;
+      margin-top: 2px;
+      line-height: 14px;
+       }
+
+       .imagen-descripcion a p{
+         font-size: 0.7em;
+       }
+
+       .imagen-descripcion .o{
+        font-size: 0.8em;
+      }
 
 
 
@@ -4713,7 +4917,6 @@ font-family: 'Archivo Black', sans-serif;
     width: 100%;
     margin: auto;
     height: 90px; 
-  
    }
    
    /*...TITULO DE LA CATEGORIA..DE LA PAGINA DE LA CATEGORIA...................letras*/
@@ -4982,6 +5185,7 @@ font-family: 'Archivo Black', sans-serif;
       margin: auto;
       height: 38px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
       margin-top: -7px;
+      background-color: green;
       }
   
       
@@ -5130,6 +5334,7 @@ font-family: 'Archivo Black', sans-serif;
       margin-bottom: 30px;
     }
 
+
    /*FIN NAV*/
    #container-categorias-subcategorias .intro{
   display: flex;
@@ -5139,15 +5344,16 @@ font-family: 'Archivo Black', sans-serif;
    }
 
 
-   .intro .menu-introescrito{
+    .intro .menu-introescrito{
     display: block;
     position: relative;
     float: left;
      width: 90%;
      height: 200px;
-   }
+    }
 
-   .intro .intro-dos-vacios{
+
+    .intro .intro-dos-vacios{
      display: block;
      position: relative;
      float: right;
@@ -5164,6 +5370,7 @@ font-family: 'Archivo Black', sans-serif;
       height: 140px;
     }
 
+
     .intro  .menu-introescrito .menu ul ul{
       display:none;
       float: right;
@@ -5174,21 +5381,19 @@ font-family: 'Archivo Black', sans-serif;
       padding:0;
       background-color: #fff;
               }
+
           
-              .intro  .menu-introescrito .menu ul ul li{
-                display: block;
-                width:  100%;
-                border-bottom: 1px solid #2d2d2d;
-                background-color: #fff;
-                height: 28px;
-                        }
-
-
-
+    .intro  .menu-introescrito .menu ul ul li{
+    display: block;
+    width:  100%;
+    border-bottom: 1px solid #2d2d2d;
+    background-color: #fff;
+    height: 28px;
+      }
 
 
    .imagenes-pequeñas{
-     width: 100%;
+    width: 100%;
    }
 
      /*PAGINA SUBCATEGORIA CONTAINER DEL TITULO DE CATEGORIA*/
@@ -5207,22 +5412,46 @@ font-family: 'Archivo Black', sans-serif;
     display: flex;
     flex-direction: column;
     }
+
+    #aside{
+      width: 8%;
+      max-width: 90px;
+      display: block;
+      position: relative;
+      float: right;
+      background-color: yellow;
+    }
       
     .container-posts-categorias #posts-categorias-aside{
       width: 100%;
       display: flex;
       flex-direction: row;
+      background-color: darkgoldenrod;
       }
   
+     /*---CONTAINER DELMOVIL...*/
+      .categoria-receta-responsive{
+        display: none;
+      }
   
-      #posts-categorias-aside .post-cuatro-categorias{
-          display: block;
-          width: 92%;
+      .categoria-recetas-posts{
+        display: block;
+        position: relative;
+        float: left;
+        width: 92%;
+        max-width: 1000px;
+        background-color: blueviolet;
+      }
+
+      .categoria-recetas-posts .post-cuatro-categorias{
+         display: flex;
+         flex-direction: row;
+          width: 100%;
         }
   
      
   /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
-  #posts-categorias-aside .post-cuatro-categorias  .elemento-categoria{
+  .categoria-recetas-posts .post-cuatro-categorias  .elemento-categoria{
     display: block;
     position: relative;
     float: left;
@@ -5232,56 +5461,49 @@ font-family: 'Archivo Black', sans-serif;
    }
   
        /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
-       .post-cuatro-categorias  .elemento-categoria  #imagen-elemento-categoria{
-      width: 30%;
+    .elemento-categoria  #imagen-elemento-categoria{
+      width: 100%;
+      max-width: 250px;
       margin-right: 30px;
       background-color: cornflowerblue;
       }
   
     
       
-      #posts-categorias-aside .post-cuatro-categorias .elemento-categoria #imagen-elemento-categoria img{
-        width: 100%;
-        max-width: 200px;
-        height: 100%;
-        max-height: 180px;
-      
+    .elemento-categoria #imagen-elemento-categoria img{
+    width: 100%;
       }
     
-      #posts-categorias-aside .post-cuatro-categorias .elemento-categoria  .imagen-descripcion img{
-        width: 100%;
-        max-width: 200px;
-        height: 100%;
-        max-height: 180px;
-      
+      #imagen-elemento-categoria   .imagen-descripcion{
+      display: block;
+      width: 95%;
       }
   
   
-  
-             /* TITULO DEL POST*/
-             .imagen-descripcion h1{
-              margin-bottom: 5px;
-              text-align:start; 
-              font-size: 1.3em;
-              margin-top:  10px;
-              font-family: 'Times New Roman', 'sans serif';
-              font-weight: 900;
-              color: #000000;
+      /* TITULO DEL POST*/
+      #imagen-elemento-categoria   .imagen-descripcion h1{
+      font-size: 1.3em;
+      margin-top:  4px;
+      font-family: 'Times New Roman', 'sans serif';
+      font-weight: 900;
+      color: #000000;
              }
+
         
-    .imagen-descripcion p{
-      margin-bottom: 20px;
+     .imagen-descripcion p{
+      margin-bottom: 5px;
       text-align:start;
       font-size: 0.8;
       font-family: 'Times New Roman', 'sans serif';
       font-weight: 400;
       color: #2d2d2d;
-     }
+       }
      
-
-  .carusel ul{
-   margin-top: 2%;
-   }
+    
+       /*CARRUSEL..*/
+    .carusel ul{
+     margin-top: 2%;
+     }
 
    .container-total-carrusell li.right-arrow{
      margin-left: 88%;
@@ -5472,38 +5694,36 @@ border-radius: 5px 0 0 5px;
 
 
   @media only screen and (min-width: 1150px) and (max-width: 1199px){
-    #wrapper-categorias {
+      #wrapper-categorias {
       margin:0;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-  
-    
-    }
+     }
           
-    #wrapper-categorias > * {
+      #wrapper-categorias > * {
       padding:  30px;
       }
       
+
       /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
-  #container-categorias{
+    #container-categorias{
     width:100%;
     margin:0 auto;
     margin-top:110px;
-  }
+    }
 
   
- 
-  
     header{
-      width: 100%;
-      z-index: 999;
-      position: fixed;
-      margin: auto;
-      height:  65px;
-      box-shadow: 0 8px 6px -6px #c9c9c9;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    margin: auto;
+    height:  65px;
+    box-shadow: 0 8px 6px -6px #c9c9c9;
        }
+
   
       /*HEADER LLAMADO CATEGORIA*/
       header.black{
@@ -5511,6 +5731,7 @@ border-radius: 5px 0 0 5px;
       height:   65px;
       background-color:#fff ;
       }
+
     
     /*FIN ANIMACION SUBRAYADO */
      #cabecera-categorias{
@@ -5520,6 +5741,7 @@ border-radius: 5px 0 0 5px;
       margin: auto;
       height: 38px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
       margin-top: -10px;
+      background-color: rosybrown;
       }
   
       
@@ -5728,135 +5950,139 @@ border-radius: 5px 0 0 5px;
     
    }
 
-/*CONTENEDOR PERDERPESO CATEGORIA.....................------------------------------------------------........................................ */
- /*CONTENEDOR PERDERPESO CATEGORIA......RECETAS....................... */
- .container-posts-categorias{
+   /*CONTENEDOR PERDERPESO CATEGORIA................................................. */
+   /*CONTENEDOR PERDERPESO CATEGORIA......RECETAS....................... */
+   .container-posts-categorias{
   width: 100%;
   display: flex;
   flex-direction: column;
   }
     
-  .container-posts-categorias #posts-categorias-aside{
+    .container-posts-categorias #posts-categorias-aside{
     width: 100%;
     display: flex;
     flex-direction: row;
     }
 
+ /*---CONTAINER DELMOVIL...*/
+ .categoria-receta-responsive{
+  display: none;
+}
 
-    #posts-categorias-aside .post-cuatro-categorias{
-        display: block;
-        width: 92%;
-      }
-
-   
-/* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
-#posts-categorias-aside .post-cuatro-categorias  .elemento-categoria{
+.categoria-recetas-posts{
   display: block;
   position: relative;
   float: left;
- width: 100%;
- border-radius: 2px ;
- background-color:#EFF4EB;
+  width: 95%;
+  background-color: blueviolet;
+}
+
+.categoria-recetas-posts .post-cuatro-categorias{
+   display: flex;
+   flex-direction: row;
+    width: 100%;
+  }
+
+
+/* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
+.categoria-recetas-posts .post-cuatro-categorias  .elemento-categoria{
+display: block;
+position: relative;
+float: left;
+width: 100%;
+border-radius: 2px ;
+background-color:#EFF4EB;
+}
+
+ /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
+.elemento-categoria  #imagen-elemento-categoria{
+width: 100%;
+max-width: 250px;
+margin-right: 30px;
+background-color: cornflowerblue;
+}
+
+
+
+.elemento-categoria #imagen-elemento-categoria img{
+width: 100%;
+}
+
+#imagen-elemento-categoria   .imagen-descripcion{
+display: block;
+width: 95%;
+}
+
+
+/* TITULO DEL POST*/
+#imagen-elemento-categoria   .imagen-descripcion h1{
+font-size: 1.3em;
+margin-top:  4px;
+font-family: 'Times New Roman', 'sans serif';
+font-weight: 900;
+color: #000000;
+       }
+
+  
+.imagen-descripcion p{
+margin-bottom: 5px;
+text-align:start;
+font-size: 0.8;
+font-family: 'Times New Roman', 'sans serif';
+font-weight: 400;
+color: #2d2d2d;
  }
 
-     /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
-     .post-cuatro-categorias  .elemento-categoria  #imagen-elemento-categoria{
-    width: 30%;
-    margin-right: 30px;
-    background-color: cornflowerblue;
-    }
-
-  
-    
-    #posts-categorias-aside .post-cuatro-categorias .elemento-categoria #imagen-elemento-categoria img{
-      width: 100%;
-      max-width: 200px;
-      height: 100%;
-      max-height: 180px;
-    
-    }
-  
-    #posts-categorias-aside .post-cuatro-categorias .elemento-categoria  .imagen-descripcion img{
-      width: 100%;
-      max-width: 200px;
-      height: 100%;
-      max-height: 180px;
-    
-    }
-
-
-
-           /* TITULO DEL POST*/
-           .imagen-descripcion h1{
-            margin-bottom: 5px;
-            text-align:start; 
-            font-size: 1.3em;
-            margin-top:  10px;
-            font-family: 'Times New Roman', 'sans serif';
-            font-weight: 900;
-            color: #000000;
-           }
-      
-  .imagen-descripcion p{
-    margin-bottom: 20px;
-    text-align:start;
-    font-size: 0.8;
-    font-family: 'Times New Roman', 'sans serif';
-    font-weight: 400;
-    color: #2d2d2d;
-   }
 
    .footer-primero-categorias{
     display: flex;
     flex-direction: row;
     width: 100%;
-
    }
 
-   .footer-primero-categorias .icon-social1{
-   display: block;
-   position: relative;
-     float: left;
-     width: 65%;
-     max-width: 590px;
+    .footer-primero-categorias .icon-social1{
+    display: block;
+    position: relative;
+    float: left;
+    width: 65%;
+    max-width: 590px;
    }
+
 
    .footer-primero-categorias  .box{
-     display: block;
-   position: relative;
-     float: right;
-     width: 35%;
-     
-   }
+    display: block;
+    position: relative;
+    float: right;
+    width: 35%;
+     }
 
    .box form{
      width: 90%;
      margin: auto;
    }
 
+
    .box input[type="text"]
    {
     width: 70%;
    }
 
+
    .box button[type="submit"]{
-
      width: 20%;
-   }
+    }
 
 
 
-  }
+    }
 
 
 
 
-/* 1200 A 1290 .......................................... */
+     /* 1200 A 1290 .......................................... */
   
 
 @media only screen and (min-width: 1200px) and (max-width: 1246px){
-
-  
 
    #wrapper-categorias {
     margin:0;
@@ -5871,13 +6097,13 @@ border-radius: 5px 0 0 5px;
     }
     
     /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
-#container-categorias{
+  #container-categorias{
   width:100%;
   margin:0 auto;
   margin-top:110px;
-}
+  }
 
-/*border-bottom: 2px solid #DDD;*/
+   /*border-bottom: 2px solid #DDD;*/
 
  /*border-bottom: 2px solid #DDD;*/
  
@@ -5905,6 +6131,7 @@ border-radius: 5px 0 0 5px;
   margin: auto;
   height: 38px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
   margin-top: -10px;
+  background-color: olivedrab;
   }
 
   
@@ -5926,7 +6153,7 @@ border-radius: 5px 0 0 5px;
   height: 34px;
   }
 
-  #cabecera-categorias .controls{
+    #cabecera-categorias .controls{
     display: block;
     position: relative;
     float: left;
@@ -5934,7 +6161,7 @@ border-radius: 5px 0 0 5px;
     max-width: 710px;
     min-width: 610px;
     height: 40px;
-  }
+    }
 
    .controls #custom-search-input{
      height: 35px;
@@ -5943,19 +6170,19 @@ border-radius: 5px 0 0 5px;
      flex-direction: row;
      max-width: 560px;
      min-width: 490px;
-   }
+    }
   
 
- /*BOTON ICONO REVISTA Y SOCIALES*/
- #cabecera-categorias  .suscribe{
+   /*BOTON ICONO REVISTA Y SOCIALES*/
+   #cabecera-categorias  .suscribe{
    display: block;
    position: relative;
    float: left;
-  width: 11%;
-  height: 40px;
-  max-width: 130px;
-  min-width: 110px;
-  }
+   width: 11%;
+   height: 40px;
+   max-width: 130px;
+   min-width: 110px;
+   }
 
 
 
@@ -6138,14 +6365,28 @@ border-radius: 5px 0 0 5px;
     }
 
 
-    #posts-categorias-aside .post-cuatro-categorias{
-        display: block;
-        width: 92%;
+     /*---CONTAINER DELMOVIL...*/
+     .categoria-receta-responsive{
+      display: none;
+    }
+
+    .categoria-recetas-posts{
+      display: block;
+      position: relative;
+      float: left;
+      width: 95%;
+      background-color: blueviolet;
+    }
+
+    .categoria-recetas-posts .post-cuatro-categorias{
+       display: flex;
+       flex-direction: row;
+        width: 100%;
       }
 
    
 /* CAJA DE LA FOTO LA FECHA Y TITULOS Y DESCRIPCION*/
-#posts-categorias-aside .post-cuatro-categorias  .elemento-categoria{
+.categoria-recetas-posts .post-cuatro-categorias  .elemento-categoria{
   display: block;
   position: relative;
   float: left;
@@ -6155,52 +6396,44 @@ border-radius: 5px 0 0 5px;
  }
 
      /*CAJA QUE CONTIENE LA IMAGEN QUE ESTA EN ELEMENTO CATEGORIA*/
-     .post-cuatro-categorias  .elemento-categoria  #imagen-elemento-categoria{
-    width: 30%;
+  .elemento-categoria  #imagen-elemento-categoria{
+    width: 100%;
+    max-width: 250px;
     margin-right: 30px;
     background-color: cornflowerblue;
     }
 
   
     
-    #posts-categorias-aside .post-cuatro-categorias .elemento-categoria #imagen-elemento-categoria img{
-      width: 100%;
-      max-width: 200px;
-      height: 100%;
-      max-height: 180px;
-    
+  .elemento-categoria #imagen-elemento-categoria img{
+  width: 100%;
     }
   
-    #posts-categorias-aside .post-cuatro-categorias .elemento-categoria  .imagen-descripcion img{
-      width: 100%;
-      max-width: 200px;
-      height: 100%;
-      max-height: 180px;
-    
+    #imagen-elemento-categoria   .imagen-descripcion{
+    display: block;
+    width: 95%;
     }
 
 
-
-           /* TITULO DEL POST*/
-           .imagen-descripcion h1{
-            margin-bottom: 5px;
-            text-align:start; 
-            font-size: 1.3em;
-            margin-top:  10px;
-            font-family: 'Times New Roman', 'sans serif';
-            font-weight: 900;
-            color: #000000;
+    /* TITULO DEL POST*/
+    #imagen-elemento-categoria   .imagen-descripcion h1{
+    font-size: 1.3em;
+    margin-top:  4px;
+    font-family: 'Times New Roman', 'sans serif';
+    font-weight: 900;
+    color: #000000;
            }
+
       
-  .imagen-descripcion p{
-    margin-bottom: 20px;
+   .imagen-descripcion p{
+    margin-bottom: 5px;
     text-align:start;
     font-size: 0.8;
     font-family: 'Times New Roman', 'sans serif';
     font-weight: 400;
     color: #2d2d2d;
-   }
-    
+     }
+   
          
 /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
 

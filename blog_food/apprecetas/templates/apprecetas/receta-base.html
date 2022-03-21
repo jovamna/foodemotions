@@ -153,10 +153,13 @@
      <link rel="stylesheet" href="{% static 'appfood/css/recetas.css' %}">
      <link rel="stylesheet" href="{% static 'appfood/css/responsivereceta.css' %}">
 
+      
+      <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
 
      <!-- ICONOS -->
      <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
@@ -193,7 +196,7 @@
                    <div class="controls">
                    <form method ="GET" action= "{% url 'appblog:search' %}" value="{{request.GET.q}}" > {% csrf_token %}
                       <div id="custom-search-input">
-	                       <input type="text"  class="sin-borde" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar ...." >
+	                       <input type="text"  class="sin-borde" name="q" value="{{ request.GET.q }}"  placeholder="  Buscar...." >
                          <button type="submit" name="submit" class="boton btn-succes" value="Search"> 
                            <span class="icon"><i class="fa fa-search"></i></span>   
                         </button>

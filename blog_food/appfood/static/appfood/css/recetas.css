@@ -47,7 +47,9 @@
     #wrapper-recetas > * {
     padding: 20px;
     }
-    div {
+
+
+      div {
       flex: 1;
        }
       
@@ -58,12 +60,11 @@
       width: 100%;
       max-width: 1250px;
       margin: auto;
-      margin-bottom: 90px;
+      height: auto;
       padding-left: 0;
       padding-right: 0;
-      height: auto;
-     margin-top:  75px;
-  
+      margin-bottom: 90px;
+      margin-top:  75px;
          }
 
 
@@ -76,21 +77,24 @@
 
 
    
-   header{
-    width: 100%;
-    z-index: 999;
-    position: fixed;
-    margin: auto;
-    height:  70px;
-    box-shadow: 0 8px 6px -6px #c9c9c9;
-    background-color:#fff;
+    /*border-bottom: 2px solid #DDD;*/
+    header{
+      width:100%;
+      position: fixed;
+      z-index: 2000;   /*IMPORTANTE  */
+      top:0;
+      left: 0;
+      margin: auto;
+      height: 65px;
+      box-shadow: 0 8px 6px -6px #DCDCDC;
+      background-color: #fff;
     }
   
     header.black{
      background-color:#fff ;
-     height:  70px;
+     height:  65px;
     }
-  
+    
   
     .cabecera-recetas{
      width: 100%;
@@ -120,8 +124,8 @@
    .cabecera-recetas .logo img{
     width: 100%;
     height: 35px;  
-    max-width: 190px;
-    min-width: 190px;
+    max-width: 170px;
+    min-width: 170px;
     }
      
     
@@ -132,109 +136,114 @@
 
 
        /*CONTAINER DEL BUSCADOR................. */
-       .cabecera-recetas .controls{
-        display: block;
-        position: relative;
-        float: left;
-        width: 35%;
-        max-width: 600px;
-        min-width: 560px;
-        height: 40px;  
-        }
-
-
-        .controls form{
-          width: 100%;
-          max-width: 390px;
-        }
-
- 
-  /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
-  .cabecera-recetas .controls #custom-search-input{
+       /*CONTAINER DEL BUSCADOR................. */
+      .cabecera-recetas  .controls{
+      display: block;
+      position: relative;
+      float: left;
+      width: 34%;
+      max-width:590px;
+      min-width: 590px;
+      height: 40px;  
+      margin: auto;
+            }
+    
+    
+    .controls form{
     width: 100%;
-  height: 32px;
-  display: flex;
-  flex-direction: row;
-	border-radius: 0px;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-  margin-top: 0.5px;
-  box-shadow: 4px 8px 6px -6px #8c8c8c;
-  background: #FEFEFE;
-  background-image: linear-gradient(45deg, #FFF, #F9F9F9);
-  border: 1.5px solid #FAFAFA;
-   }
-
-   .controls  #custom-search-input input[type=text]:focus {
-    outline: none;
-    border: 0;
-    background-color: #fff;
-    padding-left: 8px; /*MUEVE LA LETRA*/
-     }
- 
- 
-
-  /*CAMPO SEARCH BUSCADOR */
-  .cabecera-recetas .controls  #custom-search-input .sin-borde{
-  border: 0px solid #fff;
-	-moz-border: 0px  solid #fff;
-	-webkit-border: 0px solid #fff;
-  width: 92%;
-  height: 30px;
-  padding-left: 8px; /*MUEVE LA LETRA*/
-  background-color: #f8f8f8;
-  }
-
-
-  input::placeholder {
-    width: 250px;
-    font-size: 1rem;
-    color: #2d2d2d;
-    }
-
-
-    /*BOTOM BUSCADOR */
-     .controls  #custom-search-input .boton{
-    border-right: 4px;
-    -moz-border-right: 2px;
-    -webkit-border-right: 2px;
-     padding-left:2px; /*MUEVE LA LETRA*/
-     width: 8%;
-     max-width: 55px;
-     height: 30px;
-    background-color: #fff;
-     }
-
-    .controls .icon .fa-search{
-    color: #000000;
-    }
-
-
-  
- 
-    /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
-    /*CONTENEDOR  REVISTA Y SOCIALES*/
-     .suscribe{
-      width: 20%;
-      max-width: 110px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
-      display: inline-flex;
-      height: 40px;
+    max-width: 460px;
+    height: 38px;  
       }
+    
+        
+    /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
+    .cabecera-recetas  .controls #custom-search-input{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin-top: 0.5px;
+    box-shadow: 4px 8px 6px -6px #8c8c8c;
+    background: #FEFEFE;
+    background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+    border: 1px solid #FAFAFA;
+       }
+    
+    
+      /*CAMPO SEARCH BUSCADOR */
+      .cabecera-recetas  .controls  #custom-search-input .sin-borde{
+      border: 0px solid #fff;
+      -moz-border: 0px  solid #fff;
+      -webkit-border: 0px solid #fff;
+      width: 92%;
+      height: 32px;
+      background-color: #f8f8f8;
+      }
+    
+    
+   
+    
+        /*BOTOM BUSCADOR */
+         .controls  #custom-search-input .boton{
+        border-right: 4px;
+        -moz-border-right: 2px;
+        -webkit-border-right: 2px;
+         padding-left:2px; /*MUEVE LA LETRA*/
+         width: 8%;
+         max-width: 55px;
+         height: 32px;
+        background-color: #fff;
+         }
+
+    
+        .controls .icon .fa-search{
+        color: #000000;
+        font-size: 1em;
+        }
+    
+
+      .sin-borde::placeholder {
+      font-size: 0.8rem;
+      color: #2d2d2d;
+      height: 23px;
+      vertical-align: middle;
+      padding-top: 4px;
+      padding-left: 4px;
+        }
+     
+      .controls  #custom-search-input .sin-borde input[type=text]:focus {
+      outline: none;
+      border: 0;
+      background-color: #fff;
+      }
+       
+     
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+    .suscribe{
+    position: relative;
+    float: right;
+    width: 20%;
+    max-width: 200px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
+    height: 40px;
+      }
+    
 
     .suscribe  a h4{
-      font-size: 0.9rem;
-      word-spacing: -3px;
-      letter-spacing: -0.7%;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 700;
-      color:#2d2d2d;
-      margin-top:  16px;
-      }
-  
-  
-
+    font-size: 0.9rem;
+    word-spacing: -3px;
+    letter-spacing: -0.7%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color:#2d2d2d;
+    margin-top:  16px;
+    }
+      
+      
    /*LETRA INSCRIBETE*/
    .suscribe a h4:hover{
     color: #7aac41;
@@ -261,7 +270,7 @@
 
    .menu-btn  .hamburguesa{
       width: 100%;
-      max-width: 39px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+      max-width: 38px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
       height: 40px;
       display: block;
       position: relative;
@@ -302,10 +311,10 @@ z-index: 800;
 
 }
 .menu-btn__burger::before {
- transform: translateY(-9px);
+ transform: translateY(-8px);
 }
 .menu-btn__burger::after {
- transform: translateY(9px);
+ transform: translateY(8px);
 
 }
 

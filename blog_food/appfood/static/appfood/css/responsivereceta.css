@@ -889,7 +889,7 @@
 
    /*.......MOVIL...........................................*/  
    @media only screen and (min-width: 360px) and (max-width: 640px){
-    html, body{
+       html, body{
       width: 100%;
       height: 100%;
       margin: 0;
@@ -918,8 +918,8 @@
 
      
     #wrapper-recetas > * {
-      padding: 18px;
-      }
+    padding: 18px;
+    }
          
       
       #container-recetas{
@@ -933,82 +933,79 @@
       }
   
    
-      /*border-bottom: 2px solid #DDD;*/
-      header{
-        display: block;
-        width:100%;
-        height: 58px;
-        top:0;
-        left: 0;
-        position: fixed;
-        z-index: 2000;   /*IMPORTANTE  */
-        margin: auto;
-        background-color: #fff;
-        box-shadow: 0 8px 6px -6px #c6c6c6;
+    /*border-bottom: 2px solid #DDD;*/
+    header{
+    display: block;
+    width:100%;
+    height: 58px;
+    top:0;
+    left: 0;
+    position: fixed;
+    z-index: 2000;   /*IMPORTANTE  */
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
        }
+
     
-       header.black{
-       background-color: #fff;
-       height:  58px;
-       }
+    header.black{
+    background-color: #fff;
+    height:  58px;
+    }
       
 
-     .cabecera-recetas{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      height: 38px;
-      margin: auto;
+    .cabecera-recetas{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30px;
+    margin: auto;
       }
 
 
         /*caja */
-     .cabecera-recetas  .logo{
-      display: block;
-      position: relative;
-      float: left;
-      width: 20%;
-      max-width: 190px;
-      min-width: 170px;
-      height: 38px;
+    .cabecera-recetas  .logo{
+    display: block;
+    position: relative;
+    float: left;
+    width: 20%;
+    max-width: 190px;
+    min-width: 170px;
+    height: 30px;
      }
+
     
     /*IMAGEN DEL LOGO*/
-      .cabecera-recetas .logo img{
-        display: block;
-        width: 100%;
-        max-width: 140px;
-        min-width: 140px;
-        height: 35px;
+    .cabecera-recetas .logo img{
+    display: block;
+    width: 100%;
+    max-width: 140px;
+    min-width: 140px;
+    height: 35px;
        }
      
 
     .cabecera-recetas .controls{
-      display: none;
-      visibility: hidden;
-      }
+    display: none;
+    visibility: hidden;
+    }
         
-
-    /*BUSCADOR QUE VA DEBAJO DE LA CABECERA.............BUSCADOR RESPONSIVE ...*/
-    
-
   
-  /*CONTENEDOR  REVISTA Y SOCIALES*/
-  .cabecera-recetas  .suscribe{
-   display: block;
+    /*CONTENEDOR  REVISTA Y SOCIALES*/
+   .cabecera-recetas  .suscribe{
+    display: block;
     width: 11%;
     max-width: 135px;
     min-width: 110px;
-    height: 38px;
-  }
+    height: 30px;
+   }
 
    .cabecera-recetas .suscribe a h4{
     font-size: 0.8rem;
     margin-top: 10px;
     font-weight: 700;
     letter-spacing: 0.9px;
-    font-family: 'Times New Roman', Times, serif;
     }
 
      .cabecera-recetas .suscribe a h4:hover{
@@ -1022,9 +1019,9 @@
       position: relative;
       float: right;
       width: 8%;
-      max-width: 38px;
-      min-width: 38px;
-      height: 38px;
+      max-width: 37px;
+      min-width: 37px;
+      height: 30px;
      }
 
 
@@ -1034,7 +1031,9 @@
       position: relative;
       float: right;
       width: 100%;
-      height: 38px;
+      max-width: 37px;
+      min-width: 37px;
+      height: 30px;
        }
   
   /* /*ICONO DE LA REVISTA SUSCRIBIR SUSCRIPCION*/
@@ -1043,10 +1042,10 @@
   display: block;
   position: relative;
   float: right;
-  margin-top: 9.5px;
+  margin-top: 10.6px;
   width: 100%;
-    max-width: 30px;
-    min-width: 30px;
+    max-width: 32px;
+    min-width: 32px;
   height: 4px;
   background: #2d2d2d;
   border-radius: 2px;
@@ -1061,8 +1060,8 @@
   content: '';
   position: absolute;
   width: 100%;
-    max-width: 30px;
-    min-width: 30px;
+    max-width: 32px;
+    min-width: 32px;
           height: 4px;
   background: #2d2d2d;
   border-radius: 2px;

@@ -32,6 +32,7 @@
                           <!--MENU ESCONDIDO----------------->
                           <li>
                           <p>Categorias<i class="right"></i></p>
+
                           <ul>
                           {% load mptt_tags %}
                           {% for category in categories %} 
@@ -42,8 +43,8 @@
                           </a>    
                           </li>
                           {% endfor %}
-                              
                           </ul>
+
                           </li>
                           <!---FIN MENUS ESCONDIDO CATEGORIAS---->
                             
@@ -121,52 +122,117 @@
          <!--------------- FIN CAJA DE NAVEGACION DE LAS SUBCATEGORIA-PERDER------------------->
 
 
-        <!---DIV  DEBE MEDIR 100%  CONTAINER DE 4 POST Y DE RECETAS--->
-       <div class="container-posts-categorias">
-             <!--DEBE MEDIR  80%-------------80%---------->
-             <div id = "posts-categorias-aside">
-                <!--------------- INICIO POST CATEGORIA------------------------->
-                <div class=  "post-cuatro-categorias">
-                <!---DIV DE 4 POST DE POSTS---> 
+
+         <!---------------CATEGORIA VERSION MOVIL Y IPAD------------------>
+      {% block categoria-receta-responsive %}     
+    <!-----------------------------------------------A----->
+         <div class="categoria-receta-responsive">
+                {% for recipe in recipe_post %}
+               <!---------------------------------------B------>
+               <div class="categoria-columna-responsive">   
 
 
-                  {% for recipe in recipe_post %}
-                  <div class="elemento-categoria"> 
+                     <!-----------------ROW---------------------C----->
+                       <div id="categoria-imagen-descripcion-responsive">
+                                   <!--------------------------->
+                                 <div class="cat-recet-respon-img">
+                                 {% if recipe.image %}
+                                  <img src ="{{receta.image.url}}">
+                                  {% endif %}
+                                  </div>
+                                  <!------------------------------->
+
+                                  <!-------------------------------->
+                                  <div class="cat-recet-respon-descrip">
+                                  <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                                  <h1>{{recipe.title}}</h1>  
+                                  </a>  
+                                  <p>{{recipe.description|truncatewords_html:8|safe}} </p> 
+                                  <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                                  <em><p>Leer mas  ...</p></em>
+                                  </a>                      
+                                  <p class="a" >Por: <span class="o"> {{ recipe.author }}</span></p> 
+                                  </div>
+                                  <!------------------------------------>
+
+                       </div>
+                       <!--------------------------------------C----->
+                       </div>
+                       <!---------------------------------------B----->
+                        {% endfor %}
+         </div>
+         <!----FLOAT LEFT--------80%-----------RESPONSIVE----------------------------------A---->
+             {% endblock categoria-receta-responsive %}   
 
 
-                      <!---FECHA E IMAGEN-->  
-                      <div id="imagen-elemento-categoria"> 
-                      <!-- IMAGEN--->
-                      {% if recipe.image %}             
-                      <img src ="{{recipe.image.url}}">
-                     {% endif %}       
-                     <!------------------------>
-                     <!-------AQUI NO SE PUSO EL CODIGO QUE SE PUSO EN APPRECTAS SANAS PORQUE AQUI HAY CHILDREN Y EL OTRO SOLO CATEGORIAS-------->
-                     <!--TITULO DEL POST ENSALADAS Y ZUMOS-->
-                    <div class="imagen-descripcion">
-                    <a href="/recetas-dieteticas/receta/{{ recipe.slug}}">
-                    <h1>{{ recipe.title }}</h1>
-                    </a>
-                    <p>{{recipe.description|safe|truncatechars_html:60}}</p>
-                    <a href ="/recetas-dieteticas/receta/{{ recipe.slug }}/">
-                    <em><p>Leer mas...</p></em>
-                    </a>
-                    <p class="a">Por <span class="o"> {{ recipe.author }}</span> </p> 
-                    </div>
-                    <!------FIN DIV IMAGEN DESCRIPCION---------------->
+
+
+
+
+
+
+
+
+         <!--------------------VERSION PC--------------------------------------------------------------------------------->
+    <!---DIV  DEBE MEDIR 100%  CONTAINER DE 4 POST Y DE RECETAS--->
+    <div class="container-posts-categorias">
+          <!---------ROW---columna de 100%----------------------->
+          <div id = "posts-categorias-aside">
+              <!----FLOAT LEFT--------80%---------------------------------------------A---->
+              <div class="categoria-recetas-posts">
+                
+                  <!---ROW-------------------------------------------B--->  
+                  <div class="post-cuatro-categorias">
+
+                      <!---------------------------------------C------>
+                      {% for recipe in recipe_post %}
+                      <div class="elemento-categoria"> 
+
+
+                        <!----------------------------------D--->
+                        <div id="imagen-elemento-categoria"> 
+                        <!-- IMAGEN--->
+                         {% if recipe.image %}             
+                         <img src ="{{recipe.image.url}}">
+                         {% endif %}       
+                         <!------------------------>
+                
+                         <div class="imagen-descripcion">
+                         <a href="/recetas-dieteticas/receta/{{ recipe.slug}}">
+                         <h1>{{ recipe.title }}</h1>
+                         </a>
+                         <p>{{recipe.description|truncatewords_html:8|safe}}</p>
+                         <a href ="/recetas-dieteticas/receta/{{ recipe.slug }}/">
+                         <em><p>Leer mas...</p></em>
+                         </a>
+                         <p class="a">Por <span class="o"> {{ recipe.author }}</span> </p> 
+                         </div>
+                         <!------FIN DIV IMAGEN DESCRIPCION---------------->
                     </div> 
-             <!--25%  FIN DIV ID imagen-elemento-categoria--->   
+                    <!--25%  FIN IMAGEN ELEMENTO CATEGORIA ------CIERRA POST-------------D----->         
+                 
 
 
-             </div>
-               {% empty %}
+                         
+                  </div>
+                 <!---FIN ELEMENTO CATEGORIA------CAJA PARA UN POST----------------------C--------->
+            {% if forloop.counter|divisibleby:3 %}        
+            </div> 
+            <!--FIN---ROW---POST 4 CATEGORIAS-----------------ROW-------------------------B---->
+
+           <!----SE REPITE EL CICLO ROW-------------------------------------->
+            <div class="post-cuatro-categorias">
+            {% endif %}
+             {% empty %}
             <p>No hay posts</p>
-            {% endfor %} 
-            <!-----FIN DIV ELEMENTO CATEGORIA -----CIERRA EL POST ---------->  
-          
-       </div> 
-      
-          <!---FIN DIV POSTS 4 CATEGORIA 75%--->    
+
+            {% endfor %}   
+           </div>
+           <!---CICLO ROW DE 3 POSTS-------------------------->
+
+    
+          </div>
+          <!---------------FLOAT LEFT-------------------------------A------------------------A--->
 
                      <!-- 20% ASIDE --->
                     <div id="aside">    </div>
