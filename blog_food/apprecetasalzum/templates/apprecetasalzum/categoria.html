@@ -137,21 +137,21 @@
                                    <!--------------------------->
                                  <div class="cat-recet-respon-img">
                                  {% if recipe.image %}
-                                  <img src ="{{receta.image.url}}">
+                                  <img src ="{{recipe.image.url}}">
                                   {% endif %}
                                   </div>
                                   <!------------------------------->
 
                                   <!-------------------------------->
                                   <div class="cat-recet-respon-descrip">
-                                  <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
-                                  <h1>{{recipe.title}}</h1>  
-                                  </a>  
-                                  <p>{{recipe.description|truncatewords_html:8|safe}} </p> 
-                                  <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
-                                  <em><p>Leer mas  ...</p></em>
-                                  </a>                      
-                                  <p class="a" >Por: <span class="o"> {{ recipe.author }}</span></p> 
+                                  <a href="/recetas-dieteticas/receta/{{ recipe.slug}}">
+                                  <h1>{{ recipe.title }}</h1>
+                                  </a>
+                                  <p>{{recipe.description|truncatewords_html:8|safe}}</p>
+                                  <a href ="/recetas-dieteticas/receta/{{ recipe.slug }}/">
+                                  <em><p>Leer mas...</p></em>
+                                  </a>
+                                  <p class="a">Por <span class="o"> {{ recipe.author }}</span> </p> 
                                   </div>
                                   <!------------------------------------>
 
