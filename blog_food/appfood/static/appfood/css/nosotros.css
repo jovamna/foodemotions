@@ -1,332 +1,339 @@
-  *{
-  margin:0;
-  padding:0;
-  border:0;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
   box-sizing: border-box;
-  }
-   /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
-   *,
-   *::before,
-   *::after {
-   box-sizing: border-box;
-   }
+}
+
+/*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 
-   /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
-   body{
-  padding:0;
+/*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+body {
+  padding: 0;
   margin: 0;
   background-color: #fff;
-  color: rgba(0,0,0,.95);
-  font-family: "Argos",serif;
-   }
+  color: rgba(0, 0, 0, .95);
+  font-family: "Argos", serif;
+}
 
-    html, body {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    height: 100%;
-    }
+html,
+body {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+}
 
-   img{
-   max-width: 100%;
-   }
+img {
+  max-width: 100%;
+}
 
-   /*CONTENEDOR PRINCIPAL DE TODA LA CABECERA INCLUYENDO SLIDER*/
-   #wrapper {
-    min-height: 100vh;
-    min-width:250px;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    margin-left: auto;
-    margin-right: auto;
-    }
-    
-    #wrapper > * {
-    padding: 20px;
-    }
-     
+/*CONTENEDOR PRINCIPAL DE TODA LA CABECERA INCLUYENDO SLIDER*/
+#wrapper {
+  min-height: 100vh;
+  min-width: 250px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-   #container-nosotros{
+#wrapper>* {
+  padding: 20px;
+}
+
+
+#container-nosotros {
   display: flex;
   flex-direction: column;
-   margin: auto;
   width: 100%;
   max-width: 1250px;
-  bottom:  25px;
-  margin-top: 130px;
+  margin: auto;
+  margin-bottom: 90px;
   padding: 0 0 0 0;
-  }
+  /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
+  height: auto;
+  margin-top: 130px;
 
-  header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width:100%;
-    position: fixed;
-    z-index: 2000;   /*IMPORTANTE  */
-    top:0;
-    margin: auto;
-    height: 115px;
-    box-shadow: 0 8px 6px -6px #DCDCDC;
-    background-color: #fff;
-   }
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  z-index: 2000;
+  /*IMPORTANTE  */
+  top: 0;
+  margin: auto;
+  height: 113px;
+  box-shadow: 0 8px 6px -6px #DCDCDC;
+  background-color: #fff;
+}
 
 
-    header.black{
-    height: 115px;
-    background-color: #fff;
-    }
+header.black {
+  height: 113px;
+  background-color: #fff;
+}
 
-   .cabecera-responsive{
-    display: none;
-    }
+.cabecera-responsive {
+  display: none;
+}
 
-    .cabecera{
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     width:100%;
-     height: 55px;   /*IMPORTANTE EL ESPACIO DEL LOGO */
-     margin-bottom: 7px;
-     }
- 
-    /*caja */
-    .cabecera .icon-social{
-    width:10%;
-    max-width: 100px;
-    height: 55px;
-    display: inline-flex;
-    }
-   
-   
-    
-      .cabecera .social2{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width:90%;
-      margin-top: 36px;
-      }
+.cabecera {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+}
 
-      .cabecera .icon-social .social2 li{
-      display: inline-flex;
-      list-style: none;
-      }
-    
-      .icon-social ul li .fa-envelope:hover {
-        color: #7aac41;
-      }
-      
-      .icon-social ul li .fa-facebook-f:hover {
-        color: #7aac41;
-      }
-      
-      .icon-social ul li .fa-twitter:hover {
-        color: #7aac41;
-      }
-      
-      .icon-social ul li .fa-instagram:hover {
-        color: #7aac41;
-      }
-      
-      .icon-social ul li .fa-envelope{
-        color: #7aac41;
-      }
-      
-      .icon-social ul li .fa-facebook-f{
-        color: #7aac41;
-      }
-      
-      .icon-social ul li .fa-twitter{
-        color: #7aac41;
-      }
-      
-      .icon-social ul li .fa-instagram{
-      color: #7aac41;
-      }
-      
-  
-  /*caja */
-  .cabecera .logo{
-    justify-content: center;
-    align-items: center;
-  width:60%;
+/*caja */
+.cabecera .icon-social {
+  width: 10%;
+  max-width: 100px;
+  height: 50px;
+  display: inline-flex;
+}
+
+
+
+.cabecera .social2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 34px;
+}
+
+.cabecera .icon-social .social2 li {
+  display: inline-flex;
+  list-style: none;
+}
+
+.icon-social ul li .fa-envelope:hover {
+  color: #7aac41;
+}
+
+.icon-social ul li .fa-facebook-f:hover {
+  color: #7aac41;
+}
+
+.icon-social ul li .fa-twitter:hover {
+  color: #7aac41;
+}
+
+.icon-social ul li .fa-instagram:hover {
+  color: #7aac41;
+}
+
+.icon-social ul li .fa-envelope {
+  color: #7aac41;
+}
+
+.icon-social ul li .fa-facebook-f {
+  color: #7aac41;
+}
+
+.icon-social ul li .fa-twitter {
+  color: #7aac41;
+}
+
+.icon-social ul li .fa-instagram {
+  color: #7aac41;
+}
+
+
+/*caja */
+.cabecera .logo {
+  justify-content: center;
+  align-items: center;
+  width: 60%;
   max-width: 320px;
+  height: 50px;
+
+}
+
+.cabecera .logo img {
+  width: 100%;
   height: 55px;
-
-  }
-
-  .cabecera .logo img{
-   width: 100%;
-   height: 55px;
   margin-top: 18px;
-  }
+}
 
 
 
-  .cabecera .suscribe{
-   width: 100%;
-   max-width: 95px;
-   height: 55px;
-   }
+.cabecera .suscribe {
+  width: 100%;
+  max-width: 95px;
+  height: 50px;
+}
 
-  .cabecera .suscribe h4 {
-   font-size: 0.8rem;
-   font-family: 'Times New Roman', Times, serif;
-   color: #2d2d2d;
-   font-weight: 700;
-   margin-top: 40px;
-   text-transform: uppercase;
-   }
+.cabecera .suscribe h4 {
+  font-size: 0.8em;
+  font-family: 'Times New Roman', Times, serif;
+  color: #2d2d2d;
+  font-weight: 700;
+  margin-top: 37px;
+  text-transform: uppercase;
+}
 
 
- /*...BURGER ESCONDIDO........BURGER ESCONDIDO....................*/
-.menu-btn .menu-btn__burger{
- display: none;
- }
-
-  
-
-  nav{
-    width:100%;
-    max-width: 1240px;
-    height: 40px;
-    display:block;
-    margin: auto;
-    border-top: 0.7px solid 		#DCDCDC;
-    border-bottom: 0.7px solid 		#DCDCDC;
-    z-index: 10;
-    background-color: #fff;
-  }
-   
- 
-   /* ESTE ES EL UL  IMPORTANTE PARA EL MENU EN FILA Y QUE ESTE CENTRADO*/
-   nav .nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:100%;
-    max-width: 1230px;
-  }
-  
-
-   nav  .nav li{
-    list-style: none;
- 
-    }
+/*...BURGER ESCONDIDO........BURGER ESCONDIDO....................*/
+.menu-btn .menu-btn__burger {
+  display: none;
+}
 
 
 
-   nav  .nav li a{
-    display: block;
-    text-decoration: none;
-    color: #242424;
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-   font-weight: 790;
-   letter-spacing: 0.2px;
-    width: 100%;
-    z-index: 3;
-    }
+nav {
+  width: 100%;
+  max-width: 1240px;
+  height: 36px;
+  display: block;
+  margin: auto;
+  border-top: 0.7px solid #DCDCDC;
+  border-bottom: 0.7px solid #DCDCDC;
+  z-index: 10;
+  background-color: #fff;
+}
 
-  
-  nav .nav ul{
-    display: none;
-    width: 100%;
-    max-width: 600px;
-    min-width: 160px;
-    position: absolute;
+
+/* ESTE ES EL UL  IMPORTANTE PARA EL MENU EN FILA Y QUE ESTE CENTRADO*/
+nav .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1230px;
+}
+
+
+nav .nav li {
+  list-style: none;
+
+}
+
+
+
+nav .nav li a {
+  display: block;
+  text-decoration: none;
+  color: #242424;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 790;
+  letter-spacing: 0.2px;
+  width: 100%;
+  z-index: 3;
+}
+
+
+nav .nav ul {
+  display: none;
+  width: 100%;
+  max-width: 600px;
+  min-width: 160px;
+  position: absolute;
   background-color: #fff;
   z-index: 300;
-  }
+}
 
-  /* items del menu desplegable */
-  /*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS   float:none*/
-  nav .nav ul li {
+/* items del menu desplegable */
+/*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS   float:none*/
+nav .nav ul li {
   float: left;
   width: 100%;
   max-width: 600px;
-  }
-    
-  /* enlaces de los items del menu desplegable */
- nav .nav  ul li a {
+}
+
+/* enlaces de los items del menu desplegable */
+nav .nav ul li a {
   background-color: #fff;
   font-size: 0.8rem;
   text-transform: lowercase;
   color: black;
-  padding: 8px 8px;
+
   text-decoration: none;
   display: block;
   width: 100%;
   max-width: 600px;
-  }
+}
 
-     /*ESTE ES EL ICONO QUE HACE ABRIR EL MENU ESCONDIDO*/
- 
-   /* items del menu desplegable al pasar el ratón     display:block;
+/*ESTE ES EL ICONO QUE HACE ABRIR EL MENU ESCONDIDO*/
+
+/* items del menu desplegable al pasar el ratón     display:block;
    width: 100%;*/
-    nav .nav li:hover > ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 600px;
-    z-index: 350;
-    }
+nav .nav li:hover>ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  z-index: 350;
+}
 
-    /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
-    nav ul li a.active{
-    text-decoration:line-through;
-    color: #639a3a;
-    }
-    
-       /* ANIMA CON RAYA AL HACE HOVER */
-   /*HOVER SALE RAYA.............HOVER */
-   .nav a:after {
-    content: "";
-    display: block;
-    margin: auto;
-    height: 2px;
-    width: 0px;
-    transition: all .4s;
-    }
-    /* .................... */
-  
- 
-   .nav  a:hover:after {
-   
-     background: #568632;
-     }
+/*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
+nav ul li a.active {
+  text-decoration: line-through;
+  color: #639a3a;
+}
+
+/* ANIMA CON RAYA AL HACE HOVER */
+/*HOVER SALE RAYA.............HOVER */
+.nav a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  transition: all .4s;
+}
+
+/* .................... */
 
 
+.nav a:hover:after {
+
+  background: #568632;
+}
 
 
 
-  .tres-columnas-nosotros{
+
+
+.tres-columnas-nosotros {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
   max-width: 1250px;
-   margin-top: 80px;
+  margin-top: 80px;
   padding: 0 0 0 0;
-  }
+}
 
-   /*PRIMERA COLUMNA ......................................................................................................*/
-  .nosotros{
+/*PRIMERA COLUMNA ......................................................................................................*/
+.nosotros {
   width: 45%;
-   max-width: 550px;
-   z-index: 10;
-   }
+  max-width: 550px;
+  z-index: 10;
+}
 
 
- /*primera caja ..................................... */
-  .articulo{
+/*primera caja ..................................... */
+.articulo {
   width: 100%;
-  }
+}
 
-  .nosotros h1{
+.nosotros h1 {
   line-height: 22px;
   font-weight: bolder;
   font-size: 3rem;
@@ -334,20 +341,20 @@
   letter-spacing: -1.5px;
   font-family: 'Archivo Black', sans-serif;
   margin-bottom: 50px;
-   }
+}
 
-.nosotros .articulo p{
-font-family: 'Times New Roman', Times, serif;
-font-size: 1.1rem;
-font-weight: 400;
-line-height: 1.45;
-color: #666;
-text-align: start; 
+.nosotros .articulo p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #666;
+  text-align: start;
 }
 
 
 
-.nosotros .articulo p:first-letter{
+.nosotros .articulo p:first-letter {
   font-size: 3.5em;
   font-weight: bold;
   line-height: .6em;
@@ -362,136 +369,139 @@ text-align: start;
 
 
 
- /*segunda caja ..................................... */
-.dos-imagenes{
-display: flex;
-flex-direction: row;
-width: 100%;
-max-width: 550px;
-justify-content: space-between;
-margin-top: 20%;
+/*segunda caja ..................................... */
+.dos-imagenes {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 550px;
+  justify-content: space-between;
+  margin-top: 20%;
 }
 
-  .foto{
+.foto {
   width: 45%;
   max-width: 290px;
   margin-left: 1%;
-  }
+}
 
-   /*..width:"300" ;
+/*..width:"300" ;
     height:"280" ;...*/
-   .foto img{
-   width: 100%;
-   }
+.foto img {
+  width: 100%;
+}
 
 
 
- /*tercera caja ..................................... */
+/*tercera caja ..................................... */
 /*QUOTE ............................................ */
 
-blockquote{
-height: 10%;
-width: 100%;
-max-width: 550px;
-margin-top: 15%;
- }
- 
+blockquote {
+  height: 10%;
+  width: 100%;
+  max-width: 550px;
+  margin-top: 15%;
+}
 
-  blockquote:before { 
-  content: "\201C"; /* inicio comilla */
+
+blockquote:before {
+  content: "\201C";
+  /* inicio comilla */
   font-family: Georgia;
-  font-size:60px; /* tamaño */
-  font-weight: bold; 
-  line-height:0px;
-  color:	#d4d4d4; /* Color  */
-  vertical-align:middle;
+  font-size: 60px;
+  /* tamaño */
+  font-weight: bold;
+  line-height: 0px;
+  color: #d4d4d4;
+  /* Color  */
+  vertical-align: middle;
   padding-top: 70%;
   padding-left: 2%;
-  }
- 
-  /*DESCRPCION*/
- blockquote h3{
-    margin-top: -30px;
-    margin-left: 60px;
-    margin-right: 60px;
-   font-size: 1.3rem;
-  color: #666;
-  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-  }
+}
 
-    /*AUTOR FUNDADOR*/
-  blockquote p {
-    margin-top: 30px;
-    margin-left: 150px;
-   font-size: 1rem;
+/*DESCRPCION*/
+blockquote h3 {
+  margin-top: -30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-size: 1.3rem;
+  color: #666;
+  font-family: "PT Serif", Times, "Times New Roman", Georgia, serif;
+}
+
+/*AUTOR FUNDADOR*/
+blockquote p {
+  margin-top: 30px;
+  margin-left: 150px;
+  font-size: 1rem;
   color: #000;
   font-weight: 900;
-  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-  }
-
-
-
-  blockquote .otroestilo{
-    margin-top: 30px;
-    margin-left: 10px;
-   font-size: 1rem;
- color:#666;
-  font-family: "PT Serif",Times,"Times New Roman",Georgia,serif;
-  }
-
-
-
- /*FINAL QUOTE ...................................... */
-
-
-
-
- /* cuarta caja ..................................... */
-.dibujo{
-width: 100%;
-margin-top: 10%;
+  font-family: "PT Serif", Times, "Times New Roman", Georgia, serif;
 }
 
-.dibujo img{
-width: 100%; 
+
+
+blockquote .otroestilo {
+  margin-top: 30px;
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #666;
+  font-family: "PT Serif", Times, "Times New Roman", Georgia, serif;
 }
 
-   /*quinta       caja ..................................... */
-   /*ARTICULO DOS */
-   .articulo-dos{
+
+
+/*FINAL QUOTE ...................................... */
+
+
+
+
+/* cuarta caja ..................................... */
+.dibujo {
+  width: 100%;
+  margin-top: 10%;
+}
+
+.dibujo img {
+  width: 100%;
+}
+
+/*quinta       caja ..................................... */
+/*ARTICULO DOS */
+.articulo-dos {
   display: flex;
-   flex-direction: row;
-   width: 100%;
-   margin-top: 20%;
-   margin-bottom: 20%;
-   padding-top: 0;
-   justify-content: space-between;
-   align-items: flex-start;
-   justify-content: flex-start;
-   }
+  flex-direction: row;
+  width: 100%;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  padding-top: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 
-    .articulo-dos .articulo-dos-uno{
+.articulo-dos .articulo-dos-uno {
   width: 44%;
   max-width: 270px;
   display: flex;
   flex-direction: column;
   padding-top: 0;
-  }
+}
 
 
-   .articulo-dos-uno-vacio{
-   width: 2%;
-   max-width: 20px;
-    }
+.articulo-dos-uno-vacio {
+  width: 2%;
+  max-width: 20px;
+}
 
-.articulo-dos-uno h1{
-line-height: 18px;
-font-weight: bolder;
-font-size: 1.3rem;
-word-spacing: 4px;
-letter-spacing: -1.5px;
-font-family: 'Archivo Black', sans-serif;
-margin-bottom: 12px;
+.articulo-dos-uno h1 {
+  line-height: 18px;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  word-spacing: 4px;
+  letter-spacing: -1.5px;
+  font-family: 'Archivo Black', sans-serif;
+  margin-bottom: 12px;
 }
 
 
@@ -501,47 +511,52 @@ margin-bottom: 12px;
 
 
 .articulo-dos-uno p {
-font-family: 'Times New Roman', Times, serif;
-font-size: 1.1rem;
-font-weight: 400;
-line-height: 1.45;
-color: #666;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #666;
 }
-  
+
 
 /*  FINAL PRIMERA COLUMNA ......................................................................*/
 
 
 /*  SEGUNDA COLUMNA ......................................................................*/
-  .fijo1{
+.fijo1 {
   width: 8%;
   max-width: 70px;
-  }
+}
+
 /*  FINAL SEGUNDA COLUMNA ......................................................................*/
 
 
-  .fija{
+.fija {
   display: flex;
   flex-direction: column;
   width: 43%;
-  max-width:  600px;
+  max-width: 600px;
   height: 90%;
   margin-bottom: 50%;
-  }
+  z-index: 100;
+}
 
-   .fija .imagen-estatica{
+.fija .imagen-estatica {
   width: 100%;
-  max-width:  600px;
+  max-width: 600px;
   height: 80%;
-  position: fixed ;
-  bottom:0;
-  }
- 
-  .imagen-estatica img{
-   width: 100%;
-   max-width: 600px;
-  }
- /*  FINAL SEGUNDA COLUMNA ...........................................
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+}
+
+.imagen-estatica img {
+  width: 100%;
+  max-width: 600px;
+  z-index: 100;
+}
+
+/*  FINAL SEGUNDA COLUMNA ...........................................
 
  
 
@@ -554,13 +569,13 @@ color: #666;
 
 
 
- 
 
 
 
 
- 
- 
+
+
+
 
 
 
@@ -569,47 +584,43 @@ color: #666;
 
 
 /* FOOTER ....................................... FOOTER...................................... */
-   #footer1{
-    clear: both;
-    position: relative;
-    height: 10px;
-    margin-top: -10px;
-   -webkit-box-shadow: 0px -3px 6px #DCDCDC;
-  -moz-box-shadow: 0px -3px 6px #DCDCDC;
-  box-shadow: 0px -3px 6px  #DCDCDC;
- 
+#footer1 {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  z-index: 1000;
-  bottom: 0; 
-  background-color: #000000;
- 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  clear: both;
+  -webkit-box-shadow: 0px -1px 3px #DCDCDC;
+  -moz-box-shadow: 0px -3px 6px #DCDCDC;
+  box-shadow: 0px -1px 3px #DCDCDC;
+  z-index: 2000;
+  background-color: #fff;
 }
 
-.footer-second1{
-    width: 100%;
-   max-width: 900px;
-    height: 10px;
-    margin-top: -10px;
-    background-color: black;
-    clear: both;
-    position: relative;
-    z-index: 1000; /*IMPORTANTE */
-margin: 0 auto;
-  }
- 
-  .footer-second1 p{
-    text-align: center;
-    color: #fff;
-    display: block;
-  
+#footer1 .footer-second1 {
+  width: 80%;
 
-    
-  }
- 
-  .footer-second1 p a{
-    color: #fff;
- }
- 
+  height: 10px;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
+  z-index: 2000;
+  /*IMPORTANTE */
+  margin: 0 auto;
+}
 
+.footer-second1 p {
+  text-align: center;
+  color: #000000;
+
+}
+
+.footer-second1 p a {
+  color: #000000;
+  text-align: center;
+}

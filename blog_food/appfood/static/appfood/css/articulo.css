@@ -1,526 +1,537 @@
-*{
-  margin:0;
-  padding:0;
-  border:0;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
+
 /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
- 
-*, *:before, *:after {
-box-sizing: border-box;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
-  float:left;
-  clear:both
- }
+  float: left;
+  clear: both
+}
 
 
- /*--IMPORTANTE COLOR DEL LOGO #3d6024 */
+/*--IMPORTANTE COLOR DEL LOGO #3d6024 */
 
-  body{
-  padding:0;
+body {
+  padding: 0;
   margin: 0;
   background-color: #fff;
-  color: rgba(0,0,0,.95);
-  font-family: "Argos",serif;
-   }
+  color: rgba(0, 0, 0, .95);
+  font-family: "Argos", serif;
+}
 
 
-   html, body {
-   line-height: 1.15;
-   -webkit-text-size-adjust: 100%;
-    height: 100%;
-   }
+html,
+body {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+}
 
 
-   /*line-height: 20pt;        /* para la separacion entre lineas */ 
-   /*text-indent: 30pt;  */ 
-    #wrapper-articulo {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-width:250px;
-    flex-wrap: wrap;
-    }
-      
-   #wrapper-articulo > * {
-   padding:20px;  
-   }
+/*line-height: 20pt;        /* para la separacion entre lineas */
+/*text-indent: 30pt;  */
+#wrapper-articulo {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 250px;
+  flex-wrap: wrap;
+}
 
-    
-   
-   div {
-    flex: 1;
-  }
-
-   
-   a {
-   color: #524c56;
-   text-decoration: none;
-   font-weight: lighter;
-   }
+#wrapper-articulo>* {
+  padding: 20px;
+}
 
 
-    #container-articulo{
-    display: flex;
-    flex-direction: column;
-    width:100%;
-    max-width: 1250px;
-    margin: auto;
-    height: auto;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 80px;
-    margin-bottom: 140px;
-    }
+
+div {
+  flex: 1;
+}
 
 
-    #controls-responsive{
-   display: none;
-    }
+a {
+  color: #524c56;
+  text-decoration: none;
+  font-weight: lighter;
+}
 
 
-   /*border-bottom: 2px solid #DDD;*/
-  header{
-    width:100%;
-    position: fixed;
-    z-index: 2000;   /*IMPORTANTE  */
-    top:0;
-    left: 0;
-    margin: auto;
-    height: 65px;
-    box-shadow: 0 8px 6px -6px #DCDCDC;
-    background-color: #fff;
-  }
-
-  header.black{
-   background-color:#fff ;
-   height:  65px;
-  }
-  
-  
-      /* BUSCADOR INTERNO RESPONSIVE*/
-      #controls-responsive{
-        display: none;
-      }
-     /*FIN BUSCADOR RESPONSIVE  ..*/  
+#container-articulo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+  height: auto;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 80px;
+  margin-bottom: 140px;
+}
 
 
-  .cabecera{
-    width: 100%;
-    max-width: 1250px;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-    margin-top: -2px;
-    z-index: 2;
-  }
-
-   /*caja */
-   .logo{
-    display: block;
-    position: relative;
-    float: left;
-    width: 22%;
-    max-width: 320px;
-    min-width: 290px;
-   height: 40px; 
-   }
-    
-
-   /*IMAGEN DEL LOGO*/
-   .logo img{
-    width: 100%;
-    height: 35px;  
-    max-width: 170px;
-    min-width: 170px; 
-    }
-     
-
-    
-       /*CONTAINER DEL BUSCADOR................. */
-       .cabecera .controls{
-      display: block;
-      position: relative;
-      float: left;
-      width: 34%;
-      max-width:590px;
-      min-width: 590px;
-      height: 40px;  
-      margin: auto;
-        }
+#controls-responsive {
+  display: none;
+}
 
 
-      .controls form{
-      width: 100%;
-      max-width: 460px;
-      height: 38px;  
-        }
+/*border-bottom: 2px solid #DDD;*/
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 2000;
+  /*IMPORTANTE  */
+  top: 0;
+  left: 0;
+  margin: auto;
+  height: 65px;
+  box-shadow: 0 8px 6px -6px #DCDCDC;
+  background-color: #fff;
+}
 
-    
-   /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
-   .cabecera  .controls form #custom-search-input{
-    width: 100%;
+header.black {
+  background-color: #fff;
+  height: 65px;
+}
+
+
+/* BUSCADOR INTERNO RESPONSIVE*/
+#controls-responsive {
+  display: none;
+}
+
+/*FIN BUSCADOR RESPONSIVE  ..*/
+
+
+.cabecera {
+  width: 100%;
+  max-width: 1250px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: -2px;
+  z-index: 2;
+}
+
+/*caja */
+.logo {
+  display: block;
+  position: relative;
+  float: left;
+  width: 22%;
+  max-width: 320px;
+  min-width: 290px;
+  height: 40px;
+}
+
+
+/*IMAGEN DEL LOGO*/
+.logo img {
+  width: 100%;
+  height: 35px;
+  max-width: 170px;
+  min-width: 170px;
+}
+
+
+
+/*CONTAINER DEL BUSCADOR................. */
+.cabecera .controls {
+  display: block;
+  position: relative;
+  float: left;
+  width: 34%;
+  max-width: 590px;
+  min-width: 590px;
+  height: 40px;
+  margin: auto;
+}
+
+
+.controls form {
+  width: 100%;
+  max-width: 460px;
+  height: 38px;
+}
+
+
+/*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
+.cabecera .controls form #custom-search-input {
+  width: 100%;
   height: 35px;
   display: flex;
   flex-direction: row;
-	border-radius: 0px;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   margin-top: 0.5px;
   box-shadow: 4px 8px 6px -6px #8c8c8c;
   background: #FEFEFE;
   background-image: linear-gradient(45deg, #FFF, #F9F9F9);
   border: 1px solid #FAFAFA;
-   }
+}
 
-  
- 
 
-  /*CAMPO SEARCH BUSCADOR */
-  .cabecera .controls form #custom-search-input .sin-borde{
+
+
+/*CAMPO SEARCH BUSCADOR */
+.cabecera .controls form #custom-search-input .sin-borde {
   border: 0px solid #fff;
-  -moz-border: 0px  solid #fff;
+  -moz-border: 0px solid #fff;
   -webkit-border: 0px solid #fff;
   width: 92%;
   height: 32px;
   background-color: #f8f8f8;
-  }
+}
 
 
- 
 
 
-    /*BOTOM BUSCADOR */
-     .controls form  #custom-search-input .boton{
-    border-right: 4px;
-    -moz-border-right: 2px;
-    -webkit-border-right: 2px;
-     width: 8%;
-     max-width: 55px;
-     height: 32px;
-    background-color: #fff;
-     }
 
-    .controls .icon .fa-search{
-    color: #000000;
-    font-size: 1em;
-    }
+/*BOTOM BUSCADOR */
+.controls form #custom-search-input .boton {
+  border-right: 4px;
+  -moz-border-right: 2px;
+  -webkit-border-right: 2px;
+  width: 8%;
+  max-width: 55px;
+  height: 32px;
+  background-color: #fff;
+}
 
-    .sin-borde::placeholder {
-      font-size: 0.8rem;
-      color: #2d2d2d;
-      height: 23px;
-      vertical-align: middle;
-      padding-top: 4px;
-        }
-   
+.controls .icon .fa-search {
+  color: #000000;
+  font-size: 1em;
+}
 
- 
-     /*CONTENEDOR  REVISTA Y SOCIALES*/
-      .suscribe{
-      position: relative;
-      float: right;
-      width: 20%;
-      max-width: 200px; /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
-      height: 40px;
-      }
-
-    .suscribe  a h4{
-      font-size: 0.9rem;
-      word-spacing: -3px;
-      letter-spacing: -0.7%;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 700;
-      color:#2d2d2d;
-      margin-top:  16px;
-      }
-  
-  
-
-   /*LETRA INSCRIBETE*/
-   .suscribe a h4:hover{
-    color: #639a3a;
-    text-decoration: none;
-   }
-   /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-
-    /*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
-   /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
-   .cabecera .menu-btn {
-     display: block;
-   position: relative;
-   float: right;
-   height: 40px;
-   width: 8%;
-   max-width: 38px;
-   min-width: 38px;
-    cursor: pointer;
-    z-index: 1000;
-    }
-
-  
-  .menu-btn .hamburguesa{
-    width: 100%;
-      max-width: 38px; /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
-      height: 40px;
-      display: block;
-      position: relative;
-      float: left;
-   }
-
-     /*---- box-shadow: 0 2px 5px rgba(255,101,47,.2);----------*/
-   .menu-btn .hamburguesa .menu-btn__burger {
-    display: block;
-    position: relative;
-    float: left;
-    margin: auto;
-    margin-top: 17.5px ;
-    width: 38px;
-   height: 4.2px;
-    background: #2d2d2d;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(255,101,47,.2);
-    transition: all .5s ease-in-out;
-    z-index: 1000;  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
-      }
-  
+.sin-borde::placeholder {
+  font-size: 0.8rem;
+  color: #2d2d2d;
+  height: 23px;
+  vertical-align: middle;
+  padding-top: 4px;
+}
 
 
-       /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
-  .menu-btn__burger::before,
-  .menu-btn__burger::after {
+
+/*CONTENEDOR  REVISTA Y SOCIALES*/
+.suscribe {
+  position: relative;
+  float: right;
+  width: 20%;
+  max-width: 200px;
+  /*VA RELACIONADO CON EL ANCHO DEL MENU BTN */
+  height: 40px;
+}
+
+.suscribe a h4 {
+  font-size: 0.9rem;
+  word-spacing: -3px;
+  letter-spacing: -0.7%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-top: 16px;
+}
+
+
+
+/*LETRA INSCRIBETE*/
+.suscribe a h4:hover {
+  color: #639a3a;
+  text-decoration: none;
+}
+
+/*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+
+/*  CONTAINER DE LA SUSCRIPCION Y DEL MENU COMBO*/
+/*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
+.cabecera .menu-btn {
+  display: block;
+  position: relative;
+  float: right;
+  height: 40px;
+  width: 8%;
+  max-width: 38px;
+  min-width: 38px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+.menu-btn .hamburguesa {
+  width: 100%;
+  max-width: 38px;
+  /*SI AUMENTO EL ANCHO DEL CONTAINER BOLETIN AQUI TAMBIEN DEBO AMPLAIR*/
+  height: 40px;
+  display: block;
+  position: relative;
+  float: left;
+}
+
+/*---- box-shadow: 0 2px 5px rgba(255,101,47,.2);----------*/
+.menu-btn .hamburguesa .menu-btn__burger {
+  display: block;
+  position: relative;
+  float: left;
+  margin: auto;
+  margin-top: 17.5px;
+  width: 38px;
+  height: 4.2px;
+  background: #2d2d2d;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+  transition: all .5s ease-in-out;
+  z-index: 1000;
+  /*MUY IMPORTANTE SIN ESTO NO SE PUEDE VER EL ASPA EN EL MENU NAV*/
+}
+
+
+
+/* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
+.menu-btn__burger::before,
+.menu-btn__burger::after {
   content: '';
   position: absolute;
   height: 4px;
   width: 37px;
-  background:#2d2d2d;
+  background: #2d2d2d;
   border-radius: 2px;
   transition: all .5s ease-in-out;
-  z-index: 800;  
-  }
+  z-index: 800;
+}
 
-    
-  .menu-btn__burger::before {
+
+.menu-btn__burger::before {
   transform: translateY(-8px);
-  z-index:3000;
-  }
+  z-index: 3000;
+}
 
 
-  .menu-btn__burger::after {
+.menu-btn__burger::after {
   transform: translateY(8px);
-  z-index:3000;
-  }
+  z-index: 3000;
+}
 
 
-  /* ANIMATION */
-  .hamburguesa.open .menu-btn__burger {
+/* ANIMATION */
+.hamburguesa.open .menu-btn__burger {
   transform: translateX(-50px);
   background: transparent;
   box-shadow: none;
-  }
+}
 
 
-   /* background: #fff;  */
-  .hamburguesa.open .menu-btn__burger::before {
+/* background: #fff;  */
+.hamburguesa.open .menu-btn__burger::before {
   transform: rotate(45deg) translate(35px, -35px);
- 
-  }
+
+}
 
 
-  /* background: #fff;  */
-  .hamburguesa.open .menu-btn__burger::after {
+/* background: #fff;  */
+.hamburguesa.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
-  }
+}
 
-  .menu-btn__burger:hover{
+.menu-btn__burger:hover {
   background-color: #7aac41;
-  }
-  
+}
 
-  .menu-btn__burger:hover::before,
-  .menu-btn__burger:hover::after{
+
+.menu-btn__burger:hover::before,
+.menu-btn__burger:hover::after {
   background-color: #7aac41;
-  }
+}
 
 
-     /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
+/*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
 
-  /* ESTE ES EL MENU NAV*/
+/* ESTE ES EL MENU NAV*/
 
- /*..INICIO NAV ESCONDIDO.....................*/
+/*..INICIO NAV ESCONDIDO.....................*/
 
- header nav{
+header nav {
   display: flex;
   flex-direction: column;
   position: fixed;
   width: 100%;
   height: 100%;
   margin: auto;
-  top:0;
+  top: 0;
   bottom: 0;
-  left: -100%;    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-   background-color: #000;
-   overflow-y: scroll;
-   z-index: 20;
-   visibility: visible;
-   box-sizing: border-box;
-  
-  }
+  left: -100%;
+  /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
+  background-color: #000;
+  overflow-y: scroll;
+  z-index: 20;
+  visibility: visible;
+  box-sizing: border-box;
 
-  nav::-webkit-scrollbar {
-    display: none;
-   }
-   
+}
 
-  /* #aaaaaa */
-  nav .logo-esconder{
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* #aaaaaa */
+nav .logo-esconder {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: space-between;
   width: 90%;
   margin-left: 50px;
   visibility: visible;
   height: 80px;
-   border-bottom: 1px solid #2d2d2d;
+  border-bottom: 1px solid #2d2d2d;
 
-  }
+}
 
-  nav .logo-esconder .logo-en-menu-responsive{
-    width: 30%;
-    max-width: 150px;
-    display: inline-flex;
-    height: 80px;
-    margin-left: 10px;
-  }
+nav .logo-esconder .logo-en-menu-responsive {
+  width: 30%;
+  max-width: 150px;
+  display: inline-flex;
+  height: 80px;
+  margin-left: 10px;
+}
 
- 
 
-   nav .logo-esconder .logo-en-menu-responsive img{
+
+nav .logo-esconder .logo-en-menu-responsive img {
   width: 100%;
   max-width: 120px;
   min-width: 120px;
   margin-top: 45px;
-  }
+}
 
-  nav .logo-esconder .emoticon{
+nav .logo-esconder .emoticon {
   width: 8%;
   height: 80px;
-   }
+}
 
 
-   nav .logo-esconder .suscriptor{
-   width: 30%;
-   height: 80px;
-   display: block;
-   position: relative;
-   float: right;
-    }
+nav .logo-esconder .suscriptor {
+  width: 30%;
+  height: 80px;
+  display: block;
+  position: relative;
+  float: right;
+}
 
-  nav .logo-esconder .suscriptor a h4{
+nav .logo-esconder .suscriptor a h4 {
   font-size: 0.8em;
   margin-top: 50px;
   color: #fff;
-  }
+}
 
-  nav .siguenos{
-    display: block;
-    width: 95%;
-    margin-top: 40px;
-    width: 90%;
-    margin-left: 50px;
-  }
+nav .siguenos {
+  display: block;
+  width: 95%;
+  margin-top: 40px;
+  width: 90%;
+  margin-left: 50px;
+}
 
-  nav .siguenos ul{
-    display: flex;
-    flex-direction: row;
-    width: 95%;
-    margin-left: 10px;
-  }
+nav .siguenos ul {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  margin-left: 10px;
+}
 
-   nav .siguenos h1{
-     font-size: 0.9em;
-     display: inline-flex;
-     margin: 10px 0;
-     padding: 5px 9px 5px 4px;
-     color: #fff;
-   }
+nav .siguenos h1 {
+  font-size: 0.9em;
+  display: inline-flex;
+  margin: 10px 0;
+  padding: 5px 9px 5px 4px;
+  color: #fff;
+}
 
-  nav .siguenos ul li{
-    margin: 10px 0;
-    list-style: none;
-    padding: 5px 9px 5px 4px;
+nav .siguenos ul li {
+  margin: 10px 0;
+  list-style: none;
+  padding: 5px 9px 5px 4px;
 
-  }
+}
 
 
-    nav .siguenos ul li .fa-envelope{
-    color: oldlace;
-    }
+nav .siguenos ul li .fa-envelope {
+  color: oldlace;
+}
 
-    nav .siguenos ul li .fa-facebook-f{
-    color: oldlace;  
-    }
+nav .siguenos ul li .fa-facebook-f {
+  color: oldlace;
+}
 
-    nav .siguenos ul li .fa-pinterest{
-    color: oldlace;
-    }
+nav .siguenos ul li .fa-pinterest {
+  color: oldlace;
+}
 
-    nav .siguenos ul li .fa-instagram{
-    color: oldlace;
-   }
-      
-   /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
-   nav .buscador-esconder{
-   display: flex;
-   flex-direction: column;
-   width: 85%;
-   visibility: visible;
-   margin-top: 40px;
-   width: 90%;
-   margin-left: 50px;
-   height: 50px;
-   }
+nav .siguenos ul li .fa-instagram {
+  color: oldlace;
+}
 
-    .d-flex{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    }
+/*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
+nav .buscador-esconder {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  visibility: visible;
+  margin-top: 40px;
+  width: 90%;
+  margin-left: 50px;
+  height: 50px;
+}
 
-   #custom-search{
-    width: 100%;
-    height: 50px;
-    border: 1px solid #2d2d2d;
-    border-radius: 8px;
-    }
+.d-flex {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
 
-   .buscador-esconder #custom-search input[type=text]{
-   box-sizing: border-box;
-   }
+#custom-search {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #2d2d2d;
+  border-radius: 8px;
+}
 
-   .buscador-esconder .d-flex #custom-search .sin-borde{
-    width: 90%;
-    height: 40px;
-    margin-top: 4px;
-    outline: none;
-    border-radius: 3px;
-    box-sizing: border-box;
-    display: block;
-    position: relative;
-    float: left;
-     }
+.buscador-esconder #custom-search input[type=text] {
+  box-sizing: border-box;
+}
 
-   .buscador-esconder .d-flex #custom-search .boton{
+.buscador-esconder .d-flex #custom-search .sin-borde {
+  width: 90%;
+  height: 40px;
+  margin-top: 4px;
+  outline: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  float: left;
+}
+
+.buscador-esconder .d-flex #custom-search .boton {
   width: 10%;
   height: 40px;
   border-radius: 1px;
@@ -530,175 +541,178 @@ a {
   margin-top: 4px;
   box-sizing: border-box;
   background-color: #fff;
-  }
+}
 
 
-   /*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
-    nav .nav .esconder{
-   visibility: visible;
-   }
+/*FIN DEL BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE*/
+nav .nav .esconder {
+  visibility: visible;
+}
 
-     nav .nav li a.active{
-    text-decoration:line-through;
-    color: #568632;
-    }
+nav .nav li a.active {
+  text-decoration: line-through;
+  color: #568632;
+}
 
-   /*.....................................*/
-     
-   /* UL  */
-   header  nav .nav{
-    width: 90%; 
-    height: 99%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    margin-left: 50px;
-    z-index: 10; 
-    background-color: #000;
-    }
+/*.....................................*/
 
-
-     /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
-     header  nav .nav li{
-    height: 25px;/*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-bottom: 10px;
-    border-bottom: 1px solid #2d2d2d;
-    z-index:  1; 
-    display: block;
-    }
-    
-   header nav .nav li a {
-    z-index: 1;
-    height: 24px;
-    color: #fff;
-    font-weight: 520;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: block;
-    }
-  
-    /*LI QUE SE OCULTA ES DEL MOVIL*/
-    nav .nav .li-movil {
-    display: none;
-    }
-
-    /*MUY IMPORTANTE PARA QUE EL SUBMENU ESTE POR ENCIMA DE LOS OTROS LI*/
-     nav .nav .li-pc {
-    display: block;
-    z-index: 2000;
-    }
- 
-
-     header nav .nav .li-pc:hover  .submenu-responsive {
-    display: block;
-     position: absolute;
-    visibility: visible;
-    z-index: 2;
-    }
-
-    
-    /*NAV UL LI UL*/
-     header  nav .nav .li-pc  .submenu-responsive {
-    display: none;
-    background-color:  #fff;
-    width: 100%;
-    max-width: 400px;
-    white-space: initial;
-    z-index:1000;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-     box-sizing: border-box;
-      }
+/* UL  */
+header nav .nav {
+  width: 90%;
+  height: 99%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-left: 50px;
+  z-index: 10;
+  background-color: #000;
+}
 
 
-       /*NAV UL LI UL LI*/
-       header nav .nav .li-pc .submenu-responsive li{
-    display:block;
-    position: relative;
-    float: left;
-    width: 400px;
-    margin-left: -2px;
-    margin-bottom: 0.5px;
-    z-index: 1000;
-  
-    border-bottom: 1px solid #000;
-      }
-  
-  
-       header nav .nav .li-pc .submenu-responsive li a{
-    font-size: 0.9rem;
-    display: block;
-    text-transform: lowercase;
-    padding-top: 2px;
-    z-index: 1500;
-    color: #000000;
-    background-color: #fff;
-    margin-left: 5px;
-    }
-    
+/*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+header nav .nav li {
+  height: 25px;
+  /*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
+  margin-bottom: 10px;
+  border-bottom: 1px solid #2d2d2d;
+  z-index: 1;
+  display: block;
+}
 
-        
-    nav .nav li ul {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 300px;
-    white-space: initial;
-    z-index:1000;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    }
-  
+header nav .nav li a {
+  z-index: 1;
+  height: 24px;
+  color: #fff;
+  font-weight: 520;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+}
 
-    
-    /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-    /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
-    nav .nav li:hover  ul {
-    display: block;
-    visibility: visible;
-    }
+/*LI QUE SE OCULTA ES DEL MOVIL*/
+nav .nav .li-movil {
+  display: none;
+}
+
+/*MUY IMPORTANTE PARA QUE EL SUBMENU ESTE POR ENCIMA DE LOS OTROS LI*/
+nav .nav .li-pc {
+  display: block;
+  z-index: 2000;
+}
 
 
-     nav .nav li ul li{
-      display:block;
-      border-bottom: 1px solid rgba(255,255,255,.5);
-      width: 350px;
-      margin-bottom: 0.5px;
-      z-index: 1500;
-      }
+header nav .nav .li-pc:hover .submenu-responsive {
+  display: block;
+  position: absolute;
+  visibility: visible;
+  z-index: 2;
+}
 
 
-    nav .nav li ul li a{
-    font-size: 0.9rem;
-    display: block;
-    text-transform: lowercase;
-    padding-top: 1px;
-      }
+/*NAV UL LI UL*/
+header nav .nav .li-pc .submenu-responsive {
+  display: none;
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  white-space: initial;
+  z-index: 1000;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-      /*..FIN NAV ESCONDIDO...........................*/
+
+/*NAV UL LI UL LI*/
+header nav .nav .li-pc .submenu-responsive li {
+  display: block;
+  position: relative;
+  float: left;
+  width: 400px;
+  margin-left: -2px;
+  margin-bottom: 0.5px;
+  z-index: 1000;
+
+  border-bottom: 1px solid #000;
+}
+
+
+header nav .nav .li-pc .submenu-responsive li a {
+  font-size: 0.9rem;
+  display: block;
+  text-transform: lowercase;
+  padding-top: 2px;
+  z-index: 1500;
+  color: #000000;
+  background-color: #fff;
+  margin-left: 5px;
+}
 
 
 
-    /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
-   nav  .estilo-logo:after{
-   text-decoration: none;
-   height: 0px;
-   content: "";
-   display: none;
-   margin-top: 0px;  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/ /*transition: all .8s;*/
-   height: 0px;
-   width: 0px;
-   transition: all .0s;
-   z-index: 10;
-   }
+nav .nav li ul {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  white-space: initial;
+  z-index: 1000;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 
- 
 
-  
-   /*FIN ANIMACION SUBRAYADO */
+/* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
+/*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+nav .nav li:hover ul {
+  display: block;
+  visibility: visible;
+}
+
+
+nav .nav li ul li {
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+  width: 350px;
+  margin-bottom: 0.5px;
+  z-index: 1500;
+}
+
+
+nav .nav li ul li a {
+  font-size: 0.9rem;
+  display: block;
+  text-transform: lowercase;
+  padding-top: 1px;
+}
+
+/*..FIN NAV ESCONDIDO...........................*/
+
+
+
+/*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
+nav .estilo-logo:after {
+  text-decoration: none;
+  height: 0px;
+  content: "";
+  display: none;
+  margin-top: 0px;
+  /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/
+  /*transition: all .8s;*/
+  height: 0px;
+  width: 0px;
+  transition: all .0s;
+  z-index: 10;
+}
+
+
+
+
+
+/*FIN ANIMACION SUBRAYADO */
 
 
 
@@ -706,9 +720,9 @@ a {
 /*................CONTAINER DEL BODY..ESTA ARRIBA DE TODO CON EL WRAPPER................................................................... */
 
 
-  /*PRIMER SEGMENTO EL MENU SIMPLE CON ARROW.......................... */
-  #menu-simple{
-  width:100%;
+/*PRIMER SEGMENTO EL MENU SIMPLE CON ARROW.......................... */
+#menu-simple {
+  width: 100%;
   height: 100%;
   max-height: 28px;
   margin-bottom: 35px;
@@ -718,1283 +732,1328 @@ a {
 }
 
 /* PRIMERA SECCION MENU ARROW*/
- #menu-simple li{
+#menu-simple li {
   list-style: none;
 
- }
+}
 
-   /*ANCHO IMPORTANTE PARA EL MENU   ES LI*/
-   #menu-simple  ul{
+/*ANCHO IMPORTANTE PARA EL MENU   ES LI*/
+#menu-simple ul {
   width: 100%;
   display: flex;
   flex-direction: row;
   height: 35px;
   overflow-x: auto;
   overflow-y: hidden;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-   white-space: nowrap;
- 
-   }
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  white-space: nowrap;
 
-   #menu-simple ul::-webkit-scrollbar { /* WebKit */
-    width: 0px;
-    height: 25px;
-    }
+}
 
-   /*ESTO ES LO MISMO QUE EL ANTERIOR?*/
+#menu-simple ul::-webkit-scrollbar {
+  /* WebKit */
+  width: 0px;
+  height: 25px;
+}
+
+/*ESTO ES LO MISMO QUE EL ANTERIOR?*/
 
 
-   #menu-simple  p{
-    letter-spacing: -0.4px;
-    font-size:  0.95rem;
-    line-height: 1.45;
-    color: #2d2d2d;
-    font-family: 'Times New Roman', Times, serif;
-    text-transform: uppercase;
-    font-weight: 900;
-    height: 2px; /*ESTO ARREGLO EL SUBRAYADO QUE SALIO MUY ABAJO */
- 
-  }
+#menu-simple p {
+  letter-spacing: -0.4px;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #2d2d2d;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  height: 2px;
+  /*ESTO ARREGLO EL SUBRAYADO QUE SALIO MUY ABAJO */
 
-  #menu-simple li p i {
+}
+
+#menu-simple li p i {
   border-width: 0 0.8px 0.8px 0;
   display: inline-block;
   padding: 3px;
-  margin-right: 9px;  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
- }
+  margin-right: 9px;
+  /*IMPORTANTE PARA SEPARAR ENTRE EL MENU*/
+}
 
-   #menu-simple .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    border: 2px solid #7aac41;
-    border-width: 0 2px 2px 0;
-  }
+#menu-simple .right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  border: 2px solid #7aac41;
+  border-width: 0 2px 2px 0;
+}
 
-  /* ANIMA CON RAYA AL HACE HOVER */
-   #menu-simple a {
- 
-    text-decoration: none;
-    }
+/* ANIMA CON RAYA AL HACE HOVER */
+#menu-simple a {
 
-   #menu-simple a:after {
-    content: "";
-    display: block;
-    height: 1px;  /*GROSOR DE LA RAYA*/
-    width: 0px;
-    transition: all .4s;
-    }
+  text-decoration: none;
+}
 
-    #menu-simple a:hover:after {
-    width: 100%;
-    width: 85%;   /*IMPORTANTE PARA EL ANCHO DE LA RAYA*/
-    margin-left: -2px;   /*IMPORTANTE PARA SITUAR LA RAYA*/
-    background: #639a3a;
-    }
-    
-    #menu-simple a:hover{
-      z-index: 40;
-      display: block;
-      }
-           /* FINAL MENU ARROW */
-
-
-
-
-
-
-   /*TERCER SEGMENTO COLUMNAS COLUMNAS ....................*/
-   #tres-columnas-articulo{
-    display: flex;
-    flex-direction: row;
-    width:100%;
-    max-width: 1220px;
-    margin-top: 2.2%;   /*IMPORTANTE */
-    }
-
-    /* COLUMNA  ..........PRIMERA  COLUMNA.....1-------------. */
-    .columna-primera{
-    width:800px;
-    display: flex;
-    flex-direction: column;
-    }
-
-   .primera-columna{
-    display: block;
-    position: relative;
-    width: 730px;
-    margin-bottom:10%;
-    }
-
-    .primero-descripcion-y-fotoprincipal{
-      display: block;
-      position: relative;
-      float: left;
-      width: 100%;
-      margin-bottom: 15px;
-     }
-     
- 
-
-   /*.........PRIMER TITULO ...................... */
-    .primer-articulo{
-    display: block;
-    position: relative;
-    float: left;
-    width: 100%;
-    }
-  
-  
-   .primer-articulo h1{ 
-    width: 100%;
-    font-size: 3.1rem;
-    word-spacing: -2.3px;
-    letter-spacing: -1.5px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 600;
-    text-align:start;
-    text-decoration-line: underline;
-    color: #000000; 
-    margin-bottom: 20px;
-    }
-  
-     /*............................P...............*/
-    .primer-articulo p{
-    font-family: 'Times New Roman', Times, serif ;
-    font-size: 1.2rem;
-    font-weight:400;
-    line-height: 22px;
-    letter-spacing: 0.4px;
-    color: #2d2d2d;
-    display: block;
-    padding-bottom: 10px;  /*SOLO ESTO SEPARABA*/
-     }
-
-
- 
-
-  /*.FOTO AUTOR Y FECHA*/
-   .row-autor-nombre-fecha{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-   }
-
-
-   .fecha{
-     display: block;
-     position: relative;
-     float: right;
-     width: 65%;
-     height: 20px;
-     margin-top: 22px;
-   }
-
-   .fecha p{
-    font-size: 0.8rem;
-    text-align: center;
-   }
-
-
-   .row-autor-nombre{
-    display: block;
-    position: relative;
-    float: left;
-    width: 28%;
-    max-width: 200px;
-   }
-
-   .row-autor-nombre .autor-foto{
-      display: block;
-      position: relative;
-      float: left;
-      width: 32%;
-    }
-
-    .autor-foto img{
-      width: 100% ;
-      max-width: 50px;
-      height: 50px;
-     }
-    
-     /*CONTTIENE FOTO Y NOMBRE*/
-     .row-autor-nombre  .autor-letra{
-      width: 68%;
-      height: 50px;
-      display: block;
-      position: relative;
-      float: right;
-     
-    }
-
-
-   /*NOMBRE DE AUTOR*/
-   .autor-letra h3{
-   font-size: 0.9rem;
-   color: #000000;
-   margin-top: 15px;
-   }
-
-     /*ESTO SOLO PARA LA PAGINA DIETAS ESPECIALES*/
-     .autor-solo-nombre{
-     width: 100%;
-     }
-
-       /*............P.............*/
-     .autor-solo-nombre p{
-       color: #000000;
-       font-size: 1.1rem;
-       font-family: 'Times New Roman', Times, serif;
-       font-weight: 600;
-     }
-
-
-
- 
-
-   /*primera caja ...DEJARLO POR SI ACASO.................................. */
-  .imagen-central{
-   width: 100%;
-   display: flex;
-   flex-direction: row;
-   margin-top: 25px;
-   margin-bottom: 30px;
-  }
-
- 
-
-      /*CONTAINER QUE DIVIDE N DOS COLUMNAS 
-  segundo articulo en adelante...*/
-   .articulovacio-articulolleno{
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    max-width: 720px;
-  }
-
-   .articulovacio{
-    width: 9.8%;
-    display: block;
-    position: relative;
-    float:left;
-    margin: auto;
-   }
-
-   .articulovacio .redes{
-    display: inline-flex;
-    width: 100%;
-    max-width: 65px;
-    }
-
-
-   .iconos-social{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    }
-  
-    .iconos-social li{
-    list-style: none;
-    margin-bottom: 10px;
-    }
-
-   .iconos-social  li .fa-envelope{
-    padding: 8px 8px 8px 8px;
-    color: #7aac41;
-    font-size:  10px;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #7aac41; 
-    border-radius: 9px;
-    }
-  
-    .iconos-social li .fa-facebook-f{
-    padding: 8px 8px 8px 8px;
-    color: #7aac41;
-    font-size:  10px;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #7aac41;
-    border-radius: 9px;
-    }
-  
-    .iconos-social  li .fa-pinterest{
-      padding: 8px 8px 8px 8px;
-    color: #7aac41;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #7aac41;
-    border-radius: 9px;
-    }
-  
-   .iconos-social  li .fa-instagram{
-    border-radius: 15px;
-    color:  #7aac41;
-    padding: 8px 8px 8px 8px;
-    font-size:  9px;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #7aac41;
-    border-radius: 9px;
-   
-  }
-  
-
-
-
-     .articulolleno{
-       display: block;
-       position: relative;
-       float: right;
-       width: 88%;
-     }
-
-
-     .articulolleno .imagen-central{
-      width: 100%;
-      display: block;
-      margin-bottom: 30px;
-     }
-   
-
-     .articulolleno .imagen-principal {
-      width: 100%;
-     }
-  
-  
-     .articulolleno .imagen-principal img{
-      width: 100%;
-     }
-  
-     
-  
-   /*..SEGUNDO ARTICULO....... */
-   .segundo-articulo{
-   display: block;
-   width: 100%;
-   margin-top: 10px;
-   }
- 
-   /*..........SEGUNDO TITULO.... - segundo articulo........ */
-    .segundo-articulo h1{   
-    font-size: 1.8rem;
-      word-spacing: -1px;
-      letter-spacing: -0.8px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 800;
-      color: black;
-    }
-
-    /*..........P...................*/
-  .segundo-articulo p{
-  font-family:  'Times New Roman', Times, serif;
-  font-size: 1.2rem;
-  color:  #2d2d2d;
-  letter-spacing: 0.4px;
-  font-weight:400;
-  line-height: 22px;
+#menu-simple a:after {
+  content: "";
   display: block;
-  }
+  height: 1px;
+  /*GROSOR DE LA RAYA*/
+  width: 0px;
+  transition: all .4s;
+}
 
+#menu-simple a:hover:after {
+  width: 100%;
+  width: 85%;
+  /*IMPORTANTE PARA EL ANCHO DE LA RAYA*/
+  margin-left: -2px;
+  /*IMPORTANTE PARA SITUAR LA RAYA*/
+  background: #639a3a;
+}
 
-    .cursiva{
-    display: block;
-    width:  100%;
-    border-left: 1px solid #DDD;
-    margin-top: 40px;
-    margin-bottom: 60px;
-    }
+#menu-simple a:hover {
+  z-index: 40;
+  display: block;
+}
 
-    /*.............P.................*/
-   .cursiva p{
-   margin-left: 30px;
-   margin-right: 30px;
-   margin-top:  -33px;
-   font-family: 'Times New Roman', Times, serif;
-   font-size: 1.2rem;
-   font-weight: 300;
-   line-height: 24px;
-   color: #2d2d2d;
-    }
-
-
-    .cursiva-quote::before { 
-    content: "\201C"; /* inicio comilla */
-    width: 30%;
-    font-family: Georgia;
-    font-size:40px; /* tamaño */
-    font-weight: bold; 
-    line-height: 70px;
-    color:#DDD; /* Color  */
-    margin-left: 8px;
-    display: block;
-    }
-   
-    
-      .cursiva-quote::after{ /* final */
-      content: "\201D";
-      font-family: Georgia;
-      font-size:40px; /* tamaño */
-      font-weight: bold;
-      line-height:0px;
-      color: #DDD; /* Color  */
-      margin-bottom: 0.2px;
-      margin-left:  600px;
-      display: block;
-      }
-     /*...................................................................*/
-
-
-   /*QUOTE ............................................ */
-   .blockquote{
-    width:99.8%;
-    margin: 40px 0px;  /*espaciado top left. */
-    padding: 46px;
-    border:  0.5px solid #DDD;
-    color:   #2d2d2d;
-    box-sizing: border-box;
-    font-family:  'sans-serif' ;
-    font-size: 1.15rem;
-    font-weight:400;
-    line-height: 1.3;
-    }
-   
-    /*LINEA PARALELA DEL COSTADO*/
-    .blockquote-bordered{
-      border-left-width: 5px;
-      }
-      
-   /*BLOQUE DEL PARAFO PARA DISTANCIAR DE LAS COMILLAS*/
-   .blockquote-text {
-    margin-left: 1px;
-    margin-top: 14px;
-    margin-bottom: 14px;
-   }
-  
-   .blockquote-text p{
-   font-size: 1.2rem;
-   line-height: 22px;
-   margin:auto;
-   color:#2d2d2d;
-   width: 90%;
-   font-family:  'sans-serif' ;
-   font-weight:400;
-   }
-   
-   
-   .blockquote-text:not(:last-child){
-     margin-bottom: 1em;
-   }
-     
-       .blockquote-quoted::before { 
-       content: "\201C"; /* inicio comilla */
-       width: 30%;
-       font-family: Georgia;
-       font-size:65px; /* tamaño */
-       font-weight: bold; 
-       line-height: 0px;
-       color: #DDD; /* Color  */
-       margin-bottom: -20px;
-       margin-left: -42px;
-       display: block;
-       }
-   
-     
-     
-       .blockquote-quoted::after{ /* final */
-        content: "\201D";
-        font-family: Georgia;
-        font-size:65px; /* tamaño */
-        font-weight: bold;
-        line-height:0px;
-        color:#DDD; /* Color  */
-        margin-top: 15px;
-       margin-bottom: 0.2px;
-        margin-left:  520px;
-        display: block;
-        }
-  
-       .blockquote-text-credit{
-       text-align: right;
-       width: 90%;  
-       }
-     
-      /*rayita delante del nombre de autor ....... */
-      .blockquote-text-credit::before{
-       content: "\2014\0020";
-       }
-     /*FINAL QUOTE ...................................... */
-    
-
-
-  /*........ESTE SOLO ES DEL POST TURISMO................................*/
-    .articulo-titulo{
-    width: 100%;
-  }
-   
-    .articulo-titulo h1{
-    font-size: 1.8rem;
-    color:#000000;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-   
-    }
-
-        /*container de dos imagenes*/
-     .articulo-imagen{
-      width: 100%;
-      display: block;
-      }
-   
-  
-      .articulo-imagen img{
-      width: 100%;
-      max-width: 840px;
-      }
-
-      .articulo{
-        width: 100%;
-        }
-      
-    /*....DESCRIPCION DEL ARTICULO TURISMO NOTICIAS...............*/
-    .articulo  p{
-    font-family:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: 1.2rem;
-    font-weight:400;
-    line-height: 1.3;
-    color: #2d2d2d;
-    }
-
-
-   .imagen-sola{
-    width: 100%;
-    }
-
-  .imagen-sola img{
-    width: 100%;
-  }
-
-  /*FIN ...........................*/
+/* FINAL MENU ARROW */
 
 
 
 
-    /*................................................................................................*/
-   /*DE POST DE DIETAS APPBLOG*/
-   /*CONTAINER TOTAL ----*/
 
-     .primera-columna .contentwo{
-      width: 100%;
-      margin-bottom: 60px;
-     }
 
-    .contentwo .title-two{
-       display: block;
-       width: 100%;
-     }
+/*TERCER SEGMENTO COLUMNAS COLUMNAS ....................*/
+#tres-columnas-articulo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1220px;
+  margin-top: 2.2%;
+  /*IMPORTANTE */
+}
 
-   
-     /*--------------H1-------------------------------*/
-     .contentwo .title-two h1{
-      font-size: 1.8rem;
-      word-spacing: -1px;
-      letter-spacing: -0.8px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 800;
-      color: black;
-     }
+/* COLUMNA  ..........PRIMERA  COLUMNA.....1-------------. */
+.columna-primera {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
 
-     .contentwo  .subtitle-two{
-     display: block;
-     width: 100%;
-     }
+.primera-columna {
+  display: block;
+  position: relative;
+  width: 730px;
+  margin-bottom: 10%;
+}
 
-     .contentwo  .subtitle-two h2{
-      font-size: 1.5rem;
-      color: #000000;
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 800;
-    }
-
-    
-    .image-two{
-     width: 100%;
-    }
-
-    .image-two img{
-     width: 100%;
-   }
-
-    /*PARRAFO..*/
-   .contentwo  .content-two{
-        display: block;
-       width: 100%;
-      }
-
-      /*...ARTICULO DE DIETAS DEL TERCER PARRAFO EN ADELANTE..*/
-      /*--------------P-----------------------*/
-       .content-two  p{
-        font-family:  'Times New Roman', Times, serif;
-        font-size: 1.2rem;
-        color:  #2d2d2d;
-        letter-spacing: 0.6px;
-        font-weight:400;
-        line-height: 22px;
-      }
-
-  /*.....................................................*/
+.primero-descripcion-y-fotoprincipal {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
 
 
 
-   /*--PLAN COMIDAS------------------------*/
-   .semana{
-    display: block;
-    position: relative;
-    float: left;
-     width: 100%;
-   }
- 
-    /*CAJA DE LA FOTO DIETA DIARIA*/
-     .imagen-semana{
-      width: 100%;
-     }
-     
-     .imagediaone img{
-       width: 100%;
-     }
+/*.........PRIMER TITULO ...................... */
+.primer-articulo {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+}
 
 
-    .imagen-semana-dos {
-      width: 100%;
-    }
-     
-     .titulo-semana{
-       width: 100%;
+.primer-articulo h1 {
+  width: 100%;
+  font-size: 3.1rem;
+  word-spacing: -2.3px;
+  letter-spacing: -1.5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  text-align: start;
+  text-decoration-line: underline;
+  color: #000000;
+  margin-bottom: 20px;
+}
 
-     }
-
-     .titulo-semana  h2{
-     font-size: 2.8rem;
-     color: #000000;
-    }
-
-    .descripcion-semana{
-      width: 100%;
-     }
-
-    .descripcion-semana p{
-      font-size: 1.2rem;
-      font-family: 'Times New Roman', Times, serif;
-      color: #2d2d2d;
-      background-color: #8c8c8c;
-    }
-
-    
-   /*DIA....*/
-    .container-dia{
-      display: block;
-      position: relative;
-      float: left;
-      width: 100%;
-      margin-top: 40px;
-    }
-
-
-   .plan-titulo-dia{
-    width: 100%;
-    }
-
-
-    .plan-titulo-dia h2{
-    font-size: 2.2rem;
-    font-family: "Argos Bold",serif;
-    color: #000000;
-    font-weight: 700;
-     }
-
-    .imagen-dia{
-      width: 100%;
-    }
+/*............................P...............*/
+.primer-articulo p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.4px;
+  color: #2d2d2d;
+  display: block;
+  padding-bottom: 10px;
+  /*SOLO ESTO SEPARABA*/
+}
 
 
 
-   /*..DE CONTAINER DIA SU DESCRIPCION..*/
-    .dia{
-      width: 100%;
-      display: block;
-      position: relative;
-      float: left;
-    }
 
-     /*DESCRIPCION DE PLAN POST COMIDAS...*/
-    .dia p{
-      font-family:  'Times New Roman', Times, serif;
-        font-size: 1.2rem;
-        color:  #2d2d2d;
-        letter-spacing: 0.6px;
-        font-weight:400;
-        line-height: 22px;
-     
-    }
-
-     /*PARTE FINAL DEL POST CONCLUSIONES*/
-     .resumen-del-post{
-      display: block;
-      position: relative;
-      float: left;
-      width: 100%;
-      margin-top: 35px;
-      margin-bottom: 45px;
-     }
-
-       /*..PARTE FINAL DE POST PLAN............*/
-     .resumen-del-post .title-fin{
-       display: block;
-      }
-
-      .resumen-del-post .title-fin h2{
-        font-size: 1.4rem;
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: 800;
-        color: black;
-       }
+/*.FOTO AUTOR Y FECHA*/
+.row-autor-nombre-fecha {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
 
 
-      .resumen-del-post  .content-fin{
-       width: 100%;
-     display: block;
-     }
+.fecha {
+  display: block;
+  position: relative;
+  float: right;
+  width: 65%;
+  height: 20px;
+  margin-top: 22px;
+}
 
-     .resumen-del-post  .content-fin p{
-       font-size: 1.1rem;
-       font-weight: 400;
-       color: #2d2d2d;
-    }
- 
-  
-  /*FIN DIETAS ESPECIALES*/
+.fecha p {
+  font-size: 0.8rem;
+  text-align: center;
+}
 
-     /*..CAJA ARTICULO ULTIMO ................. */
-     /*--CONTIENE ULTIMA REDACCION AUTOR Y FOTO Y CATEGORIA SIN LINK.................................................*/
-      .articulo-ultimo{
-     display: block;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      width: 100%;
-      }
- /*........TITULO ULTIMO DE PERDERPESO   (TERCERO Y ULTIMO)  ................ */
-    
 
-      
-  /*--CATEGORIA QUE ESTA SIN LINK SOLO VA LA CATEGORIA ACTUAL..*/
-  .categoria-en-post {
+.row-autor-nombre {
+  display: block;
+  position: relative;
+  float: left;
+  width: 28%;
+  max-width: 200px;
+}
+
+.row-autor-nombre .autor-foto {
+  display: block;
+  position: relative;
+  float: left;
+  width: 32%;
+}
+
+.autor-foto img {
+  width: 100%;
+  max-width: 50px;
+  height: 50px;
+}
+
+/*CONTTIENE FOTO Y NOMBRE*/
+.row-autor-nombre .autor-letra {
+  width: 68%;
+  height: 50px;
+  display: block;
+  position: relative;
+  float: right;
+
+}
+
+
+/*NOMBRE DE AUTOR*/
+.autor-letra h3 {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-top: 15px;
+}
+
+/*ESTO SOLO PARA LA PAGINA DIETAS ESPECIALES*/
+.autor-solo-nombre {
+  width: 100%;
+}
+
+/*............P.............*/
+.autor-solo-nombre p {
+  color: #000000;
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+
+
+
+
+
+/*primera caja ...DEJARLO POR SI ACASO.................................. */
+.imagen-central {
   width: 100%;
   display: flex;
   flex-direction: row;
-  }
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
 
-  /*--CATEGORIA QUE ESTA SIN LINK SOLO VA LA CATEGORIA ACTUAL..*/
-  .categoria-en-post h2{
+
+
+/*CONTAINER QUE DIVIDE N DOS COLUMNAS 
+  segundo articulo en adelante...*/
+.articulovacio-articulolleno {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  max-width: 720px;
+}
+
+.articulovacio {
+  width: 9.8%;
+  display: block;
+  position: relative;
+  float: left;
+  margin: auto;
+}
+
+.articulovacio .redes {
+  display: inline-flex;
+  width: 100%;
+  max-width: 65px;
+}
+
+
+.iconos-social {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.iconos-social li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.iconos-social li .fa-envelope {
+  padding: 8px 8px 8px 8px;
+  color: #7aac41;
+  font-size: 10px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #7aac41;
+  border-radius: 9px;
+}
+
+.iconos-social li .fa-facebook-f {
+  padding: 8px 8px 8px 8px;
+  color: #7aac41;
+  font-size: 10px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #7aac41;
+  border-radius: 9px;
+}
+
+.iconos-social li .fa-pinterest {
+  padding: 8px 8px 8px 8px;
+  color: #7aac41;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #7aac41;
+  border-radius: 9px;
+}
+
+.iconos-social li .fa-instagram {
+  border-radius: 15px;
+  color: #7aac41;
+  padding: 8px 8px 8px 8px;
+  font-size: 9px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #7aac41;
+  border-radius: 9px;
+
+}
+
+
+
+
+.articulolleno {
+  display: block;
+  position: relative;
+  float: right;
+  width: 88%;
+}
+
+
+.articulolleno .imagen-central {
+  width: 100%;
+  display: block;
+  margin-bottom: 30px;
+}
+
+
+.articulolleno .imagen-principal {
+  width: 100%;
+}
+
+
+.articulolleno .imagen-principal img {
+  width: 100%;
+}
+
+
+
+/*..SEGUNDO ARTICULO....... */
+.segundo-articulo {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/*..........SEGUNDO TITULO.... - segundo articulo........ */
+.segundo-articulo h1 {
+  font-size: 1.8rem;
+  word-spacing: -1px;
+  letter-spacing: -0.8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  color: black;
+}
+
+/*..........P...................*/
+.segundo-articulo p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  color: #2d2d2d;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  line-height: 22px;
+  display: block;
+}
+
+
+.cursiva {
+  display: block;
+  width: 100%;
+  border-left: 1px solid #DDD;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+/*.............P.................*/
+.cursiva p {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: -33px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 24px;
+  color: #2d2d2d;
+}
+
+
+.cursiva-quote::before {
+  content: "\201C";
+  /* inicio comilla */
+  width: 30%;
+  font-family: Georgia;
+  font-size: 40px;
+  /* tamaño */
+  font-weight: bold;
+  line-height: 70px;
+  color: #DDD;
+  /* Color  */
+  margin-left: 8px;
+  display: block;
+}
+
+
+.cursiva-quote::after {
+  /* final */
+  content: "\201D";
+  font-family: Georgia;
+  font-size: 40px;
+  /* tamaño */
+  font-weight: bold;
+  line-height: 0px;
+  color: #DDD;
+  /* Color  */
+  margin-bottom: 0.2px;
+  margin-left: 600px;
+  display: block;
+}
+
+/*...................................................................*/
+
+
+/*QUOTE ............................................ */
+.blockquote {
+  width: 99.8%;
+  margin: 40px 0px;
+  /*espaciado top left. */
+  padding: 46px;
+  border: 0.5px solid #DDD;
+  color: #2d2d2d;
+  box-sizing: border-box;
+  font-family: 'sans-serif';
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/*LINEA PARALELA DEL COSTADO*/
+.blockquote-bordered {
+  border-left-width: 5px;
+}
+
+/*BLOQUE DEL PARAFO PARA DISTANCIAR DE LAS COMILLAS*/
+.blockquote-text {
+  margin-left: 1px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.blockquote-text p {
+  font-size: 1.2rem;
+  line-height: 22px;
+  margin: auto;
+  color: #2d2d2d;
+  width: 90%;
+  font-family: 'sans-serif';
+  font-weight: 400;
+}
+
+
+.blockquote-text:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.blockquote-quoted::before {
+  content: "\201C";
+  /* inicio comilla */
+  width: 30%;
+  font-family: Georgia;
+  font-size: 65px;
+  /* tamaño */
+  font-weight: bold;
+  line-height: 0px;
+  color: #DDD;
+  /* Color  */
+  margin-bottom: -20px;
+  margin-left: -42px;
+  display: block;
+}
+
+
+
+.blockquote-quoted::after {
+  /* final */
+  content: "\201D";
+  font-family: Georgia;
+  font-size: 65px;
+  /* tamaño */
+  font-weight: bold;
+  line-height: 0px;
+  color: #DDD;
+  /* Color  */
+  margin-top: 15px;
+  margin-bottom: 0.2px;
+  margin-left: 520px;
+  display: block;
+}
+
+.blockquote-text-credit {
+  text-align: right;
+  width: 90%;
+}
+
+/*rayita delante del nombre de autor ....... */
+.blockquote-text-credit::before {
+  content: "\2014\0020";
+}
+
+/*FINAL QUOTE ...................................... */
+
+
+
+/*........ESTE SOLO ES DEL POST TURISMO................................*/
+.articulo-titulo {
+  width: 100%;
+}
+
+.articulo-titulo h1 {
+  font-size: 1.8rem;
+  color: #000000;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+
+}
+
+/*container de dos imagenes*/
+.articulo-imagen {
+  width: 100%;
+  display: block;
+}
+
+
+.articulo-imagen img {
+  width: 100%;
+  max-width: 840px;
+}
+
+.articulo {
+  width: 100%;
+}
+
+/*....DESCRIPCION DEL ARTICULO TURISMO NOTICIAS...............*/
+.articulo p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #2d2d2d;
+}
+
+
+.imagen-sola {
+  width: 100%;
+}
+
+.imagen-sola img {
+  width: 100%;
+}
+
+/*FIN ...........................*/
+
+
+
+
+/*................................................................................................*/
+/*DE POST DE DIETAS APPBLOG*/
+/*CONTAINER TOTAL ----*/
+
+.primera-columna .contentwo {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.contentwo .title-two {
+  display: block;
+  width: 100%;
+}
+
+
+/*--------------H1-------------------------------*/
+.contentwo .title-two h1 {
+  font-size: 1.8rem;
+  word-spacing: -1px;
+  letter-spacing: -0.8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  color: black;
+}
+
+.contentwo .subtitle-two {
+  display: block;
+  width: 100%;
+}
+
+.contentwo .subtitle-two h2 {
+  font-size: 1.5rem;
+  color: #000000;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+}
+
+
+.image-two {
+  width: 100%;
+}
+
+.image-two img {
+  width: 100%;
+}
+
+/*PARRAFO..*/
+.contentwo .content-two {
+  display: block;
+  width: 100%;
+}
+
+/*...ARTICULO DE DIETAS DEL TERCER PARRAFO EN ADELANTE..*/
+/*--------------P-----------------------*/
+.content-two p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  color: #2d2d2d;
+  letter-spacing: 0.6px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/*.....................................................*/
+
+
+
+/*--PLAN COMIDAS------------------------*/
+.semana {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+/*CAJA DE LA FOTO DIETA DIARIA*/
+.imagen-semana {
+  width: 100%;
+}
+
+.imagediaone img {
+  width: 100%;
+}
+
+
+.imagen-semana-dos {
+  width: 100%;
+}
+
+.titulo-semana {
+  width: 100%;
+
+}
+
+.titulo-semana h2 {
+  font-size: 2.8rem;
+  color: #000000;
+}
+
+.descripcion-semana {
+  width: 100%;
+}
+
+.descripcion-semana p {
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #2d2d2d;
+  background-color: #8c8c8c;
+}
+
+
+/*DIA....*/
+.container-dia {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 40px;
+}
+
+
+.plan-titulo-dia {
+  width: 100%;
+}
+
+
+.plan-titulo-dia h2 {
+  font-size: 2.2rem;
+  font-family: "Argos Bold", serif;
+  color: #000000;
+  font-weight: 700;
+}
+
+.imagen-dia {
+  width: 100%;
+}
+
+
+
+/*..DE CONTAINER DIA SU DESCRIPCION..*/
+.dia {
+  width: 100%;
+  display: block;
+  position: relative;
+  float: left;
+}
+
+/*DESCRIPCION DE PLAN POST COMIDAS...*/
+.dia p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  color: #2d2d2d;
+  letter-spacing: 0.6px;
+  font-weight: 400;
+  line-height: 22px;
+
+}
+
+/*PARTE FINAL DEL POST CONCLUSIONES*/
+.resumen-del-post {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+
+/*..PARTE FINAL DE POST PLAN............*/
+.resumen-del-post .title-fin {
+  display: block;
+}
+
+.resumen-del-post .title-fin h2 {
+  font-size: 1.4rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+  color: black;
+}
+
+
+.resumen-del-post .content-fin {
+  width: 100%;
+  display: block;
+}
+
+.resumen-del-post .content-fin p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #2d2d2d;
+}
+
+
+/*FIN DIETAS ESPECIALES*/
+
+/*..CAJA ARTICULO ULTIMO ................. */
+/*--CONTIENE ULTIMA REDACCION AUTOR Y FOTO Y CATEGORIA SIN LINK.................................................*/
+.articulo-ultimo {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/*........TITULO ULTIMO DE PERDERPESO   (TERCERO Y ULTIMO)  ................ */
+
+
+
+/*--CATEGORIA QUE ESTA SIN LINK SOLO VA LA CATEGORIA ACTUAL..*/
+.categoria-en-post {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/*--CATEGORIA QUE ESTA SIN LINK SOLO VA LA CATEGORIA ACTUAL..*/
+.categoria-en-post h2 {
   font-size: 1.1rem;
   font-family: 'Times New Roman', sans serif;
-  color:#000000;
+  color: #000000;
   font-weight: 900;
   display: block;
   position: relative;
   float: left;
   margin-right: 6px;
-  }
+}
 
-   .categoria-en-post p{
-     display: block;
-     position: relative;
-     float: right;
-     font-size: 1.1rem;
-     color: #2d2d2d;
-     font-family: 'Times New Roman', Times, serif;
-    
-   }
-   /*FIN HASTA AQUI ARTICULO ULTIMO.................................................................*/
+.categoria-en-post p {
+  display: block;
+  position: relative;
+  float: right;
+  font-size: 1.1rem;
+  color: #2d2d2d;
+  font-family: 'Times New Roman', Times, serif;
 
+}
 
-   /*CONTENEDOR DE CATEGORIAS CON LINKS*/
-  .categorias-posts-links{
-    width: 100%;
-    display: block;
-    position: relative;
-    float: left;
-    margin-top: 8px;
-    margin-bottom: 40px;
-    border-bottom: 1.5px solid	#DCDCDC;
-    }
-
-   /*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA SIN TIENEN LINK..*/
-       .categorias-posts-links p{
-        font-size: 1.1rem;
-        font-family: 'Times New Roman', sans serif;
-        color:#2d2d2d;
-       }
-
-  /*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA CON  LINK..*/
-   .categorias-posts-links h4{
-    font-size: 1.1rem;
-    font-family: 'Times New Roman', sans serif;
-    color:#000000;
-    font-weight: 900;
-   }
-
-   .categorias-posts-links h3{
-    font-size: 1.1rem;
-    font-family: 'Times New Roman', sans serif;
-    color:#2d2d2d;
-    display: inline-block;
-    }
+/*FIN HASTA AQUI ARTICULO ULTIMO.................................................................*/
 
 
+/*CONTENEDOR DE CATEGORIAS CON LINKS*/
+.categorias-posts-links {
+  width: 100%;
+  display: block;
+  position: relative;
+  float: left;
+  margin-top: 8px;
+  margin-bottom: 40px;
+  border-bottom: 1.5px solid #DCDCDC;
+}
 
-    /*SEGUNDA COLUMNA .....................................2............. */
-    .segunda-columna{
-    width:10%;
-    max-width: 180px;
-    display: flex;
+/*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA SIN TIENEN LINK..*/
+.categorias-posts-links p {
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', sans serif;
+  color: #2d2d2d;
+}
 
-    }
+/*..CATEGORIAS QUE VAN DEBAJO DE LA CATEGORIA ACTUAL SIN LINKS, ESTA CON  LINK..*/
+.categorias-posts-links h4 {
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', sans serif;
+  color: #000000;
+  font-weight: 900;
+}
 
-    /*....ASIDE TERCERA COLUMNA DE LOS POSTS APPERDERPESO Y APPBLOG......................*/   
-    /*TERCERA COLUMNA  ......................3.......COLUMNA...... */
-    .tercera-columna-fija{
-    width: 15%;
-    max-width: 220px;
-    display: flex;
-    flex-direction: column;
-         }
+.categorias-posts-links h3 {
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', sans serif;
+  color: #2d2d2d;
+  display: inline-block;
+}
 
-         .tercera-columna{
-          width:100%;
-          display: block;
-          max-height: 300px;
-          height: 100%;
-          margin-top: 20px;
-         }
 
-         .tercera-columna h2{
-           font-family: 'Times New Roman', Times, serif;
-         font-size: 1.2rem;
-         color: #000000;
-         font-weight: 900;
-         }
 
-         /*ASIDE IMAGEN Y TUTULO*/
-         .aside-colum{
-           width: 100%;
-         }
+/*SEGUNDA COLUMNA .....................................2............. */
+.segunda-columna {
+  width: 10%;
+  max-width: 180px;
+  display: flex;
 
-         .tercera-columna  a h1{
-          font-size: 1rem;
-          font-family: 'Times New Roman', Times, serif;
-          color: #2d2d2d;
-          line-height:  20px;
-          letter-spacing: 0.2px;
-        }
-      
-        /*FIN BUSCADOR*/  
+}
 
- 
+/*....ASIDE TERCERA COLUMNA DE LOS POSTS APPERDERPESO Y APPBLOG......................*/
+/*TERCERA COLUMNA  ......................3.......COLUMNA...... */
+.tercera-columna-fija {
+  width: 15%;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+}
 
- .tercera-columna h1{
-  font-size:1.1rem;
-  color:#000;
+.tercera-columna {
+  width: 100%;
+  display: block;
+  max-height: 300px;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.tercera-columna h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  color: #000000;
+  font-weight: 900;
+}
+
+/*ASIDE IMAGEN Y TUTULO*/
+.aside-colum {
+  width: 100%;
+}
+
+.tercera-columna a h1 {
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #2d2d2d;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+/*FIN BUSCADOR*/
+
+
+
+.tercera-columna h1 {
+  font-size: 1.1rem;
+  color: #000;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 600;
-  }
+}
 
 
 
-  .tercera-columna img{
-    width: 100%;
-    margin-bottom: 6px;
-    }
+.tercera-columna img {
+  width: 100%;
+  margin-bottom: 6px;
+}
 
 
 
-    /* BUSCADOR INTERNO */
-  /*CONTAINER DEL BUSCADOR.................................................................... */
-   .controls{
-    width: 100%;
-    max-height: 70px;
-    height: 100%;
-    margin-top: 40px;
-    }
-  
-    /*CAJA DEL BUSCADOR */
-    .controls #custom-search-input{
-    display: flex;
-    flex-direction: row;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    font-size: 1rem;
-    font-weight: 600;
-    width: 99%;
-    height: 49.5px;
-    background-color: #666;  
-    box-shadow: 4px 8px 6px -6px #8c8c8c;
-    }
-  
-    /*CAMPO SEARCH BUSCADOR */
-   .controls  #custom-search-input .sin-borde{
-     border-left: 2px;
-    -moz-border-left: 2px;
-    -webkit-border-left: 2px;
-    font-size: 1em;
-    font-weight: 6rem;
-    padding: 4px;
-    width: 80%;
-    height: 49px;
-    }
-  
-     /*BOTOM BUSCADOR    #666*/
-    .controls .boton{
-    border-right: 4px;
-    -moz-border-right: 2px;
-    -webkit-border-right: 2px;
-    font-size: 1em;
-    font-weight: 300;
-    padding: -2px;
-    width: 15%;
-    height: 49px;
-    background-color: #666;       /*...#639a3a ;*/
-    color: #fff;
+/* BUSCADOR INTERNO */
+/*CONTAINER DEL BUSCADOR.................................................................... */
+.controls {
+  width: 100%;
+  max-height: 70px;
+  height: 100%;
+  margin-top: 40px;
+}
 
-    }
-  
+/*CAJA DEL BUSCADOR */
+.controls #custom-search-input {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 99%;
+  height: 49.5px;
+  background-color: #666;
+  box-shadow: 4px 8px 6px -6px #8c8c8c;
+}
 
+/*CAMPO SEARCH BUSCADOR */
+.controls #custom-search-input .sin-borde {
+  border-left: 2px;
+  -moz-border-left: 2px;
+  -webkit-border-left: 2px;
+  font-size: 1em;
+  font-weight: 6rem;
+  padding: 4px;
+  width: 80%;
+  height: 49px;
+}
 
-  .categorias-aside{
-    display: block;
-    width: 100%;
-    max-height: 260px;
-    height: 100%;
-  
-  }
+/*BOTOM BUSCADOR    #666*/
+.controls .boton {
+  border-right: 4px;
+  -moz-border-right: 2px;
+  -webkit-border-right: 2px;
+  font-size: 1em;
+  font-weight: 300;
+  padding: -2px;
+  width: 15%;
+  height: 49px;
+  background-color: #666;
+  /*...#639a3a ;*/
+  color: #fff;
 
-   .categorias-aside h4{
-    color: #000000;
-    font-weight: 900;
-    font-size: 1.4rem;
-    font-family: 'Times New Roman', Times, serif;
- 
-   }
-
-     .categorias-aside h3{
-     color:#2d2d2d;
-     font-size: 1.2rem;
-     font-family: 'Times New Roman', Times, serif;
-    }
- 
+}
 
 
 
-    
-   .children form {
-    margin-left: -48px;
-     }
-  
-     .children .children form {
-    margin-left: -96px;
-    /* will touch very left side */
-     }
-  
-     #comentarios{
-      background-color:  #FEEDF6;
-    display: block;
-    position: relative;
-    float: left;
-    width: 100%;
-     }
-  
-    
-    /*.........*/
-    .col-md-10{
-    display: block;
-    }
-     
-    /*..0 COMENTARIOS...*/
-    .col-md-10 h2{
-      font-size: 1.2rem;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 700;
-     }
+.categorias-aside {
+  display: block;
+  width: 100%;
+  max-height: 260px;
+  height: 100%;
 
-   /*CREAR NUEVO COENTARIO...*/
-   #myForm h2{
-     font-size: 1.5rem;
-     font-family: 'Times New Roman', Times, serif;
-     color: black;
-     }
+}
+
+.categorias-aside h4 {
+  color: #000000;
+  font-weight: 900;
+  font-size: 1.4rem;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.categorias-aside h3 {
+  color: #2d2d2d;
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
 
 
-     #myDIV{
-       display: block;
-     }
-
-     #myDIV .btn{
-      background-color: #efefef;
-      color: black;
-      font-weight: 800;
-    }
-
-    #myDIV .btn-block{
-      background-color: #efefef;
-    }
+.children form {
+  margin-left: -48px;
+}
 
 
-    #myDIV .btn-lg{
-      background-color: #efefef;
-  
-    }
+.children .children form {
+  margin-left: -96px;
+  /* will touch very left side */
+}
+
+#comentarios {
+  background-color: #FEEDF6;
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+}
 
 
-     #myDIV button[type="submit"] {
-      background-color: #efefef;
-    
-      }  
-  
-    /*CONTAINER GENERAL DEL CARRUSEL............................................. */
-     .container-total-carrusell{
-     display: block;
-     position: relative;
-     display: block;
-      width: 100%;
-     }
-    
-      .container-total-carrusell h1{
-        font-size: 1.8rem;
-        color: #000000;
-     }
-   
-   
-     
-    /*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
-    #carrusel {
-      display: block;
-      float:left;
-      width:90%;
-      overflow:hidden;
-       height: 305px;
-      position:relative;
-      margin: auto;
-      margin-bottom: 20px;
-      }
-      
+/*.........*/
+.col-md-10 {
+  display: block;
+}
 
-    /*CONTAINER DE TODAS LAS IMAGENES*/
-     /*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
-     .carrusel {
-      width:4000px;
-      left: 1px;
-      position:absolute;
-      z-index:0;
-     }
+/*..0 COMENTARIOS...*/
+.col-md-10 h2 {
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
 
-   /*MODIFICAR ANCHO Y ALTO  */
-  .carrusel>div {
-      float: left;
-      margin-right: 14px;   /*ESPACIO */
-      width: 100%;
-      max-width: 260px;
-  }
+/*CREAR NUEVO COENTARIO...*/
+#myForm h2 {
+  font-size: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
 
-      /*CNTAINER DE CADA IMAGEN no poner border    border:#CCCCCC 0px solid;*/
- .carrusel .product {
-    width: 100%;
-    height: 260px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-     }
-   
-   /*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
-  .carrusel .product img {
-  cursor:pointer;
+
+#myDIV {
+  display: block;
+}
+
+#myDIV .btn {
+  background-color: #efefef;
+  color: black;
+  font-weight: 800;
+}
+
+#myDIV .btn-block {
+  background-color: #efefef;
+}
+
+
+#myDIV .btn-lg {
+  background-color: #efefef;
+
+}
+
+
+#myDIV button[type="submit"] {
+  background-color: #efefef;
+
+}
+
+/*CONTAINER GENERAL DEL CARRUSEL............................................. */
+.container-total-carrusell {
+  display: block;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.container-total-carrusell h1 {
+  font-size: 1.8rem;
+  color: #000000;
+}
+
+
+
+/*..WIDHT 100% CONTAINER DE TODO IMAGENES Y TITULO*/
+#carrusel {
+  display: block;
+  float: left;
+  width: 90%;
+  overflow: hidden;
+  height: 305px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+
+/*CONTAINER DE TODAS LAS IMAGENES*/
+/*EL ACHO Y ALTO DE ESTE CONTENEDOR HACE QUE ENTRE LA IMAGEN Y LA DESCRIPCION */
+.carrusel {
+  width: 4000px;
+  left: 1px;
+  position: absolute;
+  z-index: 0;
+}
+
+/*MODIFICAR ANCHO Y ALTO  */
+.carrusel>div {
+  float: left;
+  margin-right: 14px;
+  /*ESPACIO */
+  width: 100%;
+  max-width: 260px;
+}
+
+/*CNTAINER DE CADA IMAGEN no poner border    border:#CCCCCC 0px solid;*/
+.carrusel .product {
+  width: 100%;
+  height: 260px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+/*MODIFICAR ANCHO Y ALTO COMO EL CARRUSEL DIV */
+.carrusel .product img {
+  cursor: pointer;
   width: 100%;
   max-width: 260px;
   height: 210px;
   border: #666 1px solid;
-  border-radius:6px;
-  }
-   
+  border-radius: 6px;
+}
 
 
- .product a p{
-      letter-spacing: -0.2px;
-      font-family: 'Cabin', sans-serif;
-      margin-left: auto;
-      font-size: 1rem;
-      font-weight: 400;
-      color: #2d2d2d;
-     margin-top: 8px;
-     margin-left: 40px;
-  }
+
+.product a p {
+  letter-spacing: -0.2px;
+  font-family: 'Cabin', sans-serif;
+  margin-left: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2d2d2d;
+  margin-top: 8px;
+  margin-left: 40px;
+}
 
 
-   
-  /*..CONTAINER DE LAS FLECHAS Y CIRCULO ...*/ 
-  /*ALTURA DEL CIRCULO CON LA FLECHA INCLUIDA......... */
-    .carusel{
-    width: 100%;
-    display: flex;
-    position: absolute;
-    margin-top: 9%; /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
-    margin-left:  49.5%;   /* ENCAJA LAS FLECHAS A LOS LADOS....... */
-    }
-  
 
-    /*DISTANCIA ENTRE LOS DOS CIRCULO*/
-     .carusel ul{
-    position: relative ;
-    display: flex;
-    transform: translate(-50%, -50%);
-    width: 98.5%;   /* ANCHO QUE ENCAJA DENTRO DEL DIV 100%........ */
-    z-index: 10;
-    }
-  
-    /*MEDIDAS PARA HACER EL CIRCULO*/
-   .carusel li{
-   list-style: none;
-   width: 40px;
-   height: 40px;
-   display: flex;
-   border-radius: 50%;
-   transition: .5s;
-  }
-  
-  .container-total-carrusell ul li:hover{
-    background-color: #7aac41;
-  }
-
-    /*PALO*/
-    .container-total-carrusell .carusel ul li span{
-    position: absolute;
-    width: 15px;   /* TAMAÑO DEL CUADRADO QUE SE CONVERTIRA EN FLECHA ......... */
-    height: 15px;                /* IMPORTANTE PARA REDUCIR TAMAÑO DE FLECHA......... */
-    border:3px solid #fff; /* da color solo a la flecha y no al palo*/
-    transition: .5s; 
-   }
-
-     
-     /*CIRCULO   IZQUIERDO*/
-    .container-total-carrusell li.left-arrow{
-      margin-left: 1.8%;
-      background-color: #DCDCDC;
-     }
-    /*CIRCULO  DERECHO SE MUEVE A LO HORIZONTAL*/
-    .container-total-carrusell li.right-arrow{
-    margin-left:89%;
-    background-color: #d9d9d9;
-    }
-  
-     /*.........................................*/
-     /* FLECHA LEFT ....FLECHA LEFT............... */
-     .container-total-carrusell ul li.left-arrow span{
-      top:50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-      left:2.8%;    /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
-      transform: translateY(-50%) rotate(-45deg);
-      border-right:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
-      border-bottom: none;  
-      }
-
-     /* FLECHA RIGHT.............................FLECHA RIGHT............................ */
-    .container-total-carrusell ul li.right-arrow span{
-     top:50%;   /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
-     right: 2.8%;    /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
-     transform: translateY(-50%) rotate(-45deg);
-     border-left:none;  /* DESAPARECE UN LADO DEL CUADRADO......... */
-     border-top: none;
-      }
-     /*............................*/
+/*..CONTAINER DE LAS FLECHAS Y CIRCULO ...*/
+/*ALTURA DEL CIRCULO CON LA FLECHA INCLUIDA......... */
+.carusel {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  margin-top: 9%;
+  /*IMPORTANTE PARA LA ATURA DE LAS FLECHAS */
+  margin-left: 49.5%;
+  /* ENCAJA LAS FLECHAS A LOS LADOS....... */
+}
 
 
-    /*.................................*/
-     /* PALO ..............PALO.....PALO DERECHO................ */
-    .container-total-carrusell ul li.right-arrow span:before{
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    background: #fff;
-     transform-origin: left;
-     transform: rotate(45deg) translate(-4px, 0px) scaleX(0) ;    /* ENCAJA EL ARROW AL PALO.......... */
-     transition: .5s;                                                 /* Y EL SCALE DESPARECE EL PALO.......... */
-     }
-  
-    
-    /* PALO ........PALO IZQUIERDO LEFT */
-    .container-total-carrusell ul li.left-arrow span:before{
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    background: #fff;
-    transform-origin: right;
-    transform: rotate(45deg) translate(6px, 14px) scaleX(0) ;    /* ENCAJA EL ARROW AL PALO.......... */
-    transition: .5s; 
-    }
-  
-     /*..........................*/
+/*DISTANCIA ENTRE LOS DOS CIRCULO*/
+.carusel ul {
+  position: relative;
+  display: flex;
+  transform: translate(-50%, -50%);
+  width: 98.5%;
+  /* ANCHO QUE ENCAJA DENTRO DEL DIV 100%........ */
+  z-index: 10;
+}
 
-   /*..........................................*/
-  .container-total-carrusell ul li.right-arrow:hover span:before{
+/*MEDIDAS PARA HACER EL CIRCULO*/
+.carusel li {
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.container-total-carrusell ul li:hover {
+  background-color: #7aac41;
+}
+
+/*PALO*/
+.container-total-carrusell .carusel ul li span {
+  position: absolute;
+  width: 15px;
+  /* TAMAÑO DEL CUADRADO QUE SE CONVERTIRA EN FLECHA ......... */
+  height: 15px;
+  /* IMPORTANTE PARA REDUCIR TAMAÑO DE FLECHA......... */
+  border: 3px solid #fff;
+  /* da color solo a la flecha y no al palo*/
+  transition: .5s;
+}
+
+
+/*CIRCULO   IZQUIERDO*/
+.container-total-carrusell li.left-arrow {
+  margin-left: 1.8%;
+  background-color: #DCDCDC;
+}
+
+/*CIRCULO  DERECHO SE MUEVE A LO HORIZONTAL*/
+.container-total-carrusell li.right-arrow {
+  margin-left: 89%;
+  background-color: #d9d9d9;
+}
+
+/*.........................................*/
+/* FLECHA LEFT ....FLECHA LEFT............... */
+.container-total-carrusell ul li.left-arrow span {
+  top: 50%;
+  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  left: 2.8%;
+  /* MUEVE TODA LA FLECHA. IMPORTANTE!!!!!!!!!!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-right: none;
+  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-bottom: none;
+}
+
+/* FLECHA RIGHT.............................FLECHA RIGHT............................ */
+.container-total-carrusell ul li.right-arrow span {
+  top: 50%;
+  /* MUEVE LA FLECHA A LO ALTO DENTRO DEL CIRCULO.......... */
+  right: 2.8%;
+  /* MUEVE LA FLECHA.SOLA SIN EL CIRCULO   MUY IMPORTANTE!!!!!......... */
+  transform: translateY(-50%) rotate(-45deg);
+  border-left: none;
+  /* DESAPARECE UN LADO DEL CUADRADO......... */
+  border-top: none;
+}
+
+/*............................*/
+
+
+/*.................................*/
+/* PALO ..............PALO.....PALO DERECHO................ */
+.container-total-carrusell ul li.right-arrow span:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transform-origin: left;
+  transform: rotate(45deg) translate(-4px, 0px) scaleX(0);
+  /* ENCAJA EL ARROW AL PALO.......... */
+  transition: .5s;
+  /* Y EL SCALE DESPARECE EL PALO.......... */
+}
+
+
+/* PALO ........PALO IZQUIERDO LEFT */
+.container-total-carrusell ul li.left-arrow span:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transform-origin: right;
+  transform: rotate(45deg) translate(6px, 14px) scaleX(0);
+  /* ENCAJA EL ARROW AL PALO.......... */
+  transition: .5s;
+}
+
+/*..........................*/
+
+/*..........................................*/
+.container-total-carrusell ul li.right-arrow:hover span:before {
   transform: rotate(45deg) translate(-4px, 0px) scaleX(1);
-  }
+}
 
-  .container-total-carrusell ul li.left-arrow:hover span:before{
-    transform: rotate(45deg) translate(6px, 14px) scaleX(1);
-    }
-   
-  /*FINAL CARRUSEL...................... */
-  
-  
+.container-total-carrusell ul li.left-arrow:hover span:before {
+  transform: rotate(45deg) translate(6px, 14px) scaleX(1);
+}
+
+/*FINAL CARRUSEL...................... */
 
 
 
-   /* ...PAGINACION ...................................*/
-  .paginacion{
-  width:100%;
+
+
+/* ...PAGINACION ...................................*/
+.paginacion {
+  width: 100%;
   display: flex;
   justify-content: center;
   padding-top: 8%;
   margin-bottom: 8%;
-  }
+}
 
-    /*LETRA*/
-   .paginacion a{
-    font-size: 1rem;
-    color: #000;
-    text-decoration: none;
-    font-family: 'Arial Black';
-    font-weight: 400; 
-    }
+/*LETRA*/
+.paginacion a {
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  font-family: 'Arial Black';
+  font-weight: 400;
+}
 
 
-     .paginacion a:hover{
-     background-color: #000;
-     color:#fff;
-     }
+.paginacion a:hover {
+  background-color: #000;
+  color: #fff;
+}
 
-   
-   /*DA COLOR AL BOTON DE ACTIVO */
-  .page-food.active .page-link{
-    z-index: 5;
-    text-decoration: none;
-    background-color: #000;
-    color: #fff;
-    font-family: 'Arial Black';
-  }
 
-   
+/*DA COLOR AL BOTON DE ACTIVO */
+.page-food.active .page-link {
+  z-index: 5;
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Arial Black';
+}
+
+
 
 
 
@@ -2002,196 +2061,195 @@ a {
 
 /*FOOTER FOOTER FOOTE FOOTER  FOOTER FOOTER  FOOTER FOOTER FOOTER............................................. */
 
-    #footer-articulo{
-   clear: both;
-    position: relative;
-    height:  130px;
-    margin-top: -130px;
-    border-top: solid 1.5px #DCDCDC;
-    display: block;
-    width: 100%;
-    z-index: 10;
-    background-color: #f4f4f4;
-    }
-  
-  
-    /*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
-   .footer-primero-articulo{
-    width: 80%;
-    max-width: 900px;
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-   }
- 
-
-  /*SUB-caja ICONOS SOCIALES*/
-   .icon-social1{
-    display: block;
-    position: relative;
-    float: left;
-     width: 55%;
-     max-width: 600px;
-     height: 100px;
-   }
-  
-    .icon-social1 p{
-      font-size: 1.4rem;
-      word-spacing: -3px;
-      letter-spacing: -1px;
-      font-family: 'Archivo Black', sans-serif;
-      color: #7aac41;
-      display: block;
-      height: 30px;
-    }
-  
-       /* UL*/
-       .icon-social1  .social2{
-     width: 32%;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     height: 48px;
-     padding-top: 0;
-    }
- 
-  /*UL LI..*/
-  .icon-social1 .social2 li{
-    list-style: none;
-    display: inline-block;
-    height: 34px;
-
-  }
-
-
-.social2  li  .fa-envelope{
-color: #2d2d2d;
-    width:40px;
-    height: 40px;
-    padding: 6px 6px 6px 6px;
-    border-radius: 24px;
-     border: solid #E9E9E9;
+#footer-articulo {
+  clear: both;
+  position: relative;
+  height: 130px;
+  margin-top: -130px;
+  border-top: solid 1.5px #DCDCDC;
+  display: block;
+  width: 100%;
+  z-index: 10;
+  background-color: #f4f4f4;
 }
 
-.social2  li  .fa-facebook-f{
+
+/*CAJA PRINCIPAL DEL PRIMER FOOTER....NO PONER  margin-bottom: -15px;........................................................... */
+.footer-primero-articulo {
+  width: 80%;
+  max-width: 900px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+}
+
+
+/*SUB-caja ICONOS SOCIALES*/
+.icon-social1 {
+  display: block;
+  position: relative;
+  float: left;
+  width: 55%;
+  max-width: 600px;
+  height: 100px;
+}
+
+.icon-social1 p {
+  font-size: 1.4rem;
+  word-spacing: -3px;
+  letter-spacing: -1px;
+  font-family: 'Archivo Black', sans-serif;
+  color: #7aac41;
+  display: block;
+  height: 30px;
+}
+
+/* UL*/
+.icon-social1 .social2 {
+  width: 32%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 48px;
+  padding-top: 0;
+}
+
+/*UL LI..*/
+.icon-social1 .social2 li {
+  list-style: none;
+  display: inline-block;
+  height: 34px;
+
+}
+
+
+.social2 li .fa-envelope {
   color: #2d2d2d;
-  width:40px;
+  width: 40px;
   height: 40px;
   padding: 6px 6px 6px 6px;
   border-radius: 24px;
-   border: solid #E9E9E9;
-
+  border: solid #E9E9E9;
 }
 
-
-.social2  li  .fa-pinterest{
+.social2 li .fa-facebook-f {
   color: #2d2d2d;
-  width:40px;
+  width: 40px;
   height: 40px;
   padding: 6px 6px 6px 6px;
   border-radius: 24px;
-   border: solid #E9E9E9;
+  border: solid #E9E9E9;
+
 }
 
 
-.social2 li   .fa-instagram{
+.social2 li .fa-pinterest {
   color: #2d2d2d;
-  width:40px;
+  width: 40px;
   height: 40px;
   padding: 6px 6px 6px 6px;
   border-radius: 24px;
-   border: solid #E9E9E9;
+  border: solid #E9E9E9;
 }
 
- /*SUB-caja contenedor de la caja correo*/
 
- /*SUBCONTENEDOR DONDE ESTA EL BOX*/
- .box{
+.social2 li .fa-instagram {
+  color: #2d2d2d;
+  width: 40px;
+  height: 40px;
+  padding: 6px 6px 6px 6px;
+  border-radius: 24px;
+  border: solid #E9E9E9;
+}
+
+/*SUB-caja contenedor de la caja correo*/
+
+/*SUBCONTENEDOR DONDE ESTA EL BOX*/
+.box {
   display: block;
   position: relative;
   float: right;
- width: 35%;
- height: 100px;
-  }
+  width: 35%;
+  height: 100px;
+}
 
-   /*LETRA DE LA CAJA DE SUSCRIBIR*/
-   .box h3{
-    letter-spacing: -0.1px;
-    font-family: 'Archivo Black', sans-serif;
-    font-size:  0.9rem;
-    font-weight: 400;
-    color: #2d2d2d;
-    display: block;
-    height: 34px;
-    }
-  
+/*LETRA DE LA CAJA DE SUSCRIBIR*/
+.box h3 {
+  letter-spacing: -0.1px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #2d2d2d;
+  display: block;
+  height: 34px;
+}
 
- /*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
-     /*cajita del correo */
-  .box form{
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .box input[type="text"]
-  {
+
+/*CAJA TOTAL DEL INPUT Y DEL BUTTON*/
+/*cajita del correo */
+.box form {
+  display: flex;
+  flex-direction: row;
+}
+
+.box input[type="text"] {
   background-color: #fff;
   display: block;
-   position: relative;
-   float: left;
-  width:60%;
+  position: relative;
+  float: left;
+  width: 60%;
   height: 50px;
-  border: 1.5px solid 	#DCDCDC;
+  border: 1.5px solid #DCDCDC;
   padding: 0 18px;
   border-radius: 5px 0 0 5px;
-  
-  }
-  
-  .box button[type="submit"]{
-    display: block;
-    position: relative;
-    float: right;
+
+}
+
+.box button[type="submit"] {
+  display: block;
+  position: relative;
+  float: right;
   border-radius: 0 5px 5px 0;
   width: 20%;
   height: 50px;
-  border: none ;
+  border: none;
   outline: none;
   cursor: pointer;
   background-color: #2d2d2d;
   color: #fff;
   font-size: 0.8rem;
   font-family: 'Archivo Black', sans-serif;
-  }
+}
 
 /*FIN de la cajita del correo */
 
 
 
-  /*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
-  .footer-second-articulo{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+/*FINAL FOOTER QUE ESTA EN EL CONTENIDO GENERAL OSEA MAIN*/
+.footer-second-articulo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   height: 22px;
   margin-top: 20px;
-   }
+}
 
-  
-   .final-food-articulo{
-    height: 22px;
-    display: block;
-    width: 100%;
-    }
 
-  .final-food-articulo p{
+.final-food-articulo {
+  height: 22px;
+  display: block;
+  width: 100%;
+}
+
+.final-food-articulo p {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
   color: #2d2d2d;
   font-size: 0.8rem;
- 
- }
+
+}
 
 
 /* FINAL.....FOOTER...............................................................................................................................................................................*/
@@ -2203,127 +2261,127 @@ color: #2d2d2d;
 /* Animação     PARA QUE AL HACER SCROLL LAS LETRA O IMAGENES APAREZCAN*/
 
 [data-anime] {
-    opacity: 0;
-    transition: .3s;
-  }
-  
-  [data-anime="left"] {
-    transform: translate3d(-50px, 0, 0);
-  }
-  
-  [data-anime="right"] {
-    transform: translate3d(50px, 0, 0);
-  }
-  
-  [data-anime="top"] {
-    transform: translate3d(0, -50px, 0);
-  }
-  
-  [data-anime].animate {
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-  }
+  opacity: 0;
+  transition: .3s;
+}
 
-  
+[data-anime="left"] {
+  transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+  transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"] {
+  transform: translate3d(0, -50px, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
 
 
 
 
 
-      /*CONTAINER DEL SEARCH PERO SOLO PARA LA PAGINA SEARCHC ES DIFERENTE A CONTROLS QUE ES PARA LAS DEMAS PAGINAS*/
-    #controls-uno{
-    display: block;
-    width: 75%;
-    height: 80px;
-    margin: auto;
-    }
-
-  
-   #custom-search-input-search{
-     display: flex;
-     flex-direction: row;
-     align-items: flex-end;
-     border-radius: 5px;
-     -moz-border-radius: 5px;
-     -webkit-border-radius: 5px;
-     box-sizing: border-box;
-     -moz-box-sizing: border-box;
-     font-size: 1em;
-     font-weight: 1rem;
-     padding: 2px;
-     width: 100%;
-     height: 48px;
-     background-color:#2d2d2d;
-    
-   }
-
-    /*CAMPO SEARCH BUSCADOR */
-    #controls-uno .sin-borde{
-    border-left: 1px;
-    -moz-border-left: 1px;
-    -webkit-border-left: 1px;
-    font-size: 1em;
-    font-weight: 2rem;
-    padding: 4px;
-    width: 90%;
-    height: 45px;
-    
-  }
-
-   /*--IMPORTANTE PARA POSICIOINAR EL CURSOR*/
-
-  
-     /*BOTOM BUSCADOR */
-     #controls-uno .boton{
-    border-right: 4px;
-    -moz-border-right: 2px;
-    -webkit-border-right: 2px;
-    font-size: 1em;
-    font-weight: 300;
-    padding: -2px;
-    width: 10%;
-    height: 45px;
-    background-color:#000000;
-    color: #fff;
-    }
-  
-
-    input[type=text]:focus {
-      outline: none;
-  }
-
-  #controls-uno #custom-search-input input[type=text]:focus {
-    outline: none;
-    border: 0;
-    background-color: #fff;
-    padding-left: 20px; 
-   }
 
 
+/*CONTAINER DEL SEARCH PERO SOLO PARA LA PAGINA SEARCHC ES DIFERENTE A CONTROLS QUE ES PARA LAS DEMAS PAGINAS*/
+#controls-uno {
+  display: block;
+  width: 75%;
+  height: 80px;
+  margin: auto;
+}
+
+
+#custom-search-input-search {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 1em;
+  font-weight: 1rem;
+  padding: 2px;
+  width: 100%;
+  height: 48px;
+  background-color: #2d2d2d;
+
+}
+
+/*CAMPO SEARCH BUSCADOR */
+#controls-uno .sin-borde {
+  border-left: 1px;
+  -moz-border-left: 1px;
+  -webkit-border-left: 1px;
+  font-size: 1em;
+  font-weight: 2rem;
+  padding: 4px;
+  width: 90%;
+  height: 45px;
+
+}
+
+/*--IMPORTANTE PARA POSICIOINAR EL CURSOR*/
+
+
+/*BOTOM BUSCADOR */
+#controls-uno .boton {
+  border-right: 4px;
+  -moz-border-right: 2px;
+  -webkit-border-right: 2px;
+  font-size: 1em;
+  font-weight: 300;
+  padding: -2px;
+  width: 10%;
+  height: 45px;
+  background-color: #000000;
+  color: #fff;
+}
+
+
+input[type=text]:focus {
+  outline: none;
+}
+
+#controls-uno #custom-search-input input[type=text]:focus {
+  outline: none;
+  border: 0;
+  background-color: #fff;
+  padding-left: 20px;
+}
 
 
 
-  /*CONTENEDOR DE RESULTADOS SEARCH PINTEREST........................................ */
-  #container-search{
-    display: block;
-    width: 75%;
-    margin: auto;
-     margin-top: 80px;
-     }
-  
-     /*TITULO RESUKTADOS*/
-     #container-search h1{
-       display: block;
-      font-size: 2.3rem;
-      font-family: 'Times New Roman', Times, serif;
-      color: #000000;
-      font-weight: 900;
-      margin-bottom: 65px;
- 
-     }
-  
 
-     /*    margin:55px auto;
+
+/*CONTENEDOR DE RESULTADOS SEARCH PINTEREST........................................ */
+#container-search {
+  display: block;
+  width: 75%;
+  margin: auto;
+  margin-top: 80px;
+}
+
+/*TITULO RESUKTADOS*/
+#container-search h1 {
+  display: block;
+  font-size: 2.3rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #000000;
+  font-weight: 900;
+  margin-bottom: 65px;
+
+}
+
+
+/*    margin:55px auto;
       -moz-column-count: 5;
       -moz-column-gap: 10px;
       -moz-column-fill: auto;
@@ -2333,142 +2391,142 @@ color: #2d2d2d;
       column-count: 5;
       column-gap: 15px;
       column-fill: auto;*/
-    /*CONTENEDOR DE RESULTADOS SEARCH PINTEREST........................................ */
-    .container-pinterest{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+/*CONTENEDOR DE RESULTADOS SEARCH PINTEREST........................................ */
+.container-pinterest {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
-       }
-  
-  
-       /*box-shadow: 0 1px 2px  rgba(34, 25, 25, 0.4);*/
-       /* margin:  0 2px 4px;*/
-       /*box-shadow: 0 1px 0px  rgba(34, 25, 25, 0.4);
+}
+
+
+/*box-shadow: 0 1px 2px  rgba(34, 25, 25, 0.4);*/
+/* margin:  0 2px 4px;*/
+/*box-shadow: 0 1px 0px  rgba(34, 25, 25, 0.4);
     background: #FEFEFE;
     background-image: linear-gradient(45deg, #FFF, #F9F9F9);*/
-     .elemento{
-    width:100%;
-    height: 210px;
-    display: flex;
-    flex-direction: row;
-    border-radius: 4px;
-    break-inside: avoid-column;
-    overflow: hidden;
-    -moz-column-break-inside:avoid;
-    -webkit-column-break-inside:avoid;
-    -column-break-inside:avoid;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #d9d9d9;
-    
-    margin-bottom: 42px;
-  
-  }
-  
-    .elemento-imagen{
-      display: block;
-      position: relative;
-      float: left;
-      width: 45%;
-      max-width: 280px;
-      height: 100%;
-      max-height: 200px;
-      margin-right: 22.5px;
-    }
-  
-    .elemento-imagen img{
-    margin: auto;
-    width: 100%;
-  
-  
-    }
-  
-    #container-search .elemento-descripcion{
-       display: block;
-       position: relative;
-       float: right;
-        width: 50%;
-      }
-  
-    /*TITULO*/
-    .container-pinterest .elemento-descripcion a h2{
-    font-family: 'Times New Roman', Times, serif;
-    color: #000000;
-    font-size: 1.5rem;
-    font-weight:800;
-    line-height: 1.1em;
-    letter-spacing: -.002em;
-    }
-  
-    #container-search .elemento-descripcion p{
-    font-family: 'Times New Roman', Times, serif;
-    color: #2d2d2d;
-    font-size:  1.2rem;
-    line-height: 1.4em;
-    }
-  
-    /*CAJA DE LEER MAS ...VER RECETA*/
-    .elemento-descripcion .btn-outline-success{
-      margin-top: 5px;
-      padding: 4px 9px 4px 9px;
-      font-size: 1.2rem;
-      border-radius: 4px;
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 900;
-      background-color:#000000;
-      color:#fff;
-      border: 1px solid #2d2d2d;
-    }
-  
-  
-    .elemento-descripcion .btn:hover{
-      border: 2px solid #eeeeee;
-      color: #000000;
-      background-color: #eeeeee;
-     
-    }
-  
-    /*FIN DE CAJA LEER MAS VER RECETA*/
+.elemento {
+  width: 100%;
+  height: 210px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  break-inside: avoid-column;
+  overflow: hidden;
+  -moz-column-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  -column-break-inside: avoid;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #d9d9d9;
+
+  margin-bottom: 42px;
+
+}
+
+.elemento-imagen {
+  display: block;
+  position: relative;
+  float: left;
+  width: 45%;
+  max-width: 280px;
+  height: 100%;
+  max-height: 200px;
+  margin-right: 22.5px;
+}
+
+.elemento-imagen img {
+  margin: auto;
+  width: 100%;
 
 
-      /*HOVER DEL TITULO DEL POST DE LA BUSQIEDA SALE RAYA.............HOVER */
-      a.left{
-      position: relative;
-      }
-  
-      /*HOVER DEL TITULO DE LA BUSQUEDA*/
-     a.left::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: #FEFEFE;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-    }
+}
 
-   /*HOVER DEL TITULO DE LA BUSQUEDA*/
-  a.left:hover:before {
-    visibility: visible;
+#container-search .elemento-descripcion {
+  display: block;
+  position: relative;
+  float: right;
+  width: 50%;
+}
+
+/*TITULO*/
+.container-pinterest .elemento-descripcion a h2 {
+  font-family: 'Times New Roman', Times, serif;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.1em;
+  letter-spacing: -.002em;
+}
+
+#container-search .elemento-descripcion p {
+  font-family: 'Times New Roman', Times, serif;
+  color: #2d2d2d;
+  font-size: 1.2rem;
+  line-height: 1.4em;
+}
+
+/*CAJA DE LEER MAS ...VER RECETA*/
+.elemento-descripcion .btn-outline-success {
+  margin-top: 5px;
+  padding: 4px 9px 4px 9px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 900;
+  background-color: #000000;
+  color: #fff;
+  border: 1px solid #2d2d2d;
+}
+
+
+.elemento-descripcion .btn:hover {
+  border: 2px solid #eeeeee;
+  color: #000000;
+  background-color: #eeeeee;
+
+}
+
+/*FIN DE CAJA LEER MAS VER RECETA*/
+
+
+/*HOVER DEL TITULO DEL POST DE LA BUSQIEDA SALE RAYA.............HOVER */
+a.left {
+  position: relative;
+}
+
+/*HOVER DEL TITULO DE LA BUSQUEDA*/
+a.left::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #FEFEFE;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/*HOVER DEL TITULO DE LA BUSQUEDA*/
+a.left:hover:before {
+  visibility: visible;
+}
+
+/* FINAL MENU ARROW */
+
+
+
+
+
+/* ..FIN CONTENEDOR DE PINTEREST........................................ */
+@media all and (min-width: 960px) {
+  .container-pinterest {
+    column-count: 4;
   }
-        /* FINAL MENU ARROW */
-    
-  
-  
-  
-  
-  /* ..FIN CONTENEDOR DE PINTEREST........................................ */
-  @media all and (min-width: 960px) {
-    .container-pinterest {
-       column-count: 4;
-       }
+}
+
+@media all and (min-width: 1170px) {
+  .container-pinterest {
+    column-count: 5;
   }
-  @media all and (min-width: 1170px) {
-    .container-pinterest {
-       column-count: 5;
-       }
-  }
-  
-  
+}
