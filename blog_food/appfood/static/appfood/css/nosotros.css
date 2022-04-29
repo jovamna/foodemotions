@@ -33,6 +33,11 @@ img {
   max-width: 100%;
 }
 
+div {
+  flex: 1;
+}
+
+
 /*CONTENEDOR PRINCIPAL DE TODA LA CABECERA INCLUYENDO SLIDER*/
 #wrapper {
   min-height: 100vh;

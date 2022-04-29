@@ -103,7 +103,7 @@
                     <h1>{{ posturismo.title }}</h1>
                     </a> 
 
-                    <p>{{ posturismo.description|truncatewords_html:13|safe }} </p>
+                    <p>{{ posturismo.description|truncatewords_html:10|safe }} </p>
 
                     <a href ="{% url 'appturismo:post' posturismo.slug %}">
                      Leer mas...  </a> 

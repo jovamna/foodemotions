@@ -486,13 +486,22 @@
 
 @media only screen and (min-width: 360px) and (max-width: 640px) {
 
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    color: rgba(0, 0, 0, .95);
+    font-family: "Argos", serif;
+  }
+
+
   html,
   body {
     width: 100%;
     height: 100%;
-    margin: 0;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
   }
-
 
 
   #wrapper {
@@ -516,7 +525,7 @@
 
 
   #wrapper>* {
-    padding: 17px;
+    padding: 18px;
   }
 
 
@@ -535,7 +544,6 @@
     left: 0;
     position: fixed;
     z-index: 2000;
-    /*IMPORTANTE  */
     margin: auto;
     background-color: #fff;
     box-shadow: 0 8px 6px -6px #c6c6c6;
@@ -550,11 +558,10 @@
 
 
   /*.. max-with:640px;...*/
-  .cabecera-responsive {
+  header .cabecera-responsive {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     height: 35px;
     margin-top: -6px;
   }
@@ -571,15 +578,14 @@
     display: block;
     position: relative;
     float: left;
-    width: 26%;
-    max-width: 360px;
-    min-width: 250px;
-    height: 35px;
+    width: 15%;
+    max-width: 200px;
+    min-width: 180px;
+    height: 24px;
   }
 
 
-  header .cabecera-responsive .logo img {
-    display: block;
+  .cabecera-responsive .logo img {
     width: 100%;
     max-width: 145px;
     min-width: 138px;
@@ -592,18 +598,16 @@
     display: block;
     position: relative;
     float: left;
-    width: 25%;
-    max-width: 170px;
-    min-width: 120px;
-    height: 35px;
+    width: 10%;
+    max-width: 100px;
+    min-width: 90px;
+    height: 24px;
   }
 
 
   header .cabecera-responsive .suscribe a h4 {
-
-
-    font-size: 0.78rem;
-    margin-top: 10px;
+    font-size: 0.72rem;
+    margin-top: 12px;
     font-weight: 700;
     letter-spacing: 0.5px;
     z-index: 5;
@@ -618,10 +622,9 @@
     width: 8%;
     max-width: 40px;
     min-width: 36px;
-    height: 35px;
+    height: 24px;
     margin: auto;
-    margin-top: 0.2px;
-
+    margin-top: 0.1px;
   }
 
 
@@ -643,7 +646,6 @@
     z-index: 20;
     visibility: visible;
     box-sizing: border-box;
-
   }
 
   nav::-webkit-scrollbar {
@@ -661,7 +663,6 @@
     height: 100%;
     max-height: 80px;
     border-bottom: 1px solid #2d2d2d;
-
   }
 
   nav .logo-esconder .logo-en-menu-responsive {
@@ -950,7 +951,7 @@
 
 
   .articulo {
-    width: 93%;
+    width: 90%;
     margin: auto;
   }
 
@@ -998,13 +999,18 @@
   }
 
 
+  .blockquote {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+  }
+
   blockquote {
     width: 100%;
-    margin-top: 10%;
   }
 
   blockquote h3 {
-    margin-top: -30px;
+    margin-top: 10px;
     margin-left: 38px;
     margin-right: 30px;
     font-size: 0.8rem;
@@ -1056,10 +1062,10 @@
   .articulo-dos {
     display: flex;
     flex-direction: column;
-    width: 93%;
+    width: 90%;
     margin: auto;
-    margin-top: 6%;
-    margin-bottom: 1px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 
 
@@ -1068,7 +1074,7 @@
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 4%;
+    margin-bottom: 40px;
   }
 
 
@@ -1145,16 +1151,22 @@
 
   .footer-second1 {
     width: 100%;
-    max-width: 500px;
-    background-color: #000000;
+    max-width: 600px;
+
   }
 
   .footer-second1 p {
-    font-size: 0.7rem;
+    font-size: 0.7em;
     color: #fff;
-    text-align: center;
     width: 100%;
-    max-width: 500px;
+
+  }
+
+  .footer-second1 p a {
+    font-size: 0.7em;
+    color: #fff;
+    width: 100%;
+
   }
 
 }
@@ -1836,6 +1848,40 @@
 /* 769 A 900 .IPAD AIR..A PARTIR DE AQUI PONER COMO ES LA GRANDE........ */
 
 @media only screen and (min-width: 769px) and (max-width: 900px) {
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+
+  /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    color: rgba(0, 0, 0, .95);
+    font-family: "Argos", serif;
+  }
+
+  html,
+  body {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
 
   #wrapper {
     margin: 0;
@@ -1847,7 +1893,7 @@
 
 
   #wrapper>* {
-    padding: 10px;
+    padding: 15px;
   }
 
 
@@ -1861,7 +1907,7 @@
   header {
     display: block;
     width: 100%;
-    height: 52px;
+    height: 55px;
     top: 0;
     position: fixed;
     z-index: 2000;
@@ -1872,7 +1918,7 @@
 
 
   header.black {
-    height: 52px;
+    height: 55px;
   }
 
 
@@ -1883,7 +1929,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 35px;
+    height: 38px;
+    margin-top: -3px;
   }
 
 
@@ -1897,7 +1944,7 @@
     display: block;
     width: 20%;
     max-width: 190px;
-    height: 35px;
+    height: 38px;
   }
 
 
@@ -1914,7 +1961,7 @@
     display: inline-block;
     width: 85%;
     max-width: 100px;
-    height: 35px;
+    height: 38px;
     margin: auto;
   }
 
@@ -1935,7 +1982,7 @@
     float: right;
     width: 8%;
     max-width: 40px;
-    height: 35px;
+    height: 38px;
   }
 
 
@@ -2243,30 +2290,40 @@
 
 
   /*..FIN NAV ESCONDIDO...........................*/
-
   #container-nosotros {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin: auto;
-    margin-top: 18%;
+    margin-bottom: 90px;
+    padding: 0 0 0 0;
+    /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
+    height: auto;
+    margin-top: 50px;
   }
 
 
   .tres-columnas-nosotros {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    margin-bottom: 10%;
-    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 10px;
   }
 
-
+  /*..PRIMERA COLUMNA..*/
   .nosotros {
-    width: 45%;
-    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
   }
 
   .articulo {
-    margin-top: -40px;
+    width: 96%;
+    margin: auto;
+    margin-bottom: 30px;
   }
 
   .nosotros .articulo h1 {
@@ -2288,77 +2345,50 @@
   }
 
 
-  /* cuarta caja ..................................... */
-  .dibujo {
-    width: 100%;
-    max-width: 390px;
-    margin-top: 10%;
-  }
 
-  .dibujo img {
-    width: 100%;
-    max-width: 390px;
-  }
-
-
-  /*quinta       caja ..................................... */
-  /*ARTICULO DOS */
-  .articulo-dos {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 390px;
-  }
-
-
-  .articulo-dos .articulo-dos-uno {
-    width: 100%;
-    max-width: 380px;
-    margin-bottom: 12%;
-  }
-
-
-  .articulo-dos-uno h1 {
-    line-height: 22px;
-    font-weight: bolder;
-    font-size: 1rem;
-    word-spacing: 4px;
-    letter-spacing: -1.5px;
-    font-family: 'Archivo Black', sans-serif;
-  }
-
-
-  .articulo-dos-uno p {
-    font-family: "Open sans";
-    font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 1.45;
-    color: #666;
-  }
 
   /*IMAGENES*/
   .dos-imagenes {
-    width: 100%;
+    width: 96%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: auto;
   }
 
   .foto {
-    width: 45%;
-    max-width: 450px;
+    width: 100%;
   }
 
   .foto img {
     width: 100%;
-    max-width: 450px;
+  }
+
+  .blockquote {
+    width: 96%;
+    margin: auto;
+    margin-top: 30px;
   }
 
   blockquote {
-    height: 10%;
     width: 100%;
-    max-width: 390px;
-    margin-top: 15%;
+    max-width: 800px;
+    margin-top: 5px;
+  }
+
+  blockquote:before {
+    content: "\201C";
+    /* inicio comilla */
+    font-family: Georgia;
+    font-size: 3em;
+    /* tamaño */
+    font-weight: bold;
+    line-height: 0px;
+    color: #d4d4d4;
+    /* Color  */
+    vertical-align: middle;
+    padding-top: 20px;
+    padding-left: 1px;
   }
 
   blockquote h3 {
@@ -2394,30 +2424,82 @@
     margin-right: 8px;
   }
 
+
+
+  /* cuarta caja ..................................... */
+  .dibujo {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .dibujo img {
+    width: 100%;
+  }
+
+  /*quinta       caja ..................................... */
+  /*ARTICULO DOS */
+  .articulo-dos {
+    display: flex;
+    flex-direction: row;
+    width: 96%;
+    margin: auto;
+  }
+
+
+  .articulo-dos .articulo-dos-uno {
+    width: 45%;
+    max-width: 380px;
+    margin-bottom: 30px;
+  }
+
+
+  .articulo-dos-uno h1 {
+    line-height: 22px;
+    font-weight: bolder;
+    font-size: 1rem;
+    word-spacing: 4px;
+    letter-spacing: -1.5px;
+    font-family: 'Archivo Black', sans-serif;
+  }
+
+
+  .articulo-dos-uno p {
+    font-family: "Open sans";
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #666;
+  }
+
+
   /*  FINAL SEGUNDA COLUMNA ......................................................................*/
   /*SEGUNDA COLUMNA ......................................................................*/
   .fijo1 {
-    width: 1%;
-    max-width: 4px;
-  }
-
-  .fija {
-    width: 50%;
-    height: 100%;
-  }
-
-  .imagen-estatica {
     width: 100%;
-    height: 80%;
-    position: fixed;
-    bottom: 0;
+  }
+
+  .tres-columnas-nosotros .fija {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+
+  .fija .imagen-estatica {
+    width: 100%;
+    display: block;
+    position: relative;
+    float: left;
   }
 
   .imagen-estatica img {
     width: 100%;
-    max-width: 468px;
-    bottom: 0;
-    margin-top: -47px;
+    margin-top: 7px;
+    margin: auto;
   }
 
 }
