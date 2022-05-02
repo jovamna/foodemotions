@@ -6,10 +6,20 @@
 
   <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!---<meta name="viewport" content="width=device-width, initial-scale=1">--->
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <!--TAG GOOGLE ES PARA LAS COOKIES------->
+        <!-- Google Tag Manager -->
+         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+         })(window,document,'script','dataLayer','GTM-W3SRK2G');</script>
+         <!-- End Google Tag Manager -->
+
+
         <title>{% block titulo %} {% endblock titulo %}</title>
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="Encuentre recetas saludables y deliciosas e ideas para menús  en la revista FoodingEmotion. Aprenda a elegir alimentos más saludables todos los días..">
         <meta name="keywords" content="Recetas Saludables, Recetas, Alimentacio Saludable, Plan de comidas dieteticas">
         <link rel="canonical" href="https://www.foodingemotion.com/">
@@ -163,6 +173,9 @@
         <link rel="stylesheet" href="{% static 'appfood/css/style.css' %}">
         <link rel="stylesheet" href="{% static 'appfood/css/responsive.css' %}">
 
+        <!-----COOKIES------------------------------------------------->
+       
+
  <!--------------------------------ESTO ES DE BASE ARTICULO------>
        <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -212,7 +225,7 @@
        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
       <!-- COOKIES-----------------COOKIES-------------- -->
-      
+ 
     <!--------SCROLL MENU------------------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 
@@ -226,10 +239,19 @@
         href="https://fonts.googleapis.com/css?family=Archivo+Black|Artifika|Bai+Jamjuree|Cabin|Merienda|Roboto+Condensed|Satisfy&display=swap"
         rel="stylesheet">
 
-  
-    {% block extracss %}
-    {% endblock extracss %}
+        {% block extracss %}
+         {% endblock extracss %}
+
+
+         <!-------------COOKIES -------------------------------->
+   
     </head>
+ 
+    <body>
+     <!-- Google Tag Manager (noscript) -->
+     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3SRK2G"
+     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
    
 
@@ -543,9 +565,8 @@
        <!-- PRIMER SEGMENTO DE NOTICIAS Y TURISMO---------------------------------------------->
 
 
+      {% block noticias-turismo %}
             <!-- TITULO ----------------------------------------2-->
-              {% block noticias-turismo %}
-       
             <div class="titulo">
                 <div class="vacio"></div>
                 <div class="escrito"><a href="index.html">
@@ -557,7 +578,7 @@
             </div>
 
 
-            <!-- SEGUNDO SEGMENTO DE TRES --------------------------------------------->
+          <!-- SEGUNDO SEGMENTO DE TRES --------------------------------------------->
            <div class="primer-segmento">
                 <div class="tres">
                          <img src>
@@ -695,7 +716,10 @@
 {% endblock dietas-alimento %}
 
 <!-- FINAL CONTENEDOR QUE CAMBIARA-------------------------------------------------------------------------------------->
+   {% block cookie %}
 
+
+    {% endblock cookie %}
 {% endblock content %}
 
 
@@ -785,7 +809,7 @@
                <div class="vacio"> </div>
             </div>
 <!-- CIERRE SEPTIMO SEGMENTO----------------TITULO ------------------------------------------------------------->
-
+ 
 <!--OCTAVO SEGMENTO  PORTADA EN MOVIMIENTO------------------------------------------------------------>
             <div class="container-portada">
                         <div class="capa-gradient"></div>
@@ -812,21 +836,24 @@
    <!--NOVENO SEGMENTO  TEXTO ANIMADO------------------------------------------------------------>
     
     <!--CIERRE NOVENO SEGMENTO  TEXTO ANIMADO------------------------------------------------------------>
-
+  
 
  <!--CIERRE DIV CONTAINER------------------------------------>
    
-   <!------------------COOKIES------------------------------------------->
-   <div id="div-cookies" style="display: none;">
-    Necesitamos usar cookies para que funcione todo, si permanece aquí acepta su uso, más información en
-    <a hreflang="es" href="/info/aviso-legal">Aviso Legal</a>
-    y la
-    <a hreflang="es" href="/info/politica-de-privacidad">Política de Privacidad</a>.
-    <button type="button" class="btn btn-sm btn-primary" onclick="acceptCookies()">
-        Acepto el uso de cookies
-    </button>
-    </div>
-   <!------------------------------------------------------------>
+   {% block cooki %}
+          <!------------------COOKIES------------------------------------------->
+          <div class="popup-overlay">
+  <div class="popup">
+    <p>Utilizamos cookies propias y de terceros para mejorar servcios.
+       Mas informacion en Politicas de Cookies.</p>
+      <a class="termino" style="color:#115cfa;" href="/privacy-policy">Politicas de Cookies</a>
+ 
+     <a href="javascript:;" class="submit">Aceptar</a> 
+       <a href="javascript:;" class="close">Cerrar</a>
+  </div>
+</div>
+
+ {% endblock cooki  %}
 
      <!----------------------------------------------------->
      <!---DIV DEL CONTAINER------>
@@ -948,18 +975,28 @@
         </div>
    <!--------------DIV DEL WRAPPER-------------------------------->   
 
-          
-            
-      
-     
-  <!---------------------------------------------------------------------------->
-       <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->
-              <script src="{% static 'appfood/js/menuResponsive.js' %}"></script>
-                   <script src="{% static 'appfood/js/menuAspaArticulo.js' %}"></script>
-         
+      <!---------------------------------------------------------------------------->
+      <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->
+      <script src="{% static 'appfood/js/menuResponsive.js' %}"></script>
+      <script src="{% static 'appfood/js/menuAspaArticulo.js' %}"></script>
+      <!----------------------------------------------------------------------------------->
+    
+     <script src="{% static 'appfood/js/cookUno.js' %}"></script>
+     <!------------------------------------------------------------------------------------------>
+     <!--PARA CERRA LA VENTA DE LOS COOKIES------>
+     <script>
+     function cerrar(){
+       document.getElementById("consent-popup").style.display="none";
+     }
 
-            
-    <!----------------------------------------------------------------------------------->
+     </script>
+     <!----------------------------------------------------------------------------------
+
+     <script src="{% static 'appfood/js/cookies.js' %}"></script>
+   ----------------------------------------------------------------------------->
+  
+   <!------------------------------------------------------------------------------------->
+
     <!----SCROLL MENU---DE LAS CATEGORIAS DE LAS OTRAS PAGINAS----------------------------------------------->
              <script type="text/javascript">
            var $this = $('.scrollmenu');

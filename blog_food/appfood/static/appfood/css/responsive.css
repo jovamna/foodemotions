@@ -2106,9 +2106,106 @@
     background-color: #2d2d2d;
   }
 
+  /*......................*/
+  .popup p {
+    font-size: 0.8em;
+    width: 100%;
+  }
+
+  .popup .termino {
+    width: 100%;
+    font-size: 0.8em;
+    margin-top: -10px;
+    margin-bottom: 4px;
+  }
+
+  .popup a.submit {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 4px;
+    font-size: 0.8em;
+  }
+
+  .popup a.close {
+    width: 100%;
+    font-size: 0.8em;
+  }
+
+  .popup-overlay {
+    padding-top: 0.5em;
+    padding-bottom: 0.7em;
+  }
+
+  .popup {
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  /*.......................*/
+  #consent-popup {
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #consent-popup p {
+    width: 100%;
+    height: 100%;
+    margin-top: -5px;
+  }
+
+  #consent-popup a {
+    width: 100%;
+    height: 100%;
+    margin-top: -10px;
+    text-align: center;
+  }
+
+  #consent-popup #accept {
+    width: 100%;
+    height: 100%;
+    padding-left: 6px;
+    text-align: center;
+  }
+
+  .politica-cookie {
+    width: 93.6%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    margin-left: 18px;
+  }
+
+  .politica-cookie h1 {
+    font-size: 2em;
+  }
+
+  .politica-cookie h2 {
+    font-size: 1.3em;
+  }
+
+  .politica-cookie h4 {
+    font-size: 1em;
+  }
+
+  .politica-cookie p {
+    font-size: 0.9em;
+  }
+
+
+  .descripcion .d h4 {
+    font-size: 0.8em;
+
+  }
+
+  .descrip .de p {
+    font-size: 0.7em;
+  }
+
 
   /*..INICIO NAV ESCONDIDO.....................*/
-
   header nav {
     display: flex;
     flex-direction: column;
@@ -2125,7 +2222,6 @@
     z-index: 20;
     visibility: visible;
     box-sizing: border-box;
-
   }
 
   header nav::-webkit-scrollbar {
@@ -2145,7 +2241,6 @@
     height: 100%;
     max-height: 80px;
     border-bottom: 1px solid #2d2d2d;
-
   }
 
   nav .logo-esconder .logo-en-menu-responsive {
@@ -3090,7 +3185,8 @@
     max-width: 640px;
   }
 
-  .primer-segmento .tres h1 {
+
+  .primer-segmento .tres a h1 {
     font-size: 1.1rem;
     font-weight: 800;
     margin-top: 5px;
@@ -3101,7 +3197,7 @@
 
   /*DESCRIPCION NUTRICION DEL SEGUNDO SEGMENTO*/
   .primer-segmento .tres p {
-    font-size: 0.8rem;
+    font-size: 0.8em;
     color: #2d2d2d;
     letter-spacing: -0.2px;
     line-height: 20px;
@@ -3111,10 +3207,11 @@
     width: 100%;
   }
 
+
   /*IMPORTANTE EL 100%..*/
   .primer-segmento .tres a {
-    font-size: 0.7rem;
-    color: #2d2d2d;
+    font-size: 0.8em;
+    color: #000000;
     letter-spacing: 0.2px;
     margin-top: 1px;
     display: block;

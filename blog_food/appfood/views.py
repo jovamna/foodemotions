@@ -374,3 +374,8 @@ def nosotros(request):
     }
 
     return render(request, "appfood/nosotros.html", context)
+
+
+def cookie(request):
+
+    return render(request, "appfood/cookies.html")

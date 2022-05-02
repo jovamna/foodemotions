@@ -23,6 +23,7 @@ urlpatterns = [
          name="noticias-turismo-gastronomico"),
     path('nosotros', views.nosotros, name="nosotros"),
     path('recetas', views.recetas, name="recetas"),
+    path('politica-cookies', views.cookie, name="politica-cookies"),
 
     #path('search/',views.search, name="search"),
 ]

@@ -132,6 +132,20 @@ div {
   margin-top: 106px;
 }
 
+#cajacookies {
+  display: none;
+  box-shadow: 0px 0px 5px 5px #808080;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
 
 /*height 125px  left 0 */
 
@@ -152,19 +166,220 @@ header.black {
   height: 100px;
 }
 
+/*.............................................*/
+.popup-overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  padding-top: 1.3em;
+  padding-bottom: 1.3em;
+  z-index: 2000;
+}
+
+.popup {
+  width: 92%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.popup p {
+  width: 62%;
+  text-align: start;
+  font-size: 0.9em;
+}
+
+.popup .termino {
+  width: 20%;
+
+}
+
+
+.popup a.submit {
+  width: 7%;
+  color: #818181;
+  border: 1px solid #818181;
+  font-size: 0.9em;
+  height: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 560;
+
+}
 
 
 
+.popup a.close {
+  width: 7%;
+  color: black;
+  padding: 2px 2px;
+  font-size: 0.9em;
+  height: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  border: 1px solid black;
+  font-weight: 600;
+}
+
+/*..OTRO...*/
+#consent-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 3rem;
+  background-color: cadetblue;
+  transition: opacity 1s ease;
+  z-index: 3000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#consent-popup p {
+  width: 80%;
+  max-width: 900px;
+  background-color: red;
+  font-size: 0.8em;
+  text-align: start;
+}
+
+#consent-popup a {
+  width: 15%;
+  max-width: 160px;
+
+
+  font-size: 0.8em;
+
+
+
+}
+
+
+
+#consent-popup #accept {
+  width: 6%;
+  height: 30px;
+  font-size: 0.9em;
+  border: 1px solid #DCDCDC;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+
+#cerrar-cookie img {
+  width: 100%;
+  max-width: 15px;
+  position: absolute;
+  right: 100px;
+  top: 3;
+}
+
+/*DIV DE LA PAGINA DE POLITICA DE COOKIE*/
+.politica-cookie {
+  width: 65%;
+  margin-left: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+
+}
+
+.politica-cookie h1 {
+  font-size: 3.5em;
+  color: #000;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: 640;
+}
+
+.politica-cookie h2 {
+  font-size: 2.1em;
+  color: black;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 640;
+  border-bottom: 1px solid #DCDCDC;
+  display: block;
+  height: 70px;
+
+}
+
+.politica-cookie h4 {
+  font-size: 1.1em;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+
+/*...UL...*/
+.privacidad {
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.privacidad li {
+  list-style: none;
+}
+
+.descripcion {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #DCDCDC;
+}
+
+.descripcion h4 {
+  color: black;
+  font-size: 1.2em;
+}
+
+.descripcion .d {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.descrip {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.descrip .de {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: #F1F1F1;
+}
 
 .cabecera {
   width: 100%;
   max-width: 1250px;
-  height: 43px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
   margin-top: -3px;
+  margin-bottom: 8px;
+
 }
 
 
@@ -189,6 +404,7 @@ header.black {
   width: 55%;
   max-width: 700px;
   height: 38px;
+
 }
 
 .cabecera #controls #custom-search-input-header {
@@ -257,18 +473,15 @@ input::placeholder {
 .suscribe {
   width: 10%;
   max-width: 90px;
-  height: 43px;
-
+  height: 40px;
 }
 
 .suscribe a h4 {
   font-size: 0.8rem;
   color: #2d2d2d;
   font-weight: 700;
-  display: inline-flex;
-  justify-content: flex-end;
   text-transform: uppercase;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.9px;
   margin-top: 18px;
 }
 
@@ -301,9 +514,9 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 92%;
-  margin-top: 3px;
-  height: 34px;
+  width: 96%;
+  height: 30px;
+  margin: auto;
 }
 
 
@@ -331,35 +544,29 @@ nav .siguenos {
 /*---UL--*/
 nav .nav {
   width: 90%;
-  position: relative;
-  display: block;
-  float: right;
-  margin-top: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 6px;
+  margin: auto;
 }
 
 /*---LI---*/
 nav .nav li {
-  display: block;
-  float: left;
-  position: relative;
-  margin-left: 40px;
   list-style: none;
-
 }
 
 /*ESTO SEPARAR MAS LAS LETRAS ...  padding: .2em; */
 nav .nav li a {
-  display: block;
-  text-decoration: none;
+
   color: #242424;
-  margin-top: 5px;
+
   font-size: 0.78rem;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 790;
   letter-spacing: 0.2px;
-  line-height: 120%;
-  width: 100%;
+
 }
 
 nav li .current {
@@ -397,28 +604,26 @@ nav .nav .li-movil {
 nav .nav ul {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 90%;
+  width: 100%;
+  max-width: 250px;
 }
 
 /* items del menu desplegable */
 /*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS   float:none*/
 nav .nav ul li {
   width: 200px;
-  float: left;
-  margin-left: -10px;
   /*IMPORTANTE MUEVE */
   height: 100%;
-  margin-bottom: -4px;
 }
 
 /* enlaces de los items del menu desplegable*/
 nav .nav ul a {
-
-  padding: 10px 15px;
+  padding: 5px 5px;
   background-color: #fff;
   color: #000000;
   font-size: 0.7rem;
-  width: 100%;
+  margin-bottom: 4px;
 }
 
 

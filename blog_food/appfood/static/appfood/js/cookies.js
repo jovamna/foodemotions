@@ -1,21 +1,35 @@
-function checkAcceptCookies() {
-    if (localStorage.acceptCookies == 'true') {
-    } else {
-        $('#div-cookies').show();
+const cookieStorage = {
+    getItem: (item) => {
+        const cookies = document.cookie
+            .split(';')
+            .map(cookie => cookie.split('='))
+            .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
+        return cookies[item];
+    },
+    setItem: (item, value) => {
+        document.cookie = `${item}=${value};`
     }
 }
-function acceptCookies() {
-    localStorage.acceptCookies = 'true';
-    $('#div-cookies').hide();
-}
-$(document).ready(function () {
-    checkAcceptCookies();
-});
 
+const storageType = cookieStorage;
+const consentPropertyName = 'jdc_consent';
+const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
+window.onload = () => {
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    const acceptFn = event => {
+        saveToStorage(storageType);
+        consentPopup.classList.add('hidden');
+    }
+    const consentPopup = document.getElementById('consent-popup');
+    const acceptBtn = document.getElementById('accept');
+    acceptBtn.addEventListener('click', acceptFn);
 
+    if (shouldShowPopup(storageType)) {
+        setTimeout(() => {
+            consentPopup.classList.remove('hidden');
+        }, 2000);
+    }
 
-<!--COOKIE----------------------------->
-    <script src="{% static 'appfood/js/cookies.js' %}"></script>
+};
