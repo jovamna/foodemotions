@@ -15886,8 +15886,47 @@
 
 
 
-/* 1200 A 1290 ......................1............... */
+/* 1200 A 1290 ............CON MENU HORIZONTAL..........1............... */
 @media only screen and (min-width: 1247px) and (max-width: 1290px) {
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    float: left;
+    clear: both
+  }
+
+
+  /*--IMPORTANTE COLOR DEL LOGO #3d6024 */
+
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    color: rgba(0, 0, 0, .95);
+    font-family: "Argos", serif;
+  }
+
+  html,
+  body {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+
+  }
 
   #wrapper {
     width: 100%;
@@ -15903,16 +15942,22 @@
 
 
   #wrapper>* {
-    padding: 28px;
+    padding: 30px;
   }
 
 
   /*CONTAINER DE TODO EL BODY............................  */
   #container {
     width: 100%;
-    margin: auto;
-    margin-top: 15px;
+    margin-top: 18px;
     margin-bottom: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
+    height: auto;
+
   }
 
 
@@ -15920,7 +15965,7 @@
   header {
     display: block;
     width: 100%;
-    height: 80px;
+    height: 100px;
     top: 0;
     left: 0;
     position: fixed;
@@ -15933,17 +15978,17 @@
 
 
   header.black {
-    height: 80;
+    height: 100;
     background-color: #fff;
   }
 
 
   .cabecera {
-    width: 98.6%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 38px;
+    height: 36px;
   }
 
 
@@ -15953,53 +15998,49 @@
     width: 20%;
     max-width: 320px;
     min-width: 290px;
-    height: 38px;
+    height: 36px;
   }
 
   .cabecera .logo img {
     display: block;
     width: 100%;
-    max-width: 170px;
-    min-width: 170px;
-    height: 38px;
+    max-width: 172px;
+    min-width: 172px;
+    height: 35px;
     z-index: 40;
   }
 
 
   /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
   .cabecera #controls {
-    display: block;
-    position: relative;
-    float: left;
-    width: 35%;
-    max-width: 650px;
-    height: 38px;
-    visibility: visible;
+    width: 38%;
+    max-width: 690px;
+    min-width: 650px;
+    height: 36px;
+    background-color: yellow;
   }
 
 
   /*IMPORTANTE*/
   .cabecera #controls .d-flex {
     width: 100%;
-    max-width: 450px;
-    visibility: visible;
   }
 
-  .cabecera #controls .d-flex #custom-search-input-header {
+  .cabecera #controls #custom-search-input-header {
     display: flex;
     flex-direction: row;
     width: 100%;
-    max-width: 450px;
+    max-width: 600px;
+    height: 34px;
   }
 
   /*CAMPO SEARCH BUSCADOR */
-  .cabecera #controls .d-flex #custom-search-input-header .sin-borde {
-    display: inline-flex;
+  .cabecera #controls #custom-search-input-header .sin-borde {
     width: 92%;
     max-width: 410px;
-    height: 35px;
+    height: 34px;
     outline: none;
-    padding-left: 3px;
+
     /*MUEVE LA LETRA*/
     background-color: #f8f8f8;
   }
@@ -16010,7 +16051,7 @@
     /*MUEVE LA LETRA*/
     width: 8%;
     max-width: 30px;
-    height: 35px;
+    height: 34px;
     margin-left: -8px;
   }
 
@@ -16042,19 +16083,18 @@
     display: block;
     position: relative;
     float: left;
-    width: 20%;
-    max-width: 240px;
-    max-width: 180px;
-    height: 38px;
+    width: 18%;
+    max-width: 88px;
+    min-width: 80px;
+    height: 36px;
   }
 
 
   .suscribe a h4 {
     font-size: 0.8rem;
-    margin-top: 10px;
+    margin-top: 19px;
     font-weight: 700;
-    letter-spacing: 0.2px;
-    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1.5px;
     z-index: 5;
   }
 
@@ -16062,96 +16102,10 @@
 
   /*  MENU NAV DE CONVIERTE EN ASPA REDUCIDO A ICONO*/
   .cabecera .menu-btn {
-    display: block;
-    position: relative;
-    float: right;
-    width: 8%;
-    max-width: 40px;
-    height: 38px;
-    margin: auto;
-  }
-
-
-  .menu-btn .hamburguesa {
-    display: block;
-    position: relative;
-    float: left;
-    width: 100%;
-    height: 30px;
-    max-width: 40px;
-  }
-
-  /*---- box-shadow: 0 2px 5px rgba(255,101,47,.2);----------*/
-  .menu-btn .hamburguesa .menu-btn__burger {
-    display: block;
-    position: relative;
-    float: right;
-    margin-top: 14.5px;
-    width: 37px;
-    height: 4px;
-    background: #2d2d2d;
-    border-radius: 2px;
-    transition: all .5s ease-in-out;
-    z-index: 1000;
-  }
-
-
-
-  /* box-shadow: 0 2px 5px rgba(255,101,47,.2) ; */
-  .menu-btn__burger::before,
-  .menu-btn__burger::after {
-    content: '';
-    position: absolute;
-    height: 4px;
-    width: 36px;
-    background: #2d2d2d;
-    border-radius: 2px;
-    transition: all .5s ease-in-out;
-    z-index: 800;
-  }
-
-
-  .menu-btn__burger::before {
-    transform: translateY(-7px);
-    z-index: 3000;
-  }
-
-
-  .menu-btn__burger::after {
-    transform: translateY(7px);
-    z-index: 3000;
-  }
-
-
-  /* ANIMATION */
-  .hamburguesa.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-  }
-
-
-  /* background: #fff;  */
-  .hamburguesa.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
+    display: none;
 
   }
 
-
-  /* background: #fff;  */
-  .hamburguesa.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-  }
-
-  .menu-btn__burger:hover {
-    background-color: #7aac41;
-  }
-
-
-  .menu-btn__burger:hover::before,
-  .menu-btn__burger:hover::after {
-    background-color: #7aac41;
-  }
 
 
   /*ANULANDO NAV DE PANTALLA GRANDE NAV MENU..*/
@@ -16168,244 +16122,137 @@
 
 
   /*..INICIO NAV ESCONDIDO.....................*/
-  header nav {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: -100%;
-    /*con esto el menu desaparece porque se va fuera y luego escribimos el codigo javascript */
-    background-color: #fff;
-    overflow-y: scroll;
-    z-index: 200;
-    visibility: visible;
-    box-sizing: border-box;
-
-  }
-
-  nav::-webkit-scrollbar {
-    display: none;
-  }
-
-
-  /* #aaaaaa */
-  nav .logo-esconder {
+  /*NAV   SEMENTO QUE CONTIENE LOGO BUSCADOR Y NAVEGACION ESCONDIDA */
+  nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 98%;
-    visibility: visible;
-    height: 80px;
-    border-bottom: 1px solid #2d2d2d;
-
-  }
-
-  nav .logo-esconder .logo-en-menu-responsive {
-    width: 30%;
-    max-width: 150px;
-    display: inline-flex;
-    height: 80px;
-    margin-left: 10px;
+    width: 96%;
+    height: 30px;
+    margin: auto;
   }
 
 
-
-  nav .logo-esconder .logo-en-menu-responsive img {
-    width: 100%;
-    max-width: 120px;
-    min-width: 120px;
-    margin-top: 45px;
+  nav .esconder {
+    display: none;
+    visibility: hidden;
   }
 
-  nav .logo-esconder .emoticon {
-    width: 8%;
-    height: 80px;
-  }
-
-  nav .logo-esconder .suscriptor {
-    width: 30%;
-    height: 80px;
-    display: block;
-    position: relative;
-    float: right;
+  nav .logo-esconder {
+    display: none;
+    visibility: hidden;
   }
 
 
-  nav .logo-esconder .suscriptor a h4 {
-    font-size: 0.8em;
-    margin-top: 50px;
+  nav .buscador-esconder {
+    display: none;
+    visibility: hidden;
   }
-
 
   nav .siguenos {
-    display: block;
-    width: 95%;
-    margin-top: 40px;
-    visibility: visible;
+    display: none;
+    visibility: hidden;
   }
 
-  nav .siguenos ul {
-    display: flex;
-    flex-direction: row;
-    width: 95%;
-    margin-left: 10px;
-  }
-
-  nav .siguenos h1 {
-    font-size: 0.9em;
-    display: inline-flex;
-    margin: 10px 0;
-    padding: 5px 9px 5px 4px;
-  }
-
-
-  nav .siguenos ul li {
-    margin: 10px 0;
-    list-style: none;
-    padding: 5px 9px 5px 4px;
-  }
-
-  /*BUSCADOR EN EL NAV ESCONDIDO RESPONSIVE.....*/
-  nav .buscador-esconder {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    visibility: visible;
-    margin-top: 40px;
-    margin-left: 10px;
-    height: 50px;
-  }
-
-  nav .buscador-esconder .d-flex {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-  }
-
-  nav .buscador-esconder .d-flex #custom-search {
-    width: 100%;
-    height: 50px;
-    border: 1px solid #2d2d2d;
-    border-radius: 8px;
-  }
-
-  .buscador-esconder #custom-search input[type=text] {
-    box-sizing: border-box;
-  }
-
-  .buscador-esconder .d-flex #custom-search .sin-borde {
+  /*---UL--*/
+  nav .nav {
     width: 90%;
-    height: 40px;
-    outline: none;
-    border-radius: 3px;
-    box-sizing: border-box;
-    display: block;
-    position: relative;
-    float: left;
-  }
-
-  .buscador-esconder .d-flex #custom-search .boton {
-    width: 10%;
-    height: 40px;
-    border-radius: 1px;
-    display: block;
-    position: relative;
-    float: right;
-    margin-top: 4px;
-    box-sizing: border-box;
-    background-color: #fff;
-  }
-
-
-
-
-  nav .nav li a.active {
-    text-decoration: line-through;
-    color: #568632;
-  }
-
-  /* UL  */
-  header nav .nav {
-    width: 96%;
-    height: 99%;
     display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    z-index: 99;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 6px;
+    margin: auto;
   }
 
-  /*ESTO ES PARA EL ESPACIO DE LAS LETRAS*/
+  /*---LI---*/
   nav .nav li {
     list-style: none;
-    height: 30px;
-    /*IMPORTANTE CON ESTO LAS RAYAS ANIMADAS NO SALEN POR OTRO LADO */
-    margin-left: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border-bottom: 1px solid #2d2d2d;
   }
 
-
+  /*ESTO SEPARAR MAS LAS LETRAS ...  padding: .2em; */
   nav .nav li a {
-    z-index: 100;
-    height: 24px;
-    color: #2d2d2d;
-    font-weight: 520;
-    font-size: 0.9rem;
+
+    color: #242424;
+
+    font-size: 0.78rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 5px;
-    width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 790;
+    letter-spacing: 0.2px;
+
+  }
+
+  nav li .current {
+    color: #7aac41;
+  }
+
+  /*-----MENU SELECCIONADO,,,,,,,,,,,,,,,,,*/
+  nav ul li a.active {
+    text-decoration: line-through;
+    color: #7aac41;
   }
 
 
-  /* NAV ESCONDIDO  NAV ESCONDIDO     margin-top:-40px;*/
-  /*MUY IMPORTANTE PARA QUE LAS RAYAS NO SALGAN FUERA COLOR AL SUBMENU ESCONDIDO*/
+  /* items del menu desplegable al pasar el ratón display:block; width: 100%;*/
   nav .nav li:hover>ul {
-    background-color: #fff;
-    width: 100%;
-    max-width: 300px;
-    margin-left: 6px;
-    z-index: 598;
+    display: block;
+    width: 60%;
   }
 
 
+  /*LI QUE SE OCULTA ES DEL MOVIL*/
+  nav .nav .li-movil {
+    display: none;
+  }
+
+
+  /* efecto al pasar el ratón por los items del menu */
+  /*IMPORTANTE PARA QUE NO SALGAN DOBLE RAYA AL HACER HOVER*/
+  .nav a:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
   nav .nav ul {
-    width: 100%;
-    max-width: 500px;
     display: none;
     position: absolute;
-    margin-top: 0.5px;
-    margin-left: 50px;
+    top: 90%;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* items del menu desplegable */
+  /*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS   float:none*/
+  nav .nav ul li {
+    width: 200px;
+    /*IMPORTANTE MUEVE */
+    height: 100%;
+  }
+
+  /* enlaces de los items del menu desplegable*/
+  nav .nav ul a {
+    padding: 5px 5px;
+    background-color: #fff;
+    color: #000000;
+    font-size: 0.7rem;
+    margin-bottom: 4px;
   }
 
 
-
-
-  nav .nav li ul li {
+  #container #submenu {
     display: block;
-    width: 500px;
-    height: 30px;
-    margin-bottom: 2px;
-    border-bottom: 1px solid #2d2d2d;
+    width: 80%;
+    z-index: 2;
+  }
+
+  #container #submenu .submenu-responsive {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
 
-  nav .nav li ul li a {
-    font-size: 0.9rem;
-    display: block;
-    width: 300px;
-    height: 20px;
-    padding-top: 1px;
-    margin-bottom: 2px;
-    text-transform: lowercase;
-  }
 
   /* ANIMA CON RAYA AL HACE HOVER */
   /*HOVER SALE RAYA.............HOVER */
@@ -16422,76 +16269,29 @@
 
 
   nav a:hover:after {
-    width: 300px;
+    width: 100%;
     background: #7aac41;
   }
 
-  nav .nav .li-movil {
-    display: block;
-  }
-
-
-  nav .nav .li-pc {
+  /* FINAL MENU ANIMADO */
+  /* BUSCADOR INTERNO RESPONSIVE*/
+  #controls-responsive {
     display: none;
   }
 
 
-  nav .nav .li-pc .submenu-responsive li {
-    margin-bottom: 0.5px;
-    height: 24px;
-  }
 
 
-  nav .nav .li-pc .submenu-responsive li a {
-    padding-top: 0.5px;
-    margin-top: 2px;
-    height: 18px;
-    font-size: 0.9rem;
-  }
-
-
-
-
-  /* FIN MENU ESCONDIDO AQUI SE DA EL COLOR DEL NAV...MENU ESCONIDDO DEL NAV ARRO........*/
-
-
-
-
-
-  /*PARA QUITARLA RAYA AL LOGO CUANOD SE HACE HOVER*/
-  nav .estilo-logo:after {
-    text-decoration: none;
-    height: 0px;
-    content: "";
-    display: none;
-    margin-top: 0px;
-    /*ESTO RAYA EN EL MEDIO DE LA LETRA.  MENU BURGER*/
-    /*transition: all .8s;*/
-    height: 0px;
-    width: 0px;
-    transition: all .0s;
-    z-index: 10;
-  }
-
-
-
-  /* width: 100%;*/
-  nav a:hover:after {
-    padding-left: 40px;
-    padding-right: -150px;
-    height: 2px;
-    background: white;
-  }
 
   /*..FIN NAV ESCONDIDO...........................*/
 
 
 
   .portada {
-    width: 100%;
+    width: 97.5%;
     margin: auto;
     max-height: 650px;
-    padding-top: 3.7%;
+    margin-top: 60px;
     z-index: 100;
   }
 
@@ -16512,7 +16312,7 @@
 
   /*..TITULO E LA RECETA DE PAGINA RECETAS SALUDABLES*/
   .primer-segmento {
-    width: 100%;
+    width: 97.1%;
     display: flex;
     margin-top: 40px;
   }
@@ -16540,6 +16340,12 @@
 
 
   /*SEGMENTO DE LOS POSTS ULTIMOS..........................2  */
+  /*...POSTS ULTIMOS....................*/
+  .bloque-posts-ultimos {
+    width: 97.1%;
+    margin: auto;
+  }
+
   /*..EL ASIDE.....EXPLORAR CATEGORIAS RECETAS DIETETICAS............*/
   .columna-right {
     display: block;
@@ -16600,7 +16406,8 @@
   .plan-total-alimentacion {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 97.1%;
+    margin: auto;
   }
 
 
@@ -16659,12 +16466,47 @@
     font-size: 1.7rem;
   }
 
+  /*.....................PAGINA RECETAS...............*/
+  .categorias-subcategorias {
+    width: 97.5%;
+    margin: auto;
+    margin-top: 90px;
+  }
+
+  .titulo-otras-paginas {
+    width: 97.5%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  #container-recetas {
+    width: 97.5%;
+    margin: auto;
+  }
 
   /*......................................*/
+  /*...PAGINAS DIETAS PERDER TURISMO..*/
+  .caja-texto-slider {
+    width: 97.5%;
+    margin: auto;
+    margin-top: 90px;
+  }
+
+  #container-post-plan {
+    width: 97.5%;
+    margin: auto;
+  }
 
   .quinto-segmento {
     width: 90%;
   }
+
+
+  .container-portada {
+    width: 97.1%;
+    margin: auto;
+  }
+
 
   /*FOOTER..........................................................*/
   #footer {

@@ -614,7 +614,7 @@ blockquote .otroestilo {
   flex-direction: row;
   justify-content: space-between;
 
-  z-index: 2000;
+  z-index: 1000;
   /*IMPORTANTE */
   margin: 0 auto;
 }
