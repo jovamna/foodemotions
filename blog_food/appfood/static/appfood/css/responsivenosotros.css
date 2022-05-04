@@ -5868,8 +5868,8 @@
     height: 30px;
     display: block;
     margin: auto;
-    border-top: 0.7px solid #DCDCDC;
-    border-bottom: 0.7px solid #DCDCDC;
+    border-top: 0.7px solid #E3E3E3;
+    border-bottom: 0.7px solid #E3E3E3;
     z-index: 10;
   }
 

@@ -79,7 +79,7 @@ header {
   top: 0;
   margin: auto;
   height: 113px;
-  box-shadow: 0 8px 6px -6px #DCDCDC;
+  box-shadow: 0 8px 6px -6px #E3E3E3;
   background-color: #fff;
 }
 
@@ -205,8 +205,8 @@ nav {
   height: 36px;
   display: block;
   margin: auto;
-  border-top: 0.7px solid #DCDCDC;
-  border-bottom: 0.7px solid #DCDCDC;
+  border-top: 0.7px solid #E3E3E3;
+  border-bottom: 0.7px solid #E3E3E3;
   z-index: 10;
   background-color: #fff;
 }

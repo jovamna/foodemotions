@@ -129,7 +129,7 @@ div {
   padding: 0 0 0 0;
   /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
   height: auto;
-  margin-top: 106px;
+  margin-top: 102px;
 }
 
 #cajacookies {
@@ -157,13 +157,13 @@ header {
   top: 0;
   left: 0;
   margin: auto;
-  height: 100px;
-  box-shadow: 0 8px 6px -6px #DCDCDC;
+  height: 96px;
+  box-shadow: 0 8px 6px -6px #E3E3E3;
   background-color: #fff;
 }
 
 header.black {
-  height: 100px;
+  height: 96px;
 }
 
 /*.............................................*/
@@ -464,6 +464,8 @@ nav {
   width: 96%;
   height: 30px;
   margin: auto;
+  border-top: 0.7px solid #E3E3E3;
+  border-bottom: 0.7px solid #E3E3E3;
 }
 
 
