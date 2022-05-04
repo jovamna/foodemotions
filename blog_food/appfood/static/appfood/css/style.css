@@ -227,63 +227,11 @@ header.black {
   font-weight: 600;
 }
 
-/*..OTRO...*/
-#consent-popup {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem 3rem;
-  background-color: cadetblue;
-  transition: opacity 1s ease;
-  z-index: 3000;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#consent-popup p {
-  width: 80%;
-  max-width: 900px;
-  background-color: red;
-  font-size: 0.8em;
-  text-align: start;
-}
-
-#consent-popup a {
-  width: 15%;
-  max-width: 160px;
-
-
-  font-size: 0.8em;
 
 
 
-}
 
 
-
-#consent-popup #accept {
-  width: 6%;
-  height: 30px;
-  font-size: 0.9em;
-  border: 1px solid #DCDCDC;
-  border-radius: 2px;
-  text-align: center;
-}
-
-.hidden {
-  opacity: 0;
-}
-
-
-#cerrar-cookie img {
-  width: 100%;
-  max-width: 15px;
-  position: absolute;
-  right: 100px;
-  top: 3;
-}
 
 /*DIV DE LA PAGINA DE POLITICA DE COOKIE*/
 .politica-cookie {
@@ -292,7 +240,6 @@ header.black {
   display: flex;
   flex-direction: column;
   margin-top: 60px;
-
 }
 
 .politica-cookie h1 {
@@ -564,6 +511,7 @@ nav .nav li a {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 790;
   letter-spacing: 0.2px;
+
 }
 
 nav li .current {
@@ -581,6 +529,11 @@ nav ul li a.active {
 nav .nav li:hover>ul {
   display: block;
   width: 60%;
+  background-color: #7aac41;
+}
+
+nav .nav .li-pc:hover>.submenu-responsive {
+  display: block;
 }
 
 
@@ -598,31 +551,72 @@ nav .nav .li-movil {
 }
 
 /*MENU ESCONDID /*IMPORTANTE PARA EL ESPACIO DE LETRAS ENTREN EN EL UL*/
-nav .nav ul {
+nav .nav li ul {
   display: none;
   position: absolute;
-  top: 90%;
+  top: 92%;
   width: 100%;
-  max-width: 250px;
+  max-width: 120px;
+
+  z-index: 200;
 }
 
 /* items del menu desplegable */
 /*IMPORTANTE PARA QUE LAS PALABRAS SAÑGAN COMPLETAS   float:none*/
-nav .nav ul li {
-  width: 200px;
-  /*IMPORTANTE MUEVE */
-  height: 100%;
+nav .nav li ul li {
+  float: left;
+  width: 100%;
+
+  z-index: 300;
+
 }
 
 /* enlaces de los items del menu desplegable*/
-nav .nav ul a {
-  padding: 5px 5px;
+nav .nav li ul li a {
   background-color: #fff;
-  color: #000000;
-  font-size: 0.7rem;
-  margin-bottom: 4px;
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  color: black;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  margin-top: 1px;
+  margin-bottom: 1px;
+
 }
 
+/*...UL LI UL..*/
+nav .nav .li-pc .submenu-responsive {
+  display: none;
+  width: 100%;
+  max-width: 300px;
+  min-width: 160px;
+  position: absolute;
+
+  z-index: 300;
+}
+
+
+
+/*..LI UL LI..*/
+.li-pc .submenu-responsive li {
+  float: left;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 1.5px;
+}
+
+.li-pc .submenu-responsive li a {
+  background-color: #fff;
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  color: black;
+
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+}
 
 #container #submenu {
   display: block;
@@ -634,6 +628,7 @@ nav .nav ul a {
   display: flex;
   flex-direction: column;
   width: 100%;
+
 }
 
 

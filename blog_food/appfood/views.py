@@ -377,5 +377,9 @@ def nosotros(request):
 
 
 def cookie(request):
+    kategory = Kategory.objects.all()  #RECETAS SALUDABLES  #RECETAS SALUDABLES
+    context = {
+        'kategory': kategory,
+    }
 
-    return render(request, "appfood/cookies.html")
+    return render(request, "appfood/cookies.html", context)
