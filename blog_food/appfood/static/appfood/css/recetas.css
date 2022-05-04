@@ -92,14 +92,14 @@ header {
   top: 0;
   left: 0;
   margin: auto;
-  height: 65px;
+  height: 60px;
   box-shadow: 0 8px 6px -6px #DCDCDC;
   background-color: #fff;
 }
 
 header.black {
   background-color: #fff;
-  height: 65px;
+  height: 60px;
 }
 
 
@@ -111,7 +111,7 @@ header.black {
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  margin-top: -2px;
+  margin-top: -6px;
   z-index: 2;
 }
 
@@ -166,7 +166,7 @@ header.black {
 /*CAJA DEL BUSCADOR    border-bottom: 2px solid #2d2d2d;*/
 .cabecera-recetas .controls #custom-search-input {
   width: 100%;
-  height: 35px;
+  height: 34px;
   display: flex;
   flex-direction: row;
   border-radius: 0px;
@@ -175,7 +175,7 @@ header.black {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   margin-top: 0.5px;
-  box-shadow: 4px 8px 6px -6px #8c8c8c;
+  box-shadow: 2px 4px 6px -6px #8c8c8c;
   background: #FEFEFE;
   background-image: linear-gradient(45deg, #FFF, #F9F9F9);
   border: 1px solid #FAFAFA;
@@ -710,10 +710,10 @@ nav .estilo-logo:after {
 #menu-simple {
   width: 100%;
   height: 100%;
-  max-height: 50px;
+  max-height: 35px;
+  margin-bottom: 35px;
   display: flex;
   flex-direction: row;
-  margin-bottom: 12px;
 }
 
 /*ANCHO IMPORTANTE PARA EL MENU   ES LI*/
@@ -721,7 +721,7 @@ nav .estilo-logo:after {
   width: 100%;
   display: flex;
   flex-direction: row;
-  height: 45px;
+  height: 35px;
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: none;
@@ -749,13 +749,13 @@ nav .estilo-logo:after {
 
 /*ESTO ES LO MISMO QUE EL ANTERIOR?*/
 #menu-simple p {
-  letter-spacing: -0.4px;
-  font-size: 0.95rem;
+  letter-spacing: -0.1px;
+  font-size: 0.9em;
   line-height: 1.45;
-  color: #2d2d2d;
-  font-family: 'Times New Roman', Times, serif;
+  color: black;
+
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 750;
   height: 2px;
   /*ESTO ARREGLO EL SUBRAYADO QUE SALIO MUY ABAJO */
 }
@@ -833,7 +833,6 @@ nav .estilo-logo:after {
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-top: 5px;
   margin-bottom: 5px;
 }
 
@@ -964,6 +963,7 @@ nav .estilo-logo:after {
   width: 8%;
   max-width: 50px;
   margin-right: 9px;
+
 }
 
 /*UL*/
@@ -1031,6 +1031,7 @@ nav .estilo-logo:after {
   display: block;
   position: relative;
   float: right;
+
 }
 
 

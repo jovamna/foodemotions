@@ -7066,9 +7066,14 @@
 
   #container-recetas {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 78px;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+    margin-bottom: 0px;
   }
 
   .cabecera-recetas {
@@ -7782,7 +7787,127 @@
 
 
 
-/* 1200 A 1290 ........AQUI NO MODIFIQUE NADA................................................................................................................ */
+/* 1200 A 1290 .....NEST HUB MAX ORDENADOR PC PEQUEÑO........................... */
+@media only screen and (min-width: 1247px) and (max-width: 1290px) {
+
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    float: left;
+    clear: both
+  }
 
 
-@media only screen and (min-width: 1247px) and (max-width: 1290px) {}
+  /*--IMPORTANTE COLOR DEL LOGO #3d6024 */
+
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    color: rgba(0, 0, 0, .95);
+    font-family: "Argos", serif;
+  }
+
+  html,
+  body {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+
+  }
+
+  #wrapper-recetas {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+  #wrapper-recetas>* {
+    padding: 30px;
+  }
+
+
+  /*CONTAINER DE TODO EL BODY............................  */
+  #container-recetas {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+  }
+
+
+  /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+  header {
+    display: block;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2000;
+    /*IMPORTANTE  */
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
+  }
+
+
+  header.black {
+    height: 50px;
+    background-color: #fff;
+  }
+
+
+  .cabecera-recetas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 36px;
+    margin-top: -13px;
+  }
+
+  #menu-simple {
+    width: 97.1%;
+    height: 30px;
+    margin: auto;
+    margin-top: 48px;
+  }
+
+  #container-recetas #tres-columnas-recetas {
+    width: 97.1%;
+    margin: auto;
+    margin-top: 26px;
+
+  }
+
+
+
+
+
+}

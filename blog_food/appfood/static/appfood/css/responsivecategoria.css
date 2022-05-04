@@ -6632,70 +6632,127 @@
 
 
 
-
+/*....NEST HUB MAX.........................................*/
 /* 1200 A 1290 ...................................................... */
 @media only screen and (min-width: 1247px) and (max-width: 1290px) {
-  #wrapper-categorias {
+  * {
     margin: 0;
+    padding: 0;
+    border: 0;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  }
+
+  /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    float: left;
+    clear: both
+  }
+
+
+  /*--IMPORTANTE COLOR DEL LOGO #3d6024 */
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    color: rgba(0, 0, 0, .95);
+    font-family: "Argos", serif;
+  }
+
+  html,
+  body {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+
+  }
+
+
+
+  #wrapper-categorias {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #wrapper-categorias>* {
-    padding: 20px;
+    padding: 30px;
   }
 
-  /*CONTAINER DE TODO EL CONTENIDO DE CATEGORIA ESTA DESPUES DE WRAPPER............................................*/
+
   #container-categorias {
     width: 100%;
-    margin: 0 auto;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
     margin-top: 110px;
 
   }
 
   /*border-bottom: 2px solid #DDD;*/
   /*HEADER LLAMADO CATEGORIA*/
+  /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
   header {
+    display: block;
     width: 100%;
-    z-index: 999;
+    height: 50px;
+    top: 0;
+    left: 0;
     position: fixed;
+    z-index: 2000;
+    /*IMPORTANTE  */
     margin: auto;
-    height: 66px;
-    box-shadow: 0 8px 6px -6px #c9c9c9;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
   }
 
 
-  /*HEADER LLAMADO CATEGORIA*/
   header.black {
-    width: 100%;
-    height: 66px;
+    height: 50px;
     background-color: #fff;
   }
+
+
 
   /*CABECERA */
   #cabecera-categorias {
     width: 100%;
     display: flex;
     flex-direction: row;
-    margin: auto;
-    height: 40px;
+    justify-content: space-between;
+    height: 36px;
+    margin-top: -13px;
     /*IMPORTANTE EL ESPACIO DEL LOGO */
   }
 
 
-  .logo img {
-    width: 90%;
-  }
+
 
   nav .siguenos {
     margin-left: 30px;
   }
 
   #container-categorias-subcategorias {
-    margin-top: -40px;
+    width: 97.1%;
+    margin: auto;
+    margin-top: -50px;
     margin-bottom: 40px;
+
   }
 
   /*FIN NAV*/
@@ -6755,7 +6812,23 @@
     font-size: 0.9rem;
   }
 
+  #texto-slider {
+    width: 97.1%;
+    margin: auto;
 
+  }
+
+  .container-posts-categorias {
+    width: 97.1%;
+    margin: auto;
+
+  }
+
+
+  .container-total-carrusell {
+    width: 97.1%;
+    margin: auto;
+  }
 
   .footer-primero-categorias {
     display: flex;
