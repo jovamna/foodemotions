@@ -821,6 +821,68 @@ nav .estilo-logo:after {
 
 
 
+/*.............COOKIE................................*/
+.popup-overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  padding-top: 1.3em;
+  padding-bottom: 1.3em;
+  z-index: 2000;
+}
+
+.popup {
+  width: 92%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.popup p {
+  width: 62%;
+  text-align: start;
+  font-size: 0.9em;
+}
+
+.popup .termino {
+  width: 20%;
+
+}
+
+
+.popup a.submit {
+  width: 7%;
+  color: #818181;
+  border: 1px solid #818181;
+  font-size: 0.9em;
+  height: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 560;
+
+}
+
+
+
+.popup a.close {
+  width: 7%;
+  color: black;
+  padding: 2px 2px;
+  font-size: 0.9em;
+  height: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  border: 1px solid black;
+  font-weight: 600;
+}
+
+/*.....................*/
 
 
 

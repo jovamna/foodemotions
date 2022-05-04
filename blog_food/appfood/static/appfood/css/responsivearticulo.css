@@ -1285,6 +1285,50 @@
   }
 
 
+  /*........COOKIE..............*/
+  .popup p {
+    font-size: 0.8em;
+    width: 100%;
+  }
+
+  .popup .termino {
+    width: 100%;
+    font-size: 0.8em;
+    margin-top: -10px;
+    margin-bottom: 4px;
+  }
+
+  .popup a.submit {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 6px;
+    font-size: 0.8em;
+    height: 34px;
+    border-radius: 6px;
+    padding-top: 6px;
+  }
+
+  .popup a.close {
+    width: 100%;
+    font-size: 0.8em;
+    height: 34px;
+    border-radius: 6px;
+    padding-top: 9px;
+  }
+
+  .popup-overlay {
+    padding-top: 0.5em;
+    padding-bottom: 0.7em;
+  }
+
+  .popup {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*.........FIN COOKIE..............*/
+
   #menu-simple {
     width: 91%;
     margin-top: 14px;
@@ -9636,7 +9680,7 @@
   }
 
   #menu-simple {
-    width: 97.1%;
+    width: 90%;
     height: 30px;
     margin: auto;
     margin-top: 48px;
@@ -9644,7 +9688,7 @@
 
 
   #tres-columnas-articulo {
-    width: 97.1%;
+    width: 90%;
     margin: auto;
     margin-top: 26px;
   }

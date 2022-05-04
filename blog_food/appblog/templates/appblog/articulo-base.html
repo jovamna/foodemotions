@@ -709,6 +709,22 @@
           <!---FIN DIV ID CARUUSEL------------------------------------------->
          </div>
         <!-- FIN CONTAINER DIV ID--SEPARAR-CARRUSEL-------------------------->
+  {% block cooki %}
+          <!------------------COOKIES------------------------------------------->
+          <div class="popup-overlay">
+  <div class="popup">
+    <p>Utilizamos cookies propias y de terceros para mejorar servcios.
+       Mas informacion en Politicas de Cookies.</p>
+      <a class="termino" style="color:#115cfa;" href="{% url 'appfood:politica-cookies' %}">Politicas de Cookies</a>
+ 
+     <a href="javascript:;" class="submit">Aceptar</a> 
+       <a href="javascript:;" class="close">Cerrar</a>
+  </div>
+</div>
+
+ {% endblock cooki  %}
+
+
     </div> 
     <!-- DIV FINAL DEL CONTAINER DE TODO EL CONTENIDO-->
 
@@ -774,7 +790,10 @@
 
             <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->
             <script src="{% static 'appfood/js/menuDeslizaArticulo.js' %}"></script>
-
+           <!----------------------------------------------------------------------------------->
+    
+     <script src="{% static 'appfood/js/cookies.js' %}"></script>
+     <!------------------------------------------------------------------------------------------>
 
 
 
