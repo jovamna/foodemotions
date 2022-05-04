@@ -504,7 +504,17 @@
                
 
             </div> <!-- FINAL TRES CLUMNAS-->
-
+        <!------------------COOKIES------------------------------------------->
+          <div class="popup-overlay">
+  <div class="popup">
+    <p>Utilizamos cookies propias y de terceros para mejorar servcios.
+       Mas informacion en Politicas de Cookies.</p>
+      <a class="termino" style="color:#115cfa;" href="{% url 'appfood:politica-cookies' %}">Politicas de Cookies</a>
+ 
+     <a href="javascript:;" class="submit">Aceptar</a> 
+       <a href="javascript:;" class="close">Cerrar</a>
+  </div>
+</div>
 
 <!--DIV CIERR DEL CONTAINER---->
     </div>
@@ -521,7 +531,10 @@
             </div>
 
         <!-- FINAL CONTAINER-------------------------------->
-
+            <!----------------------------------------------------------------------------------->
+    
+     <script src="{% static 'appfood/js/cookies.js' %}"></script>
+     <!------------------------------------------------------------------------------------------>
 
            <!-- MENU PARA DESPLAZAR LAS OPCIONES DEL MENU-->
               <script src="{% static 'appfood/js/menuResponsive.js' %}"></script>
