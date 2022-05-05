@@ -67,9 +67,10 @@ div {
   width: 100%;
   max-width: 1250px;
   margin: auto;
+
+  padding: 0 0 0 0;
+  /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
   height: auto;
-  padding-left: 0;
-  padding-right: 0;
   margin-top: 72px;
   margin-bottom: 40px;
 }
@@ -98,14 +99,14 @@ header.black {
 
 
 #cabecera-categorias {
-  width: 100%;
+  width: 96%;
   max-width: 1250px;
   height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  margin-top: -2px;
+  margin-top: -3px;
   z-index: 2;
 }
 
@@ -126,8 +127,8 @@ header.black {
 #cabecera-categorias .logo img {
   width: 100%;
   height: 35px;
-  max-width: 170px;
-  min-width: 170px;
+  max-width: 169.6px;
+  min-width: 169.6px;
 }
 
 
@@ -710,7 +711,7 @@ nav .nav li ul li a {
 
 .popup .termino {
   width: 20%;
-
+  font-weight: 600;
 }
 
 
@@ -762,6 +763,7 @@ nav .nav li ul li a {
 #container-categorias-subcategorias {
   display: block;
   width: 100%;
+  margin: auto;
 }
 
 
@@ -1013,14 +1015,15 @@ nav .nav li ul li a {
 /*------------CAJA TEXTO SILER DONDE ESTAN TODAS LAS SUBCATEPRIAS....DE DIETA ,PLA, ETC--*/
 #texto-slider {
   display: block;
+  width: 99%;
+  margin: auto;
   height: 75px;
   margin-bottom: 70px;
 }
 
-/*SEGMENTO DE LAS SUBCATEGORIAS DE LAS APGINAS PLAN DE COMIDAS, DIETAS Y TURISMO      background-color: #ccc;*/
+/*SUBCAJA DE TEXTTO-SLIDER  SEGMENTO DE LAS SUBCATEGORIAS DE LAS APGINAS PLAN DE COMIDAS, DIETAS Y TURISMO      background-color: #ccc;*/
 .caja-texto-slider {
   display: block;
-  width: auto;
   height: 60px;
   /*SE ACORTA LA DISTANCIA ENTE EL SCROLL Y LA VENTANA MENU*/
   overflow-x: auto;
@@ -1087,7 +1090,8 @@ nav .nav li ul li a {
 
 /*A--CATEGORIAS DE LA PAGINA RECETAS SALUDABLES Y DIETETICAS CON IMAGENES REDONDAD*/
 .imagenes-pequeñas {
-  width: 100%;
+  width: 99%;
+  margin: auto;
   margin-bottom: 80px;
   /*SEPARA BARRA DE SUBCATEGORIAS DE LOS POSTS*/
   display: flex;
@@ -1119,8 +1123,10 @@ nav .nav li ul li a {
 /*CONTINER TOTAL DE LA PPAGINA  DE RECETAS , DE DIETA, PLAN Y TURISMO...*/
 .container-posts-categorias {
   display: block;
-  width: 100%;
+  width: 99%;
+  margin: auto;
   margin-bottom: 100px;
+
 }
 
 /*CONTAINER ESTE CONTAINER ES DE RECETAS..PLAN DIETAS CONTIENE COLUMNA Y ASIDE..........*/
@@ -1155,9 +1161,10 @@ nav .nav li ul li a {
   -webkit-column-break-inside: avoid;
   -column-break-inside: avoid;
   box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  background-color: red;
+  border: 2px solid #FAFAFA;
   background: #FEFEFE;
   background-image: linear-gradient(45deg, #FFF, #F9F9F9);
-  border: 2px solid #FAFAFA;
 }
 
 
@@ -1168,8 +1175,8 @@ nav .nav li ul li a {
   max-width: 395px;
   display: flex;
   flex-direction: column;
-  margin-right: 32px;
-
+  margin-bottom: 10px;
+  margin-right: 35px;
 }
 
 .por-foto img {
@@ -1181,6 +1188,7 @@ nav .nav li ul li a {
 .por-descripcion {
   width: 66%;
   max-width: 710px;
+  margin-bottom: 10px;
 }
 
 .fecha {
@@ -1194,10 +1202,20 @@ nav .nav li ul li a {
 }
 
 .por-categoria .por-descripcion p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #2d2d2d;
   margin-top: 5px;
   margin-bottom: 15px;
+
+}
+
+
+.por-categoria .por-descripcion h4 {
+  font-size: 0.9em;
+  color: #2d2d2d;
+  margin-top: 5px;
+  margin-bottom: 15px;
+
 }
 
 

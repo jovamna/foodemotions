@@ -6790,7 +6790,7 @@
   }
 
   #container-categorias-subcategorias {
-    width: 90%;
+    width: 96%;
     margin: auto;
     margin-top: -50px;
     margin-bottom: 40px;
@@ -6855,17 +6855,34 @@
   }
 
   #texto-slider {
-    width: 97.1%;
-    margin: auto;
-
-  }
-
-  .container-posts-categorias {
     width: 90%;
     margin: auto;
 
   }
 
+  .imagenes-pequeñas {
+    width: 90%;
+    margin: auto;
+  }
+
+  .container-posts-categorias {
+    width: 90%;
+    margin: auto;
+    margin-top: 70px;
+  }
+
+  .por-descripcion a h1 {
+    width: 500px;
+  }
+
+  .por-descripcion p {
+    width: 100%;
+    text-align: start;
+  }
+
+  .por-descripcion a {
+    width: 500px;
+  }
 
   .container-total-carrusell {
     width: 97.1%;
