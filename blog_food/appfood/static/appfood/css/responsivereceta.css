@@ -8075,8 +8075,8 @@
     flex-direction: column;
     padding-left: 0;
     padding-right: 0;
-    /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
     height: auto;
+    background-color: red;
   }
 
 
@@ -8123,10 +8123,11 @@
 
   /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
   #container-recetas #tres-columnas-recetas {
-    width: 95.1%;
+    width: 96.5%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
   }
 
 }
