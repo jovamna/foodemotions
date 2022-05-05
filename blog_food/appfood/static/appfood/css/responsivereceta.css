@@ -7080,8 +7080,49 @@
 
 
 
-/* 1200 A 1290 ...................................................................... */
+/* 1200 A 1290 ............NEST HUB MAX.......................................................... */
 @media only screen and (min-width: 1200px) and (max-width: 1246px) {
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    color: rgba(0, 0, 0, .95);
+    font-family: "Argos", serif;
+  }
+
+  html,
+  body {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+
+  }
+
+
+
+
+  a {
+    color: #524c56;
+    text-decoration: none;
+    font-weight: lighter;
+  }
+
+
+  a,
+  a:hover,
+  a:visited,
+  a:focus {
+    text-decoration: none;
+  }
+
+
   #wrapper-recetas {
     margin: 0;
     box-sizing: border-box;
@@ -7096,8 +7137,11 @@
 
   header {
     width: 100%;
-    z-index: 999;
     position: fixed;
+    z-index: 2000;
+    /*IMPORTANTE  */
+    top: 0;
+    left: 0;
     margin: auto;
     height: 80px;
     box-shadow: 0 8px 6px -6px #c9c9c9;
@@ -7110,15 +7154,15 @@
   }
 
   #container-recetas {
-    width: 100%;
-    margin-top: 78px;
-    background-color: aquamarine;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
     padding-left: 0;
     padding-right: 0;
+    /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
     height: auto;
-    margin-bottom: 0px;
   }
 
   .cabecera-recetas {
@@ -7128,7 +7172,6 @@
     justify-content: space-between;
     margin: auto;
     height: 40px;
-    /*IMPORTANTE EL ESPACIO DEL LOGO */
     margin-top: -10px;
   }
 
@@ -7292,14 +7335,16 @@
 
 
   #menu-simple {
+    width: 94%;
+    margin: auto;
     margin-bottom: 25px;
   }
 
 
 
   /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
-  #tres-columnas-recetas {
-    width: 100%;
+  #container-recetas #tres-columnas-recetas {
+    width: 94%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -7954,5 +7999,134 @@
 
 
 
+
+}
+
+
+/*....NEST HUB MAX.........................................*/
+/* 1200 A 1290 ............CON MENU HORIZONTAL..........1............... */
+@media only screen and (min-width: 1247px) and (max-width: 1290px) {
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  /*ESTO LO PUSE POR LA LETRA ANIMADA DE LA PORTADA */
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    float: left;
+    clear: both
+  }
+
+
+  /*--IMPORTANTE COLOR DEL LOGO #3d6024 */
+
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    color: rgba(0, 0, 0, .95);
+    font-family: "Argos", serif;
+  }
+
+  html,
+  body {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+
+  }
+
+  #wrapper-recetas {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+
+
+  #wrapper-recetas>* {
+    padding: 30px;
+  }
+
+
+  /*CONTAINER DE TODO EL BODY............................  */
+
+  #container-recetas {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    /*MUY IMPORTANTE PARA QUE NO HAYA ESPACIOS */
+    height: auto;
+  }
+
+
+
+  /*.. #DCDCDC ..   box-shadow: 0 8px 6px -6px #DCDCDC; */
+  header {
+    display: block;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2000;
+    /*IMPORTANTE  */
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
+  }
+
+
+  header.black {
+    height: 50px;
+    background-color: #fff;
+  }
+
+
+  .cabecera-recetas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 36px;
+    margin-top: -13px;
+  }
+
+  #menu-simple {
+    width: 95.1%;
+    height: 30px;
+    margin: auto;
+    margin-top: 48px;
+
+  }
+
+
+  /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
+  #container-recetas #tres-columnas-recetas {
+    width: 95.1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
 }
