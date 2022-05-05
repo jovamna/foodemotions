@@ -1633,6 +1633,7 @@ nav .estilo-logo:after {
 .primera-columna .nutricion-informe {
   width: 100%;
   margin-bottom: 60px;
+
 }
 
 /*cajita*/
@@ -1654,16 +1655,18 @@ nav .estilo-logo:after {
   font-family: 'Times New Roman', Times, serif;
   color: #000000;
   text-decoration: underline;
+
 }
 
 .primera-columna .nutricion-informe .nutricional p {
   letter-spacing: 0.5px;
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 22px;
   color: #2d2d2d;
   display: inline-block;
+
 }
 
 /*..CATEGORIA EN CAJA INFORME NUTRICIONAL..............*/
@@ -1672,6 +1675,7 @@ nav .estilo-logo:after {
   font-size: 1.4rem;
   font-family: 'Times New Roman', sans serif;
   color: #000000;
+  font-weight: 600;
 }
 
 .primera-columna .nutricion-informe .categoria p {
@@ -1685,6 +1689,7 @@ nav .estilo-logo:after {
   font-size: 1.4rem;
   font-family: 'Times New Roman', sans serif;
   color: #000000;
+  font-weight: 600;
 }
 
 /*..CATEGORIAS EN EL ASIDE QUE TAMBIEEN USA H2....*/

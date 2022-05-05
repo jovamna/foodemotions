@@ -6790,7 +6790,7 @@
   }
 
   #container-categorias-subcategorias {
-    width: 96%;
+    width: 97.4%;
     margin: auto;
     margin-top: -50px;
     margin-bottom: 40px;
@@ -6883,6 +6883,28 @@
   .por-descripcion a {
     width: 500px;
   }
+
+  /*DE LAS CATEORIAS DE RECETAS...*/
+  .imagen-descripcion a h1 {
+    width: 240px;
+
+  }
+
+  .imagen-descripcion a p {
+    width: 240px;
+
+  }
+
+
+
+  .imagen-descripcion .a {
+    text-align: start;
+    width: 240px;
+
+  }
+
+
+
 
   .container-total-carrusell {
     width: 97.1%;
