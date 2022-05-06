@@ -8055,7 +8055,6 @@
     margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
-
   }
 
 
@@ -8076,7 +8075,6 @@
     padding-left: 0;
     padding-right: 0;
     height: auto;
-    background-color: red;
   }
 
 
@@ -8113,21 +8111,19 @@
   }
 
   #menu-simple {
-    width: 95.1%;
+    width: 97.5%;
     height: 30px;
     margin: auto;
     margin-top: 48px;
-
   }
 
 
   /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
   #container-recetas #tres-columnas-recetas {
-    width: 96.5%;
+    width: 97.5%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
   }
 
 }
