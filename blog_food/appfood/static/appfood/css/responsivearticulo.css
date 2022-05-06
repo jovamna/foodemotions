@@ -1013,19 +1013,24 @@
     flex-direction: column;
     width: 100%;
     margin-top: 52px;
-    margin-bottom: 190px;
+    margin-bottom: 60px;
     padding-right: 0;
     padding-left: 0;
   }
 
 
   header {
+    display: block;
     width: 100%;
-    z-index: 999;
-    position: fixed;
-    margin: auto;
     height: 58px;
-    box-shadow: 0 8px 6px -6px #c9c9c9;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2000;
+    /*IMPORTANTE  */
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -6px #c6c6c6;
   }
 
 
@@ -1330,10 +1335,9 @@
   /*.........FIN COOKIE..............*/
 
   #menu-simple {
-    width: 91%;
+    width: 90%;
     margin-top: 14px;
     margin-bottom: 5px;
-    margin-left: 15px;
   }
 
   #menu-simple ul {
@@ -1346,7 +1350,7 @@
   #controls-responsive {
     display: block;
     visibility: visible;
-    width: 91%;
+    width: 89.7%;
     height: 35px;
     margin-top: 58px;
     margin: auto;
@@ -1384,7 +1388,7 @@
   /*BUSCADOR NO ELIMINAR ES EL BUSCADOR DE LA PAGINA SEARCH ...*/
   /*..ESTE MISMI BUSCADOR DE USA PARA EL RESPPONSIVE DE LA PAGINA SEARCH..*/
   #controls-uno {
-    width: 92%;
+    width: 90%;
     margin-top: 10px;
   }
 
@@ -1404,7 +1408,7 @@
 
   /*...NO ELIMNAR ES LA PAGINA DEL BUSCADOR ...PAGINA BUSCADOR.NO ELIMINAR ...*/
   #container-search {
-    width: 92%;
+    width: 90%;
     max-width: 600px;
     margin-bottom: 40px;
     margin-top: 20px;
@@ -1412,13 +1416,11 @@
 
 
   #container-search h1 {
-    font-size: 1.8rem;
-    letter-spacing: -0.2px;
-    line-height: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    color: #2d2d2d;
+    font-size: 1.5em;
+    letter-spacing: 0.2px;
+    color: black;
     margin-bottom: 20px;
-    font-weight: 600;
+    font-weight: 700;
   }
 
 
@@ -1431,7 +1433,6 @@
 
   #container-search .elemento {
     width: 100%;
-    height: 80px;
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
@@ -1443,36 +1444,41 @@
     flex-direction: column;
     width: 100%;
     max-width: 600px;
-    height: 100%;
-    max-height: 230px;
     margin: auto;
   }
 
 
   #container-search .elemento-imagen img {
     width: 100%;
-    height: 100%;
+
   }
 
 
   #container-search .elemento-descripcion {
     width: 100%;
-    height: 100%;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
+  /*TITULO DE LA DESCRIPCION..*/
   .elemento-descripcion h2 {
-    font-size: 1.7rem;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 900;
-    letter-spacing: -0.3px;
+    font-size: 1.3em;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    word-spacing: -0.7px;
     margin-bottom: 2px;
+    line-height: 25px;
   }
 
-
+  /*DESCRIPCION DEL RESULTAD*/
   .elemento-descripcion p {
-    font-size: 1.3rem;
+    font-size: 0.8em;
     letter-spacing: 0.5px;
+    line-height: 22px;
+  }
+
+  /*..BOTON LEER MAS..*/
+  .elemento-descripcion .btn-outline-success {
+    margin-bottom: 19px;
   }
 
   /*FIN DEL BUSCADOR*/
@@ -1481,7 +1487,7 @@
 
   /*CONTENIDO...............*/
   #tres-columnas-articulo {
-    width: 91%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     margin-top: 2px;
@@ -2155,7 +2161,7 @@
   .container-total-carrusell {
     display: block;
     width: 100%;
-
+    margin-bottom: 10px;
   }
 
 
