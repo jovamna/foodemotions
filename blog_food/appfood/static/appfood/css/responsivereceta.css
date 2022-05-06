@@ -8110,8 +8110,19 @@
     margin-top: -13px;
   }
 
+  .cabecera-recetas .logo img {
+    display: block;
+    width: 100%;
+    max-width: 172px;
+    min-width: 172px;
+    height: 35px;
+    z-index: 40;
+
+  }
+
+
   #menu-simple {
-    width: 96.8%;
+    width: 96.1%;
     height: 30px;
     margin: auto;
     margin-top: 48px;
@@ -8120,7 +8131,7 @@
 
   /* CONTENEDOR DE LAS TRES COLUMNAS .............................*/
   #container-recetas #tres-columnas-recetas {
-    width: 96.8%;
+    width: 96.1%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

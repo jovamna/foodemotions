@@ -6772,6 +6772,15 @@
     /*IMPORTANTE EL ESPACIO DEL LOGO */
   }
 
+  #cabecera-categorias .logo img {
+    display: block;
+    width: 100%;
+    max-width: 172px;
+    min-width: 172px;
+    height: 35px;
+    z-index: 40;
+  }
+
 
 
 
@@ -6780,7 +6789,7 @@
   }
 
   #container-categorias-subcategorias {
-    width: 96.8%;
+    width: 96.1%;
     margin: auto;
     margin-top: -50px;
     margin-bottom: 40px;

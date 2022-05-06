@@ -9679,6 +9679,17 @@
     margin-top: -13px;
   }
 
+
+  .cabecera .logo img {
+    display: block;
+    width: 100%;
+    max-width: 172px;
+    min-width: 172px;
+    height: 35px;
+    z-index: 40;
+  }
+
+
   #menu-simple {
     width: 90%;
     height: 30px;
