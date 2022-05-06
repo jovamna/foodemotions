@@ -184,7 +184,7 @@
      
      <!--------------------------------------------------------------------------------> 
 
-         <!-- UNO----------------UNO-------------->
+         <!-- UNO----------------UNO------UNO-------------------------->
          <div class="contentwo">
                {% if post.titleone %}
                <div class="title-two">
@@ -213,7 +213,7 @@
 
         <!------------------------------------------------------------------------------------------------>
 
-          <!----CONTAIINER DOS--------->
+          <!----CONTAIINER DOS-----------------------------DOS------------------>
            {% if post.titletwo %}
             <div class="contentwo">
                         <!---SUBTITULO--->
@@ -223,13 +223,13 @@
                       </div> 
                
                       <!--IMAGEN SEGUNDO---->
-                        {% if post.imagetwo %}
+                      {% if post.imagetwo %}
                       <div class="image-two">
-                     <img src="{{post.imagetwo.url}}" alt="">
+                      <img src="{{post.imagetwo.url}}" alt="">
                       </div>
-                     {% endif %}  
+                      {% endif %}  
                       <!---SEGUNDO SUBTITULO-->
-                        {% if post.subtitletwo %}
+                      {% if post.subtitletwo %}
                       <div class="subtitle-two">
                       <a href ="{% url 'appblog:post' post.slug %}" style="text-decoration: none">
                       <h2> vease ..   {{ post.subtitletwo|safe}} </h2>
@@ -244,6 +244,8 @@
                   {% endif %}  
           </div>
            {% endif %}  
+           <!------FINAL DOS-------------------------------------------------DOS-------->
+
 
        <!-----------------------TRES------------------------------------------------------->
            {% if post.titlethree %}
@@ -267,13 +269,17 @@
                </div>
                {% endif %}
                <!--CONTENIDO SEGUNDO-------------> 
-                 {% if post.subtitlethree %}
+                 {% if post.contenthree %}
                <div class="content-two">
                <p>{{post.contenthree|safe}}</p>
                </div>
                 {% endif %}
       </div>
        {% endif %}
+       <!----------------------FINAL TRES -----------------TRES---------------->
+
+
+
 
          <!-------------------------CUATRO----------------------------------------------------->
                 {% if post.titlefour %}
@@ -299,7 +305,7 @@
                   <!--CONTENIDO SEGUNDO-------------> 
                     {% if post.contenfour %} 
                   <div class="content-two">
-                  <p> {{post.contenfour|safe}} </p>
+                  <p> {{post.contenfour|safe}}</p>
                   </div>
                    {% endif %}
              </div>
