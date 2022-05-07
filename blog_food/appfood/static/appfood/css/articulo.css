@@ -708,15 +708,7 @@ nav .estilo-logo:after {
   z-index: 10;
 }
 
-
-
-
-
 /*FIN ANIMACION SUBRAYADO */
-
-
-
-
 /*................CONTAINER DEL BODY..ESTA ARRIBA DE TODO CON EL WRAPPER................................................................... */
 
 
@@ -735,7 +727,6 @@ nav .estilo-logo:after {
 /* PRIMERA SECCION MENU ARROW*/
 #menu-simple li {
   list-style: none;
-
 }
 
 /*ANCHO IMPORTANTE PARA EL MENU   ES LI*/
@@ -751,7 +742,6 @@ nav .estilo-logo:after {
   -ms-overflow-style: none;
   /* Internet Explorer 10+ */
   white-space: nowrap;
-
 }
 
 #menu-simple ul::-webkit-scrollbar {
@@ -792,7 +782,6 @@ nav .estilo-logo:after {
 
 /* ANIMA CON RAYA AL HACE HOVER */
 #menu-simple a {
-
   text-decoration: none;
 }
 
@@ -896,7 +885,6 @@ nav .estilo-logo:after {
   width: 90%;
   margin: auto;
   margin-top: 4px;
-
 }
 
 /* COLUMNA  ..........PRIMERA  COLUMNA.....1-------------. */
@@ -967,23 +955,8 @@ nav .estilo-logo:after {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  height: 60px;
 }
-
-
-.fecha {
-  display: block;
-  position: relative;
-  float: right;
-  width: 65%;
-  height: 20px;
-  margin-top: 22px;
-}
-
-.fecha p {
-  font-size: 0.8rem;
-  text-align: center;
-}
-
 
 .row-autor-nombre {
   display: block;
@@ -991,25 +964,30 @@ nav .estilo-logo:after {
   float: left;
   width: 28%;
   max-width: 200px;
+  height: 45px;
+
 }
+
 
 .row-autor-nombre .autor-foto {
   display: block;
   position: relative;
   float: left;
-  width: 32%;
+  width: 27%;
+  height: 45px;
+
 }
 
 .autor-foto img {
   width: 100%;
-  max-width: 50px;
-  height: 50px;
+  max-width: 45px;
+  height: 45px;
 }
 
 /*CONTTIENE FOTO Y NOMBRE*/
 .row-autor-nombre .autor-letra {
-  width: 68%;
-  height: 50px;
+  width: 73%;
+  height: 45px;
   display: block;
   position: relative;
   float: right;
@@ -1023,6 +1001,25 @@ nav .estilo-logo:after {
   color: #000000;
   margin-top: 15px;
 }
+
+
+.fecha {
+  display: block;
+  position: relative;
+  float: right;
+  width: 65%;
+  height: 45px;
+}
+
+.fecha p {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 15px;
+}
+
+
+
+
 
 /*ESTO SOLO PARA LA PAGINA DIETAS ESPECIALES*/
 .autor-solo-nombre {
@@ -2482,9 +2479,7 @@ input[type=text]:focus {
   -column-break-inside: avoid;
   padding-bottom: 10px;
   border-bottom: 2px solid #d9d9d9;
-
   margin-bottom: 42px;
-
 }
 
 .elemento-imagen {

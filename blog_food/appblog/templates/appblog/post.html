@@ -52,21 +52,30 @@
 
                 <div class= "row-autor-nombre-fecha">
 
-                   <div class="row-autor-nombre">
-                   <div class="autor-foto">
-                    {% if post.imageauthor %}
-                    <img src="{{post.imageauthor.url}}" alt="" >
-                    {% endif %}
-                   </div>
 
-                  <div class="autor-letra">
-                  <em><h3>Por: {{post.author}}</h3></em>
-                  </div>
-                  </div>
+                <div class="row-autor-nombre">
 
-                  <div class="fecha">
-                   <p>{{post.publish}}</p>
-                   </div>
+
+                <div class="autor-foto">
+                {% if post.imageauthor %}
+                <img src="{{post.imageauthor.url}}" alt="" >
+                {% endif %}
+                </div>
+
+
+                <div class="autor-letra">
+                <em><h3>Por: {{post.author}}</h3></em>
+                </div>
+
+                </div>
+
+
+
+                <div class="fecha">
+                <p>Publicado en {{ post.publish | date:"F d, Y" }}</p>
+                </div>
+
+
                 </div>
         
                 <!--------------------------------------->
