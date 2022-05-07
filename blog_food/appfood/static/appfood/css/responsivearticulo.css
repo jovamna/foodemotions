@@ -1539,35 +1539,21 @@
   /*... *FECHA*/
   .row-autor-nombre-fecha {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
-    height: 45px;
     margin: auto;
+    margin-bottom: 14px;
+
   }
 
-  .fecha {
-    display: block;
-    position: relative;
-    float: right;
-    width: 65%;
-    height: 20px;
-    margin-top: 20px;
-  }
 
-  .fecha p {
-    font-size: 0.7rem;
-    text-align: center;
-  }
 
   /*..CAJA DE LA  FOTO Y E NOMBRE..*/
   .row-autor-nombre {
-    display: block;
-    position: relative;
-    float: left;
-    width: 30%;
-    max-width: 150px;
-    height: 45px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
   }
 
   /*..CAJA DE FOTO....*/
@@ -1575,8 +1561,10 @@
     display: block;
     position: relative;
     float: left;
-    width: 32%;
+    width: 28%;
+    max-width: 50px;
     height: 45px;
+
   }
 
   .autor-foto img {
@@ -1587,11 +1575,9 @@
 
   /*..CAJA DE NOMBRE NOMBRE*/
   .row-autor-nombre .autor-letra {
-    width: 60%;
-    height: 40px;
+    width: 62%;
+    height: 45px;
     display: block;
-    position: relative;
-    float: right;
   }
 
 
@@ -1601,7 +1587,16 @@
     color: #000000;
     font-family: 'Times New Roman', Times, serif;
     display: inline-block;
-    margin-top: 22px;
+    margin-top: 9px;
+  }
+
+  .fecha {
+    display: flex;
+    width: 100%;
+  }
+
+  .fecha p {
+    font-size: 0.7em;
   }
 
   /*---FIN DE LA DESCRIPCION PRINCIPAL..*/
