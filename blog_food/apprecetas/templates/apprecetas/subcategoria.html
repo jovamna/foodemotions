@@ -1,6 +1,6 @@
 {% extends 'appblog/base-categoria.html' %}
 {% load static %}          
-{% block title %}Subcategoria Recetas{% endblock %}  
+{% block titulo %}Subcategoria Recetas{% endblock titulo %}  
  
  
 
@@ -18,6 +18,7 @@
                    <div class="menu-introescrito">
                               <!--MENU-->
                                <div class="menu">
+                                <div class="menu-scrolling">
                                <ul>
                                <li>
                                <a href="{% url 'appfood:index' %}">Inicio<i class="right"></i></a>
@@ -36,17 +37,14 @@
                             <i class="right"></i></p> 
                         
                            </li>
-                              
-                    
-                   
-                    <!---FIN MENUS ESCONDIDO CATEGORIAS---->
-                            
-                              
-                     
+             
+                         
 
-                             </ul>
-                             </div>
-                             <!--MENU------------------>
+                          </ul>
+                    </div>
+                <!--fin del menu scrolling--->
+                </div>
+                <!--MENU---------------------------------------------->
 
                             <!------------------------------------->
                             <div class="introescrito">
@@ -106,6 +104,51 @@
 
 
 
+                 <!---------------CATEGORIA VERSION MOVIL Y IPAD------------------>
+      {% block categoria-receta-responsive %}     
+     
+    <!-----------------------------------------------A----->
+         <div class="categoria-receta-responsive">
+          
+               <!---------------------------------------B------>
+               <div class="categoria-columna-responsive">   
+                      {% for receta in recetas %}
+
+                     <!-----------------ROW---------------------C----->
+                       <div id="categoria-imagen-descripcion-responsive">
+                                   <!---------------------------> 
+                                 <div class="cat-recet-respon-img">
+                                 {% if receta.image %}
+                                  <img src ="{{receta.image.url}}">
+                                  {% endif %}
+                                  </div>
+                                  <!------------------------------->
+
+                                  <!-------------------------------->
+                                  <div class="cat-recet-respon-descrip">
+                                  <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                                  <h1>{{receta.title}}</h1>  
+                                  </a>  
+                                  <p>{{receta.description|truncatewords_html:8|safe}} </p> 
+                                  <a href ="/recetas-saludables/receta/{{ receta.slug }}/">
+                                  <em><p>Leer mas  ...</p></em>
+                                  </a>                      
+                                  <p class="a" >Por: <span class="o"> {{ receta.author }}</span></p> 
+                                  </div>
+                                  <!------------------------------------>
+
+                       </div>
+                        {% endfor %}      
+                       <!--------------------------------------C-----> 
+                       </div>
+                       <!---------------------------------------B----->
+                  
+         </div>
+       
+         <!----FLOAT LEFT--------80%-----------RESPONSIVE----------------------------------A---->
+             {% endblock categoria-receta-responsive %}   
+
+
 
 
 
@@ -121,17 +164,22 @@
                            
         
                      
- 
-      <!---DIV  DEBE MEDIR 100%  CONTAINER DE 4 POST Y DE RECETAS--->
-      <div class="container-posts-categorias">
-            <!--DEBE MEDIR  80%-------------80%---------->
-            <div id = "posts-categorias-aside">
-
-
-                   <!----- INICIO POST CATEGORIA-------->
-                   <div class=  "post-cuatro-categorias">
-                   <!---DIV DE 4 POST DE POSTS---> 
+      <!--------------------VERSION PC--------------------------------------------------------------------------------->
             
+    <!---100%---------------------------------------2---->
+    <div class="container-posts-categorias">   
+            <!---------ROW---columna de 100%-------------------1---->
+            <div id = "posts-categorias-aside">
+  
+            <!----FLOAT LEFT--------80%---------------------------------------------A---->
+            <div class="categoria-recetas-posts">
+                
+                  <!---ROW-------------------------------------------B--->  
+                  <div class="post-cuatro-categorias">
+
+
+
+
          
                           <!---DIV DE 4 POST DE POSTS--->
                            {% for receta in recetas %}
@@ -154,36 +202,46 @@
                                 
                                    <!--  NOMBRE DE CATEGORIA CON SUBCATEGORIA---->
                                       <p class="a">Por <span class="o"> {{ receta.author }}</span> </p> 
-                                   </div>
-                              <!--DFIN DIV IMAGEN DESCRIPCION-->
-                          </div>
-                          <!---FIN DIV IMAGEN ELEMNTO CATEGORIA--->
+                              </div>
+                                  <!----------------------------------------------E----->
+                             </div>                  
+                             <!--25%  FIN IMAGEN ELEMENTO CATEGORIA --------------------D---->         
+                         
+                                    
+                            
+                   </div>
+                 <!---------------FIN ELEMENTO CATEGORIA------------------------------------C--------->
+                  {% if forloop.counter|divisibleby:"3" %}
+       
+            </div> 
+            <!--FIN---ROW---POST 4 CATEGORIAS-------------------------------ROW----------------------B---->
 
-                        </div>     
-                        <!--FIN 25% DEL FIN ELEMENTO-CATEGORIA------->
-                          <!--25%  FIN ELEMENTO CATEGORIA--->         
-                          {% empty %}
-                         <p>No hay posts</p>
-                          {% endfor %}    
-                <!----------CIERRA EL POST ------------------------------------------>          
-                  
-             </div>
-  
-                           <!-- 20% ASIDE --->
-                    <div id="aside">    </div>
-                    <!--FIN ASIDE 20%--->
-           </div>
-           <!--100% FIN DEL POSTS CATEGORIAS ASIDE --->
-      </div>
-      <!---FIN CONTAINER POSTS-CATEGORIAS----->
-        
- 
-           <!--- FIN CONTAINER CATGEORIAS SUBCATEGORIAS-----------------> 
-    {% endblock content %}   
- <!---------------------------FIN ENDBLOCK CONTAINER PERDER CATEGORIA------------------------------->
+                   <!----SE REPITE EL CICLO ROW-------------------------------------->
+                    <div class="post-cuatro-categorias">
+                     {% if forloop.last or forloop.counter|divisibleby:"3" %}
+                    {% endif %}
+                    {% endif %}
+                    {% empty %}
+                    <p>No hay posts</p>
+                   {% endfor %}   
+                   </div>
+                  <!---CICLO ROW DE 3 POSTS-------------------------->
 
+       
+               </div>
+               <!------------------------------------------------------------A----------------->
+                  <!---75% FIN POSTS CATEGORIAS --->   
+                  <div id="aside">  </div>
+              </div>
+            <!-----FINAL POST-CATEGORIAS-ASIDE--------------------------1--------->
+         </div>
+         <!---100%-FIN CONTAINER GENERAL DE LOS POSTS-----------------2---------->
+               
 
-                           <!-- CIERRE DIV DE  COLUMNA PRIMERA------------------->
+          
+
+  {% endblock content %} 
+
                                       
  <!--------------INCLUYENDO LA PAGINATION ------------------------------------------------------------------------>
 
