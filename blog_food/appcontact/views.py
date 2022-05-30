@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.core.mail import EmailMessage
+from blog_food.settings import EMAIL_HOST_USER
 from .forms import ContactForm
 from apprecetas.models import Kategory
 from apprecetasalzum.models import Category
@@ -9,7 +10,7 @@ from apprecetasalzum.models import Category
 #import re
 #from .models import SubscribedUsers
 #from django.core.mail import send_mail
-#from django.conf import settings
+from django.conf import settings
 
 # Create your views here.
 
@@ -31,12 +32,13 @@ def contact(request):
             email = request.POST.get('email', '')
             content = request.POST.get('content', '')
             #enviamos el correo y redireccionamos
-            email = EmailMessage("La Caffettiera: Nuevo mensaje de contacto",
-                                 "De {} <{}>\n\nEscribió:\n\n{}".format(
-                                     name, email, content),
-                                 "no-contestar@inbox.mailtrap.io",
-                                 ["emotionsfood@gmail.com"],
-                                 reply_to=[email])
+            email = EmailMessage(
+                "FoodingEmotion: Nuevo mensaje de contacto",
+                "De {} <{}>\n\nEscribió:\n\n{}".format(name, email, content),
+                #"emotionsfood@gmail.com",
+                EMAIL_HOST_USER,
+                ["emotionsfood@gmail.com"],
+                reply_to=[email])
             # Lo enviamos y redireccionamos
             try:
                 email.send()
